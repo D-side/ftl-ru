@@ -1,0 +1,95 @@
+﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+
+<!--
+		**************************************
+		**********	IMAGE LISTS	******				
+	    **************************************
+-->
+<!-- NOTE: width/height are the size you WANT not necessarily the size of the file. 
+	Though in most cases we want that to match of course. I'm just sayin it's possible 
+	to scale the image if you want. -->
+	
+<!-- The following lists are your DEFAULT lists, if the event or text isn't tagged 
+		with anything, then it will randomly choose from here. -->
+<imageList name="PLANET">
+	<img w="512" h="512">stars/planet_bigblue.png</img>
+	<img w="512" h="512">stars/planet_brown.png</img>
+	<img w="280" h="280">stars/planet_peach.png</img>
+	<img w="200" h="200">stars/planet_red.png</img>
+	<img w="512" h="512">stars/planet_gas_blue.png</img>
+	<img w="512" h="512">stars/planet_gas_yellow.png</img>
+	
+	<img w="256" h="256">stars/planet_bigblue.png</img>
+	<img w="256" h="256">stars/planet_brown.png</img>
+	<img w="140" h="140">stars/planet_peach.png</img>
+	<img w="100" h="100">stars/planet_red.png</img>
+	<img w="256" h="256">stars/planet_gas_blue.png</img>
+	<img w="256" h="256">stars/planet_gas_yellow.png</img>
+<!--	<img w="512" h="512">stars/planet_populated_brown.png</img>
+	<img w="512" h="512">stars/planet_populated_dark.png</img>
+	<img w="512" h="512">stars/planet_populated_orange.png</img> -->
+</imageList>	
+
+<imageList name="BACKGROUND">
+	<img w="1280" h="720">stars/bg_darknebula.png</img>
+   <!-- <img w="1280" h="720">stars/bg_blueStarcluster.png</img> -->
+	<img w="1280" h="720">stars/bg_dullstars2.png</img>
+    <img w="1280" h="720">stars/bg_lonelyRedStar.png</img>
+    <img w="1280" h="720">stars/bg_lonelystar.png</img>
+</imageList>
+
+<!-- SPECIFIC LISTS -->
+<!--background lists-->
+<imageList name="BG_NEBULA">
+	<img w="1280" h="720">stars/bg_darknebula.png</img>
+	<img w="1280" h="720">stars/bg_blueStarcluster.png</img>
+    <img w="1280" h="720">stars/bg_smallbluenebula.png</img>
+</imageList>
+
+<imageList name="BG_DARK">
+	<img w="1280" h="720">stars/bg_dullstars.png</img>
+	<img w="1280" h="720">stars/bg_dullstars2.png</img>
+	<!--<img w="1280" h="720">stars/bg_darknebula.png</img>-->
+</imageList>
+
+<!--Used for background behind nebula in higher end machines? Something really basic. -->
+<imageList name="BG_BORING">
+	<img w="1280" h="720">stars/bg_dullstars.png</img>
+	<img w="1280" h="720">stars/bg_dullstars2.png</img>
+</imageList>
+
+
+<!-- Planet Lists-->
+<imageList name="PLANET_POPULATED">
+	<img w="512" h="512">stars/planet_populated_brown.png</img>
+	<img w="512" h="512">stars/planet_populated_dark.png</img>
+	<img w="512" h="512">stars/planet_populated_orange.png</img>
+</imageList>	
+
+<imageList name="PLANET_POPULATED_SMALL">
+	<img w="256" h="256">stars/planet_populated_brown.png</img>
+	<img w="256" h="256">stars/planet_populated_dark.png</img>
+	<img w="256" h="256">stars/planet_populated_orange.png</img>
+</imageList>	
+
+
+<imageList name="PLANET_UNPOPULATED">
+	<img w="512" h="512">stars/planet_bigblue.png</img>
+	<img w="512" h="512">stars/planet_brown.png</img>
+	<img w="280" h="280">stars/planet_peach.png</img>
+	<img w="200" h="200">stars/planet_red.png</img>
+</imageList>	
+<imageList name="PLANET_UNPOPULATED_SMALL">
+	<img w="256" h="256">stars/planet_bigblue.png</img>
+	<img w="256" h="256">stars/planet_brown.png</img>
+	<img w="14" h="140">stars/planet_peach.png</img>
+	<img w="100" h="100">stars/planet_red.png</img>
+</imageList>	
+		
+		
+<imageList name="PLANET_GAS">
+	<img w="1024" h="1024">stars/planet_gas_blue.png</img>
+	<img w="1024" h="1024">stars/planet_gas_yellow.png</img>
+</imageList>
+		

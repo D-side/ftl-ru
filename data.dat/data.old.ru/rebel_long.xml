@@ -1,0 +1,51 @@
+
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<img x="-86" y="-45" w="346" h="509"/>   <!-- changed by 70,61-->
+
+
+<weaponMounts>
+	<mount x="138" y="120" rotate="false" mirror="true" gib="4" slide="left"/>
+	<mount x="207" y="120" rotate="false" mirror="false" gib="4" slide="right"/>
+	<mount x="65" y="192" rotate="false" mirror="true" gib="1" slide="left"/>
+	<mount x="280" y="192" rotate="false" mirror="false" gib="3" slide="right"/>
+	
+	<!-- artillery mount testing points-->
+	<mount x="134" y="132" rotate="false" mirror="true" gib="3"/>
+	<mount x="205" y="132" rotate="false" mirror="false" gib="2"/>
+	<mount x="58" y="168" rotate="false" mirror="true" gib="3"/>
+	<mount x="282" y="168" rotate="false" mirror="false" gib="1"/>
+</weaponMounts>
+
+
+<!-- Bad combos:  1+4; -->
+<explosion>
+	<gib1>
+		<velocity min="0.1" max="1"/>
+		<direction min="200" max="250"/>
+		<angular min="0.1" max="1"/>
+		<x>0</x>
+		<y>133</y>
+	</gib2>
+	<gib2>
+		<velocity min="0.2" max="1"/>
+		<direction min="280" max="320"/>
+		<angular min="-0.4" max="1"/>
+		<x>48</x>
+		<y>107</y>
+	</gib2>
+	<gib3>
+		<velocity min="0.1" max="0.6"/>
+		<direction min="90" max="180"/>
+		<angular min="-1" max="-0.1"/>
+		<x>190</x>
+		<y>135</y>
+	</gib3>
+	<gib4>
+		<velocity min="0.4" max="1"/>
+		<direction min="-60" max="60"/>
+		<angular min="-1" max="-1"/>
+		<x>104</x>
+		<y>0</y>
+	</gib4>
+</explosion>

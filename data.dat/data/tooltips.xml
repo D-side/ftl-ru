@@ -30,7 +30,7 @@
 <sensors_enemy>Sensors: No functionality for the enemy.</sensors_enemy>
 <medbay_enemy>Medbay: Heals enemy crewmembers.</medbay_enemy>
 <weapons_enemy>Weapons: Powers the enemy's weapons.</weapons_enemy>
-<weapons_touch_enemy>Weapons: Powers the enemy's weapons. Destroy it to stop them firing.</weapons_enemy>
+<weapons_touch_enemy>Weapons: Powers the enemy's weapons. Destroy it to stop them firing.</weapons_touch_enemy>
 <drones_enemy>Drones: Powers the enemy's drones. Destroy it to shut them down.</drones_enemy>
 <teleporter_enemy>Teleporter: The enemy uses this to teleport intruders onto your ship.</teleporter_enemy>
 <cloaking_enemy>Cloaking: When in use, your weapons cannot charge and the enemy evasion is increased by 60.</cloaking_enemy>

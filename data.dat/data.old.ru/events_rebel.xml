@@ -1,0 +1,596 @@
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--   
+			SUMMARY  - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Structure:
+	START_BEACON_REBEL
+	STORE_REBEL
+	NOTHING_REBEL
+	
+Hostile:
+	AUTO_BAIT
+	AUTO_ASTEROID
+	AUTO_WARNING
+	REBEL_AUTO
+	AUTO_HACKER
+	REBEL
+	SQUAT_WARNING
+	
+Neutral:
+	AUTO_CIVILIAN
+	SQUAT_REFUEL_STATION
+	AUTO_REFUEL_STATION
+	AUTO_DEFENSE_MAP
+	AUTO_DEFENSE_ITEM
+	AUTO_DEFENSE_RADAR
+	REBEL_TRANSPORT
+	BROKEN_REBEL_DRONE
+	
+	
+Environmnt:
+	NEBULA_REBEL_BOARDING
+
+--->
+
+
+<eventList name="HOSTILE_REBEL">
+	<event load="REBEL"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_WARNING"/>
+	<event load="SQUAT_WARNING"/>
+</eventList>
+
+
+<eventList name="NEUTRAL_REBEL">
+	<event load="AUTO_CIVILIAN"/>
+	<event load="SQUAT_REFUEL_STATION"/>
+	<event load="AUTO_DEFENSE_MAP"/>
+	<event load="AUTO_DEFENSE_ITEM"/>
+	<event load="AUTO_DEFENSE_RADAR"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="BROKEN_REBEL_DRONE"/>
+	<event load="ALISON_DEFECTOR"/>
+</eventList>
+
+
+<eventList name="BOARDERS_REBEL">
+	<event load="BOARDERS_SUN"/>
+	<event load="BOARDERS_REBEL_SHIP"/>
+</eventList>
+
+
+<eventList name="DISTRESS_BEACON_REBEL">
+	<event load="CIVILIAN_ASTEROIDS_BEACON"/>  
+	<event load="REBEL_VS_FEDERATION"/> 
+	<event load="ESCORT_BEACON"/>
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+</eventList>
+
+
+<eventList name="NEBULA_REBEL">
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/>  
+	<event load="NEBULA_AUTO"/>
+	<event load="NEBULA_AUTO_WARNING"/>
+	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
+	<event load="NEBULA_TRADER"/>
+	<event load="STORM_REBEL"/>
+	<event load="STORM_AUTO"/>
+	<event load="STORM_ITEMS"/>
+	<event load="NEBULA_REBEL_UNDETECTED"/>  
+	<event load="NEBULA_LOST_SHIP"/>  
+	<event load="NEBULA_REBEL_BOARDING"/>
+</eventList>
+
+<eventList name="QUESTS_REBEL">
+	<event load="MERCHANT_REQUEST"/>
+	<event load="FEDERATION_PLANET_SIGNAL"/>
+</eventList>
+
+
+
+
+
+<!-----------
+		STRUCTURE!!!
+	Requred structural 
+------------>
+
+<event name="START_BEACON_REBEL">
+	<text load="START_BEACON_REBEL"/>
+</event>
+<textList name="START_BEACON_REBEL">
+	<text>Этот сектор процветал всего несколько лет назад. Теперь, большая половина прыжковых маяков уничтожена и многие покинули свои обжитые территории, но повстанцы продолжают патрулировать сектор.</text>
+	<text>В этом секторе было восстание. За многими обособленными поселениями и станциями, расположенными здесь, следят почти равнозначные скопления баз повстанцев, властно 'сохраняя мир'.</text>
+	<text>После рассеивания войск Федерации, повстанцы обрушились на местных жителей. От 'сборщиков налогов' до военных баз, повстанцы в этом секторе везде.</text>
+	<text>Когда-то этот сектор был крупным транспортным узлом. Зная это, повстанцы разместили здесь свой флот. Будьте осторожны.</text>
+	<text>Вы должны быть очень осторожными в этом секторе. Повстанцы здесь имеют полный контроль и без сомнения уже ищут вас.</text>
+</textList>
+
+<event name="STORE_REBEL">
+	<text load="STORE_REBEL"/>
+	<store/>
+</event>
+<textList name="STORE_REBEL">
+	<text>Вы обнаруживаете станцию снабжения, используемую как повстанцами, так и гражданскими лицами. Вы предъявляете свое фальшивое удостоверение корабля, и на этот раз всё проходит удачно. Готовясь к стыковке, вы стараетесь стать похожим на местного.</text>
+	<text>Вы прибываете на маленькую космическую станцию, широко вещающую на частотах черного рынка. Вряд ли они откажутся от торговли, чью бы сторону вы не представляли.</text>
+	<text>Вы принимаете типичные рекламные сообщения от близлежащего публичного дока. Похоже, что они согласны работать на любом корабле, а не только на окрашенных как повстанческие.</text>
+</textList>
+
+<event name="NOTHING_REBEL">
+	<text load="NOTHING_REBEL"/>
+</event>
+<textList name="NOTHING_REBEL">
+	<text>Вы входите в систему с оживленной деятельностью повстанцев. Грузовые суда и станции снабжения кажутся незначительными в сравнении с несколькими тяжелыми крейсерами. К счастью, никто не обращает внимания на маленькие корабли. Другие корабли не сканируют и не связываются с вами.</text>
+	<text>Вы появляетесь неподалёку от маленькой станции дозаправки повстанцев. Ваш корабль сканируют несколько раз и кажется, что теперь-то они уж точно узнают вас. Однако ни один боевой корабль к вам так и не приблизился. Единственное сообщение, что вы получили — отказ на ваш запрос пристыковаться.</text> 
+	<text>Поблизости нет ничего интересного. Маленькая звезда с несколькими планетами, вращающимися вокруг неё вас не интересует.</text>
+	<text planet="NONE">У этого маяка не видно никаких других кораблей... Хотя нет, кажется сенсоры уловили едва заметный канал связи. Вы без каких либо затруднений перехватываете его (он даже не зашифрован). В основном разговор идёт о войсках и передвижениях флота, ничего особо интересного.</text>
+	<text planet="PLANET_POPULATED_SMALL">Поблизости находится небольшая планетка с разбросанными по поверхности поселениями. На её орбите базируется маленький флот повстанцев — то там, то тут летают десятки их кораблей. Должно быть это одна из «освобождённых» планет.</text>
+</textList>
+
+
+<!-----------
+		HOSTILE!!!
+	Events that call up a fight for sure
+------------>
+
+
+<event name="AUTO_BAIT" unique="true">
+	<text load="REBEL_AUTO"/>
+	<ship load="REBEL_AUTO_BAIT" hostile="true"/>
+</event>
+
+<event name="REBEL_AUTO">
+	<text load="REBEL_AUTO"/>
+	<ship load="REBEL_AUTO" hostile="true"/>
+</event>
+
+<event name="AUTO_WARNING" unique = "true">
+	<text load="REBEL_AUTO"/>
+	<ship load="REBEL_AUTO_WARNING" hostile="true"/>
+</event>
+<textList name="REBEL_AUTO">
+	<text>Вы обнаружили один из беспилотных разведчиков повстанцев. ИИ корабля разведчика незамедлительно даёт команду напасть на ваш корабль.</text>
+	<text>Ваш корабль получает сигнал: «Это автоматическое сообщение. Сопротивление бесполезно. Приготовьтесь умереть». Похоже этот корабль повстанцев под управлением ИИ.</text>
+	<text>Автоматический разведчик повстанцев исследует этот регион. Вы пытаетесь спрятаться за ближайшей луной, но он находит вас и начинает наступление.</text>
+	<text>ИИ маленького разведчика повстанцев моментально идентифицирует вас как угрозу и атакует.</text>
+	<text>Корабль повстанцев двигается к вам для атаки. Вы пытаетесь связаться с ним, но понимаете бесполезность этого, когда видите, что корабль пилотирует ИИ.</text>
+	<text>Должно быть это один из беспилотных разведывательных кораблей повстанцев. Похоже что боя никак не избежать.</text>
+	<text>Еще один беспилотный корабль патрулирует эту зону. Вы готовите корабль к битве.</text>
+	<text>Маяк охраняется беспилотным разведчиком. Готовьтесь к бою.</text>
+	<text>Небольшой челнок появляется на радаре. Оказывается это автоматический разведчик повстанцев!</text>
+</textList>
+
+<event name="AUTO_HACKER" unique="true">
+	<text>Ваше прибытие знаменуется лихорадочными миганиями индикаторов безопасности. Автоматический разведчик повстанцев, что был неподалёку, внедрил вирус и нарушил работу ваших щитов. Остаётся только надеяться, что это не станет причиной более серьёзных проблем, прежде чем вы сможете уничтожить его.</text>
+	<ship load="REBEL_AUTO_HACKSHIELDS" hostile="true"/>
+	<status type="divide" target="player" system="shields" amount="2"/>
+</event>	
+
+<event name="REBEL">
+	<text load="REBEL"/>
+	<ship load="REBEL" hostile="true"/>
+</event>
+<textList name="REBEL">
+	<text>Ваш корабль принимает сообщение: «Наконец то мы вас отыскали. Готовьтесь умереть!»</text>
+	<text>Небольшой корабль повстанцев пришвартован у маленькой станции. Вы стараетесь тихонечко прошмыгнуть мимо, но всё напрасно — враг заметил вас. Разогреть орудия!</text>
+	<text>Корабль повстанцев патрулировал этот регион. Как только вы прибываете, он начинает нападение.</text>
+	<text>Корабль повстанцев передаёт вам: «Отморозок из Федерации! Мы долго этого ждали!»</text>
+	<text>Вы получаете передачу: «Простите, у нас приказ, ничего личного». Орудия корабля повстанцев разогреваются.</text>
+	<text>К тому моменту, когда вы замечаете корабль повстанцев, уже поздно пытаться избежать схватки.</text>
+	<text>Корабль повстанцев передаёт: «Не для того мы развязали эту войну, чтобы позволить одному кораблю Федерации разрушить наши мечты о лучшей галактике!» Он наводит орудия.</text>
+	<text>Корабль повстанцев осторожно приближается. «Лично я, — говорит капитан, — лучше бы был на стороне Федерации. Но я — солдат, и от меня не будет проку без войны и сражений. Защищайтесь!»</text>
+	<text>С вами связывается корабль повстанцев: «Когда восстание завершится, вы увидите, что мы обеспечиваем более безопасный мир. Точнее, конкретно вы — не увидите, но вы меня поняли». Они заряжают оружие.</text>
+	<text>Корабль повстанцев охраняет этот маяк. Вы приказываете лечь на их курс и готовитесь оставить пару царапин на обшивке очередного повстанца.</text>
+</textList>
+
+<event name="SQUAT_WARNING" unique="true">
+	<text>Вы натыкаетесь на передового разведчика флота повстанцев.</text>
+	<ship load="SQUAT_WARNING" hostile="true"/>
+</event>
+
+
+
+
+
+
+
+<!-----------
+		NEUTRAL!!!
+	Events that could have a fight
+------------>
+
+
+
+<event name="AUTO_CIVILIAN" unique="false">
+	<text>Вы сталкиваетесь с автоматическим разведчиков повстанцев, преследующим гражданский корабль. Разведчик уже привёл орудия в полную боевую готовность.</text>
+	<choice>
+		<text>Помочь гражданскому кораблю.</text>
+		<event>
+			<text>Включить ваши орудия и вступить в бой с автоматическим кораблём.</text>
+			<ship load="REBEL_AUTO_CIVILIAN" hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Держаться подальше.</text>
+		<event>
+			<text>Бой выводит их из вашего непосредственного радиуса сканирования.</text>
+		</event>
+	</choice>
+</event>
+
+<event name="SQUAT_REFUEL_STATION" unique="true">  
+	<img planet="PLANET_POPULATED_SMALL"/>
+	<text>Вы засекаете разведчика повстанцев, идущего в атаку на маленький заправочный аванпост. Их орудия заряжены, но они пока не стреляют.</text>
+	<ship load="SQUAT_REFUEL_STATION" hostile="false"/>
+	<choice>
+		<text>Вмешаться и защитить аванпост.</text>
+		<event>
+			<text>Повстанцы отвечают на вашу угрозу: «Я не знаю кто вы, но никто не встаёт на пути флота повстанцев!» Они двигаются к вам, чтобы атаковать.</text> 
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Избежать конфликта.</text>
+		<event>
+			<text>Корабль повстанцев делает несколько предупредительных выстрелов, но позже отключает орудия. Похоже что аванпост дал им то, что они требовали.</text> 
+		</event>
+	</choice>
+</event>
+
+<event name="AUTO_REFUEL_STATION" unique="true">  
+	<img planet="PLANET_POPULATED_SMALL"/>
+	<text>Вы обнаруживаете автоматический разведчик повстанцев, атакующий маленький заправочный аванпост.</text>
+	<ship load="REBEL_AUTO_REFUEL" hostile="false"/>
+	<choice>
+		<text>Вмешаться и защитить аванпост.</text>
+		<event>
+			<text>Определив приоритетную цель, автоматический корабль приближается, чтобы атаковать вас.</text> 
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Избежать конфликта.</text>
+		<event>
+			<text>Вы держитесь подальше от конфликта. Аванпост подвергся обстрелу, но корабль прекратил атаку, прежде чем тот был разрушен.</text> 
+		</event>
+	</choice>
+</event>
+
+<event name="AUTO_DEFENSE_MAP" unique="true">
+	<img planet="PLANET_POPULATED"/>
+	<text>Вы обнаруживаете автоматический корабль повстанцев неподалеку. Он не атакует и, кажется, патрулирует вокруг станции обнаружения дальнего действия.</text>
+	<ship load="REBEL_AUTO_MAP" hostile="false"/>
+	<choice>
+		<text>Атаковать автоматический корабль, чтобы пробраться к станции.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Постараться не провоцировать корабль.</text>
+		<event/>
+	</choice>
+	<choice req="sensors" lvl="3" hidden="true">
+		<text>(Улучшенные сенсоры) Использовать сенсоры и попытаться получить доступ к данным.</text>
+		<event load="AUTO_DEFENSE_MAP_SENSORS"/>
+	</choice>
+	<choice req="teleporter" hidden="true">
+		<text>(Телепортер) Отправиться прямиком на станцию и попытаться избежать обнаружения.</text>
+		<event>
+			<text>Оказавшись на борту, ваш экипаж смог получить доступ и скачать информацию из архивов сканера дальнего действия. Ваша карта обновлена.</text>
+			<reveal_map/>
+		</event>
+	</choice>
+</event>
+<eventList name="AUTO_DEFENSE_MAP_SENSORS">
+	<event>
+		<text>Ваши улучшенные сенсоры смогли удалённо получить доступ и скачать карту местности общественного радара.</text>
+		<reveal_map/>
+	</event>
+	<event>
+		<text>Автоматический корабль, видимо, был удалённо соединен со станцией; как только вы попытались войти в компьютер, корабль активировался и атаковал вас.</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+
+<event name="AUTO_DEFENSE_ITEM" unique="true">
+	<text>Усовершенствованный автоматический корабль повстанцев находится рядом с маленькой космической станцией повстанцев. Сенсоры показывают, что это склад для хранения военного имущества.</text>
+	<ship load="REBEL_AUTO_ITEM" hostile="false"/>
+	<choice>
+		<text>Атаковать автоматический корабль, чтобы добраться до склада.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Попытаться не провоцировать корабль.</text>
+		<event/>
+	</choice>
+	<choice req="cloaking" hidden="true">
+		<text>(Маскировка) Попытаться замаскироваться и открыть склад.</text>
+		<event load="AUTO_DEFENSE_ITEM_CLOAK"/>
+	</choice>
+</event>
+<eventList name="AUTO_DEFENSE_ITEM_CLOAK">
+	<event>
+		<text>Облетев окрестности, корабль успешно приближается к станции, избегая обнаружения.</text>
+		<choice hidden="true">
+			<text>Продолжить...</text>
+			<event load="DEFENSE_ITEM_LIST"/>
+		</choice>
+	</event>
+	<event>
+		<text>Прежде чем вы смогли подобраться достаточно близко, чтобы просканировать станцию, автоматический корабль засекает вас и движется в атаку.</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+<eventList name="DEFENSE_ITEM_LIST">
+	<event>
+		<text>Станция была заброшена или ограблена подчистую. Похоже, что её довольно давно не использовали. Вы не находите ничего полезного.</text>
+	</event>
+	<event>
+		<text>Станция, видимо, была создана для того, чтобы оборудовать дронами корабли повстанцев. Вы находите функционирующую схему дрона.</text>
+		<autoReward level="LOW">drone</autoReward>
+	</event>
+	<event>
+		<text>Станция оказалась складом для оружия военного назначения. Вы находите одно орудие, которое легко можно присоединить к кораблю.</text>
+		<autoReward level="LOW">weapon</autoReward>
+	</event>
+	<event>
+		<text>Станция оказалась складом для всевозможных ресурсов. Вы собираете всё, что можно.</text>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+</eventList>
+
+<event name="AUTO_DEFENSE_RADAR" unique="true">
+	<text>Автоматический корабль неподвижно завис рядом с передовой станцией обнаружения повстанцев.</text>
+	<ship load="REBEL_AUTO_RADAR" hostile="false"/>
+	<choice>
+		<text>Приблизиться к станции.</text>
+		<event>
+			<text>Корабль включается и наводится на вас.</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Сохранять дистанцию и ждать, пока FTL зарядится.</text>
+		<event/>
+	</choice>
+	<choice req="COMBAT" hidden="true">
+		<text>(Анти-корабельный дрон) Отправить дрона, чтобы отвлечь автоматический корабль.</text>
+		<event load="AUTO_DEFENSE_RADAR_COMBAT"/>
+	</choice>
+</event>
+<eventList name="AUTO_DEFENSE_RADAR_COMBAT">
+	<event>
+		<text>Ваш боевой дрон атакует автоматический корабль, и затем отступает, выманивая его подальше. Вы быстро движетесь к радару, чтобы получить к нему доступ.</text>
+		<choice>
+			<text>Продолжить...</text>
+			<event load="DEFENSE_RADAR_LIST"/>
+		</choice>
+		<item_modify>
+			<item type="drones" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>Ваш боевой дрон без остановки стреляет по автоматическому кораблю. Он не может пробиться через его щиты, но по крайней мере этого достаточно, чтобы отвлечь его и позволить вам получить доступ к радару.</text>
+		<choice>
+			<text>Продолжить...</text>
+			<event load="DEFENSE_RADAR_LIST"/>
+		</choice>
+		<item_modify>
+			<item type="drones" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>Прежде чем ваш дрон успел атаковать, автоматический корабль активируется и сбивает его. Затем он засекает ваш корабль и движется в вашу сторону.</text>
+		<ship hostile="true"/>
+		<item_modify>
+			<item type="drones" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+</eventList>
+<eventList name="DEFENSE_RADAR_LIST">
+	<event>
+		<text>Вы успешно взламываете их систему и передаете ложную информацию о своем местонахождении. Это должно хотя бы ненадолго задержать флот повстанцев.</text>
+		<modifyPursuit amount="-1"/>
+	</event>
+	<event>
+		<text>Программные средства защиты оказалось слишком сложно обойти. И только вы собрались отключиться, как наткнулись на незащищенную информацию об окружающих маяках. Ваша карта обновлена.</text>
+		<reveal_map/>
+	</event>
+	<event>
+		<text>Вы не смогли преодолеть защиту компьютера. Вы сдаетесь и возвращаетесь на корабль.</text>
+	</event>
+	<event>
+		<text>Когда вы попытались взломать компьютер, вы активировали скрытую тревогу. Похоже что теперь повстанцы знают ваше местоположение! Вы поторапливаетесь на корабль, чтобы совершить прыжок отсюда.</text>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<event name="REBEL_TRANSPORT" unique = "true">
+	<img planet="NONE"/>
+	<text>Вы замечаете небольшой корабль повстанцев поблизости. Кажется, он переоборудован для перевозки, а не для боя, и вроде бы не собирается нападать на вас и ваш корабль.</text>
+	<choice>
+		<text>Потребовать у них имущество.</text>
+		<event>
+			<text>Вы готовитесь захватить их груз силой.</text>
+			<ship load="SQUAT_TRANSPORT" hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Избежать встречи с кораблём.</text>
+		<event>
+			<text>Они остаются вне досягаемости ваших орудий, и в конце концов совершают прыжок.</text>
+		</event>
+	</choice>
+</event>
+<eventList name="REBEL_TRANSPORT_DESTROYED">
+	<event>
+		<text>Вы обыскиваете корабль и обнаруживаете, что они перевозили новое орудие военного типа! Оно каким-то образом не повредилось во время битвы и легко может быть установлено на корабль.</text>
+		<autoReward level="MED">weapon</autoReward>
+	</event>
+	<event>
+		<text>Вы обыскиваете останки корабля, но находите только чертежи и обломки механизмов. Неприятно, но хотя бы вы собираете весь лом, какой можете добыть.</text>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>Корабль перевозил вооружение. Вы нашли одно орудие неповрежденным, несмотря на битву.</text>
+		<autoReward level="low">weapon</autoReward>
+	</event>
+	<event>
+		<text>Корабль, судя по всему, перевозил вооружение; к сожалению, ничего не пережило битву.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Обыскивая останки, вы обнаружили, что грузом были схемы дронов военного типа. Вы принесли их на борт, чтобы установить на корабль.</text>
+		<autoReward level="MED">drone</autoReward>
+	</event>
+	<event>
+		<text>Обломки указывают на то, что корабль перевозил схемы дронов, но, к сожалению, ничего не осталось. Зато вы нашли пригодные части дронов.</text>
+		<autoReward level="MED">droneparts</autoReward>
+	</event>
+	<event>
+		<text>Груз этого корабля оказался бесполезным. Но зато этот корабль, похоже, был исследовательским судном: на нём есть детализированные карты и данные. Вы скачиваете что можно в карту корабля.</text>
+		<reveal_map/>		
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>По внешнему виду попавшихся вам обломков можно сделать вывод, что этот корабль собирал информацию. И ни одной полезной вещи среди всего этого нет.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Вы засекли слабые признаки жизни из чудом уцелевшего корабельного модуля, медленно вращающегося в открытом космосе. Они перевозили заключенных, и единственный выживший предлагает присоединиться к вашему экипажу, как первый шаг на пути к мести.</text>
+		<crewMember amount="1"/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>Корабль, как оказалось, перевозил заключенных. К сожалению, они все были убиты в бою. Вы собираете все, что можете.</text>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>Корабль вёз военные запасы. Вы подбираете все, что выглядит пригодным из обломков.</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</event>
+</eventList>
+<eventList name="REBEL_TRANSPORT_CAPTURED">
+	<event>
+		<text>Теперь, когда экипаж убит, вы обыскиваете корабль. Вы находите вооружение военного типа и берёте то, что выглядит наиболее полезным.</text>
+		<autoReward level="MED">weapon</autoReward>
+	</event>
+	<event>
+		<text>Корабль не пытается сражаться, но вы все ещё выявляете признаки жизни. Видимо это был транспортник для заключенных. Один из выживших предлагает присоединиться к вашему экипажу в обмен на свободу остальных.</text>
+		<crewMember amount="1"/>
+		<autoReward level="HIGH">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Корабль по-видимому имел информацию об окружающих маяках. Вы скачиваете что можете в карту корабля, и разбираете на лом все, что осталось.</text>
+		<reveal_map/>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Обыскивая останки, вы обнаруживаете, что грузом были схемы дрона военного типа. Вы забираете их на борт, чтобы установить на свой корабль.</text>
+		<autoReward level="MED">drone</autoReward>
+	</event>
+</eventList>
+
+
+
+<event name="BROKEN_REBEL_DRONE" unique="true">
+	<text>Вы находите автоматический разведчик повстанцев, дрейфующий рядом с маяком. Несмотря на идеальное состояние, похоже что он деактивирован.</text>
+	<ship load="REBEL_AUTO" hostile="false"/>
+	<choice hidden="true">
+		<text>Попытаться скачать данные из корабля.</text>
+		<event load="DOWNLOAD_DRONE_DATA"/>
+	</choice>
+	<choice>
+		<text>Не рисковать, активируя его, а просто разобрать на лом.</text>
+		<event>
+			<autoReward level="LOW">scrap_only</autoReward>
+		</event>
+	</choice>
+	<choice req="sensors" lvl="3" hidden="true">
+		<text>(Улучшенные сенсоры) Удалённо просканировать корабль.</text>
+		<event load="BROKEN_REBEL_DRONE_SENSORS"/>
+	</choice>
+</event>
+<eventList name="DOWNLOAD_DRONE_DATA">
+	<event>
+		<text>Вы смогли вытянуть из корабля все данные об этом секторе. Ваша карта обновлена.</text>
+		<reveal_map/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>Вы случайно реактивируете ИИ корабля. Его орудия и щиты незамедлительно включаются; готовьтесь к сражению!</text>
+		<ship load="REBEL_AUTO" hostile="true"/>
+	</event>
+</eventList>
+<eventList name="BROKEN_REBEL_DRONE_SENSORS">
+	<event>
+		<text>Ваши улучшенные сенсоры показывают, что взломать дрона — безопасно. Вы закачиваете его карты в свою навигационную систему и разбираете корабль на полезные материалы.</text>
+		<reveal_map/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>Ваши улучшенные сенсоры показывают, что корабль в состоянии готовности и может включиться в любой момент. Вы всё равно попытаетесь получить доступ к данным корабля?</text>
+		<choice hidden="true">
+			<text>Да.</text>
+			<event load="DOWNLOAD_DRONE_DATA"/>
+		</choice>
+		<choice>
+			<text>Нет.</text>
+			<event>
+				<text>Вы оставляете корабль в одиночестве и готовитесь к прыжку.</text>
+			</event>
+		</choice>
+	</event>
+</eventList>
+		
+
+
+<!-----------
+		ENVIRONMENT!!!
+	Events with unique environments
+------------>
+
+
+<event name="NEBULA_REBEL_BOARDING" unique="true">
+	<environment type="nebula"/>
+	<text>Похоже, здесь есть несколько небольших станций. Прежде чем вы успели просканировать их, включилась тревога. На одной из станций был задействован телепортер повстанцев. Нас берут на абордаж!</text>
+	<boarders min="3" max="4" class="human"/>
+</event>
+
+
+
+
+
+<!-----------
+		BOARDERS!!!
+	Events with boarder calls
+------------>
+
+
+
+
+<event name="BOARDERS_REBEL_SHIP">
+	<text load="BOARDERS_REBEL_SHIP"/>
+	<boarders min="2" max="3" class="human"/>
+	<ship load="REBEL" hostile="true"/>
+</event>
+<textList name="BOARDERS_REBEL_SHIP" unique="false">
+	<text>Вы получили сообщение от ближайшей станции повстанцев: «У вас кишка не тонка, лететь через наше пространство. Сейчас получите». Он поворачивается и дает приказ: «Убить их экипаж. Я хочу этот корабль целым».</text>
+	<text>Ваши сенсоры предупреждают о приближающемся корабле повстанцев, и одновременно вы слышите предательские звуки телепортера. Кто-то злорадно смеётся на борту: «Готовы умереть? Ох, чувствую, получу сегодня повышение!»</text>
+	<text>Входящее сообщение: «Здравствуйте, капитан, — говорит повстанец в офицерских одеждах. — Как щедро с вашей стороны показаться здесь. Приготовьтесь к абордажу. Сдавайтесь и мы, возможно, будем снисходительны».</text>
+	<text>Вы получили сообщение на низких частотах: «Вы окружены, как и все ваши оставшиеся друзья из Федерации. Умрите же наконец!» Враг телепортируется на ваш корабль.</text>
+</textList>
+
+
+
+

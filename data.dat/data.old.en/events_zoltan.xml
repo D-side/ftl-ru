@@ -1,0 +1,881 @@
+﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--   
+			SUMMARY  - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Structure:
+	START_BEACON_ZOLTAN
+	STORE_ZOLTAN
+	NOTHING_ZOLTAN
+	
+Item:	
+	ZOLTAN_FREE_AUGMENT
+	ZOLTAN_FREE_MAP
+	ZOLTAN_ODD_MOON   (ZOLTAN_ODD_MOON_CHEK)
+	
+Hostile:
+	ZOLTAN_FIGHT
+	ZOLTAN_PIRATE
+	ZOLTAN_MANTIS
+	ZOLTAN_ENGI
+
+	
+Neutral:
+	ZOLTAN_LIFERAFT  (ZOLTAN_LIFERAFT_HIRE)
+	
+Environmnt:
+--->
+
+<!-- Event ideas --
+Condescending scientist who asks to join your ship for a fee because he wants to study your barbarian culture.
+
+shield research center - jams shields
+
+-asteroids, sun
+
+-->
+
+
+
+<eventList name="HOSTILE_ZOLTAN">
+	<event load="ZOLTAN_FIGHT"/>
+	<event load="ZOLTAN_PIRATE"/>
+	<event load="ZOLTAN_MANTIS"/>
+	<event load="ZOLTAN_ENGI"/>
+	<event load="ZOLTAN_ASTEROID"/>
+	
+
+	<event load="REBEL"/>
+	<event load="REBEL_AUTO"/>
+</eventList>
+
+	
+	
+	
+	
+
+<eventList name="NEUTRAL_ZOLTAN">
+	<event load="ZOLTAN_LIFERAFT"/>
+	<event load="ZOLTAN_SCIENCE_DOCK"/>
+	<event load="ZOLTAN_RIFT_FIGHT"/>
+	<event load="ZOLTAN_CREW_SCAN"/>
+
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="ASTEROID_EXPLORE"/>	
+	
+	<!--
+	<event load="BROKEN_REBEL_DRONE"/>
+	<event load="AUTO_DEFENSE_ITEM"/> -->
+</eventList>
+
+
+
+
+
+
+<eventList name="ITEM_ZOLTAN">
+	<event load="ZOLTAN_FREE_AUGMENT"/>
+	<event load="ZOLTAN_FREE_MAP"/>
+	<event load="ZOLTAN_ODD_MOON"/>
+	
+	<event load="FIND_DRONE"/>
+	<event load="FREE_ITEMS"/>
+	<event load="FUEL_FOR_DRONE"/>
+	<event load="REFUEL_STATION"/>
+	<event load="REPAIR_STATION"/>
+	<event load="TRADER_CIV"/>
+</eventList>
+
+
+
+
+<eventList name="BOARDERS_ZOLTAN">
+	<event load="ZOLTAN_BOARDERS"/>
+	<event load="ZOLTAN_BOARDERS_MANTIS"/>
+
+
+	<event load="BOARDERS_HACKING"/>
+
+</eventList>
+
+
+<eventList name="DISTRESS_BEACON_ZOLTAN">
+	<event load="ZOLTAN_DISTRESS_MANTIS"/>
+	<event load="ZOLTAN_DISTRESS_SHELL"/>
+	
+	
+	<event load="DISTRESS_SATELLITE_DEFENSE"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="STRANDED_BEACON"/>
+</eventList>
+
+
+
+<eventList name="QUESTS_ZOLTAN">
+	<event load="ZOLTAN_TRADE_HUB"/>
+	<event load="ZOLTAN_QUEST_PRIMITIVES"/>
+	
+	
+	<event load="FEDERATION_PLANET_SIGNAL"/>
+	<event load="QUEST_MANTIS_INVASION_START"/>
+	<event load="QUEST_CREWDEAD_START"/>
+</eventList>
+
+
+<eventList name="NEBULA_ZOLTAN">
+	<event load="NEBULA_ZOLTAN_ROCK"/>
+	<event load="NEBULA_ZOLTAN_EYE"/>
+	<event load="STORM_ZOLTAN_SUPPLY_CHOICE"/>
+	
+	
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/>  
+	<event load="NEBULA_AUTO"/>
+</eventList>
+	
+		
+
+
+
+
+<!-----------
+		STRUCTURE!!!
+	Requred structural 
+------------>
+
+<event name="START_BEACON_ZOLTAN">
+	<text load="START_BEACON_ZOLTAN"/>
+</event>
+<textList name="START_BEACON_ZOLTAN">
+	<text>You've entered Zoltan territory. This species is not renowned for giving anything for nothing, but you can always be assured a fair hearing.</text>
+	<text>The Zoltan patrol their borders but let you pass when you ID as Federation. Let's hope they won't be so courteous to the Rebels.</text>
+	<text>You arrive in Zoltan space. From what you have heard they anticipated the coming war and made preparations to hold their borders.</text>
+	<text>You're far from Federation home space here in Zoltan territory, and it's not clear whether the authorities will have any goodwill remaining. Still, you have to push forward.</text>
+</textList>
+
+<event name="STORE_ZOLTAN">
+	<text load="STORE_ZOLTAN"/>
+	<store/>
+</event>
+<textList name="STORE_ZOLTAN">
+	<text>The Zoltan are fascinated by other species, and have set up something of an alien knick-knack shop here. Why not take a look?</text>
+	<text>A human ship hails: "My friends! Please, there is nothing I don't have, and there is nothing worth wanting that I can't get. Why not take a look around my shop?"</text>
+	<text>A Mantis crew here has hunkered down in the abdomen of a long-dead space-whale - the only way, presumably, for them to operate their black-market trade without detection. Worth a look?</text>
+	
+	
+</textList>
+
+<event name="NOTHING_ZOLTAN">
+	<text load="NOTHING_ZOLTAN"/>
+</event>
+<textList name="NOTHING_ZOLTAN">
+	<text>There are some mineral-rich asteroids here that the Zoltan have left idle, but you've none of the necessary equipment to mine them.</text>
+	<text>You have to admit - Zoltan space is a beautiful and peaceful place indeed. However, re-engaging the FTL and finishing your mission is your priority, not sight-seeing.</text>
+	<text>A light asteroid field is entering the atmosphere of a nearby planet - a fireworks show on a galactic scale. There's little for it but to take in the ambiance and program the next jump.</text>
+	<!-- TO DO - need more -->
+	<text>You stumble upon some Zoltan military vessels engaging in combat training. Their Energy Shields are impressive, but you note how quickly beam and ion weaponry take them down.</text>
+	<text>You don't have time to hail the Zoltan ship that was waiting at this beacon before it jumps away. They are a careful race.</text>
+	<text>A Zoltan shipyard is stationed at this beacon. You admire the display of hundreds of glowing Zoltan performing delicate exterior work on a massive transport ship.</text>
+	<text>A message broadcast from a nearby planet announces the presence of an ancient Zoltan monastery available for visiting. Likely just a tourist trap, but still too bad you don't have the time to visit.</text>
+</textList>
+
+
+
+
+
+<!-----------
+		DISTRESS!!!
+	Beacons
+------------>
+
+<event name="ZOLTAN_DISTRESS_MANTIS" unique="true">
+	<text>Your jump interrupts a Zoltan security ship as it follows a Mantis pirate into an asteroid field. They message you, "Your presence here will continue to be tolerated - but please, do not interfere."</text>
+	<environment type="asteroid"/>
+	<distressBeacon/>
+	<choice hidden="true">
+		<text>Interfere and save the Mantis ship.</text>
+		<event>
+			<text>Sometimes you have to bet on the underdog - even on the rare occasions that the underdog is a Mantis warship. You set off for the heart of the asteroid field and engage the Zoltan there.</text>
+			<environment type="asteroid"/>
+			<ship load="ZOLTAN_SHIP_SAVE_MANTIS1" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Interfere and help the Zoltan ship.</text>
+		<event>
+			<text>You overtake the Zoltan and catch up with the Mantis ship in the asteroid belt. Time to make some friends.</text>
+			<environment type="asteroid"/>
+			<ship load="ZOLTAN_SHIP_SAVE_MANTIS2" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Don't interfere.</text>
+		<event>
+			<text>The Zoltan know their business better than most - best to leave them to it. You prepare to jump.</text>
+		</event>
+	</choice>
+</event>
+
+
+<event name="ZOLTAN_DISTRESS_SHELL" unique="true">
+	<text>You arrive to find a lumbering Zoltan freighter with no one at the helm. It's a mystery what happened to the crew, but it'd be a shame to let the opportunity go to waste.</text>
+	<distressBeacon/>
+	<autoReward level="RANDOM">standard</autoReward>
+	
+</event>
+	
+
+	
+	
+<!-----------
+		QUEST!!!
+	Beacons
+------------>
+	
+
+<event name="ZOLTAN_TRADE_HUB" unique="true">   <!-- This is a 50/50 chance of quest start-->
+	<text>You come to a Zoltan trade and supply hub - everything the weary traveller needs, provided they have the right documentation.</text>
+	<choice hidden="true">
+		<text>Try to talk your way in.</text>
+		<event load="ZOLTAN_TRADE_HUB_TALK"/>
+	</choice>	
+	<choice hidden="true" req="teleporter" lvl="1">
+		<text>(Teleporter) Beam directly to the civilian deck.</text>
+		<event>
+			<text>You re-materialise in a dark corner of the main concourse and are able to conduct your investigations in peace.</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="ZOLTAN_TRADE_HUB_SUCCESS"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="energy">
+		<text>(Zoltan) Have your crewmember present his official documentation and pay the entry fee [ Scrap: -10 ].</text>
+		<event>
+			<text>They scan ID that declares your crewmember an official citizen, collect their fee, and let you pass.</text>
+			<item_modify>
+				<item type="scrap" min="-10" max="-10"/>
+			</item_modify> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="ZOLTAN_TRADE_HUB_SUCCESS"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Leave.</text>
+		<event>
+			<text>You don't have the papers - well, the neuro-laced identity bracelets - to get in, so best not to try.</text>
+		</event>
+	</choice>
+</event>
+
+
+<eventList name="ZOLTAN_TRADE_HUB_TALK">
+	<event>
+		<text>They don't see many of your species in these parts, and you stick out like a Casvagarian Sea Slug in a Plutonian Shrimp Stew. You make it back to the ship with a gang of Zoltan guards in tow!</text>
+		<ship load="ZOLTAN_SHIP" hostile="true"/>
+		<boarders min="2" max="4" class="energy"/>
+	</event>
+	<event>
+		<text>You pose as traders and succeed in bypassing airlock security - however, it's only a matter of time before someone realizes your ID cards are counterfeit!</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="ZOLTAN_TRADE_HUB_SUCCESS"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="ZOLTAN_TRADE_HUB_SUCCESS">
+	<event>
+		<text>You head into a ship supply store. It is a well-equipped, self-service affair. An order is dialled into a terminal, scrap is deposited, and the item is dispatched from a nearby chute.</text>
+		<store/>
+	</event>
+	<event>
+		<text>You head into the cantina for gossip. Topics of conversation in the cantina range from crop distribution microbes to the joys of Slug pleasure cruises.</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event>
+				<text>You overhear one group discussing a newly discovered planet yet to have first contact, and note down its location.</text>
+				<quest event="ZOLTAN_QUEST_PRIMITIVES"/>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+<event name="ZOLTAN_QUEST_PRIMITIVES" unique="true">
+	<text>You arrive at the primitive planet that you heard about at the cantina and are surprised to see a Zoltan ship facing off against a Rebel assault craft.</text>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text> You tap into their frequency and hear the Rebel captain yelling, "We are liberating this planet in the name of the new Galactic government! These aliens will not be left in ignorance where they cannot be of use!"</text>
+			<choice hidden="true">
+				<text>Interfere - make first contact with the primitive aliens.</text>
+				<event>
+					<text>The local people - furry, one-eyed tree lizard things - begin chanting when they see you. Suddenly the sky is lit by laser fire - the Zoltan opened fire on your ship! You dash back to the shuttle and join the fight.</text>
+					<ship load="ZOLTAN_PRIMITIVES_ZOLTAN" hostile="true"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Protect the aliens' way of life - Attack the Rebel ship.</text>
+				<event>
+					<text>These creatures should be left to develop at their own pace. You direct all weapons on the Rebel ship and begin the firing sequence.</text>
+					<ship load="ZOLTAN_PRIMITIVES_REBEL" hostile="true"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Leave.</text>
+				<event>
+					<text>You don't want to alert the Rebels of your presence and you don't want to anger the Zoltan in their territory. The best solution is to leave.</text>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
+
+
+
+
+<!-----------
+		ITEM!!!
+	Events that can give something ususally no fight
+------------>
+<event name="ZOLTAN_FREE_AUGMENT" unique="true">  <!-- this is pretty sweet :/  -->
+	<text>A Zoltan academy sits docked just outside the beacon perimeter. They're happy to show you the fruits of their labor, and offer something to take home with you.</text>
+	<autoReward level="LOW">augment</autoReward>
+</event>
+
+<event name="ZOLTAN_FREE_MAP" unique="true">
+	<text>The Zoltan stationed near this beacon are happy to receive you. As they give you the formal tour of their ship you spy some local star charts and mentally log the details.</text>
+	<reveal_map/>
+	<ship load="ZOLTAN_SHIP" hostile="false"/>
+</event>
+	
+<event name="ZOLTAN_ODD_MOON" unique="true">
+	<text>Something strikes you as odd about a moon in the distance.</text>
+	<choice hidden="true">
+		<text>Check it out.</text>
+		<event load="ZOLTAN_ODD_MOON_CHECK"/>
+	</choice>
+	<choice>
+		<text>Leave it be.</text>
+		<event>
+			<text>You try not to fixate on the moon in the aft scanner and you set the coordinates for the next jump.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="BOARDER">  <!-- TODO make sure this works!!! -->
+		<text>(Boarding Drone) Send a drone to probe the surface.</text>
+		<event>
+			<text>Initial scans indicate a network of caves not far underground. You launch a boarding drone and it breaks through the surface into the cavern below.</text>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/>
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>Your drone discovers a vast cave network and evidence of excavation. Buried deep below you find a Zoltan scientist, still hard at work. He tells you that all his colleagues are long dead. You decide not to ask questions and offer to let him join your crew.</text>
+					<crewMember amount="1" class="energy"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<eventList name="ZOLTAN_ODD_MOON_CHECK">
+	<event>
+		<text>A closer inspection reveals signs of habitation on the surface, but nothing else particularly interesting.</text>
+	</event>
+	<event>
+		<text>Sending a shuttle to explore a beckoning cave system you discover signs of a battle - and a still-functioning weapon!</text>
+		<autoReward level="LOW">weapon</autoReward>	
+	</event>
+	<event>
+		<text>A deep scan of the surface reveals a cave system that runs for miles, and what looks like a scrap heap left over from some heavy-duty construction.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>It looks as if a team could break through the fragile layer of the moon's surface into a hidden cavern.</text>
+		<choice hidden="true">
+			<text>Attempt to detonate some explosives to break through the surface. [ Missiles: -1 ]</text>.
+			<event load="ZOLTAN_ODD_MOON_EXPLOSION"/>
+		</choice>
+		<choice>
+			<text>Explosives are too valuable to waste on excavation work. Let's get out of here.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+	
+<eventList name="ZOLTAN_ODD_MOON_EXPLOSION">
+	<event>
+		<text>A portion of the surface layer is destroyed in an impressive display, revealing miles of caves. You don't have time to fully explore them, but you find some remains of an old subterranean base that could be useful.</text>
+		<item_modify>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+		<autoReward level="RANDOM">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>The explosives are set remotely, but the detonation achieves nothing. What a waste.</text>
+		<item_modify>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>Your explosives reveal the 'cave' is actually a secret base, located in a network of bunkers just under the surface. Everyone inside is dead; some Mantis clearly came through here recently. It looks like the Zoltan were researching advanced ship weaponry. You take one of their better examples back to your ship.</text>
+		<autoReward level="RANDOM">weapon</autoReward>
+		<item_modify>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+</eventList>
+	
+	
+<!-----------
+		HOSTILE!!!
+	Events that call up a fight for sure
+------------>
+<event name="ZOLTAN_FIGHT">
+	<text load="ZOLTAN_FIGHT"/>
+	<ship load="ZOLTAN_SHIP" hostile="true"/>
+</event>
+<textList name="ZOLTAN_FIGHT">
+	<text>A Zoltan ship makes contact. "The nature of the day is rotational. The fever is emaciated. The reason is-" They've caught some nasty deep space dementia. Before you can consider finding help for them, they open fire.</text>
+	<text>You're surprised when a stationary Zoltan ship opens fire. It appears there are aggressive pugilists even among the 'enlightened'.</text>
+	<text>You receive a message, "This area is off limits. Submit your ship to processing." It's only one guard ship in a lonely beacon. You decide to fight your way out.</text>
+	<text>You discover a number of Zoltan civilian ships fighting off pirates. Unfortunately one ship mistakes your purpose and moves in to attack! They are refusing all communication; you have no choice but to fight.</text>
+	<text>Like many areas in Zoltan space, the residents of this sector prepared well for Galactic war. The military here seem to have given up reasoning with foreigners, preferring instead to attack on sight!</text>
+	<text>A Zoltan ship is waiting at this beacon. They request your identification, but radiation from the sun in this system is disrupting your communications. They take your silence for aggression and move in to attack.</text>
+	<text>The Zoltan ship patrolling this area hails you: "This area is off limits. Secrecy is vital." They power their weapons.</text>
+	<!-- Add more! -->
+	
+</textList>
+
+<event name="ZOLTAN_PIRATE">
+	<text load="ZOLTAN_PIRATE"/>
+	<ship load="PIRATE" hostile="true"/>
+</event>
+<textList name="ZOLTAN_PIRATE">
+	<text>"Emergency, all ships in range, we are under attack!" The frequency matches a nearby Zoltan ship; you move in on their pursuer. They take your intervention as a cue to jump away. Cowards.</text>
+	<text>You jump just in time to witness a Zoltan ship's FTL drive overload. In his final moments their captain implores you not to get involved, but it's too late - their attacker is already upon you!</text>
+	<text>Despite their precautions, pirates have begun to harass the local Zoltan settlements across this sector. One such pirate spots your ship and moves in to attack.</text>
+	<text>A ship with pirate markings demands your surrender. It is sad times when even Zoltan space is beset by pirates. You doubt these fools will be missed.</text>
+	<text>You spot a pirate ship looting a small Zoltan cruiser. They spot you and move in to attack before your FTL drive has a chance to recharge.</text>
+	<!-- Add more instead of repeating ! -->
+	
+	<text>"Emergency, all ships in range, we are under attack!" The frequency matches a nearby Zoltan ship; you move in on their pursuer. They take your intervention as a cue to jump away. Cowards.</text>
+	<text>You jump just in time to witness a Zoltan ship's FTL drive overload. In their final moments they implore you not to get involved, but it's too late - their attacker is already upon you!</text>
+	<text>Despite their precautions, pirates have begun to harass the local Zoltan settlements across this sector. One such pirate spots your ship and moves in to attack.</text>
+	<text>A ship with pirate markings demand that you surrender. It is sad times when even Zoltan space is beset by pirates. You doubt these fools will be missed.</text>
+	<text>You spot a pirate ship looting a small Zoltan cruiser. They spot you and move in to attack before your FTL drive has a chance to recharge.</text>
+</textList>
+
+<event name="ZOLTAN_MANTIS" unique="true">
+	<text>You pick up the last broadcast from a rupturing Zoltan freighter: "The Mantis, they're here, please-" You're interrupted by fire off the port bow!</text>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+</event>
+
+<event name="ZOLTAN_ENGI" unique="true">
+	<text>You jump into a debris field that used to be a Zoltan cruiser. Unfortunately, its Engi escort takes you for the attacker and retaliates! They refuse all hails.</text>
+	<ship load="ENGI_SHIP" hostile="true"/>
+</event>
+
+
+<event name="ZOLTAN_ASTEROID" unique="true">
+	<text>You arrive in an asteroid field and are greeted by a Zoltan guard, "By attempting to access these closed mining fields, you are in violation of the Natural Mineral Protection Act. Your weaponry will be confiscated for processing." You don't have time for this.</text>
+	<environment type="asteroid"/>
+	<ship load="ZOLTAN_SHIP" hostile="true"/>
+</event>
+
+
+<!-----------
+		NEUTRAL!!!
+	Events that could have a fight
+------------>
+
+<event name="ZOLTAN_LIFERAFT" unique="true">  <!-- ALSO A QUEST!!-->
+	<text>You pick up a Zoltan life raft floating in space. Its inhabitant asks you to retake his ship from the pirates who recently commandeered it. "I'm certain it is clear," he concludes, "that you must not destroy my vessel in the process."</text>
+	<ship load="ZOLTAN_LIFERAFT" hostile="false"/>
+	<choice hidden="true">
+		<text>Engage the pirates.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Leave.</text>
+		<event>
+			<text>You refuse to get his ship back, but still offer to drop him off at the next station. The Zoltan is displeased, but directs you to a nearby starbase just the same.</text>
+		</event>
+	</choice>
+</event>
+<eventList name="ZOLTAN_LIFERAFT_HIRE">
+	<event>
+		<text>He responds haughtily, "You would presume I would work under your command after such a display of... prowess? No, I must decline."</text>
+	</event>
+	<event>
+		<text>He responds defeatedly, "I suppose I have nowhere else to go without a ship. I accept your offer."</text>
+		<item_modify>
+			<item type="scrap" min="-40" max="-40"/>
+		</item_modify>
+		<crewMember amount="1" class="energy"/>
+	</event>
+</event>
+
+	
+<event name="ZOLTAN_SCIENCE_DOCK" unique="true">
+	<text>What appears to be a Zoltan science ship requests permission to dock.</text>
+	<choice hidden="true">
+		<text>Dock with them.</text>
+		<event load="ZOLTAN_SCIENCE_DOCK_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Have them keep their distance.</text>
+		<event>
+			<text>They leave without a word.</text>
+		</event>
+	</choice>
+</event>	
+<eventList name="ZOLTAN_SCIENCE_DOCK_LIST">
+	<event>
+		<text>You allow them to approach, but are caught unaware when they open fire!</text>
+		<ship load="ZOLTAN_SCIENCE_DOCK" hostile="true"/>
+	</event>
+	<event>
+		<text>"We have been studying the relationships between the species and have determined that the "Federation" still has potential to be a net positive for the galaxy. Please accept this gift to aid your journey.</text>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+</eventList>
+
+
+<event name="ZOLTAN_RIFT_FIGHT" unique="true">
+	<text>You come to a quiet part of Zoltan space and encounter an ancient Zoltan wise man who has managed to harness the power of a spatial rift, but seems to have been driven completely mad by the power. "Choose your doom," he demands. This is all part of a day's work.</text>
+	<choice hidden="true">
+		<text>Mantis.</text>
+		<event>
+			<text>"You like a challenge. So be it!" A wormhole forms and a confused, angry Mantis ship hurtles toward you!</text>
+			<ship load="ZOLTAN_RIFT_MANTIS" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Slug.</text>
+		<event>
+			<text>"Do not be fooled, Federation, by a soft underbelly." You detect a wormhole opening up, and seconds later a Slug ship is attacking from the other direction!</text>
+			<ship load="ZOLTAN_RIFT_SLUG" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Rockmen.</text>
+		<event>
+			<text>"A hardened foe for a hardened veteran." You detect a wormhole opening up, and a Rock ship appears with guns blazing. It appears they were in combat when they were thrust across space-time.</text>
+			<ship load="ZOLTAN_RIFT_ROCK" hostile="true"/>
+		</event>
+	</choice>
+	<!--
+	<choice hidden="true">
+		<text>Crystalline Beings</text>
+		<event>
+			<text>The Zoltan is quiet for a moment, and then whispers, "Are you sure? Well, so be it then." A huge wormhole opens, and from within it looms a Crystalline ship, prepared for war.</text>
+			<ship load= ?!?!
+					JUSTIN DO THIS STILL!!!!!!! JUSTIN - TO DO
+		</event>
+	</choice> --->
+</event>
+<event name="ZOLTAN_RIFT_SUCCESS">
+	<text>When he sees you have emerged victorious, the Zoltan wise man enters a rage. Rifts threaten to tear space apart until, instead, the Zoltan implodes, sending a blast wave of scrap and salvage dragged here from distant worlds in your direction.</text>
+	<autoReward level="HIGH">standard</autoReward>
+</event>
+
+
+<event name="ZOLTAN_CREW_SCAN" unique="true">
+	<text>You arrive at a Zoltan security checkpoint set up in a perimeter around the beacon. "Travelling vessel, you will submit to crew profiling to identify fugitives of the empire."</text>
+	<choice hidden="true">
+		<text>You don't have time for this nonsense. Attack!</text>
+		<event>
+			<text>Expecting resistance, their Energy Shield is raised and ready for combat.</text>
+			<ship load="ZOLTAN_SHIP" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Submit to profiling.</text>
+		<event load="ZOLTAN_CREW_SCAN_LIST"/>
+	</choice>
+	<choice hidden="true" req="slug">
+		<text>(Slug Crew) Have your Slug talk them into letting you go.</text>
+		<event>
+			<text>You give the guards permission to dock with the ship, but before they come on board your crew member slowly advances to meet them. As far as you can tell no words were exchanged, but the guards offer you some supplies and say the ship checks out. Best to not ask questions.</text>
+			<autoReward level="MED">fuel_only</autoReward>
+		</event>
+	</choice>			
+</event>
+<eventList name="ZOLTAN_CREW_SCAN_LIST">
+	<event>
+		<text>The Zoltan security staff board your ship and scan the crew's faces into a computer. After a few tense moments of uncertainty they allow your ship to pass.</text>
+	</event>
+	<event>
+		<text>The Zoltan security staff board your ship and begin scanning the crew's faces into a computer. Suddenly alarms go off and the Zoltan leap on one of your crew! "This person is wanted on five charges of Utter Villainy! Surrender them to us!"</text>
+		<choice hidden="true">
+			<text>Give up your crew member.</text>
+			<event>
+				<text>It's a tough call, but Zoltan law holds sway here. Besides, that one always seemed a bit shifty.</text>
+				<crewMember amount="-1"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Refuse and fight.</text>
+			<event>
+				<text>You're not going to leave anyone behind. You pull away from the station with the enemy guards on board. Unfortunately, they are able to sabotage your weapon system in the chaos. It's time to leave!</text>
+				<ship load="ZOLTAN_CREW_SCAN" hostile="true"/>
+				<boarders min="2" max="4" class="energy"/>
+				<status type="divide" target="player" system="weapons" amount="2"/>
+			</event>
+		</choice>
+	</event>
+</eventList>
+			
+		
+
+<!-----------
+		NEBULA!!!
+	Events with unique environments
+------------>
+<event name="NEBULA_ZOLTAN_ROCK" unique="true">
+	<text>This nebula turns out to be the hiding place of a terrified rock crew taking refuge from the Zoltan border police. They don't seem prepared to risk your leaving with their co-ordinates, and open fire!</text>
+	<environment type="nebula"/>
+	<ship load="ROCK_SHIP" hostile="true"/>
+</event>
+
+<event name="NEBULA_ZOLTAN_EYE" unique="true">
+	<text>Inside this nebula you detect a rogue planet drifting through space, on its surface a huge monolith visible at this distance even to the naked eye. A Zoltan elder hails you from the planet. "Through luck or intent, you have discovered the Great Eye. Look into its depths and receive your just dessert."</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Pull the ship in closer.</text>
+		<event load="NEBULA_ZOLTAN_EYE_LIST"/>
+	</choice>
+	<choice>	
+		<text>Leave.</text>
+		<event>
+			<text>Your mission is to save the Federation, not discover new wonders around the galaxy. You prepare to jump.</text>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_ZOLTAN_EYE_LIST">
+	<event>
+		<text>As you approach, an ancient alien voice speaks to you: "Your mission has brought you great battles, and great losses. This will help ease the pain." A few minutes later someone reports medical equipment has appeared on the ship!</text>
+		<weapon name="BOMB_HEAL"/>
+	</event>
+	<event>
+		<text>You approach the planet and wait, but nothing happens. The Zoltan hail: "And in the coming times, when the monolith speaks not with a man he has no future and must be left wanting."</text>
+		<ship load="ZOLTAN_SHIP" hostile="true"/>
+	</event>
+	<event>
+		<text>You approach the planet carefully, trying to keep your ship from breaking up in orbit. The monolith, whatever it is, must sense as much because the next thing you know you have enough scrap to patch up your damage and more besides!</text>
+		<autoReward level="HIGH">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>As you approach, a kaleidoscope of colours fills the view-screen and one of your crew begins to age rapidly in reverse, eventually disappearing into nothingness. Let's hope they've transcended physical existence, and not just been forced out of it.</text>
+		<crewMember amount="-1"/>  <!-- JUSTIN TO DO - Ask matt if this is too... obvious of a reference -->
+	</event>
+</eventList>
+
+<event name="STORM_ZOLTAN_SUPPLY_CHOICE" unique="true">  <!-- can also use this with other sectors?-->
+	<text>You spy two pirate ships lurking in the nebula here. They remain unaware of your presence; you're able to get your scanners to at least identify their cargo: One is carrying the fuel supplies, the other the ammunition. They begin to drift away from each other in the storm.</text>
+	<environment type="storm"/>
+	<choice hidden="true">
+		<text>Secure the fuel supply.</text>
+		<event>
+			<text>You jet toward the pirate with the fuel supplies and engage - hopefully you can leave the ship in one piece!</text>
+			<ship load="STORM_PIRATE_SUPPLY_FUEL" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Secure the ammunition.</text>
+		<event>
+			<text>You jet toward the pirate with the ammunition and engage - hopefully you can leave the ship in one piece!</text>
+			<ship load="STORM_PIRATE_SUPPLY_AMMO" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Let them leave.</text>
+		<event>
+			<text>Sometimes discretion is the better part of valour. </text>
+		</event>
+	</choice>
+</event>
+
+
+
+
+		
+		
+		
+		
+		
+<!-----------
+		BOARDERS!!!
+	Events with boarder calls
+------------>
+
+<event name="ZOLTAN_BOARDERS" unique="true">
+	<text>There are few more zealous in their customs checks than the Zoltan. A team of border police beam on board. There's just a little confusion over your weapons licences, but things escalate rapidly from heated discussion to gunfire!</text>
+	<ship load="ZOLTAN_SHIP" hostile="true"/>
+	<boarders min="3" max="4" class="energy"/>
+</event>
+
+<event name="ZOLTAN_BOARDERS_MANTIS" unique="true">
+	<text>The Mantis outcasts sometimes make the mistake of taking the Zoltan for easy game. A scout moves in to attack while a boarding party beams aboard from a nearby transport!</text>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+	<boarders min="2" max="3" class="mantis"/>
+</event>
+
+
+
+
+
+<!-----------
+		SPECIAL!!!
+	-
+------------>
+
+<event name="ZOLTAN_PEACE_QUEST" unique="true">
+	<text>An unarmed Zoltan transport vessel is slowly making its way toward the beacon here. They hail: "This is a Zoltan peace envoy. We carry no weapons or shielding and rely on the mercy of others to communicate our message."</text>
+	<choice hidden="true">
+		<text>Attack them.</text>
+		<event load="ZOLTAN_PEACE_QUEST_ATTACK"/>
+	</choice>
+	<choice hidden="true">
+		<text>Hear them out.</text>
+		<event>
+			<text>They continue. "We take your silence for interested contemplation." They talk at length about peace and harmony, but either it's beyond your simple mind or it's all nonsense.</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>They finish: "Please, spread the word of enlightenment to those that have not heard. Once you have, contact our brethren." They transmit coordinates of their so-called "brethren".</text>
+					<quest event="ZOLTAN_PEACE_QUEST2"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Leave.</text>
+		<event>
+			<text>The galaxy is at war - there's no time for talk of peace. You leave their hails unanswered and charge the jump drive.</text>
+		</event>
+	</choice>
+</event>
+
+
+<eventList name="ZOLTAN_PEACE_QUEST_ATTACK">
+	<event>
+		<text>You charge your weapons - not that this will take much.</text>
+		<ship load="ZOLTAN_PEACE_QUEST_ATTACK1" hostile="true"/>
+	</event>
+	<event>
+		<text>Just as you're preparing to attack you detect a nearby jump signature. A Zoltan defense ship comes to their aid!</text>
+		<ship load="ZOLTAN_PEACE_QUEST_ATTACK2" hostile="true"/>
+	</event>
+</eventList>
+
+<event name="ZOLTAN_PEACE_QUEST2">
+	<text>You arrive at the location specified by the peace-loving Zoltan, but the only thing nearby is a Rebel ship, closing in fast! "We've found you! You're not getting away this time!"</text>
+	<ship load="REBEL" hostile="false"/>
+	<choice hidden="true">
+		<text>Attack.</text>
+		<event>
+			<text>You power your weapons and prepare to fight.</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Attempt to hail them.</text>
+		<event>
+			<text>They open communications: "I can't imagine there's anything you could say that will save you. The rebellion must destroy those that are still loyal to the obsolete Federation."</text>
+			<choice hidden="true">
+				<text>"Perhaps there could be a reconciliation of our ideals without war?"</text>
+				<event>
+					<text>"Our ideals are too different to be so easily reconciled. You think this could end any way but war?"</text>
+					<choice hidden="true">
+						<text>The galaxy is huge, you can find a place for your ideals elsewhere without causing this destruction.</text>
+						<event>
+							<text>"No! We will not be consigned to the backwaters of space just because we don't fit into your 'Federation ideals'" They charge.</text>
+							<ship hostile="true"/>
+						</event>
+					</choice>
+					<choice hidden="true">
+						<text>True progress can only be achieved without bloodshed.</text>
+						<event>
+							<text>Suddenly all indications of the Rebel ship fade away and a Zoltan fleet appears around your ship. The captain of the ship you met previously materializes on your bridge.</text>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>"Although your methods are crude and most certainly ineffective, it is clear you took our previous meeting to heart. If your ship represents the Federation's willingness to adapt we shall do what we can to aid in their fight."</text>
+									<unlockShip id="7">A Zoltan cruiser has been unlocked and added to the hangar!</unlockShip>
+									<autoReward level="HIGH">weapon</autoReward>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>"Surrender. Your ultimate destruction is inevitable. We've left scores of Rebels destroyed in our wake."</text>
+				<event>
+					<text>They shut off communications and immediately engage.</text>
+					<ship hostile="true"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>"Your Rebellion is causing millions of deaths. Your beliefs are dividing the galaxy. Unity is the only option!"</text>
+				<event>
+					<text>"Humans are treated as 'equal' to aliens in the weak Federation. The sacrifice of BILLIONS of alien or human lives are justified if it means we reach our full potential!" They charge.</text>
+					<ship hostile="true"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
+<event name="ZOLTAN_SURRENDER">
+	<text load="ZOLTAN_SURRENDER"/>
+	<choice>
+		<text>Accept their offer.</text>
+		<event>
+			<ship hostile="false"/>
+			<autoReward level="RANDOM">stuff</autoReward>
+		</event>
+	</choice>
+	<choice>
+		<text>We will not accept surrender!</text>
+		<event/>
+	</choice>
+</event>
+
+<textList name="ZOLTAN_SURRENDER">
+	<text>"Yes, yes, you've demonstrated your species' capacity for violence quite extensively, well done. If we reward your efforts will you bother someone else?"</text>
+	<text>The enemy ship hails; the vidscreen shows their bridge showered in sparks from malfunctioning equipment - it's safe to assume they're trying to surrender. Accept their offer?</text>
+	<text>Communications report that the Zoltan are broadcasting on all frequencies. The captain appears on screen and says, "Yes, I am not surprised, your species hardly looks enlightened. Fine. Take what you wish."</text>
+	<text>The Zoltan captain hails and mutters something about the border patrol force catching up with you someday; you're more interested in his offer of surrender.</text>
+	<text>"We assumed that your species intelligence was directly proportional to your brute strength. We yield."</text>
+	<text>"You have bested us. If only your species' efforts were put to use improving the galaxy rather than your military might."</text>
+	
+	<!-- duplicate for now -- add more?-->
+	
+	
+	<text>"Yes, yes, you've demonstrated your species' capacity for violence quite extensively, well done. If we reward your efforts will you bother someone else?"</text>
+	<text>The enemy ship hails; the vidscreen shows their bridge showered in sparks from malfunctioning equipment - it's safe to assume they're trying to surrender. Accept their offer?</text>
+	<text>Communications report that the Zoltan are broadcasting on all frequencies. The captain appears on screen and says, "Yes, I am not surprised, your species hardly looks enlightened. Fine. Take what you wish."</text>
+	<text>The Zoltan captain hails and mutters something about the border patrol force catching up with you someday; you're more interested in his offer of surrender.</text>
+	<text>"We assumed that your species intelligence was directly proportional to your brute strength. We yield."</text>
+	<text>"You have bested us. If only your species' efforts were put to use improving the galaxy rather than your military might."</text>
+</textList>
+	
+
+
+

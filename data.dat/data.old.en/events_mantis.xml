@@ -1,0 +1,555 @@
+﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--     ' ,  " " "
+			SUMMARY  - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Structure:
+	START_BEACON_MANTIS
+	STORE_MANTIS
+	NOTHING_MANTIS
+	
+Items:
+	MANTIS_CAPTURE_COMMANDO			NEW!!
+	MANTIS_GAMBLE					NEW!!
+	
+Hostile:
+	MANTIS_FIGHT
+	
+Neutral:
+	MANTIS_FIGHT_CHOICE
+	MANTIS_CIVILIAN
+	MANTIS_CREW
+	
+Environment:
+						???	MANTIS_NEBULA_FIGHT
+	MANTIS_SUN_FIGHT
+	
+Boarders:
+	MANTIS_BOARDERS
+
+Special
+	MANTIS_NAMED_THIEF
+--->
+
+
+
+
+
+
+
+
+<!--------------------------------
+	MANTIS EVENTLISTS
+---------------------------------->
+
+
+<eventList name="HOSTILE_MANTIS">
+	<event load="MANTIS_FIGHT"/>
+	<event load="MANTIS_FIGHT"/>
+	<event load="MANTIS_SUN_FIGHT"/>
+	<event load="DONOR_MANTIS_CHASE"/>
+	
+	<event load="REBEL"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_WARNING"/>
+</eventList>
+
+
+<eventList name="NEUTRAL_MANTIS">
+	<event load="MANTIS_FIGHT_CHOICE"/>
+	<event load="MANTIS_CIVILIAN"/>
+	<event load="MANTIS_CREW"/>
+	
+	<event load="REBEL_TRANSPORT"/>
+	<event load="BROKEN_REBEL_DRONE"/>
+	
+	<event load="ALISON_MANTIS_CREW"/> <!-- new alison written event -->
+</eventList>
+
+
+<eventList name="DISTRESS_BEACON_MANTIS">
+	<event load="ESCORT_BEACON"/>
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="DISTRESS_TRAPPED_MINER"/>
+	<event load="DISTRESS_INFESTATION"/>
+	<event load="DISTRESS_SATELLITE_DEFENSE"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="DISTRESS_STATION_DISEASE"/>
+</eventList>
+
+<eventList name="BOARDERS_MANTIS">
+	<event load="MANTIS_BOARDERS"/>
+	<event load="MANTIS_BOARDERS"/>
+	<event load="BOARDERS_SUN"/>
+</eventList>
+
+
+
+<!-----------
+		STRUCTURE!!!
+	Others events necessary for strucrtural stuff
+------------>
+
+<event name="START_BEACON_MANTIS">
+	<text>You've entered a poorly charted area of space that's known to be home to the Mantis.  Ensure your hull plating is up to scratch and that you have enough fuel in the tank to make it through.</text>
+</event>
+
+<event name="STORE_MANTIS">
+	<text load="STORE_MANTIS"/>
+	<store/>
+</event>
+<textList name="STORE_MANTIS">
+	<text>Upon arriving at the beacon, you're hailed by a well-spoken Mantis, "Hail, traveler.  These are dangerous times.  Perhaps you find yourself in need of our services?"  He appears to be a trader.</text>
+	<text>Uncertain about what you'll discover at this beacon, you scan the surroundings.   You detect several warnings on wide-band channels discouraging any violence in protected trade-space.  Perhaps you can find some wares nearby.</text>
+	<text>Merchants are not highly respected among the Mantis race, so few undertake the profession.  You're mildly surprised to receive an advertisement from a nearby space dock.  You decide to see what they have to offer.</text>
+	<text>Identifying a Mantis trading post ahead, you signal them so that your approach won't be taken as a threat. The leader hails you: "You have scrap? Quickly, come dock before the warriors see you."</text>
+	<text>A struggling Mantis cargo ship headed for the node raises what's left of shields as you jump in. You power up your weapons as a show of force, and they reluctantly agree to offload some of their cargo to you - for a price.</text>
+	<text>The rebels are already here! The crew braces for impact, but none comes. The sensors report the unmanned rebel supply ship is malfunctioning and is stuck in vending mode - for a little scrap you can take your pick.</text>
+</textList>
+
+<event name="NOTHING_MANTIS">
+	<text load="NOTHING_MANTIS"/>
+</event>
+<textList name="NOTHING_MANTIS">
+	<text>At this point you almost expect a fight with the Mantis, but this beacon appears to be entirely devoid of other ships.   You take the time to catch your breath and double check the ship's systems.</text>
+	<text>The only thing this beacon offers is a view of deep space and a brief respite from battles. For some this must be a welcome refuge. </text>
+	<text>A nearby Mantis mining operation is clearly using heavy Engi slave labor.  You briefly consider the possibility of emancipating the slaves, but the Mantis presence is too formidable.  You decide to lay low.</text>
+	<text>There aren't so many parts of Mantis space that aren't dotted by the wrecks of battles past, but this is one of them. You take a deep breath and prepare to move on.</text>
+	<text>There's nothing here but space debris and some uninhabitable planetoids.</text>
+	<text>You fancy you see something moving in the shadow of the beacon, but all remains still.</text>
+</textList>
+
+
+
+<!-----------
+		ITEMS!!!
+	Events that give items
+------------>
+
+<event name="MANTIS_CAPTURE_COMMANDO" unique="true">
+	<text>You come across an Engi wreck with one life-sign aboard; it turns out to be the sole survivor of the Mantis boarding party that wiped out the ship's crew. He's in no state to fight and he's brought aboard.</text>
+	<ship load="ENGI_SHIP" hostile="false"/>
+	<choice hidden="true">
+		<text>Release him.</text>
+		<event load="MANTIS_CAPTURE_COMMANDO_RELEASE"/>
+	</choice>
+	<choice hidden="true">
+		<text>Kill him.</text>
+		<event load="MANTIS_CAPTURE_COMMANDO_KILL"/>
+	</choice>
+	<choice req="mantis" hidden="true">
+		<text>(Mantis Crew Member) Interrogate him.</text>
+		<event load="MANTIS_CAPTURE_COMMANDO_TALK"/>
+	</choice>
+</event>
+<eventList name="MANTIS_CAPTURE_COMMANDO_RELEASE">
+	<event>
+		<text>You help patch up the Engi ship and he takes off without another word.</text>
+	</event>
+	<event>
+		<text>He takes your mercy as a sign of weakness and rigged up a small timed explosive before making off in the Engi vessel.</text>
+		<damage amount="3"/>
+	</event>
+</eventList>
+<eventList name="MANTIS_CAPTURE_COMMANDO_KILL">
+	<event>
+		<text>The Mantis commando shows no fear as the airlock's inner doors are sealed and space prepares to take him. You press the switch and then he's gone, whisked out into the great black.</text>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+	<event>
+		<text>You strip the Engi ship before preparing to deal with the Mantis.  However, the commando immediately realises your intentions and attacks!</text>
+		<autoReward level="MED">stuff</autoReward>
+		<boarders min="1" max="1" class="mantis"/>
+	</event>
+</eventList>
+<eventList name="MANTIS_CAPTURE_COMMANDO_TALK">
+	<event>	
+		<text>It's not clear what occurs between the two Mantis behind the locked door, but when they emerge the commando is prepared to provide telemetry on the local sector.  He then leaves on the Engi ship.  Your map has been updated.</text>
+		<reveal_map/>
+	</event>
+	<event>
+		<text>After a short time alone with the commando, you are told he wishes to join the crew. Although you are surprised at the commandos willingness to swap allegiances, you trust your crew members' judgement about him.</text>
+		<crewMember amount="1" class="mantis"/>  
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+</eventList>
+		
+	
+<event name="MANTIS_GAMBLE" unique="true">
+	<text>This node is currently home to a Mantis leisure ship: a place of brothels and combat arenas for warriors to release steam. When they scan your inventory they indicate that you're eligible to engage in a grand game of chance.</text>
+	<choice hidden="true">
+		<text>You don't gamble with crooks.  Prepare to jump.</text>
+		<event/>
+	</choice>
+	<choice hidden="true">
+		<text>Bet 50 scrap on the warrior with blue paint.</text>
+		<event>
+			<text>You watch over the view-screen as two Mantis juveniles are pitched at one another in combat.</text>
+			<item_modify>
+				<item type="scrap" min="-50" max="-50"/>
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="MANTIS_GAMBLE_BLUE"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Bet 50 scrap on the warrior with red paint.</text>
+		<event>
+			<text>You watch over the view-screen as two Mantis juveniles are pitched at one another in combat.</text>
+			<item_modify>
+				<item type="scrap" min="-50" max="-50"/>
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="MANTIS_GAMBLE_RED"/>
+			</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="MANTIS_GAMBLE_BLUE">
+	<event>
+		<text>The one in blue gets pressed into a corner, but he lashes out at the last moment, decapitating his opponent.  You claim your winnings!</text>
+		<item_modify>
+			<item type="scrap" min="100" max="100"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>The blue Mantis seems assure to win, scoring numerous hits on his enemy.  However the one in red ends the fight with a single key swipe.</text>
+		<choice hidden="true">
+			<text>Pay what you owe.</text>
+			<event>
+				<text>You transfer over the scrap that you bet and quit while you still have a ship to sail off in.</text>
+			</event>
+		</choice>
+		<choice req="engines" lvl="4" hidden="true">
+			<text>(Adv. Engines) Dodge the debt and power up the engines.</text>
+			<event>
+				<text>You are able to get out of firing range of the cruiser before they can react.  However a smaller ship breaks off from a patrol and moves in to engage.</text>
+				<ship load="MANTIS_FIGHT" hostile="true"/>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<eventList name="MANTIS_GAMBLE_RED">
+	<event>
+		<text>The blue Mantis seems assure to win, scoring numerous hits on his enemy.  However the one in red ends the fight with a single key swipe.   You claim your winnings!</text>
+		<item_modify>
+			<item type="scrap" min="100" max="100"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>The one in blue gets pressed into a corner, but he lashes out at the last moment, decapitating his opponent.</text>
+		<choice hidden="true">
+			<text>Pay what you owe.</text>
+			<event>
+				<text>You transfer over the scrap that you bet and quit while you still have a ship to sail off in.</text>
+			</event>
+		</choice>
+		<choice req="engines" lvl="4" hidden="true">
+			<text>(Adv. Engines) Dodge the debt and power up the engines.</text>
+			<event>
+				<text>You recall the scrap you prepared to send and are able to get out of the cruiser's firing range before they can react.  However a smaller ship breaks off from a patrol and moves in to engage.</text>
+				<ship load="MANTIS_FIGHT" hostile="true"/>
+				<item_modify>
+					<item type="scrap" min="50" max="50"/>
+				</item_modify>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+
+
+<!-----------
+		HOSTILE!!!
+	Events that call up a fight for sure
+------------>
+
+<event name="MANTIS_FIGHT" unique="false">   
+	<text load="MANTIS_FIGHT"/>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+</event>
+<textList name="MANTIS_FIGHT">
+	<!-- These are the ones that I had written-->
+	<text>A Mantis military ship appears on local radar alongside the remains of a human freighter.  Prepare for a hostile encounter!</text>
+	<text>A Mantis military scout hails your ship.  "Foolish alien!  Your kind has stifled our greatness for too long!  You will rue the day you backed the Federation!"</text>
+	<text>A small Mantis cruiser is broadcasting a repeating message on a wide-band frequency, "All non-Mantis ships that enter our territory are forfeit.  Lower your shields and surrender if you value your lives."</text>
+	<text>You detect a small military outpost and a few freighters nearby.  This mineral rich planet in an isolated location would be perfect for an illegal Mantis mining operation.  As you consider your options, a ship launches from the outpost. Prepare for a fight.</text>
+	<text>You discover yet another unlicensed and uncharted Mantis colony.  They certainly waste no time expanding their claims.  A Mantis ship moves to intercept you before you can jump away.</text>
+	<text>A Mantis military scout seems to have just finished a salvage op on a nearby wreck.  They have no time to waste with warnings and appear to wish to fight.</text>
+	<text>A small military craft hails you and a Mantis captain appears on your receiver.  "All local human colonies have been punished for the Federation's transgressions.  Submit to processing."</text>
+	<!-- These are the ones by tom-->
+	<text>A nearby Mantis ship begins aggressive maneuvers.   You prepare for the worst.</text>
+	<text>A stream of clicks and gurgling comes on the comm from a hostile Mantis scout.  The universal translator might be on the blink, but his intent is obvious.</text>
+	<text>The Mantis ship is pleased to see you, and fires up its weapon systems.</text>
+	<text>You recognize the outline of a Mantis ship against the blackness. Engage!</text>
+	<text>Something red looms. It's the Mantis.</text>
+	<text>A Mantis vessel hails you. "This hail is merely a distraction!" You notice their shields and weapons have come online.</text>
+	<text>You notice a flurry of laser fire glance by the port window. The Mantis are upon you.</text>
+	<text>The Mantis hail you. Their captain says, "I claim this vessel for my clan. Good hunting!"</text>
+	<text>A Mantis female comes on the vidscreen.  The females don't make it to authority unless they're particularly vicious.  You power the weapons.</text>
+	<text>A Mantis ship with the markings of a warrior tribe breaks position and attacks!</text>
+	<text>A Mantis ship hails: "Ah! Fine prey. Fine prey! We honour you with our most eviscerating arsenal!" You sense a cloud to this silver lining and power the weapons.</text>
+	<text>Children on Earth are told terrible tales of the blood red Mantis invasion ships - much like the one bearing down on you now - which once threatened the planet. You order weapons free!</text>
+	<text>A youthful-looking Mantis captain hails. "You, prey, must know. Your death, Kaaazthwak's final kill before maturity. Kaaazthwak pay respects." Seems respects in Mantis culture are paid with lasers.</text>
+</textList>
+
+
+
+
+<!-----------
+		NEUTRAL!!!
+	Events that could have a fight
+------------>
+
+<event name="MANTIS_FIGHT_CHOICE" unique="false">   
+	<text load="MANTIS_FIGHT_CHOICE"/>
+	<ship load="MANTIS_FIGHT" hostile="false"/>
+	<choice hidden="true">
+		<text>Attack the ship.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Attempt to remain concealed.</text>
+		<event load="MANTIS_FIGHT_CHOICE_AVOID"/>
+	</choice>
+	<choice hidden="true" req="cloaking" lvl="1">
+		<text>(Cloaking) Cloak to stay hidden.</text>
+		<event load="MANTIS_FIGHT_CHOICE_CLOAK"/>
+	</choice>
+</event>
+<textList name="MANTIS_FIGHT_CHOICE">
+	<text>You're greeted by a rare sight: a Mantis ship that appears not to have noticed you.</text>
+	<text>For once, you see the Mantis before they see you.</text>
+	<text>When they see the Mantis warship waiting in ambush at your intended coordinates, your crew is relieved to note you've jumped someway off the mark.</text>
+	<text>You overhear Mantis comm chatter: "Negative, I have killed more humans!" You gulp noticeably, but luckily they don't see you yet.</text>
+	<text>You overhear Mantis comm chatter: "The one on the right is starting to rot. Take him down. Take off his fingers. Put him out of the airlock."  They certainly don't seem to be friendly...</text>
+	<text>You overhear Mantis comm chatter: "Agreed. Next ship is your turn. Good hunting." They don't see you yet.</text>
+</textList>
+<eventList name="MANTIS_FIGHT_CHOICE_AVOID">
+	<event>
+		<text>You power down non-essential systems and wait for the FTL drive to charge.  They either don't want to fight or have failed to notice your ship, the later being more likely.</text>
+	</event>
+	<event>
+		<text>Before you have a chance to slink away the Mantis ship notices you and powers up their weapons.</text>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>You power down non-essential systems in an attempt to remain unnoticed.  It looks like they are about to leave when suddenly they turn and set course toward you, weapons powered.</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+<eventList name="MANTIS_FIGHT_CHOICE_CLOAK">
+	<event>
+		<text>You quickly cloak the ship and move out of immediate scanning range.  You appear to have gotten away undetected.</text>
+	</event>
+	<event>
+		<text>You cloak and shut down non-essential systems.  In a short time the Mantis ship jumps away, no doubt in search of prey.</text>
+	</event>
+	<event>
+		<text>You quickly cloak the ship, but not quickly enough.  They spot you and move in to engage.</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+
+<event name="MANTIS_CIVILIAN" unique="false">   
+	<text load="MANTIS_CIVILIAN"/>
+	<ship load="MANTIS_CIVILIAN" hostile="false"/>
+	<choice hidden="true">
+		<text>Aid the civilian ship.</text>
+		<event>
+			<text>You frown, power up the weapons and prepare to engage the Mantis ship. Not today.</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Stay out of it.</text>
+		<event>
+			<text load="MANTIS_CIVILIAN_AVOID"/>
+		</event>
+	</choice>
+</event>
+<textList name="MANTIS_CIVILIAN">
+	<text>A Mantis vessel flashes past your view-screen, weapons and engines at full. A tiny blip on the sensor readout marks its quarry.</text>
+	<text>You spot a Mantis ship hunting in the distance.</text>
+	<text>A Mantis ship engaging a civilian hails you. Sparks fly about his cockpit as he yells, "Stay out of this human! Else you are next!"</text>
+	<text>Local sensors pick up two ships engaged in a heated battle. It seems the Mantis military ship will surely defeat its prey.</text>
+	<text>You pick up a distress call from a civilian ship. It's being chased by a Mantis ship!</text>
+	
+	<text>A Mantis vessel flashes past your view-screen, weapons and engines at full. A tiny blip on the sensor readout marks its quarry.</text>
+	<text>You spot a Mantis ship hunting in the distance.</text>
+	<text>A Mantis ship engaging a civilian hails you. Sparks fly about his cockpit as he yells, "Stay out of this human! Else you are next!"</text>
+	<text>Local sensors pick up two ships engaged in a heated battle. It seems the Mantis military ship will surely defeat its prey.</text>
+	<text>You pick up a distress call from a civilian ship. It's being chased by a Mantis ship!</text>
+</textList>
+<textList name="MANTIS_CIVILIAN_AVOID">
+	<text>Smoking, the civilian ship limps on. You set your sights on the future.</text>
+	<text>The noise of the FTL spinning up almost drowns out the explosions. Almost.</text>
+	<text>You let them pass and try not to think about it.</text>
+	
+	<text>Smoking, the civilian ship limps on. You set your sights on the future.</text>
+	<text>The noise of the FTL spinning up almost drowns out the explosions. Almost.</text>
+	<text>You let them pass and try not to think about it.</text>
+</textList>
+
+<event name="MANTIS_CREW" unique="true">
+	<text>You detect and retrieve an escape pod floating nearby. You consider returning it to space when you learn it's Mantis.</text>
+	<choice>
+		<text>Jettison the pod.</text>
+		<event>
+			<text>You send the pod back out the airlock. You're not stupid.</text>
+		</event>
+	</choice>
+	<choice>
+		<text>Pry it open.</text>
+		<event load="MANTIS_CREW_LIST"/>
+	</choice>
+</event>
+<eventList name="MANTIS_CREW_LIST">	
+	<event>
+		<text>The Mantis inside is FURIOUS. He cuts the closest person in half with a single swipe.  Kill it before anyone else is hurt.</text>
+		<boarders min="1" max="1" class="mantis"/>
+		<crewMember amount="-1"/>
+	</event>
+	<event>
+		<text>The Mantis inside considers you a messenger from the god of mercy and demands to join your crew.</text>
+		<crewMember amount="1" class="mantis"/>   <!-- NOTE - Doesnt work yet -gives human-->
+	</event>
+	<event>
+		<text>A man bursts out of the life-pod screaming and claws his way into a corner. A rare survivor of Mantis captivity.  Once calm, the survivor offers to join your crew for a time.</text>
+		<crewMember amount="1" class="human"/>
+	</event>
+</eventList>
+
+<!-----------
+		ENVIRONMENT!!!
+	Events with unique environments
+------------>
+
+	
+<event name="MANTIS_SUN_FIGHT" unique="false">   
+	<text>Who knows why the Mantis would venture so close to a sun. Perhaps it makes for more of a challenge?</text>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+	<environment type="sun"/>
+</event>
+	
+
+	
+	
+	
+<!-----------
+		BOARDERS!!!
+	Events with boarders
+------------>
+
+<event name="MANTIS_BOARDERS" unique="true">
+	<text load="MANTIS_BOARDERS"/>
+	<boarders min="2" max="4" class="mantis"/>
+</event>
+<textList name="MANTIS_BOARDERS">
+	<text>A derelict and still smoking Mantis vessel floats by. The battle must have been recent; its surviving crew beam aboard.  Prepare for a fight!</text>
+	<text>Your world, all of a sudden, changes. The Mantis are on board your ship.</text>
+	<text>You hear a grating rattle and a soft clicking. You reach for your pistol.</text>
+</textList>
+
+
+
+
+
+<!-----------
+		SPECIAL!!!
+	Unique events
+------------>
+
+<event name="MANTIS_NAMED_THIEF" unique="true"> <!-- NOTE - make globally unique  -->
+	<ship load="MANTIS_NAMED_THIEF" hostile="false"/>
+	<text>You cross paths with a Mantis ship that looks to have had dozens of layers of armor-plating added over what must have been a hundred year career. Its captain is legendary thief KazaaakplethKilik. Your crew look frightened.</text>
+	<choice hidden="true" req="mantis">
+		<text>(Mantis crew member) Attempt to hail him.</text>
+		<event>
+			<text>Your Mantis crew-member steps forward. He and KazaaakplethKilik perform a weird kind of alien haka. You, meanwhile, charge the battle systems. </text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Prepare to fight</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</text>
+<event name="MANTIS_NAMED_THIEF_DEFEAT">
+	<text>No more life signs are detected aboard their ship.  You appear to have won.</text>
+	<choice hidden="true">
+		<text>Move in to strip their ship.</text>
+		<event>
+			<text>It seems almost a waste for such a fierce foe to die in such an anticlimactic fashion.  You shrug it off and take what you can.</text>
+			<autoReward level="HIGH">standard</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true" req="teleporter">
+		<text>(Teleporter) Quickly teleport additional crew and check for survivors.</text>
+		<event>
+			<text>You find KazaaakplethKilik slumped in a corner dying.</text>
+			<choice hidden="true">
+				<text>Put him out of his misery.</text>
+				<event>
+					<text>Thus ends the life of the famed captain, KazaaakplethKilik...  You wonder what secrets went with him to the grave as you thoroughly loot his ship.</text>
+					<autoReward level="HIGH">standard</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Listen to what he has to say.</text>
+				<event>
+					<text>In his dying moments he gives up the location of his secret stash.  You strip the ship wondering what other secrets went with him to the grave.</text>
+					<quest event="MANTIS_NAMED_THIEF_STASH"/>
+					<autoReward level="HIGH">standard</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true" req="medbay" lvl="2">
+				<text>(Adv. Medbay) Quickly teleport him back to the medbay.</text>
+				<event>
+					<text>Your haste has paid off and you are able to bring him back from the brink of death.  When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
+					<choice hidden="true">  <!-- NOTE - Add other options?-->
+						<text>Accept.</event>
+						<event>
+							<text>KazaaakplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on.  You forward it to the Federation, sure they can make good use of it.</text>
+							<augment name="RANDOM"/>
+							<autoReward level="HIGH">scrap_only</autoReward>
+							<crewMember amount="1" class="mantis">Kazaaak</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
+							<quest event="MANTIS_NAMED_THIEF_STASH"/>
+							<unlockShip id="2">A Mantis cruiser has been unlocked and added to the hangar!</unlockShip>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+								
+				
+
+
+<event name="MANTIS_NAMED_THIEF_STASH">
+	<text>You arrive at small asteroid field and discover the hidden cache among the debris.  You input the codes given to you by KazaaakplethKilik and find a weapon inside.</text>
+	<autoReward level="HIGH">weapon</autoReward>
+</event>
+
+
+
+
+
+
+
+
+
+
+
+

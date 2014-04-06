@@ -1,0 +1,467 @@
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+
+<eventCounts sector="0">
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="0" max="2"/>
+	<event name="HOSTILE1" min="5" max="6"/>
+	<event name="HOSTILE2" min="3" max="4"/>
+	<event name="NEBULA" min="0" max="2"/>
+	<event name="QUESTS" min="1" max="2"/>
+</eventCounts>
+<!--- Leftover events will be filled in with NEUTRAL -->
+
+<eventCounts sector="1">
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NEUTRAL2" min="2" max="4"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="1" max="1"/>
+	<event name="HOSTILE1" min="2" max="4"/>
+	<event name="HOSTILE2" min="2" max="4"/>
+	<!-- <event name="NEBULA" min="2" max="6"/> ADDED FOR DEMO -->
+	<event name="HOSTILE_BOARDING" min="1" max="2"/><!-- REMOVED FOR DEMO -->
+	<event name="QUESTS" min="0" max="1"/>
+</eventCounts>
+<!--- Leftover events will be filled in with NEUTRAL -->
+
+<!-- PLANNING FOR the 3rd Sector-->
+<eventCounts sector="2">
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NEUTRAL2" min="2" max="4"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="1" max="1"/>
+	<event name="HOSTILE2" min="4" max="6"/>
+	<event name="NEBULA" min="3" max="7"/>
+	<event name="HOSTILE_BOARDING" min="1" max="2"/><!-- REMOVED FOR DEMO -->
+	<event name="QUESTS" min="1" max="3"/>
+	<event name="HOSTILE1" min="2" max="2"/>
+</eventCounts>
+
+<eventCounts sector="3">
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NEUTRAL2" min="2" max="4"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="1" max="2"/>
+	<event name="HOSTILE2" min="4" max="6"/>
+	<event name="NEBULA" min="0" max="4"/>
+	<event name="HOSTILE_BOARDING" min="1" max="2"/><!-- REMOVED FOR DEMO -->
+	<event name="QUESTS" min="1" max="3"/>
+	<event name="HOSTILE1" min="2" max="2"/>
+</eventCounts>
+
+
+
+
+<eventList name="NON_HOSTILE">
+	<event load="NEUTRAL"/>
+	<event load="ITEMS"/>
+</eventList>
+
+<eventList name="HOSTILE1">
+	<event load="SQUAT_WARNING"/>
+	<event load="AUTO_WARNING"/>
+	<!--<event load="AUTO_BAIT"/>-->
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_HACKER"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_CIVILIAN"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="REBEL"/>
+	<event load="MANTIS_HOSTILE"/>
+</eventList>
+
+
+<eventList name="HOSTILE2">
+<!--
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_HACKER"/> -->
+	<event load="PIRATE"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="REBEL"/>
+	<event load="SQUAT_WARNING"/>
+	<event load="SQUAT_REFUEL_STATION"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_SUN"/>
+	<event load="AUTO_SUN"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+</eventList>
+
+<eventList name="NEUTRAL">
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="BROKEN_REBEL_DRONE"/>
+	<event load="MERCENARY"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_ITEM"/> 
+	<event load="DONOR_PONY"/>
+	<event load="DONOR_PLAGUE"/>
+	<!-- 
+	<event load="AUTO_DEFENSE_MAP"/> 
+	<event load="AUTO_DEFENSE_RADAR"/> 
+	<event load="TAVERN_HIRE"/> -->
+</eventList>
+
+
+
+<eventList name="NEUTRAL2">
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="PIRATE_STATION_CROPS"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="MERCENARY"/>
+	<event load="DISTRESS_BEACON"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_MAP"/> 
+	<event load="AUTO_DEFENSE_ITEM"/> 
+	<!-- <event load="TAVERN_HIRE"/> -->
+</eventList>
+
+
+
+
+
+
+<eventList name="NEBULA">
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/>  
+	<event load="NEBULA_AUTO"/>
+	<event load="NEBULA_AUTO_WARNING"/>
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
+	<event load="NEBULA_TRADER"/>
+	<event load="STORM_REBEL"/>
+	<event load="STORM_AUTO"/>
+	<event load="STORM_ITEMS"/>
+	<event load="NEBULA_LOST_SHIP"/>   <!-- JUSTIN ADDED -->
+	<event load="NEBULA_BOARDING"/><!-- REMOVED FOR DEMO -->
+	<!-- <event load="STORM_BOARDING"/>  REMOVED FOR DEMO -->
+	<event load="NEBULA_MANTIS_FIGHT"/> 
+	<event load="NEBULA_WEAPONS_TRADER"/>
+
+		
+</eventList>
+
+
+<eventList name="ITEMS">
+	<event load="FIND_DRONE"/>
+	<event load="FIND_WEAPON"/>
+	<event load="FREE_ITEMS"/>
+	<event load="FUEL_FOR_DRONE"/>
+	<event load="REFUEL_STATION"/>
+	<event load="REPAIR_STATION"/>
+	<event load="SELL_DRONES_STATION"/>
+	<event load="SELL_MISSILES_STATION"/>
+	<event load="TRADER_CIV"/>
+</eventList>
+
+<eventList name="DISTRESS_BEACON">
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="STRANDED_BEACON"/>
+	<event load="PIRATE_CIVILIAN_BEACON"/>
+	<event load="CIVILIAN_ASTEROIDS_BEACON"/>  
+	<event load="REBEL_VS_FEDERATION"/> 
+	<event load="ESCORT_BEACON"/>
+	<event load="DISTRESS_TRAPPED_MINER"/>
+	<event load="DISTRESS_INFESTATION"/>
+	<event load="DISTRESS_SATELLITE_DEFENSE"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="DISTRESS_STATION_DISEASE"/>
+</eventList>
+
+<eventList name="QUESTS">
+	<event load="QUEST_ESCORT"/>
+	<event load="MERCHANT_REQUEST"/>
+	<event load="FEDERATION_PLANET_SIGNAL"/>
+	<event load="MERCENARY_WORK_START"/>
+	<event load="QUEST_MANTIS_INVASION_START"/>
+	<event load="QUEST_CREWDEAD_START"/>
+</eventList>
+
+<eventList name="HOSTILE_BOARDING">
+	<event load="BOARDERS_ASTEROID_GHOST"/>
+	<event load="STATION_SICK"/>
+	<event load="BOARDERS_SUN"/>
+	<event load="BOARDERS_ASTEROID"/>
+	<event load="BOARDERS"/>
+	<event load="GHOST_SHIP"/>
+	<event load="FLOATING_CARGO"/>
+	<event load="BOARDERS_HACKING"/>
+</eventList>
+
+
+<eventList name="MANTIS_HOSTILE">
+	<event load="MANTIS_FIGHT"/>
+	<event load="MANTIS_FIGHT"/>
+</eventList>
+
+
+
+
+
+
+
+<!--    
+	  ***********
+       TEXT LISTS				  
+	  ***********		
+-->
+
+<textList name="TIPS_LIST">
+	<text>СОВЕТ: Смерть — Помните, что проигрыш — неотъемлемая часть удовольствия от игры! Нет, я серьёзно...</text>
+	<text>СОВЕТ: Зачистка секторов — От каждого сектора стоит брать всё возможное для развития корабля, так как каждый следующий сектор сложнее предыдущего.</text>
+	<text>СОВЕТ: Выход — Несмотря на желание побыстрее добраться до выхода из сектора, помните, что исследование — единственный способ добыть улучшения для корабля. Старайтесь взять от каждого сектора максимум того, что он может дать.</text>
+	<text>СОВЕТ: Пауза — Для постановки игры на паузу, нажмите пробел. Во время паузы вы можете отдавать приказы и управлять системами корабля.</text>
+	<text>СОВЕТ: Прицеливание — Определитесь с приоритетом целей. Обычно наилучшим выбором для атаки являются щит и вооружение, но если враг намеревается сбежать, логичнее будет целиться в двигатель и рубку управления.</text>
+	<text>СОВЕТ: Скрытый выбор — Когда в событии вы видите ответ подсвеченный синим, то это специальная опция которая стала доступна благодаря вашему оснащению.</text>
+	<text>СОВЕТ: Система повреждений — Если из-за пожара или вторжения система выходит из строя полностью, то корпус также получает единицу повреждения.</text>
+	<text>СОВЕТ: Продажа — Оружие, дроны и усиления могут быть проданы за полцены в магазинах. Выберите вкладку ПРОДАТЬ.</text>
+	<text>СОВЕТ: Полоски энергии — Улучшенные системы могут быть полезны, даже если мощность вашего реактора недостаточна для их использования; они способны поглотить одно дополнительное повреждение.</text>
+	<text>СОВЕТ: Орудия — Вы можете поставить в очередь выстрел до того, как орудие будет заряжено. Оно выстрелит, когда будет заряжено.</text>
+	<text>СОВЕТ: Маскировка — Маскировка не только позволит вам избежать урона от выстрелов врага, но и останавливает зарядку его орудий. Также уже все сделанные по вашему кораблю выстрелы пройдут мимо.</text>
+	<text>СОВЕТ: Абордаж — Если вас берут на абордаж, сражайтесь рядом с медицинским отсеком. Если ничего не помогает, разгерметизируйте отсеки корабля.</text>
+	<text>СОВЕТ: Кислород — Если отсеки корабля поменяли цвет с светлого на розовато-красный, то это значит вы теряете кислород. Команда начнёт задыхаться, а огонь вскоре погаснет в отсеках с красными полосами опасности.</text>
+	<text>СОВЕТ: Прорыв щита — Ракеты игнорируют щиты. Используйте их, чтобы повредить систему щитов мощных кораблей. Только помните, что защитные дроны могут сбивать ракеты.</text>
+	<text>СОВЕТ: Выбор — Результаты большинства выборов будут иметь разные последствия. Вы никогда не можете быть уверены в том, что может произойти.</text>
+	<text>СОВЕТ: Автоматическое ведение огня позволит вам беспрерывно вести огонь по единожды указанной вами цели. Но обращайте внимание и на то, из чего вы ведете огонь. Если из ракет, то следите за их количеством.</text>
+	<text>СОВЕТ: Уклонение — Способность уклониться от вражеских выстрелов играет решающее значение, но она требует функционирующих двигателей и пилота. Наличие члена команды в двигательном отсеке повышает шанс на удачный манёвр.</text>
+	<text>СОВЕТ: Сенсоры — Если корабль станет тёмным, не паникуйте. Просто отремонтируйте подсистему сенсоров.</text>
+	<text>СОВЕТ: Дроны — Если вы боретесь против вражеских дронов, то цельтесь в систему дронов, для того что бы временно отключить их.</text>
+	<text>СОВЕТ: Лучи — Лучевые орудия причиняют урон, основанный на количестве отсеков которые они поразили. Каждая единица щита блокирует 1 урон луча; лучше всего использовать лучи когда нет вражеских щитов.</text>
+	<text>СОВЕТ: Пожар — Если огонь распространяется, подумайте над открытием шлюзов для разгерметизации частей вашего корабля. Без кислорода пожар быстро гаснет.</text>
+	<text>СОВЕТ: Здоровье — Уделяйте внимание здоровью экипажа! Используйте медицинский отсек, чтобы подлечить их.</text>
+	<text>СОВЕТ: Улучшения — Не забывайте улучшать ваш корабль! Обычно щиты имеют наивысший приоритет, но не стоит недооценивать полезность подсистем.</text>
+	<text>СОВЕТ: Топливо — Каждый прыжок тратит одну единицу топлива. Следите за вашими запасами и не забывайте заправляться у торговцев, чтобы не остаться без возможности перемещения.</text>
+	<text>СОВЕТ: Звук — Отрегулировать громкость звуков и музыки можно в меню настроек.</text>
+	<text>СОВЕТ: Астероиды — Сражение в астероидном поле опасно, но из этого положения можно извлечь и выгоду: уничтожив вражеские щиты, вам останется лишь наблюдать, как метеориты весело дырявят противника без энерго-щитов в дуршлаг.</text>
+	<text>СОВЕТ: Туманности — Попадание в туманность временно замедлит продвижение флота повстанцев, но в них есть и свои собственные уникальные опасности.</text>
+	<text>СОВЕТ: Солнечные вспышки — Солнечные вспышки будут плавить корпус и обшивку корабля, разжигать пожары внутри. Убедитесь что ваши щиты подняты, если хотите смягчить эффект микроволновки.</text>
+	<text>СОВЕТ: Счёт — Ваш итоговый счёт зависит от количества побеждённых вами кораблей, посещённых маяков и накопленного лома.</text>
+	<text>СОВЕТ: Горячие клавиши — Вы можете заряжать вооружение используя горячие клавиши клавиатуры: орудия кнопками 1-4, а дроны кнопками 5-7 (можно изменить в настройках).</text>
+	<text>СОВЕТ: Усиления — Ваш корабль может содержать только 3 усиления. Они обеспечивают уникальные эффекты системам, экипажу или всему кораблю.</text>
+	<text>СОВЕТ: Пробоины — Если отсек с пробоиной не имеет кислорода, попробуйте открыть все окружающие двери, это сделает его менее опасным.</text>
+	<text>СОВЕТ: Шрифт — Кнопки «+» и «-» (можно изменить в настройках) регулируют размер шрифта в сообщениях.</text>
+	<text>СОВЕТ: Флот повстанцев — Флот повстанцев (представлен на карте в виде красных кругов) продвигается ближе к вашей позиции каждый раз когда вы совершаете прыжок. Некоторые события могут замедлить или ускорить их передвижение.</text>
+	<text>СОВЕТ: Порядок орудий — Изменяйте порядок орудий или схем дронов, перетащив их на желаемую позицию. При повреждении систем слоты отключаются справа налево.</text>
+	<text>СОВЕТ: Ионные орудия — Ионные орудия обесточивают и блокируют систему на некоторое время. Если они попали во вражеские щиты, то они причинят оглушающий урон напрямую системе щитов.</text>
+	<text>СОВЕТ: Бомбы — Бомбы телепортируются на вражеский корабль, игнорируя щиты и защитных дронов. Однако они повреждают только экипаж и системы, корпус корабля от них не страдает.</text>
+	<text>СОВЕТ: Подсистема дверей — Однократное улучшение ваших дверей значительно снизит шанс распространения огня между комнатами. Повторное улучшение позволит существенно замедлить передвижение абордажной команды.</text>
+</textList>
+
+
+
+
+	
+   <!--  not good quest event?
+ <event name="TAVERN_HIRE" unique="true">
+	<text load="TAVERN_HIRE_TEXT"/>
+	<choice>
+		<text>Нанять одного члена экипажа.</text>
+		<event>
+			<crewMember amount="1"/>
+			<item_modify>
+				<item type="scrap" min="-30" max="-10"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Нанять двух членов экипажа.</text>
+		<event>
+			<crewMember amount="2"/>
+			<item_modify>
+				<item type="scrap" min="-55" max="-40"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Нанять команду из трех членов экипажа.</text>
+		<event>
+			<crewMember amount="3"/>
+			<item_modify>
+				<item type="scrap" min="-100" max="-70"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Не нанимать никого.</text>
+		<event/>
+	</choice>
+</event>
+<textList name="TAVERN_HIRE_TEXT">
+	<text>Вы нашли космическую станцию, созданную для путешественников. Просматривая её списки, вы находите таверну полную наемников для найма. Здесь вы можете набрать несколько дополнительных членов экипажа.</text>
+	<text>Около остановки для отдыха размещено много кораблей. Вы незамедлительно получаете сообщение, в котором говорится: «Если вы ищете кого-то, чтобы заполнить корабль, то вы прибыли в верное место!»</text>
+	<text>Этот маяк, кажется, служит местом встречи для местного сообщения. Похоже, что тут вы можете найти экипаж готовый сражаться на вашем корабле... за деньги.</text>
+</textList>
+-->
+
+
+
+
+
+
+
+
+
+
+<!-------------------------------
+
+	OUTDATED or TESTING events
+	
+------------------------------->
+
+
+<event name="NEW" unique="true">
+	<ship load="NEW_TESTS" hostile="true"/>
+</event>
+<ship name="NEW_TESTS" auto_blueprint="REBEL_FAT"> 
+	<destroyed>
+		<text>Вам удалось собрать лом с обломков корабля.</text>
+	</destroyed>
+	<deadCrew load="DEAD_CREW_DEFAULT"/>
+</ship>
+
+
+
+
+
+
+<event name="DEATH_TEST">
+	<text>Испытание Смерти</text>
+	<crewMember amount="-1"/>
+</event>
+
+<event name="CREW_TEST">
+	<text>Проверка экипажа</text>
+	<crewMember amount="2"/>
+</event>
+
+<ship name="TEST" blueprint="CRYSTAL_BOMBER">
+	<deadCrew/>
+	<destroyed/>
+</ship>
+
+
+
+
+
+
+
+
+<!--*******Cloaking-->
+<event name="STEALTH_1">
+	<text>Это прототип корабля, который использует передовые технологии маскировки. Недостатком является отсутствие щитов или оружия. Воспользуйтесь возможностью маскировки, чтобы вражеские выстрелы в вас не попали.</text>
+</event>
+
+<!--**********Armor/speed-->
+<event name="STEALTH_2">
+	<text>Этот корабль основан на конструкции, которая существовала до технологии экранирования и была стандартом для всех кораблей. Бронированный корпус и повышенная мобильность являются основным его достоинством.</text>
+</event>
+
+<!--*********Shielded-->
+<event name="STEALTH_3">
+	<text>Этот корабль Федерации предназначен для тестирования новой передовой технологии перезарядки щитов. К сожалению, Вас заставили тестировать его в одиночку.</text>
+</event>
+
+<!--*********Boarding-->
+<event name="STEALTH_4">
+	<text>Этот корабль был предназначен для переброски войск в тыл врага. Как таковой, он не оснащён орудиями по умолчанию, но зато его экипаж — лучшие из лучших.</text>
+</event>
+
+
+<!--**********Drones - space-->
+<event name="STEALTH_5">
+	<text>Этот корабль представляет собой модифицированное горнодобывающее судно, которое содержит продвинутый ИИ для управления дронами. Он не совсем готов к битве, но будем надеяться, что дроны покроют его недостатки.</text>
+</event>
+
+<!--**********Drones - crew-->
+<event name="STEALTH_6">
+	<text>Ваше новое судно оснащено современными роботами и лучевым оружием. Трудно было найти полный экипаж, так как с роботами довольно страшно работать.</text>
+</event>
+
+<!--*********Missile fun time-->
+<event name="STEALTH_7">
+	<text>Инженер, который проектировал этот корабль, явно любил ракеты. Не многие оппоненты могут выстоять перед огненным валом ракет этого корабля, но обязательно следите за вашими запасами боеприпасов.</text>
+</event>
+
+
+
+
+<event name="DEMO_END">
+	<text>Поздравляем с окончанием обучения! В качестве последнего урока, вы испытаете, каково это быть уничтоженным более сильным противником. Этот пиратский корабль оснащен самыми передовыми вооружением и системами, в том числе прототипом устройства маскировки. Он собирался пришельцами, известными как лучшие инженеры галактики. А ещё мы отключили ваши двигатели, так что нет смысла пытаться убежать.</text>
+	<status type="limit" target="player" system="engines" amount="0"/>
+	<ship load="IMPOSSIBLE_PIRATE" hostile="true"/>
+</event>
+<ship name="IMPOSSIBLE_PIRATE" blueprint="IMPOSSIBLE_PIRATE">
+	<destroyed>
+		<text>Невозможно! Он должен был быть непобедимым! Даже у создателей симуляции это не получилось. Продолжай, ты это заслужил.</text>
+		<item_modify>
+			<item type="scrap" min="100" max="100"/>
+		</item_modify>
+		<status type="limit" target="player" system="engines" amount="100"/>
+	</destroyed>
+</ship>
+
+
+<event name="ASTEROID_TEST">
+	<img back="BG_DARK" planet="NONE"/>
+	<text>Вы залетели в поле астероидов. Придётся дожидаться, пока зарядится FTL привод и надеяться, что корабль доживёт до этого момента.</text>
+	<environment type="asteroid"/>
+</event>
+
+
+
+<event name="CASH_IN_DRONE">
+	<text>Ваш корабль не оснащён системой управления дронами. Вы пустили чертежи дрона на лом.</text>
+	<choice>
+		<text>Продолжить...</text>
+		<event/>
+	</choice>
+</event>
+
+<event name="UNLOCK_STEALTH">
+	<text>Вы нашли секретную исследовательскую лабораторию Федерации! Они разрабатывают проекты новых кораблей. Вы загрузили кое-какие чертежи — пригодятся в будущем.</text>
+</event>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

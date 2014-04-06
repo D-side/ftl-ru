@@ -1,0 +1,40 @@
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!-- +33 +169-->
+<img x="-178" y="-84" w="566" h="511"/>
+
+
+<weaponMounts>
+	<mount x="150" y="50" rotate="false" mirror="true" gib="1" slide="up"/>
+	<mount x="264" y="50" rotate="false" mirror="false" gib="2" slide="up"/>
+	<mount x="89" y="65" rotate="false" mirror="true" gib="1" slide="up"/>
+	<mount x="324" y="65" rotate="false" mirror="false" gib="2" slide="no"/>
+	<mount x="176" y="52" rotate="false" mirror="false" gib="1" slide="no"/>
+	<mount x="357" y="52" rotate="false" mirror="false" gib="2" slide="no"/>
+	<mount x="444" y="98" rotate="false" mirror="false" gib="1" slide="no"/>
+</weaponMounts>
+
+
+<!--  Bad Combos: 1+2+3; 1+2; 1+3;  -->
+<explosion>
+	<gib1>
+		<velocity min="0.1" max="1"/>
+		<direction min="20" max="160"/>
+		<angular min="-1" max="1"/>
+	</gib2>
+	<gib2>
+		<velocity min="0.1" max="0.3"/>
+		<direction min="280" max="350"/>
+		<angular min="-1" max="1"/>
+	</gib2>
+	<gib3>
+		<velocity min="0.4" max="1"/>
+		<direction min="190" max="260"/>
+		<angular min="-0.4" max="1"/>
+	</gib3>
+	<gib4>
+		<velocity min="0" max="0"/>
+		<direction min="0" max="0"/>
+		<angular min="0" max="0"/>
+	</gib4>
+</explosion>

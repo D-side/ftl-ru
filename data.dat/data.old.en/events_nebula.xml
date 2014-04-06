@@ -1,0 +1,649 @@
+﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--     ' " "
+			SUMMARY  - 
+A list of all main events to be called by lists
+	(does not include sub-events)
+	
+	
+	
+	NOTE: we need to make all lists with "NEBULA_" in it trigger the creation of a nebula
+
+	
+Structure:
+	FLEET_EASY_NEBULA
+	NEBULA_EMPTY
+	
+Hostile:
+	NEBULA_REBEL
+	NEBULA_AUTO
+	NEBULA_AUTO_WARNING
+	NEBULA_PIRATE    				NEW
+	NEBULA_MANTIS_FIGHT				NEW
+	
+Neutral:
+	NEBULA_REBEL_UNDETECTED
+	NEBULA_PIRATE_SMUGGLE
+	NEBULA_AUTO_DEFENSE_ITEM
+	NEBULA_LOST_SHIP
+	NEBULA_WEAPONS_TRADER			NEW
+	NEBULA_ROCK_RACIST				NEW
+	NEBULA_MANTIS_CHOICE			NEW
+	NEBULA_REBEL_CHASE				NEW
+	
+Boarders:
+	NEBULA_BOARDING
+
+Items:
+	NEBULA_TRADER
+
+Storm Environment:
+	STORM_AUTO
+	STORM_REBEL
+	STORM_BOARDING
+	STORM_ITEMS
+
+--->
+
+
+<eventList name="NEBULA_HOSTILE">
+	<event load="NEBULA_REBEL"/>
+	<event load="NEBULA_AUTO"/>
+	<event load="NEBULA_AUTO_WARNING"/>
+	<event load="NEBULA_PIRATE"/>
+	<event load="NEBULA_MANTIS_FIGHT"/>
+	<event load="STORM_AUTO"/>
+	<event load="STORM_REBEL"/>
+	<event load="NEBULA_BOARDING"/>
+	<!--<event load="STORM_BOARDING"/>-->
+</eventList>
+
+<eventList name="NEBULA_NEUTRAL">
+	<event load="NEBULA_REBEL_UNDETECTED"/>
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
+	<event load="NEBULA_LOST_SHIP"/>
+	<event load="NEBULA_WEAPONS_TRADER"/>
+	<event load="NEBULA_ROCK_RACIST"/>
+	<event load="NEBULA_MANTIS_CHOICE"/>
+	<event load="NEBULA_REBEL_CHASE"/>
+</eventList>
+
+
+
+
+<!-----------
+		STRUCTURE!!!
+	Others events necessary for strucrtural stuff
+------------>
+
+<event name="START_BEACON_NEBULA">
+	<text load="START_BEACON_NEBULA"/>
+</event>
+<textList name="START_BEACON_NEBULA">
+	<text>This nebula must have been an important hub at one point; placing all of these jump beacons would be no easy task.  However, now it's hardly navigable.</text>
+	<text>Nebulas were always dangerous places. Many electronics fail in these clouds. You will have to tread lightly.</text>
+	<text>You've entered a sector thick with nebulas. You'll have to navigate on instinct.</text>
+	<text>You've entered a nebula-rich sector. You may put a few light years on the fleet, but that's only useful if you make it out the other side.</text>
+	<text>Thanks to the high nebula density of this sector very little of it has been charted, and rumours of what lurks in the depths abound.</text>
+	<text>The gases that make up the nebulas in this sector threaten to impair your systems; but you have to press on.</text>
+</textList>
+
+<!-- for when the fleet takes over a nebula beacon -->
+<event name = "FLEET_EASY_NEBULA">
+	<text>An advanced rebel hunter easily found your ship. You can't see it through the nebula, but you can assume the fleet is right on top of you. You need to escape quickly.</text>
+	<ship load = "LONG_FLEET" hostile ="true"/>
+	<environment type="storm"/>
+</event>
+
+<event name="NEBULA_STORE">
+	<text load="NEBULA_STORE"/>
+	<environment type="nebula"/>
+	<store/>
+</event>
+<textList name="NEBULA_STORE">
+	<text>Some brave entrepreneurs set up a station here to extract elements from the nebula. There seems to be a public shipyard and rest stop here as well.</text>
+	<text>Seeing a trade depot set up near the beacon implies there is an alien settlement on some nearby rock. You decide to check out their wares.</text>
+	<text>The centre of a hydrogen cloud doesn't seem like a very usual place for a store, but the Engi aren't a usual species. Wouldn't hurt to take a look.</text>
+	<text>An Engi cargo vessel hails: "Propose mutually beneficial exchange of properties." That smells like a bargain.</text>
+	<text>You discover a cluster of Federation refugee ships taking shelter in the folds of the nebula. "I'm sorry we've got nothing to give you, but we need scrap to keep the engines running." You sense they'll strike a trade.</text>
+</textList>
+
+<event name="NEBULA_EMPTY">
+	<text load = "NEBULA_EMPTY_LIST"/>
+	<environment type="nebula"/>
+</event>
+<textList name ="NEBULA_EMPTY_LIST">
+	<text>You can't see anything through the thick gases surrounding your ship. Without knowing what is out there, all you can do is wait for your FTL to charge.</text>
+	<text>Without active sensors you have no other option but to look out of the view-ports in apprehension. It's eerily quiet.</text>
+	<text>As you wait for the FTL drive to charge, you half expect to be ambushed at any moment. However, no attack comes...</text>
+	<text>You feel naked without functioning sensors. You half expect a rebel ship to appear from behind a cloud at any moment, but none come.</text>
+	<text>Your crew are constantly looking out of the windows, checking for hostiles. They jump at every creak and moan of the ship. The tension is almost palpable...</text>
+	<text>You nervously glance out the windows but the only thing to greet you is more clouds and silence.</text>
+	<text>You cycle through wide-band com channels as soon as you arrive. Nothing but static.</text>
+	<text>With the sensors down, you spend a good deal of time staring out the window. It is, you must admit, rather beautiful here.</text>
+	<text>There's nothing here, save for vast swirls of gas reflecting rays from a distant sun.</text>
+</textList>
+	
+
+
+<!-----------
+		HOSTILE!!!
+	Events that call up a fight for sure
+------------>
+
+<event name="NEBULA_REBEL">
+	<text load="NEBULA_REBEL_LIST"/>
+	<ship load="REBEL" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<textList name="NEBULA_REBEL_LIST">
+	<text>You cross paths with an advance scout of the rebel fleet searching this section of the nebula for your ship.</text>
+	<text>A ship bearing rebel colors can be seen waiting near the beacon. They must have been waiting for you, since they engage immediately.</text>
+	<text>The rebels must have anticipated you would try to lose them within the nebula. A scout was waiting for you at the beacon.</text>
+	<text>It looks like you will be unable to avoid the rebels by traveling through the nebula. A rebel ship is waiting for you near the beacon.</text>
+	<text>Shortly after you arrive, a rebel ship jumps nearby. There looks to be no escape. Prepare for a fight!</text>
+	<text>Newton-knows what brings this rebel ship so far out; it's captain hails, but does a double take when he identifies your ship. They open fire.</text>
+	<text>A rebel ship hails, but you don't take chances in conditions like this.  You block the frequency and prepare to engage.</text>
+</textList>
+
+
+<event name="NEBULA_AUTO">
+	<text load="NEBULA_AUTO_LIST"/>
+	<ship load="REBEL_AUTO" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<textList name="NEBULA_AUTO_LIST">
+	<text>You cross paths with an advance scout of the rebel fleet searching this section of the nebula for your ship.</text>
+	<text>You jump into a calmer part of the nebula. However, your relief fades as a rebel scout jumps to the beacon and moves in to attack.</text>
+	<text>The tangled wrecks of many ships wait in dormancy here. You see lights flicker on what looks like debris. A rebel scout bursts out of the wreckage!</text>
+	<text>This drone isn't looking for you. Perhaps it's scouting ahead for the rebel expansion or maybe they're seeking to use this nebula for cover. Regardless, it identifies you as hostile.</text>
+	<text>It's worrying that the rebels have penetrated so deep into uncharted space, even if it is only an unmanned craft.  It arms its weapons; you should do the same.</text>
+</textList>
+
+
+<event name="NEBULA_AUTO_WARNING" unique = "true">
+	<text>It appears that an automated rebel scout was positioned within the nebula to warn of your passing.</text>
+	<ship load="REBEL_AUTO_WARNING" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+
+<event name="NEBULA_PIRATE">
+	<text load="NEBULA_PIRATE"/>
+	<ship load="PIRATE" hostile="true"/>
+</event>
+<textList name="NEBULA_PIRATE">	<!-- JUSTIN - ADD MORE -->
+	<text>As you drift through the nebula an unmarked vessel descends from the clouds and into your wake. Their weapons come online.</text>
+	<text>A pirate ship pulls out of the ether and hails: "You know what I love about this part of the galaxy? The explorers! You always carry such fine loot."  They lock weapons.</text>
+	<text>As you coast through the nebula a pirate ship matches your course and closes the distance. Better to pick your battleground, but beggars can't be choosers.</text>
+	<text>A hostile vessel descends from out of the nebula. Combat stations!</text>
+	<text>You try to read the ID of a ship ahead in the fog, but it's too thick to penetrate. You have your answer when the ship turns, weapons hot!</text>	
+</textList>
+
+<event name="NEBULA_MANTIS_FIGHT" unique="false">   
+	<text load="NEBULA_MANTIS_FIGHT"/>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<textList name="NEBULA_MANTIS_FIGHT">
+	<text>Nebulas are known to be popular Mantis hunting grounds. Information you would have done well to heed here.</text>
+	<text>You detect a Mantis expedition vessel returning home with its haul. So determined are they, in fact, that they don't wait to see if you're hostile before firing.</text>
+	<text>A Mantis ship, lost in the storm, hails you. "Sensors are out. We have no local telemetry. We will take yours." You detect a power increase in their weapons systems.</text>
+	<text>A Mantis ship hails you through the storm: "These are sacred Urggghtnag clan hunting grounds. You are prey." Shields up!</text>
+	<text>You notice a Mantis attack ship ducking between the clouds of swirling space stuff; it's hunting you. You try to get the jump and move in to attack.</text>
+
+</textList>
+
+
+
+
+
+
+
+
+
+
+<!-----------
+		NEUTRAL!!!
+	Events that could have a fight
+------------>
+
+<event name="NEBULA_REBEL_UNDETECTED" unique="true">  <!-- give player option to hide, -->
+	<text>Your ship emerges quite far away from the beacon. You see a rebel ship waiting nearby; undoubtedly stationed to look for you.</text>
+	<ship load="REBEL" hostile="false"/>
+	<environment type="nebula"/>
+	<choice>
+		<text>Attack the ship.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Attempt to remain concealed.</text>
+		<event load="NEBULA_REBEL_UNDETECTED_LIST"/>
+	</choice>
+	<choice req="cloaking" hidden="true" hidden="true"> 
+		<text>(Cloaking) Cloak to stay hidden.</text>
+		<event>
+			<text>You use your cloaking system to slip further into the nebula undetected.</text>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_REBEL_UNDETECTED_LIST">
+	<event>
+		<text>You immediately slip further into the clouds, but not quickly enough. The rebel catches sight of you and moves in to engage!</text>
+		<choice>
+			<text>Prepare to fight.</text>
+			<event>
+				<ship hostile="true"/>
+			</event>
+		</choice>
+		<choice req="engines" lvl="4" hidden="true">
+			<text>(Engines) Fully power the engines to out-run them.</text>
+			<event>
+				<text>Your powerful engines allow you to out-distance the ship and eventually lose it within the nebula.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>You power down non-essential systems and slip into the cloud. The ship never noticed you.</text>
+	</event>
+	<event>
+		<text>The ship spots you and gives chase. After some quick maneuvering you were able to lose your pursuers in the clouds. You expect they warned the fleet of your position, however.</text>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+
+<event name="NEBULA_PIRATE_SMUGGLE">   <!-- TO DO -- NEED TO MAKE A NEW PIRATE SHIP THAT ATTEMPTS TO BRIBE YOU WHEN SURRENDERING-->
+	<text>A pirate ship arrives shortly after you. Judging from the fact that it is attempting to avoid your ship, you assume that it's a smuggler trying to stay away from beacons.</text>
+	<environment type="nebula"/>
+	<choice>
+		<text>Attack the pirate.</text>
+		<event>
+			<text>You power up your weapons and move in to engage</text>
+			<ship load="PIRATE_SMUGGLE" hostile ="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Ignore the ship.</text>
+		<event>
+			<text>It jumps away after a time.</text>
+		</event>
+	</choice>
+	<choice req="weapons" lvl="6" hidden="true">
+		<text>(Weapons) Activate your advanced weapons threateningly.</text>
+		<event>
+			<text>They hail you, "There's no need for aggression... Perhaps this would convince you to look the other way."</text>
+			<choice>
+				<text>Take their bribe.</text>
+				<event>
+					<autoReward level="MED">fuel</autoReward>
+				</event>
+			</choice>
+			<choice>
+				<text>Ignore their bribe and attack.</text>
+				<event>
+					<ship load="PIRATE_SMUGGLE" hostile ="true"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
+<event name="NEBULA_AUTO_DEFENSE_ITEM" unique="true">
+	<text>An advance rebel automated ship remains stationed near a small rebel space-station. However, without functioning sensors it is impossible to tell what is inside.</text>
+	<ship load="REBEL_AUTO_ITEM" hostile="false"/>  <!-- ship is in other xmls -->
+	<choice>
+		<text>Attack the automated ship to get to the station.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Avoid provoking the ship.</text>
+		<event/>
+	</choice>
+	<choice req="cloaking" hidden="true">
+		<text>(Cloaking) Use your stealth to access the space station undetected.</text>
+		<event load="DEFENSE_ITEM_LIST"/>
+	</choice>
+	<environment type="nebula"/>
+</event>
+
+
+<event name="NEBULA_LOST_SHIP" unique="true">
+	<text>A heavily damaged Federation ship is hiding in the nebula at this beacon. Before you have time to make contact with them, they fade into the nebula.</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Attempt to follow and help them.</text>
+		<event load="NEBULA_LOST_SHIP_LIST"/>
+	</choice>
+	<choice>
+		<text>Keep your position, they can handle themselves.</text>
+		<event/>
+	</choice>	
+	<choice req="teleporter" hidden="true"> 
+		<text>(Teleporter) Lock onto their life-signs with your teleporter.</text>
+		<event>
+			<text>You beam the Federation crew aboard. One gladly joins your crew, the rest wait to be dropped off at the next station.</text>
+			<crewMember amount="1"/>
+			<autoReward level="MED">scrap_only</autoReward>
+		</event>
+	</choice>
+	<choice req="ADV_SCANNERS" hidden="true">
+		<text>(Long-ranged Scanner) Pump extra power into your sensors and try to track them.</text>
+		<event load="NEBULA_LOST_SHIP_LIST2"/>
+	</choice>
+</event>
+<eventList name="NEBULA_LOST_SHIP_LIST">
+	<event>
+		<text>Your search is hopeless. Your sensors can't pick up anything in the nebula.</text>
+	</event>
+	<event>
+		<text>While searching fruitlessly through the nebula, you stumble upon the rebel ship which the Federation loyalists were likely hiding from. You prepare for a fight.</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+	<event>
+		<text>You get lucky and find them floating not too deep into the nebula. Thrilled to be found by friendlies, they come on board and abandon their wrecked ship.</text>
+		<crewMember amount="1"/>
+	</event>
+</eventList>
+<eventList name="NEBULA_LOST_SHIP_LIST2">
+	<event>
+		<text>Your local radar flickers, periodically showing signs of a large object in the clouds nearby. However it's enough to get coordinates and you find the ship... an empty hull, long since stripped of functioning components.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>You follow the faint signatures and find them floating not too far away into the nebula. Thrilled to be found by friendlies, they come on board and abandon their wrecked ship.</text>
+		<crewMember amount="1"/>
+	</event>
+</eventList>
+
+<event name="NEBULA_WEAPONS_TRADER" unique="true">
+	<text>A black market weapons trader spins you a tale of the dangers of the nebula before pushing his wares.</text>
+	<environment type="nebula"/>
+	<ship load="PIRATE" hostile="false"/>
+	<choice>
+		<text>Ignore the ship.</text>
+		<event/>
+	</choice>
+	<choice>
+		<text>Attack the ship.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Purchase an unknown weapon. [Scrap: -65]</text>
+		<event load="NEBULA_WEAPONS_TRADER_LIST"/>
+	</choice>
+</event>
+<eventList name="NEBULA_WEAPONS_TRADER_LIST">
+	<event>
+		<text>You transfer the scrap and receive a weapon in return. Lets hope it was worth it.</text>
+		<item_modify>
+			<item type="scrap" min="-65" max="-65"/>
+		</item_modify>
+		<weapon name="RANDOM"/>
+	</event>
+	<event>
+		<text>You transfer over the scrap, but he reneges on the agreement. "I told you this was a dangerous place!"</text>
+		<item_modify>
+			<item type="scrap" min="-65" max="-65"/>
+		</item_modify>
+		<choice>
+			<text>Attack the ship!</text>
+			<event>
+				<ship hostile="true"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Learn a valuable lesson and move on.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+
+<event name="NEBULA_ROCK_RACIST" unique="true">
+	<text>A rock armoured transport nearby looks to have lost its bearings, but when you hail they grow suspicious: "Whatever life-form you are, we find you repugnant. We seek no aid. Leave. Now."</text>
+	<ship load="ROCK_SHIP" hostile="false"/>
+	<environment type="storm"/>
+	<choice>
+		<text>Leave.</text>
+		<event/>
+	</choice>
+	<choice>
+		<text>Repugnant?! Arm the weapons!</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true" req="rock">
+		<text>(Rock Crew Member) Offer to lead them out of the nebula.</text>
+		<event>
+			<text>The rock grudgingly transfer control of their helm to you and you steer them to a thinner part of the nebula. They're not sure what to think, but transfer over some supplies all the same.</text>
+			<autoReward level="HIGH">standard</autoReward>
+		</event>
+	</choice>
+</event>
+
+<event name="NEBULA_MANTIS_CHOICE" unique="true">
+	<text>Navigating the fog blind, you practically bump hulls with a Mantis ship. They hail you: "Pah! This transgression will be overlooked. Nebula, very dangerous. Next time, humans all die."</text>
+	<ship load="MANTIS_FIGHT" hostile="false"/>
+	<environment type="nebula"/>
+	<choice>
+		<text>There won't be a next time. Open fire!</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>This place is dangerous enough. Move on.</text>
+		<event/>
+	</choice>
+</event>
+
+<event name="NEBULA_REBEL_CHASE" unique="true">
+	<text>You spot a rebel ship in the nebula ahead and stay off their radar. Try to engage?</text>
+	<ship load="REBEL" hostile="false"/>
+	<environment type="nebula"/>
+	<choice>
+		<text>Stay hidden.</text>
+		<event>
+			<text>You try and stay out of sight. You doubt they saw you.</text>
+		</event>
+	</choice>
+	<choice>
+		<text>Prepare to chase them!</text>
+		<event load="NEBULA_REBEL_CHASE_LIST"/>
+	</choice>
+	<choice req="sensors" lvl="3">
+		<text>(Advanced Sensors) Try to track them as you move to engage.</text>
+		<event>
+			<text>As soon as they see you they make a run for it. You squeeze what you can out of the malfunctioning sensors and are able to keep track of them enough to get in firing range.</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice req="ADV_SCANNERS" hidden="true">
+		<text>(Long-ranged Scanner) Try to track them as you move to engage.</text>
+		<event>
+			<text>As soon as they see you they make a run for it. You squeeze what you can out of the malfunctioning sensors and are able to keep track of them enough to get in firing range.</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_REBEL_CHASE_LIST">
+	<event>
+		<text>You follow their vapour trails and surf onto their six o' clock, weapons hot.</text>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>Without sensors you can't maintain a lock for long. The rebels slip away.</text>
+	</event>
+	<event>
+		<text>You get disoriented in the nebula and lose your bearings completely. It takes some time to get back to the beacon. It's likely the fleet has had time to advance closer to your position.</text>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+		
+
+
+<!-----------
+		ITEMS!!!
+	Events that give items
+------------>
+
+<event name="NEBULA_TRADER" unique="true">
+	<text>It's hard to see why, but this beacon is apparently a tourist destination. One of the ships at the small station is offering a deal.</text>
+	<environment type="nebula"/>
+	<choice>
+		<text>Trade</text>
+		<event load="TRADER_LIST"/>
+	</choice>
+	<choice>
+		<text>Ignore</text>
+		<event/>
+	</choice>
+</event>
+
+
+
+
+
+
+
+<!-----------
+		BOARDERS!!!
+	Events with boarder calls
+------------>
+
+<event name="NEBULA_BOARDING" unique="true">
+	<text load="NEBULA_BOARDING_TEXT"/>
+	<environment type="nebula"/>
+	<boarders min="2" max="4" class="human"/>
+</event>
+<textList name="NEBULA_BOARDING_TEXT">
+	<text>You see a small station nearby and feel the shudder of shots ringing through the ship. You can't be sure without sensors, but it seems there may be intruders on the ship!</text> 
+	<text>You arrive in the nebula and immediately receive a message from an unknown source, "Prepare to be boarded!"  With the static from the nebula, there's no way to tell where they came from, but you hear shots fired on board the ship.</text>
+	<text>You see a number of derelict ships near this beacon. After a short time you hear the tell-tale sounds of a teleporter and shouts coming from within the ship. You've been boarded!</text>
+</textList>
+
+
+
+
+
+
+<!-----------
+		STORM!!!
+	Events with storm
+------------>
+
+
+<event name="STORM_AUTO" unique = "true">
+	<text>You jump into a sector of the nebula beset by a plasma storm. An automated rebel scout stationed at the beacon moves in to attack.</text>
+	<environment type="storm"/>
+	<choice>
+		<text>Prepare to fight.</text>
+		<event>
+			<ship load = "REBEL_AUTO" hostile="true"/>
+		</event>
+	</choice>
+	<choice req="engines" lvl="3" hidden="true">
+		<text>(Engines) Attempt to out-run it.</text>
+		<event load="STORM_AUTO_ESCAPE"/>
+	</choice>
+	<choice req="cloaking" hidden="true">
+		<text>(Cloaking) Use your cloaking to escape.</text>
+		<event>
+			<text>By using your advanced cloaking system you easily lose your pursuer in the storm.</text>
+		</event>
+	</choice>
+</event>
+<eventList name="STORM_AUTO_ESCAPE">
+	<event>
+		<text>You successfully lose the ship in the storm.</text>
+	</event>
+	<event>
+		<text>Despite your advanced engines you are unable to shake them; you turn and prepare for a fight.</text>
+		<ship load = "REBEL_AUTO" hostile="true"/>
+	</event>
+</eventList>
+
+<event name="STORM_REBEL" unique = "true">
+	<text>You arrive in the middle of a plasma storm. Despite the harsh conditions, a rebel scout seems to be waiting for you.</text>
+	<ship load = "REBEL" hostile = "true"/>
+	<environment type="storm"/>
+</event>
+
+<!--
+<event name="STORM_BOARDING" unique="true">
+	<text>You find two heavily damaged ships floating nearby, the remains of a battle. However, a teleporter nearby must be working, as you hear the sounds of someone beaming aboard followed by the shouts of a boarding party.</text> 
+	<environment type="storm"/>
+	<boarders min="3" max="5" class="human"/>
+</event>
+-->
+<event name="STORM_ITEMS" unique = "true">
+	<text>You jump into the middle of a plasma storm. Multiple recently incapacitated ships loom in the shadows, briefly illuminated by the lightning.</text>
+	<choice hidden="true">
+		<text>Manually search the wreckage for survivors and equipment</text>
+		<event load="STORM_ITEMS_LIST"/>
+	</choice>
+	<choice>
+		<text>Avoid the risk and wait to jump away unscathed</text>
+		<event/>
+	</choice>
+	<choice req="pilot" lvl="2" hidden="true">
+		<text>(Piloting) Have your pilot carefully explore the debris.</text>
+		<event load="STORM_ITEMS_PILOTING"/>
+	</choice>
+	<environment type="storm"/>
+</event>
+<eventList name="STORM_ITEMS_LIST">
+	<event>
+		<text>Despite your caution, the lack of detection equipment allows debris to crash into your ship, damaging the hull. You salvage what you can and prepare to jump before anything worse happens.</text>
+		<damage amount="4"/>
+		<autoReward level="HIGH">stuff</autoReward>
+	</event>
+	<event>
+		<text>Within the ship graveyard you find one ship that seems relatively untouched. On board you find an unconscious passenger, and take him back to the ship. Once awake he offers to join your crew in thanks.</text>	
+		<crewMember amount="1"/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>While the crew is off the ship searching through the wrecks, two hulls crash into each other breaking the crew's tethers. You have no time to react as someone is knocked away, floating helplessly into the gaseous clouds...</text>
+		<crewMember amount="-1"/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>Among the junk and scrap you find a salvageable drone schematic. You decide to quit while ahead and prepare to jump with your recent find.</text>
+		<autoReward level="MED">drone</autoReward>
+	</event>
+	<event>
+		<text>Most of the debris is hardly even usable as scrap. However, you eventually find an intact weapon that can be mounted on your ship.</text>
+		<autoReward level="MED">weapon</autoReward>
+	</event>
+</eventList>
+<eventList name="STORM_ITEMS_PILOTING">
+	<event>
+		<text>Within the ship graveyard you find one ship that seems relatively untouched. On board you find an unconscious passenger and take him back to the ship. Once awake he offers to join your crew in thanks.</text>	
+		<crewMember amount="1"/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>Among the junk and scrap you find a salvageable drone schematic. You decide to quit while ahead and prepare to jump with your recent find.</text>
+		<autoReward level="MED">drone</autoReward>
+	</event>
+	<event>
+		<text>Most of the debris is hardly even usable as scrap. However, you eventually find an intact weapon that can be mounted on your ship.</text>
+		<autoReward level="LOW">weapon</autoReward>
+	</event>
+	<event>
+		<text>Your pilot carefully explores the wrecks, but the storm has taken its toll. Any crew are long-since dead and the floating debris has been scorched beyond repair.</text>
+	</event>
+</eventList>
+
+
+
+

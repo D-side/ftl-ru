@@ -1,0 +1,4050 @@
+﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Customization possibilities -->
+
+<blueprintList name="STARTING_WEAPONS">
+	<name>LASER_BURST_1</name>
+	<name>LASER_BURST_2</name>
+	<name>MISSILES_2_PLAYER</name>
+	<name>BEAM_LONG</name>
+	<name>ION_1</name>
+	<name>ION_2</name>
+	<name>ION_4</name>
+	<name>BOMB_1</name>
+	<name>LASER_BURST_3</name>
+	<name>LASER_HEAVY_1</name>
+	<name>MISSILES_3</name>
+	<name>BEAM_1</name>
+	<name>BEAM_FIRE</name>
+	<name>LASER_HULL_2</name>
+	<name>BOMB_FIRE</name>
+	<name>BOMB_ION</name>
+	<name>BOMB_HEAL</name>
+</blueprintList>
+
+<blueprintList name="STARTING_DRONES">
+	<name>REPAIR</name>
+	<name>DEFENSE_1</name>
+	<name>COMBAT_1</name>
+	<name>COMBAT_2</name>
+	<name>SHIP_REPAIR</name>
+	<name>DEFENSE_1</name>
+</blueprintList>
+
+<blueprintList name="STARTING_AUGS">
+	<name>HULL_ARMOR</name>
+	<name>ADV_HULL_ARMOR</name>
+	<name>NANO_MEDBAY</name>
+	<name>ADV_SCANNERS</name>
+	<name>AUTO_COOLDOWN</name>
+	<name>SHIELD_RECHARGE</name>
+	<name>FTL_BOOSTER</name>
+	<name>FTL_JAMMER</name>
+	<name>CREW_STIMS</name>
+	<name>DRONE_RECOVERY</name>
+	<name>FTL_JUMPER</name>
+	<name>FTL_BOOSTER</name>
+</blueprintList>
+
+<!-- 
+
+		*********************
+		   CREW BLUEPRINTS 
+		*********************
+-->
+
+
+<crewBlueprint name="human">
+	<desc>Humans are common and uninteresting.</desc>
+	<cost>40</cost>
+	<bp>2</bp>
+	<title>Human</title>
+	<short>Human</short>
+	<rarity>1</rarity>
+	<powerList>
+		<power>No exceptional traits</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="engi">
+	<desc>It's unclear if the 'Engi' are partly organic or entirely mechanical, but it's well known that they make exceptional engineers.</desc>
+	<cost>50</cost>
+	<bp>2</bp>
+	<title>Engi</title>
+	<short>Engi</short>
+	<rarity>2</rarity>
+	<powerList>
+		<power>Repair speed is doubled</power>
+		<power>Combat damage inflicted is halved</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="mantis">
+	<desc>The Mantis disregard for individual lives led to their evolution as a vicious, warrior race.</desc>
+	<title>Mantis</title>
+	<short>Mantis</short>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>2</rarity>
+	<powerList>
+		<power>Double damage in combat</power>
+		<power>1.2x move speed</power>
+		<power>Halved repair speed</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="slug">
+	<desc>These telepathic Slugs were shunned in the Galactic Federation for their constant thievery and manipulation of other sentient beings.</desc>
+	<title>Slug</title>
+	<short>Slug</short>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Telepathic powers reveal rooms and lifeforms even when sensors are down.</power>
+	</powerList>
+</crewBlueprint>
+
+
+<crewBlueprint name="rock">
+	<desc>The 'Rockmen' of Vrachos IV are rarely seen and are known for their fortitude.</desc>
+	<title>Rockman</title>
+	<short>Rockman</short>
+	<cost>65</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<powerList>
+		<power>Immune to fire</power>
+		<power>Movement speed is halved</power>
+		<power>Health is increased to 150</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="crystal">
+	<desc>Ancient ancestors of the Rockmen.</desc>
+	<title>Crystal</title>
+	<short>Crystal</short>
+	<cost>65</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Lockdown power (activate in crew box)</power>
+		<power>Reduced suffocation damage</power>
+		<power>Movement speed reduced by 20 percent</power>
+		<power>Health is increased to 125</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="energy">
+	<desc>The 'Zoltan' are close allies of the 'Engi.' Their innate energy is strong enough to power ship systems.</desc>
+	<title>Zoltan</title>
+	<short>Zoltan</short>
+	<cost>65</cost>
+	<bp>4</bp>
+	<rarity>5</rarity>
+	<powerList>
+		<power>Provides power to occupied system</power>
+		<power>Maximum health is reduced.</power>
+	</powerList>
+</crewBlueprint>
+
+
+<!-- 
+		
+		*********************
+		  SYSTEM BLUEPRINTS
+		*********************
+-->
+
+<systemBlueprint name="oxygen">
+	<type>oxygen</type>
+	<title>Oxygen</title>
+	<desc>Refills the oxygen in the ship. Upgrading increases the rate of refill.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>25</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+		<level>75</level> <!-- imaginary level 4 -->
+	</upgradeCost>
+	<cost>0</cost>
+</systemBlueprint>
+
+<systemBlueprint name="teleporter">
+	<type>teleporter</type>
+	<title>Crew Teleporter</title>
+	<desc>Allows you to send your crew-members to board enemy vessels.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>30</level> <!-- level 2 -->
+		<level>60</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>75</cost>
+	<locked>1</locked>
+</systemBlueprint>
+
+<systemBlueprint name="cloaking">
+	<type>cloaking</type>
+	<title>Cloaking</title>
+	<desc>Cloaks the ship, adding 60 to your evasion and preventing the enemy ship from locking on with their weapons.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>30</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>150</cost>
+	<locked>1</locked>
+</systemBlueprint>
+
+<systemBlueprint name="pilot">
+	<type>pilot</type>
+	<title>Piloting</title>
+	<desc>Allows the ship to make FTL jumps and dodge when piloted. Upgrading adds auto-pilot that allows some evasion even without a pilot.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>20</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>1</cost>
+</systemBlueprint>
+
+<systemBlueprint name="medbay">
+	<type>medbay</type>
+	<title>Medbay</title>
+	<desc>Heals all crew-members within the Medbay room. Upgrading increases healing speed.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>35</level> <!-- level 2 -->
+		<level>60</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>60</cost>
+</systemBlueprint>
+
+<systemBlueprint name="shields">
+	<type>shields</type>
+	<title>Shields</title>
+	<desc>Powers your shields. Every shield bar can block one incoming shot. Upgrading increases bar count.</desc>
+	<startPower>2</startPower>
+	<maxPower>8</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>100</level> <!-- level 2 -->
+		<level>20</level> <!-- level 3 -->
+		<level>30</level> <!-- level 4 -->
+		<level>40</level> <!-- level 5 -->
+		<level>60</level> <!-- level 6 -->
+		<level>80</level> <!-- level 7 -->
+		<level>100</level> <!-- level 8 -->
+		<level>120</level> <!-- Imaginary level 9 -->
+	</upgradeCost>
+	<cost>150</cost>
+</systemBlueprint>
+
+<systemBlueprint name="artillery">
+	<type>artillery</type>
+	<title>Artillery Beam</title>	
+	<desc>Powers a slow, high-powered beam that pierces all shields and does one damage per room hit. More power means faster cooldown.</desc>	
+	<startPower>2</startPower>
+	<maxPower>4</maxPower>
+	<rarity>0</rarity>
+	<upgradeCost>
+		<level>30</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+		<level>80</level> <!-- level 4 -->
+	</upgradeCost>
+	<cost>150</cost>
+</systemBlueprint>
+
+<systemBlueprint name="engines">
+	<type>engines</type>
+	<title>Engines</title>
+	<desc>Powers the FTL drive and allows the ship to dodge. Upgrading improves dodge chance and the rate that your FTL drive charges.</desc>
+	<startPower>2</startPower>
+	<maxPower>8</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>10</level> <!-- level 2 -->
+		<level>15</level> <!-- level 3 -->
+		<level>30</level> <!-- level 4 -->
+		<level>40</level> <!-- level 5 -->
+		<level>60</level> <!-- level 6 -->
+		<level>80</level> <!-- level 7 -->
+		<level>120</level> <!-- level 8 -->
+		<level>150</level> <!-- Imaginary level 9 -->
+	</upgradeCost>
+	<cost>1</cost>
+</systemBlueprint>
+
+<systemBlueprint name="weapons">
+	<type>weapons</type>
+	<title>Weapon Control</title>
+	<desc>Powers all of the ship's weapons. Upgrading lets you power more weapons.</desc>
+	<startPower>4</startPower>
+	<rarity>1</rarity>
+	<maxPower>8</maxPower>
+	<upgradeCost>
+		<level>60</level> <!-- level 2 -->
+		<level>25</level> <!-- level 3 -->
+		<level>35</level> <!-- level 4 -->
+		<level>50</level> <!-- level 5 -->
+		<level>75</level> <!-- level 6 -->
+		<level>90</level> <!-- level 7 -->
+		<level>100</level> <!-- level 8 -->
+		<level>120</level> <!-- Imaginary level 9 -->
+	</upgradeCost>
+	<cost>20</cost>
+</systemBlueprint>
+
+<systemBlueprint name="drones">
+	<type>drones</type>
+	<title>Drone Control</title>
+	<desc>Powers all of the ship's drones. Drones are automated robots that perform tasks like attacking enemy ships or repairing systems.</desc>
+	<startPower>2</startPower>
+	<maxPower>8</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>10</level> <!-- level 2 -->
+		<level>20</level> <!-- level 3 -->
+		<level>30</level> <!-- level 4 -->
+		<level>45</level> <!-- level 5 -->
+		<level>60</level> <!-- level 6 -->
+		<level>80</level> <!-- level 7 -->
+		<level>100</level> <!-- level 8 -->
+		<level>120</level> <!-- Imaginary level 9 -->
+	</upgradeCost>
+	<cost>80</cost>
+</systemBlueprint>
+
+<systemBlueprint name="sensors">
+	<type>sensors</type>
+	<title>Sensors</title>
+	<desc>Reveals the interior of your ship and gives information about enemy ships.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>25</level> <!-- level 2 -->
+		<level>60</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>40</cost>
+</systemBlueprint>
+
+<systemBlueprint name="doors">
+	<type>doors</type>
+	<title>Door System</title>
+	<desc>Allows remote opening and closing of doors. Upgrades to Blast Doors that impede fire spread and intruder movement.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>	
+		<level>20</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>60</cost>
+</systemBlueprint>
+
+
+
+
+
+
+<!--    *********************
+          WEAPON BLUEPRINTS
+		*********************
+-->
+
+<!-- For weapon art, all weapons will default to 'default' unless you give it something else... 
+		this prevents invisible weapons -->
+		
+<!-- Default Speeds: Laser = 60, Beams = 5, Missiles = 35.. sorry the numbers have no meaning -->
+
+<!-- PDS BLUEPRINT useful only for sound effects, projectile art, and potentially damage?  -->
+<weaponBlueprint name="ARTILLERY_WEAPON">
+	<type>LASER</type>
+	<title>Heavy Laser Mark 1</title>
+	<short>Heavy Laser I</short>
+	<desc>Heavy lasers can wreak more havoc than their smaller, burst laser counterparts</desc>
+	<tooltip>Fires 3 shots, 2 damage each with medium chance of fire and breaching.</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>16</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_1</weaponArt> 
+</weaponBlueprint>
+
+<!-- ARTILLERY BLUEPRINT -->
+<weaponBlueprint name="ARTILLERY_WEAPON">
+	<type>LASER</type>
+	<title>Heavy Laser Mark 1</title>
+	<short>Heavy Laser I</short>
+	<desc>Heavy lasers can wreak more havoc than their smaller, burst laser counterparts</desc>
+	<tooltip>Fires heavy lasers; 2 damage each with medium chance of fire and breaching.</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>16</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<rarity>0</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_1</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="ARTILLERY_BOSS_1">
+	<type>LASER</type>
+	<title>Boss Laser</title>
+	<short>Boss Laser</short>
+	<desc>ssss</desc>
+	<tooltip>Fsss</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>20</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_BOSS_2">
+	<type>MISSILES</type>
+	<title>Boss Missile</title>
+	<short>Boss M.</short>
+	<desc>Artillery that fires 3 missiles that deal 1 damage.</desc>
+	<tooltip>Fires 3 missiles; 1 damage each; pierces  all shields.</tooltip>
+	<!--<desc>Power Req: 3    Fires 2 missiles that pierces through all shields and deals 2 damage. Consumes 2 missile per shot.</desc>-->
+	<damage>1</damage>
+	<missiles>0</missiles>
+	<shots>3</shots>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>23</cooldown>
+	<power>1</power>
+	<cost>80</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<image>missile_1</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_BOSS_3">
+	<type>BEAM</type>
+	<title>Boss Beam</title>
+	<short>Boss Beam</short>
+	<desc>2 damage beam with a long trail.</desc>
+	<tooltip>Beam weapon, 2 damage per room with small breach chance.</tooltip>
+	<!--<desc>Power Req: 3    A powerful but slow beam that deals 2 damage in a short line with a low chance of breaches.</desc>-->
+	<damage>2</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>26</cooldown>
+	<power>1</power>
+	<cost>70</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>100</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>boss_3</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_BOSS_4">
+	<type>LASER</type>
+	<title>Heavy Ion</title>
+	<short>Heavy Ion</short>
+	<locked>1</locked>
+	<desc>1 damage ion 3 shots</desc>
+	<tooltip>1 damage ion 3 shots</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>40</speed>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>28</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>ion_4_shot</image>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_4</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="ARTILLERY_FED">
+	<type>BEAM</type>
+	<title>Vindicator Beam</title>
+	<short>Vindicator</short>
+	<desc>This overcharged beam uses a new technology to cut through all shields. However targeting abilities have been sacrificed.</desc>
+	<tooltip>Artillery beam that automatically fires a 1 damage beam that pierces all shields.</tooltip>
+	<damage>1</damage>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<speed>13</speed>
+	<cooldown>40</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>500</length>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>artillery_fed</weaponArt> 
+</weaponBlueprint>
+
+
+<!--------------
+	SIMPLE LASERS 
+ -------------->
+
+<weaponBlueprint name="LASER_BURST_1">  <!-- 1 shot 1power-->
+	<type>LASER</type>
+	<title>Defense Laser Mark I</title>
+	<short>Basic Laser</short>
+	<desc>Very weak laser.</desc>
+	<tooltip>Only one shot, one damage per shot.</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_BURST_2">  <!--1 power 2 shots-->
+	<type>LASER</type>
+	<title>Dual Shot Laser</title>
+	<short>Dual Lasers</short>
+	<desc>Basic weak dual lasers. Often used by transport ships that can't afford better.</desc>
+	<tooltip>Shoots 2 lasers that do 1 damage each.</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>25</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_BURST_2_A">  <!-- 2 power 2 shots -->
+	<type>LASER</type>
+	<title>Burst Laser Mark I</title>
+	<short>Burst Laser I</short>
+	<desc>This simple burst laser isn't flashy but it gets the job done.</desc>
+	<tooltip>Shoots 2 lasers that do 1 damage each.</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>11</cooldown>
+	<power>2</power>
+	<cost>50</cost>
+	<bp>4</bp>
+	<rarity>1</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_BURST_3">
+	<type>LASER</type>
+	<title>Burst Laser Mark II</title>
+	<short>Burst Laser II</short>
+	<desc>Slightly improved version of the burst laser that fires more shots per charge.</desc>
+	<tooltip>Fires 3 lasers, 1 damage each.</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<cost>80</cost>
+	<bp>7</bp>
+	<rarity>4</rarity>
+	<image>laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_3</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_BURST_5">
+	<type>LASER</type>
+	<title>Burst Laser Mark III</title>
+	<short>Burst L. III</short>
+	<desc>Powerful burst laser that fires off an impressive barrage.</desc>
+	<tooltip>Fires 5 lasers, 1 damage per shot.</tooltip>
+	<damage>1</damage>
+	<shots>5</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>19</cooldown>
+	<power>4</power>
+	<cost>110</cost>
+	<bp>10</bp>
+	<rarity>4</rarity>
+	<image>laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_5</weaponArt> 
+</weaponBlueprint>
+
+
+
+
+<!--------------
+	HEAVY LASERS
+ -------------->
+<weaponBlueprint name="LASER_HEAVY_1">
+	<type>LASER</type>
+	<title>Heavy Laser Mark I</title>
+	<short>Heavy Laser I</short>
+	<desc>Heavy lasers can wreak more havoc than their smaller, burst laser counterparts</desc>
+	<tooltip>Fires 1 shot, causes 2 damage with low chance of fire and breaching.</tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<bp>6</bp>
+	<rarity>2</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_heavy_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_HEAVY_2">
+	<type>LASER</type>
+	<title>Heavy Laser Mark II</title>
+	<short>Heavy Laser II</short>
+	<desc>This heavy laser fires two shots in quick succession, each dealing 2 damage.</desc>
+	<tooltip>Fires 2 heavy lasers, 2 damage each with low chance of fire and breaching.</tooltip>
+	<damage>2</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>13</cooldown>
+	<power>3</power>
+	<cost>75</cost>
+	<bp>10</bp>
+	<rarity>4</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_heavy_2</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="LASER_HEAVY_1_SP">
+	<type>LASER</type>
+	<title>Heavy Pierce Laser Mark I</title>
+	<short>Heavy Pierce I</short>
+	<desc>Heavy lasers can wreak more havoc than their smaller, burst laser counterparts. This modified version pierces 1 shield.</desc>
+	<tooltip>Fires 1 shot that does 2 damage with a low chance of fire and breaching. Ignores 1 shield. </tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>3</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>55</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_heavy_1</weaponArt> 
+</weaponBlueprint>
+
+<!----------------
+	CRYSTAL SHARD
+----------------->
+
+<weaponBlueprint name="CRYSTAL_1">
+	<type>MISSILES</type>
+	<title>Crystal Shard</title>
+	<short>Crystal</short>
+	<desc>Should Never See This Description.</desc>
+	<tooltip>Should Never See This Description.</tooltip>
+	<damage>1</damage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>crystal_shard</weaponArt> 
+</weaponBlueprint>
+
+<!--------------
+	MISSILES
+ -------------->
+
+<weaponBlueprint name="MISSILES_1">
+	<type>MISSILES</type>
+	<title>Leto Missiles</title>
+	<short>Leto</short>
+	<desc>This launcher is outdated and weak, but can still be effective.</desc>
+	<tooltip>Fires 1 missile; does 1 damage; pierces all shields.</tooltip>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>missile_1</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_2_PLAYER">
+	<type>MISSILES</type>
+	<title>Artemis Missiles</title>
+	<short>Artemis</short>
+	<desc>Standard missile launcher on most Federation ships.</desc>
+	<tooltip>Fires 1 missile; does 2 damage; pierces all shields.</tooltip>
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>11</cooldown>
+	<power>1</power>
+	<cost>38</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>missile_2</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_2">
+	<type>MISSILES</type>
+	<title>Artemis Missiles</title>
+	<short>Artemis</short>
+	<desc>Standard missile launcher on most Federation ships.</desc>
+	<tooltip>Fires 1 missile; does 2 damage; pierces all shields.</tooltip>
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>38</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>missile_2</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_3">
+	<type>MISSILES</type>
+	<title>Hermes Missile</title>
+	<short>Hermes</short>
+	<desc>Standard but powerful missile.</desc>
+	<tooltip>Fires 1 missile; does 3 damage; pierces all shields.</tooltip>
+	<!--<desc>Power Req: 2    Pierces through all shields and deals 3 damage with a chance of fire and breaches.  Uses 1 missile per shot.</desc>-->
+	<damage>3</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>14</cooldown>
+	<power>3</power>
+	<cost>50</cost>
+	<bp>6</bp>
+	<rarity>2</rarity>
+	<image>missile_3</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_BURST">
+	<type>MISSILES</type>
+	<title>Pegasus Missile</title>
+	<short>Pegasus</short>
+	<desc>Creative missile design allows for two projectiles for the cost of one!</desc>
+	<tooltip>Fires 2 missiles; 2 damage each; pierces  all shields.</tooltip>
+	<!--<desc>Power Req: 3    Fires 2 missiles that pierces through all shields and deals 2 damage. Consumes 2 missile per shot.</desc>-->
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>2</shots>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>20</cooldown>
+	<power>3</power>
+	<cost>80</cost>
+	<bp>7</bp>
+	<rarity>3</rarity>
+	<image>missile_2</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_BREACH">
+	<type>MISSILES</type>
+	<title>Breach Missiles</title>
+	<short>Breach</short>
+	<desc>These missiles are designed to cause maximum destruction to ship hull armor.</desc>
+	<tooltip>Fires 1 missile; 4 damage; pierces all shields; high breach chance.</tooltip>
+	<!--<desc>Power Req: 3    Fires a single shot, heavy missile that does 4 damage and causes breaches in the target's hull.</desc>-->
+	<damage>4</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>8</breachChance>
+	<cooldown>22</cooldown>
+	<power>3</power>
+	<cost>70</cost>
+	<bp>7</bp>
+	<rarity>3</rarity>
+	<image>missile_breach</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_2</weaponArt> 
+</weaponBlueprint>
+
+
+
+
+
+<!--------------
+	BEAM WEAPONS
+ -------------->
+
+<weaponBlueprint name="BEAM_1">
+	<type>BEAM</type>
+	<title>Mini Beam</title>
+	<short>Mini Beam</short>
+	<desc>Extremely cheap and weak beam weapon.</desc>
+	<tooltip>One damage per room beam weapon</tooltip>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<speed>3</speed>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>45</length>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>beam_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_LONG">
+	<type>BEAM</type>
+	<title>Pike Beam</title>
+	<short>Pike Beam</short>
+	<desc>Can cut across entire ships, assuming there's no shield to stop it.</desc>
+	<tooltip>Beam weapon with extended line. 1 damage per room.</tooltip>
+	<!--<desc>Power Req: 2    Can cut across an entire ship that has no shields, dealing 1 damage per room.</desc>-->
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>13</speed>
+	<cooldown>16</cooldown>
+	<power>2</power>
+	<cost>60</cost>
+	<bp>5</bp>
+	<rarity>2</rarity>
+	<image>beam_contact</image>
+	<length>170</length>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>beam_long</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_2">
+	<type>BEAM</type>
+	<title>Halberd Beam</title>
+	<short>Halberd Beam</short>
+	<desc>Slow but reliably powerful standard beam weapon.</desc>
+	<tooltip>Beam weapon, 2 damage per room.</tooltip>
+	<!--<desc>Power Req: 3    A powerful but slow beam that deals 2 damage in a short line with a low chance of breaches.</desc>-->
+	<damage>2</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>17</cooldown>
+	<power>3</power>
+	<cost>70</cost>
+	<bp>7</bp>
+	<rarity>2</rarity>
+	<length>80</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_3">
+	<type>BEAM</type>
+	<title>Glaive Beam</title>
+	<short>Glaive Beam</short>
+	<desc>One of the most powerful weapons of war ever created. Known to take out some ships in a single blast.</desc>
+	<tooltip>Large beam that does 3 damage per room.</tooltip>
+	<!--<desc>Power Req: 4    A very powerful beam weapon that cuts through ships like butter.   Deals 3 damage in a line.</desc>-->
+	<damage>3</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>25</cooldown>
+	<power>4</power>
+	<cost>120</cost>
+	<bp>12</bp>
+	<rarity>5</rarity>
+	<length>80</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_3</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_FIRE">
+	<type>BEAM</type>
+	<title>Fire Beam</title>   <!-- Induction beam? -->
+	<short>Fire Beam</short>
+	<desc>This terrifying beam does no physical damage but ignites fires.</desc>
+	<tooltip>Beam weapon that starts fires.</tooltip>
+	<!--<desc>Power Req: 2    A beam weapon that does 1 damage and starts fires in a line if the enemy has no shields.</desc>-->
+	<damage>0</damage>
+	<sp>0</sp>
+	<fireChance>8</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>20</cooldown>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>6</bp>
+	<rarity>3</rarity>
+	<length>140</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_fire</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_BIO">
+	<type>BEAM</type>
+	<title>Anti-Bio Beam</title> 
+	<short>Anti-Bio Beam</short>
+	<desc>This terrifying beam does no physical damage but rips through organic material, dealing heavy damage to crew members.</desc>
+	<tooltip>2 power beam weapon that greatly damages enemy crew.</tooltip>
+	<!--<desc>Power Req: 2    A beam weapon that does 1 damage and starts fires in a line if the enemy has no shields.</desc>-->
+	<damage>0</damage>
+	<persDamage>4</persDamage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<speed>13</speed>
+	<power>2</power>
+	<cost>50</cost>
+	<bp>6</bp>
+	<rarity>5</rarity>
+	<length>140</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_bio</weaponArt> 
+</weaponBlueprint>
+
+
+
+
+
+<!--------------
+	HULL SMASHER WEAPONS
+ -------------->
+
+<weaponBlueprint name="LASER_HULL_1">
+	<type>LASER</type>
+	<title>Hull Smasher Laser</title>
+	<short>Hull Laser I</short>
+	<desc>Fires 2 shots that deal 1 damage to rooms with a system or subsystem and double damage to rooms without either.</desc>
+	<tooltip>Fires 2 lasers, 1 damage each and 2x damage in systemless rooms.</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>14</cooldown>
+	<hullBust>1</hullBust>
+	<power>2</power>
+	<cost>65</cost>
+	<rarity>2</rarity>
+	<speed>75</speed>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_hull</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="LASER_HULL_2">
+	<type>LASER</type>
+	<title>Hull Smasher Laser Mark II</title>
+	<short>Hull Laser II</short>
+	<desc>Designed to maximize hull damage.</desc>
+	<tooltip>Fires 3 lasers, 1 damage each and 2x damage in systemless rooms.</tooltip>
+	<!--<desc>Power Req: 3  Fires 3 shots that deal 1 damage to rooms with a system or subsystem and double damage to rooms without either.</desc>-->
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>15</cooldown>
+	<hullBust>1</hullBust>
+	<power>3</power>
+	<cost>100</cost>
+	<bp>7</bp>
+	<rarity>3</rarity>
+	<image>laser_heavy1</image>
+	<speed>90</speed>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_hull</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_HULL">
+	<type>BEAM</type>
+	<title>Hull Beam</title>
+	<short>Hull Beam</short>
+	<desc>This beam is most powerful when targeting large, empty sections of hull.</desc>
+	<tooltip>Beam weapon; 1 damage; 2x damage in systemless rooms.</tooltip>
+	<!--<desc>Power Req: 3  Fires a beam that deals 1 damage to rooms with a system or subsystem and double damage to rooms without either.</desc>-->
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>14</cooldown>
+	<hullBust>1</hullBust>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>8</bp>
+	<rarity>3</rarity>
+	<image>beam_contact</image>
+	<length>100</length>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>beam_hull</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_HULL">
+	<type>MISSILES</type>
+	<title>Hull Missile</title>
+	<short>Hull Mi.</short>
+	<desc>High hull damage plus a decent breach chance.</desc>
+	<tooltip>Fires 1 missile; 2 damage; 2x damage in systemless rooms.</tooltip>
+	<!--<desc>Power Req: 2  Fires a missile that deals 2 damage to rooms with a system or subsystem and double damage to rooms without either.</desc>-->
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>3</breachChance>
+	<hullBust>1</hullBust>
+	<cooldown>17</cooldown>
+	<power>2</power>
+	<cost>75</cost>
+	<bp>6</bp>
+	<rarity>3</rarity>
+	<image>missile_hull</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_2</weaponArt> 
+</weaponBlueprint>
+
+
+
+
+<!--------------
+	ION WEAPONS
+ -------------->
+
+<weaponBlueprint name="ION_1">
+	<type>LASER</type>
+	<title>Ion Blast</title>
+	<short>Ion Blast</short>
+	<locked>1</locked>
+	<desc>Ion weapons can disable systems without causing hull damage.</desc>
+	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>8</cooldown>
+	<power>1</power>
+	<cost>30</cost>
+	<bp>3</bp>
+	<rarity>3</rarity>
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="ION_2">
+	<type>LASER</type>
+	<title>Heavy Ion</title>
+	<short>Heavy Ion</short>
+	<locked>1</locked>
+	<desc>Ion weapons can disable systems without causing hull damage.</desc>
+	<tooltip>Fires a single blast that does 2 ion damage. Can hit and disable shields as well as systems.</tooltip>
+	<damage>0</damage>
+	<ion>2</ion>
+	<speed>40</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>13</cooldown>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<image>ion_4_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="ION_4">
+	<type>LASER</type>
+	<title>Ion Blast Mark II</title>
+	<short>Ion Blast II</short>
+	<locked>1</locked>
+	<desc>Ion weapons can disable systems without causing hull damage.</desc>
+	<tooltip>Fires a single blast that does 1 ion damage and recharges very quickly. Can hit and disable shields as well as systems.</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>4</cooldown>
+	<power>3</power>
+	<cost>80</cost>
+	<bp>6</bp>
+	<rarity>4</rarity>
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_4</weaponArt> 
+</weaponBlueprint>
+
+
+
+
+<!--------------
+	BOMB WEAPONS
+ -------------->
+<weaponBlueprint name="BOMB_1"> <!-- 1power 2damage-->
+	<type>BOMB</type>
+	<title>Small Bomb</title>
+	<short>S. Bomb</short>
+	<locked>1</locked>
+	<desc>Self-teleporting explosive that damages systems and crew but not the hull. Can target your own ship.</desc>
+	<tooltip>Bomb weapon; requires a missile; does 2 damage, but only damages system, not hull. Can target your own ship.</tooltip>
+	<!--<desc>Power Req: 2     Self-teleporting explosive that deals 2 damage to systems and subsystems without causing hull damage.</desc>-->
+	<damage>0</damage>
+	<sysDamage>2</sysDamage>
+	<persDamage>2</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>13</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<bp>4</bp>
+	<rarity>1</rarity>
+	<image>bomb1</image>
+	<explosion>explosion_big1</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BOMB_BREACH_1"> 
+	<type>BOMB</type>
+	<title>Breach Bomb Mark 1</title>
+	<short>Breach 1</short>
+	<locked>1</locked>
+	<desc>Self-teleporting explosive designed to damage systems and causes a breach. Can target your own ship.</desc>
+	<tooltip>Bomb weapon; requires a missile; does 1 damage to systems, and creates a hull breach. Can target your own ship.</tooltip>
+	<!--<desc>Power Req: 2     Self-teleporting explosive that deals 2 damage to systems and subsystems without causing hull damage.</desc>-->
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>2</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>70</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_breach</image>
+	<explosion>explosion_big1</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_breach</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BOMB_BREACH_2"> 
+	<type>BOMB</type>
+	<title>Breach Bomb Mark II</title>
+	<short>Breach II</short>
+	<locked>1</locked>
+	<desc>Slower than Mark 1 but breaches and does more damage to systems. Can target your own ship.</desc>
+	<tooltip>Bomb weapon; requires a missile; does 3 damage to systems, and creates a hull breach. Can target your own ship.</tooltip>
+	<!--<desc>Power Req: 2     Self-teleporting explosive that deals 2 damage to systems and subsystems without causing hull damage.</desc>-->
+	<damage>0</damage>
+	<sysDamage>3</sysDamage>
+	<persDamage>3</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<cooldown>17</cooldown>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>4</bp>
+	<rarity>4</rarity>
+	<image>bomb_breach</image>
+	<explosion>explosion_big1</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_breach</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BOMB_FIRE">
+	<type>BOMB</type>
+	<title>Fire Bomb</title>
+	<short>Fire B.</short>
+	<locked>1</locked>
+	<desc>Self-teleporting explosive designed to damage crew-members and light fires. Can target your own ship.</desc>
+	<tooltip>Bomb weapon; requires a missile; does no damage but lights fires. Can target your own ship.</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>2</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>10</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<cost>55</cost>
+	<bp>5</bp>
+	<rarity>2</rarity>
+	<image>bomb_fire</image>
+	<explosion>explosion_big1</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_fire</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BOMB_ION">
+	<type>BOMB</type>
+	<title>Ion Bomb</title>
+	<short>I. Bomb</short>
+	<locked>1</locked>
+	<desc>Self-teleporting explosive that uses ion damage to disable systems. Can target your own ship.</desc>
+	<tooltip>Bomb weapon; requires a missile; does no damage but deals 4 ion damage. Can target your own ship.</tooltip>
+	<damage>0</damage>
+	<ion>4</ion>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>18</cooldown>
+	<power>1</power>
+	<cost>65</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<image>bomb_ion</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_ion</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BOMB_HEAL">
+	<type>BOMB</type>
+	<title>Healing Burst</title>
+	<short>Heal B.</short>
+	<locked>1</locked>
+	<desc>Self-teleporting healing unit that instantly heals all friendly crew in the room. Can target your own ship.</desc>
+	<tooltip>Bomb weapon; requires a missile; heals nearby crew members. Can target your own ship.</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>-10</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>18</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<image>bomb_heal</image>
+	<explosion>explosion_big1_heal</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>healBomb</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_heal</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="BOMB_LOCK"> 
+	<type>BOMB</type>
+	<title>Crystal Lockdown Bomb</title>
+	<short>Lock B.</short>
+	<locked>1</locked>
+	<desc>Self-teleporting explosive that does no damage but creates a dense wall preventing movement in or out of the room. Can target your own ship.</desc>
+	<tooltip>Bomb weapon; requires a missile; does no damage;  prevents movement in or out of room. Can target your own ship.</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>0</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<lockdown>1</lockdown>
+	<cooldown>15</cooldown>
+	<power>1</power>
+	<cost>60</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_lockdown</image>
+	<explosion>explosion_lockdown</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_lockdown</weaponArt> 
+</weaponBlueprint>
+
+
+
+
+
+
+
+<!--    *********************
+          Crystal Weapon BLUEPRINTS
+		*********************
+-->
+
+<weaponBlueprint name="CRYSTAL_BURST_1">  
+	<type>MISSILES</type>
+	<title>Crystal Burst Mark I</title>
+	<short>Crystal B. I</short>
+	<desc>Modified projectile weapon that fires 2 shield piercing crystals. </desc>
+	<tooltip>Pierces 1 shield; fires 2 crystals that deal 1 damage each.</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<speed>50</speed>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>crystal_burst_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="CRYSTAL_BURST_2">  
+	<type>MISSILES</type>
+	<title>Crystal Burst Mark II</title>
+	<short>Crystal B. II</short>
+	<desc>Modified projectile weapon that fires 3 shield piercing crystals. </desc>
+	<tooltip>Pierces 1 shield; fires 3 crystals that deal 1 damage each.</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>17</cooldown>
+	<power>3</power>
+	<speed>50</speed>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>crystal_burst_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="CRYSTAL_HEAVY_1">  
+	<type>MISSILES</type>
+	<title>Heavy Crystal Mark I</title>
+	<short>Crystal H. I</short>
+	<desc>Modified projectile weapon that fires a shield piercing large crystal. </desc>
+	<tooltip>Pierces 1 shield; fires 1 crystal that deals 2 damage.</tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>13</cooldown>
+	<power>1</power>
+	<speed>50</speed>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard3</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>crystal_heavy_1</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="CRYSTAL_HEAVY_2">  
+	<type>MISSILES</type>
+	<title>Heavy Crystal Mark II</title>
+	<short>Crystal H. II</short>
+	<desc>Modified projectile weapon that fires a shield piercing large crystal.</desc>
+	<tooltip>Pierces 1 shield; fires 1 crystal that deals 4 damage and causes a hull breach.</tooltip>
+	<damage>4</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<cooldown>19</cooldown>
+	<power>3</power>
+	<speed>50</speed>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard3</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>crystal_heavy_2</weaponArt> 
+</weaponBlueprint>
+
+
+
+<!--    *********************
+          DRONE BLUEPRINTS
+		*********************
+-->
+
+<weaponBlueprint name="DRONE_LASER"> 
+	<type>LASER</type>
+	<title>Drone Laser</title>
+	<damage>1</damage>
+	<shots>1</shots>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="DRONE_LASER_2"> 
+	<type>LASER</type>
+	<title>Drone Laser 2</title>
+	<damage>1</damage>
+	<shots>1</shots>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<speed>120</speed>
+	<image>laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="DRONE_BEAM">
+	<type>BEAM</type>
+	<title>Mini Beam</title>
+	<short>Mini Beam</short>
+	<desc>'Baby's first beam'; Extremely cheap and weak beam weapon.</desc>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<speed>3</speed>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>20</length>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>beam_1</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="DRONE_ION">
+	<type>LASER</type>
+	<title>Ion Blast</title>
+	<short>Ion Blast</short>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>ion_1_shot</image>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="DRONE_MISSILE">
+	<type>MISSILES</type>
+	<title>Missiles_1</title>
+	<short>M. 0</short>
+	<short>STUPID MISSILES</short>
+	<desc>This should never appear in the store: BUG</desc>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<rarity>0</rarity>
+	<image>missile_1</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt> 
+</weaponBlueprint>
+
+<!-- NOT USED -->
+<droneBlueprint name="COMBAT_ION">
+	<type>COMBAT</type>
+	<title>Anti-Ship Ion Drone I</title>
+	<short>Ion Drone</short>
+	<desc>Slow moving drone that repeatedly attacks the enemy ship with ion blasts</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>7</dodge>
+	<speed>5</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_combat</droneImage>
+	<weaponBlueprint>DRONE_ION</weaponBlueprint>
+	<rarity>0</rarity>
+</droneBlueprint>
+
+<!-- NOT USED -->
+<droneBlueprint name="COMBAT_MISSILE">
+	<type>COMBAT</type>
+	<title>Anti-Ship Missile Drone I</title>
+	<short>Missile Drone</short>
+	<desc>Slow moving drone that repeatedly attacks the enemy ship with mini missiles</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>7</dodge>
+	<speed>5</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_combat</droneImage>
+	<weaponBlueprint>DRONE_MISSILE</weaponBlueprint>
+	<rarity>0</rarity>
+</droneBlueprint>
+
+
+
+<droneBlueprint name="COMBAT_1">
+	<type>COMBAT</type>
+	<title>Anti-Ship Drone Mark I</title>
+	<short>Anti-Ship I</short>
+	<desc>Powerful drone that continually attacks the enemy ship.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>7</dodge>
+	<speed>15</speed> <!--- Change this to increase/decrease firing speed -->  <!-- was 20-->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_combat</droneImage>
+	<weaponBlueprint>DRONE_LASER</weaponBlueprint>
+	<rarity>2</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="COMBAT_BEAM">
+	<type>COMBAT</type>
+	<title>Anti-Ship Beam Drone I</title>
+	<short>Beam I</short>
+	<desc>Combat drone that repeatedly attacks with a small beam weapon</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>7</dodge>
+	<speed>15</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_beam</droneImage>
+	<weaponBlueprint>DRONE_BEAM</weaponBlueprint>
+	<rarity>3</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="COMBAT_2">
+	<type>COMBAT</type>
+	<title>Anti-Ship Drone Mark II</title>
+	<short>Anti-Ship II</short>
+	<desc>Powerful drone that continually attacks the enemy ship. Moves and shoots faster than Mark I.</desc>
+	<power>4</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>8</dodge>
+	<speed>28</speed> <!--- Change this to increase/decrease firing speed -->  <!-- was 45-->
+	<cost>100</cost>
+	<bp>8</bp>
+	<droneImage>drone_combat2</droneImage>
+	<!---- WEAPON INFO --->
+	<image>weapons/laser_light2_strip4.png</image>
+	<weaponBlueprint>DRONE_LASER</weaponBlueprint>
+	<rarity>5</rarity>
+</droneBlueprint>
+
+<!--- This guy, for now, flies like the combat drone but heals the ship  -->
+<droneBlueprint name="SHIP_REPAIR">
+	<type>SHIP_REPAIR</type>
+	<title>Hull Repair</title>
+	<short>Hull Repair</short>
+	<desc>Automatically repairs 3-5 damage to your hull.  Drone part is consumed once it finishes.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect repair drone -->
+	<dodge>8</dodge>
+	<speed>20</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>100</cost>
+	<bp>5</bp>
+	<droneImage>drone_shiprepair</droneImage>
+	<image>weapons/laser_light2_strip4.png</image>
+	<rarity>4</rarity>
+</droneBlueprint>
+
+
+<droneBlueprint name="DEFENSE_1">
+	<type>DEFENSE</type>
+	<level>1</level>
+	<title>Defense Drone Mark I</title>
+	<short>Defense I</short>
+	<desc>Shoots down incoming missiles and asteroids.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
+	<dodge>7</dodge>
+	<speed>5</speed> <!--- Superficial change.. just makes it fly faster -->
+	<cost>50</cost>
+	<bp>2</bp>
+	<droneImage>drone_defense</droneImage>
+	<!---- WEAPON INFO --->
+	<weaponBlueprint>DRONE_LASER</weaponBlueprint>
+	<!----- -->
+	<rarity>1</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="DEFENSE_2">
+	<type>DEFENSE</type>
+	<level>2</level>
+	<title>Defense Drone Mark II</title>
+	<short>Defense II</short>
+	<desc>It fires faster than Mark I and can also shoot down incoming lasers.</desc>
+	<power>4</power>
+	<cooldown>750</cooldown> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
+	<dodge>8</dodge>
+	<speed>7</speed> <!--- Superficial change.. just makes it fly faster -->
+	<cost>75</cost>
+	<bp>6</bp>
+	<droneImage>drone_defense2</droneImage>
+	<!---- WEAPON INFO --->
+	<weaponBlueprint>DRONE_LASER_2</weaponBlueprint>
+	<!----- -->
+	<rarity>3</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="BOSS_DEFENSE_2">
+	<type>DEFENSE</type>
+	<level>2</level>
+	<title>Defense Drone Mark II</title>
+	<short>Defense II</short>
+	<desc>Shoots faster than Mark I and can also shoots down incoming lasers.</desc>
+	<power>2</power>
+	<cooldown>750</cooldown> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
+	<dodge>8</dodge>
+	<speed>7</speed> <!--- Superficial change.. just makes it fly faster -->
+	<cost>75</cost>
+	<bp>6</bp>
+	<droneImage>drone_defense2</droneImage>
+	<!---- WEAPON INFO --->
+	<weaponBlueprint>DRONE_LASER</weaponBlueprint>
+	<!----- -->
+	<rarity>0</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="REPAIR">
+	<type>REPAIR</type>
+	<title>System Repair Drone</title>
+	<short>Sys Repair</short>
+	<desc>Will seek out damaged systems and repair them automatically.</desc>
+	<power>1</power>
+	<cost>30</cost>
+	<bp>2</bp>
+	<rarity>1</rarity>
+</droneBlueprint>
+
+
+<droneBlueprint name="BATTLE">
+	<type>BATTLE</type>
+	<locked>1</locked>
+	<title>Anti-Personnel Drone</title>
+	<short>Anti-Pers.</short>
+	<desc>Will seek out and attempt to destroy any intruders on-board your ship.</desc>
+	<power>2</power>
+	<cost>60</cost>
+	<bp>3</bp>
+	<rarity>2</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="BOARDER">
+	<type>BOARDER</type>
+	<locked>1</locked>
+	<title>Boarding Drone</title>
+	<short>Boarding</short>
+	<desc>Breaches through the enemy hull and wreaks havoc. Awesome.</desc>
+	<power>3</power>
+	<speed>18</speed>
+	<cost>70</cost>
+	<rarity>5</rarity>
+</droneBlueprint>
+
+
+<droneBlueprint name="BOARDER_BOSS">
+	<type>BOARDER</type>
+	<locked>1</locked>
+	<title>Boarding Drone</title>
+	<short>Boarding</short>
+	<desc>Breaches through the enemy hull and wreaks havoc. Awesome.</desc>
+	<power>2</power>
+	<speed>18</speed>
+	<cost>70</cost>
+	<rarity>0</rarity>
+</droneBlueprint>
+
+
+
+<!--    *********************
+          ITEM BLUEPRINTS
+		*********************
+-->
+
+<itemBlueprint name="fuel">
+	<type>ITEM_FUEL</type>
+	<title>FTL Fuel</title>
+	<desc>Powers your FTL drive. One jump per fuel.</desc>
+	<cost>3</cost>
+	<rarity>1</rarity>
+</itemBlueprint>
+
+<itemBlueprint name="drones">
+	<type>ITEM_DRONE</type>
+	<title>Drone Part</title>
+	<desc>Allows you to deploy drone schematics you've found. Each deployment costs one drone part.</desc>
+	<cost>8</cost>
+	<rarity>3</rarity>
+</itemBlueprint>
+
+<itemBlueprint name="missiles">
+	<type>ITEM_MISSILE</type>
+	<title>Missile</title>
+	<desc>Multipurpose ammo for any missile based weapon.</desc>
+	<cost>6</cost>
+	<rarity>3</rarity>
+</itemBlueprint>
+
+<!--    
+
+					---------------------------------------
+					***************************************
+								AUGMENTATION BLUEPRINTS
+					***************************************
+					---------------------------------------
+-->
+
+<!-- SHIP SPECIFIC AUGMENTS -->
+
+<augBlueprint name="ROCK_ARMOR"> 
+	<title>Rock Plating</title>
+	<desc>Superior hull armor provides a 15 percent chance to negate incoming hull damage (hit systems will still be damaged).</desc>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="CRYSTAL_SHARDS"> 
+	<title>Crystal Vengeance</title>
+	<desc>Every time your ship takes damage, there is a 10 percent chance to break off a shard that flies at your enemy.</desc>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.1</value>
+</augBlueprint>
+
+<augBlueprint name="ENERGY_SHIELD"> 
+	<title>Zoltan Shield</title>
+	<desc>An unexplained technology creates this nearly impenetrable shield.  Only the energy outburst from an FTL engine is powerful enough to recharge it.</desc>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>2</value>
+</augBlueprint>
+
+
+<augBlueprint name="NANO_MEDBAY">
+	<title>Engi Med-bot Dispersal</title>
+	<desc>Floods the ship with Engi nano med-bots, healing the crew even when they are outside of the med-bay (at a reduced speed).</desc>
+	<cost>60</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.25</value>
+</augBlueprint>
+
+<augBlueprint name="SLUG_GEL">
+	<title>Slug Repair Gel</title>
+	<desc>Slug ships excrete a thick gel that automatically repairs any hull breaches.</desc>
+	<cost>60</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.25</value>
+</augBlueprint>
+
+<augBlueprint name="CREW_STIMS">
+	<title>Mantis Pheromones</title>
+	<desc>Your crew's movement speed is increased by 25 percent.</desc>
+	<cost>50</cost>
+	<bp>9</bp>
+	<rarity>0</rarity>
+	<value>0.25</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+
+<augBlueprint name="DRONE_SPEED">
+	<title>Drone Reactor Booster</title>
+	<desc>Your ship board drones have their movement speed increased by 50 percent.</desc>
+	<cost>50</cost>
+	<bp>9</bp>
+	<rarity>0</rarity>
+	<value>0.25</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<!--<augBlueprint name="ADV_HULL_ARMOR"> 
+	<title>Advanced Hull Plating</title>
+	<desc>State of the art hull armor provides a massive 25 percent chance to negate incoming hull damage (hit systems will still be damaged).</desc>
+	<cost>100</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.25</value>
+</augBlueprint>-->
+
+<augBlueprint name="SYSTEM_CASING">
+	<!--<title>Reinforced System Casing</title>-->
+	<title>Titanium System Casing</title>
+	<desc>All ship systems have additional plating that provides a 15 percent chance to negate damage when hit (hull will still be damaged)</desc>
+	<cost>100</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+
+<!-- END RACE SPECIFIC AUGMENTS -->
+
+<augBlueprint name="ION_ARMOR"> 
+	<title>Reverse Ion Field</title>
+	<desc>Protects your ship from ion damage, giving a 20 percent chance to negate it entirely.</desc>
+	<cost>60</cost>
+	<bp>8</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="CLOAK_FIRE"> 
+	<title>Stealth Weapons</title>
+	<desc>Prevents your weapon fire from disrupting your cloak, allowing you to shoot at will while cloaked.</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="REPAIR_ARM"> 
+	<title>Repair Arm</title>
+	<desc>Repairs your hull every time you collect scrap, but reduces scrap collected by 15 percent.</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<!--<augBlueprint name="HULL_ARMOR"> 
+	<title>Reinforced Hull Plating</title>
+	<desc>Superior hull armor provides a 15 percent chance to negate incoming hull damage (hit systems will still be damaged).</desc>
+	<cost>60</cost>
+	<bp>8</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>-->
+
+<augBlueprint name="SCRAP_COLLECTOR"> 
+	<title>Scrap Recovery Arm</title>
+	<desc>Allows the ship to collect 10 percent more scrap from any source.</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>1</rarity>
+	<stackable>true</stackable>
+	<value>0.10</value>
+</augBlueprint>
+
+<augBlueprint name="ADV_SCANNERS">
+	<title>Long-Ranged Scanners</title>
+	<desc>Adds additional info about nearby beacons on the star map.</desc>
+	<cost>30</cost>
+	<bp>3</bp>
+	<rarity>1</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="AUTO_COOLDOWN">
+	<title>Automated Re-loader</title>
+	<desc>Cooldown between weapon shots is improved by 15 percent.</desc>
+	<cost>40</cost>
+	<bp>5</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="SHIELD_RECHARGE">
+	<title>Shield Charge Booster</title>
+	<desc>Boosts the ship's shield recharge rate by 15 percent.</desc>
+	<cost>45</cost>
+	<bp>5</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="WEAPON_PREIGNITE">
+	<title>Weapon Pre-igniter</title>
+	<desc>Weapons are made immediately available after an FTL jump.</desc>
+	<cost>120</cost>
+	<bp>16</bp>
+	<rarity>4</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="FTL_BOOSTER">
+	<title>FTL Recharge Booster</title>
+	<desc>The ship's FTL Drive powers up 25 percent faster.</desc>
+	<cost>50</cost>
+	<bp>4</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.25</value>
+</augBlueprint>
+
+<augBlueprint name="FTL_JUMPER">
+	<title>Adv. FTL Navigation</title>
+	<desc>Allows the ship to jump to any previously visited beacon.</desc>
+	<cost>60</cost>
+	<bp>5</bp>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="DRONE_RECOVERY">  
+	<title>Drone Recovery Arm</title>
+	<desc>Non-destroyed drones will be retrieved when jumping, allowing their parts to be reused.</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>2</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="FTL_JAMMER">
+	<title>FTL Jammer</title>
+	<desc>Scramble enemy ship's FTL computers doubling the time it takes for them to jump.</desc>
+	<cost>30</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<value>2</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+
+
+<augBlueprint name="STASIS_POD">
+	<title>Damaged Stasis Pod</title>
+	<desc>This bizarre alien artifact appears to be barely operational. It has no practical function but perhaps someone can repair it.</desc>
+	<cost>30</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+
+<!--OTHER IDEAS -- 
+<augBlueprint name="PERSONAL_TELEPORTER">            requires a teleporter system to be working???
+	<title>Personal Teleporters</title>
+	<desc>Crew on an enemy ship that is jumping or being destroyed will be automatically recalled.</desc>
+	<cost>150</cost>
+	<rarity>4</rarity>
+	<stackable>false</stackable>
+</augBlueprint> 
+
+<augBlueprint name="FLIGHT_SUITS">  
+	<title>Integrated Flight Suits</title>
+	<desc>Crews take half damage when in rooms without oxygen</desc>
+	<cost>80</cost>
+	<rarity>2</rarity>
+	<value>0.5</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="SHIP_SEALING">
+	<title>Improved Ship Sealing</title>
+	<desc>O2 will deplete at 50% speed when the Oxygen system is unpowered.</desc>
+	<cost>100</cost>
+	<rarity>2</rarity>
+	<value>0.5</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="MISSILE_REPLICATOR">
+	<title>Missile Replication System</title>
+	<desc>The first missile/bomb weapon fired after a jump will consume no explosive</desc>
+	<cost>100</cost>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+	
+<augBlueprint name="INTERNAL_AI">
+	<title>Improved Internal AI</title>
+	<desc>Your interior drones (repair and battle) are 20 percent more effective.</desc>    maybe they just move at normal human speed
+	<cost>100</cost>
+	<rarity>3</rarity>
+	<value>0.2</value>
+	<stackable>true</stackable>
+</augBlueprint>
+
+<augBlueprint name="EXTERNAL_AI">
+	<title>Improved Internal AI</title>
+	<desc>Your exterior drones (defense and combat) are 20 percent more effective.</desc>
+	<cost>100</cost>
+	<rarity>3</rarity>
+	<value>0.2</value>
+	<stackable>true</stackable>
+</augBlueprint>
+
+
+
+
+<!----PROBABLY NOT:---
+
+<augBlueprint name="ENCODED_DISTRESS">
+	<title>Encrypted Distress Signal</title>
+	<desc>Your distress signal will be more likely to be picked up by friendly ships.</desc>
+	<cost>100</cost>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBluepring name="TELEPORTER_PREIGNITE">
+	<title>Teleporter Pre-igniter</title>
+	<desc>The teleporter is made immediately available after an FTL jump.</desc>
+	<cost>130</cost>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="HEAT_RESIST"> 
+	<title>Heat Resistant Suits</title>
+	<desc>Reduces damage crew takes from fire by 50%</desc>
+	<cost>70</cost>
+	<rarity>2</rarity>
+	<value>0.5</value>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="BEAM_PIERCE">  
+	<title></title>
+	<desc>Gives all beam weapons 1 shield piercing</desc>
+	<cost>80</cost>
+	<rarity>2</rarity>
+	<value>1</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+ -->
+
+
+ 
+ 
+<!--    
+
+					---------------------------------------
+					***************************************
+								SHIP BLUEPRINTS
+					***************************************
+					---------------------------------------
+-->
+
+
+<!--
+					***************************************
+								Player Ship
+					***************************************
+-->
+
+<!-- 
+		THIS SHIP IS NOT USED
+		
+-->
+<shipBlueprint name="PLAYER_SHIP_EASY" layout="kestral" img="kestral">
+	<class>Kestrel</class>
+	<name>The Kestrel</name>
+	<systemList>
+		<pilot power="1" room="0" start="true"/>
+		<doors power="1" room="2" start="true"/>
+		<sensors power="1" room="3" start="true"/>
+		<medbay power="1" room="4" start="true"/>
+		<oxygen power="1" room="13" start="true"/>
+		<shields power="2" room="5" start="true"/>
+		<engines power="2" room="14" start="true"/>
+		<weapons power="3" room="10" start="true"/>
+		<drones power="2" room="1" start="false"/>
+		<teleporter power="1" room="15"	start="false"/>
+		<cloaking power="1" room="8" start="false"/>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="8">
+		<weapon name="MISSILES_2_PLAYER"/>
+		<weapon name="LASER_BURST_3"/>
+	</weaponList>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "3" class="human"/>
+</shipBlueprint>
+
+
+
+
+
+
+<!-- BOSS-READY SHIP --> 
+<!--
+<shipBlueprint name="PLAYER_SHIP_HARD" layout="kestral" img="kestral">
+	<class>Kestrel</class>
+	<name>The Kestrel</name>
+	<desc>This class of ship was decommissioned from Federation service years ago.  After a number of refits and updating this classic ship is ready for battle.</desc>
+	<systemList>
+		<pilot power="2" room="0" start="true" img="room_pilot"/>
+		<doors power="2" room="2" start="true" img="room_doors"/>
+		<sensors power="2" room="3" start="true" img="room_sensors"/>
+		<medbay power="2" room="4" start="true" img="room_medbay"/>
+		<oxygen power="2" room="13" start="true" img="room_oxygen"/>
+		<shields power="8" room="5" start="true" img="room_shields"/>
+		<engines power="5" room="14" start="true" img="room_engines"/>
+		<weapons power="7" room="10" start="true" img="room_weapons"/>
+		<drones power="4" room="1" start="true"/>
+		<teleporter power="2" room="15"	start="true"/>
+		<cloaking power="2" room="8" start="true"/>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="4" missiles="16">
+		<weapon name="MISSILES_2"/>
+		<weapon name="LASER_BURST_3"/>
+		<weapon name="MISSILES_2"/>
+		<weapon name="LASER_BURST_3"/>
+	</weaponList>
+	<droneList count="2" drones="10">
+		<drone name="DRONE_BEAM"/>
+		<drone name="REPAIR"/>
+	</droneList>
+	<health amount="30"/>
+	<maxPower amount ="28"/> 
+	<crewCount amount = "6" class="human"/>
+</shipBlueprint>
+-->
+
+
+
+
+
+
+
+<!--  
+   ***********************
+   The Kestrel
+   ***********************
+ -->
+
+ <!-- Slots for when placing computers are numbered like so:
+	0 1
+	2 3
+-->
+<!-- slot for medbay defines which slot is blocked -   "-2" means no blocked slot-->
+									
+<!-- THE KESTREL -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 0 -->    
+<shipBlueprint name="PLAYER_SHIP_HARD" layout="kestral" img="kestral">
+	<class>Kestrel Cruiser</class>
+	<name>The Kestrel</name>
+	<desc>This class of ship was decommissioned from Federation service years ago.  After a number of refits and updating this classic ship is ready for battle.</desc>
+	<systemList>
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number> 
+			</slot>
+		</pilot>
+		<doors power="1" room="2" start="true" img="room_doors"/>
+		<sensors power="1" room="3" start="true" img="room_sensors"/>
+		<medbay power="1" room="4" start="true" img="room_medbay">
+			<slot>
+				<number>1</number> 
+			</slot>
+		</medbay>
+		<oxygen power="1"  room="13" start="true" img="room_oxygen"/>
+		<shields power="2" room="5" start="true" img="room_shields"/>
+		<engines power="2" room="14" start="true" img="room_engines"/>
+		<weapons power="3" room="10" start="true" img="room_weapons"/>
+		<drones power="2" room="1" start="false"/>
+		<teleporter power="1" room="15"	start="false"/>
+		<cloaking power="1" room="8" start="false"/>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="8">
+		<weapon name="MISSILES_2_PLAYER"/>
+		<weapon name="LASER_BURST_3"/>
+	</weaponList>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "3" class="human"/>
+</shipBlueprint>
+
+<!-- THE KESTREL -->
+<!-- LAYOUT = 2 --> 
+<!-- SHIP ID = ?? -->
+
+<shipBlueprint name="PLAYER_SHIP_HARD_2" layout="kestral_2" img="kestral_2">
+	<class>Kestrel Cruiser</class>
+	<name>Red-Tail</name>
+	<desc>This class of ship was decommissioned from Federation service years ago.  After a number of refits and updating this classic ship is ready for battle.</desc>
+	<systemList>
+		<pilot power="1" room="9" start="true" img="room_pilot_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</pilot>  
+		<doors power="1" room="7" start="true" img="room_doors"/>
+		<sensors power="1" room="11" start="true" img="room_sensors_2"/>
+		<medbay power="1" room="0" start="true" img="room_medbay_4">
+			<slot>
+				<number>0</number> 
+			</slot>
+		</medbay>
+		<oxygen power="1" room="3" start="true" img="room_oxygen_11"/>
+		<shields power="2" room="2" start="true" img="room_shields_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</slot>
+		<engines power="2" room="5" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</engines>
+		<weapons power="4" room="10" start="true" img="room_weapons"/>
+		<drones power="2" room="13" start="false" img="room_drones_12"/>
+		<teleporter power="1" room="4"	start="false"/>
+		<cloaking power="1" room="12" start="false" img="room_cloaking_2"/>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="4" missiles="5">
+		<weapon name="LASER_BURST_1"/>
+		<weapon name="LASER_BURST_1"/>
+		<weapon name="LASER_BURST_1"/>
+		<weapon name="LASER_BURST_1"/>
+	</weaponList>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "2" class="human"/>
+	<crewCount amount = "1" class="energy"/>
+	<crewCount amount = "1" class="mantis"/>
+	<!-- can use these to override images for reuse -->
+	<shieldImage>kestral</shieldImage>
+	<cloakImage>kestral</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  
+   ***********************
+   MANTIS SHIP
+   ***********************
+ -->
+
+<!-- MANTIS SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 2 --> 
+<shipBlueprint name="PLAYER_SHIP_MANTIS" layout="mantis_cruiser" img="mantis_cruiser"> 
+	<class>Mantis Cruiser</class>
+	<name>The Gila Monster</name>
+	<unlock>The famous Mantis thief, KazaaakplethKilik, owns this ship.  You'll have to "convince" him to help you.</unlock>
+	<desc>This warship is designed to enhance its crew for close combat missions.</desc>
+	<systemList>
+		<pilot power="1" room="7" start="true"/>
+		<doors power="1" room="14" start="true"/>
+		<sensors power="1" room="17" start="false"/>
+		<oxygen power="1" room="4" start="true" img="room_oxygen_3"/>
+		<shields power="2" room="16" start="true"/>
+		<engines power="2" room="10" start="true"/>
+		<weapons power="1" room="13" start="true" img="room_weapons_3"/>
+		<drones power="2" room="0" start="false" img="room_drones_3"/>
+		<medbay power="1" room="2" start="true"/>
+		<teleporter power="1" room="1" start="true"/>
+		<cloaking power="1" room="5" start="false" img="room_cloaking_2"/>
+	</systemList>
+	<weaponList count="2" missiles="16">
+		<weapon name="BOMB_1"/>
+		<weapon name="LASER_BURST_1"/>
+	</weaponList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="CREW_STIMS"/>
+	<health amount="30"/>
+	<maxPower amount ="7"/> 
+	<crewCount amount = "3" class="mantis"/>
+	<crewCount amount = "1" class="engi"/>
+</shipBlueprint> 
+
+
+<!-- MANTIS SHIP -->
+<!-- LAYOUT = ALTERNATE --> 
+<!-- SHIP ID = 2 -->    
+<shipBlueprint name="PLAYER_SHIP_MANTIS_2" layout="mantis_cruiser_2" img="mantis_cruiser_2"> 
+	<class>Mantis Cruiser</class>
+	<name>The Basilisk</name>
+	<unlock>The famous Mantis thief, KazaaakplethKilik, owns this ship.  You'll have to "convince" him to help you.</unlock>
+	<desc>Ship description here</desc>
+	<systemList>
+		<pilot power="1" room="8" start="true"/>
+		<doors power="1" room="15" start="true"/>
+		<sensors power="1" room="1" start="true"/>
+		<oxygen power="1" room="16" start="true" img="room_oxygen_5"/>
+		<shields power="4" room="7" start="true" img="room_shields_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number> 
+			</slot>
+		</shields>
+		<engines power="1" room="10" start="true" img="room_engines_4"/>
+		<weapons power="1" room="6" start="true" img="room_weapons_3"/>
+		<drones power="3" room="11" start="true" img="room_drones_6"/>
+		<medbay power="1" room="3" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number> 
+			</slot>
+		</medbay>
+		<teleporter power="1" room="9" start="true"/>
+		<cloaking power="1" room="0" start="false" img="room_cloaking_6"/>
+	</systemList>
+	<weaponList count="0" missiles="0"/>
+	<droneList count="2" drones="15">
+		<drone name="BOARDER"/>
+		<drone name="DEFENSE_1"/>
+	</droneList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="CREW_STIMS"/>
+	<health amount="30"/>
+	<maxPower amount ="11"/> 
+	<crewCount amount="2" class="mantis"/>
+	<!-- can use these to override images for reuse -->
+	<shieldImage>mantis_cruiser</shieldImage>
+	<cloakImage>mantis_cruiser</cloakImage>
+</shipBlueprint> 
+
+
+
+
+
+<!--  
+   ***********************
+   STEALTH SHIP
+   ***********************
+ -->
+
+<!-- STEALTH SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 1 --> 
+<shipBlueprint name="PLAYER_SHIP_STEALTH" layout="stealth" img="stealth">
+	<class>Stealth Cruiser</class>
+	<name>The Nesasio</name>
+	<unlock>This ship is being built near the Engi homeworlds.  To unlock it you'll need to help them, but keep in mind they only trust their own kind.</unlock>
+	<desc>Constructed for the Federation by the Engi, this ship is designed to use cloaking technology and speed to get behind enemy lines.</desc>
+	<systemList>
+		<pilot power="1" room="0" start="true"/>
+		<doors power="1" room="14" start="true" img="room_doors_2"/>
+		<sensors power="2" room="13" start="true" img="room_sensors_2"/>
+		<oxygen power="1" room="1" start="true" img="room_oxygen_2"/>
+		<engines power="4" room="12" start="true" img="room_engines_2"/>
+		<shields power="2" room="10" start="false"img="room_shields_2"/>
+		<weapons power="2" room="3" start="true" img="room_weapons_2"/> 
+		<drones power="2" room="11" start="false" img="room_drones_2"/>
+		<medbay power="1" room="7" start="true"/> 
+		<teleporter power="1" room="5" start="false"/>
+		<cloaking power="1" room="8" start="true" img="room_cloaking_2"/>
+	</systemList>
+	<weaponList count="2" missiles="0">
+		<weapon name="BEAM_1"/>
+		<weapon name="LASER_BURST_2"/>
+	</weaponList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="SYSTEM_CASING"/>
+	<aug name="ADV_SCANNERS"/>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "3" class="human"/>
+</shipBlueprint> 
+
+
+<!-- STEALTH SHIP -->
+<!-- LAYOUT = ALTERNATE --> 
+<!-- SHIP ID = ???? --> 
+<shipBlueprint name="PLAYER_SHIP_STEALTH_2" layout="stealth_2" img="stealth_2">
+	<class>Stealth Cruiser</class>
+	<name>DA-SR 12</name>  <!-- direct action - stealth reconnaissance-->
+	<unlock>This ship is being built near the Engi homeworlds.  To unlock it you'll need to help them, but keep in mind they only trust their own kind.</unlock>
+	<desc>Constructed for the Federation by the Engi, this ship is designed to uses cloaking technology and speed to get behind enemy lines.</desc>
+	<systemList>
+		<pilot power="1" room="9" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</pilot>
+		<doors power="1" room="13" start="true" img="room_doors_3"/>
+		<sensors power="2" room="6" start="true" img="room_sensors_3"/>
+		<oxygen power="1" room="4" start="true" img="room_oxygen_2"/>
+		<engines power="2" room="5" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</engines>
+		<shields power="2" room="2" start="false" img="room_shields_3">
+			<slot>
+				<direction>left</direction>
+				<number>2</number> 
+			</slot>
+		</shields>
+		<weapons power="4" room="12" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number> 
+			</slot>
+		</weapons>
+		<drones power="2" room="1" start="false" img="room_drones_4"/>
+		<medbay power="1" room="0" start="true" img="room_medbay_2">
+			<slot>
+				<number>-2</number> 
+			</slot>
+		</medbay>
+		<teleporter power="1" room="14" start="false"/>
+		<cloaking power="2" room="11" start="true" img="room_cloaking"/>
+	</systemList>
+	<weaponList count="1" missiles="0">
+		<weapon name="BEAM_3"/>
+	</weaponList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="ADV_SCANNERS"/>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="7"/> 
+	<crewCount amount = "2" class="human"/>
+	<crewCount amount = "1" class="energy"/>
+	<!-- can use these to override images for reuse -->
+	<shieldImage>stealth</shieldImage>
+	<cloakImage>stealth</cloakImage>
+</shipBlueprint> 
+
+
+<!--  
+   ***********************
+   ENGI SHIP
+   ***********************
+ -->
+
+<!-- ENGI SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 3 -->
+<shipBlueprint name="PLAYER_SHIP_CIRCLE" layout="circle_cruiser" img="circle_cruiser">
+	<class>Engi Cruiser</class>
+	<name>The Torus</name>
+	<unlock>To unlock this Engi ship you'll need to get to the 5th sector.</unlock>
+	<desc>Although it may look like a pile of junk loosely held together, this well designed ship relies on drones and ion weaponry.</desc>
+	<systemList>  
+		<pilot power="1" room="8" start="true"/>    
+		<doors power="1" room="5" start="true" img="room_doors_4"/>  
+		<sensors power="1" room="4" start="true" img="room_sensors_4"/>   
+		<oxygen power="1" room="15" start="true" img="room_oxygen_4"/>
+		<engines power="2" room="2" start="true" img="room_engines_2"/> 
+		<shields power="2" room="3" start="true" img="room_shields_4"/> 
+		<weapons power="3" room="11" start="true"/> 
+		<drones power="3" room="0" start="true"/> 
+		<medbay power="1" room="7" start="true"/>   
+		<teleporter power="1" room="9" start="false"/>
+		<cloaking power="1" room="12" start="false" img="room_cloaking_4"/> 
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList count="1" missiles="0">
+		<weapon name="ION_4"/>
+	</weaponList>
+	<droneList count="1" drones="15">
+		<drone name="COMBAT_1"/>
+	</droneList>
+	<aug name="NANO_MEDBAY"/>
+	<health amount="30"/>
+	<maxPower amount ="10"/> 
+	<crewCount amount = "2" class="engi"/>
+	<crewCount amount = "1" class="human"/>
+</shipBlueprint>
+
+
+
+
+
+
+<!-- ENGI SHIP -->
+<!-- LAYOUT = ALT --> 
+<!-- SHIP ID = ???? -->
+<shipBlueprint name="PLAYER_SHIP_CIRCLE_2" layout="circle_cruiser_2" img="circle_cruiser_2">
+	<class>Engi Cruiser</class>
+	<name>The Vortex</name>
+	<unlock>To unlock this Engi ship you'll need to get to the 5th sector.</unlock>
+	<desc>Although it may look like a pile of junk loosly held together, this well designed ship relies on drones and ion weaponry.</desc>
+	<systemList>  
+		<pilot power="1" room="12" start="true"/>  
+		<doors power="1" room="8" start="true"/>  
+		<sensors power="1" room="2" start="false"/>  
+		<oxygen power="1" room="5" start="true" img="room_oxygen_6"/>  
+		<engines power="1" room="0" start="true" img="room_engines_2"/>  
+		<shields power="2" room="10" start="true" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number> 
+			</slot>
+		</shields>  
+		<weapons power="3" room="1" start="true" img="room_weapons_8">  
+			<slot>
+				<direction>up</direction>
+				<number>1</number> 
+			</slot>
+		</weapons>
+		<drones power="3" room="7" start="true" img="room_drones_6"/>  
+		<medbay power="1" room="6" start="true" img="room_medbay_6">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<teleporter power="1" room="3" start="false"/>  
+		<cloaking power="1" room="11" start="false" img="room_cloaking_7"/>  
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList count="2" missiles="0">
+		<weapon name="ION_2"/>
+		<weapon name="LASER_HEAVY_1"/>
+	</weaponList>
+	<droneList count="3" drones="6">
+		<drone name="BATTLE"/>
+		<drone name="REPAIR"/>
+		<drone name="REPAIR"/>
+	</droneList>
+	<aug name="DRONE_SPEED"/>
+	<health amount="30"/>
+	<maxPower amount ="9"/> 
+	<crewCount amount = "1" class="engi"/>
+	<shieldImage>circle_cruiser</shieldImage>
+	<cloakImage>circle_cruiser</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+<!--  
+   ***********************
+	FEDERATION SHIP
+   ***********************
+ -->
+
+<!-- FEDERATION SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 4 -->    
+<shipBlueprint name="PLAYER_SHIP_FED" layout="fed_cruiser" img="fed_cruiser">
+	<class>Federation Cruiser</class>
+	<name>The Osprey</name>
+	<unlock>Beat the boss to unlock this advanced Federation cruiser.</unlock>
+	<desc>This ship features the latest in Federation technology: an advanced beam weapon that pierces through shields!</desc>
+	<systemList>
+		<pilot power="1" room="4" start="true"/>  
+		<doors power="1" room="8" start="true" img="room_doors_5"/>  
+		<sensors power="1" room="13" start="true"/>  
+		<oxygen power="1" room="9" start="true" img="room_oxygen_4"/>
+		<engines power="2" room="3" start="true"/>
+		<shields power="2" room="11" start="true"/>
+		<weapons power="2" room="15" start="true"/>
+		<drones power="2" room="16" start="false" img="room_drones_5"/>
+		<medbay power="1" room="10" start="true"/>  
+		<teleporter power="1" room="1" start="false"/>  
+		<artillery power="1" room="6"/>
+		<!--<cloaking power="1" room="6" start="true" img="room_cloaking_5"/>  -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="1" missiles="5">
+		<weapon name="LASER_BURST_3"/>
+	</weaponList>
+	<droneList drones="2"/>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "1" class="human"/>
+	<crewCount amount = "1" class="mantis"/>
+	<crewCount amount = "1" class="rock"/>
+	<crewCount amount = "1" class="engi"/>
+</shipBlueprint>
+
+<!-- FEDERATION SHIP -->
+<!-- LAYOUT = ALTERNATE --> 
+<!-- SHIP ID = 4 -->    
+<shipBlueprint name="PLAYER_SHIP_FED_2" layout="fed_cruiser_2" img="fed_cruiser_2">
+	<class>Federation Cruiser</class>
+	<name>Nisos</name>
+	<unlock>Beat the boss to unlock this advanced Federation cruiser.</unlock>
+	<desc>This ship features the latest in Federation technology: an advanced beam weaponry that pierces through shields!</desc>
+	<systemList>
+		<pilot power="1" room="7" start="true" img="room_pilot_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</pilot>  
+		<doors power="1" room="17" start="true" img="room_doors_2"/>  
+		<sensors power="1" room="0" start="true"/>  
+		<oxygen power="1" room="8" start="true" img="room_oxygen_9"/>
+		<engines power="2" room="15" start="true" img="room_engines_2"/>
+		<shields power="2" room="14" start="true" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="2" room="4" start="true" img="room_weapons_2"/>
+		<drones power="2" room="2" start="false" img="room_drones_11"/>
+		<medbay power="1" room="10" start="true" img="room_medbay_5">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<teleporter power="1" room="5" start="false"/>  
+		<artillery power="2" room="12"/>
+		<!--<cloaking power="1" room="12" start="true" img="room_cloaking_5"/>  -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="4" missiles="9">
+		<weapon name="LASER_BURST_2"/>
+		<weapon name="MISSILES_1"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="9"/> 
+	<crewCount amount = "1" class="human"/>
+	<crewCount amount = "1" class="energy"/>
+	<crewCount amount = "1" class="slug"/>
+	<shieldImage>fed_cruiser</shieldImage>
+	<cloakImage>fed_cruiser</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+
+
+<!--  
+   ***********************
+   SLUG SHIP
+   ***********************
+ -->
+
+<!-- SLUG SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 5 --> 
+<shipBlueprint name="PLAYER_SHIP_JELLY" layout="jelly_cruiser" img="jelly_cruiser">
+	<class>Slug Cruiser</class>
+	<name>Man of War</name>
+	<unlock>One of the slug ships must know something about this advanced cruiser. Perhaps you can "convince" them to tell you.</unlock>
+	<desc>Designed for use inside nebulae, this cruiser lacks sensors and relies instead on the guile and cunning of the Slugs.</desc>
+	<systemList>
+		<pilot power="1" room="8" start="true"/>  
+		<doors power="2" room="1" start="true" img="room_doors_6"/>  
+		<oxygen power="1" room="4" start="true" img="room_oxygen_6"/>
+		<engines power="2" room="6" start="true" img="room_engines_2"/>  
+		<shields power="2" room="13" start="true" img="room_shields_6"/>  
+		<weapons power="3" room="5" start="true" img="room_weapons_6"/>  
+		<medbay power="1" room="3" start="true"/>  
+		<sensors power="1" room="11" start="false" img="room_sensors_6"/>  
+		<drones power="2" room="14" start="false" img="room_drones_5"/>  
+		<teleporter power="1" room="10" start="false"/>  
+		<cloaking power="1" room="2" start="false" img="room_cloaking_6"/>  
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="3" missiles="15">
+		<weapon name="BEAM_BIO"/>
+		<weapon name="BOMB_BREACH_1"/>
+		<weapon name="LASER_BURST_2"/>
+	</weaponList>
+	<aug name="SLUG_GEL"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "2" class="slug"/>
+</shipBlueprint>
+
+
+<!-- SLUG SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 5 --> 
+<shipBlueprint name="PLAYER_SHIP_JELLY_2" layout="jelly_cruiser_2" img="jelly_cruiser_2">
+	<class>Slug Cruiser</class>
+	<name>The Stormwalker</name>
+	<unlock>One of the slug ships must know something about this advanced cruiser. Perhaps you can "convince" them to tell you.</unlock>
+	<desc>Designed for use inside nebulae, this cruiser lacks sensors and relies instead on the guile and cunning of the Slugs.</desc>
+	<systemList>
+		<pilot power="1" room="11" start="true"/>  
+		<doors power="2" room="19" start="true" img="room_doors_2"/>  
+		<sensors power="1" room="0" start="false" img="room_sensors_2"/>    
+		<oxygen power="1" room="15" start="true" img="room_oxygen_8"/>  
+		<engines power="2" room="2" start="true"/>
+		<shields power="2" room="12" start="true" img="room_shields_7">  
+			<slot>
+				<direction>up</direction>
+				<number>1</number> 
+			</slot>
+		</shields>
+		<weapons power="2" room="13" start="true" img="room_weapons_4">  
+			<slot>
+				<direction>up</direction>
+				<number>0</number> 
+			</slot>
+		</weapons>
+		<medbay power="1" room="7" start="false"/>  
+		<drones power="2" room="18" start="false" img="room_drones_10"/>
+		<teleporter power="1" room="3" start="true"/>  
+		<cloaking power="1" room="5" start="false"/>  
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="25">
+		<weapon name="BOMB_HEAL"/>
+		<weapon name="MISSILES_2_PLAYER"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<aug name="SLUG_GEL"/>
+	<health amount="30"/>
+	<maxPower amount ="7"/> 
+	<crewCount amount = "3" class="slug"/>
+	<shieldImage>jelly_cruiser</shieldImage>
+	<cloakImage>jelly_cruiser</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+
+
+<!--  
+   ***********************
+   ROCK SHIP
+   ***********************
+ -->
+
+<!-- ROCK SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 6 -->   
+<shipBlueprint name="PLAYER_SHIP_ROCK" layout="rock_cruiser" img="rock_cruiser">
+	<class>Rock Cruiser</class>
+	<name>Bulwark</name>
+	<unlock>Prove yourself to the Rockmen to earn this powerful cruiser.</unlock>
+	<desc>Similar to its designers, this super dense behemoth uses brute force to overwhelm its foes.</desc>
+	<systemList>
+		<pilot power="1" room="5" start="true"/>  
+		<doors power="1" room="1" start="true" img="room_doors_5"/>     
+		<sensors power="1" room="12" start="true" img="room_sensors_4"/>  
+		<oxygen power="1" room="0" start="true" img="room_oxygen_7"/>    
+		<engines power="2" room="14" start="true"/>  
+		<shields power="2" room="2" start="true" img="room_shields_4"/>     
+		<weapons power="3" room="15" start="true"img="room_weapons_5">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</weapons>     
+		<drones power="2" room="4" start="false" img="room_drones_7"/>     
+		<medbay power="1" room="16" start="true" img="room_medbay_7"> 
+			<slot>
+				<number>2</number> 
+			</slot>
+		</medbay>        
+		<teleporter power="1" room="17" start="false"/>  
+		<cloaking power="1" room="3" start="false"/>  
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="28">
+		<weapon name="MISSILES_2_PLAYER"/>
+		<weapon name="MISSILES_HULL"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "3" class="rock"/>
+	<aug name="ROCK_ARMOR"/>
+</shipBlueprint>
+
+<!-- ROCK SHIP -->
+<!-- LAYOUT = ALTERNATE -->    <!-- name it after FP2 Shivans? - Rakshasa - Moloch - Ravana - Sathanas-->
+<!-- SHIP ID = 6 -->   
+<shipBlueprint name="PLAYER_SHIP_ROCK_2" layout="rock_cruiser_2" img="rock_cruiser_2">
+	<class>Rock Cruiser</class>
+	<name>Shivan</name> 
+	<unlock>Locked -- Not in Game Yet</unlock>
+	<desc>Similar to its designers, this super dense behemoth uses brute force to overwhelm its foes.</desc>
+	<systemList>
+		<pilot power="1" room="8" start="true"img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</pilot>       
+		<doors power="1" room="15" start="false" img="room_doors_5"/>     
+		<sensors power="1" room="3" start="true" img="room_sensors_4"/>  
+		<oxygen power="2" room="4" start="true" img="room_oxygen_6"/>    
+		<engines power="2" room="0" start="true"img="room_engines_2"/>    
+		<shields power="2" room="2" start="true" img="room_shields_4"/>     
+		<weapons power="3" room="12" start="true"/>  
+		<drones power="2" room="14" start="false" img="room_drones_9"/>     
+		<medbay power="1" room="1" start="true"/>     
+		<teleporter power="1" room="10" start="false"/>  
+		<cloaking power="1" room="13" start="false"img="room_cloaking_2"/>      
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="18">
+		<weapon name="LASER_HEAVY_1_SP"/>
+		<weapon name="BOMB_FIRE"/>
+		<weapon name="BOMB_1"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount="8"/> 
+	<crewCount amount="4" class="rock"/>
+	<aug name="ROCK_ARMOR"/>
+	<shieldImage>rock_cruiser</shieldImage>
+	<cloakImage>rock_cruiser</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+
+
+
+
+<!--  
+   ***********************
+   ENERGY SHIP
+   ***********************
+ -->
+ 
+ 
+<!-- ENERGY SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 7 -->  
+<shipBlueprint name="PLAYER_SHIP_ENERGY" layout="energy_cruiser" img="energy_cruiser">
+	<class>Zoltan Cruiser</class>
+	<name>The Adjudicator</name>
+	<unlock>Learn from the Zoltan, sometimes diplomacy works.</unlock>
+	<desc>The Zoltan's advanced shields technology gives this ship an edge during each battle.</desc>
+	<systemList>
+		<pilot power="1" room="11" start="true"/>  
+		<doors power="2" room="10" start="true" img="room_doors_6"/>     
+		<sensors power="1" room="0" start="true"/>  
+		<oxygen power="1" room="4" start="true" img="room_oxygen_2"/>    
+		<engines power="1" room="13" start="true" img="room_engines_2"/>    
+		<shields power="2" room="15" start="true" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number> 
+			</slot>
+		</shields>     
+		<weapons power="3" room="14" start="true" img="room_weapons_7"/>  
+		<drones power="2" room="16" start="false" img="room_drones_8"/>     
+		<medbay power="1" room="8" start="true" img="room_medbay_4"> 
+			<slot>
+				<number>0</number> 
+			</slot>
+		</medbay>    
+		<teleporter power="1" room="2" start="false"/>  
+		<cloaking power="1" room="6" start="false" img="room_cloaking_3"/> 
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="4" missiles="12"> 
+		<weapon name="BEAM_2"/>
+		<weapon name="MISSILES_1"/>
+	</weaponList>
+	<droneList drones="2"/>
+	<health amount="30"/>
+	<maxPower amount ="5"/> 
+	<crewCount amount = "3" class="energy"/>
+	<aug name="ENERGY_SHIELD"/>
+</shipBlueprint>
+
+ 
+<!-- ENERGY SHIP -->
+<!-- LAYOUT = Alternate --> 
+<!-- SHIP ID = 7 -->  
+
+<shipBlueprint name="PLAYER_SHIP_ENERGY_2" layout="energy_cruiser_2" img="energy_cruiser_2">
+
+	<class>Zoltan Cruiser</class>
+	<name>Noether</name>
+	<unlock>Learn from the Zoltan, sometimes diplomacy works.</unlock>
+	<desc>The Zoltan's advanced shields technology gives this ship an edge during each battle.</desc>
+	<systemList>
+		<pilot power="1" room="14" start="true"/>  
+		<doors power="1" room="8" start="true" img="room_doors_6"/>     
+		<sensors power="1" room="13" start="true" img="room_sensors_4"/>  
+		<oxygen power="1" room="12" start="true" img="room_oxygen_7"/>    
+		<engines power="2" room="3" start="true" img="room_engines_5">  
+			<slot>
+				<direction>up</direction>
+				<number>0</number> 
+			</slot>
+		</engines>     
+		<shields power="1" room="5" start="true" img="room_shields_8"/>
+		<weapons power="4" room="7" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+		<drones power="2" room="2" start="false"/>     
+		<medbay power="1" room="0" start="true" img="room_medbay_4"> 
+			<slot>
+				<number>0</number> 
+			</slot>
+		</medbay>    
+		<teleporter power="1" room="4" start="false"/>  
+		<cloaking power="1" room="6" start="false"/> 
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="3" missiles="0">
+		<weapon name="ION_1"/>
+		<weapon name="ION_1"/>
+		<weapon name="BEAM_LONG"/>
+	</weaponList>
+	<droneList drones="2"/>
+	<health amount="30"/>
+	<maxPower amount ="5"/> 
+	<crewCount amount="3" class="energy"/>
+	<aug name="ENERGY_SHIELD"/>
+	<shieldImage>energy_cruiser</shieldImage>
+	<cloakImage>energy_cruiser</cloakImage>
+</shipBlueprint>
+
+ 
+ 
+ 
+
+<!--  
+   ***********************
+   CRYSTAL SHIP
+   ***********************
+ -->
+
+<!-- CRYSTAL SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 8 -->  
+<shipBlueprint name="PLAYER_SHIP_CRYSTAL" layout="crystal_cruiser" img="crystal_cruiser">
+	<class>Crystal Cruiser</class>
+	<name>Bravais</name>
+	<unlock>Travel to an unknown sector of the galaxy to find this powerful vessel.</unlock>
+	<desc>This powerful vessel is powered by the secret technologies of the lost Crystalline Beings.</desc>
+	<systemList>
+		<pilot power="1" room="8" start="true"/>  
+		<doors power="1" room="16" start="true" img="room_doors_8"/>  
+		<sensors power="1" room="3" start="true" img="room_sensors_2"/>  
+		<oxygen power="1" room="7" start="true" img="room_oxygen_10"/>  
+		<engines power="2" room="0" start="true" img="room_engines_2"/>  
+		<shields power="2" room="6" start="true" img="room_shields_2"/>  
+		<weapons power="3" room="17" start="true" img="room_weapons_7"/>  
+		<drones power="2" room="1" start="false" img="room_drones_7"/>  
+		<medbay power="1" room="13" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<teleporter power="1" room="15" start="false"/>  
+		<cloaking power="1" room="9" start="false" img="room_cloaking_2"/>  
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="0">
+		<weapon name="CRYSTAL_BURST_1"/>
+		<weapon name="CRYSTAL_HEAVY_1"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "2" class="human"/>
+	<crewCount amount = "2" class="crystal"/>
+	<aug name="CRYSTAL_SHARDS"/>
+</shipBlueprint>
+
+
+<!-- sardonyx
+
+<!-- CRYSTAL SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = ???? --> 
+<shipBlueprint name="PLAYER_SHIP_CRYSTAL_2" layout="crystal_cruiser_2" img="crystal_cruiser_2">
+	<class>Crystal Cruiser</class>
+	<name>Carnelian</name>
+	<unlock>Travel to an unknown sector of the galaxy to find this powerful vessel.</unlock>
+	<desc>This powerful vessel is powered by the secret technologies of the lost Crystalline Beings.</desc>
+	<systemList>
+		<pilot power="1" room="15" start="true"/>  
+		<doors power="1" room="14" start="true" img="room_doors_7"/>  
+		<sensors power="1" room="10" start="true" img="room_sensors_2"/>  
+		<oxygen power="1" room="8" start="true" img="room_oxygen_7"/>  
+		<engines power="2" room="2" start="true" img="room_engines_2"/>  
+		<shields power="2" room="1" start="true" img="room_shields_7">  
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="1" room="4" start="true" img="room_weapons_7"/>  
+		<drones power="2" room="13" start="false" img="room_drones_5"/>  
+		<medbay power="1" room="9" start="true" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<teleporter power="1" room="3" start="true"/>  
+		<cloaking power="1" room="7" start="true"/>  
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="0" missiles="0">
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "3" class="crystal"/>
+	<shieldImage>crystal_cruiser</shieldImage>
+	<cloakImage>crystal_cruiser</cloakImage>
+	<aug name="CRYSTAL_SHARDS"/>
+</shipBlueprint>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--- **************
+TUTORIAL SHIPS
+*****************-->
+
+<shipBlueprint name="TUTORIAL_PIRATE" layout="jelly_button" img="jelly_button">
+	<class>Pirate</class>
+	<systemList>
+		<oxygen power="2" room="3"/>
+		<pilot power="1" room="0"/>
+		<shields power="4" room="1"/>
+		<engines power="1" room="4"/>
+		<weapons power="3" room="2"/>
+	</systemList>
+	<weaponList count="1" missiles="0">
+		<weapon name="LASER_BURST_1"/>
+	</weaponList>
+	<health amount="5"/>	
+	<maxPower amount ="11"/>
+	<crewCount amount = "1"  class="human"/>
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_TUTORIAL" layout="kestral" img="kestral">
+	<class>Kestral</class>
+	<name>The Kestrel</name>
+	<systemList>
+		<pilot power="1" room="0" start="true"/>
+		<doors power="2" room="2" start="true"/>
+		<sensors power="2" room="3" start="true"/>
+		<medbay power="1" room="4" start="true"/>
+		<oxygen power="1" room="13" start="true"/>
+		<shields power="2" room="5" start="true"/>
+		<engines power="2" room="14" start="true"/>
+		<weapons power="2" room="10" start="true"/>
+		<drones power="2" room="1" start="false"/>
+		<teleporter power="1" room="15"	start="false"/>
+		<cloaking power="1" room="8" start="false"/>
+	</systemList>
+	<weaponList count="1" missiles="20">
+		<weapon name="LASER_BURST_2"/>
+	</weaponList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<health amount="30"/>
+	<maxPower amount ="9"/> 
+	<crewCount amount = "4" class="human"/>
+</shipBlueprint>
+
+<shipBlueprint name="IMPOSSIBLE_PIRATE" layout="jelly_truffle" img="jelly_truffle_pirate">
+	<class>Impossible Pirate</class>
+	<systemList>
+		<pilot power="3" room="0"/>
+		<doors power="3" room="1"/>
+		<oxygen power="3" room="4"/>
+		<drones power="2" room="3"/>
+		<shields power="8" room="6"/>
+		<engines power="8" room="2"/>
+		<weapons power="8" room="5"/>
+		<cloaking power="1" room="7"/>
+		<!--  <drones power="3" room="7"/>  -->
+	</systemList>
+	<weaponList count="3" missiles="30">
+		<weapon name="LASER_BURST_2_A"/>
+		<weapon name="BEAM_2"/>
+		<weapon name="MISSILES_BURST"/>
+	</weaponList>
+	<droneList count="1" drones="5">
+		<drone name="COMBAT_1"/>
+	</droneList>
+	<health amount="20"/>	
+	<maxPower amount ="35"/>
+	<crewCount amount = "5" class="engi"/>
+</shipBlueprint>
+
+
+
+
+		
+
+<!---- Crash protection default ship blueprint. DO NOT REMOVE -->
+<shipBlueprint name="DEFAULT" layout="rebel_squat" img="rebel_squat">
+	<class>Rebel Rigger</class>
+	<systemList>
+		<pilot power="1" room="0"/>
+		<oxygen power="1" room="2"/>
+		<shields power="2" room="4"/>
+		<engines power="2" room="7"/>
+		<weapons power="3" room="6"/>
+		<drones power="4" room="1"/>
+	</systemList>
+	<droneList count="2" drones="4">
+		<drone name="DEFENSE_1"/>
+		<drone name="DEFENSE_1"/>
+	</droneList>
+	<weaponList count="2" missiles="10">
+		<weapon name="LASER_HEAVY_1"/>
+		<weapon name="LASER_BURST_1"/>
+	</weaponList>
+	<health amount="10"/>	
+	<maxPower amount ="15"/>
+	<crewCount amount = "3" class="human"/>
+</ship>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+<!--**********************
+REBEL SHIP - LONG - ELITE!!!
+************************-->
+
+
+<shipBlueprint name="LONG_ELITE_MED" layout="rebel_long" img="rebel_long_hard">
+	<class>Rebel Elite</class>
+	<systemList>
+		<oxygen power="2" room="2"/>
+		<pilot power="3" room="0"/>
+		<shields power="6" room="6"/>
+		<engines power="4" room="5"/>
+		<weapons power="9" room="4"/>
+	</systemList>
+	<weaponList count="3" missiles="5">
+		<weapon name="MISSILES_BREACH"/>
+		<weapon name="LASER_HEAVY_1"/>
+		<weapon name="BEAM_2"/>
+	</weaponList>
+	<health amount="20"/>	
+	<maxPower amount ="21"/>
+	<crewCount amount = "4" class="human"/>
+</shipBlueprint>
+
+<shipBlueprint name="LONG_ELITE_HARD" layout="rebel_long" img="rebel_long_hard">
+	<class>Rebel Elite</class>
+	<systemList>
+		<oxygen power="2" room="2"/>
+		<pilot power="3" room="0"/>
+		<shields power="8" room="6"/>
+		<engines power="5" room="5"/>
+		<weapons power="9" room="4"/>
+	</systemList>
+	<weaponList count="3" missiles="7">
+		<weapon name="MISSILES_2"/>
+		<weapon name="LASER_HEAVY_2"/>
+		<weapon name="BEAM_3"/>
+	</weaponList>
+	<health amount="30"/>	
+	<maxPower amount ="24"/>
+	<crewCount amount = "5" class="human"/>
+</shipBlueprint>
+
+
+
+
+
+<!--- NEW! --->
+
+<!--
+<shipBlueprint name="GHOST_SHIP_MED" layout="jelly_truffle" img="jelly_truffle_pirate">
+	<class>Truffle Wreckage</class>
+	<systemList>
+		<pilot power="2" room="0"/>
+		<doors power="2" room="1"/>
+		<oxygen power="1" room="4"/>
+		<medbay power="2" room="3"/>
+		<shields power="6" room="6"/>
+		<engines power="4" room="2"/>
+		<weapons power="6" room="5"/>
+	</systemList>
+	<weaponList count="3">
+		<weapon name="LASER_BURST_2"/>
+		<weapon name="LASER_BURST_3"/>
+		<weapon name="BEAM_FIRE"/>
+	</weaponList>
+	<health amount="22"/>	
+	<maxPower amount ="19"/>
+	<crewCount amount = "0"/>
+</shipBlueprint>
+
+<shipBlueprint name="GHOST_SHIP_HARD" layout="jelly_truffle" img="jelly_truffle_pirate">
+	<class>Truffle Wreckage</class>
+	<systemList>
+		<pilot power="3" room="0"/>
+		<doors power="3" room="1"/>
+		<oxygen power="1" room="4"/>
+		<medbay power="2" room="3"/>
+		<shields power="6" room="6"/>
+		<engines power="4" room="2"/>
+		<weapons power="8" room="5"/>
+	</systemList>
+	<weaponList count="3">
+		<weapon name="LASER_BURST_2"/>
+		<weapon name="LASER_BURST_3"/>
+		<weapon name="LASER_BURST_3"/>
+		<weapon name="BEAM_3"/>
+	</weaponList>
+	<health amount="22"/>	
+	<maxPower amount ="21"/>
+	<crewCount amount = "0"/>
+</shipBlueprint>
+-->
+
+		
+		
+
+<!--**********************
+Boss files
+************************-->
+
+
+<shipBlueprint name="BOSS_1" layout="boss_1" img="boss_1">
+	<class>Rebel Flagship</class>
+	<systemList>
+		<pilot power="3" room="0"/> 
+		<shields power="8" room="1"/> 
+		<doors power="3" room="17"/> 
+		<teleporter power="2" room="3"/> 
+		<cloaking power="2" room="15"/> 
+		<!--<weapons power="1" room="6"/> -->
+		<sensors power="2" room="13"/>
+		<medbay power="3" room="5"/> 
+		<engines power="2" room="8"/> 
+		<oxygen power="2" room="7"/>
+		<drones power="1" room="12"/>
+		<artillery power="4" room="9"/>
+		<artillery power="4" room="10"/>
+		<artillery power="3" room="14"/>
+		<artillery power="3" room="18"/>
+	</systemList>
+	<weaponList count="0" missiles="10"/>
+	<health amount="20"/>	
+	<maxPower amount ="42"/>
+</shipBlueprint>
+
+		
+<shipBlueprint name="BOSS_2" layout="boss_2" img="boss_2">
+	<class>Rebel Flagship</class>
+	<systemList>
+		<pilot power="3" room="0"/> 
+		<shields power="8" room="1"/>  
+		<teleporter power="2" room="3"/>  
+		<!--<weapons power="1" room="6"/>  -->
+		<medbay power="3" room="5"/>  
+		<engines power="3" room="8"/> 
+		<oxygen power="2" room="7"/>
+		<sensors power="2" room="13"/>
+		<drones power="8" room="12"/>
+		<artillery power="4" room="9"/>
+		<artillery power="4" room="10"/>
+		<artillery power="3" room="14"/>
+	</systemList>
+	<weaponList count="0" missiles="10"/>
+	<droneList count="4" drones="10">
+		<drone name="DEFENSE_1"/>
+		<drone name="COMBAT_1"/>
+		<drone name="COMBAT_BEAM"/>
+		<drone name="BOARDER_BOSS"/>
+	</droneList>
+	<health amount="22"/>	
+	<maxPower amount ="44"/>
+</shipBlueprint>
+
+
+<shipBlueprint name="BOSS_3" layout="boss_3" img="boss_3">
+	<class>Rebel Flagship</class>
+	<systemList>
+		<pilot power="3" room="0"/>  
+		<shields power="8" room="1"/>  
+		<teleporter power="2" room="3"/> 
+		<!--<weapons power="4" room="6"/>  -->
+		<medbay power="3" room="5"/>   
+		<engines power="6" room="8"/>
+		<oxygen power="2" room="7"/>
+		<artillery power="4" room="9"/>
+		<artillery power="4" room="10"/>
+	</systemList>
+	<weaponList count="0" missiles="10"/>
+		<!--<weapon name="ION_2"/>
+		<weapon name="BEAM_FIRE"/>
+	</weaponList>-->
+	<health amount="20"/>	
+	<maxPower amount ="31"/>
+	<boardingAI>invasion</boardingAI>
+</shipBlueprint>
+

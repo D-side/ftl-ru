@@ -1,0 +1,36 @@
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!-- SYSTEM TOOLTIPS FOR THE BOTTOM -->
+<oxygen>Oxygen: Replenishes the ship's oxygen supply.</oxygen>
+<doors>Doors: Allows for remote opening/closing of doors.</doors>
+<shields>Shields: Sustains damage-reducing shields. Manning increases shield recharge speed.</shields>
+<pilot>Piloting: Requires a crew member to evade in combat or jump.</pilot>
+<engines>Engines: Charges the FTL drive and powers evasion. Manning increases dodge chance.</engines>
+<sensors>Sensors: Enables view of all rooms and info for enemy ships.</sensors>
+<medbay>Medbay: Heals crewmembers inside the Medbay</medbay>
+<weapons>Weapons: Click on a weapon to charge and fire. Manning reduces charge time.</weapons>
+<drones>Drones: Automated robots for attack and defense.</drones>
+<teleporter>Teleporter: Send crewmembers in the teleporter room to board enemy ships.</teleporter>
+<cloaking>Cloaking: Temporarily hide from enemies.</cloaking>
+<artillery>Artillery: Beam that automatically fires a 1 damage beam that pierces all shields.</artillery>
+<powerTotal>Reactor: Unused reactor energy available to power your systems.</powerTotal>
+
+<!-- Ship status tooltips -->
+<hull>Current hull integrity. If it drops to zero, the ship is destroyed.</hull>
+<droneCount>Number of Drone Parts.  Using a Drone consumes one Drone Part.</droneCount>
+<fuelCount>Amount of fuel. Each jump consumes one fuel.</fuelCount>
+<missileCount>Number of missiles.  Some weapons consume one Missile when fired.</missileCount>
+<scrapCount>Current scrap total</scrapCount>
+<FTLButton>Opens star map to choose jump location.</FTLButton>
+<shieldDisplay>Current shield status.</shieldDisplay>
+<evadeDisplay>Percent chance to dodge incoming fire.</evadeDisplay>
+<oxygenDisplay>Ship's current oxygen.</oxygenDisplay>
+<energyShieldDisplay>Zoltan Energy Shield: Will completely block incoming damage of any weapon type.</energyShieldDIsplay>
+
+<!-- Other -->
+<autofire>Toggle to active/deactive weapons automatically firing.</autoFire>
+
+<asteroids>You're in an asteroid field. Periodically asteroids will strike your ship.</asteroids>
+<sun>You're too close to a star. Solar flares will light the ship on fire.  Shields will reduce the effect.</sun>
+<nebula>You're inside of a nebula. Your sensors will not function, but the rebel fleet will advance more slowly towards you.</nebula>
+<storm>This section of the nebula is experiencing a plasma storm. Your main reactor can only function at half capacity.</storm>

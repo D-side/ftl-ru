@@ -1,0 +1,467 @@
+﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+
+<eventCounts sector="0">
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="0" max="2"/>
+	<event name="HOSTILE1" min="5" max="6"/>
+	<event name="HOSTILE2" min="3" max="4"/>
+	<event name="NEBULA" min="0" max="2"/>
+	<event name="QUESTS" min="1" max="2"/>
+</eventCounts>
+<!--- Leftover events will be filled in with NEUTRAL -->
+
+<eventCounts sector="1">
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NEUTRAL2" min="2" max="4"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="1" max="1"/>
+	<event name="HOSTILE1" min="2" max="4"/>
+	<event name="HOSTILE2" min="2" max="4"/>
+	<!-- <event name="NEBULA" min="2" max="6"/> ADDED FOR DEMO -->
+	<event name="HOSTILE_BOARDING" min="1" max="2"/><!-- REMOVED FOR DEMO -->
+	<event name="QUESTS" min="0" max="1"/>
+</eventCounts>
+<!--- Leftover events will be filled in with NEUTRAL -->
+
+<!-- PLANNING FOR the 3rd Sector-->
+<eventCounts sector="2">
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NEUTRAL2" min="2" max="4"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="1" max="1"/>
+	<event name="HOSTILE2" min="4" max="6"/>
+	<event name="NEBULA" min="3" max="7"/>
+	<event name="HOSTILE_BOARDING" min="1" max="2"/><!-- REMOVED FOR DEMO -->
+	<event name="QUESTS" min="1" max="3"/>
+	<event name="HOSTILE1" min="2" max="2"/>
+</eventCounts>
+
+<eventCounts sector="3">
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NEUTRAL2" min="2" max="4"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="1" max="2"/>
+	<event name="HOSTILE2" min="4" max="6"/>
+	<event name="NEBULA" min="0" max="4"/>
+	<event name="HOSTILE_BOARDING" min="1" max="2"/><!-- REMOVED FOR DEMO -->
+	<event name="QUESTS" min="1" max="3"/>
+	<event name="HOSTILE1" min="2" max="2"/>
+</eventCounts>
+
+
+
+
+<eventList name="NON_HOSTILE">
+	<event load="NEUTRAL"/>
+	<event load="ITEMS"/>
+</eventList>
+
+<eventList name="HOSTILE1">
+	<event load="SQUAT_WARNING"/>
+	<event load="AUTO_WARNING"/>
+	<!--<event load="AUTO_BAIT"/>-->
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_HACKER"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_CIVILIAN"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="REBEL"/>
+	<event load="MANTIS_HOSTILE"/>
+</eventList>
+
+
+<eventList name="HOSTILE2">
+<!--
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_HACKER"/> -->
+	<event load="PIRATE"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="REBEL"/>
+	<event load="SQUAT_WARNING"/>
+	<event load="SQUAT_REFUEL_STATION"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_SUN"/>
+	<event load="AUTO_SUN"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+</eventList>
+
+<eventList name="NEUTRAL">
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="BROKEN_REBEL_DRONE"/>
+	<event load="MERCENARY"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_ITEM"/> 
+	<event load="DONOR_PONY"/>
+	<event load="DONOR_PLAGUE"/>
+	<!-- 
+	<event load="AUTO_DEFENSE_MAP"/> 
+	<event load="AUTO_DEFENSE_RADAR"/> 
+	<event load="TAVERN_HIRE"/> -->
+</eventList>
+
+
+
+<eventList name="NEUTRAL2">
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="PIRATE_STATION_CROPS"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="MERCENARY"/>
+	<event load="DISTRESS_BEACON"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_MAP"/> 
+	<event load="AUTO_DEFENSE_ITEM"/> 
+	<!-- <event load="TAVERN_HIRE"/> -->
+</eventList>
+
+
+
+
+
+
+<eventList name="NEBULA">
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/>  
+	<event load="NEBULA_AUTO"/>
+	<event load="NEBULA_AUTO_WARNING"/>
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
+	<event load="NEBULA_TRADER"/>
+	<event load="STORM_REBEL"/>
+	<event load="STORM_AUTO"/>
+	<event load="STORM_ITEMS"/>
+	<event load="NEBULA_LOST_SHIP"/>   <!-- JUSTIN ADDED -->
+	<event load="NEBULA_BOARDING"/><!-- REMOVED FOR DEMO -->
+	<!-- <event load="STORM_BOARDING"/>  REMOVED FOR DEMO -->
+	<event load="NEBULA_MANTIS_FIGHT"/> 
+	<event load="NEBULA_WEAPONS_TRADER"/>
+
+		
+</eventList>
+
+
+<eventList name="ITEMS">
+	<event load="FIND_DRONE"/>
+	<event load="FIND_WEAPON"/>
+	<event load="FREE_ITEMS"/>
+	<event load="FUEL_FOR_DRONE"/>
+	<event load="REFUEL_STATION"/>
+	<event load="REPAIR_STATION"/>
+	<event load="SELL_DRONES_STATION"/>
+	<event load="SELL_MISSILES_STATION"/>
+	<event load="TRADER_CIV"/>
+</eventList>
+
+<eventList name="DISTRESS_BEACON">
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="STRANDED_BEACON"/>
+	<event load="PIRATE_CIVILIAN_BEACON"/>
+	<event load="CIVILIAN_ASTEROIDS_BEACON"/>  
+	<event load="REBEL_VS_FEDERATION"/> 
+	<event load="ESCORT_BEACON"/>
+	<event load="DISTRESS_TRAPPED_MINER"/>
+	<event load="DISTRESS_INFESTATION"/>
+	<event load="DISTRESS_SATELLITE_DEFENSE"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="DISTRESS_STATION_DISEASE"/>
+</eventList>
+
+<eventList name="QUESTS">
+	<event load="QUEST_ESCORT"/>
+	<event load="MERCHANT_REQUEST"/>
+	<event load="FEDERATION_PLANET_SIGNAL"/>
+	<event load="MERCENARY_WORK_START"/>
+	<event load="QUEST_MANTIS_INVASION_START"/>
+	<event load="QUEST_CREWDEAD_START"/>
+</eventList>
+
+<eventList name="HOSTILE_BOARDING">
+	<event load="BOARDERS_ASTEROID_GHOST"/>
+	<event load="STATION_SICK"/>
+	<event load="BOARDERS_SUN"/>
+	<event load="BOARDERS_ASTEROID"/>
+	<event load="BOARDERS"/>
+	<event load="GHOST_SHIP"/>
+	<event load="FLOATING_CARGO"/>
+	<event load="BOARDERS_HACKING"/>
+</eventList>
+
+
+<eventList name="MANTIS_HOSTILE">
+	<event load="MANTIS_FIGHT"/>
+	<event load="MANTIS_FIGHT"/>
+</eventList>
+
+
+
+
+
+
+
+<!--    
+	  ***********
+       TEXT LISTS				  
+	  ***********		
+-->
+
+<textList name="TIPS_LIST">
+	<text>TIP: Death -   Remember, losing is part of the fun!  ...  No, I'm serious...</text>
+	<text>TIP: Grinding Sectors -  It can be beneficial to stay in a Sector for as long as possible to improve the ship since each Sector is increasingly difficult.</text>
+	<text>TIP: Exits -  It's tempting to rush for the sector exits, but exploring is the only way to upgrade your ship. Try and get as much out of each sector as possible.</text>
+	<text>TIP: Pausing -  Press SPACE at any time to pause the game. You can still issue orders to crew or manipulate system power while paused.</text>
+	<text>TIP: Targets -  Prioritize your targeting in combat.  Weapons and Shields are usually the best choice, but if they're fleeing, hit their Engines or Piloting to prevent escape.</text>
+	<text>TIP: Hidden Choices -  When you see a blue colored choice in an event, it's a special option that has been made available by your current equipment.</text>
+	<text>TIP: System Damage -  When a System fully breaks due to fire or boarders, the hull also takes one damage.</text>
+	<text>TIP: Selling -  Weapons, drones and augments can be sold for 1/2 the purchasing price at stores.  Click on the SELL tab at the top.</text>
+	<text>TIP: Power Bars - Upgraded systems can be helpful even if you don't have enough reactor power to use them;  they still absorb one damage.</text>
+	<text>TIP: Weapons -  You can queue up an attack before the weapon is charged. It will fire when it's charged.</text>
+	<text>TIP: Cloaking -  Cloaking prevents enemies from firing on your ship or charging their weapons. It also causes all currently flying shots to miss your ship.</text>
+	<text>TIP: Boarding -  If you're having trouble with boarders, fight within the medbay. If all else fails, vent the rest of the oxygen out of the ship!</text>
+	<text>TIP: Oxygen -  If the ship's room color changes from tan to red, it means you're losing oxygen.   Crew will be damaged and fires will burn out in rooms with red hazard stripes.</text>
+	<text>TIP: Shield Piercing -  Missiles ignore shields.  Use missiles to damage a powerful ship's Shields System.  Just remember that Defense Drones can shoot down missiles!</text>
+	<text>TIP: Choices -  Results of most choices have multiple outcomes. You can never be sure what will happen.</text>
+	<text>TIP: Autofire -  Autofire will let a weapon maintain its target. Just keep an eye on your missile count!</text>
+	<text>TIP: Evasion -  Evading enemy shots is crucial, but it requires functioning engines AND a pilot.  Having someone man the engines will increase your evasion as well.</text>
+	<text>TIP: Sensors -  If the ship goes dark, don't panic. Just fix the Sensors Subsystem.</text>
+	<text>TIP: Drones -  If you're struggling against enemy Drones, target the Drone System to temporarily disable them.</text>
+	<text>TIP: Beams -  Beam weapons do damage based on the number of rooms they hit.   Each Shield bubble will block 1 damage of a beam; it's best to use beams when their shields are down.</text>
+	<text>TIP: Fire -  If fire is spreading, consider opening airlocks and doors to vent the oxygen from parts of your ship.  Fire is quickly extinguished without O2.</text>
+	<text>TIP: Health -  Pay attention to your crew's health!  Use the medbay to keep them patched up.</text>
+	<text>TIP: Upgrades -  Don't forget to upgrade your ship!  Often shields are the highest priority, but don't underestimate the usefulness of subsystems.</text>
+	<text>TIP: Fuel -  Every jump consumes one unit of fuel, so keep an eye on your reserves.  Buy fuel at stores to avoid being left stranded.</text>
+	<text>TIP: Sound -  Go into the options menu to turn on or off the sound effects and music.</text>
+	<text>TIP: Asteroids -  Fighting in asteroid fields is dangerous, but use it to your advantage. Take out enemy shields and let the rocks take care of the rest.</text>
+	<text>TIP: Nebulas -  Passing through a Nebula will allow you to temporarily slow down the fleet advancement but they contain their own unique dangers.</text>
+	<text>TIP: Solar Flares - Solar flares will cause hull damage in addition to starting fires. Make sure your shields are up to help mitigate this effect.</text>
+	<text>TIP: Score - Your score is based on how many ships you defeat, the number of beacons explored, and your total scrap collection.</text>
+	<text>TIP: Hotkeys -  You can charge or arm weapons using number hotkeys:  The Weapon Slots are 1-4 on your keyboard, and the Drones are 5-7 (customizeable in the options).</text>
+	<text>TIP: Augmentations -  Your ship can only hold 3 augmentations.  They provide unique benifits to a system, the crew or the entire ship.</text>
+	<text>TIP: Breaches -  If a room with a breach has no Oxygen, try opening all the doors surrounding it to make it less hazardous.</text>
+	<text>TIP: Font Size - Pressing +/- (customizeable in options) will let you change the event text size.</text>
+	<text>TIP: Rebel Fleet - The rebel fleet (represented by the red circle on the map) moves closer to your position every time you jump. Certain events can slow or speed up their movement speed.</text>
+	<text>TIP: Weapon Order - Rearrange a weapon or drone schematic by dragging it into the desired position. The left-most slot will be the last to power down if the system is damaged.</text>
+	<text>TIP: Ion Weapons - Ion weapons de-power and lock a System for a time.  If they hit the enemy shields they deal their stun damage directly to the Shields System.</text>
+	<text>TIP: Bomb Weapons - Bombs teleport directly onto either ship.  They bypass Shields AND Defense Drones.  However they affect crew and Systems; they do no damage to the ships hull.</text>
+	<text>TIP: Door Subsystem - Upgrading your doors once will greatly reduce the chance fire will spread between rooms.  Upgrading them again will cause doors to significantly slow boarder movement.</text>
+</textList>
+
+
+
+
+	
+   <!--  not good quest event?
+ <event name="TAVERN_HIRE" unique="true">
+	<text load="TAVERN_HIRE_TEXT"/>
+	<choice>
+		<text>Hire a single crew member.</text>
+		<event>
+			<crewMember amount="1"/>
+			<item_modify>
+				<item type="scrap" min="-30" max="-10"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Hire 2 crew members.</text>
+		<event>
+			<crewMember amount="2"/>
+			<item_modify>
+				<item type="scrap" min="-55" max="-40"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Hire a team of 3.</text>
+		<event>
+			<crewMember amount="3"/>
+			<item_modify>
+				<item type="scrap" min="-100" max="-70"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Don't hire anyone.</text>
+		<event/>
+	</choice>
+</event>
+<textList name="TAVERN_HIRE_TEXT">
+	<text>You find up a space station set up for travelers.  Browsing through its listings, you find a tavern full of mercenaries for hire.  You could pick up some extra crew here.</text>
+	<text>There are a number of ships stationed around a rest stop.  You immediately receive a message saying, "If you're looking for some bodies to fill your ship, you've come to the right place!"</text>
+	<text>This beacon seems to serve as a meeting place for local traffic.  It seems like you can find crew willing to fight on your ship here... for a price.</text>
+</textList>
+-->
+
+
+
+
+
+
+
+
+
+
+<!-------------------------------
+
+	OUTDATED or TESTING events
+	
+------------------------------->
+
+
+<event name="NEW" unique="true">
+	<ship load="NEW_TESTS" hostile="true"/>
+</event>
+<ship name="NEW_TESTS" auto_blueprint="REBEL_FAT"> 
+	<destroyed>
+		<text>You are able to salvage scrap from the ship's debris.</text>
+	</destroyed>
+	<deadCrew load="DEAD_CREW_DEFAULT"/>
+</ship>
+
+
+
+
+
+
+<event name="DEATH_TEST">
+	<text>Death Test</text>
+	<crewMember amount="-1"/>
+</event>
+
+<event name="CREW_TEST">
+	<text>Crew Test</text>
+	<crewMember amount="2"/>
+</event>
+
+<ship name="TEST" blueprint="CRYSTAL_BOMBER">
+	<deadCrew/>
+	<destroyed/>
+</ship>
+
+
+
+
+
+
+
+
+<!--*******Cloaking-->
+<event name="STEALTH_1">
+	<text>This is a prototype ship which utilizes advanced cloaking technology. The trade off is lack of shields or weaponry. Take advantage of the cloaking device's ability to make enemy shots miss.</text>
+</event>
+
+<!--**********Armor/speed-->
+<event name="STEALTH_2">
+	<text>This ship was based on designs that existed before shielding technology was standard in all ships. Its armored hull and increased mobility are its primary assets.</text>
+</event>
+
+<!--*********Shielded-->
+<event name="STEALTH_3">
+	<text>This ship is designed to test the Federation's new advanced shield recharging technology. Unfortunately, you're being forced to test it alone.</text>
+</event>
+
+<!--*********Boarding-->
+<event name="STEALTH_4">
+	<text>This ship was designed for troop transport behind enemy lines. As such, it isn't equipped with weapons by default but is crewed by the best of the best.</text>
+</event>
+
+
+<!--**********Drones - space-->
+<event name="STEALTH_5">
+	<text>This ship is a modified mining vessel that contained advanced AI for drone management. It isn't quite combat ready, but hopefully the drones will cover its shortcomings.</text>
+</event>
+
+<!--**********Drones - crew-->
+<event name="STEALTH_6">
+	<text>Your new vessel is equipped with state of the art androids and beam weaponry. It was difficult to find a full crew since the androids are rather terrifying to work with.</text>
+</event>
+
+<!--*********Missile fun time-->
+<event name="STEALTH_7">
+	<text>The engineer who designed this ship clearly loved missiles.  Few opponents will be able to withstand this ship's missile barrage, but be sure to watch your ammo reserves.</text>
+</event>
+
+
+
+
+<event name="DEMO_END">
+	<text>Congratulations, that's the end of the training simulation! As a final lesson, you'll experience what it's like to be destroyed by a more powerful enemy. This pirate is equipped with our most advanced weapons and systems, including a prototype cloaking device. It's manned by aliens known to be the best engineers in the galaxy. And we've shutdown your engines as well, so there's no use trying to run away.</text>
+	<status type="limit" target="player" system="engines" amount="0"/>
+	<ship load="IMPOSSIBLE_PIRATE" hostile="true"/>
+</event>
+<ship name="IMPOSSIBLE_PIRATE" blueprint="IMPOSSIBLE_PIRATE">
+	<destroyed>
+		<text>Impossible! He was supposed to be unbeatable! Even the simulation creators haven't done that. Continue on, you've earned it.</text>
+		<item_modify>
+			<item type="scrap" min="100" max="100"/>
+		</item_modify>
+		<status type="limit" target="player" system="engines" amount="100"/>
+	</destroyed>
+</ship>
+
+
+<event name="ASTEROID_TEST">
+	<img back="BG_DARK" planet="NONE"/>
+	<text>We've come out in an asteroid field! We'll have to wait for the FTL to charge before we can get out of here, let's hope the ship holds up.</text>
+	<environment type="asteroid"/>
+</event>
+
+
+
+<event name="CASH_IN_DRONE">
+	<text>Your ship is currently not equipped with a drone system. You reduce the drone schematic to scrap.</text>
+	<choice>
+		<text>Continue...</text>
+		<event/>
+	</choice>
+</event>
+
+<event name="UNLOCK_STEALTH">
+	<text>You stumble across a hidden Federation research laboratory!  They have been experimenting with some unique ship designs.  You download their blueprints for future use.</text>
+</event>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

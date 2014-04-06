@@ -1,0 +1,561 @@
+﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--  
+			SUMMARY - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Structure:
+START_BEACON_PIRATE
+	STORE_PIRATE
+	NOTHING_PIRATE
+	
+Hostile:
+	PIRATE
+	PIRATE_NO_ESCAPE
+	
+Neutral:
+	PIRATE_CIVILIAN (with commly used SAVE_CIVILIAN_LIST)
+	PIRATE_BRIBER
+	PIRATE_CHOICE
+	PIRATE_SLAVER
+	FRIENDLY_SLAVER
+	
+Environment:
+	PIRATE_SUN
+	PIRATE_ASTEROID
+	
+Boarders:
+	BOARDERS_SUN
+	BOARDERS_ASTEROID
+	FLOATING_CARGO
+--->
+
+
+
+<eventList name="HOSTILE_PIRATE">
+	<event load="PIRATE"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_SUN"/>
+</eventList>
+
+
+<eventList name="NEUTRAL_PIRATE">
+	<event load="PIRATE_CHOICE"/>
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="MERCENARY"/>
+	<event load="DISTRESS_BEACON"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="ASTEROID_EXPLORE"/>
+	
+	<event load="ASTEROID_DERELICT_SHIP"/> <!-- CRYSTAL UNLOCK-->
+</eventList>
+
+
+<eventList name="BOARDERS_PIRATE">
+	<event load="BOARDERS"/>
+	<event load="STATION_SICK"/>
+	<event load="BOARDERS_SUN"/>
+	<event load="BOARDERS_HACKING"/>
+	<event load="FLOATING_CARGO"/>
+</eventList>
+
+
+<eventList name="DISTRESS_BEACON_PIRATE">
+	<event load="STRANDED_BEACON"/>
+	<event load="CIVILIAN_ASTEROIDS_BEACON"/> 
+	<event load="ESCORT_BEACON"/>
+	<event load="PIRATE_CIVILIAN_BEACON"/>
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="DISTRESS_TRAPPED_MINER"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="DISTRESS_STATION_DISEASE"/>
+</eventList>
+
+<eventList name="NEBULA_PIRATE">
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/> 
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_TRADER"/>
+	<event load="NEBULA_LOST_SHIP"/> 
+	<event load="NEBULA_BOARDING"/>
+	<event load="NEBULA_REBEL_UNDETECTED"/> 
+	<event load="NEBULA_LOST_SHIP"/> 
+	<event load="NEBULA_REBEL_BOARDING"/>
+	<event load="STORM_ITEMS"/>
+	<!--<event load="STORM_BOARDING"/> -->
+	<event load="STORM_ITEMS"/>
+</eventList>
+
+<eventList name="QUESTS_PIRATE">
+	<event load="MERCHANT_REQUEST"/>
+	<event load="MERCENARY_WORK_START"/>
+	<event load="QUEST_ESCORT"/>
+</eventList>
+
+
+
+<!-----------
+		STRUCTURE!!!
+	Necessary events
+------------>
+
+<event name="START_BEACON_PIRATE">
+	<text load="START_BEACON_PIRATE"/>
+</event>
+<textList name="START_BEACON_PIRATE">
+	<text>A few years ago this region was bustling with trade activity. Now it is overrun with bandits and marauders. You should tread lightly here.</text>
+	<text>This somewhat isolated region was thrown into chaos at the start of the rebellion. Even in peacetime it was always beset by pirates but now it houses a center of operations for countless pirate fleets.</text>
+	<text>If the reports are true, this area has been under the control of pirates for quite some time. Some traders still attempt to trade with the few settlements that remain, but they do so at great risk.</text>
+	<text>A few Federation-friendly planets still exist in this sector, but they are constantly under attack by pirate raids. This is a dangerous sector, so be careful.</text>
+</textList>
+
+<event name="STORE_PIRATE">
+	<text load="STORE_PIRATE"/>
+	<store/>
+</event>
+<textList name="STORE_PIRATE">
+	<text>A few small ships are visible on the vidscreen, and you almost activate weapons targeting. However, sensors indicate they are simply honest merchants. The pirates must be making you jumpy. You message them asking about their wares.</text>
+	<text>You detect a hub of activity nearby. A large corporation has set up a trade depot and has a number of well armed ships patrolling. This appears to be a relatively safe place to get repairs.</text>
+	<text>You receive a wide-band automated message, "Welcome to our humble trade depot and shipyard! All are welcome, but try any funny business and our 152 automated turret satellites will tear your ship to shreds!"</text>
+	<text>A well armed transport ship and a squadron of fighters are in orbit nearby. You are wary of their trustworthiness but beggars can't be choosers.</text>	
+</textList>
+
+
+<event name="NOTHING_PIRATE">
+	<text load="NOTHING_PIRATE"/>
+</event>
+<textList name="NOTHING_PIRATE">
+	<text>As soon as you arrive, a small ship de-cloaks behind yours. You immediately power up the shields and weapons, but they continue on their trajectory unimpressed. You try to calm your nerves.</text>
+	<text>A small pirate ship messages you, "That sure is a shiny ship you got there." You fire a warning shot across their bow and they respond, "Hey! No need for violence! It was just a comment..."</text>
+	<text>The only thing within scanning range is an old abandoned mining structure and a resupply station. They appear to have been picked clean by marauders.</text>
+	<text>You arrive to have a small fleet of Engi ships target you with a message, "Piracy results in negative societal impact. Not permitted." You assure them of your honest intentions and they allow you to pass.</text>
+</textList>
+
+
+
+
+<!-----------
+		HOSTILE!!!
+	Events that call up a fight for sure
+------------>
+
+
+<event name="PIRATE">
+	<text load="PIRATE"/>
+	<ship load="PIRATE" hostile="true"/>
+</event>
+<textList name="PIRATE">
+	<text>As you jump into the system a pirate advances on your position. They are refusing all hails. Prepare for a fight.</text>
+	<text>Soon after arriving in the system you are hailed by a small cruiser. "What good fortune that we happen to run into each other. Nothing personal, but you have some information we need!"</text>
+	<text>At first it appears you've arrived in an empty system, but a ship appears from behind a planet and hails you: "Haha! I am the dread pirate Tuco, prepare to die!"</text>
+	<text>The only other ship at this beacon messages you: "Finally, after months of waiting, someone has fallen into our trap!"</text>
+	<text>You barely have time to register jump completion before your ship warns you of an incoming ship with weapons hot.</text>
+</textList>
+
+
+<event name="PIRATE_NO_ESCAPE" unique="true">
+	<text>Once you arrive, your screen lights up with warnings. A nearby pirate seems to have advanced hacking tools and they have tried to shut down our engines. Your crew manages to keep them barely operational and you move into attack.</text>
+	<status type="limit" target="player" system="engines" amount="1"/>
+	<ship load="PIRATE_NO_ESCAPE" hostile="true"/>
+</event>
+
+
+
+
+
+<!-----------
+		NEUTRAL!!!
+	Events that could have a fight
+------------>
+
+
+
+<event name="PIRATE_CIVILIAN" unique="false">
+	<text load="PIRATE_CIVILIAN"/>
+	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
+	<choice>
+		<text>Aid the civilian ship.</text>
+		<event>
+			<text>You power up your weapons and engage the pirate ship.</text>
+			<ship load="PIRATE_CIVILIAN" hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Stay out of it.</text>
+		<event>
+			<text>The fight brings them out of your immediate scanning range. After a time the distress calls stop.</text>
+		</event>
+	</choice>
+</event>
+<textList name="PIRATE_CIVILIAN">
+	<text planet="PLANET_POPULATED_SMALL">You arrive in the system to see a pirate ship pursuing a civilian ship. You detect messages from the civilian ship on a distress frequency.</text>
+	<text>Scanners indicate that a battle is taking place nearby. It seems that someone is under attack by space pirates. </text>
+	<text>You detect two ships, one chasing the other... Scanners show the pursuer is a pirate!</text>
+	<text>There are only two ships within range and they seem to be engaged in battle. One of them has the markings of a space pirate.</text>
+	<text>You arrive at the next beacon only to immediately be hailed by a small shuttle. "Help us! We are being attacked by pirates!"</text>
+	<text>You come out of the jump to see laser blasts coming from the other side of the beacon. It looks like someone is under attack from pirates.</text>
+</textList>
+<eventList name="SAVE_CIVILIAN_LIST">   
+	<event>
+		<text>The ship you saved was badly damaged in the battle. Most of the crew accepts your offer to be dropped off at a nearby station. One offers to join your crew.</text>
+		<choice>
+			<text>Welcome aboard!</text>
+			<event>
+				<text>The survivor gets on board the ship.</text>
+				<crewMember amount="1"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Decline their request</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>The ship that the pirate was assaulting was a science vessel. They thank you for saving them and offer a small reward.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event> 
+	<event> 
+		<text>It seems the crew did not survive the assault. You take what you can from the remains of the ship.</text>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>They respond, "It's a good thing you came when you did; we'd be dead now otherwise. I'm a shipwright and I'd like to help you like you helped me."</text>
+		<choice>
+			<text>The captain offers to install a piece of equipment on your ship.</text>
+			<event>
+				<autoReward level="LOW">weapon</autoReward>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>"This sector has become increasingly dangerous for friends of the Federation. I think my crew can patch up some of your hull damage as thanks." </text>
+		<damage amount="-5"/>
+	</event>
+	<event>
+		<text>The civilian ship wisely made a fast retreat while you distracted the hostile ship.</text>
+	</event>
+</eventList>
+
+
+
+<event name="PIRATE_BRIBER" unique="true">
+	<text load="PIRATE_BRIBER"/>
+	<ship load="PIRATE_BRIBER" hostile="false"/>
+	<choice>
+		<text>Accept their bribe.</text>
+		<event>
+			<text>"Good choice, son. We've both come out of this richer."</text>
+			<autoReward level="LOW">standard</autoReward>
+		</event>
+	</choice>
+	<choice>
+		<text>Try to be a hero. Attack the pirate.</text>
+		<event>
+			<text>The pirate ship stops its pursuit and locks weapons onto your ship.</text> 
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</event>
+<eventList name="PIRATE_BRIBER_WIN">
+	<event>
+		<text>Upon closer inspection, you realize the ship under attack was a Rebel scout! It's too damaged to put up much of a fight.</text>
+		<choice hidden="true">
+			<text>Destroy the ship and salvage it</text>
+			<event>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+		<choice>
+			<text>Use the leverage you gained by saving their lives to convince them to delay the pursuing fleet.</text>
+			<event>
+				<text>Hopefully that will buy you more time to get to the next sector.</text>
+				<modifyPursuit amount="-1"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>You were too late. A hull breach deprived the crew of oxygen during your fight with the pirate. You salvage what you can.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>The pirate's victim quickly jumps away before you have a chance to speak to them.</text>
+	</event>
+	<event>
+		<text>"Thank you for the aid! I'm an arms dealer that usually only works with rebels, but considering the circumstances I'll make an exception."</text>
+		<store/>
+	</event>-
+	<event>
+		<text>"Thank the heavens you showed up! We don't have much to offer as a reward, but our engineer should be proficient enough to patch your ship up a bit after that nasty fight."</text>
+		<damage amount="-15"/>
+	</event>
+</eventList>	
+<textList name="PIRATE_BRIBER">
+	<text>You come across a pirate in hot pursuit of an unidentified ship. You quickly receive a transmission from the pirate: "Stay out of this fight and we'll make it worth your while."</text>
+	<text>An unidentified ship is badly damaged and still being assaulted by a space pirate. The victim begins a distress message until the pirate cuts in and offers to split the bounty if you sit tight.</text>
+	<text>A missile shoots across your bow when the jump completes. Your scans quickly reveal a ship with pirate markings pursuing an unknown vessel. The pirate hails you: "Damn it, we weren't expecting company. Stay out of this and you could profit."</text>
+</textList>
+
+
+
+		
+<event name="PIRATE_CHOICE" unique="false">
+	<img planet="NONE"/>
+	<text>Upon completing your jump, you receive a message from a nearby ship. "Greetings and welcome to our beacon! For a small fee, we'll let you continue on your way."</text>
+	<ship load="PIRATE" hostile="false"/>
+	<choice>
+		<text>Pay their toll.</text>
+		<event>
+			<text>"You made the right decision friend."</text>
+			<item_modify>
+				<item type="scrap" min="-25" max="-15"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Reject their 'offer'.</text>
+		<event>
+			<text>"Too bad... You will regret this decision!"</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</event>
+
+
+
+
+<event name="PIRATE_SLAVER" unique="false">
+	<text>An especially well-armed pirate ship approaches you. "Hand over one of your crew-members and the rest of you can go free unharmed"</text>
+	<ship load="PIRATE_SLAVER" hostile="false"/>
+	<choice>
+		<text>Draw straws and send a crew-member over to the slavers.</text>
+		<event>
+			<crewMember amount="-1"/>
+		</event>
+	</choice>
+	<choice>
+		<text>We will never surrender one of our crew to slavers!</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice req="engines" lvl="6" hidden="true">
+		<text>(Engines) Attempt to out-run the slaver ship.</text>
+		<event load="PIRATE_SLAVER_RUN"/>
+	</choice>
+</event>
+<eventList name="PIRATE_SLAVER_RUN">
+	<event>
+		<text>You quickly fire up your engines and make a break for it. However, it seems to be in vain. They catch up to you effortlessly and power up their weapons.</text>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>You divert all available power to your engines and flee. You caught them off-guard, but they seem to be gaining on you. Luckily you are able to stay out of range long enough to charge the FTL drive.</text>
+	</event>
+	<event>
+		<text>You fire up the engines and try to escape. Their slower ship is unable to keep pace; eventually it gives up and returns to the beacon to await an easier target.</text>
+	</event>
+</eventList>
+	
+
+
+
+
+<event name="FRIENDLY_SLAVER" unique="true"> <!-- add an event if you kill the crew? -->
+	<ship load="PIRATE_SLAVER" hostile="false"/>
+	<text>You recognize the ship as a well known slave trader. He hails you and offers you "laborers" for cheap.</text>
+	<choice>
+		<text>Buy one slave and free them to join your crew.</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-50" max="-60"/>
+			</item_modify>
+			<crewMember amount="1"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Attack the slaver scum.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Ignore the slaver and continue on your way.</text>
+		<event/>
+	</choice>
+	<choice req="teleporter" lvl="2" hidden="true">
+		<text>(Teleporter) Use your teleporter to attempt to board the ship and release some of the slaves.</text>
+		<event load="FRIENDLY_SLAVER_TELEPORTER"/>
+	</choice>
+</event>
+<eventList name="FRIENDLY_SLAVER_TELEPORTER">
+	<event>
+		<text>You beam a small team into their holds. They work quickly to free the slaves and teleport back to your ship. One of the captives seems fit for battle and you throw them a weapon in preparation for a fight.</text>
+		<crewMember amount="1"/>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>You teleport an away team into their hold to attempt to free their prisoners. They are able to get to one person before being caught and forced into a corner by the crew. You quickly beam the team and prisoner back to your ship.</text>
+		<crewMember amount="1"/>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>You beam a team onto their ship. However, your estimations of the location of their prisoners was off. By the time they get their bearings the slavers spot them. You beam them back to the ship and prepare for a fight.</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+
+
+
+
+<!-----------
+		ENVIRONMENT!!!
+	Events with unique environments
+------------>
+
+
+
+<event name="PIRATE_SUN" unique="true">
+	<img back="BG_DARK"/>
+	<text>This beacon has been placed too close to a super-giant class M star! The ship will gradually overheat until you get out of here... or die. A pirate, apparently oblivious to the danger of the sun, moves in to engage.</text>
+	<ship load="PIRATE" hostile="true"/>
+	<environment type="sun"/>
+</event>
+
+
+<event name="PIRATE_ASTEROID">
+	<img planet="NONE" back="BG_DARK"/>
+	<environment type="asteroid"/>
+	<text>A pirate ship was lying in wait inside this asteroid field. It immediately moves in to attack.</text>
+	<ship load="PIRATE" hostile="true"/>
+	<choice>
+		<text>Turn and fight.</text>
+		<event/>
+	</choice> <!--
+	<choice req="pilot" lvl="2" hidden="true">
+		<text>(Piloting) Attempt to maneuver out of the asteroid field before engaging the pirate.</text>
+		<event load="PIRATE_ASTEROID_PILOTING"/>
+	</choice> -->
+</event>
+<!-- No longer used 
+<eventList name="PIRATE_ASTEROID_PILOTING">
+	<event>
+		<text>Your pilot succeeds in getting your ship out of the asteroid field without damage. You turn to engage with the pirate ship.</text>
+	</event>
+	<event>
+		<text>Despite some fancy flying, the pirate catches up to you before you can leave the asteroid field. You have no choice but to fight.</text>
+		<environment type="asteroid"/>
+	</event>
+</eventList>  -->
+
+
+
+
+
+<!-----------
+		BOARDERS!!!
+	Events with boarder calls
+------------>
+
+
+
+<event name="BOARDERS_PIRATE">
+	<text load="BOARDERS_PIRATE"/>
+	<boarders min="2" max="4" class="random"/>
+</event>
+<textList name="BOARDERS_PIRATE" unique="false">
+	<text>SSSSSSSSSSSSSSSSS</text>
+</textList>
+
+
+<event name="BOARDERS_SUN" unique="true">
+	<text>You arrive to find yourself extremely close to a star. You receive a message from a pirate ship, "I'm glad you arrived; our ship is damaged and we were getting desperate... I hope you don't mind if we take yours." Hostiles detected on board our ship!</text>
+	<boarders min="2" max="4" class="human"/>
+	<environment type="sun"/>
+</event>
+
+<event name="BOARDERS_ASTEROID" unique="true">
+	<img back="BG_DARK" planet="NONE"/>
+	<text>You jump into a perilous asteroid field. Worse, sensors show a pirate stronghold has locked onto our ship and is activating a teleporter. Prepare for a fight!</text>
+	<boarders min="2" max="4" class="human"/>
+	<environment type="asteroid"/>
+</event>
+
+<event name="FLOATING_CARGO" unique="true">
+	<text>Not too far from the beacon, you detect a destroyed cargo ship with its cargo scattered nearby, intact.</text>
+	<choice hidden="true">
+		<text>Bring it aboard.</text>
+		<event load="FLOATING_CARGO_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Leave it alone, looks suspicious.</text>
+		<event>
+			<text>You leave the cargo alone and prepare to jump.</text>
+		</event>
+	</choice>
+	<choice req="sensors" lvl="2" hidden="true">
+		<text>(Advanced Sensors) Run an advanced scan on the boxes.</text>
+		<event load="FLOATING_CARGO_SCAN_LIST"/>
+	</choice>
+	<choice req="ADV_SCANNERS" hidden="true">
+		<text>(Long-Ranged Scanners) Run an advanced scan on the boxes.</text>
+		<event load="FLOATING_CARGO_SCAN_LIST"/>
+	</choice>
+</event>
+<eventList name="FLOATING_CARGO_LIST">
+	<event>
+		<text>They appear to be filled with some military supplies! You take everything you can use and jettison the rest.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>The cargo was primarily consumer goods and clothing, nothing particularly useful. You manage to collect some scrap.</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Once you bring the cargo onto your ship, a pirate bursts out of one of the crates saying, "Ugh... I was getting cramped in there.  Oh, yeah! Prepare to die!" Immediately after this battle-cry your ship is filled with the sound of crates breaking open...</text>
+		<boarders min="2" max="4" class="human"/>
+	</event>
+	<event>
+		<text>You bring the cargo aboard. Before you have a chance to open them a pirate ship appears out of hiding and charges. At the same time, the crates fly open. Intruders aboard the ship!</text>
+		<boarders min="2" max="4" class="human"/>
+		<ship load="JELLY_PIRATE_WITHBOARDERS" hostile="true"/>
+	</event>
+</eventList>
+<eventList name="FLOATING_CARGO_SCAN_LIST">
+	<event>
+		<text>The cargo appears to contain nothing of much interest. You salvage some scrap from the destroyed ship.</text>
+		<item_modify>
+			<item type="scrap" min="20" max="35"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>Your advanced sensors are able to breach the protective barrier and scan the cargo. It appears to be filled with some military supplies! You take everything you can use.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>Your advanced sensors pick up faint life signatures inside the cargo. The life forms appear to be armed.  This looks like a planned pirate ambush.</text>
+		<choice hidden="true">
+			<text>Destroy the crates to prevent another ship from falling victim.</text>
+			<event>
+				<text>You fire on the crates, breaking them open and scattering the pirates into empty space. A pirate ship appears out of nowhere with a message, "You will pay for that!"</text>
+				<ship load="PIRATE" hostile="true"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Leave it alone and prepare to jump.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+
+
+
+
+
+
