@@ -1,0 +1,294 @@
+
+<!-- TO DO - EVENTS TO ADD TO THINGS 
+
+
+
+
+
+
+
+
+--->
+
+
+<!-- 
+----
+Events For Testing
+----
+--->
+<event name="FUEL_ESCAPE_PULSAR">
+	<text>Taking advantage of the last of your fuel reserves, you were able to navigate to a safe distance from the pulsar.</text>
+</event>
+
+<event name="PULSAR">
+	<text>Oh no! A pulsar!</text>
+	<ship load="REBEL_AUTO" hostile="true"/>
+	<environment type="pulsar"/>
+</event>
+
+<event name="PDS_TEST">
+	<text>Oh no! This planet is friendly to the Rebels and is shooting at us!</text>
+	<environment type="PDS" target="all"/>
+	<ship load="REBEL_AUTO" hostile="true"/>
+</event>
+
+<event name="FUEL_ESCAPE_PDS">
+	<text>Using your impulse engines, you were able to pull to a safe distance from the hostile planet.</text>
+</event>
+
+<event name="FUEL_ESCAPE_FLEET">
+	<text>Your pilot deftly avoids the artillery fire from the surrounding fleet while you try to sort out exactly what your plan is....</text>
+</event>
+
+<event name="NEWSHIP1">
+	<text>whatever</text>
+	<ship load="NEWSHIP1" hostile="true"/>
+</event>
+	
+<event name="NEWSHIP2">
+	<text>whatever</text>
+	<ship load="NEWSHIP2" hostile="true"/>
+</event>
+	
+<ship name="NEWSHIP1" auto_blueprint="ANAEROBIC_SCOUT">
+	<destroyed>
+		<text>Yay</text>
+	</destroyed>
+	<deadCrew>
+		<text>Yay</text>
+	</deadCrew>
+</ship>
+
+<ship name="NEWSHIP2" auto_blueprint="ANAEROBIC_BOMBER">
+	<destroyed>
+		<text>Yay</text>
+	</destroyed>
+	<deadCrew>
+		<text>Yay</text>
+	</deadCrew>
+	<surrender  chance="0.5" min="3" max="4" load="PIRATE_SURRENDER"/>
+</ship>
+
+
+
+
+
+
+<!-- 
+----
+New Item Events
+----
+--->
+
+
+<event name="STORE_REBELSIDE" unique="true">
+	<text>You come across a large trade station. However, as soon as you approach a warning goes out to all ships in the region: "Do not associate with the Federation sympathizer. All who oppose the Rebels will be punished."</text>
+	<choice hidden="true">
+		<text>Search among the stores to see if someone will sell to you.</text>
+		<event load="STORE_REBELSIDE_SEARCH"/>
+	</choice>
+	<choice hidden="true">
+		<text>Leave.</text>
+		<event>
+			<text>You decide it's better to not push your luck and move on.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="mind" lvl="1" max_group="0">
+		<text>(Mind Control) Alter the announcer's opinions.</text>
+		<event>
+			<text>You locate the source of the announcement and 'convince' the speaker to rescind his previous statement. Hopefully you will have enough time to shop before he can figure out what just happened.</text>
+			<store/>
+		</event>
+	</choice>
+	<choice hidden="true" req="mind" lvl="2" max_group="0">
+		<text>(Improved Mind Control) Alter the announcer's opinions.</text>
+		<event>
+			<text>You locate the source of the announcement and 'convince' the speaker to rescind his previous statement. In addition he apologizes by offering complimentary supplies. Hopefully you will have enough time to shop before he can figure out what just happened.</text>
+			<autoReward level="MED">standard</autoReward>
+			<store/>
+		</event>
+	</choice>
+	<choice hidden="true" req="mind" lvl="3" max_group="0">
+		<text>(Advanced Mind Control) Alter the announcer's opinions.</text>
+		<event>
+			<text>You locate the source of the announcement and 'convince' the speaker to rescind his previous statement. In addition he apologizes by offering considerable complimentary supplies. Hopefully you will have enough time to shop before he can figure out what just happened.</text>
+			<autoReward level="HIGH">standard</autoReward>
+			<store/>
+		</event>
+	</choice>
+</event>
+<eventList name="STORE_REBELSIDE_SEARCH">
+	<event>
+		<text>You find a single store that responds to your hails: "Don't open any wide band channels. We'll sell to you but we don't want to draw attention to ourselves."</text>
+		<store/>
+	</event>
+	<event>
+		<text>Your search for a friendly marketplace yields no results but after a time a small shuttle approaches. They release some supplies in your direction with the message, "We are not all friends of the Rebel fleet. Stay strong."</text>
+		<autoReward level="RANDOM">standard</autoReward>
+	</event>
+	<event>
+		<text>You apparently spoke to the wrong person in your search for a store. Warnings go off and you detect an automated Rebel ship moving in to attack.</text>
+		<ship load="REBEL_AUTO" hostile="true"/>
+	</event>
+	<event>
+		<text>You apparently spoke to the wrong person in your search for a store. Warnings go off and you detect an automated Rebel ship moving in to attack.</text>
+		<ship load="REBEL_AUTO" hostile="true"/>
+	</event>
+</eventList>
+
+
+<!-- 
+----
+HOSTILE ENVIRONMENT! 
+ Environment Events - Added into standard rotations
+----
+--->
+
+
+<event name="REBEL_PULSAR" unique="true">
+	<text load="REBEL_PULSAR_TEXT"/>
+	<ship load="REBEL" hostile="true"/>
+	<environment type="pulsar"/>
+</event>
+<textList name="REBEL_PULSAR_TEXT"> <!--DLC2-->
+	<text>A Rebel captain appears on the screen. "I thought we had been doomed to backwater assignments. This is my chance to get back in Command's good graces! Charge the weapons!"</text>
+	<text>A small rebel research station overlooks a pulsating star. Before you can react a Rebel ship spots you and moves in to attack.</text>
+	<text>You arrive at an infrequently used beacon close to a pulsar. Before long a Rebel ship happens to jump nearby. Looks like you'll have to fight.</text>
+	
+	
+	<!-- NEEDS MORE-->
+	<text>A Rebel captain appears on the screen. "I thought we had been doomed to backwater assignments. This is my chance to get back in Command's good graces! Charge the weapons!"</text>
+	<text>A small rebel research station overlooks a pulsating star. Before you can react a Rebel ship spots you and moves in to attack.</text>
+	<text>You arrive at an infrequently used beacon close to a pulsar. Before long a Rebel ship happens to jump nearby. Looks like you'll have to fight.</text>
+</textList>
+
+<event name="PIRATE_PULSAR" unique="true">
+	<text load="PIRATE_PULSAR_TEXT"/>
+	<ship load="PIRATE" hostile="true"/>
+	<environment type="pulsar"/>
+</event>
+<textList name="PIRATE_PULSAR_TEXT">
+	<text>Sensors go wild as a nearby pulsar is detected. While you are attempting to recalibrate the FTL drive, a pirate sneaks up on your ship, weapons charging. Prepare for a fight!</text>
+	<text>You arrive to find a pulsar dominating the view screen. You see a small silhouette pass in front of the star. Before you can ponder what it is, warning signals go off. It appears to be a ship in a firing trajectory!</text>
+	<text>A small research station orbits a nearby pulsar. It appears largely abandoned, but you detect power signatures flaring up as soon as you're in scanning distance. A small combat ship launches from the station. Pirates!</text>
+	
+	
+	<!-- NEEDS MORE-->
+	<text>Sensors go wild as a nearby pulsar is detected. While you are attempting to recalibrate the FTL drive, a pirate sneaks up on your ship, weapons charging. Prepare for a fight!</text>
+	<text>You arrive to find a pulsar dominating the view screen. You see a small silhouette pass in front of the star. Before you can ponder what it is, warning signals go off. It appears to be a ship in a firing trajectory!</text>
+	<text>A small research station orbits a nearby pulsar. It appears largely abandoned, but you detect power signatures flaring up as soon as you're in scanning distance. A small combat ship launches from the station. Pirates!</text>
+</textList>
+
+
+
+<event name="REBEL_PDS" unique="true">
+	<text load="REBEL_PDS_TEXT"/>
+	<environment type="PDS" target="player"/>
+	<ship load="REBEL" hostile="true"/>
+	<choice>
+		<text>Prepare to fight.</text>
+		<event/>
+	</choice>
+	<choice req="hacking" lvl="1">
+		<text>(Simple Hacking) Confuse the Anti-Ship Battery's targets.</text>
+		<event>
+			<text>You spot a weakness in the targeting satellites. Your crew is able to launch a hacking drone to confuse the Anti-Ship Battery's targeting matrix. It should also fire on the Rebel ship now.</text>
+			<environment type="PDS" target="all"/>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="hacking" lvl="3">
+		<text>(Advanced Hacking) Overwrite the Anti-Ship Battery's target.</text>
+		<event>
+			<text>You spot a weakness in the targeting satellites. Your crew is able to launch an improved hacking drone to overwrite the Anti-Ship Battery's targeting matrix. It will fire on the Rebel ship instead!</text>
+			<environment type="PDS" target="enemy"/>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/>
+			</item_modify>
+		</event>
+	</choice>
+</event>
+<textList name="REBEL_PDS_TEXT">
+	<text>You're shocked to discover a Rebel forward base on this planet. A patrol ship moves in to intercept and sensors indicate an Anti-Ship Battery is about to fire. We've got to get out of here!</text>
+	
+	<!-- NEEDS MORE-->
+	<text>You're shocked to discover a Rebel forward base on this planet. A patrol ship moves in to intercept and sensors indicate an Anti-Ship Battery is about to fire. We've got to get out of here!</text>
+	<text>You're shocked to discover a Rebel forward base on this planet. A patrol ship moves in to intercept and sensors indicate an Anti-Ship Battery is about to fire. We've got to get out of here!</text>
+	<text>You're shocked to discover a Rebel forward base on this planet. A patrol ship moves in to intercept and sensors indicate an Anti-Ship Battery is about to fire. We've got to get out of here!</text>
+</textList>
+
+
+<event name="REBEL_AUTO_PDS" unique="true">
+	<text load="REBEL_AUTO_PDS_TEXT"/>
+	<environment type="PDS" target="player"/>
+	<ship load="REBEL_AUTO" hostile="true"/>
+	<choice>
+		<text>Prepare to fight.</text>
+		<event/>
+	</choice>
+	<choice req="hacking" lvl="1">
+		<text>(Simple Hacking) Confuse the Anti-Ship Battery's targets.</text>
+		<event>
+			<text>You spot a weakness in the targeting satellites. Your crew is able to launch a hacking drone to periodically confuse the ASB's lock signal. It should sometimes fire on the Rebel ship now.</text>
+			<environment type="PDS" target="all"/>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="hacking" lvl="3">
+		<text>(Advanced Hacking) Override the ASB's target.</text>
+		<event>
+			<text>You spot a weakness in the targeting satellites. Your crew is able to launch an improved hacking drone to overwrite the ASB's target locks. It will fire on the Rebel ship instead!</text>
+			<environment type="PDS" target="enemy"/>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/>
+			</item_modify>
+		</event>
+	</choice>
+</event>
+<textList name="REBEL_AUTO_PDS_TEXT">
+	<text>As soon as you arrive multiple warnings go off. A hostile automated ship is detected and an Anti-Ship Battery begins firing. This doesn't look good!</text>
+	
+	<!-- NEEDS MORE-->
+	<text>As soon as you arrive multiple warnings go off. A hostile automated ship is detected and an Anti-Ship Battery begins firing. This doesn't look good!</text>
+	<text>As soon as you arrive multiple warnings go off. A hostile automated ship is detected and an Anti-Ship Battery begins firing. This doesn't look good!</text>
+	<text>As soon as you arrive multiple warnings go off. A hostile automated ship is detected and an Anti-Ship Battery begins firing. This doesn't look good!</text>
+</textList>
+
+<!-- 
+----
+Standard Ships 
+----
+--->
+
+
+
+
+
+<!-- 
+----
+New Rebel Fleet events
+----
+--->
+
+
+
+
+<!-- 
+----
+New Last-Stand Events 
+----
+--->
+
+
+
+
+<!-- 
+----
+Lanius Sector Events
+----
+--->
+
