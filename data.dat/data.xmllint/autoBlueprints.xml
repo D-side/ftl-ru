@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<blueprintList name="DRONES_STANDARD">  <!-- this is just all of them -->
+	<!-- <name>SHIP_REPAIR</name> -->
+	<name>COMBAT_1</name>
+	<name>COMBAT_2</name>
+	<name>COMBAT_BEAM</name>	
+	<name>DEFENSE_1</name>
+	<name>DEFENSE_2_ENEMY</name> <!--changed-->
+	<name>REPAIR</name>
+	<name>BATTLE</name>
+	<name>BOARDER</name>
+</blueprintList>

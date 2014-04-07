@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!--   
+			SUMMARY  - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Structure:
+
+Items:
+	
+Hostile:
+	
+Neutral:
+	
+Environment:
+	
+Boarders:
+
+Special
+--->
+<!--
+
+-->
+<!-------------------CRYSTAL EVENTLIST     
+''   " " "
+--------------------------------->
+
+
+<eventList name="ITEMS_CRYSTAL">
+	<event load="CRYSTAL_CACHE"/>
+	<event load="CRYSTAL_SCRAP_EXCITED"/>
+
+	<event load="FIND_DRONE"/>
+	<event load="FIND_WEAPON"/>
+	<event load="REFUEL_STATION"/>
+	<event load="REPAIR_STATION"/>
+</eventList>
+
+<eventList name="HOSTILE_CRYSTAL">
+	<event load="CRYSTAL_FIGHT"/>
+	<event load="CRYSTAL_FIGHT"/>
+	<event load="CRYSTAL_FIGHT"/>
+	<event load="CRYSTAL_CONVOY"/>
+	<event load="CRYSTAL_REBEL"/>
+	<event load="CRYSTAL_HUNTER"/>
+	<event load="CRYSTAL_AUTO"/>
+	
+</eventList>
+
+<eventList name="NEUTRAL_CRYSTAL">
+	<event load="CRYSTAL_REBEL_CRYSTAL"/>
+	<event load="CRYSTAL_REBEL_CRYSTAL2"/>
+	<event load="CRYSTAL_MANTIS_CRYSTAL"/>
+	<event load="CRYSTAL_PIRATE_CRYSTAL"/>
+	<event load="CRYSTAL_FED"/>
+	<event load="CRYSTAL_FED_DESERTER"/>
+	<event load="CRYSTAL_HUMAN_TESTS"/>
+	<event load="CRYSTAL_CHATTY"/>
+	<event load="CRYSTAL_REQUEST"/>
+	<event load="CRYSTAL_HELP_DIG"/>
+	
+</eventList>
+
+
+<eventList name="QUESTS_CRYSTAL">
+
+</eventList>
+
+
+
+
+
+
+<!-----------STRUCTURE!!!	
+	Others events necessary for strucrtural stuff
+------------>
+<event name="START_BEACON_CRYSTAL">
+	<text>You arrive in a sector not listed in any star charts. Strange crystalline ships dot the horizon. Your companion speaks, "Here we are, my home sector. It has been a long time since others have set foot here, I wonder how you will be received."</text>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>"You have done as you promised and so shall I. The coordinates of my old ship have been forwarded to your navigation system."</text>
+			<quest event="CRYSTAL_UNLOCK"/>
+		</event>
+	</choice>
+</event>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Customization possibilities -->
+<blueprintList name="STARTING_WEAPONS">
+	<name>LASER_BURST_1</name>
+	<name>LASER_BURST_2</name>
+	<name>MISSILES_2_PLAYER</name>
+	<name>BEAM_LONG</name>
+	<name>ION_1</name>
+	<name>ION_2</name>
+	<name>ION_4</name>
+	<name>BOMB_1</name>
+	<name>LASER_BURST_3</name>
+	<name>LASER_HEAVY_1</name>
+	<name>MISSILES_3</name>
+	<name>BEAM_1</name>
+	<name>BEAM_FIRE</name>
+	<name>LASER_HULL_2</name>
+	<name>BOMB_FIRE</name>
+	<name>BOMB_ION</name>
+	<name>BOMB_HEAL</name>
+</blueprintList>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!--   
+			SUMMARY  - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Pirates
+	PIRATE
+		PIRATE_CIVILIAN
+		PIRATE_SLAVER
+		PIRATE_BRIBER
+		PIRATE_NO_ESCAPE
+		PIRATE_SMUGGLE
+		SQUAT_PIRATE_MERCENARY
+		JELLY_PIRATE_WITHBOARDERS
+		JELLY_PIRATE_MERCHANT
+
+Rebels:
+	REBEL
+		REBEL_AUTO
+		REBEL_AUTO_CIVILIAN
+		REBEL_AUTO_REFUEL
+		REBEL_AUTO_MAP
+		REBEL_AUTO_ITEM
+		REBEL_AUTO_RADAR
+		REBEL_AUTO_WARNING
+		REBEL_AUTO_BAIT
+		SQUAT_REFUEL_STATION
+		SQUAT_WARNING
+		SQUAT_TRANSPORT
+		SQUAT_STORE_RESCUE
+		AUTO_FEDERATION_BASE
+		AUTO_FEDERATION_BASE2
+		REBEL_VS_FEDERATION
+		LONG_ELITE
+		LONG_FLEET
+		REBEL_FLEET_FUEL
+
+Engi:
+	ENGI_SHIP
+		ENGI_MANTIS_CONTROLLED
+		MANTIS_ENGI_STATION
+
+Mantis:
+	MANTIS_FIGHT
+		MANTIS_CIVILIAN
+		MANTIS_NAMED_THIEF
+
+Civilian:
+	JELLY
+		CIVILIAN_SHIP
+		AUTO_FUEL_SELLER
+
+Special:
+	GHOST_SHIP
+--->
+<!--------------------------------
+
+	PIRATE SHIPS
+	
+---------------------------------->
+<ship name="PIRATE" auto_blueprint="SHIPS_PIRATE">
+	<surrender chance="0.5" min="3" max="4" load="PIRATE_SURRENDER"/>
+	<escape chance="0.5" min="2" max="4" load="PIRATE_ESCAPE"/>
+	<destroyed load="DESTROYED_DEFAULT"/>
+	<gotaway>
+		<text>The pirate jumped away.</text>
+	</gotaway>
+	<deadCrew load="DEAD_CREW_DEFAULT"/>
+</ship>

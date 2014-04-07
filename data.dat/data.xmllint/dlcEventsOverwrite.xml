@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!-- Events and Event lists that will be overwritten if the DLC is turned on -->
+<!--
+---
+Adding pulsar to normal hostile lists.  - Not all of the hostile lists are here, only some have pulsars added.
+	<event load="PIRATE_PULSAR"/>
+	<event load="REBEL_PULSAR"/>
+---
+--->
+
+<eventList name="OVERRIDE_HOSTILE_ENGI">
+	<event load="ENGI_MANTIS_FIGHT"/>
+	<event load="ENGI_REBEL_FIGHT"/>
+	<event load="ENGI_PIRATE_FIGHT"/>
+	
+	<event load="PIRATE"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="REBEL"/>
+	<event load="SQUAT_WARNING"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="PIRATE_SUN"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+	<event load="PIRATE_PULSAR"/>
+</eventList>
+
+<eventList name="OVERRIDE_HOSTILE_MANTIS">
+	<event load="MANTIS_FIGHT"/>
+	<event load="MANTIS_FIGHT"/>
+	<event load="MANTIS_SUN_FIGHT"/>
+	<event load="DONOR_MANTIS_CHASE"/>
+	
+	<event load="REBEL"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_WARNING"/>
+	<event load="REBEL_PULSAR"/>
+</eventList>
+
+<eventList name="OVERRIDE_HOSTILE_PIRATE">
+	<event load="PIRATE"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_SUN"/>
+	<event load="PIRATE_PULSAR"/>
+</eventList>
+
+
+<eventList name="OVERRIDE_HOSTILE_REBEL">
+	<event load="REBEL"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_WARNING"/>
+	<event load="SQUAT_WARNING"/>
+	<event load="REBEL_PULSAR"/>
+</eventList>
+
+
+
+<eventList name="OVERRIDE_HOSTILE_ZOLTAN">
+	<event load="ZOLTAN_FIGHT"/>
+	<event load="ZOLTAN_PIRATE"/>
+	<event load="ZOLTAN_MANTIS"/>
+	<event load="ZOLTAN_ENGI"/>
+	<event load="ZOLTAN_ASTEROID"/>
+	
+
+	<event load="REBEL"/>
+	<event load="REBEL_AUTO"/>
+	<event load="REBEL_PULSAR"/>
+</eventList>
+
+
+<!--
+---
+Sector Event Lists
+STORE_REBELSIDE
+---
+--->
+<eventList name="OVERRIDE_HOSTILE1">
+	<event load="REBEL_PULSAR"/>
+	<event load="PIRATE_PULSAR"/>
+	<event load="SQUAT_WARNING"/>
+	<event load="AUTO_WARNING"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_HACKER"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_CIVILIAN"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="REBEL"/>
+	<event load="MANTIS_HOSTILE"/>
+</eventList>

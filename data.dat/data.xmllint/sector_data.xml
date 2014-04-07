@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<sectorType name="CIVILIAN">
+	<sector>CIVILIAN_SECTOR</sector>
+	<sector>ENGI_SECTOR</sector>
+	<sector>ENGI_HOME</sector>
+	<sector>ZOLTAN_SECTOR</sector>
+	<sector>ZOLTAN_HOME</sector>
+</sectorType>

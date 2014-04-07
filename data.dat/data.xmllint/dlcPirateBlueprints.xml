@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!---------------------------
+-----------------------------
+-----------------------------
+REBEL PIRATE SHIPS
+-----------------------------
+-----------------------------
+---------------------------->
+<shipBlueprint name="REBEL_FAT_P" layout="rebel_squat_pirate" img="rebel_squat_pirate">
+	<class>Pirate Rigger</class>
+	<systemList>
+		<pilot power="1" max="2" room="0"/>
+		<oxygen power="1" max="2" room="1"/>
+		<shields power="2" max="8" room="2"/>
+		<engines power="2" max="4" room="7"/>
+		<weapons power="1" max="6" room="4"/>
+		<drones power="2" max="8" room="5"/>
+		<medbay power="1" max="3" room="6" start="false"/>
+		<doors power="1" max="3" room="3" start="false"/>
+	</systemList>
+	<droneList drones="4" load="DRONES_STANDARD"/>
+	<weaponList missiles="10" load="WEAPONS_REBEL"/> 
+	<health amount="9"/>	
+	<maxPower amount="8"/>
+	<crewCount amount="3" max="5" class="random"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>rebel_squat</cloakImage>
+</shipBlueprint>

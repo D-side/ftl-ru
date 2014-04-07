@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- 
+--
+--
+NO DLC 
+--
+--
+-->
+<shipBlueprint name="BOSS_1_EASY" layout="boss_1_easy" img="boss_1">
+	<class>Rebel Flagship</class>
+	<systemList>
+		<pilot power="3" room="0"/> 
+		<shields power="6" room="1"/> 
+		<doors power="3" room="17"/> 
+		<!--<teleporter power="2" room="3"/> -->
+		<cloaking power="2" room="15"/> 
+		<!--<weapons power="1" room="6"/> -->
+		<!--<sensors power="2" room="13"/>-->
+		<medbay power="3" room="5"/> 
+		<engines power="2" room="8"/> 
+		<oxygen power="2" room="7"/>
+		<!--<drones power="1" room="12"/>-->
+		<artillery power="4" room="9" weapon="ARTILLERY_BOSS_1"/>
+		<artillery power="4" room="10" weapon="ARTILLERY_BOSS_2"/>
+		<artillery power="3" room="14" weapon="ARTILLERY_BOSS_3"/>
+		<artillery power="3" room="18" weapon="ARTILLERY_BOSS_4"/>
+	</systemList>
+	<weaponList count="0" missiles="10"/>
+	<droneList count="0" missiles="2"/>
+	<health amount="20"/>	
+	<maxPower amount="40"/>
+</shipBlueprint>

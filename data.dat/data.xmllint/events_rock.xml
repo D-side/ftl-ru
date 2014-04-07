@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!--   
+			SUMMARY  - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Structure:
+	
+Hostile:
+	
+Neutral:
+	
+Environmnt:
+
+--->
+<eventList name="HOSTILE_ROCK">
+	<event load="ROCK_SHIP"/>
+	<event load="ROCK_PIRATE"/>
+	<event load="ROCK_FIGHT_ASTEROID"/>
+	<event load="ROCK_PIRATE_ASTEROID"/>
+	<event load="ROCK_PIRATE_SUN"/>
+	
+</eventList>

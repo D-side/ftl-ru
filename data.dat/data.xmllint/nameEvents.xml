@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<event name="BIG_NAME_TEST">
+	<img back="BG_DARK" planet="NONE"/>
+	<ship load="PIRATE" hostile="false"/>
+	<text>A ship with pirate markings hails you: "Hello, we know you have %crew on board. The bounty on %crew_his head is substantial, hand %crew_him over and we'll share it."</text>
+	<choice hidden="false">
+		<text>That bounty could be vital to our survival, hand %crew over.</text>
+		<event loss1="crew">
+			<text>%loss1 goes without complaint, understanding your mission is more important than %loss1_his life.</text>
+			<crewMember amount="-1"/>
+			<item_modify>
+				<item type="scrap" min="40" max="80"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>You don't give in to pirate demands. Power your weapons and prepare to fight.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice req="engi" lvl="1">
+		<text>%req says %req_he has detected a flaw in their ship sensors and can exploit it, allowing the Kestrel to escape without a fight.</text>
+		<event>
+			<text>You hear a hail on all channels: "Dammit, where did you go!? This isn't over %crew!"</text>
+		</event>
+	</choice>
+</event>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!-- NAMES ARE IMPORTANT
+	 I don't have a fancy script system, so there are code things that line up with these 
+	 specific NAMES for each STEP. -->
+<order type="PC">
+    <step>SHIP_INTRO_1</step>
+    <step>SHIP_INTRO_2</step>
+    <step>SHIP_INTRO_3</step>
+    <step>SHIP_INTRO_4</step>
+    <step>SHIP_INTRO_5</step>
+	
+    <step>POWER_SYSTEM_1</step>
+    <step>POWER_SYSTEM_2</step>
+	
+    <step>DAMAGE_SYSTEM_1</step>
+    <step>DAMAGE_SYSTEM_2</step>
+    <step>DAMAGE_SYSTEM_3</step>
+    <step>DAMAGE_SYSTEM_4</step>
+    <step>DAMAGE_SYSTEM_5</step>
+    <step>DAMAGE_SYSTEM_5_5</step>
+	
+    <step>FIRE_PC_1</step>
+    <step>FIRE_END</step>
+	
+    <step>DAMAGE_SYSTEM_6</step>
+    <step>DAMAGE_SYSTEM_7</step>
+
+    <step>STAR_MAP_1</step>
+
+    <step>COMBAT_0</step>
+    <step>COMBAT_1</step>
+    <step>COMBAT_2</step>
+    <step>COMBAT_3</step>
+    <step>COMBAT_4</step>
+    <step>COMBAT_4_5</step>
+	<step>COMBAT_4_6</step>
+
+    <step>INVENTORY_1</step>
+    <step>INVENTORY_2</step>
+
+    <step>COMBAT_5</step>
+
+    <step>UPGRADES_1</step>
+    <step>UPGRADES_1_2</step>
+    <step>UPGRADES_2</step>
+    <step>UPGRADES_3</step>
+
+    <step>DONE_1</step>
+</order>

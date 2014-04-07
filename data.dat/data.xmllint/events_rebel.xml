@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!--   
+			SUMMARY  - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Structure:
+	START_BEACON_REBEL
+	STORE_REBEL
+	NOTHING_REBEL
+	
+Hostile:
+	AUTO_BAIT
+	AUTO_ASTEROID
+	AUTO_WARNING
+	REBEL_AUTO
+	AUTO_HACKER
+	REBEL
+	SQUAT_WARNING
+	
+Neutral:
+	AUTO_CIVILIAN
+	SQUAT_REFUEL_STATION
+	AUTO_REFUEL_STATION
+	AUTO_DEFENSE_MAP
+	AUTO_DEFENSE_ITEM
+	AUTO_DEFENSE_RADAR
+	REBEL_TRANSPORT
+	BROKEN_REBEL_DRONE
+	
+	
+Environmnt:
+	NEBULA_REBEL_BOARDING
+
+--->
+<eventList name="HOSTILE_REBEL">
+	<event load="REBEL"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_WARNING"/>
+	<event load="SQUAT_WARNING"/>
+</eventList>

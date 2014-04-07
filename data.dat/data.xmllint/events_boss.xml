@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!--   
+			SUMMARY  - 
+A list of all main events to be called by lists
+	(does not include sub-events)
+	
+Structure:
+	START_BEACON_BOSS
+	FEDERATION_BASE
+	BOSS_AUTOMATED
+	BOSS_DESTROYED
+	BOSS_ESCAPED
+	BOSS_TEXT_1
+	BOSS_TEXT_2
+	BOSS_TEXT_3
+	
+Hostile:
+	BOSS_SCOUT
+	BOSS_FLEETS_REBEL   (also used for structure of !!! events)
+	
+Neutral:
+	BOSS_SCOUT_RESCUE
+	
+Boarders:
+
+Empty:
+	BOSS_FLEETS_FED
+	BOSS_FLEETS_BOTH    (sometimes in !!! events)
+
+Items:
+	BOSS_REPAIR_STATION
+
+
+
+<fleet>rebel</fleet>
+<fleet>fed</fleet>
+<fleet>battle</fleet>
+--->
+<eventList name="BOSS_HOSTILE">
+	<event load="BOSS_SCOUT"/>
+	<event load="BOSS_SCOUT"/>
+	<event load="BOSS_SCOUT"/>
+</eventList>

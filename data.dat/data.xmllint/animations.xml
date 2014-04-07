@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!-- fire stuff -->
+<animSheet name="fire_large" w="256" h="32" fw="32" fh="32">effects/fire_L1_strip8.png</animSheet>

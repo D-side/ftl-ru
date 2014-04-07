@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Room image layouts -->
+<roomLayout name="artillery">
+	<computerGlow x="40" y="0" dir="UP"/>
+</roomLayout>

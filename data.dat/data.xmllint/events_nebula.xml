@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!--     ' " "
+			SUMMARY  - 
+A list of all main events to be called by lists
+	(does not include sub-events)
+	
+	
+	
+	NOTE: we need to make all lists with "NEBULA_" in it trigger the creation of a nebula
+
+	
+Structure:
+	FLEET_EASY_NEBULA
+	NEBULA_EMPTY
+	
+Hostile:
+	NEBULA_REBEL
+	NEBULA_AUTO
+	NEBULA_AUTO_WARNING
+	NEBULA_PIRATE    				NEW
+	NEBULA_MANTIS_FIGHT				NEW
+	
+Neutral:
+	NEBULA_REBEL_UNDETECTED
+	NEBULA_PIRATE_SMUGGLE
+	NEBULA_AUTO_DEFENSE_ITEM
+	NEBULA_LOST_SHIP
+	NEBULA_WEAPONS_TRADER			NEW
+	NEBULA_ROCK_RACIST				NEW
+	NEBULA_MANTIS_CHOICE			NEW
+	NEBULA_REBEL_CHASE				NEW
+	
+Boarders:
+	NEBULA_BOARDING
+
+Items:
+	NEBULA_TRADER
+
+Storm Environment:
+	STORM_AUTO
+	STORM_REBEL
+	STORM_BOARDING
+	STORM_ITEMS
+
+--->
+<eventList name="NEBULA_HOSTILE">
+	<event load="NEBULA_REBEL"/>
+	<event load="NEBULA_AUTO"/>
+	<event load="NEBULA_AUTO_WARNING"/>
+	<event load="NEBULA_PIRATE"/>
+	<event load="NEBULA_MANTIS_FIGHT"/>
+	<event load="STORM_AUTO"/>
+	<event load="STORM_REBEL"/>
+	<event load="NEBULA_BOARDING"/>
+	<!--<event load="STORM_BOARDING"/>-->
+</eventList>

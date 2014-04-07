@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!-- System Tooltip Info --->
+
+<text name="level">Level </text>
+<text name="manned">Manned: </text>
+<text name="status">Status: </text>
+
+<text name="full_powered">-Fully Powered</text>
+<text name="full_functional">-Fully Functional</text>
+<text name="partial_powered">-Partially Powered</text>
+<text name="partial_functional">-Partially Functional</text>
+<text name="unpowered">-Unpowered</text>
+
+<text name="unmanned">-Unmanned</text>
+<text name="zoltan">-Zoltan Bonus Power</text>
+
+<text name="rearrange_weapon">: Always powers weapon in first slot, click and drag to rearrange weapons</text>
+<text name="rearrange_drone">: Always powers drone in first slot, click and drag to rearrange drones</text>
+
+<text name="destroyed">-Destroyed</text>
+<text name="damaged">-Damaged</text>
+
+<text name="temp_disabled">-Temporarily disabled by enemy or location</text>
+
+<text name="ioned">-Locked by Ion Effect</text>
+<text name="on_fire">-On Fire</text>
+<text name="sabotaged">-Being Sabotaged</text>
+
+<text name="add_power">Add Power: </text>
+<text name="remove_power">Remove Power: </text>
+<text name="remove_power_alt">Remove Power: Shift + </text>
+
+<text name="hacked">-Hacked: Experiences temporary disruption and doors are locked down</text>
+
+<text name="artillery_off">OFF: Beam not charging</text>
+<text name="doors_off">OFF: Cannot manipulate doors</text>
+<text name="pilot_off">OFF: NO DODGE!</text>
+<text name="sensors_off">OFF: Limited vision</text>
+<text name="engine_off">OFF: NO DODGE!</text>
+<text name="medbay_off">OFF: Cannot heal crew</text>
+<text name="weapons_off">OFF: Weapons not available</text>
+<text name="drones_off">OFF: Drones not functional</text>
+<text name="oxygen_off">OFF: OXYGEN DRAINING!</text>
+<text name="clone_off">OFF: Dead crew will die forever</text>
+<text name="shields_off">OFF: SHIELDS DOWN!</text>
+
+<text name="clonebay_health">Heals all crew </text>
+<text name="clonebay_health2"> hp every jump.</text>
+<text name="clonebay_damaged"> (If repaired, it will heal more)</text>
+
+
+<!-- Skills -->
+<text name="pilot_heading">Piloting Skill:</text>

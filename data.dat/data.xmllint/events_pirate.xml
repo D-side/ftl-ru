@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!--  
+			SUMMARY - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Structure:
+START_BEACON_PIRATE
+	STORE_PIRATE
+	NOTHING_PIRATE
+	
+Hostile:
+	PIRATE
+	PIRATE_NO_ESCAPE
+	
+Neutral:
+	PIRATE_CIVILIAN (with commly used SAVE_CIVILIAN_LIST)
+	PIRATE_BRIBER
+	PIRATE_CHOICE
+	PIRATE_SLAVER
+	FRIENDLY_SLAVER
+	
+Environment:
+	PIRATE_SUN
+	PIRATE_ASTEROID
+	
+Boarders:
+	BOARDERS_SUN
+	BOARDERS_ASTEROID
+	FLOATING_CARGO
+--->
+
+
+
+<eventList name="HOSTILE_PIRATE">
+	<event load="PIRATE"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_SUN"/>
+</eventList>
+
+
+<eventList name="NEUTRAL_PIRATE">
+	<event load="PIRATE_CHOICE"/>
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="MERCENARY"/>
+	<event load="DISTRESS_BEACON"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="ASTEROID_EXPLORE"/>
+	
+	<event load="ASTEROID_DERELICT_SHIP"/> <!-- CRYSTAL UNLOCK-->
+<event load="REFUGEE_NO_DISTRESS_PIRATE"/>
+<!--DLC - In newEvents-->

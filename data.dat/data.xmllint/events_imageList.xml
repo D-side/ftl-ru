@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!--
+		**************************************
+		**********	IMAGE LISTS	******				
+	    **************************************
+-->
+<!-- NOTE: width/height are the size you WANT not necessarily the size of the file. 
+	Though in most cases we want that to match of course. I'm just sayin it's possible 
+	to scale the image if you want. -->
+<!-- The following lists are your DEFAULT lists, if the event or text isn't tagged 
+		with anything, then it will randomly choose from here. -->
+<imageList name="PLANET">
+	<img w="460" h="460">stars/planet_bigblue.png</img>
+	<img w="460" h="460">stars/planet_brown.png</img>
+	<img w="264" h="264">stars/planet_peach.png</img>
+	<img w="200" h="200">stars/planet_red.png</img>
+	<img w="380" h="380">stars/planet_gas_blue.png</img>
+	<img w="380" h="380">stars/planet_gas_yellow.png</img>
+	
+	<img w="230" h="230">stars/planet_bigblue.png</img>
+	<img w="230" h="230">stars/planet_brown.png</img>
+	<img w="132" h="132">stars/planet_peach.png</img>
+	<img w="100" h="100">stars/planet_red.png</img>
+	<img w="190" h="190">stars/planet_gas_blue.png</img>
+	<img w="190" h="190">stars/planet_gas_yellow.png</img>
+<!--	<img w="480" h="460">stars/planet_populated_brown.png</img>
+	<img w="480" h="460">stars/planet_populated_dark.png</img>
+	<img w="480" h="460">stars/planet_populated_orange.png</img> -->
+</imageList>

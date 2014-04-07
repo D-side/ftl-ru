@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!-- 
+
+This doc is for alterate versions of the existing ships - outfitted with the new systems and different layouts 
+
+-->
+<blueprintList name="WEAPONS_MISSILES_EVENTS"> <!-- for an event that asks for missiles-->
+	<name>MISSILES_1</name>
+	<name>MISSILES_2</name>
+	<name>MISSILES_2_PLAYER</name>
+	<name>MISSILES_3</name>
+	<name>MISSILES_BURST</name>
+	<name>MISSILES_BREACH</name>
+	<name>MISSILE_CHARGEGUN</name>
+</blueprintList>
