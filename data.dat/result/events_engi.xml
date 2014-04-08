@@ -1,0 +1,848 @@
+﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--   
+			SUMMARY  - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Structure:
+	START_BEACON_ENGI
+	STORE_ENGI
+	NOTHING_ENGI
+
+Items:
+	ENGI_GIFT
+	ENGI_FLEET_DELAY
+	ENGI_MONSTER
+	
+Hostile:
+	ENGI_MANTIS_FIGHT		NEW!!!
+	ENGI_REBEL_FIGHT		NEW!!!
+	ENGI_PIRATE_FIGHT		NEW!!!
+	
+Neutral:
+	ENGI_STATION_DISTRESS    (could be quest or distress - uses SAVE_ENGI_STATION)
+	
+Environment:
+	
+Boarders:
+
+Special
+--->
+
+
+<!--
+Idea - make an event where you're fighting to save an engi ship but theres mantis on board. - super bonus if its crewDead.
+
+-->
+	
+
+<!--------------------------------
+	ENGI EVENTLIST     ''   " " "
+---------------------------------->
+
+
+
+<eventList name="ITEMS_ENGI">
+	<event load="ENGI_GIFT"/>
+	<event load="ENGI_FLEET_DELAY"/>
+<!--	<event load="ENGI_MONSTER"/> -->
+	<event load="ENGI_SURRENDER"/>
+	
+	<event load="FIND_DRONE"/>
+	<event load="FIND_WEAPON"/>
+	<event load="REFUEL_STATION"/>
+</eventList>
+
+<eventList name="HOSTILE_ENGI">
+	<event load="ENGI_MANTIS_FIGHT"/>
+	<event load="ENGI_REBEL_FIGHT"/>
+	<event load="ENGI_PIRATE_FIGHT"/>
+	
+	<event load="PIRATE"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="REBEL"/>
+	<event load="SQUAT_WARNING"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="PIRATE_SUN"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+</eventList>
+
+<eventList name="NEUTRAL_ENGI">
+	<!--<event load="ENGI_UNLOCK_1"/> -->
+	<event load="ENGI_STATION_DISTRESS"/>
+	<event load="MANTIS_FIGHT_CHOICE"/>
+	<event load="MANTIS_CIVILIAN"/>
+	
+	<event load="PIRATE_BRIBER"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="BROKEN_REBEL_DRONE"/>
+	<event load="AUTO_DEFENSE_ITEM"/> 
+	
+	<event load="ALISON_MANTIS_CREW"/> <!-- new alison written event -->
+	
+	<event load="ZOLTAN_CREW_STUDY"/>
+	
+	<event load="ASTEROID_DERELICT_SHIP"/> <!-- CRYSTAL UNLOCK-->
+	
+	<event load="REFUGEE_NO_DISTRESS"/> <!--DLC - newEvents-->
+	<event load="WRECKAGE_EVENT"/> <!--DLC - newEvents-->
+	<event load="FUELING_STATION"/> <!--DLC - newEvents-->
+	<event load="CONFUSED_MANTIS"/> <!--DLC - newEvents-->
+	<event load="ENGI_SEX"/><!--DLC - below-->
+	<event load="ENGI_VIRUS"/> <!--DLC - below-->
+</eventList>
+
+<eventList name="DISTRESS_BEACON_ENGI">
+	<event load="ENGI_STATION_DISTRESS"/>
+	<event load="DISTRESS_ENGI_REBEL"/>
+	<event load="DISTRESS_ENGI_REACTOR"/>
+	
+	<event load="CIVILIAN_ASTEROIDS_BEACON"/>  
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="DISTRESS_TRAPPED_MINER"/>
+	<event load="DISTRESS_INFESTATION"/>
+	<event load="DISTRESS_SATELLITE_DEFENSE"/>
+</eventList>
+
+<eventList name="QUESTS_ENGI">
+	<event load="QUEST_ESCORT"/>
+	<event load="MERCHANT_REQUEST"/>
+	<event load="FEDERATION_PLANET_SIGNAL"/>
+	<event load="MERCENARY_WORK_START"/>
+</eventList>
+
+
+
+
+
+
+<!-----------
+		STRUCTURE!!!
+	Others events necessary for strucrtural stuff
+------------>
+
+<event name="START_BEACON_ENGI">
+	<text load="START_BEACON_ENGI"/>
+</event>
+<textList name="START_BEACON_ENGI">
+	<text>Вы прибыли в пространство инжи. Несмотря на то, что миры инжи постоянно под угрозой богомолов, у вас должно получиться достать припасы для путешествия.</text>
+	<text>Вы прибыли в пространство инжи. После падения Федерации для этих механических существ настали тяжелые времена, но обычно они стараются помочь.</text>
+</textList>
+
+<event name="STORE_ENGI">
+	<text load="STORE_ENGI"/>
+	<store/>
+</event>
+<textList name="STORE_ENGI">
+	<text>Инжи могут делать удивительные вещи из кучки хлама. База инжи у этого маяка как раз продает такое оборудование.</text>
+	<text>A message arrives: "Your scrap, ours. Our weapons for you." You're about to raise the shields when you realize it's just an Engi trader looking for a trade.</text>
+	<text>Корабль инжи приветствует: «Улучшение двигателей необходимо для путешествия домой. Продажа оборудования необходима для улучшения двигателей».</text>
+</textList>
+
+<event name="NOTHING_ENGI">
+	<text load="NOTHING_ENGI"/>
+</event>
+<textList name="NOTHING_ENGI">
+	<text>Сложные переплетения корабельных корпусов и ячеек FTL приводов плавают, всеми покинутые, в открытом космосе. Всё указывает на то, что инжи были здесь не так давно. Были и не стало...</text>
+	<text>Вы прибываете на зелёную планету с роскошными лугами и перекатистыми водопадами. Должно быть это место не интересует инжи.</text>  <!-- JUSTIN TO DO-  MAKE GREEN PLANET-->
+	<text>You have arrived near an Engi construction yard. Most Engi maintain their bi-pedal appearance out of habit but here you see a number of Engi hives working together to create massive organic machines adept at building ships. Truly a sight to behold.</text>
+	<text>Even though each "individual" Engi is made up of trillions of nano-machines, their culture still revolves around traditional social interactions. A nearby station seems to be constructed for entertainment of passing Engi travellers.</text>
+	<text>You see a number of Engi space stations and fleets nearby. Despite looking like piles of junk loosely tied together they are actually a model of efficiency. They just lack a certain aesthetic emphasis in their constructions.</text>
+	<text>This system appears quite peaceful. You're not sure how long it'll last between the combined threats of the Rebels and Mantis.</text>
+	<text>There are a number of merchant ships passing through the area despite the threat of Mantis invasion. No doubt interested in buying the efficient technology of the Engi.</text>
+	<text>You see a small Rebel carrier in the distance. You lay low and try to blend in with the other traffic. However it's surprising to see a Rebel military ship alone deep in Engi space.</text>
+	<text>Похоже что инжи избегают конкретно этого узла, собственно как и любые другие формы жизни. Вы выискиваете взглядом причины этого, но FTL заводится без происшествий.</text>
+	<text>A cluster of Engi satellites in orbit of a nearby planet are the only clue the mechanical species was ever here. You have other places to be.</text>
+</textList>
+
+
+
+
+
+
+
+
+<!-----------
+		ITEMS!!!
+	Events that give items
+------------>
+
+<event name="ENGI_GIFT">
+	<text load="ENGI_GIFT"/>
+	<autoReward level="RANDOM">standard</autoReward>
+</event>
+<textList name="ENGI_GIFT">
+	<text>An Engi vessel hails you. "Identity: Federation? Outlier probability. Implies... revival. Implies... hope. Assistance suggested." They offer some supplies.</text>
+	<text>Вы пересекаетесь с грузовым судном инжи, которое спешит попасть домой прежде, чем флот богомолов попытается захватить этот сектор. Они рады отдать часть своего груза, чтобы попасть домой побыстрее.</text>
+	<text>Вы устанавливаете контакт с обособленной научной станцией инжи, оставшейся тут, несмотря на вероятность вторжения богомолов. Они предлагают вам испытать какую-то экспериментальную технологию.</text>
+	<text>Это было место недавнего сражения. Кто бы тут ни появился, богомолы или инжи, они не были склонны идти мирно. Вы пробираетесь через обломки.</text>
+</textList>
+
+<event name="ENGI_FLEET_DELAY" unique="true">
+	<text>Вы замечаете колонию инжи, прячущихся на другой стороне ближайшей луны. Оказывается, они откапывают тайник с оборудованием времён войны между Федерацией и богомолами. Они предлагают использовать его как приманку для преследующего вас флота повстанцев.</text>
+	<choice>
+		<text>Заминировать тайник.</text>
+		<event>
+			<text>Вы переправляете в тайник несколько ракетных боеголовок, и инжи прикрепляют их для подрыва, перед тем как послать аварийный сигнал, чтобы привлечь внимание флота.</text>
+			<item_modify>
+				<item type="missiles" min="-2" max="-2"/>
+			</item_modify>
+			<modifyPursuit amount="-2"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Обчистить тайник.</text>
+		<event>
+			<text>Вы ждете, пока инжи завершат свои раскопки, и забираете припасы на борт.</text>
+			<autoReward level="MED">drone</autoReward>
+		</event>
+	</choice>
+</event>
+
+<event name="ENGI_MONSTER" unique="true">  <!-- TO DO - Need black image!!!!!! JUSTIN!!!! -->
+	<img back="BG_DARK" planet="NONE"/>
+	<text>As you jump in you're hailed urgently by an Engi science vessel in the distance. "We propose that you do not see the creature." There's nothing on the scanner, which is when you realize you can't see the creature because you're inside it!</text>
+	<choice hidden="true">
+		<text>Совершить прыжок как можно скорее.</text>
+		<event/>
+	</choice>
+	<choice hidden="true" req="sensors" lvl="3">
+		<text>(Improved Sensors) Scan the monstrosity.</text>
+		<event>
+			<text>Вы различаете слабые неритмичные низковолновые сигналы. Может ли быть, что существо общается? Вы пересылаете свои наблюдения на судно инжи, и они в свою очередь благодарят вас.</text>
+			<autoReward level="LOW">augment</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true" req="ADV_SCANNERS">
+		<text>(Long-Ranged Scanners) Scan the monstrosity.</text>
+		<event>
+			<text>Вы различаете слабые неритмичные низковолновые сигналы. Может ли быть, что существо общается? Вы пересылаете свои наблюдения на судно инжи, и они в свою очередь благодарят вас.</text>
+			<autoReward level="LOW">augment</autoReward>
+		</event>
+	</choice>
+</event>
+
+
+
+
+<event name="ENGI_SURRENDER" unique="true">
+	<text>Находящийся поблизости крейсер инжи наблюдает ваше прибытие. Увидев ваш вооружённый до зубов корабль, их капитан немедленно сообщает о капитуляции: «Цель субъекта: благосостояние. Мотивация инжи: выживание. Передача припасов приемлема?»</text>
+	<choice hidden="true">
+		<text>Объяснить им, что вы — друг.</text>
+		<event load="ENGI_SURRENDER_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Принять их предложение о капитуляции.</text>
+		<event>
+			<text>Инжи покорно пересылают вам припасы и ложатся на свой курс. Лёгкие деньги.</text>
+			<autoReward level="RANDOM">standard</autoReward>
+		</event>
+	</choice>
+</event>
+<eventList name="ENGI_SURRENDER_LIST">
+	<event>
+		<text>Похоже, что инжи расслабляются, и стремятся поскорее уйти. Они улетают, не прощаясь.</text>
+	</event>
+	<event>
+		<text>Инжи удовлетворены вашими объяснениями: «Благотворно. Цель субъекта: долгое, долгое путешествие. Сохранена совместимость с передачей припасов от инжи». Они посылают вам оборудование по доброй воле, и так вы чувствуете себя лучше.</text>
+		<autoReward level="RANDOM">standard</autoReward>
+	</event>
+</eventList>
+
+
+
+
+
+
+<!-----------
+		HOSTILE!!!
+	Events that call up a fight for sure
+------------>
+
+<event name="ENGI_MANTIS_FIGHT">
+	<text load="ENGI_MANTIS_FIGHT"/>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+</event>
+<textList name="ENGI_MANTIS_FIGHT">
+	<text>Неоднозначные сигналы радара оказываются штурмовым кораблём богомолов, грабящим останки транспортного судна инжи. Они разворачиваются и идут в бой.</text>
+	<text>You come across a Mantis raider taking pot shots at a defenceless Engi supply station. Discovering its weapons aren't much of a match for the station's armour, it turns on your ship. Battle stations!</text>
+	<text>Зона с виду безопасна, и вы уже готовились к отлету, когда позади вас из прыжка выходит разведчик богомолов! Они удивлены так же, как и вы, но их орудия уже включены.</text>
+	<text>Вы находите маленький взвод инжи, подвергающийся нападению корабля богомолов. Инжи добираются до узла и совершают прыжок отсюда, оставляя вас лицом к лицу со их преследователем!</text>
+</textList>
+
+<event name="ENGI_REBEL_FIGHT">
+	<text>Боевой корабль повстанцев в этой области космоса свидетельствует о том, что некоторые части флота повстанцев уже добрались до владений инжи. Вы движетесь в наступление.</text>
+	<ship load="REBEL" hostile="true"/>
+</event>
+
+<event name="ENGI_PIRATE_FIGHT">
+	<text>Здесь, наверное, было хлебное место для пиратов, но потом началась война, и бандитскую вольницу прижали. Пират, летящий вам навстречу, выглядит потрёпанным и очень злым. Придётся сражаться!</text>
+	<ship load="PIRATE" hostile="true"/>
+</event>
+
+
+
+
+<!-----------
+		NEUTRAL!!!
+	Events that could have a fight
+------------>
+
+<event name="ENGI_STATION_DISTRESS" unique="false">
+	<text>You receive a distress call from a nearby Engi ship. "Assistance requested. Danger present. Imminent destruction."</text>
+	<choice>
+		<text>Ответить на вызов и двигаться на помощь.</text>
+		<event load="ENGI_STATION_DISTRESS_LIST"/>
+	</choice>
+	<choice>
+		<text>Сохранять дистанцию.</text>
+		<event/>
+	</choice>
+</event>
+<eventList name="ENGI_STATION_DISTRESS_LIST">
+	<event>
+		<text>You receive another message from the ship, this time with a Mantis at the comm-log. "Foolish meatsacks," he yells. Sensors indicate the ship is moving in to attack and boarders teleport from the station.</text>
+		<ship load="ENGI_MANTIS_CONTROLLED" hostile="true"/>
+		<boarders min="1" max="2" class="mantis"/>
+	</event>
+	<event>
+		<text>You approach to find a Mantis ship assaulting a small Engi space station. You prepare for a fight!</text>
+		<ship load="MANTIS_ENGI_STATION" hostile="true"/>
+	</event>
+</eventList>
+<eventList name="SAVE_ENGI_STATION">
+	<event>
+		<text>The Engi station is stripped bare and there are signs of a fierce battle. The Mantis must have left the distress call active to lure other ships into a trap.</text>
+	</event>
+	<event>
+		<text>The station was in the process of being evacuated. A number of civilian Engi offer their gratitude as they finalize their preparations to leave. They offer some fuel as a reward.</text>
+		<autoReward level="MED">fuel_only</autoReward>
+	</event>
+	<event>
+		<text>The station hails you, "Gratitude. Expected probability of defeat without assistance... 86.2 percent. Request suitable reward."</text>
+		<choice hidden="true">
+			<text>Запросить топливо.</text>
+			<event>
+				<text>"Request granted. Fuel transferring."</text>
+				<autoReward level="HIGH">fuel</autoReward>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Запросить оружие.</text>
+			<event>
+				<text>"Request granted. Weapon transferring."</text>
+				<autoReward level="LOW">weapon</autoReward>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Запросить дрона.</text>
+			<event>
+				<text>"Request granted. Drone schematic transferring."</text>
+				<autoReward level="LOW">drone</autoReward>
+			</event>
+		</choice>
+		<choice req="engi" hidden="true">
+			<text>(Engi Crew) Threat unresolved. Current mission imperative: Protocol 52.34.</text>
+			<event>
+				<text>They respond, "Understood. Re-establishment of Federation highest import. Transmitting hidden base coordinates. Repairing hull and attaching ship to ship ordnance."</text>
+				<autoReward level="LOW">weapon</autoReward>
+				<quest event="HIDDEN_FEDERATION_BASE_LIST"/>
+				<damage amount="-10"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>They thank you for the assistance and when you tell them of your mission, one of the Engi asks if he can assist your crew. You welcome him aboard.</text>
+		<crewMember amount="1" class="engi"/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+</eventList>
+
+
+
+<!-----------
+		DISTRESS!!!
+	Events that havea distress beacon  
+------------>
+
+<event name="DISTRESS_ENGI_REBEL" unique="true">
+	<text>The distress signal originates from a small Engi ship under attack by a rebel fighter - but when the Rebels see Federation markings they turn to attack!</text> 
+	<distressBeacon/>
+	<ship load="DISTRESS_ENGI_REBEL" hostile="true"/>
+</event>
+<event name="DISTRESS_ENGI_REBEL_RESULT">
+	<text>The Engi vessel turns out to be very poorly equipped - barely a runabout, really. They're trying to outrun the Rebels, and need all the help they can get.</text>
+	<choice hidden="true">
+		<text>Дать им 40 лома, 2 ракеты и 2 топлива.</text>
+		<event load="DISTRESS_ENGI_REBEL_LIST1"/>
+	</choice>
+	<choice hidden="true">
+		<text>Ничего им не давать.</text>
+		<event load="DISTRESS_ENGI_REBEL_LIST2"/>
+	</choice>
+	<choice hidden="true">
+		<text>Инжи не могут чувствовать страх, поэтому они не держат обиды, когда вы объясняете свое нежелание помочь. Они отправляются в свое путешествие, то же делаете и вы.</text>
+		<event>
+			<text>Engi can't feel fear, so they bear you no ill will when you explain you're unwilling to help. They set off on their journey and you do the same.</text>
+		</event>
+	</choice>
+</event>
+<eventList name="DISTRESS_ENGI_REBEL_LIST1">
+	<event>
+		<text>The words they use are "Need = fulfilled", but you take it for gratitude. They take the next jump in their long journey home.</text>
+		<item_modify>
+			<item type="scrap" min="-25" max="-25"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>The Engi are grateful. They don't have any supplies or weapons to spare, but they do send over a self-teleporting med-bot disperser they hope they won't need.</text>
+		<weapon name="BOMB_HEAL"/>
+		<item_modify>
+			<item type="scrap" min="-25" max="-25"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>The Engi are grateful. They don't have much by way of supplies but they do offer a drone schematic for your use.</text>
+		<drone name="RANDOM"/>
+		<item_modify>
+			<item type="scrap" min="-25" max="-25"/>
+		</item_modify>
+	</event>
+</eventList>
+<event name="DISTRESS_ENGI_REBEL_LIST2">
+	<text>They wouldn't get more than a few jumps with that load-out. You provide them with all the munitions and supplies they should need for the journey home. "Generosity magnitude unpredicted. Well-being syntax error [value too high]. Accept this token."</text>
+	<item_modify>
+		<item type="scrap" min="-40" max="-40"/>
+		<item type="fuel" min="-2" max="-2"/>
+		<item type="missiles" min="-2" max ="-2"/>
+	</item_modify>
+	<augment name="NANO_MEDBAY"/>
+</event>
+		
+		
+		
+<event name="DISTRESS_ENGI_REACTOR" unique="true">
+	<text>Пристыковаться к станции.</text>
+	<distressBeacon/>
+	<choice hidden="true">
+		<text>Проигнорировать её.</text>
+		<event load="DISTRESS_ENGI_REACTOR_LIST1"/>
+	</choice>
+	<choice hidden="true">
+		<text>Это место в ужасном состоянии, судя по всему тут ничего полезного. Время двигаться дальше.</text>
+		<event>
+			<text>Вы посылаете команду для осмотра, но среди кислотного запаха и сгоревших частей тела инжи спасать оказалось нечего. Это место мертво.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="sensors" lvl="2">
+		<text>(Improved Sensors) Run another scan.</text>
+		<event load="DISTRESS_ENGI_REACTOR_SCAN"/>
+	</choice>
+	<choice hidden="true" req="ADV_SCANNERS">
+		<text>(Long Ranged Scanners) Run another scan.</text>
+		<event load="DISTRESS_ENGI_REACTOR_SCAN"/>
+	</choice>
+</choice>
+<eventList name="DISTRESS_ENGI_REACTOR_LIST1">
+	<event>
+		<text>Ваша команда на станции сообщает о раненом инжи и функционирующей схеме дрона. Затем кто-то кричит. Реактор станции перегружен и у них заканчивается время!</text>
+	</event>
+	<event>
+		<text>Спасти инжи!</text>
+		<choice hidden="true">
+			<text>Спасти схему дрона.</text>
+			<event load="DISTRESS_ENGI_REACTOR_ENGI"/>
+		</choice>
+		<choice hidden="true">	
+			<text>Спасаться самим!</text>
+			<event load="DISTRESS_ENGI_REACTOR_DRONE"/>
+		</choice>
+		<choice hidden="true">
+			<text>Это тяжкое решение, но жизни вашего экипажа важнее. Они всё бросают и возвращаются на корабль невредимыми. Вы немного отлетаете от станции, прежде чем она взрывается.</text>
+			<event>
+				<text>Член вашего экипажа доблестно хватает инжи и кидает его в шлюз прямо перед тем как реактор взрывается и автоматические огнеупорные двери смыкаются намертво. У вас нет выбора, кроме как скорбеть об этой утрате и двигаться дальше.</text>
+				<autoReward level="LOW">scrap_only</autoReward>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<eventList name="DISTRESS_ENGI_REACTOR_ENGI">
+	<event>
+		<text>Продолжить...</text>
+		<removeCrew>
+			<clone>true</clone>
+			<text>The brave crewmember's clone strides from the Clone Bay, rather full of themself after such a heroic act.</text>
+		</removeCrew>
+		<choice hidden="true">
+			<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+			<event>
+				<text>Ваш экипаж благополучно возвращается к шлюзу с раненым инжи и вы немного отлетаете от станции, прежде чем она взрывается. Инжи, восхищенный вашим экипажем, добровольно присоединяется к вам.</text>
+				<crewMember amount="1" class="engi"/>  
+				<autoReward level="LOW">scrap_only</autoReward>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>Ваша команда возвращается с припасами, но пока они переправляли их на корабль небольшой взрыв выбивает дверь шлюза и одного члена экипажа засасывает в космос!</text>
+		<crewMember amount="1" class="engi"/>  
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+</eventList>
+<eventList name="DISTRESS_ENGI_REACTOR_DRONE">
+	<event>
+		<text>Инжи чувствуют не так, как это делают другие расы. Они бы хотели, чтобы техника была спасена прежде всего. Ваш экипаж благополучно возвращается к шлюзу со схемой дрона и вы немного отлетаете от станции, прежде чем она взрывается.</text>
+		<removeCrew>
+			<clone>true</clone>
+			<text>Fortunately, your crewmember was close enough to the ship for the Clone Bay to revive them.</text>
+		</removeCrew>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Сканирования показали, что реактор станции перегружен! К тому же на борту до сих пор находятся раненый инжи и функционирующая схема дрона! Времени спасти обоих нету...</text>
+		<autoReward level="LOW">drone</autoReward>
+	</event>
+</eventList>
+<event name="DISTRESS_ENGI_REACTOR_SCAN">
+	<text>Спасти инжи!</text>
+	<choice hidden="true">
+		<text>Спасти схему дрона.</text>
+		<event>
+			<text>Спасти схему дрона.</text>
+			<crewMember amount="1" class="engi"/>  
+			<autoReward level="LOW">scrap_only</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Инжи чувствуют не так, как это делают другие расы. Они бы хотели, чтобы техника была спасена прежде всего. Ваш экипаж благополучно возвращается к шлюзу со схемой дрона и вы немного отлетаете от станции, прежде чем она взрывается.</text>
+		<event>
+			<text>Вы появляетесь неподалеку от небольшого флота гражданских кораблей инжи. Простая расшифровка и перевод их частот связи говорит вам, что они неистово обсуждают что-то, что явно их беспокоит.</text>
+			<autoReward level="LOW">drone</autoReward>
+		</event>
+	</choice>
+</event>
+
+
+<!-----------
+		SPECIAL!!!
+	Unique events
+------------>
+
+<event name="ENGI_UNLOCK_1" unique="true">
+	<text>You arrive near a small fleet of civilian Engi ships. A simple decryption and translation of their comm frequency tells you that they are having a frantic discussion about something obviously troubling them.</text> 
+	<choice>
+		<text>Слегка шокированный вашим вопросом, их лидер быстро отвечает: «Предложение отклонено, с благодарностью извиняемся. Тема обсуждения — частная, не юрисдикция Федерации».</text>
+		<event>
+			<text>Slightly shocked at your question, their leader quickly responds, "Declined offer with apologetic gratitude. Topic of discussion private matter, no concern of Federation."</text>
+		</event>
+	</choice>
+	<choice>
+		<text>Вы не можете помочь, но гадаете, что же они обсуждали, пока готовитесь к прыжку.</text>
+		<event>
+			<text>Ваш член экипажа подсоединяется к рации, чтобы общаться с ними напрямую. Вы предлагаете помощь и рассказываете цель своей миссии. Они отвечают: «Наши цели аналогичны. Однако, информация недоступна для раскрытия, необходимо рассмотрение».</text>
+		</event>
+	</choice>
+	<choice req="engi" hidden="true">
+		<text>(Engi Crew) Have your Engi crewmember contact them.</text>
+		<event>
+			<text>Your crewmember syncs with the comm unit to communicate with them directly. You offer your help and a summary of the ship's mission. They respond, "Our goals have analogous elements. However, not all available for disclosure, discretion necessary."</text>
+			<choice>
+				<text>«Секретные технологии украдены богомолами. Прослеживается связь с повстанцами. Неявно. Богомолы отслежены до скрытой базы повстанцев, загружаем координаты».</text>
+				<event>
+					<text>"Secret technologies stolen by Mantis. Implicit connection to Rebels. Implicit. Tracked Mantis to hidden Rebel base, uploading coordinates."</text>
+					<quest event="ENGI_UNLOCK_2REAL"/>
+					<choice>
+						<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+						<event>
+							<quest event="ENGI_UNLOCK_2FAKE"/>
+							<text>"However, tracked second ship to different base. Would calculate probability but data insufficient. Cannot risk obvious Rebel-Engi conflict. Also, need time to acquire military ships. Assist in finding technology?"</text>
+							<choice>
+								<text>Вы прибываете на одну из баз повстанцев, о которых вам говорили инжи. Похоже что всё заброшено, кроме одного разведывательного корабля. Может быть удастся выбить информацию из него.</text>
+								<event/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<event name="ENGI_UNLOCK_2FAKE">
+	<text>You arrive at one of the Rebel bases that the Engies told you about. It appears abandoned except for one scout ship. Perhaps you could extract information from them.</text>
+	<ship load="REBEL_ENGI_UNLOCK_2FAKE" hostile="true"/>
+</event>
+<event name="ENGI_UNLOCK_2FAKE_SURRENDER">
+	<text>"Stop! I don't want to die here."</text>
+	<choice>
+		<text>«Аа, так вот зачем ты нас преследовал. Тем хуже для тебя, ты последовал не за тем кораблём. Агент, что пролетал здесь, был подставным, чтобы сбить с толку дураков вроде тебя. Теперь отпусти нас!»</text>
+		<event>
+			<text>"Ah, so that's what you're after. Too bad, you followed the wrong ship. The envoy that passed through here was a fake, to trick fools like you. Now let us go!"</text>
+			<choice>
+				<text>Не слушать его и добить.</text>
+				<event>
+					<ship hostile="false"/>
+				</event>
+			</choice>
+			<choice>
+				<text>«Да ни за что...» Вы прерываете передачу и продолжаете штурм.</text>
+				<event>
+					<text>"No, wait..." You cut the transmission and continue the assault.</text>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<event name="ENGI_UNLOCK_2REAL">
+	<text>You arrive at one of the Rebel bases that the Engi told you about. It appears abandoned except for one scout ship. Perhaps you could extract information from them."</text>
+	<ship load="REBEL_ENGI_UNLOCK_2REAL" hostile="true"/>
+</event>
+<event name="ENGI_UNLOCK_2REAL_SURRENDER">
+	<text>"Stop! This isn't worth dying for..."</text>
+	<choice>
+		<text>«Аа, так вот зачем ты нас преследовал. Тем хуже для тебя, ты последовал не за тем кораблём. Агент, что пролетал здесь, был подставным, чтобы сбить с толку дураков вроде тебя. Теперь отпусти нас!»</text>
+		<event>
+			<text>"Of course, that's why you're here. Yes, they passed by here but I had nothing to do with it, I don't know what they were carrying. I'll transmit coordinates. Now just let us go..."</text>
+			<quest event="ENGI_UNLOCK_3"/>
+			<choice>
+				<text>Не слушать его и добить.</text>
+				<event>
+					<text>You prepare an FTL message containing the coordinates to send to the Engi and get ready to jump.</text>
+					<ship hostile="false"/>
+				</event>
+			</choice><!--   REMOVED THIS TO PREVENT DOUBLE QUESTS
+			<choice>
+				<text>«Да ни за что...» Вы прерываете передачу и продолжаете штурм.</text>
+				<event>
+					<text>"But we..." You cut the transmission and prepare an FTL message containing the coordinates to send to the Engies. You then focus on the battle.</text>
+				</event>
+			</choice>-->
+		</event>
+	</choice>
+</event>
+<event name="ENGI_UNLOCK_3">
+	<text>You have finally caught up with the ships you've been hunting. A hangar-sized cargo ship is being escorted by a number of Mantis ships. As you reconsider the assault, a squadron of Engi ships with pirate emblems jump in and assist you. You prepare to fight the Mantis but scans indicate they are manned by Rebels!</text>
+	<ship load="MANTIS_ENGI_UNLOCK_3" hostile="true"/>
+</event>
+<event name="ENGI_UNLOCK_4">
+	<text>The Engi emerge victorious from their battles with only minor losses. They message you, "Project X-ME56 commissioned by Federation military research division. Advanced stealth cruiser. Project finished during rebellion. Unable to reconnect with Federation military command."</text>
+	<choice>
+		<text>«Скорее всего уловка со стороны повстанцев, чтобы не нарушать договор о ненападении с инжи. Вероятность 97.56 процентов. Ваша миссия — помочь последнему флоту Федерации, правильно? Координаты?»</text>
+		<event>
+			<text>"Likely ploy by Rebels to avoid breaking non-aggression pact with Engi. 97.56 percent likely. Your mission to assist last Federation fleet, correct? Coordinates?"</text>
+			<choice hidden="true">
+				<text>«Удовлетворительно. Передача новой технологии поможет решить проблемы Федерации. Простой благодарности недостаточно. Инициирован ремонт корабля и выдана компенсация». Их экипаж доставляет вам орудие для установки, но вы больше рады тому, что у Федерации теперь может быть расширен арсенал.</text>
+				<event>
+					<text>"Satisfactory. Delivery of tech will assist in Federation cause. Gratitude alone insufficient. Commencing ship repair and compensation." Their crews deliver an advanced augmentation for installation but you're more pleased to hear that the Federation will have an improved arsenal.</text>
+					<damage amount="-20"/>
+					<autoReward level="HIGH">standard</autoReward>
+					<augment name="SYSTEM_CASING"/>
+					<unlockShip id="1">The Engi secret tech has been delivered to the hangar. The stealth ship has been unlocked!</unlockShip>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
+
+
+
+
+
+<!-----------
+
+***************************************
+		DLC!!!
+	Events added with the DLC
+***************************************
+	
+	------------>
+	
+	
+
+<event name="ENGI_SEX" unique="true">
+	<text>What appeared to be a single damaged ship is in fact two ships that have smashed into each other... there is a flurry of comm signals and damage, and it's hard to determine what occurred. The vessels appear to be... Engi? They look locked together by the impact and can't free themselves.</text>
+	<choice hidden="true">
+		<text>Attempt to help the ships by prying them apart.</text>
+		<event>
+			<text>To your surprise, one of the Engi vessels attacks! One ship detaches itself, surprisingly still quite whole, and opens fire - it looks like it's somehow identified you as hostile!</text>
+			<ship load="ENGI_SEX_SHIP" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Ignore the damaged vessels.</text>
+		<event/>
+	</choice>
+	<choice req="engi">
+		<text>[Engi Crew] Have your Engi crewmember hail the vessel and assess the damage.</text>
+		<event>
+			<text>Your Engi crewmember refuses. In a halting use of adjectives and nouns, followed by some animated holographic aids, the Engi explains the ships are... using each other to, loosely translated, "achieve a union." For some reason, this consolidation of ship matter sounds embarrassing and personal.</text>
+			<choice hidden="true">
+				<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+				<event>
+					<text>You elect to leave the two Engi ships... to their "business." After questioning your Engi crewmember, however, you do manage to salvage what scrap parts you can from the perimeter, even though you feel slightly dirty for doing so.</text>
+					<autoReward level="MEDIUM">stuff</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<ship name="ENGI_SEX_SHIP" auto_blueprint="SHIPS_CIRCLE">
+	<destroyed>
+		<text>With the ship destroyed, the remaining Engi ship hails you frantically and explains the situation to you.</text>
+		<choice hidden="true">
+			<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+			<event load="ENGI_SEX_SHIP_DONE"/>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>With the ship disabled, the remaining Engi ship hails you frantically and explains the situation to you.</text>
+		<choice hidden="true">
+			<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+			<event load="ENGI_SEX_SHIP_DONE"/>
+		</choice>
+	</deadCrew>
+</ship>
+<event name="ENGI_SEX_SHIP_DONE">
+	<text>Apparently, you interrupted the equivalent of a "consolidation" of two ships that were using each other's parts to construct a new vessel. The Engi were not truly hostile, their targeting computers had not finished adjusting. There's nothing to be done about it now. You leave the remains for the surviving ship.</text>
+</event>
+
+
+<!-- Right now you can get this more than once in a game.  Dunno how good that is -->
+<event name="ENGI_VIRUS" unique="true">
+	<text>The Engi are awaiting you at the beacon, with their weapons on-line! They explain a computer virus that is wanted for hostile acts against the Engi (multiple counts of binary scrambling, nano-dissolution, and variable interference) is aboard your vessel.</text>
+	<choice>
+		<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+		<event>
+			<text>They insist they must destroy your ship to prevent the virus from escaping!</text>
+			<choice hidden="true">
+				<text>Hold on! Let us try to purge the system code!</text>
+				<event>
+					<text>Wiping your engine core and shields proves useless... eventually you trap the virus in the weapons systems to purge it, but before you do, the Engi grow restless and attack!</text>
+					<status type="divide" target="player" system="shields" amount="2"/>
+					<status type="divide" target="player" system="engines" amount="2"/>
+					<ship load="ENGI_VIRUS_SHIP" hostile="true"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Attack the Engi vessel!</text>
+				<event>
+					<text>The Engi be damned, no one threatens your ship. You prepare for a fight!</text>
+					<ship load="ENGI_VIRUS_SHIP" hostile="true"/>
+				</event>
+			</choice>
+			<choice req="hacking" lvl="1" max_group="0" hidden="true">
+				<text>[Hacking System] Isolate and quarantine the virus.</text>
+				<event>
+					<text>It takes some time, and the virus is slippery, but you eventually confine it to a useless sub-system prison where it frantically begins calculating insults at you. You eject the system from the ship and then silence the little binary criminal with your weapons.</text>
+					<choice hidden="true">
+						<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+						<event>
+							<text>The Engi thank you for deleting the virus, and jump away. They offer a unique ship augmentation as a reward.</text>
+							<autoReward level="LOW">standard</autoReward>
+							<augment name="DRONE_SPEED"/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice req="hacking" lvl="2" max_group="0" hidden="true">
+				<text>[Improved Hacking] Reprogram the virus.</text>
+				<event>
+					<text>You proceed to interface with the virus and optimize its repair and benevolence routines.</text>
+					<choice hidden="true">
+						<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+						<event>
+							<text>After a few minutes, the virus "sees the light" and integrates itself in a positive manner with the computer society on your ship, repairing your hull and attempting to optimize your reactor.</text>
+							<damage amount="-15"/>
+							<upgrade amount="1" system="reactor"/>
+							<choice hidden="true">
+								<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+								<event>
+									<text>The Engi thank you for deleting the virus, and jump away. They offer a unique ship augmentation as a reward.</text>
+									<augment name="DRONE_SPEED"/>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice req="hacking" lvl="3" max_group="0" hidden="true">
+				<text>[Advanced Hacking] Reprogram the virus.</text>
+				<event>
+					<text>You proceed to interface with the virus and optimize its repair and benevolence routines.</text>
+					<choice hidden="true">
+						<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+						<event>
+							<text>After a few minutes, the virus "sees the light" and integrates itself in a positive manner with the computer society on your ship, repairing your hull and attempting to optimize your reactor.</text>
+							<damage amount="-30"/>
+							<upgrade amount="1" system="reactor"/>
+							<choice hidden="true">
+								<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+								<event>
+									<text>The Engi thank you for deleting the virus, and jump away. They offer a unique ship augmentation as a reward.</text>
+									<augment name="DRONE_SPEED"/>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice req="anaerobic" hidden="true">
+				<text>[Lanius Crew] Your Lanius crewmember gestures frantically.</text>
+				<event>
+					<text>Oddly enough, the Lanius seems aware of which computer the virus is present in, and proceeds to... digest the terminal. There is a burst of O2, and the Engi ship powers down its weapons, no longer sensing the virus on board. The Engi send some parts over to repair your damaged computer, along with a unique ship augmentation as a reward for terminating the virus.</text>
+					<autoReward level="MEDIUM">scrap_only</autoReward>
+					<augment name="DRONE_SPEED"/>
+				</event>
+			</choice>
+			<choice req="engi" hidden="true">
+				<text>[Engi Crew] Have your Engi crewmember negotiate with the Engi ship.</text>
+				<event>
+					<text>As the Engi attempts to contact the vessel and negotiate, your Engi crewmember suddenly dissolves into nanites - the virus has murdered again! Detecting activity on board your ship, the Engi vessel opens fire!</text>
+					<ship load="ENGI_VIRUS_SHIP_ALT" hostile="true"/>
+					<removeCrew class="engi">
+						<clone>false</clone>
+						<text>The virus appears to have disrupted your clone bay's capability to revive the lost crewmember!</text>
+					</removeCrew>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<ship name="ENGI_VIRUS_SHIP" auto_blueprint="SHIPS_CIRCLE">
+	<destroyed>
+		<text>With the ship destroyed, you detect that the virus has abandoned your ship and disappeared somewhere within the systems of the wreckage. It will likely infect whatever Engi ship passes next, but your mission is too vital to risk re-infection by stopping it.</text>
+		<autoReward level="MEDIUM">standard</autoReward>
+		<status type="clear" target="player" system="engines" amount="100"/>
+		<status type="clear" target="player" system="shields" amount="100"/>
+	</destroyed>
+	<deadCrew>
+		<text>With the Engi crew dead, you detect that the virus has abandoned your ship and disappeared somewhere within the systems of Engi vessel. It will likely infect whatever Engi ship passes next, but your mission is too vital to risk re-infection by stopping it.</text>
+		<autoReward level="MEDIUM">standard</autoReward>
+		<status type="clear" target="player" system="engines" amount="100"/>
+		<status type="clear" target="player" system="shields" amount="100"/>
+	</deadCrew>
+</ship>
+<ship name="ENGI_VIRUS_SHIP_ALT" auto_blueprint="SHIPS_CIRCLE">
+	<destroyed>
+		<text>With the ship destroyed, you scrap it and prepare to jump away.</text>
+		<autoReward level="MEDIUM">standard</autoReward>
+		<choice hidden="true">
+			<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+			<event load="ENGI_VIRUS_REBORN"/>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>With all the Engi dead, you take what you can and prepare to jump away.</text>
+		<autoReward level="MEDIUM">standard</autoReward>
+		<choice hidden="true">
+			<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+			<event load="ENGI_VIRUS_REBORN"/>
+		</choice>
+	</deadCrew>
+</ship>
+<event name="ENGI_VIRUS_REBORN">
+	<text>To your surprise your Engi crewmember reforms. It looks as if the virus reconstituted, repurposed, and reprogrammed the Engi host and wants to travel with you... and it seems to have learned a great deal from its time on your ship.</text>
+	<crewMember amount="1" class="engi" all_skills="2">Virus</crewMember>
+</event>

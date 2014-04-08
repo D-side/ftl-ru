@@ -1,0 +1,4309 @@
+﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Customization possibilities -->
+
+<blueprintList name="STARTING_WEAPONS">
+	<name>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_1</name>
+	<name>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_2</name>
+	<name>Р. босса_2_PLAYER</name>
+	<name>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._LONG</name>
+	<name>ION_1</name>
+	<name>ION_2</name>
+	<name>ION_4</name>
+	<name>Тяжёлый Марк I кристалинов_1</name>
+	<name>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_3</name>
+	<name>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_1</name>
+	<name>Р. босса_3</name>
+	<name>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._1</name>
+	<name>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._FIRE</name>
+	<name>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HULL_2</name>
+	<name>Тяжёлый Марк I кристалинов_FIRE</name>
+	<name>Тяжёлый Марк I кристалинов_ION</name>
+	<name>Тяжёлый Марк I кристалинов_HEAL</name>
+</blueprintList>
+
+<blueprintList name="STARTING_DRONES">
+	<name>Улучшенный внешний ИИ</name>
+	<name>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1</name>
+	<name>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._1</name>
+	<name>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._2</name>
+	<name>SHIP_Улучшенный внешний ИИ</name>
+	<name>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1</name>
+</blueprintList>
+
+<blueprintList name="STARTING_AUGS">
+	<name>HULL_ARMOR</name>
+	<name>ADV_HULL_ARMOR</name>
+	<name>NANO_MEDBAY</name>
+	<name>ADV_SCANNERS</name>
+	<name>AUTO_COOLDOWN</name>
+	<name>SHIELD_RECHARGE</name>
+	<name>FTL_BOOSTER</name>
+	<name>FTL_JAMMER</name>
+	<name>CREW_STIMS</name>
+	<name>DRONE_RECOVERY</name>
+	<name>FTL_JUMPER</name>
+	<name>FTL_BOOSTER</name>
+</blueprintList>
+
+<!--Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.
+		*********************
+		   CREW BLUEPRINTSДелает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		*********************
+-->
+
+
+<crewBlueprint name="human">
+	<desc>Обычный человек. Ничего особенного.</desc>
+	<cost>45</cost> <!--was 40-->
+	<bp>2</bp>
+	<title>Человек</title>
+	<short>Человек</short>
+	<rarity>1</rarity>
+	<powerList>
+		<power>Skills improve slightly faster</power>
+	</powerList>
+	<colorList>
+		<layer><!-- Layer 1 - Shirt -->
+			<color r="140" g="140" b="255" a="0.7"/> <!--
+			<color r="255" g="200" b="130" a="0.7"/>-->
+		</layer>
+		<layer><!-- Layer 2 - Hair/Face -->
+			<color r="255" g="150" b="150" a="0.4"/>
+			<color r="90" g="60" b="40" a="0.7"/>
+			<color r="255" g="124" b="89" a="0"/>
+			<color r="255" g="255" b="255" a="0.2"/>
+		</layer>
+	</colorList>
+</crewBlueprint>
+
+<crewBlueprint name="engi">
+	<desc>Неясно, являются ли инжи живыми или полностью механическими. Однако хорошо известно, что они превосходные инженеры.</desc>
+	<cost>50</cost>
+	<bp>2</bp>
+	<title>Инжи</title>
+	<short>Инжи</short>
+	<rarity>2</rarity>
+	<powerList>
+		<power>Ремонтирует вдвое быстрее</power>
+		<power>В бою наносит вдвое меньше урона</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="mantis">
+	<desc>The Богомол disregard for individual lives led to their evolution as a vicious warrior race.</desc>
+	<title>Богомол</title>
+	<short>Богомол</short>
+	<cost>55</cost> <!--was 45-->
+	<bp>2</bp>
+	<rarity>2</rarity>
+	<powerList>
+		<power>Inflict 1.5x damage in combat</power>
+		<power>1.2x move speed</power>
+		<power>Передвигается на 20 процентов быстрее</power>
+	</powerList>
+	<colorList>
+		<layer><!-- Layer 1 - colorДелает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<color r="17" g="103" b="100" a="0.7"/>
+			<color r="223" g="95" b="2" a="0.5"/>
+			<color r="119" g="200" b="45" a="0.6"/>-->
+			<color r="119" g="165" b="45" a="0"/>
+			<color r="156" g="156" b="35" a="0.5"/><!--
+			<color r="80" g="98" b="33" a="0.7"/> -->
+			<color r="51" g="241" b="0" a="0.9"/>
+			<color r="111" g="241" b="207" a="0.9"/>
+			<color r="255" g="0" b="0" a="0.2"/>
+		</layer>
+	</colorList>
+</crewBlueprint>
+
+<crewBlueprint name="slug">
+	<desc>These telepathic Слизней-телепатов избегают по всей галактике за их бесконечное воровство и способность манипулировать другими.s were shunned in the Galactic Federation for their constant thievery and attempts at manipulation.</desc>
+	<title>Слизней-телепатов избегают по всей галактике за их бесконечное воровство и способность манипулировать другими.</title>
+	<short>Слизней-телепатов избегают по всей галактике за их бесконечное воровство и способность манипулировать другими.</short>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Слизень</power>
+		<power>Immune to mind control.</power>
+	</powerList>
+	<colorList>
+		<layer><!-- Layer 1 - colorДелает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<color r="227" g="172" b="39" a="0.1"/>
+			<color r="227" g="172" b="39" a="0.7"/>-->
+			<color r="255" g="230" b="175" a="0.8"/>  <!-- pale -->
+			<color r="120" g="240" b="60" a="0.6"/>  <!-- green -->
+			<color r="255" g="241" b="0" a="1"/>
+			<color r="255" g="170" b="0" a="1"/> <!-- orange -->
+			<color r="0" g="0" b="0" a="0"/> <!--  -->
+			<color r="140" g="140" b="200" a="0.5"/> <!--blu  -->
+		</layer>
+	</colorList>
+</crewBlueprint>
+
+
+<crewBlueprint name="rock">
+	<desc>С помощью телепатии видит комнаты и живых существ даже когда сенсоры не работают</desc>
+	<title>Роки с Врахоса IV встречаются редко и славятся своей стойкостью.</title>
+	<short>Роки с Врахоса IV встречаются редко и славятся своей стойкостью.</short>
+	<cost>55</cost> <!--was 65-->
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<powerList>
+		<power>Рок</power>
+		<power>Имеет иммунитет к огню</power>
+		<power>Передвигается вдвое медленнее</power>
+	</powerList>
+	<colorList>
+		<layer><!-- Layer 1 - colorДелает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<color r="106" g="51" b="37" a="0.5"/>
+			<color r="116" g="152" b="182" a="0.2"/>
+			<color r="116" g="152" b="182" a="0.5"/>-->
+			<color r="76" g="42" b="31" a="0.7"/>
+			<color r="120" g="80" b="35" a="0.2"/>
+			<color r="140" g="100" b="220" a="0.7"/> <!-- purplish -->
+			<color r="240" g="111" b="64" a="0.7"/> <!-- red -->
+		</layer>
+	</colorList>
+</crewBlueprint>
+
+<crewBlueprint name="crystal">
+	<desc>Здоровье увеличено до 150</desc>
+	<title>Древние предки роков.</title>
+	<short>Древние предки роков.</short>
+	<cost>60</cost> <!--was 65-->
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Lockdown power (activate in crew box)</power>
+		<power>Кристалин</power>
+		<power>Снижен урон от удушья</power>
+		<power>Передвигается на 20 процентов медленнее</power>
+	</powerList>
+	<colorList>
+		<layer><!-- Layer 1 - color -->
+			<color r="40" g="187" b="255" a="0.5"/>
+			<color r="55" g="40" b="255" a="0.4"/>
+			<color r="55" g="40" b="255" a="0.2"/>
+			<color r="115" g="131" b="138" a="0.1"/>
+		</layer>
+	</colorList>
+</crewBlueprint>
+
+<crewBlueprint name="energy">
+	<desc>The 'Золтанцы являются близкими союзниками инжи. Их врожденная энергия достаточно сильна, чтобы питать системы корабля.' are allies of the 'Инжи.' Their innate energy can power ship systems.</desc>
+	<title>Золтанцы являются близкими союзниками инжи. Их врожденная энергия достаточно сильна, чтобы питать системы корабля.</title>
+	<short>Золтанцы являются близкими союзниками инжи. Их врожденная энергия достаточно сильна, чтобы питать системы корабля.</short>
+	<cost>60</cost> <!--was 65-->
+	<bp>4</bp>
+	<rarity>5</rarity>
+	<powerList>
+		<power>Золтанец</power>
+		<power>Maximum health is reduced</power>
+		<power>Explodes on death, damaging enemy crew</power>
+	</powerList>
+	<colorList>
+		<layer><!-- Layer 1 - color -->
+			<color r="249" g="255" b="147" a="1"/>
+			<color r="212" g="241" b="161" a="0.8"/>
+			<color r="79" g="255" b="87" a="1"/>
+			<color r="99" g="133" b="109" a="0.6"/>
+			<color r="240" g="255" b="200" a="0.1"/>
+		</layer>
+	</colorList>
+</crewBlueprint>
+
+
+<!--Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		
+		*********************
+		  SYSTEM BLUEPRINTS
+		*********************
+-->
+
+<systemBlueprint name="oxygen">
+	<type>oxygen</type>
+	<title>Максимальный запас здоровья снижен</title>
+	<desc>Кислородный модуль</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>25</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+		<level>75</level> <!-- imaginary level 4 -->
+	</upgradeCost>
+	<cost>0</cost>
+</systemBlueprint>
+
+<systemBlueprint name="teleporter">
+	<type>teleporter</type>
+	<title>Поддерживает концентрацию кислорода на корабле. Улучшение модуля увеличивает скорость восстановления после разгерметизации.</title>
+	<desc>Телепортер</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>30</level> <!-- level 2 -->
+		<level>60</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>90</cost>  <!--CHANGED was 75-->
+	<locked>1</locked>
+</systemBlueprint>
+
+<systemBlueprint name="cloaking">
+	<type>cloaking</type>
+	<title>Позволяет телепортировать членов вашего экипажа на вражеский корабль.</title>
+	<desc>Маскировка</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>30</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>150</cost>
+	<locked>1</locked>
+</systemBlueprint>
+
+<systemBlueprint name="pilot">
+	<type>pilot</type>
+	<title>Делает ваш корабль невидимым, повышая уклонение на 60 процентов и предотвращая наведение орудий вражеского корабля.</title>
+	<desc>Рубка управления</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>20</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>1</cost>
+</systemBlueprint>
+
+<systemBlueprint name="medbay">
+	<type>medbay</type>
+	<title>Позволяет кораблю совершать FTL прыжки и уворачиваться при наличии пилота. При улучшении добавляется авто-пилот, способный уклоняться без пилота.</title>
+	<desc>Heals all crew-members within the Позволяет кораблю совершать FTL прыжки и уворачиваться при наличии пилота. При улучшении добавляется авто-пилот, способный уклоняться без пилота. room. Upgrading increases healing speed.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>35</level> <!-- level 2 -->
+		<level>45</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>50</cost>
+</systemBlueprint>
+
+
+<systemBlueprint name="shields">
+	<type>shields</type>
+	<title>Лечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.</title>
+	<desc>Powers your shields. Each additional barrier can block one shot.</desc>
+	<startPower>2</startPower>
+	<maxPower>8</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>100</level> <!-- level 2 -->
+		<level>20</level> <!-- level 3 -->
+		<level>30</level> <!-- level 4 -->
+		<level>40</level> <!-- level 5 -->
+		<level>60</level> <!-- level 6 -->
+		<level>80</level> <!-- level 7 -->
+		<level>100</level> <!-- level 8 -->
+		<level>120</level> <!-- Imaginary level 9 -->
+	</upgradeCost>
+	<cost>125</cost>
+</systemBlueprint>
+
+<systemBlueprint name="artillery">
+	<type>artillery</type>
+	<title>Снабжает энергией ваши щиты. Каждый слой щита блокирует одно попадание. Улучшение увеличивает количество слоёв.</title>	<!-- dummy text. will steal from whatever weapon blueprint it uses-->
+	<desc>Артиллерийский луч</desc>	<!-- dummy text. will steal from whatever weapon blueprint it uses-->
+	<startPower>2</startPower>
+	<maxPower>4</maxPower>
+	<rarity>0</rarity>
+	<upgradeCost>
+		<level>30</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+		<level>80</level> <!-- level 4 -->
+	</upgradeCost>
+	<cost>150</cost>
+</systemBlueprint>
+
+<systemBlueprint name="engines">
+	<type>engines</type>
+	<title>Инжиnes</title>
+	<desc>Двигатели</desc>
+	<startPower>2</startPower>
+	<maxPower>8</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>10</level> <!-- level 2 -->
+		<level>15</level> <!-- level 3 -->
+		<level>30</level> <!-- level 4 -->
+		<level>40</level> <!-- level 5 -->
+		<level>60</level> <!-- level 6 -->
+		<level>80</level> <!-- level 7 -->
+		<level>120</level> <!-- level 8 -->
+		<level>150</level> <!-- Imaginary level 9 -->
+	</upgradeCost>
+	<cost>1</cost>
+</systemBlueprint>
+
+<systemBlueprint name="weapons">
+	<type>weapons</type>
+	<title>Снабжает энергией FTL-привод и позволяет кораблю уклонятся. При улучшении повышает вероятность уклонения и скорость зарядки привода.</title>
+	<desc>Управление орудиями</desc>
+	<startPower>4</startPower>
+	<rarity>1</rarity>
+	<maxPower>8</maxPower>
+	<upgradeCost>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<level>40</level> <!-- level 2 -->  <!-- CHANGED was 60-->
+		<level>25</level> <!-- level 3 -->
+		<level>35</level> <!-- level 4 -->
+		<level>50</level> <!-- level 5 -->
+		<level>75</level> <!-- level 6 -->
+		<level>90</level> <!-- level 7 -->
+		<level>100</level> <!-- level 8 -->
+		<level>120</level> <!-- Imaginary level 9 -->
+	</upgradeCost>
+	<cost>20</cost>
+</systemBlueprint>
+
+<systemBlueprint name="drones">
+	<type>drones</type>
+	<title>Питает все орудийные системы корабля. Дальнейшая модернизация снабдит энергией одновременно больше орудий.</title>
+	<desc>Управление дронами</desc>
+	<startPower>2</startPower>
+	<maxPower>8</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>10</level> <!-- level 2 -->
+		<level>20</level> <!-- level 3 -->
+		<level>30</level> <!-- level 4 -->
+		<level>45</level> <!-- level 5 -->
+		<level>60</level> <!-- level 6 -->
+		<level>80</level> <!-- level 7 -->
+		<level>100</level> <!-- level 8 -->
+		<level>120</level> <!-- Imaginary level 9 -->
+	</upgradeCost>
+	<cost>60</cost>
+</systemBlueprint>
+
+<systemBlueprint name="sensors">
+	<type>sensors</type>
+	<title>Снабжает энергией всех корабельных дро- нов. Дроны — автоматизированные роботы, которые выполняют такие задачи, как атака вражеского корабля или ремонт систем.</title>
+	<desc>Сенсоры</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>25</level> <!-- level 2 -->
+		<level>40</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>40</cost>
+</systemBlueprint>
+
+<systemBlueprint name="doors">
+	<type>doors</type>
+	<title>Показывают интерьер вашего корабля и снабжают информацией о вражеских кораблях.</title>
+	<desc>Система шлюзов</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>	
+		<level>35</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>60</cost>
+</systemBlueprint>
+
+
+
+
+
+
+<!--    *********************
+          WEAPON BLUEPRINTS
+		*********************
+-->
+
+<!-- For weapon art, all weapons will default to 'default' unless you give it something else...Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		this prevents invisible weapons -->
+		
+<!-- Default Speeds: Laser = 60, Beams = 5, Описание корабляs = 35.. sorry the numbers have no meaning -->
+
+<weaponBlueprint name="ARTILLERY_BOSS_1">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Лазер босса</title>
+	<short>Лазер босса</short>
+	<desc>ssss</desc>
+	<tooltip>Р. босса</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>20</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_BOSS_2">
+	<type>Р. босса</type>
+	<title>Артиллерия производит 3 выстрела ракетами по 1 урону каждая.</title>
+	<short>Необходимо энергии: 3 Запускает 2 ракеты, которые пробивают все щиты и наносят 2 единицы урона. Требуется 2 ракеты на выстрел</short>
+	<desc>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</desc>
+	<tooltip>Fires 3 missiles; 1 damage each; pierces all shields.</tooltip>
+	<!--<desc>Луч босса</desc>-->
+	<damage>1</damage>
+	<missiles>0</missiles>
+	<shots>3</shots>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>23</cooldown>
+	<power>1</power>
+	<cost>80</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<image>missile_1</image>
+	<launchSounds>
+		<sound>smallОписание корабля1</sound>
+		<sound>smallОписание корабля2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_2</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_BOSS_3">
+	<type>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</type>
+	<tip>tip_beams</tip>
+	<title>Защитник</title>
+	<short>Защитник</short>
+	<desc>2 damage beam with a long trail.</desc>
+	<tooltip>Тяжелое Ионное орудие</tooltip>
+	<!--<desc>Защитный лазер Марк I</desc>-->
+	<damage>2</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>26</cooldown>
+	<power>1</power>
+	<cost>70</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>100</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>boss_3</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_BOSS_4">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Boss Ion</title>
+	<short>Boss Ion</short>
+	<locked>1</locked>
+	<desc>1 damage ion 3 shots</desc>
+	<tooltip>1 damage ion 3 shots</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>40</speed>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>28</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>ion_4_shot</image>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.1</sound>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.2</sound>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_4</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</weaponBlueprint>
+
+
+<weaponBlueprint name="ARTILLERY_FED">
+	<type>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</type>
+	<title>Снабжает энергией ваши щиты. Каждый слой щита блокирует одно попадание. Улучшение увеличивает количество слоёв.</title>
+	<short>Artillery</short>
+	<desc>Артиллерийский луч</desc>
+	<tooltip>Artillery: Beam that automatically fires a 1 damage beam that pierces all shields</tooltip>
+	<damage>1</damage>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<speed>13</speed>
+	<cooldown>40</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>500</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>artillery_fed</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</weaponBlueprint>
+
+
+<!--------------
+	SIMPLE Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.SДелает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать. -------------->
+
+<weaponBlueprint name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_1">  <!-- 1 shot 1power-->
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Выстреливает 2 лазерных луча, нанося 1 единицу повреждения каждым.</title>
+	<short>Выстреливает 2 лазерных луча, нанося 1 единицу повреждения каждым.</short>
+	<tip>tip_laser</tip>
+	<desc>Импульсный лазер Марк I</desc>
+	<tooltip>Имп. лазер I</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_2">  <!--1 power 2 shots-->
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Тяжелый лазер Марк I</title>
+	<short>Импульсный лазер Марк II</short>
+	<tip>tip_laser</tip>
+	<desc>Имп. лазер II</desc>
+	<tooltip>Слегка улучшенная версия импульсного лазера, которая способна сделать большее количество выстрелов за один цикл зарядки.</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>25</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_2</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_2_A">  <!-- 2 power 2 shots -->
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Импульсный лазер Марк III</title>
+	<short>Имп. лазер III</short>
+	<tip>tip_laser</tip>
+	<desc>Мощный импульсный лазер, который способен вести впечатляющий шквальный огонь.</desc>
+	<tooltip>Слегка улучшенная версия импульсного лазера, которая способна сделать большее количество выстрелов за один цикл зарядки.</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>11</cooldown>
+	<power>2</power>
+	<cost>50</cost>
+	<bp>4</bp>
+	<rarity>1</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_2</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_3">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Импульсный лазер Марк IIII</title>
+	<short>Имп. лазер IIII</short>
+	<tip>tip_laser</tip>
+	<desc>Производит 1 выстрел, наносящий 2 единицы повреждений. Имеет низкий шанс вызвать пожар или пробить обшивку.</desc>
+	<tooltip>Тяж. лазер II</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<cost>80</cost>
+	<bp>7</bp>
+	<rarity>4</rarity>
+	<image>laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_3</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_5">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Импульсный лазер Марк IIIII</title>
+	<short>Выстреливает 2 тяжёлых лазерных луча, нанося каждым по 2 единицы повреждения. Низкая вероятность нарушить целостность корпуса или начать пожар.</short>
+	<tip>tip_laser</tip>
+	<desc>Тяжёлые лазеры способны нанести больше ущерба, нежели их меньшие аналоги — импульсные лазеры. Данная модификация проникает сквозь 1 слой щита.</desc>
+	<tooltip>Тяжелый проникающий лазер Марк I</tooltip>
+	<damage>1</damage>
+	<shots>5</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>19</cooldown>
+	<power>4</power>
+	<cost>95</cost>  <!--was 110-->
+	<bp>10</bp>
+	<rarity>4</rarity>
+	<image>laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_5</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+
+
+
+<!--------------
+	HEAVY Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.S
+ -------------->
+<weaponBlueprint name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_1">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Делает 1 выстрел, нанося 2 единицы повреждения с низкой вероятностью нарушить целостность корпуса или начать пожар. Проникает сквозь 1 слой щита.</title>
+	<short>Тяжёлый лазер Марк I</short>
+	<tip>tip_laser</tip>
+	<desc>Тяж. лазер I</desc>
+	<tooltip>Кристалл</tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<breachChance>3</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>50</cost> <!-- was 55-->
+	<bp>6</bp>
+	<rarity>2</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_heavy_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_2">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Делает 1 выстрел, нанося 2 единицы повреждения с низкой вероятностью нарушить целостность корпуса или начать пожар. Проникает сквозь 1 слой щита.I</title>
+	<short>Тяжёлый лазер Марк II</short>
+	<tip>tip_laser</tip>
+	<desc>Лето</desc>
+	<tooltip>Эта слабая и устаревшая пусковая установка всё ещё способна принести пользу.</tooltip>
+	<damage>2</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<breachChance>3</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>13</cooldown>
+	<power>3</power>
+	<cost>65</cost>  <!--was 75-->
+	<bp>10</bp>
+	<rarity>4</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_heavy_2</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_1_SP">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Ракеты Артемида</title>
+	<short>Артемида</short>
+	<tip>tip_laser</tip>
+	<desc>Тяж. лазер I. This modified version pierces 1 shield.</desc>
+	<tooltip>Стреляет 1 ракетой, наносит 2 единицы повреждения, игнорирует защитное поле.</tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>3</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>55</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_heavy_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
+<!----------------
+	CRYSTAL SHARD
+----------------->
+
+<weaponBlueprint name="CRYSTAL_1">
+	<type>Р. босса</type>
+	<title>Древние предки роков. Shard</title>
+	<short>Древние предки роков.</short>
+	<desc>Стреляет 1 ракетой, наносит 2 единицы повреждения, игнорирует защитное поле.</desc>
+	<tooltip>Стреляет 1 ракетой, наносит 2 единицы повреждения, игнорирует защитное поле.</tooltip>
+	<damage>1</damage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard</image>
+	<launchSounds>
+		<sound>smallОписание корабля1</sound>
+		<sound>smallОписание корабля2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>crystal_shard</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</weaponBlueprint>
+
+<!--------------
+	Р. босса
+ -------------->
+
+<weaponBlueprint name="Р. босса_1">
+	<type>Р. босса</type>
+	<tip>tip_missiles</tip>
+	<title>Стандартные, но мощные ракеты.</title>
+	<short>Стреляет 1 ракетой, наносит 3 единицы повреждения, игнорирует защитное поле.</short>
+	<desc>Креативный подход к форме этих ракет позволяет запускать две штуки по цене одной.</desc>
+	<tooltip>Ракеты Пегас</tooltip>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>missile_1</image>
+	<launchSounds>
+		<sound>smallОписание корабля1</sound>
+		<sound>smallОписание корабля2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Р. босса_2_PLAYER">
+	<type>Р. босса</type>
+	<tip>tip_missiles</tip>
+	<title>Стреляет 2 ракетами, наносит 2 единицы повреждения каждая, игнорирует защитное поле.</title>
+	<short>Выстреливает одной ракетой, наносит 4 единицы повреждений, игнорирует щиты, высокий шанс пробить обшивку.</short>
+	<desc>Бронебойные ракеты</desc>
+	<tooltip>Бронебой</tooltip>
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>11</cooldown>
+	<power>1</power>
+	<cost>38</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>missile_2</image>
+	<launchSounds>
+		<sound>smallОписание корабля1</sound>
+		<sound>smallОписание корабля2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Р. босса_2">
+	<type>Р. босса</type>
+	<tip>tip_missiles</tip>
+	<title>Стреляет 2 ракетами, наносит 2 единицы повреждения каждая, игнорирует защитное поле.</title>
+	<short>Выстреливает одной ракетой, наносит 4 единицы повреждений, игнорирует щиты, высокий шанс пробить обшивку.</short>
+	<desc>Бронебойные ракеты</desc>
+	<tooltip>Бронебой</tooltip>
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>38</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>missile_2</image>
+	<launchSounds>
+		<sound>smallОписание корабля1</sound>
+		<sound>smallОписание корабля2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Р. босса_3">
+	<type>Р. босса</type>
+	<tip>tip_missiles</tip>
+	<title>Луч копьё</title>
+	<short>Луч копьё</short>
+	<desc>Способен разрезать корабль надвое, при условии, что нет щита, способного его остановить.</desc>
+	<tooltip>Лучевое оружие с увеличенной длиной луча. 1 единица повреждений на отсек.</tooltip>
+	<!--<desc>Power Req: 2    Pierces through all shields and deals 3 damage with a chance of fire and breaches. Uses 1 missile per shot.</desc>-->
+	<damage>3</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>2</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>14</cooldown>
+	<power>3</power>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<cost>45</cost> <!--was 50-->
+	<bp>6</bp>
+	<rarity>2</rarity>
+	<image>missile_3</image>
+	<launchSounds>
+		<sound>smallОписание корабля1</sound>
+		<sound>smallОписание корабля2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_2</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Р. босса_BURST">
+	<type>Р. босса</type>
+	<tip>tip_missiles</tip>
+	<title>Медленное, но достаточно мощное стандартное лучевое оружие.</title>
+	<short>Лучевое орудие, 2 единицы повреждений на отсек. Имеет низкий шанс пробить обшивку.</short>
+	<desc>Анти-биологический луч</desc>
+	<tooltip>Fires 2 missiles; 2 damage each; pierces all shields.</tooltip>
+	<!--<desc>Луч босса</desc>-->
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>2</shots>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>2</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>20</cooldown>
+	<power>3</power>
+	<cost>60</cost> <!--was 80 -->
+	<bp>7</bp>
+	<rarity>3</rarity>
+	<image>missile_2</image>
+	<launchSounds>
+		<sound>smallОписание корабля1</sound>
+		<sound>smallОписание корабля2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Р. босса_BREACH">
+	<type>Р. босса</type>
+	<tip>tip_missiles</tip>
+	<title>Анти-биологический луч</title>
+	<short>Огненный луч</short>
+	<desc>Огненный луч</desc>
+	<tooltip>Этот ужасающий луч вызывает возгорания, но при этом не наносит физических повреждений.</tooltip>
+	<!--<desc>Лучевое орудие, вызывающее возгорание.</desc>-->
+	<damage>4</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>8</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>22</cooldown>
+	<power>3</power>
+	<cost>65</cost> <!--was 70 -->
+	<bp>7</bp>
+	<rarity>3</rarity>
+	<image>missile_breach</image>
+	<launchSounds>
+		<sound>smallОписание корабля1</sound>
+		<sound>smallОписание корабля2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_2</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+
+
+
+
+<!--------------
+	Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку. WEAPONS
+ -------------->
+
+<weaponBlueprint name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._1">
+	<type>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</type>
+	<tip>tip_beams</tip>
+	<title>Анти-био луч</title>
+	<short>Анти-био луч</short>
+	<desc>Мощное лучевое орудие, которое наносит значительные повреждения вражескому экипажу.</desc>
+	<tooltip>Малая бомба</tooltip>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<speed>3</speed>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>45</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>beam_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._LONG">
+	<type>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</type>
+	<tip>tip_beams</tip>
+	<title>Производит 2 выстрела, наносящих по 1 единице повреждений отсекам с системами и 2 единицы повреждений отсекам без них.</title>
+	<short>Производит 2 выстрела, наносящих по 1 единице повреждений отсекам с системами и 2 единицы повреждений отсекам без них.</short>
+	<desc>Малая бомба</desc>
+	<tooltip>Корпусный лазер Марк II</tooltip>
+	<!--<desc>Корп. лазер II</desc>-->
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>13</speed>
+	<cooldown>16</cooldown>
+	<power>2</power>
+	<cost>55</cost> <!--was 60-->
+	<bp>5</bp>
+	<rarity>2</rarity>
+	<image>beam_contact</image>
+	<length>170</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>beam_long</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._2">
+	<type>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</type>
+	<tip>tip_beams</tip>
+	<title>Корпусная ракета</title>
+	<short>Корпусная ракета</short>
+	<desc>Корп. луч</desc>
+	<tooltip>Этот луч наиболее эффективен на больших пустых секциях корпуса.</tooltip>
+	<!--<desc>Защитный лазер Марк I</desc>-->
+	<damage>2</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>17</cooldown>
+	<power>3</power>
+	<cost>65</cost> <!--was 70-->
+	<bp>7</bp>
+	<rarity>2</rarity>
+	<length>80</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_2</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._3">
+	<type>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</type>
+	<title>Корп. ракета</title>
+	<short>Корп. ракета</short>
+	<tip>tip_beams</tip>
+	<desc>Производит 1 ракетный выстрел. Наносит 2 единицы урона помещениям с системами, 4 единицы урона отсекам без них.</desc>
+	<tooltip>Малая бомба</tooltip>
+	<!--<desc>Ионный бластер</desc>-->
+	<damage>3</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>25</cooldown>
+	<power>4</power>
+	<cost>95</cost> <!--was 120-->
+	<bp>12</bp>
+	<rarity>5</rarity>
+	<length>80</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_3</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._FIRE">
+	<type>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</type>
+	<tip>tip_beams</tip>
+	<title>Выпускает один заряд, наносящий 1 единицу ионного повреждения. Может поражать и отключать как щиты, так и системы.</title>   <!-- Induction beam? -->
+	<short>Выпускает один заряд, наносящий 1 единицу ионного повреждения. Может поражать и отключать как щиты, так и системы.</short>
+	<desc>Тяжелая ионная пушка</desc>
+	<tooltip>Ион. пушка</tooltip>
+	<!--<desc>Ионное оружие способно отключать системы корабля, не нанося повреждений корпусу.</desc>-->
+	<damage>0</damage>
+	<sp>0</sp>
+	<fireChance>8</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>20</cooldown>
+	<power>2</power>
+	<cost>50</cost> <!--was 70-->
+	<bp>6</bp>
+	<rarity>3</rarity>
+	<length>140</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_fire</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._BIO">
+	<type>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</type>
+	<tip>tip_beams</tip>
+	<title>Ионный бластер Марк II</title>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<short>Ионный бластер Марк II</short>
+	<desc>This terrifying beam does no physical damage but rips through organic material, dealing heavy damage to crewmembers.</desc>
+	<tooltip>2 power beam weapon that greatly damages enemy crew.</tooltip>
+	<!--<desc>Ионное оружие способно отключать системы корабля, не нанося повреждений корпусу.</desc>-->
+	<damage>0</damage>
+	<persDamage>4</persDamage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<color> <!-- Color only works for beams -->
+		<r>255</r>
+		<g>110</g>
+		<b>0</b>
+	</color>
+	<speed>13</speed>
+	<power>2</power>
+	<cost>50</cost>
+	<bp>6</bp>
+	<rarity>5</rarity>
+	<length>140</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_bio</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+
+
+
+
+<!--------------
+	HULL SMASHER WEAPONS
+ -------------->
+
+<weaponBlueprint name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HULL_1">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>М. бомба</title>
+	<short>Телепортирующееся взрывное устройство, наносит повреждения системам и экипажу, не нанося повреждений корпусу. Может быть использовано на вашем корабле.</short>
+	<desc>A powerful laser designed to maximize hull damage.</desc>
+	<tip>tip_hull</tip>
+	<tooltip>Тяжёлый Марк I кристалинов</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>14</cooldown>
+	<hullBust>1</hullBust>
+	<power>2</power>
+	<cost>55</cost> <!--was 65-->
+	<rarity>2</rarity>
+	<speed>75</speed>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_hull</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>laserH</iconImage>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HULL_2">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>М. бомба Mark II</title>
+	<short>Телепортирующееся взрывное устройство, наносит повреждения системам и экипажу, не нанося повреждений корпусу. Может быть использовано на вашем корабле.I</short>
+	<tip>tip_hull</tip>
+	<desc>This powerful counterpart to the Hull Smasher Mark I fires more projectiles per shot.</desc>
+	<tooltip>Бронебойная бомба Марк II</tooltip>
+	<!--<desc>Брон. бомба II</desc>-->
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>15</cooldown>
+	<hullBust>1</hullBust>
+	<power>3</power>
+	<cost>75</cost> <!--was 100-->
+	<bp>7</bp>
+	<rarity>3</rarity>
+	<image>laser_heavy1</image>
+	<speed>90</speed>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_hull</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>laserH</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._HULL">
+	<type>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</type>
+	<tip>tip_beams</tip>
+	<title>Тяжёлый Марк I кристалинов</title>
+	<short>Тяжёлый Марк I кристалинов</short>
+	<tip>tip_hull</tip>
+	<desc>Огн. бомба</desc>
+	<tooltip>Телепортирующееся взрывное устройство, предназначенное для нанесения повреждений экипажу. Вызывает возгорание. Может быть использовано на вашем корабле.</tooltip>
+	<!--<desc>Бомбовое орудие, использующее ракеты. Вызывает возгорание, не нанося повреждений корпусу. Может быть использовано на вашем корабле.</desc>-->
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>14</cooldown>
+	<hullBust>1</hullBust>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>8</bp>
+	<rarity>3</rarity>
+	<image>beam_contact</image>
+	<length>100</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>beam_hull</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>beamH</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Р. босса_HULL">
+	<type>Р. босса</type>
+	<tip>tip_missiles</tip>
+	<tip>tip_missiles</tip>
+	<title>Ион. бомба</title>
+	<short>Телепортирующееся взрывное устройство, которое наносит ионные повреждения системам, отключая их. Может быть использовано на вашем корабле.</short>
+	<tip>tip_hull</tip>
+	<desc>Бомбовое оружие, использующее ракеты. Наносит только ионный урон. Может применяться на вашем корабле.</desc>
+	<tooltip>Тяжёлый Марк I кристалинов</tooltip>
+	<!--<desc>Лечащий импульс</desc>-->
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>3</breachChance>
+	<stunChance>1</stunChance>
+	<hullBust>1</hullBust>
+	<cooldown>17</cooldown>
+	<power>2</power>
+	<cost>65</cost> <!-- was 75-->
+	<bp>6</bp>
+	<rarity>3</rarity>
+	<image>missile_hull</image>
+	<launchSounds>
+		<sound>smallОписание корабля1</sound>
+		<sound>smallОписание корабля2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_2</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>missileH</iconImage>
+</weaponBlueprint>
+
+
+
+
+<!--------------
+	ION WEAPONS
+ -------------->
+
+<weaponBlueprint name="ION_1">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Бомба, использующая ракеты как боеприпасы. Исцеляет ближайших членов экипажа. Может применятся на своем корабле.</title>
+	<short>Бомба, использующая ракеты как боеприпасы. Исцеляет ближайших членов экипажа. Может применятся на своем корабле.</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>Запирающая бомба кристалинов</desc>
+	<tooltip>Зап. бомба</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>8</cooldown>
+	<power>1</power>
+	<cost>30</cost>
+	<bp>3</bp>
+	<rarity>3</rarity>
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.1</sound>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.2</sound>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="ION_2">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Этот супер-навороченный луч использует передовые наработки, легко проникая через все щиты. Однако в результате пришлось пожертвовать точностью.</title>
+	<short>Этот супер-навороченный луч использует передовые наработки, легко проникая через все щиты. Однако в результате пришлось пожертвовать точностью.</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>Запирающая бомба кристалинов</desc>
+	<tooltip>Модифицированное метательное орудие, выстреливающее 2 кристалла. Проникает сквозь 1 слой щитов.</tooltip>
+	<damage>0</damage>
+	<ion>2</ion>
+	<speed>40</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>13</cooldown>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<image>ion_4_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.1</sound>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.2</sound>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_2</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="ION_4">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Бомба, использующая ракеты как боеприпасы. Исцеляет ближайших членов экипажа. Может применятся на своем корабле. Mark II</title>
+	<short>Бомба, использующая ракеты как боеприпасы. Исцеляет ближайших членов экипажа. Может применятся на своем корабле. II</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>Запирающая бомба кристалинов</desc>
+	<tooltip>Проникает сквозь 1 слой щитов, выстреливает 3 кристалла, наносящих 1 единицу повреждения каждый.</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>4</cooldown>
+	<power>3</power>
+	<cost>70</cost> <!--was 80-->
+	<bp>6</bp>
+	<rarity>4</rarity>
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.1</sound>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.2</sound>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_4</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+
+
+
+<!--------------
+	Тяжёлый Марк I кристалинов WEAPONS
+ -------------->
+<weaponBlueprint name="Тяжёлый Марк I кристалинов_1"> <!-- 1power 2damage-->
+	<type>Тяжёлый Марк I кристалинов</type>
+	<tip>tip_bombs</tip>
+	<title>Тяж. I крист.</title>
+	<short>Модифицированное метательное орудие, стреляющее крупным кристаллом. Проникает сквозь 1 слой щитов.</short>
+	<locked>1</locked>
+	<desc>Проникает сквозь 1 слой щитов, выстреливает 1 кристалл, наносящий 2 единицы повреждения.</desc>
+	<tooltip>Стреляет быстрее чем Марк I, кроме того имеет способность блокировать вражеские лазеры.</tooltip>
+	<!--<desc>Тяжёлый Марк II кристалинов</desc>-->
+	<damage>0</damage>
+	<sysDamage>2</sysDamage>
+	<persDamage>2</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>13</cooldown>
+	<power>1</power>
+	<cost>45</cost> <!--was 55-->
+	<bp>4</bp>
+	<rarity>1</rarity>
+	<image>bomb1</image>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Тяжёлый Марк I кристалинов_BREACH_1">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<type>Тяжёлый Марк I кристалинов</type>
+	<tip>tip_bombs</tip>
+	<title>Огненный луч Bomb Mark I</title>
+	<short>Огненный луч I</short>
+	<locked>1</locked>
+	<desc>Self-teleporting explosive designed to damage systems and cause a breach. Can target your own ship.</desc>
+	<tooltip>Позволяет построить дрона по выбранной вами схеме. Каждое использование требует одну деталь дрона.</tooltip>
+	<!--<desc>Тяжёлый Марк II кристалинов</desc>-->
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>2</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>50</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_breach</image>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_breach</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Тяжёлый Марк I кристалинов_BREACH_2">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<type>Тяжёлый Марк I кристалинов</type>
+	<tip>tip_bombs</tip>
+	<title>Огненный луч Bomb Mark II</title>
+	<short>Огненный луч II</short>
+	<locked>1</locked>
+	<desc>Slower than Mark I but does more damage to systems and crew. Can target your own ship.</desc>
+	<tooltip>Это никогда НЕ должно появиться в магазине: ГЛЮК</tooltip>
+	<!--<desc>Тяжёлый Марк II кристалинов</desc>-->
+	<damage>0</damage>
+	<sysDamage>3</sysDamage>
+	<persDamage>3</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<cooldown>17</cooldown>
+	<power>2</power>
+	<cost>60</cost> <!--was 70-->
+	<bp>4</bp>
+	<rarity>4</rarity>
+	<image>bomb_breach</image>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_breach</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Тяжёлый Марк I кристалинов_FIRE">
+	<type>Тяжёлый Марк I кристалинов</type>
+	<tip>tip_bombs</tip>
+	<title>Медлительный боевой дрон, атакующий противника мини ракетами</title>
+	<short>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</short>
+	<locked>1</locked>
+	<desc>Анти-корабельный дрон I</desc>
+	<tooltip>Анти-кор I</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>2</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>10</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<cost>50</cost> <!--was 55-->
+	<bp>5</bp>
+	<rarity>2</rarity>
+	<image>bomb_fire</image>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_fire</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Тяжёлый Марк I кристалинов_ION">
+	<type>Тяжёлый Марк I кристалинов</type>
+	<tip>tip_bombs</tip>
+	<title>Атакующий лучевой дрон I</title>
+	<short>Лучевой I</short>
+	<locked>1</locked>
+	<desc>Боевой дрон, который постоянно атакует корабль противника небольшим лучевым оружием.</desc>
+	<tooltip>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</tooltip>
+	<damage>0</damage>
+	<ion>4</ion>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>22</cooldown> <!--was 21-->
+	<power>1</power>
+	<cost>55</cost> <!--was 65-->
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<image>bomb_ion</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_ion</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="Тяжёлый Марк I кристалинов_HEAL">
+	<type>Тяжёлый Марк I кристалинов</type>
+	<tip>tip_bombs</tip>
+	<title>Мощный дрон, который постоянно атакует корабль противника. Маневрирует луше и стреляет быстрее, чем Марк I.</title>
+	<short>Ремонтник корпуса</short>
+	<locked>1</locked>
+	<desc>Рем. корп.</desc>
+	<tooltip>Bomb weapon; requires a missile; heals nearby crewmembers. Can target your own ship.</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>-10</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>18</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<image>bomb_heal</image>
+	<explosion>explosion_big1_heal</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>healBomb</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_heal</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>bomb_heal</iconImage>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="Тяжёлый Марк I кристалинов_LOCK">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<type>Тяжёлый Марк I кристалинов</type>
+	<tip>tip_bombs</tip>
+	<title>Древние предки роков. Lockdown Bomb</title>
+	<short>Сбивает вражеские ракеты и астероиды.</short>
+	<locked>1</locked>
+	<desc>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля.</desc>
+	<tooltip>Bomb weapon; requires a missile; does no damage; prevents movement in or out of room. Can target your own ship.</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>0</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<lockdown>1</lockdown>
+	<cooldown>15</cooldown>
+	<power>1</power>
+	<cost>45</cost> <!--was 60-->
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_lockdown</image>
+	<explosion>explosion_lockdown</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_lockdown</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+
+
+
+
+
+
+<!--    *********************
+          Древние предки роков. Weapon BLUEPRINTS
+		*********************
+-->
+
+<weaponBlueprint name="CRYSTAL_BURST_1"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<type>Р. босса</type>
+	<title>Древние предки роков. Burst Mark I</title>
+	<short>Древние предки роков. B. I</short>
+	<tip>tip_crystal</tip>
+	<desc>Защитник II</desc>
+	<tooltip>Стреляет быстрее, чем Марк I, а также может подавлять лазеры противника.</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<speed>50</speed>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>crystalExplosion_small</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<explosion>explosion_crystal_2</explosion>
+	<weaponArt>crystal_burst_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>crystal</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="CRYSTAL_BURST_2"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<type>Р. босса</type>
+	<title>Древние предки роков. Burst Mark II</title>
+	<short>Древние предки роков. B. II</short>
+	<desc>Молниеносный телепорт</desc>
+	<tooltip>Противопехотный дрон</tooltip>
+	<damage>1</damage>
+	<tip>tip_crystal</tip>
+	<shots>3</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>17</cooldown>
+	<power>3</power>
+	<speed>50</speed>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>crystalExplosion_small</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<explosion>explosion_crystal_2</explosion>
+	<weaponArt>crystal_burst_2</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>crystal</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="CRYSTAL_HEAVY_1"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<type>Р. босса</type>
+	<tip>tip_crystal</tip>
+	<title>Heavy Древние предки роков. Mark I</title>
+	<short>Древние предки роков. H. I</short>
+	<desc>Абордажник</desc>
+	<tooltip>Проламывается через вражескую броню и наносит ущерб. Потрясающе!</tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>13</cooldown>
+	<power>1</power>
+	<speed>50</speed>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard3</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>crystalExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<explosion>explosion_crystal</explosion>
+	<weaponArt>crystal_heavy_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>crystalH</iconImage>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="CRYSTAL_HEAVY_2"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<type>Р. босса</type>
+	<tip>tip_crystal</tip>
+	<title>Heavy Древние предки роков. Mark II</title>
+	<short>Древние предки роков. H. II</short>
+	<desc>FTL-топливо</desc>
+	<tooltip>Заправляет ваш FTL привод. Один прыжок расходует одну единицу топлива.</tooltip>
+	<damage>4</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<stunChance>2</stunChance>
+	<cooldown>19</cooldown>
+	<power>3</power>
+	<speed>50</speed>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard3</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>crystalExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<explosion>explosion_crystal</explosion>
+	<weaponArt>crystal_heavy_2</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<iconImage>crystalH</iconImage>
+</weaponBlueprint>
+
+
+
+<!--    *********************
+          DRONE BLUEPRINTS
+		*********************
+-->
+
+<crewBlueprint name="battle">
+	<desc>Dummy blueprint needed now.</desc>
+	<cost>50</cost>
+	<bp>2</bp>
+	<title>Battle</title>
+	<short>Battle</short>
+	<rarity>0</rarity>
+	<powerList/>
+</crewBlueprint>
+
+<crewBlueprint name="repair">
+	<desc>Dummy blueprint needed now.</desc>
+	<cost>50</cost>
+	<bp>2</bp>
+	<title>Repair</title>
+	<short>Repair</short>
+	<rarity>0</rarity>
+	<powerList/>
+</crewBlueprint>
+
+<weaponBlueprint name="DRONE_Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Ракета</title>
+	<damage>1</damage>
+	<shots>1</shots>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</weaponBlueprint>
+
+<weaponBlueprint name="DRONE_Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._2">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Ракета 2</title>
+	<damage>1</damage>
+	<shots>1</shots>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<speed>120</speed>
+	<image>laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</weaponBlueprint>
+
+<weaponBlueprint name="DRONE_Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.">
+	<type>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</type>
+	<tip>tip_beams</tip>
+	<title>Drone Beam</title>
+	<short>Drone Beam</short>
+	<desc>'Baby's first beam'; Мощное лучевое орудие, которое наносит значительные повреждения вражескому экипажу.</desc>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<speed>3</speed>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>20</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>beam_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</weaponBlueprint>
+
+
+<weaponBlueprint name="DRONE_ION">
+	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
+	<title>Бомба, использующая ракеты как боеприпасы. Исцеляет ближайших членов экипажа. Может применятся на своем корабле.</title>
+	<short>Бомба, использующая ракеты как боеприпасы. Исцеляет ближайших членов экипажа. Может применятся на своем корабле.</short>
+	<tip>tip_ion</tip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>ion_1_shot</image>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.1</sound>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.2</sound>
+		<sound>ionЛечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</weaponBlueprint>
+
+<weaponBlueprint name="DRONE_MISSILE">
+	<type>Р. босса</type>
+	<title>Drone Описание корабля</title>
+	<short>Улучшенная обшивка</short>
+	<short>STUPID Р. босса</short>
+	<desc>Титан. покрытие систем</desc>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<rarity>0</rarity>
+	<image>missile_1</image>
+	<launchSounds>
+		<sound>smallОписание корабля1</sound>
+		<sound>smallОписание корабля2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</weaponBlueprint>
+
+<!-- NOT USED -->
+<droneBlueprint name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._ION">
+	<type>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</type>
+	<tip>tip_combat</tip>
+	<title>Скрытые орудия</title>
+	<short>Позволяют стрелять из режима невидимости, не прерывая его.</short>
+	<desc>Кран для ремонта</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>0</dodge>
+	<speed>5</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_combat</droneImage>
+	<weaponBlueprint>DRONE_ION</weaponBlueprint>
+	<rarity>0</rarity>
+</droneBlueprint>
+
+<!-- NOT USED -->
+<droneBlueprint name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._MISSILE">
+	<type>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</type>
+	<tip>tip_combat</tip>
+	<title>Усиленная обшивка корпуса</title>
+	<short>Кран для сбора лома</short>
+	<desc>Позволяет собирать на 10 процентов больше лома из любого источника.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>0</dodge>
+	<speed>5</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_combat</droneImage>
+	<weaponBlueprint>DRONE_MISSILE</weaponBlueprint>
+	<rarity>0</rarity>
+</droneBlueprint>
+
+
+<droneBlueprint name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._1">
+	<type>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</type>
+	<tip>tip_combat</tip>
+	<title>Combat Drone Mark I</title>
+	<short>Combat I</short>
+	<desc>Задержка между выстрелами орудий снижена на 15 процентов.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>0</dodge>
+	<speed>15</speed> <!--- Change this to increase/decrease firing speed -->  <!-- was 20-->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_combat</droneImage>
+	<weaponBlueprint>DRONE_Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</weaponBlueprint>
+	<rarity>2</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.">
+	<type>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</type>
+	<tip>tip_combat</tip>
+	<title>Повышает скорость перезарядки щита на 15 процентов.</title>
+	<short>Пред-зажигатель орудий</short>
+	<desc>Первая зарядка орудий происходит ещё до начала боя.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>0</dodge>
+	<speed>15</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_beam</droneImage>
+	<weaponBlueprint>DRONE_Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</weaponBlueprint>
+	<rarity>3</rarity>
+	<iconImage>beam</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._2">
+	<type>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</type>
+	<tip>tip_combat</tip>
+	<title>Combat Drone Mark II</title>
+	<short>Combat II</short>
+	<desc>Задержка между выстрелами орудий снижена на 15 процентов. Moves and shoots faster than Mark I.</desc>
+	<power>4</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>0</dodge>
+	<speed>28</speed> <!--- Change this to increase/decrease firing speed -->  <!-- was 45-->
+	<cost>75</cost> <!--was 100-->
+	<bp>8</bp>
+	<droneImage>drone_combat2</droneImage>
+	<!---- WEAPON INFO --->
+	<image>weapons/laser_light2_strip4.png</image>
+	<weaponBlueprint>DRONE_Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<!--- This guy, for now, flies like the combat drone but heals the ship  -->
+<droneBlueprint name="SHIP_Улучшенный внешний ИИ">
+	<type>SHIP_Улучшенный внешний ИИ</type>
+	<tip>tip_crew</tip>
+	<title>Механизм сбора дронов</title>
+	<short>Механизм сбора дронов</short>
+	<desc>Automatically repairs 3-5 damage to your hull. Drone part is consumed once it finishes.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect repair drone -->
+	<dodge>0</dodge>
+	<speed>20</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>85</cost> <!--was 100-->
+	<bp>5</bp>
+	<droneImage>drone_shiprepair</droneImage>
+	<image>weapons/laser_light2_strip4.png</image>
+	<rarity>4</rarity>
+	<iconImage>Srepair</iconImage>
+</droneBlueprint>
+
+
+<droneBlueprint name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1">
+	<type>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля.</type>
+	<level>1</level>
+	<tip>tip_defense</tip>
+	<title>Сломанная стазис-капсула</title>
+	<short>Этот причудливый чужеродный артефакт, как оказалось, едва функционирует. Он не имеет практического применения, но возможно кто-нибудь сможет починить его.</short>
+	<desc>Личные телепортеры</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
+	<dodge>0</dodge>
+	<speed>5</speed> <!--- Superficial change.. just makes it fly faster -->
+	<cost>50</cost>
+	<bp>2</bp>
+	<droneImage>drone_defense</droneImage>
+	<!---- WEAPON INFO --->
+	<weaponBlueprint>DRONE_Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</weaponBlueprint>
+	<iconImage>defense</iconImage>
+	<!----- -->
+	<rarity>1</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._2">
+	<type>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля.</type>
+	<tip>tip_defense</tip>
+	<target>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.S</target>
+	<title>Сломанная стазис-капсулаI</title>
+	<short>Этот причудливый чужеродный артефакт, как оказалось, едва функционирует. Он не имеет практического применения, но возможно кто-нибудь сможет починить его.I</short>
+	<desc>Система уплотнения корпуса</desc>
+	<power>3</power>
+	<cooldown>880</cooldown> <!-- Was 750--> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
+	<dodge>0</dodge>
+	<speed>7</speed> <!--- Superficial change.. just makes it fly faster -->
+	<cost>70</cost> <!-- Was 75 -->
+	<bp>6</bp>
+	<droneImage>drone_defense2</droneImage>
+	<!---- WEAPON INFO --->
+	<weaponBlueprint>DRONE_Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._2</weaponBlueprint>
+	<iconImage>defense2</iconImage>
+	<!----- -->
+	<rarity>3</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._2_ENEMY">
+	<type>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля.</type>
+	<tip>tip_defense</tip>
+	<target>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.S</target>
+	<title>Сломанная стазис-капсулаI</title>
+	<short>Этот причудливый чужеродный артефакт, как оказалось, едва функционирует. Он не имеет практического применения, но возможно кто-нибудь сможет починить его.I</short>
+	<desc>BUG- Should not be seen</desc>
+	<power>3</power>
+	<cooldown>880</cooldown> <!-- Was 750--> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
+	<dodge>0</dodge>
+	<speed>7</speed> <!--- Superficial change.. just makes it fly faster -->
+	<cost>70</cost> <!-- Was 75 -->
+	<bp>6</bp>
+	<droneImage>drone_defense2</droneImage>
+	<!---- WEAPON INFO --->
+	<weaponBlueprint>DRONE_Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._2</weaponBlueprint>
+	<iconImage>defense2</iconImage>
+	<!----- -->
+	<rarity>0</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="BOSS_Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._2">
+	<type>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля.</type>
+	<level>2</level>
+	<tip>tip_defense</tip>
+	<title>Сломанная стазис-капсулаI</title>
+	<short>Этот причудливый чужеродный артефакт, как оказалось, едва функционирует. Он не имеет практического применения, но возможно кто-нибудь сможет починить его.I</short>
+	<desc>Shoots faster than Mark I and can also shoot down incoming lasers.</desc>
+	<power>2</power>
+	<cooldown>750</cooldown> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
+	<dodge>0</dodge>
+	<speed>7</speed> <!--- Superficial change.. just makes it fly faster -->
+	<cost>75</cost>
+	<bp>6</bp>
+	<droneImage>drone_defense2</droneImage>
+	<!---- WEAPON INFO --->
+	<weaponBlueprint>DRONE_Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</weaponBlueprint>
+	<!----- -->
+	<rarity>0</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="Улучшенный внешний ИИ">
+	<type>Улучшенный внешний ИИ</type>
+	<tip>tip_crew</tip>
+	<title>Ваши защитные и атакующие дроны, работающие снаружи корабля, повысили эффективность на 20 процентов.</title>
+	<short>Sys Rep.</short>
+	<desc>Ваш сигнал бедствия имеет больше шансов быть принятым дружественными кораблями.</desc>
+	<power>1</power>
+	<cost>30</cost>
+	<bp>2</bp>
+	<rarity>1</rarity>
+	<iconImage>repair</iconImage>
+</droneBlueprint>
+
+
+<droneBlueprint name="Молниеносный телепорт">
+	<type>Молниеносный телепорт</type>
+	<locked>1</locked>
+	<tip>tip_crew</tip>
+	<title>Телепортер доступен сразу после сверхсветового прыжка.</title>
+	<short>Термостойкие костюмы</short>
+	<desc>Даёт всему лучевому оружию возможность пробивать 1 единицу защитного поля</desc>
+	<power>2</power>
+	<cost>35</cost> <!--was 60-->
+	<bp>3</bp>
+	<rarity>2</rarity>
+	<iconImage>battle</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="Пустельга">
+	<type>Пустельга</type>
+	<tip>tip_boarding</tip>
+	<locked>1</locked>
+	<title>Пустельга</title>
+	<short>Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.</short>
+	<desc>Огненный лучes through the enemy hull and wreaks havoc. Awesome.</desc>
+	<power>3</power>
+	<speed>18</speed>
+	<cost>70</cost>
+	<rarity>4</rarity> <!--was 5-->
+	<iconImage>boarder</iconImage>
+</droneBlueprint>
+
+
+<droneBlueprint name="Пустельга_BOSS">
+	<type>Пустельга</type>
+	<tip>tip_boarding</tip>
+	<locked>1</locked>
+	<title>Пустельга</title>
+	<short>Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.</short>
+	<desc>Огненный лучes through the enemy hull and wreaks havoc. Awesome.</desc>
+	<power>2</power>
+	<speed>18</speed>
+	<cost>70</cost>
+	<rarity>0</rarity>
+</droneBlueprint>
+
+
+
+<!--    *********************
+          ITEM BLUEPRINTS
+		*********************
+-->
+
+<itemBlueprint name="fuel">
+	<type>ITEM_FUEL</type>
+	<title>Этим кораблём владеет знаменитый вор богомолов КазааакплетхКилик. Вам придётся «убедить» его оказать вам помощь, чтобы испытать этот корабль в деле.</title>
+	<desc>Это боевое судно было спроектировано так, чтобы его команде было удобно идти на абордаж.</desc>
+	<cost>3</cost>
+	<rarity>1</rarity>
+</itemBlueprint>
+
+<itemBlueprint name="drones">
+	<type>ITEM_DRONE</type>
+	<title>Крейсер богомолов</title>
+	<desc>Этим кораблём владеет знаменитый вор богомолов КазааакплетхКилик. Вам придётся «убедить» его оказать вам помощь, если хотите испытать этот корабль в деле.</desc>
+	<cost>8</cost>
+	<rarity>3</rarity>
+</itemBlueprint>
+
+<itemBlueprint name="missiles">
+	<type>ITEM_MISSILE</type>
+	<title>Описание корабля</title>
+	<desc>Стелс-крейсер</desc>
+	<cost>6</cost>
+	<rarity>3</rarity>
+</itemBlueprint>
+
+<!--   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.
+					---------------------------------------
+					***************************************
+								AUGMENTATION BLUEPRINTS
+					***************************************
+					---------------------------------------
+-->
+
+<!-- SHIP SPECIFIC AUGMENTS -->
+
+<augBlueprint name="ROCK_ARMOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Этот корабль строился в глубинах владений инжи. Чтобы разблокировать его, вы должны помочь им, но имейте в виду — они доверяют только себе подобным.</title>
+	<desc>Superior hull armor provides a 15 percent chance to negate incoming hull damage (hit systems will still be damaged).</desc>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="CRYSTAL_SHARDS">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Древние предки роков. Vengeance</title>
+	<desc>Стелс-крейсер</desc>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.1</value>
+</augBlueprint>
+
+<augBlueprint name="ENERGY_SHIELD">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Золтанцы являются близкими союзниками инжи. Их врожденная энергия достаточно сильна, чтобы питать системы корабля. Shield</title>
+	<desc>An unexplained technology creates this nearly impenetrable shield. Only the energy outburst from an FTL engine is powerful enough to recharge it.</desc>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>2</value>
+</augBlueprint>
+
+
+<augBlueprint name="NANO_MEDBAY">
+	<title>Инжи Med-bot Dispersal</title>
+	<desc>Инжи nano med-bots heal the crew outside of the med-bay (at a reduced speed).</desc>
+	<cost>60</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.25</value>
+</augBlueprint>
+
+<augBlueprint name="SLUG_GEL">
+	<title>Слизней-телепатов избегают по всей галактике за их бесконечное воровство и способность манипулировать другими. Repair Gel</title>
+	<desc>Слизней-телепатов избегают по всей галактике за их бесконечное воровство и способность манипулировать другими. ships excrete a thick gel that automatically repairs any hull breaches.</desc>
+	<cost>60</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.25</value>
+</augBlueprint>
+
+<augBlueprint name="CREW_STIMS">
+	<title>Богомол Pheromones</title>
+	<desc>Крейсер инжи</desc>
+	<cost>50</cost>
+	<bp>9</bp>
+	<rarity>0</rarity>
+	<value>0.25</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+
+<augBlueprint name="DRONE_SPEED">
+	<title>Чтобы разблокировать этот корабль Инжи вам нужно добраться до 5-го сектора.</title>
+	<desc>Your shipboard drones have their movement speed increased by 25 percent.</desc>
+	<cost>50</cost>
+	<bp>9</bp>
+	<rarity>0</rarity>
+	<value>0.25</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<!--<augBlueprint name="ADV_HULL_ARMOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Крейсер Федерации</title>
+	<desc>State of the art hull armor provides a massive 25 percent chance to negate incoming hull damage (hit systems will still be damaged).</desc>
+	<cost>100</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.25</value>
+</augBlueprint>-->
+
+<augBlueprint name="SYSTEM_CASING">
+	<!--<title>Победите босса, чтобы разблокировать этот передовой крейсер Федерации.</title>-->
+	<title>Этот корабль оснащён новейшей технологией Федерации: улучшенное лучевое орудие, проникающее сквозь щиты!</title>
+	<desc>All ship systems have additional plating that provides a 15 percent chance to negate damage when hit (hull will still be damaged)</desc>
+	<cost>80</cost> <!--was 100-->
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+
+<!-- END RACE SPECIFIC AUGMENTS -->
+
+<augBlueprint name="ION_ARMOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Крейсер Федерации</title>
+	<desc>Protects your ship from ion damage, giving a 50 percent chance to negate it entirely.</desc>
+	<cost>45</cost> <!--was 60-->
+	<bp>8</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.50</value>
+</augBlueprint>
+
+<augBlueprint name="CLOAK_FIRE">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Этот корабль оснащен новейшей технологией Федерации: улучшенные лучевые орудия, которые проникают сквозь щиты!</title>
+	<desc>Крейсер слизней</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="Улучшенный внешний ИИ_ARM">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Один из кораблей слизней должен что-то знать об этом современном крейсере. Возможно, вы сможете «убедить» их рассказать вам.</title>
+	<desc>Созданный для использования внутри туманности, этот крейсер не имеет сенсоров, используя вместо них коварство и хитрость слизней.</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<!--<augBlueprint name="HULL_ARMOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Крейсер слизней</title>
+	<desc>Superior hull armor provides a 15 percent chance to negate incoming hull damage (hit systems will still be damaged).</desc>
+	<cost>60</cost>
+	<bp>8</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>-->
+
+<augBlueprint name="SCRAP_COLLECTOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Один из кораблей слизней должен что-то знать об этом современном крейсере. Возможно, вы сможете «убедить» их рассказать вам.</title>
+	<desc>Созданный для использования внутри туманности, этот крейсер не имеет сенсоров, полагаясь вместо них на коварство и хитрость слизней.</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>1</rarity>
+	<stackable>true</stackable>
+	<value>0.10</value>
+</augBlueprint>
+
+<augBlueprint name="ADV_SCANNERS">
+	<title>Крейсер роков</title>
+	<desc>Adds additional info about nearby Beacons on the star map.</desc>
+	<cost>30</cost>
+	<bp>3</bp>
+	<rarity>1</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="AUTO_COOLDOWN">
+	<title>Подобно своим создателям, этот супер плотный бегемот сокрушает своих врагов в основном с помощью грубой силы.</title>
+	<desc>Cooldown between weapon shots is improved by 10 percent.</desc>
+	<cost>40</cost>
+	<bp>5</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.10</value>
+</augBlueprint>
+
+<augBlueprint name="SHIELD_RECHARGE">
+	<title>Заблокировано, пока не в игре</title>
+	<desc>Подобно своим создателям, этот супер плотный бегемот сокрушает своих врагов в основном с помощью грубой силы.</desc>
+	<cost>45</cost>
+	<bp>5</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="WEAPON_PREIGNITE">
+	<title>Крейсер золтанцев</title>
+	<desc>Учитесь у золтанцев, иногда дипломатия работает.</desc>
+	<cost>120</cost>
+	<bp>16</bp>
+	<rarity>4</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="FTL_BOOSTER">
+	<title>Технология продвинутых щитов золтанцев даёт этому кораблю преимущество в каждом бою.</title>
+	<desc>Крейсер золтанцев</desc>
+	<cost>50</cost>
+	<bp>4</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.25</value>
+</augBlueprint>
+
+<augBlueprint name="FTL_JUMPER">
+	<title>Учитесь у золтанцев, иногда дипломатия работает.</title>
+	<desc>Allows the ship to jump to any previously visited Beacon.</desc>
+	<cost>50</cost> <!--was 60-->
+	<bp>5</bp>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="DRONE_RECOVERY"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Крейсер кристалинов</title>
+	<desc>Отправляйтесь в неизученный сектор галактики, чтобы найти этот мощный корабль.</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>2</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="FTL_JAMMER">
+	<title>Этот мощный корабль оснащен секретными технологиями потерянной расы кристалин.</title>
+	<desc>Scramble enemy ships' FTL computers, doubling the time it takes for them to jump.</desc>
+	<cost>30</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<value>2</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+
+
+<augBlueprint name="STASIS_POD">
+	<title>Отправляйтесь в неизученный сектор галактики, чтобы найти этот мощный корабль.</title>
+	<desc>Этот мощный корабль оснащен секретными технологиями потерянной расы кристалин.</desc>
+	<cost>30</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+
+<!--OTHER IDEAS --Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<augBlueprint name="PERSONAL_TELEPORTER">            requires a teleporter system to be working???
+	<title>Пират</title>
+	<desc>Пустельга</desc>
+	<cost>150</cost>
+	<rarity>4</rarity>
+	<stackable>false</stackable>
+</augBlueprint>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.
+<augBlueprint name="FLIGHT_SUITS"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Невероятный пират</title>
+	<desc>Рейдер повстанцев</desc>
+	<cost>80</cost>
+	<rarity>2</rarity>
+	<value>0.5</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="SHIP_SEALING">
+	<title>Элитный повстанец</title>
+	<desc>O2 will deplete at 50% speed when the Максимальный запас здоровья снижен system is unpowered.</desc>
+	<cost>100</cost>
+	<rarity>2</rarity>
+	<value>0.5</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="MISSILE_REPLICATOR">
+	<title>Описание корабля Replication System</title>
+	<desc>Пёстрые обломки</desc>
+	<cost>100</cost>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+	
+<augBlueprint name="INTERNAL_AI">
+	<title>Пёстрые обломки</title>
+	<desc>Your interior drones (repair and battle) are 20 percent more effective.</desc>    maybe they just move at normal human speed
+	<cost>100</cost>
+	<rarity>3</rarity>
+	<value>0.2</value>
+	<stackable>true</stackable>
+</augBlueprint>
+
+<augBlueprint name="EXTERNAL_AI">
+	<title>Пёстрые обломки</title>
+	<desc>Your exterior drones (defense and combat) are 20 percent more effective.</desc>
+	<cost>100</cost>
+	<rarity>3</rarity>
+	<value>0.2</value>
+	<stackable>true</stackable>
+</augBlueprint>
+
+
+
+
+<!----PROBABLY NOT:---
+
+<augBlueprint name="ENCODED_DISTRESS">
+	<title>Флагман повстанцев</title>
+	<desc>Флагман повстанцев</desc>
+	<cost>100</cost>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBluepring name="TELEPORTER_PREIGNITE">
+	<title>Teleporter Pre-igniter</title>
+	<desc>The teleporter is made immediately available after an FTL jump.</desc>
+	<cost>130</cost>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="HEAT_RESIST">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Heat Resistant Suits</title>
+	<desc>Reduces damage crew takes from fire by 50%</desc>
+	<cost>70</cost>
+	<rarity>2</rarity>
+	<value>0.5</value>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._PIERCE"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title></title>
+	<desc>Gives all beam weapons 1 shield piercing</desc>
+	<cost>80</cost>
+	<rarity>2</rarity>
+	<value>1</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+ -->
+
+
+Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!--   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.
+					---------------------------------------
+					***************************************
+								SHIP BLUEPRINTS
+					***************************************
+					---------------------------------------
+-->
+
+
+<!--
+					***************************************
+								Player Ship
+					***************************************
+-->
+
+<!--Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		THIS SHIP IS NOT USED
+		
+-->
+<shipBlueprint name="PLAYER_SHIP_EASY" layout="kestral" img="kestral">
+	<class>Kestrel</class>
+	<name>The Kestrel</name>
+	<systemList>
+		<pilot power="1" room="0" start="true"/>
+		<doors power="1" room="2" start="true"/>
+		<sensors power="1" room="3" start="true"/>
+		<medbay power="1" room="4" start="true"/>
+		<oxygen power="1" room="13" start="true"/>
+		<shields power="2" room="5" start="true"/>
+		<engines power="2" room="14" start="true"/>
+		<weapons power="3" room="10" start="true"/>
+		<drones power="2" room="1" start="false"/>
+		<teleporter power="1" room="15"	start="false"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<cloaking power="1" room="8" start="false"/>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="8">
+		<weapon name="Р. босса_2_PLAYER"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_3"/>
+	</weaponList>
+	<health amount="30"/>
+	<maxPower amount ="8"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "3" class="human"/>
+</shipBlueprint>
+
+
+
+
+
+
+<!-- BOSS-READY SHIP -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!--
+<shipBlueprint name="PLAYER_SHIP_HARD" layout="kestral" img="kestral">
+	<class>Kestrel</class>
+	<name>The Kestrel</name>
+	<desc>This class of ship was decommissioned from Federation service years ago. After a number of refits and updating this classic ship is ready for battle.</desc>
+	<systemList>
+		<pilot power="2" room="0" start="true" img="room_pilot"/>
+		<doors power="2" room="2" start="true" img="room_doors"/>
+		<sensors power="2" room="3" start="true" img="room_sensors"/>
+		<medbay power="2" room="4" start="true" img="room_medbay"/>
+		<oxygen power="2" room="13" start="true" img="room_oxygen"/>
+		<shields power="8" room="5" start="true" img="room_shields"/>
+		<engines power="5" room="14" start="true" img="room_engines"/>
+		<weapons power="7" room="10" start="true" img="room_weapons"/>
+		<drones power="4" room="1" start="true"/>
+		<teleporter power="2" room="15"	start="true"/>
+		<cloaking power="2" room="8" start="true"/>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="4" missiles="16">
+		<weapon name="Р. босса_2"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_3"/>
+		<weapon name="Р. босса_2"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_3"/>
+	</weaponList>
+	<droneList count="2" drones="10">
+		<drone name="DRONE_Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку."/>
+		<drone name="Улучшенный внешний ИИ"/>
+	</droneList>
+	<health amount="30"/>
+	<maxPower amount ="28"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "6" class="human"/>
+</shipBlueprint>
+-->
+
+
+
+
+
+
+
+<!-- Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.   ***********************
+   The Kestrel
+   ***********************
+ -->
+
+ <!-- Slots for when placing computers are numbered like so:
+	0 1
+	2 3
+-->
+<!-- slot for medbay defines which slot is blocked -   "-2" means no blocked slot-->
+									
+<!-- THE KESTREL -->
+<!-- LAYOUT = DEFAULT -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 0 -->   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.
+
+<shipBlueprint name="PLAYER_SHIP_HARD" layout="kestral" img="kestral">
+	<class>Kestrel Cruiser</class>
+	<name>The Kestrel</name>
+	<desc>This class of ship was decommissioned from Federation service years ago. After a number of refits and updates this classic ship is ready for battle.</desc>
+	<systemList>
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</pilot>
+		<doors power="1" room="2" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<sensors power="1" room="3" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<medbay power="1" room="4" start="true" img="room_medbay">  <!-- F????-->
+			<slot>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</clonebay>
+		<clonebay power="1" room="4" start="false"> <!-- T????-->
+			<slot>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</clonebay>
+		<oxygen power="1"  room="13" start="true" img="room_oxygen"/>
+		<shields power="2" room="5" start="true" img="room_shields"/>
+		<engines power="2" room="14" start="true" img="room_engines"/>
+		<weapons power="3" room="10" start="true" img="room_weapons"/>
+		<drones power="2" room="1" start="false"/>  <!-- F-->
+		<teleporter power="1" room="15"	start="false"/>  <!-- F-->
+		<cloaking power="1" room="8" start="false" />  <!-- F-->
+		<battery power="1" room="11" start="false" img="room_battery"/>    <!-- F-->
+		<mind power="1" room="7" start="false" img="room_mind"/>  <!-- F-->
+		<hacking power="1" room="12" start="false" img="room_hacking"> <!-- F-->
+			<slot>
+				<direction>down</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="8">
+		<weapon name="Р. босса_2_PLAYER"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_3"/>
+	</weaponList>
+	<droneList count="1" drones="2">
+	</droneList>
+	<health amount="30"/>
+	<maxPower amount ="8"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "3" class="human"/>
+</shipBlueprint>
+
+<!-- THE KESTREL -->
+<!-- LAYOUT = 2 -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = ?? -->
+
+<shipBlueprint name="PLAYER_SHIP_HARD_2" layout="kestral_2" img="kestral_2">
+	<class>Kestrel Cruiser</class>
+	<name>Red-Tail</name>
+	<unlock>Complete 2/3 of the Kestrel Cruiser Achievements to unlock this ship.</unlock>
+	<desc>This modified Kestrel class ship was created by a laser weapon aficionado.</desc>
+	<systemList>
+		<pilot power="1" room="9" start="true" img="room_pilot_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</pilot> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="1" room="7" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<sensors power="1" room="11" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>
+		<medbay power="1" room="0" start="true" img="room_medbay_4">
+			<slot>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</medbay>
+		<clonebay power="1" room="0" start="false"><!-- F-->
+			<slot>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</clonebay>
+		<oxygen power="1" room="3" start="true" img="room_oxygen_11"/>
+		<shields power="2" room="2" start="true" img="room_shields_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</slot>
+		<engines power="2" room="5" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</engines>
+		<weapons power="4" room="10" start="true" img="room_weapons"/>
+		<drones power="2" room="13" start="false" img="room_drones_12"/> <!-- F-->
+		<teleporter power="1" room="4"	start="false"/> <!-- F-->
+		<cloaking power="1" room="12" start="false" img="room_cloaking_2"/> <!-- F-->
+		<battery power="1" room="6" start="false" img="room_battery_2"/>  <!-- F-->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<mind power="1" room="1" start="false" img="room_mind_1"/>  <!-- F-->
+		<hacking power="1" room="14" start="false" img="room_hacking_4"> <!--F-->
+			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="4" missiles="5">
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_1"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_1"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_1"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_1"/>
+	</weaponList>
+	<health amount="30"/>
+	<maxPower amount ="8"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "2" class="human"/>
+	<crewCount amount = "1" class="energy"/>
+	<crewCount amount = "1" class="mantis"/>
+	<!-- can use these to override images for reuse -->
+	<shieldImage>kestral</shieldImage>
+	<cloakImage>kestral</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.   ***********************
+   MANTIS SHIP
+   ***********************
+ -->
+
+<!-- MANTIS SHIP -->
+<!-- LAYOUT = DEFAULT -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 2 -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_MANTIS" layout="mantis_cruiser" img="mantis_cruiser">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<class>Богомол Cruiser</class>
+	<name>The Gila Monster</name>
+	<unlock>The famous Богомол thief, KazaaakplethKilik, owns this ship. You'll have to "convince" him to help you.</unlock>
+	<desc>This warship is designed to enhance its crew for close combat missions.</desc>
+	<systemList>
+		<pilot power="1" room="7" start="true"/>
+		<doors power="1" room="14" start="true">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<sensors power="1" room="17" start="false"><!-- F-->
+			<slot>
+				<direction>down</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="1" room="4" start="true" img="room_oxygen_3"/>
+		<shields power="2" room="16" start="true"/>
+		<engines power="2" room="10" start="true" img="room_engines_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</engines>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<weapons power="1" room="13" start="true" img="room_weapons_3"/>
+		<drones power="2" room="0" start="false" img="room_drones_3"/><!-- F-->
+		<medbay power="1" room="2" start="true"/>
+		<clonebay power="1" room="2" start="false"/><!-- F-->
+		<teleporter power="1" room="1" start="true"/>
+		<cloaking power="1" room="5" start="false" img="room_cloaking_2"/><!-- F-->
+		<battery power="1" room="3" start="false" img="room_battery_4"/> <!-- F-->
+		<mind power="1" room="12" start="false" img="room_mind_4"/><!-- F-->
+		<hacking power="1" room="15" start="false" img="room_hacking_6"><!-- F-->
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</hacking>
+	</systemList>
+	<weaponList count="2" missiles="16">
+		<weapon name="Тяжёлый Марк I кристалинов_1"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_1"/>
+	</weaponList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="CREW_STIMS"/>
+	<health amount="30"/>
+	<maxPower amount ="7"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "3" class="mantis"/>
+	<crewCount amount = "1" class="engi"/>
+</shipBlueprint>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.
+
+<!-- MANTIS SHIP -->
+<!-- LAYOUT = ALTERNATE -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 2 -->   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_MANTIS_2" layout="mantis_cruiser_2" img="mantis_cruiser_2">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<class>Богомол Cruiser</class>
+	<name>The Basilisk</name>
+	<unlock>Complete 2/3 of the Богомол Cruiser Achievements to unlock this ship.</unlock>
+	<desc>This warship encourages sending massive boarding parties and keeping strong defenses.</desc>
+	<systemList>
+		<pilot power="1" room="8" start="true"/>
+		<doors power="1" room="15" start="true">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<sensors power="1" room="1" start="true">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="1" room="16" start="true" img="room_oxygen_5"/>
+		<shields power="4" room="7" start="true" img="room_shields_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</shields>
+		<engines power="1" room="10" start="true" img="room_engines_4"/>
+		<weapons power="1" room="6" start="true" img="room_weapons_3"/>
+		<drones power="3" room="11" start="true" img="room_drones_6"/>
+		<medbay power="1" room="3" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</medbay>
+		<clonebay power="1" room="3" start="false"><!-- F-->
+			<slot>
+				<number>3</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</clonebay>
+		<teleporter power="1" room="9" start="true"/>
+		<cloaking power="1" room="0" start="false" img="room_cloaking_6"/><!-- F-->
+		<battery power="1" room="2" start="false" img="room_battery_5"/>  <!-- F-->
+		<mind power="1" room="5" start="false" img="room_mind_5"/>  <!-- F-->
+		<hacking power="1" room="13" start="false" img="room_hacking_2"> <!-- F-->
+			<slot>
+				<direction>down</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking>
+	</systemList>
+	<weaponList count="0" missiles="0"/>
+	<droneList count="2" drones="15">
+		<drone name="Пустельга"/>
+		<drone name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1"/>
+	</droneList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="CREW_STIMS"/>
+	<health amount="30"/>
+	<maxPower amount ="11"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount="2" class="mantis"/>
+	<!-- can use these to override images for reuse -->
+	<shieldImage>mantis_cruiser</shieldImage>
+	<cloakImage>mantis_cruiser</cloakImage>
+</shipBlueprint>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.
+
+
+
+
+<!-- Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.   ***********************
+   STEALTH SHIP
+   ***********************
+ -->
+
+<!-- STEALTH SHIP -->
+<!-- LAYOUT = DEFAULT -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 1 -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_STEALTH" layout="stealth" img="stealth">
+	<class>Stealth Cruiser</class>
+	<name>The Nesasio</name>
+	<unlock>This ship is being built near the Инжи homeworlds. To unlock it you'll need to help them, but they only trust their own kind.</unlock>
+	<desc>Constructed for the Federation by the Инжи, this ship is designed to use cloaking technology and speed to get behind enemy lines.</desc>
+	<systemList>
+		<pilot power="1" room="0" start="true"/>
+		<doors power="1" room="14" start="true" img="room_doors_2">
+			<slot>
+				<direction>down</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<sensors power="2" room="13" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>
+		<oxygen power="1" room="1" start="true" img="room_oxygen_2"/>
+		<engines power="4" room="12" start="true" img="room_engines_2"/>
+		<shields power="2" room="10" start="false"img="room_shields_2"/> <!--F-->
+		<weapons power="2" room="3" start="true" img="room_weapons_2"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<drones power="2" room="11" start="false" img="room_drones_2"/><!--F-->
+		<medbay power="1" room="7" start="true"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<clonebay power="1" room="7" start="false"/> <!--F-->
+		<teleporter power="1" room="5" start="false"/> <!--F-->
+		<cloaking power="1" room="8" start="true" img="room_cloaking_2"/>
+		<hacking power="1" room="6" start="false" img="room_hacking"><!-- F-->
+			<slot>
+				<direction>down</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<battery power="1" room="4" start="false"/><!-- F-->
+		<mind power="1" room="9" start="false" img="room_mind_2"/><!-- F-->
+	</systemList>
+	<weaponList count="2" missiles="0">
+		<weapon name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._1"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_2"/>
+	</weaponList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="SYSTEM_CASING"/>
+	<aug name="ADV_SCANNERS"/>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "3" class="human"/>
+</shipBlueprint>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.
+
+<!-- STEALTH SHIP -->
+<!-- LAYOUT = ALTERNATE -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = ???? -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_STEALTH_2" layout="stealth_2" img="stealth_2">
+	<class>Stealth Cruiser</class>
+	<name>DA-SR 12</name>  <!-- direct action - stealth reconnaissance-->
+	<unlock>Complete 2/3 of the Stealth Cruiser Achievements to unlock this ship.</unlock>
+	<desc>Built like a glass cannon, this ship is hard to handle. If its cloaking can keep it safe long enough to charge its weapon, few cruisers can withstand its might.</desc>
+	<systemList>
+		<pilot power="1" room="9" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</pilot>
+		<doors power="1" room="13" start="true" img="room_doors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<sensors power="2" room="6" start="true" img="room_sensors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>
+		<oxygen power="1" room="4" start="true" img="room_oxygen_2"/>
+		<engines power="2" room="5" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</engines>
+		<shields power="2" room="2" start="false" img="room_shields_3"><!--F-->
+			<slot>
+				<direction>left</direction>
+				<number>2</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</shields>
+		<weapons power="4" room="12" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</weapons>
+		<drones power="2" room="1" start="false" img="room_drones_4"/><!--F-->
+		<medbay power="1" room="0" start="true" img="room_medbay_2">
+			<slot>
+				<number>-2</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</medbay>
+		<clonebay power="1" room="0" start="false"/><!--F-->
+		<teleporter power="1" room="14" start="false"/><!--F-->
+		<cloaking power="2" room="11" start="true" img="room_cloaking"/>
+		<hacking power="1" room="8" start="false" img="room_hacking_3"> <!--F-->
+			<slot>
+				<direction>left</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<battery power="1" room="3" start="false" img="room_battery_3"/><!-- F-->
+		<mind power="1" room="10" start="false" img="room_mind_3"/><!-- F-->
+	</systemList>
+	<weaponList count="1" missiles="0">
+		<weapon name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._3"/>
+	</weaponList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="ADV_SCANNERS"/>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="7"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "2" class="human"/>
+	<crewCount amount = "1" class="energy"/>
+	<!-- can use these to override images for reuse -->
+	<shieldImage>stealth</shieldImage>
+	<cloakImage>stealth</cloakImage>
+</shipBlueprint>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.
+
+<!-- Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.   ***********************
+   ENGI SHIP
+   ***********************
+ -->
+
+<!-- ENGI SHIP -->
+<!-- LAYOUT = DEFAULT -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 3 -->
+<shipBlueprint name="PLAYER_SHIP_CIRCLE" layout="circle_cruiser" img="circle_cruiser">
+	<class>Инжи Cruiser</class>
+	<name>The Torus</name>
+	<unlock>To unlock this Инжи ship you'll need to get to the 5th sector with any layout of the Kestrel.</unlock>
+	<desc>Although it may look like a pile of junk loosely held together, this well designed ship relies on drones and ion weaponry.</desc>
+	<systemList> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<pilot power="1" room="8" start="true"/>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="1" room="5" start="true" img="room_doors_4">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<sensors power="1" room="4" start="true" img="room_sensors_4">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="1" room="15" start="true" img="room_oxygen_4"/>
+		<engines power="2" room="2" start="true" img="room_engines_2"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="2" room="3" start="true" img="room_shields_4"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<weapons power="3" room="11" start="true"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<drones power="3" room="0" start="true"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<medbay power="1" room="7" start="true"/>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<clonebay power="1" room="7" start="false"/>   <!-- F-->
+		<teleporter power="1" room="9" start="false"/><!-- F-->
+		<cloaking power="1" room="12" start="false" img="room_cloaking_4"/> <!-- F-->
+		<battery power="1" room="1" start="false" img="room_battery_6"/> <!-- F-->
+		<mind power="1" room="6" start="false" img="room_mind_6"/> <!-- F-->
+		<hacking power="1" room="14" start="false" img="room_hacking_2"> <!-- F-->
+			<slot>
+				<direction>down</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList count="1" missiles="0">
+		<weapon name="ION_4"/>
+	</weaponList>
+	<droneList count="1" drones="15">
+		<drone name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._1"/>
+	</droneList>
+	<aug name="NANO_MEDBAY"/>
+	<health amount="30"/>
+	<maxPower amount ="10"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "1" class="human"/>
+	<crewCount amount = "2" class="engi"/>
+</shipBlueprint>
+
+
+
+
+
+
+<!-- ENGI SHIP -->
+<!-- LAYOUT = ALT -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = ???? -->
+<!-- NOTE --- THERE IS AN ALTERNTE VERSION OF THIS SHIP FOR THE DLC - IN THE DLCBLUEPRINTS_OVERWRITE FILE - BECAUSE THE ROOMS NEEDED TO CHANGE!!!
+ THIS VERSION IS USES the CIRCLE_CRUISER_2_ORGINAL XML/TXTДелает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_CIRCLE_2" layout="circle_cruiser_2" img="circle_cruiser_2">
+	<class>Инжи Cruiser</class>
+	<name>The Vortex</name>
+	<unlock>To unlock this Инжи ship you'll need to get to the 5th sector.</unlock>
+	<desc>Although it may look like a pile of junk loosly held together, this well designed ship relies on drones and ion weaponry.</desc>
+	<systemList> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<pilot power="1" room="12" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="1" room="8" start="true">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<sensors power="1" room="2" start="false">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<slot>
+				<direction>down</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="1" room="5" start="true" img="room_oxygen_6"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="1" room="0" start="true" img="room_engines_2"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="2" room="10" start="true" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</shields> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<weapons power="3" room="1" start="true" img="room_weapons_8"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</weapons>
+		<drones power="3" room="7" start="true" img="room_drones_6"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<medbay power="1" room="6" start="true" img="room_medbay_6">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<teleporter power="1" room="3" start="false"/>    Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<cloaking power="1" room="11" start="false" img="room_cloaking_7"/>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList count="2" missiles="0">
+		<weapon name="ION_2"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_1"/>
+	</weaponList>
+	<droneList count="3" drones="6">
+		<drone name="Молниеносный телепорт"/>
+		<drone name="Улучшенный внешний ИИ"/>
+		<drone name="Улучшенный внешний ИИ"/>
+	</droneList>
+	<aug name="DRONE_SPEED"/>
+	<health amount="30"/>
+	<maxPower amount ="9"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "1" class="engi"/>
+	<shieldImage>circle_cruiser</shieldImage>
+	<cloakImage>circle_cruiser</cloakImage>
+</shipBlueprint>
+
+<!-- THIS IS  the newer version of the ship with the split shield room.. -->
+<shipBlueprint name="PLAYER_SHIP_CIRCLE_2" layout="circle_cruiser_2" img="circle_cruiser_2">
+	<class>Инжи Cruiser</class>
+	<name>The Vortex</name>
+	<unlock>Complete 2/3 of the Инжи Cruiser Achievements to unlock this ship.</unlock>
+	<desc>Heavily understaffed, this ship relies on drones to keep the ship running.</desc>
+	<systemList> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<pilot power="1" room="13" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="1" room="8" start="true">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<sensors power="1" room="2" start="false">  <!--F-->
+			<slot>
+				<direction>down</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="1" room="5" start="true" img="room_oxygen_6"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="1" room="0" start="true" img="room_engines_2"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="2" room="11" start="true" img="room_shields_11">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</shields> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<weapons power="3" room="1" start="true" img="room_weapons_8"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</weapons>
+		<drones power="3" room="7" start="true" img="room_drones_6"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<medbay power="1" room="6" start="true" img="room_medbay_6">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<clonebay power="1" room="6" start="false">  <!--F-->
+			<slot>
+				<number>-2</number>
+			</slot>
+		</clonebay>
+		<teleporter power="1" room="3" start="false"/>     <!--F-->
+		<cloaking power="1" room="12" start="false" img="room_cloaking_7"/>    <!--F-->
+		<mind power="1" room="4" start="false" img="room_mind_6"/>    <!--F-->
+		<battery power="1" room="10" start="false" img="room_battery_7"/>    <!--F-->
+		<hacking power="1" room="9" start="false" img="room_hacking_4"/>    <!--F-->
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList count="2" missiles="0">
+		<weapon name="ION_2"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_1"/>
+	</weaponList>
+	<droneList count="3" drones="6">
+		<drone name="Молниеносный телепорт"/>
+		<drone name="Улучшенный внешний ИИ"/>
+		<drone name="Улучшенный внешний ИИ"/>
+	</droneList>
+	<aug name="DRONE_SPEED"/>
+	<health amount="30"/>
+	<maxPower amount ="9"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "1" class="engi"/>
+	<shieldImage>circle_cruiser</shieldImage>
+	<cloakImage>circle_cruiser</cloakImage>
+</shipBlueprint>
+
+
+
+
+<!-- Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.   ***********************
+	FEDERATION SHIP
+   ***********************
+ -->
+
+<!-- FEDERATION SHIP -->
+<!-- LAYOUT = DEFAULT -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 4 -->   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_FED" layout="fed_cruiser" img="fed_cruiser">
+	<class>Federation Cruiser</class>
+	<name>The Osprey</name>
+	<unlock>There have been rumors of advanced ship construction in the Rebel Stronghold...</unlock>
+	<desc>This ship features the latest in Federation technology: an advanced beam weapon that pierces through shields.</desc>
+	<systemList>
+		<pilot power="1" room="4" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="1" room="8" start="true" img="room_doors_5">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<sensors power="1" room="13" start="true">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>    Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="1" room="9" start="true" img="room_oxygen_4"/>
+		<engines power="2" room="3" start="true" img="room_engines_2"/>
+		<shields power="2" room="11" start="true"/>
+		<weapons power="2" room="15" start="true"/>
+		<drones power="2" room="16" start="false" img="room_drones_5"/> <!-- F-->
+		<medbay power="1" room="10" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<clonebay power="1" room="10" start="false"/>  <!-- F-->
+		<teleporter power="1" room="1" start="false"/>  <!-- F-->
+		<artillery power="1" room="6" weapon="ARTILLERY_FED"/>
+		<cloaking power="1" room="12" start="false" img="room_cloaking_8"/>   <!-- F-->
+		<battery power="1" room="14" start="false" img="room_battery_3"/>  <!-- F-->
+		<mind power="1" room="5" start="false" img="room_mind_7"/> <!-- F-->
+		<hacking power="1" room="2" start="false" img="room_hacking_3"> <!--F-->
+			<slot>
+				<direction>left</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="1" missiles="5">
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_3"/>
+	</weaponList>
+	<droneList drones="2"/>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "1" class="human"/>
+	<crewCount amount = "1" class="mantis"/>
+	<crewCount amount = "1" class="rock"/>
+	<crewCount amount = "1" class="engi"/>
+</shipBlueprint>
+
+<!-- FEDERATION SHIP -->
+<!-- LAYOUT = ALTERNATE -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 4 -->   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_FED_2" layout="fed_cruiser_2" img="fed_cruiser_2">
+	<class>Federation Cruiser</class>
+	<name>Nisos</name>
+	<unlock>Complete 2/3 of the Federation Cruiser Achievements to unlock this ship.</unlock>
+	<desc>This ship starts with additional Artillery power, encouraging heavy reliance on the beam.</desc>
+	<systemList>
+		<pilot power="1" room="7" start="true" img="room_pilot_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</pilot> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="1" room="17" start="true" img="room_doors_2">
+			<slot>
+				<direction>down</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<sensors power="1" room="0" start="true">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="1" room="8" start="true" img="room_oxygen_9"/>
+		<engines power="2" room="15" start="true" img="room_engines_2"/>
+		<shields power="2" room="14" start="true" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="2" room="4" start="true" img="room_weapons_2"/>
+		<drones power="2" room="2" start="false" img="room_drones_11"/><!-- F-->
+		<medbay power="1" room="10" start="true" img="room_medbay_5">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<clonebay power="1" room="10" start="false"><!-- F-->
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<teleporter power="1" room="5" start="false"/>  <!-- F-->
+		<artillery power="2" room="12" weapon="ARTILLERY_FED"/>
+		<cloaking power="1" room="11" start="false" img="room_cloaking_9"/>  <!-- F-->
+		<battery power="1" room="3" start="false" img="room_battery_8"/>  <!-- F-->
+		<mind power="1" room="6" start="false" img="room_mind_7"/>  <!-- F-->
+		<hacking power="1" room="13" start="false" img="room_hacking_2"> <!-- F-->
+			<slot>
+				<direction>down</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="4" missiles="9">
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_2"/>
+		<weapon name="Р. босса_1"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="9"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "1" class="human"/>
+	<crewCount amount = "1" class="energy"/>
+	<crewCount amount = "1" class="slug"/>
+	<shieldImage>fed_cruiser</shieldImage>
+	<cloakImage>fed_cruiser</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+
+
+<!-- Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.   ***********************
+   SLUG SHIP
+   ***********************
+ -->
+
+<!-- SLUG SHIP -->
+<!-- LAYOUT = DEFAULT -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 5 -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_JELLY" layout="jelly_cruiser" img="jelly_cruiser">
+	<class>Слизней-телепатов избегают по всей галактике за их бесконечное воровство и способность манипулировать другими. Cruiser</class>
+	<name>Man of War</name>
+	<unlock>One of the slug ships must know something about this advanced cruiser. Perhaps you can "convince" them to tell you.</unlock>
+	<desc>Designed for use inside nebulas, this cruiser lacks sensors and relies instead on the guile and cunning of the Слизней-телепатов избегают по всей галактике за их бесконечное воровство и способность манипулировать другими.s.</desc>
+	<systemList>
+		<pilot power="1" room="8" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="2" room="1" start="true" img="room_doors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<oxygen power="1" room="4" start="true" img="room_oxygen_6"/>
+		<engines power="2" room="6" start="true" img="room_engines_2"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="2" room="13" start="true" img="room_shields_6"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<weapons power="3" room="5" start="true" img="room_weapons_6"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<medbay power="1" room="3" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<clonebay power="1" room="3" start="false"/>  <!--F-->
+		<sensors power="1" room="11" start="false" img="room_sensors_6"><!--F-->
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<drones power="2" room="14" start="false" img="room_drones_5"/>  <!--F-->
+		<teleporter power="1" room="10" start="false"/>  <!--F-->
+		<cloaking power="1" room="2" start="false" img="room_cloaking_6"/>  <!--F-->
+		<battery power="1" room="9" start="false" img="room_battery_10"/> <!--F-->
+		<mind power="1" room="0" start="false" img="room_mind_6"/>  <!--F-->
+		<hacking power="1" room="12" start="false" img="room_hacking_5"> <!--F-->
+			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="3" missiles="15">
+		<weapon name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._BIO"/>
+		<weapon name="Тяжёлый Марк I кристалинов_BREACH_1"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_2"/>
+	</weaponList>
+	<aug name="SLUG_GEL"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "2" class="slug"/>
+</shipBlueprint>
+
+
+<!-- SLUG SHIP -->
+<!-- LAYOUT = DEFAULT -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 5 -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_JELLY_2" layout="jelly_cruiser_2" img="jelly_cruiser_2">
+	<class>Слизней-телепатов избегают по всей галактике за их бесконечное воровство и способность манипулировать другими. Cruiser</class>
+	<name>The Stormwalker</name>
+	<unlock>Complete 2/3 of the Слизней-телепатов избегают по всей галактике за их бесконечное воровство и способность манипулировать другими. Cruiser Achievements to unlock this ship.</unlock>
+	<desc>This boarding ship has no medical facilities and must manage its explosives carefully to keep the crew alive.</desc>
+	<systemList>
+		<pilot power="1" room="11" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="2" room="19" start="true" img="room_doors_2">
+			<slot>
+				<direction>down</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<sensors power="1" room="0" start="false" img="room_sensors_2"><!--F-->
+			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="1" room="15" start="true" img="room_oxygen_8"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="2" room="2" start="true"/>
+		<shields power="2" room="12" start="true" img="room_shields_7"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</shields>
+		<weapons power="2" room="13" start="true" img="room_weapons_4"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</weapons>
+		<medbay power="1" room="7" start="false"/>  <!--F-->
+		<clonebay power="1" room="7" start="false"/>  <!--F-->
+		<drones power="2" room="18" start="false" img="room_drones_10"/><!--F-->
+		<teleporter power="1" room="3" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<cloaking power="1" room="5" start="false"/>  <!--F-->
+		<battery power="1" room="14" start="false" img="room_battery_9"/>  <!--F-->
+		<mind power="1" room="4" start="false" img="room_mind_5"/>  <!--F-->
+		<hacking power="1" room="9" start="false" img="room_hacking_6"><!--F-->
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</hacking>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="25">
+		<weapon name="Тяжёлый Марк I кристалинов_HEAL"/>
+		<weapon name="Р. босса_2_PLAYER"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<aug name="SLUG_GEL"/>
+	<health amount="30"/>
+	<maxPower amount ="7"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "3" class="slug"/>
+	<shieldImage>jelly_cruiser</shieldImage>
+	<cloakImage>jelly_cruiser</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+
+
+<!-- Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.   ***********************
+   ROCK SHIP
+   ***********************
+ -->
+
+<!-- ROCK SHIP -->
+<!-- LAYOUT = DEFAULT -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 6 -->  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_ROCK" layout="rock_cruiser" img="rock_cruiser">
+	<class>Rock Cruiser</class>
+	<name>Bulwark</name>
+	<unlock>Prove yourself to the Rockmen to earn this powerful cruiser.</unlock>
+	<desc>Similar to its designers, this super-dense behemoth uses brute force to overwhelm its foes.</desc>
+	<systemList>
+		<pilot power="1" room="5" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="1" room="1" start="true" img="room_doors_5">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<sensors power="1" room="12" start="true" img="room_sensors_4">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="1" room="0" start="true" img="room_oxygen_7"/>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="2" room="14" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="2" room="2" start="true" img="room_shields_4"/>    Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<weapons power="3" room="15" start="true"img="room_weapons_5">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</weapons>    Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<drones power="2" room="4" start="false" img="room_drones_7"/>     <!--F-->
+		<medbay power="1" room="16" start="true" img="room_medbay_7">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<slot>
+				<number>2</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</medbay>       Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<clonebay power="1" room="16" start="false">  <!--F-->
+			<slot>
+				<number>2</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</clonebay>       Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<teleporter power="1" room="17" start="false"/>  <!--F-->
+		<cloaking power="1" room="3" start="false"/>    <!--F-->
+		<battery power="1" room="13" start="false" img="room_battery_10"/>  <!--F-->
+		<mind power="1" room="8" start="false" img="room_mind_3"/>  <!--F-->
+		<hacking power="1" room="11" start="false" img="room_hacking_4"> <!--F-->
+			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="28">
+		<weapon name="Р. босса_2_PLAYER"/>
+		<weapon name="Р. босса_HULL"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "3" class="rock"/>
+	<aug name="ROCK_ARMOR"/>
+</shipBlueprint>
+
+<!-- ROCK SHIP -->
+<!-- LAYOUT = ALTERNATE -->    <!-- name it after FP2 Shivans? - Rakshasa - Moloch - Ravana - Sathanas-->
+<!-- SHIP ID = 6 -->  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_ROCK_2" layout="rock_cruiser_2" img="rock_cruiser_2">
+	<class>Rock Cruiser</class>
+	<name>Shivan</name>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<unlock>Complete 2/3 of the Rock Cruiser Achievements to unlock this ship.</unlock>
+	<desc>With no airlocks, this ship must rely entirely on its rock crew to put out fires.</desc>
+	<systemList>
+		<pilot power="1" room="8" start="true"img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</pilot>      Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="1" room="15" start="false" img="room_doors_5">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<sensors power="1" room="3" start="true" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="2" room="4" start="true" img="room_oxygen_6"/>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="2" room="0" start="true"img="room_engines_2"/>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="2" room="2" start="true" img="room_shields_4"/>    Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<weapons power="3" room="12" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<drones power="2" room="14" start="false" img="room_drones_9"/>     <!--F-->
+		<medbay power="1" room="1" start="true"/>    Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<clonebay power="1" room="1" start="false"/>     <!--F-->
+		<teleporter power="1" room="10" start="false"/>  <!--F-->
+		<cloaking power="1" room="13" start="false"img="room_cloaking_2"/>      <!--F-->
+		<battery power="1" room="7" start="false" img="room_battery_2"/>  <!--F-->
+		<mind power="1" room="6" start="false" img="room_mind_8"/>  <!--F-->
+		<hacking power="1" room="11" start="false" img="room_hacking_3"> <!--F-->
+			<slot>
+				<direction>left</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="18">
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_1_SP"/>
+		<weapon name="Тяжёлый Марк I кристалинов_FIRE"/>
+		<weapon name="Тяжёлый Марк I кристалинов_1"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount="8"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount="4" class="rock"/>
+	<aug name="ROCK_ARMOR"/>
+	<shieldImage>rock_cruiser</shieldImage>
+	<cloakImage>rock_cruiser</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+
+
+
+
+<!-- Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.   ***********************
+   ENERGY SHIP
+   ***********************
+ -->
+Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- ENERGY SHIP -->
+<!-- LAYOUT = DEFAULT -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 7 --> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_ENERGY" layout="energy_cruiser" img="energy_cruiser">
+	<class>Золтанцы являются близкими союзниками инжи. Их врожденная энергия достаточно сильна, чтобы питать системы корабля. Cruiser</class>
+	<name>The Adjudicator</name>
+	<unlock>Learn from the Золтанцы являются близкими союзниками инжи. Их врожденная энергия достаточно сильна, чтобы питать системы корабля. that sometimes diplomacy works.</unlock>
+	<desc>The Золтанцы являются близкими союзниками инжи. Их врожденная энергия достаточно сильна, чтобы питать системы корабля.'s advanced shields technology gives this ship an edge during each battle.</desc>
+	<systemList>
+		<pilot power="1" room="11" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="2" room="10" start="true" img="room_doors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<sensors power="1" room="0" start="true">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="1" room="4" start="true" img="room_oxygen_2"/>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="1" room="13" start="true" img="room_engines_2"/>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="2" room="15" start="true" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</shields>    Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<weapons power="3" room="14" start="true" img="room_weapons_7"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<drones power="2" room="16" start="false" img="room_drones_8"/>     <!--F-->
+		<medbay power="1" room="8" start="true" img="room_medbay_4">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<slot>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</medbay>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<clonebay power="1" room="8" start="false"> <!--F-->
+			<slot>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</clonebay>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<teleporter power="1" room="2" start="false"/>  <!--F-->
+		<cloaking power="1" room="6" start="false" img="room_cloaking_3"/> <!--F-->
+		<battery power="1" room="7" start="false" img="room_battery_11"/>  <!--F-->
+		<mind power="1" room="3" start="false" img="room_mind_6"/>  <!--F-->
+		<hacking power="1" room="5" start="false" img="room_hacking_3"> <!--F-->
+			<slot>
+				<direction>left</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="4" missiles="12">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<weapon name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._2"/>
+		<weapon name="Р. босса_1"/>
+	</weaponList>
+	<droneList drones="2"/>
+	<health amount="30"/>
+	<maxPower amount ="5"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "3" class="energy"/>
+	<aug name="ENERGY_SHIELD"/>
+</shipBlueprint>
+
+Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- ENERGY SHIP -->
+<!-- LAYOUT = Alternate -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 7 --> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.
+<shipBlueprint name="PLAYER_SHIP_ENERGY_2" layout="energy_cruiser_2" img="energy_cruiser_2">
+	<class>Золтанцы являются близкими союзниками инжи. Их врожденная энергия достаточно сильна, чтобы питать системы корабля. Cruiser</class>
+	<name>Noether</name>
+	<unlock>Complete 2/3 of the Золтанцы являются близкими союзниками инжи. Их врожденная энергия достаточно сильна, чтобы питать системы корабля. Cruiser Achievements to unlock this ship.</unlock>
+	<desc>This ship starts with a weakened Shield system and must rely on its supershield.</desc>
+	<systemList>
+		<pilot power="1" room="14" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="1" room="8" start="true" img="room_doors_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<sensors power="1" room="13" start="true" img="room_sensors_4">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="1" room="12" start="true" img="room_oxygen_7"/>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="2" room="3" start="true" img="room_engines_5"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</engines>    Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="1" room="5" start="true" img="room_shields_8"/>
+		<weapons power="4" room="7" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+		<drones power="2" room="2" start="false"/>      <!--F-->
+		<medbay power="1" room="0" start="true" img="room_medbay_4">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<slot>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</medbay>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<clonebay power="1" room="0" start="false">  <!--F-->
+			<slot>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</clonebay>   Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<teleporter power="1" room="11" start="false"/>  <!--F-->  <!-- CHANGED room was "4" -->
+		<cloaking power="1" room="6" start="false"/> <!--F-->
+		<battery power="1" room="9" start="false" img="room_battery_13"/>  <!--F-->
+		<mind power="1" room="1" start="false" img="room_mind_9"/>  <!--F-->
+		<hacking power="1" room="4" start="false" img="room_hacking_5"> <!--F-->
+			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="3" missiles="0">
+		<weapon name="ION_1"/>
+		<weapon name="ION_1"/>
+		<weapon name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._LONG"/>
+	</weaponList>
+	<droneList drones="2"/>
+	<health amount="30"/>
+	<maxPower amount ="5"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount="3" class="energy"/>
+	<aug name="ENERGY_SHIELD"/>
+	<shieldImage>energy_cruiser</shieldImage>
+	<cloakImage>energy_cruiser</cloakImage>
+</shipBlueprint>
+
+Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.
+<!-- Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.   ***********************
+   CRYSTAL SHIP
+   ***********************
+ -->
+
+<!-- CRYSTAL SHIP -->
+<!-- LAYOUT = DEFAULT -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = 8 --> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_CRYSTAL" layout="crystal_cruiser" img="crystal_cruiser">
+	<class>Древние предки роков. Cruiser</class>
+	<name>Bravais</name>
+	<unlock>Travel to a lost sector of the galaxy to find this powerful vessel.</unlock>
+	<desc>This powerful vessel is powered by the secret technologies of the lost Древние предки роков.line Beings.</desc>
+	<systemList>
+		<pilot power="1" room="8" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="1" room="16" start="true" img="room_doors_8">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<sensors power="1" room="3" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>
+		<oxygen power="1" room="7" start="true" img="room_oxygen_10"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="2" room="0" start="true" img="room_engines_2"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="2" room="6" start="true" img="room_shields_2"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<weapons power="3" room="17" start="true" img="room_weapons_7"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<drones power="2" room="1" start="false" img="room_drones_7"/>  <!--F-->
+		<medbay power="1" room="13" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<clonebay power="1" room="13" start="false"><!--F-->
+			<slot>
+				<number>3</number>
+			</slot>
+		</clonebay>
+		<teleporter power="1" room="15" start="false"/>  <!--F-->
+		<cloaking power="1" room="9" start="false" img="room_cloaking_2"/>  <!--F-->
+		<battery power="1" room="12" start="false" img="room_battery_3"/>  <!--F-->
+		<mind power="1" room="2" start="false" img="room_mind_10"/>  <!--F-->
+		<hacking power="1" room="14" start="false" img="room_hacking_6"> <!--F-->
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</hacking>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="0">
+		<weapon name="CRYSTAL_BURST_1"/>
+		<weapon name="CRYSTAL_HEAVY_1"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "2" class="human"/>
+	<crewCount amount = "2" class="crystal"/>
+	<aug name="CRYSTAL_SHARDS"/>
+</shipBlueprint>
+
+
+<!-- sardonyx
+
+<!-- CRYSTAL SHIP -->
+<!-- LAYOUT = DEFAULT -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<!-- SHIP ID = ???? -->Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<shipBlueprint name="PLAYER_SHIP_CRYSTAL_2" layout="crystal_cruiser_2" img="crystal_cruiser_2">
+	<class>Древние предки роков. Cruiser</class>
+	<name>Carnelian</name>
+	<unlock>Complete 2/3 of the Древние предки роков. Cruiser Achievements to unlock this ship.</unlock>
+	<desc>Their unique racial ability makes the Древние предки роков. beings very adept at ship boarding. This ship was designed for such raiding parties.</desc>
+	<systemList>
+		<pilot power="1" room="15" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="1" room="14" start="true" img="room_doors_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<sensors power="1" room="10" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>
+		<oxygen power="1" room="8" start="true" img="room_oxygen_7"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="2" room="2" start="true" img="room_engines_2"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="2" room="1" start="true" img="room_shields_7"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="1" room="4" start="true" img="room_weapons_7"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<drones power="2" room="13" start="false" img="room_drones_5"/>   <!--F-->
+		<medbay power="1" room="9" start="true" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<clonebay power="1" room="9" start="false"><!--F-->
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<teleporter power="1" room="3" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<cloaking power="1" room="7" start="true"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<battery power="1" room="12" start="false" img="room_battery_13"/>   <!--F-->
+		<mind power="1" room="0" start="false" img="room_mind_11"/> <!--F-->
+		<hacking power="1" room="5" start="false" img="room_hacking_2"> <!-- F-->
+			<slot>
+				<direction>down</direction>
+				<number>0</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</hacking>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="0" missiles="0">
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "3" class="crystal"/>
+	<shieldImage>crystal_cruiser</shieldImage>
+	<cloakImage>crystal_cruiser</cloakImage>
+	<aug name="CRYSTAL_SHARDS"/>
+</shipBlueprint>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--- **************
+TUTORIAL SHIPS
+*****************-->
+
+<shipBlueprint name="TUTORIAL_PIRATE" layout="jelly_button" img="jelly_button">
+	<class>Pirate</class>
+	<systemList>
+		<oxygen power="2" room="3"/>
+		<pilot power="1" room="0"/>
+		<shields power="4" room="1"/>
+		<engines power="1" room="4"/>
+		<weapons power="3" room="2"/>
+	</systemList>
+	<weaponList count="1" missiles="0">
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_1"/>
+	</weaponList>
+	<health amount="5"/>	
+	<maxPower amount ="11"/>
+	<crewCount amount = "1"  class="human"/>
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_TUTORIAL" layout="kestral" img="kestral">
+	<class>Kestral</class>
+	<name>The Kestrel</name>
+	<systemList>
+		<pilot power="1" room="0" start="true"/>
+		<doors power="2" room="2" start="true">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</doors>
+		<sensors power="2" room="3" start="true">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.			</slot>
+		</sensors>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<medbay power="1" room="4" start="true"/>
+		<oxygen power="1" room="13" start="true"/>
+		<shields power="2" room="5" start="true"/>
+		<engines power="2" room="14" start="true"/>
+		<weapons power="2" room="10" start="true"/>
+		<drones power="2" room="1" start="false"/>
+		<teleporter power="1" room="15"	start="false"/>
+		<cloaking power="1" room="8" start="false"/>
+	</systemList>
+	<weaponList count="1" missiles="20">
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_2"/>
+	</weaponList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<health amount="30"/>
+	<maxPower amount ="9"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "1" class="human"/>
+</shipBlueprint>
+
+<shipBlueprint name="IMPOSSIBLE_PIRATE" layout="jelly_truffle" img="jelly_truffle_pirate">
+	<class>Impossible Pirate</class>
+	<systemList>
+		<pilot power="3" room="0"/>
+		<doors power="3" room="1"/>
+		<oxygen power="3" room="4"/>
+		<drones power="2" room="3"/>
+		<shields power="8" room="6"/>
+		<engines power="8" room="2"/>
+		<weapons power="8" room="5"/>
+		<cloaking power="1" room="7"/>
+		<!--  <drones power="3" room="7"/>  -->
+	</systemList>
+	<weaponList count="3" missiles="30">
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_2_A"/>
+		<weapon name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._2"/>
+		<weapon name="Р. босса_BURST"/>
+	</weaponList>
+	<droneList count="1" drones="5">
+		<drone name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._1"/>
+	</droneList>
+	<health amount="20"/>	
+	<maxPower amount ="35"/>
+	<crewCount amount = "5" class="engi"/>
+</shipBlueprint>
+
+
+
+
+		
+
+<!---- Crash protection default ship blueprint. DO NOT REMOVE -->
+<shipBlueprint name="DEFAULT" layout="rebel_squat" img="rebel_squat">
+	<class>Rebel Rigger</class>
+	<systemList>
+		<pilot power="1" room="0"/>
+		<oxygen power="1" room="2"/>
+		<shields power="2" room="4"/>
+		<engines power="2" room="7"/>
+		<weapons power="3" room="6"/>
+		<drones power="4" room="1"/>
+	</systemList>
+	<droneList count="2" drones="4">
+		<drone name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1"/>
+		<drone name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1"/>
+	</droneList>
+	<weaponList count="2" missiles="10">
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_1"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_1"/>
+	</weaponList>
+	<health amount="10"/>	
+	<maxPower amount ="15"/>
+	<crewCount amount = "3" class="human"/>
+</ship>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+<!--**********************
+REBEL SHIP - LONG - ELITE!!!
+************************-->
+
+
+<shipBlueprint name="LONG_ELITE_MED" layout="rebel_long" img="rebel_long_hard">
+	<class>Rebel Elite</class>
+	<systemList>
+		<oxygen power="2" room="2"/>
+		<pilot power="3" room="0"/>
+		<shields power="6" room="6"/>
+		<engines power="4" room="5"/>
+		<weapons power="9" room="4"/>
+	</systemList>
+	<weaponList count="3" missiles="5">
+		<weapon name="Р. босса_BREACH"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_1"/>
+		<weapon name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._2"/>
+	</weaponList>
+	<health amount="20"/>	
+	<maxPower amount ="21"/>
+	<crewCount amount = "4" class="human"/>
+</shipBlueprint>
+
+<shipBlueprint name="LONG_ELITE_HARD" layout="rebel_long" img="rebel_long_hard">
+	<class>Rebel Elite</class>
+	<systemList>
+		<oxygen power="2" room="2"/>
+		<pilot power="3" room="0"/>
+		<shields power="8" room="6"/>
+		<engines power="5" room="5"/>
+		<weapons power="9" room="4"/>
+	</systemList>
+	<weaponList count="3" missiles="7">
+		<weapon name="Р. босса_2"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_2"/>
+		<weapon name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._3"/>
+	</weaponList>
+	<health amount="30"/>	
+	<maxPower amount ="24"/>
+	<crewCount amount = "5" class="human"/>
+</shipBlueprint>
+
+
+
+
+
+<!--- NEW! --->
+
+<!--
+<shipBlueprint name="GHOST_SHIP_MED" layout="jelly_truffle" img="jelly_truffle_pirate">
+	<class>Truffle Wreckage</class>
+	<systemList>
+		<pilot power="2" room="0"/>
+		<doors power="2" room="1"/>
+		<oxygen power="1" room="4"/>
+		<medbay power="2" room="3"/>
+		<shields power="6" room="6"/>
+		<engines power="4" room="2"/>
+		<weapons power="6" room="5"/>
+	</systemList>
+	<weaponList count="3">
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_2"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_3"/>
+		<weapon name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._FIRE"/>
+	</weaponList>
+	<health amount="22"/>	
+	<maxPower amount ="19"/>
+	<crewCount amount = "0"/>
+</shipBlueprint>
+
+<shipBlueprint name="GHOST_SHIP_HARD" layout="jelly_truffle" img="jelly_truffle_pirate">
+	<class>Truffle Wreckage</class>
+	<systemList>
+		<pilot power="3" room="0"/>
+		<doors power="3" room="1"/>
+		<oxygen power="1" room="4"/>
+		<medbay power="2" room="3"/>
+		<shields power="6" room="6"/>
+		<engines power="4" room="2"/>
+		<weapons power="8" room="5"/>
+	</systemList>
+	<weaponList count="3">
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_2"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_3"/>
+		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._BURST_3"/>
+		<weapon name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._3"/>
+	</weaponList>
+	<health amount="22"/>	
+	<maxPower amount ="21"/>
+	<crewCount amount = "0"/>
+</shipBlueprint>
+-->
+
+		
+		
+
+<!--**********************
+Boss files
+************************-->
+
+
+
+
+<shipBlueprint name="BOSS_1" layout="boss_1" img="boss_1">
+	<class>Rebel Flagship</class>
+	<systemList>
+		<pilot power="3" room="0"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="8" room="1"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<doors power="3" room="17"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<teleporter power="2" room="3"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<cloaking power="2" room="15"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<!--<weapons power="1" room="6"/> -->
+		<sensors power="2" room="13"/>
+		<medbay power="3" room="5"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="2" room="8"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="2" room="7"/>
+		<drones power="1" room="12"/>
+		<artillery power="4" room="9" weapon="ARTILLERY_BOSS_1"/>
+		<artillery power="4" room="10" weapon="ARTILLERY_BOSS_2" />
+		<artillery power="3" room="14" weapon="ARTILLERY_BOSS_3"/>
+		<artillery power="3" room="18" weapon="ARTILLERY_BOSS_4"/>
+	</systemList>
+	<weaponList count="0" missiles="10"/>
+	<droneList count="0" missiles="2"/>
+	<health amount="20"/>	
+	<maxPower amount ="42"/>
+</shipBlueprint>
+<shipBlueprint name="BOSS_2" layout="boss_2" img="boss_2">
+	<class>Rebel Flagship</class>
+	<systemList>
+		<pilot power="3" room="0"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="8" room="1"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<teleporter power="2" room="3"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<!--<weapons power="1" room="6"/>  -->
+		<medbay power="3" room="5"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="3" room="8"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<oxygen power="2" room="7"/>
+		<sensors power="2" room="13"/>
+		<drones power="8" room="12"/>
+		<artillery power="4" room="9" weapon="ARTILLERY_BOSS_1"/>
+		<artillery power="4" room="10" weapon="ARTILLERY_BOSS_2"/>
+		<artillery power="3" room="14" weapon="ARTILLERY_BOSS_3"/>
+	</systemList>
+	<weaponList count="0" missiles="10"/>
+	<droneList count="4" drones="10">
+		<drone name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1"/>
+		<drone name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._1"/>
+		<drone name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку."/>
+		<drone name="Пустельга_BOSS"/>
+	</droneList>
+	<health amount="22"/>	
+	<maxPower amount ="44"/>
+</shipBlueprint>
+<shipBlueprint name="BOSS_3" layout="boss_3" img="boss_3">
+	<class>Rebel Flagship</class>
+	<systemList>
+		<pilot power="3" room="0"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="8" room="1"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<teleporter power="2" room="3"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<!--<weapons power="4" room="6"/>  -->
+		<medbay power="3" room="5"/>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="6" room="8"/>
+		<oxygen power="2" room="7"/>
+		<artillery power="4" room="9" weapon="ARTILLERY_BOSS_1"/>
+		<artillery power="4" room="10" weapon="ARTILLERY_BOSS_2"/>
+	</systemList>
+	<weaponList count="0" missiles="10"/>
+		<!--<weapon name="ION_2"/>
+		<weapon name="Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку._FIRE"/>
+	</weaponList>-->
+	<health amount="20"/>	
+	<maxPower amount ="31"/>
+	<boardingAI>invasion</boardingAI>
+</shipBlueprint>
+
+
+
+<shipBlueprint name="BOSS_SPECIAL" layout="boss_3" img="boss_3">
+	<class>Flagship Construction</class>
+	<systemList>
+		<pilot power="3" room="0"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<shields power="2" max="8" room="1"/> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<teleporter power="1" max="2" room="3"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<!--<weapons power="4" room="6"/>  -->
+		<medbay power="1" max="2" room="5"/>  Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		<engines power="2" max = "6" room="8"/>
+		<oxygen power="1" max="2" room="7"/>
+		<hacking power="1" room="2" start="false"/>
+		<mind power="1" room="3" start="false"/>
+		<artillery power="1" max="4" room="9" weapon="ARTILLERY_BOSS_1"/>
+		<artillery power="1" max="4" room="10" weapon="ARTILLERY_BOSS_2"/>
+	</systemList>
+	<weaponList count="0" missiles="20"/>
+	<health amount="10"/>	
+	<maxPower amount ="14"/>
+	<boardingAI>sabotage</boardingAI>
+	<crewCount amount= "3" max="8" class="human"/>
+</shipBlueprint>
+

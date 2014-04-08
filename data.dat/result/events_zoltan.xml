@@ -1,0 +1,907 @@
+﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--   
+			SUMMARY  - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Structure:
+	START_BEACON_ZOLTAN
+	STORE_ZOLTAN
+	NOTHING_ZOLTAN
+	
+Item:	
+	ZOLTAN_FREE_AUGMENT
+	ZOLTAN_FREE_MAP
+	ZOLTAN_ODD_MOON   (ZOLTAN_ODD_MOON_CHECK)
+	
+Hostile:
+	ZOLTAN_FIGHT
+	ZOLTAN_PIRATE
+	ZOLTAN_MANTIS
+	ZOLTAN_ENGI
+
+	
+Neutral:
+	ZOLTAN_LIFERAFT  (ZOLTAN_LIFERAFT_HIRE)
+	
+Environmnt:
+--->
+
+<!-- Event ideas --
+Condescending scientist who asks to join your ship for a fee because he wants to study your barbarian culture.
+
+shield research center - jams shields
+
+-asteroids, sun
+
+-->
+
+
+
+<eventList name="HOSTILE_ZOLTAN">
+	<event load="ZOLTAN_FIGHT"/>
+	<event load="ZOLTAN_PIRATE"/>
+	<event load="ZOLTAN_MANTIS"/>
+	<event load="ZOLTAN_ENGI"/>
+	<event load="ZOLTAN_ASTEROID"/>
+	
+
+	<event load="REBEL"/>
+	<event load="REBEL_AUTO"/>
+</eventList>
+
+	
+	
+	
+	
+
+<eventList name="NEUTRAL_ZOLTAN">
+	<event load="ZOLTAN_LIFERAFT"/>
+	<event load="ZOLTAN_SCIENCE_DOCK"/>
+	<event load="ZOLTAN_RIFT_FIGHT"/>
+	<event load="ZOLTAN_CREW_SCAN"/>
+
+	<event load="REFUGEE_NO_DISTRESS_ZOLTAN"/> <!--DLC - In newEvents-->
+	
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="ASTEROID_EXPLORE"/>	
+	
+	<!--
+	<event load="BROKEN_REBEL_DRONE"/>
+	<event load="AUTO_DEFENSE_ITEM"/> -->
+</eventList>
+
+
+
+
+
+
+<eventList name="ITEM_ZOLTAN">
+	<event load="ZOLTAN_FREE_AUGMENT"/>
+	<event load="ZOLTAN_FREE_MAP"/>
+	<event load="ZOLTAN_ODD_MOON"/>
+	
+	<event load="FIND_DRONE"/>
+	<event load="FREE_ITEMS"/>
+	<event load="FUEL_FOR_DRONE"/>
+	<event load="REFUEL_STATION"/>
+	<event load="REPAIR_STATION"/>
+	<event load="TRADER_CIV"/>
+</eventList>
+
+
+
+
+<eventList name="BOARDERS_ZOLTAN">
+	<event load="ZOLTAN_BOARDERS"/>
+	<event load="ZOLTAN_BOARDERS_MANTIS"/>
+
+
+	<event load="BOARDERS_HACKING"/>
+
+</eventList>
+
+
+<eventList name="DISTRESS_BEACON_ZOLTAN">
+	<event load="ZOLTAN_DISTRESS_MANTIS"/>
+	<event load="ZOLTAN_DISTRESS_SHELL"/>
+	
+	<event load="REFUGEE_DISTRESS_ZOLTAN"/> <!--DLC - In newEvents-->
+	
+	
+	<event load="DISTRESS_SATELLITE_DEFENSE"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="STRANDED_BEACON"/>
+</eventList>
+
+
+
+<eventList name="QUESTS_ZOLTAN">
+	<event load="ZOLTAN_TRADE_HUB"/>
+	<event load="ZOLTAN_QUEST_PRIMITIVES"/>
+	
+	
+	<event load="FEDERATION_PLANET_SIGNAL"/>
+	<event load="QUEST_MANTIS_INVASION_START"/>
+	<event load="QUEST_CREWDEAD_START"/>
+</eventList>
+
+
+<eventList name="NEBULA_ZOLTAN">
+	<event load="NEBULA_ZOLTAN_ROCK"/>
+	<event load="NEBULA_ZOLTAN_EYE"/>
+	<event load="STORM_ZOLTAN_SUPPLY_CHOICE"/>
+	
+	
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/>  
+	<event load="NEBULA_AUTO"/>
+</eventList>
+	
+		
+
+
+
+
+<!-----------
+		STRUCTURE!!!
+	Requred structural 
+------------>
+
+<event name="START_BEACON_ZOLTAN">
+	<text load="START_BEACON_ZOLTAN"/>
+</event>
+<textList name="START_BEACON_ZOLTAN">
+	<text>Вы входите на территорию золтанцев. Эти существа не славятся репутацией добрых самаритян, раздающих всё за просто так. Но тут вы всегда можете быть уверены в справедливом суде.</text>
+	<text>Золтанцы охраняют свои границы и пропустят вас только в случае наличия ID Федерации. Будем надеяться, они не настолько учтивы с повстанцами.</text>
+	<text>Вы прибыли в пространство золтанцев. Насколько вы слышали, они ожидали грядущую войну и подготовились удерживать свои границы.</text>
+	<text>Здесь, на территории золтанцев, вы далеко от домашнего пространства Федерации, и неясно, будут ли власти к вам благосклонны. Однако, вы должны двигаться дальше.</text>
+</textList>
+
+<event name="STORE_ZOLTAN">
+	<text load="STORE_ZOLTAN"/>
+	<store/>
+</event>
+<textList name="STORE_ZOLTAN">
+	<text>Один золтанец, не на шутку увлёкшийся другими видами, установил здесь что-то вроде инопланетного магазинчика безделушек. Почему бы не взглянуть?</text>
+	<text>Человеческий корабль приветствует: «Друзья мои! Прошу вас, нет ничего, что я не имел бы, как нет ничего, что я захотел, но не смог бы достать. Пожалуйста, чувствуйте себя как дома, взгляните на товары».</text>
+	<text>Отряд богомолов укрылся в брюхе давно умершего космического кита — по-видимому для них это единственный способ управления черным рынком без обнаружения. Стоит заглянуть?</text>
+	
+	
+</textList>
+
+<event name="NOTHING_ZOLTAN">
+	<text load="NOTHING_ZOLTAN"/>
+</event>
+<textList name="NOTHING_ZOLTAN">
+	<text>Несколько богатых минералами астероидов были оставлены «на потом» местными золтанцами. Жаль, но у вас нет необходимого оборудования, чтобы разрабатывать их.</text>
+	<text>Вы должны признать — территория золтанцев на самом деле красивое и мирное место. Однако, ваш главный приоритет — перезарядка FTL и завершение миссии, а не осмотр достопримечательностей.</text>
+	<text>A light asteroid field is entering the atmosphere of a nearby planet - a fireworks show on a galactic scale. There's little for it but to take in the ambience and program the next jump.</text>
+	<!-- TO DO - need more -->
+	<text>Вы наткнулись на несколько военных кораблей золтанцев, участвующих в боевых тренировках, Их энергощиты впечатляют, но заметьте, как быстро их сносит лучевое и ионное оружие.</text>
+	<text>У вас не хватило времени даже на то, чтобы поприветствовать корабль золтанцев, чего-то ждавший на этом маяке, прежде чем он ушёл отсюда. Это очень осторожная раса.</text>
+	<text>Верфь кораблей золтанцев находится на этом маяке. Вы восхищаетесь, наблюдая за сотнями сверкающих золтанцев, что выполняют тонкую работу снаружи громадного транспортного корабля.</text>
+	<text>Широковещательное сообщение с ближайшей планеты объявляет о наличии древнего монастыря золтанцев, доступного для посещения. Скорее всего это лишь уловка для туристов, впрочем у вас всё равно нет времени на визит.</text>
+</textList>
+
+
+
+
+
+<!-----------
+		DISTRESS!!!
+	Beacons
+------------>
+
+<event name="ZOLTAN_DISTRESS_MANTIS" unique="true">
+	<text>Ваш появление чуть не помешало золтанскому кораблю безопасности, следующему за пиратом богомолов в астероидное поле. Они предупреждают вас: «Ваше присутствие здесь по прежнему допустимо, но пожалуйста, не вмешиваетесь».</text>
+	<environment type="asteroid"/>
+	<distressBeacon/>
+	<choice hidden="true">
+		<text>Вмешаться и спасти корабль богомолов.</text>
+		<event>
+			<text>Иногда вы должны поставить на аутсайдера, даже в тех редких случаях, когда это военный корабль богомолов. Вы направляетесь в центр поля астероидов и встречаете золтанцев боем.</text>
+			<environment type="asteroid"/>
+			<ship load="ZOLTAN_SHIP_SAVE_MANTIS1" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Вмешаться и помочь кораблю золтанцев.</text>
+		<event>
+			<text>Вы догоняете корабль золтанцев и перехватываете вместе с ним корабль богомолов в астероидном поле. Время заводить новых друзей.</text>
+			<environment type="asteroid"/>
+			<ship load="ZOLTAN_SHIP_SAVE_MANTIS2" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Не вмешиваться.</text>
+		<event>
+			<text>Золтанцы знаются в своих делах лучше, чем кто бы то ни был — наилучшим вариантом будет оставить их. Вы готовитесь к прыжку.</text>
+		</event>
+	</choice>
+</event>
+
+
+<event name="ZOLTAN_DISTRESS_SHELL" unique="true">
+	<text>Вы прибыли на огромный, неуклюжий, никем не управляемый корабль золтанцев. Остаётся загадкой, что стало с экипажем, но было бы стыдно не воспользоваться такой возможностью.</text>
+	<distressBeacon/>
+	<autoReward level="RANDOM">standard</autoReward>
+	
+</event>
+	
+
+	
+	
+<!-----------
+		QUEST!!!
+	Beacons
+------------>
+	
+
+<event name="ZOLTAN_TRADE_HUB" unique="true">   <!-- This is a 50/50 chance of quest start-->
+	<text>You come to a Zoltan trade and supply hub - everything the weary traveler needs, provided they have the right documentation.</text>
+	<choice hidden="true">
+		<text>Попытаться убедить их.</text>
+		<event load="ZOLTAN_TRADE_HUB_TALK"/>
+	</choice>	
+	<choice hidden="true" req="teleporter" lvl="1">
+		<text>(Teleporter) Beam directly to the civilian deck.</text>
+		<event>
+			<text>You re-materialize in a dark corner of the main concourse and are able to conduct your investigations in peace.</text>
+			<choice hidden="true">
+				<text>Продолжить...</text>
+				<event load="ZOLTAN_TRADE_HUB_SUCCESS"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="energy">
+		<text>(Zoltan Crew) Present his official documentation and pay the entry fee.</text>
+		<event>
+			<text>Они сканируют идентификатор вашего золтанца, в котором тот обозначен как официальный гражданин. Затем они взимают пошлину и, наконец, пропускают вас дальше.</text>
+			<item_modify>
+				<item type="scrap" min="-10" max="-10"/>
+			</item_modify> 
+			<choice hidden="true">
+				<text>Продолжить...</text>
+				<event load="ZOLTAN_TRADE_HUB_SUCCESS"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Уйти.</text>
+		<event>
+			<text>Они редко видят представителей вашего вида в этих краях и вы выглядите как Касвагарский морской слизняк в плутонском рагу из креветок. Вы возвращаетесь на корабль с шайкой золтанцев на хвосте!</text>
+		</event>
+	</choice>
+</event>
+
+
+<eventList name="ZOLTAN_TRADE_HUB_TALK">
+	<event>
+		<text>Вы представились как торговцы и успешно прошли охрану шлюза, однако, это только дело времени, до тех пор, пока кто-нибудь не сообразит, что ваши идентификационные билеты — фальшивка!</text>
+		<ship load="ZOLTAN_SHIP" hostile="true"/>
+		<boarders min="2" max="4" class="energy"/>
+	</event>
+	<event>
+		<text>Продолжить...</text>
+		<choice hidden="true">
+			<text>Продолжить...</text>
+			<event load="ZOLTAN_TRADE_HUB_SUCCESS"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="ZOLTAN_TRADE_HUB_SUCCESS">
+	<event>
+		<text>Вы направились в бар, чтобы узнать последние слухи. Темы разговоров здесь начинаются от распространения микробов в урожае, и заканчиваются радостями от круиза удовольствий слизней.</text>
+		<store/>
+	</event>
+	<event>
+		<text>Продолжить...</text>
+		<choice hidden="true">
+			<text>Продолжить...</text>
+			<event>
+				<text>Вы прибыли на примитивную планету, о которой вы слышали в баре, совершенно не ожидая застать корабль золтанцев, выясняющий отношения с штурмовым судном повстанцев.</text>
+				<quest event="ZOLTAN_QUEST_PRIMITIVES"/>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+<event name="ZOLTAN_QUEST_PRIMITIVES" unique="true">
+	<text>Продолжить...</text>
+	<choice hidden="true">
+		<text>Продолжить...</text>
+		<event>
+			<text>You tap into their frequency and hear the Rebel captain yelling, "We are liberating this planet in the name of the new Galactic government! These aliens will not be left in ignorance where they cannot be of use!"</text>
+			<choice hidden="true">
+				<text>Защитить инопланетян ценой жизни — атаковать корабль повстанцев.</text>
+				<event>
+					<text>Этих существ следует оставить для развития их собственными темпами. Вы направляете все орудия на повстанцев и готовитесь открыть огонь!</text>
+					<ship load="ZOLTAN_PRIMITIVES_ZOLTAN" hostile="true"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Уйти.</text>
+				<event>
+					<text>Вы не хотите предупреждать о своём присутствии повстанцев, и уж тем более не желаете злить золтанцев на их территории. Лучшее решение — уйти.</text>
+					<ship load="ZOLTAN_PRIMITIVES_REBEL" hostile="true"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Уйти.</text>
+				<event>
+					<text>Золтанцы, находящиеся неподалеку от этого маяка, с радостью принимают вас и зовут в гости к себе на борт. Из формальных соображений они предоставили вам экскурсию по кораблю. В процессе вам на глаза попались некоторые звёздные карты, детали которых вы, не долго думая, запомнили визуально.</text>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
+
+
+
+
+<!-----------
+		ITEM!!!
+	Events that can give something ususally no fight
+------------>
+<event name="ZOLTAN_FREE_AUGMENT" unique="true">  <!-- this is pretty sweet :/  -->
+	<text>Что-то кажется для вас очень странным в этой луне вдалеке.</text>
+	<autoReward level="LOW">augment</autoReward>
+</event>
+
+<event name="ZOLTAN_FREE_MAP" unique="true">
+	<text>Посмотреть, что там.</text>
+	<reveal_map/>
+	<ship load="ZOLTAN_SHIP" hostile="false"/>
+</event>
+	
+<event name="ZOLTAN_ODD_MOON" unique="true">
+	<text>Не обращать внимания.</text>
+	<choice hidden="true">
+		<text>Вы стараетесь не заострять внимание на этой странной луне, всё ещё видимой в кормовой сканер, и сосредотачиваетесь на вводе координат следующего прыжка.</text>
+		<event load="ZOLTAN_ODD_MOON_CHECK"/>
+	</choice>
+	<choice>
+		<text>Пробное сканирование сразу же показало сеть пещер неглубоко под землей. Вы запускаете абордажного дрона и он прорывается через поверхность в пещеру внизу.</text>
+		<event>
+			<text>You try not to fixate on the moon in the aft scanner as you set the coordinates for the next jump.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="BOARDER">  <!-- TODO make sure this works!!! -->
+		<text>(Boarding Drone) Send a drone to probe the surface.</text>
+		<event>
+			<text>Ваш дрон обнаружил огромную сеть пещер и доказательства прошлых раскопок. Спустившись немного ниже, вы нашли ученого золтанца, до сих пор за работой. Он сообщает вам, что все его коллеги давно мертвы. Вы решаете задать ему несколько вопросов и предложить присоединиться к экипажу.</text>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/>
+			</item_modify>
+			<choice hidden="true">
+				<text>Продолжить...</text>
+				<event>
+					<text>Отправив шатл для исследования загадочной системы пещер, вы обнаружили следы битвы — и всё ещё работоспособное оружие!</text>
+					<crewMember amount="1" class="energy"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<eventList name="ZOLTAN_ODD_MOON_CHECK">
+	<event>
+		<text>Глубокое сканирование поверхности показало систему пещер, простирающуюся на многие мили, и нечто, похожее на гору металлолома, оставшуюся от какого-то очень мощного механизма.</text>
+	</event>
+	<event>
+		<text>Кажется, команда может прорваться сквозь тонкий слой лунной поверхности в скрытую пещеру.</text>
+		<autoReward level="LOW">weapon</autoReward>	
+	</event>
+	<event>
+		<text>Взрывчатка слишком ценна для использования в археологических работах. Давайте убираться отсюда.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Часть накрывающего слоя уничтожена и открывает впечатляющий вид на целые мили пещер под вами. У вас нет времени исследовать их все, но вот остатки старой подземной базы посетить всё же стоит. Вдруг найдётся что-нибудь полезное...</text>
+		<choice hidden="true">
+			<text>Attempt to detonate some explosives to break through the surface. [ Missiles: -1 ]</text>.
+			<event load="ZOLTAN_ODD_MOON_EXPLOSION"/>
+		</choice>
+		<choice>
+			<text>Взрывчатка была подорвана дистанционно, но взрыв ни к чему не привёл. Какая бессмысленная трата припасов.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+	
+<eventList name="ZOLTAN_ODD_MOON_EXPLOSION">
+	<event>
+		<text>Ваша взрывчатка открыла «пещеру», что была на самом деле секретной базой, размещенной в сети бункеров прямо под землёй. Все внутри мертвы; видимо не так давно тут побывали богомолы. Похоже на то, что золтанцы разрабатывали усовершенствованный тип корабельного вооружения. Вы берёте один из лучших экземпляров на ваш корабль.</text>
+		<item_modify>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+		<autoReward level="RANDOM">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Корабль золтанцев связывается в вами: «Природа дня циклична. Лихорадка истощает. Причина в том...» Они впали в какое-то опасное космическое помешательство. Прежде чем вы обдумали, как же помочь бедолагам, они открыли по вам огонь.</text>
+		<item_modify>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>Вы были весьма удивлены, когда неподвижный корабль золтанцев вдруг открыл огонь. Оказывается и среди «просвещённых» попадаются агрессивные драчуны.</text>
+		<autoReward level="RANDOM">weapon</autoReward>
+		<item_modify>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+</eventList>
+	
+	
+<!-----------
+		HOSTILE!!!
+	Events that call up a fight for sure
+------------>
+<event name="ZOLTAN_FIGHT">
+	<text load="ZOLTAN_FIGHT"/>
+	<ship load="ZOLTAN_SHIP" hostile="true"/>
+</event>
+<textList name="ZOLTAN_FIGHT">
+	<text>Вы получили сообщение: «Это закрытая зона. Предоставьте ваш корабль к осмотру». У этого одинокого маяка всего один охранный корабль и вы решаете прорываться с боем.</text>
+	<text>Вы обнаружили ряд гражданских кораблей золтанцев, втянутых в бой с пиратами. К сожалению, один корабль ошибочно расценил ваши намерения и направился к вам! Он игнорирует любые попытки переговоров и вам не оставляют выбора, кроме как сражаться.</text>
+	<text>Как и во многих других местах обитания золтанцев, жители этого сектора хорошо подготовились к Галактической войне. Военные этого региона даже отказались от попыток разговаривать с приезжими, предпочитая нападать при первой же встрече!</text>
+	<text>Корабль золтанцев ожидает на этом маяке. Он послал запрос на вашу идентификацию, но солнце этой системы заглушает все ваши попытки ответить. Они воспринимают ваше молчание как агрессию и выдвигаются в атаку.</text>
+	<text>Корабль золтанцев, патрулирующий эту территорию, приветствует вас: «Нахождение в этой зоне недопустимо. Наивысший приоритет — секретность». Они заряжают свои орудия.</text>
+	<text>«Внимание, всем кораблям в округе: мы находимся под атакой!» Частота соответствует золтанскому кораблю, находящемуся где-то неподалёку. Вы начинаете отслеживать его по сигналу. Они, видимо, расценивают ваше вмешательство как сигнал к прыжку. Трусы.</text>
+	<text>Едва появившись, вы оказываетесь лицом к лицу с кораблём золтанцев, спешно перегружающим FTL привод. В последние секунды перед прыжком их капитан уговаривает вас не рисковать и не вмешиваться. Но теперь уже слишком поздно — их противник направляется к вам!</text>
+	<!-- Add more! -->
+	
+</textList>
+
+<event name="ZOLTAN_PIRATE">
+	<text load="ZOLTAN_PIRATE"/>
+	<ship load="PIRATE" hostile="true"/>
+</event>
+<textList name="ZOLTAN_PIRATE">
+	<text>Несмотря на все предосторожности, пираты начали терроризировать местные поселения золтанцев во всем секторе. Один из таких пиратов заметил ваш корабль и выдвигается в атаку.</text>
+	<text>Корабль с пиратскими знаками требует от вас сдаться. Это печальные времена, когда даже корабли золтанцев терпят набеги пиратов. Вряд ли об этих глупцах кто-то станет жалеть, думаете вы, разогревая орудия.</text>
+	<text>Вы застали корабль пиратов за грабежом маленького золтанского крейсера. Они заметили вас и выдвинулись в атаку ещё до того, как ваш FTL привод перезарядился.</text>
+	<text>A ship with pirate markings demands your surrender. These are sad times when even Zoltan space is beset by pirates. You doubt these fools will be missed.</text>
+	<text>Едва появившись, вы оказываетесь лицом к лицу с кораблём золтанцев, спешно перегружающим FTL привод. В последние секунды перед прыжком их капитан уговаривает вас не рисковать и не вмешиваться. Но теперь уже слишком поздно — их противник направляется к вам!</text>
+	<!-- Add more instead of repeating ! -->
+	
+	<text>Несмотря на все предосторожности, пираты начали терроризировать местные поселения золтанцев во всем секторе. Один из таких пиратов заметил ваш корабль и выдвигается в атаку.</text>
+	<text>Корабль с пиратскими знаками требует от вас сдаться. Это печальные времена, когда даже корабли золтанцев терпят набеги пиратов. Вряд ли об этих глупцах кто-то станет жалеть, думаете вы, разогревая орудия.</text>
+	<text>Вы застали корабль пиратов за грабежом маленького золтанского крейсера. Они заметили вас и выдвинулись в атаку ещё до того, как ваш FTL привод перезарядился.</text>
+	<text>A ship with pirate markings demand that you surrender. These are sad times when even Zoltan space is beset by pirates. You doubt these fools will be missed.</text>
+	<text>Едва появившись, вы оказываетесь лицом к лицу с кораблём золтанцев, спешно перегружающим FTL привод. В последние секунды перед прыжком их капитан уговаривает вас не рисковать и не вмешиваться. Но теперь уже слишком поздно — их противник направляется к вам!</text>
+</textList>
+
+<event name="ZOLTAN_MANTIS" unique="true">
+	<text>Вы прибыли в скопление астероидов, где вас вскоре встретил охранник золтанец. Он передаёт: «Попыткой проникнуть в закрытые области добычи ископаемых, вы нарушили акт природной защиты минералов. Ваше оружие будет конфисковано для проверки». У вас нет времени на эту чепуху.</text>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+</event>
+
+<event name="ZOLTAN_ENGI" unique="true">
+	<text>Вы подобрали блуждающую в космосе медицинскую спасательную шлюпку золтанцев. Её пассажир умоляет вас отобрать его корабль у пиратов, которые недавно его захватили. «Я думаю, понятно, — устало добавил он, — что нужно обезвредить их не разнося мой корабль в пух и прах».</text>
+	<ship load="ENGI_SHIP" hostile="true"/>
+</event>
+
+
+<event name="ZOLTAN_ASTEROID" unique="true">
+	<text>Заняться пиратами.</text>
+	<environment type="asteroid"/>
+	<ship load="ZOLTAN_SHIP" hostile="true"/>
+</event>
+
+
+<!-----------
+		NEUTRAL!!!
+	Events that could have a fight
+------------>
+
+<event name="ZOLTAN_LIFERAFT" unique="true">  <!-- ALSO A QUEST!!-->
+	<text>Уйти.</text>
+	<ship load="ZOLTAN_LIFERAFT" hostile="false"/>
+	<choice hidden="true">
+		<text>Вы отказываетесь спасать его корабль, но обещаете высадить его на ближайшей станции. Золтанец недоволен, но всё-таки указывает вам на ближайшую звездную базу.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Уйти.</text>
+		<event>
+			<text>Он расстроенно ответил: «Думаю, мне некуда больше податься без корабля. Я приму ваше предложение».</text>
+		</event>
+	</choice>
+</event>
+<eventList name="ZOLTAN_LIFERAFT_HIRE">
+	<event>
+		<text>Кто-то похожий на исследовательский корабль золтанцев отправил запрос на стыковку.</text>
+	</event>
+	<event>
+		<text>Состыковаться с ними.</text>
+		<item_modify>
+			<item type="scrap" min="-40" max="-40"/>
+		</item_modify>
+		<crewMember amount="1" class="energy"/>
+	</event>
+</event>
+
+	
+<event name="ZOLTAN_SCIENCE_DOCK" unique="true">
+	<text>Держать дистанцию.</text>
+	<choice hidden="true">
+		<text>Не сказав ни слова они улетают.</text>
+		<event load="ZOLTAN_SCIENCE_DOCK_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Вы пытаетесь подпустить их поближе... Это было безрассудством с вашей стороны: они открывают огонь.</text>
+		<event>
+			<text>«Мы изучали взаимоотношения между расами и пришли к выводу, что 'Федерация' всё ещё имеет потенциал быть полезной галактике. Пожалуйста, примите этот подарок, он поможет вам в этом путешествии».</text>
+		</event>
+	</choice>
+</event>	
+<eventList name="ZOLTAN_SCIENCE_DOCK_LIST">
+	<event>
+		<text>Вы прибыли в спокойную часть пространства золтанцев и неожиданно наткнулись на древнего золтанского мудреца, который сумел постичь всю глубину пространственного отчуждения, но, похоже, от её осознания совсем сошел с ума. «Выбери свою кончину...» — требует он. И почему это вас не удивляет?</text>
+		<ship load="ZOLTAN_SCIENCE_DOCK" hostile="true"/>
+	</event>
+	<event>
+		<text>"We have been studying the relationships between the species and have determined that the 'Federation' still has potential to be a net positive for the galaxy. Please accept this gift to aid your journey."</text>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+</eventList>
+
+
+<event name="ZOLTAN_RIFT_FIGHT" unique="true">
+	<text>«Любишь бросать вызов? Так тому и быть!» Поблизости раскрывается червоточина, злой и сбитый с толку корабль богомолов мчится к вам.</text>
+	<choice hidden="true">
+		<text>Слизни.</text>
+		<event>
+			<text>«Даже не надейтесь, что найдёте слабое место, Федераты». Вы замечаете открывающуюся червоточину, и секундой позже корабль слизней начинает атаку с другой стороны.</text>
+			<ship load="ZOLTAN_RIFT_MANTIS" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Роки.</text>
+		<event>
+			<text>«Матерый враг для закаленного ветерана». Вы обнаруживаете как открывается червоточина и появляется корабль роков с огромными орудиями. Похоже, они были в бою в то время, когда их настиг прыжок в гипер-пространство.</text>
+			<ship load="ZOLTAN_RIFT_SLUG" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Кристалины.</text>
+		<event>
+			<text>Старик затих на секунду, а потом прошептал: «Ты уверен? Что ж, пусть будет так». Огромная червоточина открылась и внутри неё виднеется корабль кристалинов, готовый к битве.</text>
+			<ship load="ZOLTAN_RIFT_ROCK" hostile="true"/>
+		</event>
+	</choice>
+	<!--
+	<choice hidden="true">
+		<text>Видя вашу внезапную победу, мудрец золтанец впадает в ярость. Чудовищные взрывы угрожают разорвать ближайшее пространство на части, но вместо этого взрывается корабль золтанцев, посылая взрывную волну лома и трофеев с отдаленных миров прямо в вашу сторону..</text>
+		<event>
+			<text>Вы прибыли на секретный аванпост золтанцев, размещенный неподалеку от маяка. «Странствующий корабль, предоставьте ваш экипаж для проверки наличия беглецов империи».</text>
+			<ship load= ?!?!
+					JUSTIN DO THIS STILL!!!!!!! JUSTIN - TO DO
+		</event>
+	</choice> --->
+</event>
+<event name="ZOLTAN_RIFT_SUCCESS">
+	<text>У вас нет времени на подобные глупости. В атаку!</text>
+	<autoReward level="HIGH">standard</autoReward>
+</event>
+
+
+<event name="ZOLTAN_CREW_SCAN" unique="true">
+	<text>Предполагая ваше сопротивление, они подняли свой энергетический щит и подготовились к сражению.</text>
+	<choice hidden="true">
+		<text>Предоставить экипаж.</text>
+		<event>
+			<text>Вы дали разрешение охранникам состыковаться с вашим кораблём, загодя готовя экипаж к встрече с ними. Насколько вы помните, никто не обменялся ни словом, но они предложили вам некоторые припасы и уведомили о проверке корабля. Лучше не задавать лишних вопросов.</text>
+			<ship load="ZOLTAN_SHIP" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Отряд безопасности золтанцев взошёл на борт вашего корабля и принялся сканировать лица экипажа в компьютер. После нескольких напряженных моментов неопределенности, так ничего и не найдя, они пропустили ваш корабль.</text>
+		<event load="ZOLTAN_CREW_SCAN_LIST"/>
+	</choice>
+	<choice hidden="true" req="slug">
+		<text>(Slug Crew) Have your Slug talk them into letting you go.</text>
+		<event>
+			<text>You give the guards permission to dock with the ship, but before they come on board your crewmember slowly advances to meet them. As far as you can tell no words were exchanged, but the guards offer you some supplies and say the ship checks out. Best to not ask questions.</text>
+			<autoReward level="MED">fuel_only</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true" req="mind">
+		<text>(Mind Control) Make the guards believe they have already checked your crew today.</text>
+		<event>
+			<text>The captain of the guard appears on the vid screen "Back so soon friend! Well, no need to waste your time further. Here, take these spare fuel canisters and get on with your mission." Your ship is cleared to pass.</text>
+			<autoReward level="MED">fuel_only</autoReward>
+		</event>
+	</choice>		
+</event>
+<eventList name="ZOLTAN_CREW_SCAN_LIST">
+	<event>
+		<text>Сдать члена вашего экипажа.</text>
+	</event>
+	<event>
+		<text>Это тяжелое решение, но здесь правят законы золтанцев. А вообще, он всегда казался вам слегка подозрительным.</text>
+		<choice hidden="true">
+			<text>Give up your crewmember.</text>
+			<event>
+				<text>Вы не собираетесь никого оставлять. Вместо этого вы тронулись с посадочной станции с вражескими охранниками на борту. К сожалению, они способны превратить ваши системы вооружения в полный хаос. Время уходить!</text>
+				<removeCrew>
+					<clone>false</clone>
+					<text>Unfortunately your crewmember was taken away unharmed so your Clone Bay was unable to retrieve them.</text>
+				</removeCrew>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>В туманности вы неожиданно натыкаетесь на перепуганную кучку роков, пытающихся спрятаться от пограничной полиции золтанцев. Они, по видимому, не готовы рисковать, отпуская знающий их местоположение корабль. Намного безопаснее было бы вас уничтожить. Они открывают огонь!</text>
+			<event>
+				<text>Внутри туманности просторы космоса рассекает блуждающая планета. На её поверхности виднеется огромный монолит, легко заметный даже невооружённым глазом. Старейшина золтанцев этой планеты приветствует вас: «Случайно ли, либо по умыслу, вы обнаружили Великий Глаз. Взглянув в глубины его получит каждый то, чего заслуживает».</text>
+				<ship load="ZOLTAN_CREW_SCAN" hostile="true"/>
+				<boarders min="2" max="4" class="energy"/>
+				<status type="divide" target="player" system="weapons" amount="2"/>
+			</event>
+		</choice>
+	</event>
+</eventList>
+			
+		
+
+<!-----------
+		NEBULA!!!
+	Events with unique environments
+------------>
+<event name="NEBULA_ZOLTAN_ROCK" unique="true">
+	<text>Подлететь поближе.</text>
+	<environment type="nebula"/>
+	<ship load="ROCK_SHIP" hostile="true"/>
+</event>
+
+<event name="NEBULA_ZOLTAN_EYE" unique="true">
+	<text>Inside this nebula you detect a rogue planet drifting through space, on its surface a huge monolith visible at this distance even to the naked eye. A Zoltan elder hails you from the planet. "Through luck or intent, you have discovered the Great Eye. Look into its depths and receive your just deserts."</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Ваша миссия — спасение Федерации, отнюдь не обнаружение чудес по всей галактике. Вы готовитесь к прыжку.</text>
+		<event load="NEBULA_ZOLTAN_EYE_LIST"/>
+	</choice>
+	<choice>	
+		<text>Уйти.</text>
+		<event>
+			<text>Вы приближаетесь к планете и ждете, но ничего не происходит. Старый золтанец говорит: «И в случаях тех редких, когда монолит не заговорит с человеком, значит это, что будущее его не определено, и должен он оставлен быть в стремлении».</text>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_ZOLTAN_EYE_LIST">
+	<event>
+		<text>Вы осторожно приближаетесь к планете, стараясь удержать корабль от разрушения на орбите. Монолит, или что бы то ни было, видимо почувствовал вас достаточно сильно, поскольку следующей мыслью окзаалось осознание, что у вас есть столько лома, что его хватило бы на починку всего корпуса, да ещё и осталось бы.</text>
+		<weapon name="BOMB_HEAL"/>
+	</event>
+	<event>
+		<text>При вашем приближении калейдоскоп цветов заполняет обзорный экран и один из членов вашего экипажа начинает быстро молодеть, в итоге исчезая в пустоте. Остаётся надеяться, что неведомые силы вывели его за грани физического существования, а не просто избавились от него.</text>
+		<ship load="ZOLTAN_SHIP" hostile="true"/>
+	</event>
+	<event>
+		<text>Вы выследили два пиратских корабля, что притаились в туманности неподалеку. Они не знают о вашем присутствии; вы имеете возможность просканировать по меньшей мере их груз — один транспортирует топливо, второй — вооружение. Под воздействием космического шторма их начинает слегка относить друг от друга в разные стороны.</text>
+		<autoReward level="HIGH">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>As you approach, a kaleidoscope of colors fills the viewscreen and one of your crew begins to age rapidly in reverse, eventually disappearing into nothingness. Let's hope they've transcended physical existence, and not just been forced out of it.</text>
+		<removeCrew>
+			<clone>false</clone>
+			<text>You check your Cloning Bay but it lies dormant. Whatever just happened to your crewmember must be irreversible.</text>
+		</removeCrew>
+	</event>
+</eventList>
+
+<event name="STORM_ZOLTAN_SUPPLY_CHOICE" unique="true">  <!-- can also use this with other sectors?-->
+	<text>Захватить корабль с вооружением.</text>
+	<environment type="storm"/>
+	<choice hidden="true">
+		<text>Дать им уйти.</text>
+		<event>
+			<text>Иногда рассудительность — лучшая сторона отваги.</text>
+			<ship load="STORM_PIRATE_SUPPLY_FUEL" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Еще несколько более усердных, чем обычно принято у золтанцев, таможенных проверок... Команда пограничной полиции высаживается на борт. Возникает небольшое недоразумение по поводу лицензий на оружие, которое быстро перерастает от разговоров на повышенных тонах до перестрелки!</text>
+		<event>
+			<text>Бродяги богомолы порой вообще не считают золтанцев серьёзными соперниками. Их разведчик атакует вас, попутно высаживая к вам на борт абордажную бригаду!</text>
+			<ship load="STORM_PIRATE_SUPPLY_AMMO" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Безоружное транспортное судно золтанцев медленно продвигается вперед к маяку. Они вещают: «Это мирное дипломатическое судно золтанцев. У нас нет оружия и щитов, и мы всецело полагаемся на благосклонность услышавших нас, распространяя наше послание».</text>
+		<event>
+			<text>Sometimes discretion is the better part of valor.</text>
+		</event>
+	</choice>
+</event>
+
+
+
+
+		
+		
+		
+		
+		
+<!-----------
+		BOARDERS!!!
+	Events with boarder calls
+------------>
+
+<event name="ZOLTAN_BOARDERS" unique="true">
+	<text>Выслушать их.</text>
+	<ship load="ZOLTAN_SHIP" hostile="true"/>
+	<boarders min="3" max="4" class="energy"/>
+</event>
+
+<event name="ZOLTAN_BOARDERS_MANTIS" unique="true">
+	<text>Они продолжают: «Мы принимаем ваше молчание как проявление интереса». Они начинают длинный разговор о мире и гармонии, но либо это выше вашего понимания, либо полная чепуха.</text>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+	<boarders min="2" max="3" class="mantis"/>
+</event>
+
+
+
+
+
+<!-----------
+		SPECIAL!!!
+	-
+------------>
+
+<event name="ZOLTAN_PEACE_QUEST" unique="true">
+	<text>Продолжить...</text>
+	<choice hidden="true">
+		<text>Они заканчивают: «Пожалуйста, распространите эти слова просвещения тем, кто ещё не слышал их. Услышав, свяжитесь с нашими собратьями». Они передали координаты своих так-называемых «собратьев».</text>
+		<event load="ZOLTAN_PEACE_QUEST_ATTACK"/>
+	</choice>
+	<choice hidden="true">
+		<text>Уйти.</text>
+		<event>
+			<text>Галактика погрязла в войне — нет времени на разговоры о мире. Вы оставляете их возгласы без ответа и заряжаете двигатель для прыжка.</text>
+			<choice hidden="true">
+				<text>Продолжить...</text>
+				<event>
+					<text>Прямо перед атакой вы обнаруживаете прыжковый след. Защитный корабль золтанцев идёт им на помощь.</text>
+					<quest event="ZOLTAN_PEACE_QUEST2"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Уйти.</text>
+		<event>
+			<text>Атаковать.</text>
+		</event>
+	</choice>
+</event>
+
+
+<eventList name="ZOLTAN_PEACE_QUEST_ATTACK">
+	<event>
+		<text>Вы зарядили ваши орудия и готовитесь к бою.</text>
+		<ship load="ZOLTAN_PEACE_QUEST_ATTACK1" hostile="true"/>
+	</event>
+	<event>
+		<text>Попытаться связаться с ними.</text>
+		<ship load="ZOLTAN_PEACE_QUEST_ATTACK2" hostile="true"/>
+	</event>
+</eventList>
+
+<event name="ZOLTAN_PEACE_QUEST2">
+	<text>Они неохотно выходят на связь: «Я даже представить не могу, что вы должны будете сказать, чтобы это спасло вас. Повстанец обязан уничтожать каждого, кто до сих пор лоялен исчезающей Федерации».</text>
+	<ship load="REBEL" hostile="false"/>
+	<choice hidden="true">
+		<text>«Быть может есть путь примирить наши идеалы не развязывая воин?»</text>
+		<event>
+			<text>«Наши идеалы слишком разные, чтобы их можно было примирить. Вы правда считаете, может быть ещё какое либо решение, кроме войны?»</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>«Галактика огромна, вы можете найти место для воплощения ваших идеалов в другом месте, не прибегая к разрушению».</text>
+		<event>
+			<text>«Нет! Мы не собираемся прозябать на задворках космоса лишь потому, что мы не вписываемся в ваши 'идеалы Федерации'». Они атакуют.</text>
+			<choice hidden="true">
+				<text>«Истинный прогресс может быть достигнут только без кровопролития».</text>
+				<event>
+					<text>Вдруг все следы корабля повстанцев исчезают и вокруг вас появляется флот золтан! Капитан корабля, который вы встретили прежде, материализуется у вас на мостике.</text>
+					<choice hidden="true">
+						<text>The galaxy is huge - you can find a place for your ideals elsewhere without causing this destruction.</text>
+						<event>
+							<text>"No! We will not be consigned to the backwaters of space just because we don't fit into your 'Federation ideals'!" They charge.</text>
+							<ship hostile="true"/>
+						</event>
+					</choice>
+					<choice hidden="true">
+						<text>Крейсер золтанцев был разблокирован и добавлен в ангар!</text>
+						<event>
+							<text>«Сдавайтесь. Ваше уничтожение неизбежно. Мы уничтожили всех повстанцев на пути сюда».</text>
+							<choice hidden="true">
+								<text>Продолжить...</text>
+								<event load="ZOLTAN_PEACE_QUEST_REWARD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Принять их предложение.</text>
+				<event>
+					<text>Мы не примем капитуляции!</text>
+					<ship hostile="true"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>«Конечно, конечно, вы в достаточной мере продемонстрировали способности вашего вида к насилию, молодцы, ничего не скажешь. Может быть вы уйдёте терроризировать кого-нибудь другого, если мы заплатим?»</text>
+				<event>
+					<text>Вражеский корабль выходит на связь; на видео-экране видно, что их мостик весь в искрах от неисправного оборудования — можно предположить, что они хотят сдаться. Принять их предложение?</text>
+					<ship hostile="true"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="ZOLTAN_PEACE_QUEST_REWARD"><!--DLC2 DLC3-->
+	<event>
+		<text>"Although your methods are crude and most certainly ineffective, it is clear you took our previous meeting to heart. If your ship represents the Federation's willingness to adapt we shall do what we can to aid in their fight. This technology should aid your quest."</text>
+		<unlockShip id="7">«В слабой Федерации людей считают 'равными' пришельцам. Жертва МИЛЛИАРДОВ людей или пришельцев будет оправдана, если это необходимо для достижения нашего полного потенциала!» Они атакуют.</unlockShip>
+		<autoReward level="LOW">scrap_only</autoReward>
+		<augment name="ENERGY_SHIELD"/>
+	</event>
+	<event>
+		<text>"Although your methods are crude and most certainly ineffective, it is clear you took our previous meeting to heart. If your ship represents the Federation's willingness to adapt we shall do what we can to aid in their fight. I will personally assist."</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<crewMember amount="1" class="energy" all_skills="2">Envoy</crewMember>
+	</event>
+</eventList>
+	
+
+<event name="ZOLTAN_SURRENDER">
+	<text load="ZOLTAN_SURRENDER"/>
+	<choice>
+		<text>Анализ сообщений показывает, что золтанцы вещают на всех частотах. Капитан появляется на экране и говорит: «Да, я не удивлен, что ваш вид не выглядит просвещённым. Ладно. Берите что хотите».</text>
+		<event>
+			<ship hostile="false"/>
+			<autoReward level="RANDOM">stuff</autoReward>
+		</event>
+	</choice>
+	<choice>
+		<text>Золтанский капитан приветствует и что-то бормочет про то, что граничный патруль вас в итоге нагонит; но вас больше интересует его предложение капитуляции, нежели это.</text>
+		<event/>
+	</choice>
+</event>
+
+<textList name="ZOLTAN_SURRENDER">
+	<text>«Мы предполагали, что у вашего вида интеллект прямо пропорционален вашей грубой силе. Мы сдаёмся».</text>
+	<text>«Вы победили нас. Вот если бы ваш вид вкладывал столько же усилий в улучшение галактики, сколько вы вложили в вашу военную мощь...»</text>
+	<text>«Конечно, конечно, вы в достаточной мере продемонстрировали способности вашего вида к насилию, молодцы, ничего не скажешь. Может быть вы уйдёте терроризировать кого-нибудь другого, если мы заплатим?»</text>
+	<text>Вражеский корабль выходит на связь; на видео-экране видно, что их мостик весь в искрах от неисправного оборудования — можно предположить, что они хотят сдаться. Принять их предложение?</text>
+	<text>"We assumed that your species' intelligence was directly proportional to your brute strength. We yield."</text>
+	<text>Золтанский капитан приветствует и что-то бормочет про то, что граничный патруль вас в итоге нагонит; но вас больше интересует его предложение капитуляции, нежели это.</text>
+	
+	<!-- duplicate for now -- add more?-->
+	
+	
+	<text>«Мы предполагали, что у вашего вида интеллект прямо пропорционален вашей грубой силе. Мы сдаёмся».</text>
+	<text>«Вы победили нас. Вот если бы ваш вид вкладывал столько же усилий в улучшение галактики, сколько вы вложили в вашу военную мощь...»</text>
+	<text>«Конечно, конечно, вы в достаточной мере продемонстрировали способности вашего вида к насилию, молодцы, ничего не скажешь. Может быть вы уйдёте терроризировать кого-нибудь другого, если мы заплатим?»</text>
+	<text>Вражеский корабль выходит на связь; на видео-экране видно, что их мостик весь в искрах от неисправного оборудования — можно предположить, что они хотят сдаться. Принять их предложение?</text>
+	<text>"We assumed that your species' intelligence was directly proportional to your brute strength. We yield."</text>
+	<text>Золтанский капитан приветствует и что-то бормочет про то, что граничный патруль вас в итоге нагонит; но вас больше интересует его предложение капитуляции, нежели это.</text>
+</textList>
+	
+
+
+

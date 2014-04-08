@@ -1,0 +1,983 @@
+﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!-- Остаться у маяка.		SUMMARY  - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+
+Structure:
+	NO_FUEL_FLEET
+	
+No Beacon:    	NO_FUEL (this is a list)
+	FUEL_FLEET_DELAY
+	FUEL_NOTHING
+	FUEL_TRADER
+	FUEL_EXPLORE
+	FUEL_APPROACH
+	
+Beacon:    NO_FUEL_DISTRESS (this is a list)
+	FUEL_FLEET_DISTRESS
+	FUEL_NOTHING_DISTRESS
+	FUEL_SELLER_DISTRESS
+	FUEL_TRADER_DISTRESS
+
+Sector Specific:
+	
+--->
+
+
+
+
+
+
+
+
+<!-- NO FUEL stuff -->
+
+<event name="NO_FUEL_FLEET">
+	<text>The Rebel fleet has caught up to you. You detect significant fuel reserves in one of their closer fighters and move in to attack. Maybe you can still pull this off.</text>
+	<ship load = "REBEL_FLEET_FUEL" hostile ="true"/>
+	<fleet>rebel</fleet>
+</event>
+
+<event name="NO_FUEL_FLEET_DLC">
+	<text>Your pilot deftly avoids incoming artillery fire from the surrounding fleet while you try to sort out exactly what your plan is... One of the many approaching fighters gets into weapon range and your scanners detect it has surplus fuel. Maybe you can still pull this off.</text>
+	<ship load = "REBEL_FLEET_FUEL" hostile ="true"/>
+	<fleet>rebel</fleet>
+	<environment type="PDS" target="player"/>
+</event>
+	
+	
+	
+	
+	
+
+
+
+
+
+<!-------------------
+DEFAULT FUEL EVENTS
+Beacon Off.....
+-------------------->
+<eventList name="NO_FUEL">
+	<event load="FUEL_FLEET_DELAY"/>
+	
+	<event load="FUEL_NOTHING"/>
+	<event load="FUEL_NOTHING"/>
+	<event load="FUEL_NOTHING"/>
+	<event load="FUEL_NOTHING"/>
+	
+	<event load="FUEL_TRADER"/>
+	<event load="FUEL_EXPLORE"/>
+	<event load="FUEL_APPROACH"/>
+	<event load="FUEL_OFF_ENGI_DUBIOUS"/>
+	<event load="FUEL_OFF_ROCK_WRECK"/>
+	
+	<event load="NO_FUEL_REFUGEE_FRIENDLY"/> <!-- DLC - below -->
+</eventList>
+
+<event name="FUEL_FLEET_DELAY">
+	<text load="FUEL_FLEET_DELAY_LIST"/>		
+	<modifyPursuit amount="-1"/>
+	<choice hidden="true">
+		<text>Продолжить...</text>
+		<event load="NO_FUEL"/>
+	</choice>
+</event>
+<textList name="FUEL_FLEET_DELAY_LIST">
+	<text>Вы уверены, что если не привлекать внимания, то флот повстанцев обнаружит вас нескоро.</text>
+	<text>Since your distress beacon has not been activated, you feel confident that the Rebel fleet is having difficulty tracking you. It should buy you a little time.</text>
+	<text>Сканеры дальнего действия показывают, что флот повстанцев прекратил движение в вашу сторону. Ваше решение не активировать аварийный маяк оказалось дальновидным.</text>
+	<text>Сканеры показывают, что флот повстанцев приостановил преследование. Временно.</text>
+	<text>Ваша интуиция капитана подсказывает, что повстанцы всё ещё не знают, где вас искать.</text>
+	<text>Without a distress beacon or any FTL signatures to trace, you're sure that the Rebels are struggling to find you. You can only hope their confusion lasts until more fuel can be found.</text>
+	<text>The Rebel fleet seems to be unable to locate your ship's signature. If only you could get some fuel, you might still have a chance to place some distance between you and them...</text>
+</textList>
+
+<event name="FUEL_NOTHING">
+	<text load="FUEL_NOTHING_LIST"/>
+</event>
+<textList name="FUEL_NOTHING_LIST">
+	<text>В радиусе сканирования никого нет, и к маяку так никто и не прилетел.</text>
+	<text>Ваше ожидание не приводит ни к чему, кроме приближения флота...</text>
+	<text>Неожиданно совсем неподалёку оказывается транспортник. Он проходит почти вплотную к вам, игнорируя все попытки выйти на связь, и вскоре совершает прыжок куда-то дальше.</text>
+	<text>Несколько кораблей пролетают неподалёку от вас по своим делам, но на попытки установить связь никто не реагирует.</text>
+	<text>Единственным кораблём в радиусе связи оказывается небольшое гражданское судно, но и оно, обнаружив вас, немедленно удаляется.</text>
+	<text>Ожидание скрашивает только метеоритный поток, любовно постукивая по вашим щитам и корпусу.</text>
+	<text>You begin to wonder if turning on the beacon would be worth the risk of detection. The fleet slowly approaches.</text>
+	<text>Вы созерцаете безразмерную пустоту космоса.</text>
+	<text>Продолжительное ожидание в пустоте приводит к напряжению внутри команды. Вокруг по-прежнему никого нет.</text>
+	<text>У вашего экипажа начинаются приступы клаустрофобии.</text>
+	<text>Сканеры дальнего действия обнаруживают небольшое поселение, но его жители отказываются от любых контактов.</text>
+</textList>
+
+<event name="FUEL_TRADER">   <!-- this continues in the DISTRESS section -->
+	<text load="FUEL_TRADER_TEXT_LIST"/>
+	<ship load="CIVILIAN_SHIP" hostile="false"/>
+	<choice>
+		<text>Охотно согласиться торговать.</text>
+		<event load="FUEL_TRADER_HIGH_LIST"/>
+	</choice>
+	<choice>
+		<text>Вежливо отказать.</text>
+		<event load="FUEL_TRADER_PT2"/>
+	</choice>
+</event>
+<textList name="FUEL_TRADER_TEXT_LIST">
+	<text>A merchant ship jumps into the sector and you quickly hail them asking for help. They respond, "Perhaps we could work out an exchange..."</text>
+	<text>A number of ships pass through the sector. You relay your message to each, and one finally responds. "I can't help much right now but perhaps we can trade."</text>
+	<text>A nearby settlement sends a small ship in your direction. It keeps its distance and hails you, "We can give you fuel for a price. Just don't even think of doing anything rash. We've got a teleporter at our base and a squad ready to defend us.</text>
+	<text>A large caravan of merchant ships jumps to a location near your position. Sensing an opportunity, one ship breaks off from the fleet to offer you an exchange.</text>
+	<text>A modified YT-1300 freighter jumps to an area near your sector. Your gut tells you these people are smugglers, but they seem to be feeling altruistic and present an offer of assistance.</text>
+</textList>
+	
+<event name="FUEL_EXPLORE">
+	<text>Although your lack of fuel cells prevents your ship from jumping, you can still use your impulse engines. Will you spend some time exploring the nearby system?</text>
+	<choice hidden="true">
+		<text>Исследовать окрестности.</text>
+		<event load="FUEL_EXPLORE_LIST"/>Остаться у маяка.</choice>
+	<choice>
+		<text>Возле маяка вам попалось небольшое астероидное поле.</text>
+		<event/>
+	</choice>
+</event>
+<eventList name="FUEL_EXPLORE_LIST">
+	<event>
+		<text>Приблизиться к астероидам и просканировать их.</text>
+		<choice hidden="true">
+			<text>Не рисковать.</text>
+			<event load="ASTEROID_EXPLORE_RESULTS"/>
+		</choice>
+		<choice>
+			<text>Вы натыкаетесь на небольшую перевалочную станцию для ближних путешественников. FTL приводы здесь почти никто не использует, и местный запас топливных ячеек скромен, а цена высока. Но вариантов у вас нет...</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>Обменять 20 лома на 5 топлива.</text>
+		<choice hidden="true">
+			<text>Вы с удовольствием совершаете сделку.</text>
+			<event>
+				<text>Обменять 10 лома на 2 топлива.</text>
+				<item_modify>
+					<item type="fuel" min="5" max="5"/>
+					<item type="scrap" min="-20" max="-20"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Топлива не хватит надолго, но вы с удовольствием совершаете сделку.</text>
+			<event>
+				<text>Обменять 5 лома на 1 топливо.</text>
+				<item_modify>
+					<item type="fuel" min="2" max="2"/>
+					<item type="scrap" min="-10" max="-10"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Топлива не хватит надолго, но по крайней мере вы сможете совершить прыжок к другому маяку.</text>
+			<event>
+				<text>Отказаться от обмена.</text>
+				<item_modify>
+					<item type="fuel" min="1" max="1"/>
+					<item type="scrap" min="-5" max="-5"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>Никто не отвечает на ваши позывные, и вы не обнаруживаете ничего примечательного.</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>Вы оказались в радиусе сканеров небольшого автоматического разведчика повстанцев!</text>
+	</event>
+	<event>
+		<text>К вам приближается корабль. Он передаёт: «Вижу, вам нужно топливо. Мы готовы состыковаться и помочь».</text>
+		<ship load="REBEL_AUTO_FUEL" hostile="true"/>
+	</event>
+</eventList>
+	
+<event name="FUEL_APPROACH">
+	<text>A ship approaches. They hail you saying, "You need some fuel? We'll prepare to dock to help."</text>
+	<choice hidden="true">
+		<text>Запретить им приближаться.</text>
+		<event load="FUEL_APPROACH_ACCEPT_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Они стыкуются и передают немного топлива со словами: «Постарайтесь больше не оказываться в подобном положении. Времена сейчас сложные — в следующий раз рядом может не оказаться доброй души»..</text>
+		<event load="FUEL_APPROACH_DECLINE_LIST"/>
+	</choice>Остаться у маяка.<choice hidden="true" req="sensors" lvl="3">
+		<text>(Advanced Sensors) Run a detailed scan with your sensors before responding.</text>
+		<event load="FUEL_APPROACH_SCAN_LIST"/>
+	</choice>  Остаться у маяка.<choice hidden="true" req="ADV_SCANNERS">
+		<text>(Long-Ranged Scanners) Run a detailed scan before responding.</text>
+		<event load="FUEL_APPROACH_SCAN_LIST"/>
+	</choice>Вы сблизились и состыковались с вашим кораблём. На борту вам сделали предложение.</event>
+<eventList name="FUEL_APPROACH_ACCEPT_LIST">
+	<event>
+		<text>They pull close to your ship and unload some fuel saying, "Try not to run out of fuel again. These are dangerous times; who knows who could have showed up."</text>
+		<ship load="CIVILIAN_SHIP" hostile="false"/>
+		<item_modify>
+			<item type="fuel" min="2" max="6"/>
+		</item_modify>
+	</event>
+	<event>   <!-- this continues in the DISTRESS section -->
+		<text>They approach and dock with your ship. On board they present an offer.</text>
+		<ship load="CIVILIAN_SHIP" hostile="false"/>
+		<choice>
+			<text>Охотно согласиться торговать.</text>
+			<event load="FUEL_TRADER_HIGH_LIST"/>
+		</choice>
+		<choice>
+			<text>Вежливо отказать.</text>
+			<event load="FUEL_TRADER_PT2"/>
+		</choice>
+	</event>
+	<event>
+		<text>As their ship pulls up next to yours, their captain continues, "Yes, we'll certainly help... Help to relieve you of that nice ship!" Sensors detect a hidden teleporter has been activated. We've been boarded!</text>
+		<ship load="PIRATE_FUEL" hostile="true"/>
+		<boarders min="2" max="3" class="human"/>
+	</event>
+	<event>
+		<text>As they approach, you detect their weapons powering up. It seems their intentions are hostile!</text>
+		<ship load="PIRATE" hostile="true"/>
+	</event>
+</eventList>
+<eventList name="FUEL_APPROACH_DECLINE_LIST">
+	<event>
+		<text>"I assure you that we mean no harm. See, we'll send some fuel over on a transport." A small ship docks and offloads some fuel just as they said. They leave, saying, "Stay cautious, friend."</text>
+		<ship load="CIVILIAN_SHIP" hostile="false"/>
+		<item_modify>
+			<item type="fuel" min="1" max="4"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>"No one trusts anyone these days..." The ship jumps away.</text>
+	</event>
+	<event>
+		<text>They reply,"Keep our distance? Let's see if you can stop us!" They power up their weapons and advance.</text>
+		<ship load="PIRATE_FUEL" hostile="true"/>
+	</event>
+</eventList>
+<eventList name="FUEL_APPROACH_SCAN_LIST">
+	<event>
+		<text>Sensors indicate their ship is without military-grade weaponry, even small arms. You allow them to dock and they give you some fuel saying, "I remember a time when we didn't have to be so paranoid about each others' intentions... Stay safe."</text>
+		<item_modify>
+			<item type="fuel" min="3" max="7"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>Sensors are picking up armed crew and considerably more weaponry than is legal for a craft of this size. This is surely a trap.</text>
+		<choice>
+			<text>Продолжить...</text>
+			<event>
+				<ship load="PIRATE_FUEL" hostile="true"/>
+			</event>
+		</choice>
+		<choice req="cloaking" hidden="true"> 
+			<text>(Cloaking) Cloak and get out of scanning range before they have a chance to lock on.</text>
+			<event>
+				<text>Your highly advanced cloaking system allows you to get out of range easily since they were still out of firing range. Eventually the ship jumps away.</text>
+			</event>
+		</choice>
+	</event>		
+</eventList>
+
+	
+	
+
+	
+	
+	
+	
+	
+<!-------------------
+DEFAULT FUEL EVENTS
+Beacon On!!!!
+-------------------->
+
+
+<eventList name="NO_FUEL_DISTRESS">
+	<event load="FUEL_NOTHING_DISTRESS"/>
+	<event load="FUEL_NOTHING_DISTRESS"/>
+	
+	<event load="FUEL_SELLER_DISTRESS"/>
+	<event load="FUEL_TRADER_DISTRESS"/>
+	<event load="FUEL_EXPLORE"/>
+	<event load="FUEL_APPROACH"/>
+	<event load="FUEL_ON_SLUG_OVERPRICED"/>
+	<event load="FUEL_ON_SLUG_CHUCKLE"/>
+	<event load="FUEL_ON_MANTIS_ATTACK"/>
+	<event load="FUEL_ON_REBEL_WARNING"/>
+	<event load="FUEL_ON_REBEL_ATTACK"/>
+	
+	<event load="NO_FUEL_REFUGEE"/> <!-- DLC - below -->
+</eventList>
+
+
+
+
+
+<!-- MATT FIXME - IS THIS A REPEAT -->
+<event name="FUEL_FLEET_DISTRESS">
+	<text load="FUEL_FLEET_DISTRESS_LIST"/>		
+	<modifyPursuit amount="1"/>
+	<choice hidden="true">
+		<text>Продолжить...</text>
+		<event load="NO_FUEL"/>
+	</choice>
+</event>
+<textList name="FUEL_FLEET_DISTRESS_LIST">
+	<text>Вы уверены, что если не привлекать внимания, то флот повстанцев обнаружит вас нескоро.</text>
+	<text>Since your distress beacon has not been activated, you feel confident that the Rebel fleet is having difficulty tracking you. It should buy you a little time.</text>
+	<text>Сканеры дальнего действия показывают, что флот повстанцев прекратил движение в вашу сторону. Ваше решение не активировать аварийный маяк оказалось дальновидным.</text>
+	<text>Сканеры показывают, что флот повстанцев приостановил преследование. Временно.</text>
+	<text>Ваша интуиция капитана подсказывает, что повстанцы всё ещё не знают, где вас искать.</text>
+	<text>Without a distress beacon or any FTL signatures to trace, you're sure that the Rebels are struggling to find you. You can only hope their confusion lasts until more fuel can be found.</text>
+	<text>The Rebel fleet seems to be unable to locate your ship's signature. If only you could get some fuel, you might still have a chance to place some distance between you and the Rebels...</text>
+</textList>
+<!------->
+
+
+<event name="FUEL_NOTHING_DISTRESS">
+	<text load="FUEL_NOTHING_DISTRESS_LIST"/>
+</event>
+<textList name="FUEL_NOTHING_DISTRESS_LIST">
+	<text>Огни аварийного маяка — единственное видимое движение снаружи корабля.</text>
+	<text>Nothing happens. Your calls go unanswered.</text>
+	<text>Несколько пролетающих мимо кораблей, кажется, не обращают внимания на ваш сигнал бедствия, игнорируя все попытки связи.</text>
+	<text>Несколько гражданских кораблей находятся в диапазоне сканирования, но никто не отвечает на ваши вызовы.</text>
+	<text>В этой области давно никто не пролетал.</text>
+	<text>Маленький корабль прибывает с сообщением: «Этот автоматизированный корабль окажет услугу дозаправки, после того как будет совершен денежный обмен. Бесплатное топливо предоставляется только в аварийных ситуациях».</text>
+	<text>Запросить аварийный запас топлива.</text>
+</textList>
+	
+<event name="FUEL_SELLER_DISTRESS">
+	<ship load="AUTO_FUEL_SELLER" hostile="false"/>Остаться у маяка.<text>A small ship arrives with a message, "This automated ship will provide refueling services once a monetary exchange is complete. Complimentary amounts of fuel are available in emergencies only."</text>
+	<choice hidden="true">
+		<text>«Автоматическая заправка завершена».</text>
+		<event>
+			<text>Купить 2 топлива за 8 лома.</text>
+			<autoReward level="LOW">fuel_only</autoReward>
+		</event>
+	</choice>
+	<choice hidden="false">
+		<text>Buy 5 fuel for 20 scrap.</text>
+		<event>
+			<text>"Automated refueling complete."</text>
+			<item_modify>
+				<item type="fuel" min="5" max="5"/>
+				<item type="scrap" min="-20" max="-20"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="false">
+		<text>Buy 2 fuel for 8 scrap.</text>
+		<event>
+			<text>"Automated refueling complete."</text>
+			<item_modify>
+				<item type="fuel" min="2" max="2"/>
+				<item type="scrap" min="-8" max="-8"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Вежливо отказать.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</event>
+
+
+
+
+<!-- This number of events offers the players a bad trade, then if they say no, a chance for a better trade, and if no again, a chance for just some charity. -->
+<event name="FUEL_TRADER_DISTRESS">
+	<text load="FUEL_TRADER_DISTRESS_TEXT_LIST"/>
+	<ship load="CIVILIAN_SHIP" hostile="false"/>
+	<choice>
+		<text>Охотно согласиться торговать.</text>
+		<event load="FUEL_TRADER_HIGH_LIST"/>
+	</choice>
+	<choice>
+		<text>Вежливо отказать.</text>
+		<event load="FUEL_TRADER_PT2"/>
+	</choice>
+</event>
+<textList name="FUEL_TRADER_DISTRESS_TEXT_LIST">
+	<text>A merchant ship jumps into the sector, obviously responding to your ship's distress beacon. They hail you offering a trade for fuel.</text>
+	<text>A ship arrives at the beacon. "We noticed your distress signal. I assume you're out of fuel? We're a bit low ourselves but perhaps we can make a trade."</text>
+	<text>A ship traveling near the beacon approaches your ship and hails you. "Out of fuel? This is a good opportunity for both of us... Care to trade?"</text>
+	<text>A mercenary ship arrives at the beacon. "We have a bit of extra fuel we can give you... for a price."</text>
+</textList>
+<eventList name="FUEL_TRADER_HIGH_LIST">
+	<event>
+		<item_modify>
+			<item type="fuel" min="2" max="4"/>
+			<item type="drones" min="-2" max="-1"/>
+		</item_modify>
+	</event>
+	<event>
+		<item_modify>
+			<item type="fuel" min="2" max="5"/>
+			<item type="missiles" min="-4" max="-2"/>
+		</item_modify>
+	</event>
+	<event>
+		<item_modify>
+			<item type="fuel" min="2" max="5"/>
+			<item type="scrap" min="-25" max="-15"/>
+		</item_modify>
+	</event>
+</eventList>
+<eventList name="FUEL_TRADER_PT2"> <!-- this list is if the player cant afford the initial trade, he'll either give up and leave or give a second cheaper offer.-->Остаться у маяка.<event>
+		<text>They respond: "Seeing that you're in need, is this trade acceptable?"</text>
+		<choice>
+			<text>«Вы же понимаете, я не занимаюсь благотворительностью, — говорит их капитан. — Это единственное предложение, при котором я согласен расстаться с топливом».</text>
+			<event load="FUEL_TRADER_LOW_LIST"/>
+		</choice>
+		<choice hidden="true">
+			<text hidden="true">Принять предложение.</text>
+			<event load="FUEL_TRADER_PT3"/>
+		</choice>
+	</event>
+	<event>
+		<text>"I'm not doing this for charity, you know," says their captain. "This is the only other way I'll part with my fuel."</text>
+		<choice>
+			<text>«Вы же понимаете, я не занимаюсь благотворительностью, — говорит их капитан. — Это единственное предложение, при котором я согласен расстаться с топливом».</text>
+			<event load="FUEL_TRADER_HIGH_LIST"/>
+		</choice>
+		<choice>
+			<text>Принять предложение.</text>
+			<event>
+				<text>Their captain disconnects from the channel and without another word their ship prepares to jumps away.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>Before they jump away, their captain says, "I'm sorry, but we are unable to help in any other way."</text>
+	</event>
+</eventList>
+<eventList name="FUEL_TRADER_LOW_LIST">
+	<event>
+		<item_modify>
+			<item type="fuel" min="4" max="7"/>
+			<item type="drones" min="-2" max="-1"/>
+		</item_modify>
+	</event>		
+	<event>
+		<item_modify>
+			<item type="fuel" min="4" max="7"/>
+			<item type="missiles" min="-2" max="-1"/>
+		</item_modify>
+	</event>
+	<event>
+		<item_modify>
+			<item type="fuel" min="3" max="7"/>
+			<item type="scrap" min="-12" max="-5"/>
+		</item_modify>
+	</event>
+</eventList>
+<eventList name="FUEL_TRADER_PT3">
+	<event>
+		<text>Корабль повстанцев выходит с вами на связь: «Приветствую, гражданские. Мы приняли ваш сигнал бедствия, и можем помочь... Секундочку... Вы похоже... так вы же тот самый корабль! Готовьтесь к смерти!»</text>
+		<item_modify>
+			<item type="fuel" min="1" max="6"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>Неподалёку появляется корабль повстанцев. Вы получаете сообщение: «Ха! Вообще-то я не планировал проверять этот нудный сектор, и тут на тебе! Самый разыскиваемый корабль выскакивает прямо у меня перед носом, и просто таки сам идёт мне в руки! Какой удачный день». Они заряжают орудия.</text>
+	</event>
+</eventList>
+<!--END NO_FUEL_TRADER STUFF-->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-----------
+		Non sector specific new events
+------------>
+
+
+<event name="FUEL_ON_REBEL_ATTACK">
+	<text load="FUEL_ON_REBEL_ATTACK"/>
+	<ship load="REBEL_FUEL" hostile="true"/>
+</event>
+<textList name="FUEL_ON_REBEL_ATTACK">
+	<text>Ваш маяк бедствия должен был сработать, потому что поблизости совершил прыжок корабль. Вы запускаете на нем сканирование и включаете боевую тревогу. Это истребитель повстанцев!</text>
+	<text>Корабль повстанцев совершает прыжок и выходит на связь: «Я знал, что когда-нибудь вы ошибетесь. Сдавайтесь немедленно!»</text>
+	<text>Приближается корабль, принявший ваш сигнал бедствия. К сожалению, это оказался автоматизированный разведчик повстанцев. Просканировав ваш корабль, он сразу же начинает заряжать двигатели, пытаясь избежать сражения.</text>
+	<text>Пока вы дрейфуете в космосе, мимо пролетает корабль инжи. Прослушав их коммуникационный канал вам показалось, что они обсуждают ремонт, идущий у них на корабле.</text>
+</event>
+	
+
+<event name="FUEL_ON_REBEL_WARNING">
+	<text>Вызвать их.</text>
+	<ship load="REBEL_AUTO_WARNING" hostile="true"/>
+</event>	
+
+
+<!-----------
+		ENGI
+		Specific no fuel events that should eventually be tied to the engi sector
+------------>
+
+<event name="FUEL_OFF_ENGI_DUBIOUS">
+	<text>Игнорировать.</text>
+	<ship load="FUEL_OFF_ENGI_DUBIOUS" hostile="false"/>
+	<choice hidden="true">
+		<text>Они явно заняты, поскольку совершенно не замечают вашего корабля.</text>
+		<event load="FUEL_OFF_ENGI_DUBIOUS_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Они с радостью откликаются на ваше предложение. После того, как дрон заканчивает работу, они передают вам в качестве оплаты некоторое количество топлива.</text>
+		<event>
+			<text>Инжи не отвечают, но идут на перехват. Вы зафиксировали странные электромагнитные сигналы на борту корабля — кто-то перепрограммировал инжи на атаку!</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="SHIP_REPAIR">
+		<text>(Hull Repair Drone) Offer to help repair their hull.</text>
+		<event>
+			<text>Инжи ответили на ваш сигнал: «Вам нужно: топливо. Требуется: лом. Выгодный обмен. Совершить обмен?»</text>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/>
+				<item type="fuel" min="4" max="6"/>
+			</item_modify>
+		</event>
+	</choice>
+</event>
+<eventList name="FUEL_OFF_ENGI_DUBIOUS_LIST">
+	<event>
+		<text>The Engi respond to your signal. "Identity: Federation. I/O error: Federation = [void]." All further hails go unanswered.</text>
+	</event>
+	<event>	
+		<text>The Engi fail to respond, but move to intercept. You detect abnormal electromagnetic signals aboard the ship - someone has reprogrammed them to fight!</text>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>The Engi respond to your signal. "Your need: fuel. This unit's need: scrap. Exchange beneficial. Exchange permitted?</text>
+		<choice>
+			<text>Отклонить.</text>
+			<event>	
+				<text>Инжи прерывают связь и продолжают полёт своим маршрутом.</text>
+				<item_modify>
+					<item type="scrap" min="-20" max="-10"/>
+					<item type="fuel" min="4" max="6"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>Узнав о вашей нужде, инжи соглашаются поделиться запасами топлива. Удивительно, насколько альтруистичными могут быть эти полуроботы.</text>
+			<event>
+				<text>Корабль богомолов выходит на связь: «Похоже, мы нашли бедных идиотов, которым нужна помощь. Вперед, братья, давайте 'поможем' им!» Они двинулись в атаку.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>Вскоре поблизости совершает прыжок корабль, без сомнения, в ответ на сигнал вашего маяка. Однако то облегчение, которое вы испытывали, исчезает, когда вы видите, что корабль имеет форму кораблей богомолов. Готовьтесь к бою.</text>
+		<item_modify>
+			<item type="fuel" min="2" max="6"/>
+		</item_modify>
+	</event>
+</eventList>
+		
+
+		
+		
+
+<!-----------
+		ENGI
+		Specific no fuel events that should eventually be tied to the engi sector
+------------>
+	
+<event name="FUEL_ON_MANTIS_ATTACK">
+	<text load="FUEL_ON_MANTIS_ATTACK"/>
+	<ship load="MANTIS_FUEL" hostile="true"/>
+</event>
+<textList name="FUEL_ON_MANTIS_ATTACK">
+	<text>A Mantis ship hails you, "Looks like we found the poor fools that need some help. Come brothers, let's 'help' them!" They move in to attack.</text>
+	<text>Before long a ship jumps nearby, no doubt responding to your beacon. However any relief you felt disappears as soon as you recognize that the ship is of Mantis design. Prepare for a fight.</text>
+	<text>Корабль богомолов выходит на связь: «Похоже, мы нашли бедных идиотов, которым нужна помощь. Вперед, братья, давайте 'поможем' им!» Они двинулись в атаку.</text>
+	<text>Вскоре поблизости совершает прыжок корабль, без сомнения, в ответ на сигнал вашего маяка. Однако то облегчение, которое вы испытывали, исчезает, когда вы видите, что корабль имеет форму кораблей богомолов. Готовьтесь к бою.</text>
+	
+	<text>A Mantis ship hails you, "Looks like we found the poor fools that need some help. Come brothers, let's 'help' them!" They move in to attack.</text>
+	<text>Before long a ship jumps nearby, no doubt responding to your beacon. However any relief you felt disappears as soon as you recognize that the ship is of Mantis design. Prepare for a fight.</text>
+	<text>Корабль богомолов выходит на связь: «Похоже, мы нашли бедных идиотов, которым нужна помощь. Вперед, братья, давайте 'поможем' им!» Они двинулись в атаку.</text>
+	<text>Вскоре поблизости совершает прыжок корабль, без сомнения, в ответ на сигнал вашего маяка. Однако то облегчение, которое вы испытывали, исчезает, когда вы видите, что корабль имеет форму кораблей богомолов. Готовьтесь к бою.</text>
+</event>
+		
+		
+<!-----------
+		ROCKS
+		Specific no fuel events that should eventually be tied to the rock sector
+------------>
+<event name="FUEL_OFF_ROCK_WRECK">
+	<text>Возможно на борту осталось немного топлива; небольшая команда отправляется на борт.</text>
+	<choice hidden="true">
+		<text>Доложить!</text>
+		<event>
+			<text>Пусть дрейфует.</text>
+			<choice hidden="true">
+				<text>Роки не относятся дружелюбно к иноземцам, которые пролетают через их владения, неважно какими дряхлыми они могут показаться на первый взгляд, и поэтому не стоит рисковать на территории роков.</text>
+				<event load="FUEL_OFF_ROCK_WRECK_LIST"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Через некоторое время команда возвращается с запасом боеприпасов и лома — но топлива на борту уже давно нет.</text>
+		<event>
+			<text>The Rock don't take kindly to aliens picking through their belongings, no matter how decrepit they may seem, and you don't take risks in Rock territory.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="LIFE_SCANNER"> <!--DLC-->
+		<text>(Life Scanner) Run additional scans.</text>
+		<event>
+			<text>The ship appears to be entirely lifeless. Your crew is able to find some usable fuel cells after a brief search.</text>
+			<autoReward level="MED">fuel_only</autoReward>
+		</event>
+	</choice>
+</event>			
+<eventList name="FUEL_OFF_ROCK_WRECK_LIST">
+	<event>
+		<text>Команда вернулась назад ощутимо раньше, нежели ожидалось. Оказывается, как только они вошли во фрегат, его аварийная ячейка с топливом неожиданно проплыла мимо!</text>
+		<autoReward level="MED">missiles</autoReward>
+	</event>
+	<event>
+		<text>Команда как раз делала доклад, когда вы услышали крики и коммуникатор замолчал. Когда связь возобновилась, можно было услышать рока — он единственный выживший из членов экипажа фрегата, и он совершенно обезумел. Он требует, чтобы ему заплатили выкуп ломом, взамен на жизни членов вашего экипажа!</text>
+		<reveal_map/>
+		<autoReward level="MED">fuel_only</autoReward>
+	</event>
+	<event>
+		<text>Заплатить.</text>
+		<autoReward level="MED">fuel_only</autoReward>
+	</event>
+	<event>
+		<text>Несмотря на своё... нездоровое состояние, рок сдержал слово и вернул членов вашей команды, счастливых и благодарных. К сожалению, их благодарность не заправит FTL приводы.</text>
+		<choice>
+			<text>Отказать.</text>
+			<event>
+				<text>Это непростое решение, но это нужно для Федерации и свободы всех остальных. Вы отправляетесь, пока не успели передумать.</text>  <!-- JUSTIN - TO DO - I don't like this one since you don't know who's being ransomed -->
+				<item_modify >
+					<item type="scrap" min="-40" max="-25"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>Любопытный корабль роков прибыл повнимательней рассмотреть вас. Они игнорируют любые попытки приветствия.</text>
+			<event>
+				<text>Атаковать.</text>
+				<removeCrew>
+					<clone>false</clone>
+					<text>Before preparing to jump you check the Clone Bay but there is no sign of activity.</text>
+				</removeCrew>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+<event name="FUEL_OFF_ROCK_CURIOUS">
+	<text>Роки не славятся своим великодушием. Вам нужно это топливо? Заслужите это топливо!</text>
+	<choice hidden="true">
+		<text>Подождать и посмотреть.</text>
+		<event>
+			<text>Корабль роков кружит рядом, сканируя корабельные системы. Вы ожидаете худшего, но сканирование прерывается на топливном баке. Они, очевидно, не особо разговорчивы, но передают запасы топлива, после чего, мигнув габаритами, улетают.</text>
+			<ship load="FUEL_OFF_ROCK_CURIOUS" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Корабль роков кружит рядом, сканируя корабельные системы. Ваши худшие опасения подтвердились, когда они обнаружили ваши двигатели и телепортировали бомбу прямо к ним. Приготовиться к бою!</text>
+		<event load="FUEL_OFF_ROCK_CURIOUS_LIST"/>	
+	</choice>
+</event>
+<eventList name="FUEL_OFF_ROCK_CURIOUS_LIST">
+	<event>
+		<text>Не сказав ни слова корабль совершает прыжок. Вы надеетесь, что они ушли не за подкреплениями.</text>
+		<item_modify>
+			<item type="fuel" min="3" max="8"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>Вы пытаетесь забрать как можно больше топлива из разбитых останков кораблекрушения.</text>
+		<ship load="FUEL_OFF_ROCK_CURIOUS" hostile="true"/>	
+		<status type="limit" target="player" system="engines" amount="1"/>
+	</event>
+</eventList>
+<ship name="FUEL_OFF_ROCK_CURIOUS" auto_blueprint="SHIPS_ROCK">
+	<escape timer="80" min="30" max="30"/>
+	<gotaway>
+		<text>Вы пытаетесь забрать как можно больше топлива из разбитых останков кораблекрушения.</text>
+	</gotaway>
+	<destroyed>
+		<text>Слабо вооруженный корабль слизней предлагает помощь. Их капитан, похоже, тихонько про себя посмеивается. Должно быть из-за цен, которые он предлагает.</text>
+		<autoReward level="MED">fuel</autoReward>
+		<status type="clear" target="player" system="pilot" amount="100"/>
+	</destroyed>
+	<deadCrew>
+		<text>Слабо вооруженный корабль слизней предлагает помощь. Их капитан, похоже, тихонько про себя посмеивается. Должно быть из-за цен, которые он предлагает.</text>
+		<autoReward level="HIGH">fuel</autoReward>
+		<status type="clear" target="player" system="engines" amount="100"/>
+	</deadCrew>
+</ship>
+
+
+
+
+
+
+<!-----------
+		SLUG
+		Specific no fuel events that should eventually be tied to the slug sector
+------------>
+
+<event name="FUEL_ON_SLUG_CHUCKLE">
+	<text>Игнорировать предложение.</text>
+	<ship load="JELLY" hostile="false"/>
+	<choice hidden="true">
+		<text>Вы знаете, что лучше не иметь дел со слизнем, которому, похоже, известно то, чего не знаете вы. Он прыгнул прочь с очередным смешком.</text>
+		<event load="FUEL_ON_SLUG_CHUCKLE_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Завидев члена вашей команды, слизень сразу же прекращает нервно посмеиваться. Кажется, сделка проходит гладко. Вам стало интересно, какие телепатические сражения происходят сейчас между двумя слизнями.</text>
+		<event>
+			<text>Вы сомневаетесь, что он заслуживает доверия, но у вас нет выбора, кроме как заключить сделку. Однако, вы совершаете обмен без происшествий.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="slug">
+		<text>(Slug Crew) Have your Slug make the purchase.</text>
+		<event>
+			<text>As soon as he sees your crewmember the Slug stops his incessant chuckling. The exchange appears to go smoothly although you wonder what mental battles are telepathically occurring between the two Slugs.</text>
+			<item_modify>
+				<item type="scrap" min="-15" max="-15"/>
+				<item type="fuel" min="5" max="5"/>
+			</item_modify>
+		</event>
+	</choice>
+</event>
+<eventList name="FUEL_ON_SLUG_CHUCKLE_LIST">
+	<event>
+		<text>Все выглядит в сохранности, но внезапно исчезает много запасов! Должно быть он установил портативный телепортер в вашем грузовом отсеке. Прежде чем вы успели среагировать, его корабль успел скрыться.</text>
+		<item_modify>
+			<item type="scrap" min="-15" max="-15"/>
+			<item type="fuel" min="5" max="5"/>
+		</item_modify>
+		<choice hidden="true">
+			<text>Продолжить...</text>
+			<event>
+				<text>Мобильный топливный склад слизней попадает в радиус сканирования. «Мои цены честны, и я прошу об одном — не оскорбляйте меня их обсуждением!» Посмотрим-ка на его прайс-лист.</text>
+				<item_modify steal="true">
+					<item type="scrap" min="-35" max="-20"/>
+					<item type="missiles" min="-4" max="-2"/>
+				</item_modify>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>Все выглядит в сохранности, но внезапно исчезает много запасов! Должно быть он установил портативный телепортер в вашем грузовом отсеке. Прежде чем вы успели среагировать, его корабль успел скрыться.</text>
+		<item_modify>
+			<item type="scrap" min="-15" max="-15"/>
+			<item type="fuel" min="5" max="5"/>
+		</item_modify>
+	</event>
+</eventList>
+
+<event name="FUEL_ON_SLUG_OVERPRICED">
+	<text>Торговец выглядит шокированно. Вас не покидает чувство, что это первый случай, когда у него что-то купили по такой цене.</text>
+	<ship load="JELLY_OVERPRICED" hostile="false"/>
+	<choice hidden="false">
+		<text>Торговец выглядит шокированно. Вас не покидает чувство, что это первый случай, когда у него что-то купили по такой цене.</text>
+		<event>
+			<text>Обсудить цены.</text>
+			<item_modify>
+				<item type="scrap" min="-50" max="-50"/>
+				<item type="fuel" min="5" max="5"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="false">
+		<text>Buy 10 fuel for 95 scrap. (BEST DEAL!)</text>
+		<event>
+			<text>Обсудить цены.</text>
+			<item_modify>
+				<item type="scrap" min="-95" max="-95"/>
+				<item type="fuel" min="10" max="10"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Negotiate.</text>
+		<event>
+			<text>You offer a more reasonable price but the Slugman is outraged! He moves in to attack!</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</event>
+
+
+
+
+
+
+
+
+
+<!-----------
+
+***************************************
+		DLC!!!
+	Events added with the DLC
+***************************************
+	NO_FUEL_REFUGEE
+	NO_FUEL_REFUGEE_FRIENDLY
+	------------>
+
+  
+<!-- Distress beacon on -->
+
+<eventList name="NO_FUEL_REFUGEE">  <!-- I made this one compile all 3 so they're less likely than the normal events-->
+	<event>
+		<text>A refugee ship fleeing the Rebel advance enters the system, having picked up your distress beacon. While it doesn't have much fuel to spare, it recognizes you are part of the Federation and offers to split its remaining fuel with you.</text>
+		<autoReward level="LOW">fuel_only</autoReward>
+	</event>
+	<event load="NO_FUEL_REFUGEE_DAMAGED"/>
+	<event load="NO_FUEL_REFUGEE_PIRATE"/>
+</eventList>
+
+<event name="NO_FUEL_REFUGEE_DAMAGED">
+	<text>A refugee ship fleeing the Rebel advance enters the system, having picked up your distress beacon. While it doesn't have much fuel to spare, its hull looks damaged - it is in bad need of scrap and is willing to trade fuel for it.</text>
+	<choice>
+		<text>Trade some scrap for fuel.</text>
+		<event>
+			<text>The refugees thank you for the parts, and gladly pass along the much-needed fuel. They wish you well on your mission, and declare their support for the Federation.</text>
+			<item_modify>	
+				<item type="fuel" min="3" max="3"/>
+				<item type="scrap" min="-10" max="-10"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="engi" hidden="true">
+		<text>(Engi Crew) Negotiate a better trade.</text>
+		<event>
+			<text>Your Engi analyzes scans of the extensive damage to their hull, calculating potential repair costs. The refugees grumble and protest, but in the end, they admit that their need for repairs is greater than their fuel surplus and offer a better trade.</text>
+			<choice>
+				<text>Accept it.</text>
+				<event>
+					<item_modify>
+						<item type="fuel" min="6" max="6"/>
+						<item type="scrap" min="-10" max="-10"/>
+					</item_modify>
+				</event>
+			</choice>
+			<choice>
+				<text>Refuse it.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Refuse their offer.</text>
+		<event load="NO_FUEL_REFUGEE_REFUSE"/>
+	</choice>
+	<choice hidden="true">
+		<text>The helpless refugees make easy targets. Attack them.</text>
+		<event>
+			<text>Panicked, the refugees immediately surrender as your weapons power up. They pass along their fuel and what few other supplies they have left in exchange for their lives.</text>
+			<autoReward level="MED">fuel</autoReward>
+		</event>
+	</choice>
+</event>
+
+<eventList name="NO_FUEL_REFUGEE_REFUSE">
+	<event>
+		<text>The refugee ship cuts communications and jumps from the system without another word, the galactic equivalent of giving you the cold shoulder.</text>
+	</event>
+	<event>
+		<text>The refugees become desperate at your refusal - apparently, their hull is even more damaged than it first appears. Almost begging, they offer a better trade than before.</text>
+		<choice>
+			<text>Accept it.</text>
+			<event>
+				<item_modify>
+					<item type="fuel" min="6" max="6"/>
+					<item type="scrap" min="-10" max="-10"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>Refuse their offer again.</text>
+			<event>
+				<text>The refugee ship cuts communications and jumps from the system without another word, the galactic equivalent of giving you the cold shoulder.</text>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+<event name="NO_FUEL_REFUGEE_PIRATE">
+	<text>A refugee ship fleeing the Rebel advance enters the system, having picked up your distress beacon. While it doesn't have much fuel to spare, it is bad need of armaments and is willing to trade for them.</text>
+	<choice>
+		<text>Offer some missiles for fuel.</text>
+		<event load="NO_FUEL_REFUGEE_PIRATE_ACCEPT"/>
+	</choice>
+	<choice>
+		<text>Refuse their offer.</text>
+		<event load="NO_FUEL_REFUGEE_PIRATE_REJECT"/>
+	</choice>
+</event>
+
+<eventList name="NO_FUEL_REFUGEE_PIRATE_ACCEPT">
+	<event>
+		<text>The refugee ship makes the exchange, and wishes you well on your mission.</text>
+		<item_modify>
+			<item type="fuel" min="5" max="7"/>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>Having traded supplies, the ship suddenly powers up and attacks - it's a pirate ship!</text>
+		<item_modify>
+			<item type="fuel" min="5" max="7"/>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+		<ship load="PIRATE" hostile="true"/>
+	</event>
+</eventList>
+
+<eventList name="NO_FUEL_REFUGEE_PIRATE_REJECT">
+	<event>
+		<text>The refugee ship apologizes, but they need their fuel. They wish you well, and then vanish from the system.</text>
+	</event>
+	<event>
+		<text>Sensing your reluctance, the refugee ship nevertheless parts with a small amount of fuel. It warns you to leave the sector as quickly as possible before it is overtaken by Rebels, then it jumps and vanishes to parts unknown.</text>
+		<autoReward level="LOW">fuel_only</autoReward>
+	</event>
+	<event>
+		<text>Taking your reluctance as weakness, the refugee ship suddenly bristles with weapons - it's a pirate ship, and it believes it's found easy prey!</text>
+		<ship load="PIRATE" hostile="true"/>
+	</event>
+	<event>
+		<text>Taking your reluctance as weakness, the refugee ship suddenly bristles with weapons - it's a pirate ship, and it believes it's found easy prey!</text>
+		<ship load="PIRATE" hostile="true"/>
+	</event>
+</eventList>
+
+<!--- Distress beacon off -->
+
+<event name="NO_FUEL_REFUGEE_FRIENDLY">
+	<text>A refugee ship fleeing the Rebel advance enters the system. It seems surprised to see you stranded, and admits it was following you from afar in the hopes of you leading it to Federation space. While it doesn't have much fuel to spare, it recognizes you are part of the Federation and offers to split its remaining fuel with you.</text>
+	<autoReward level="MED">fuel_only</autoReward>
+</event>
+
+
+	

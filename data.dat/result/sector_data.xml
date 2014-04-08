@@ -1,0 +1,758 @@
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+
+
+<sectorType name="CIVILIAN">
+	<sector>CIVILIAN_SECTOR</sector>
+	<sector>ENGI_SECTOR</sector>
+	<sector>ENGI_HOME</sector>
+	<sector>ZOLTAN_SECTOR</sector>
+	<sector>ZOLTAN_HOME</sector>
+</sectorType>
+
+
+<sectorType name="HOSTILE">
+	<sector>REBEL_SECTOR</sector>
+	<sector>REBEL_SECTOR_MINIBOSS</sector>
+	<sector>PIRATE_SECTOR</sector>
+	<sector>MANTIS_SECTOR</sector>
+	<sector>MANTIS_HOME</sector>
+	<sector>ROCK_SECTOR</sector>
+	<sector>ROCK_HOME</sector>
+	
+</sectorType>
+
+<!--- USE ME FOR EXPANDED CONTENT -->
+<sectorType name="OVERRIDE_HOSTILE">
+	<sector>REBEL_SECTOR</sector>
+	<sector>REBEL_SECTOR_MINIBOSS</sector>
+	<sector>PIRATE_SECTOR</sector>
+	<sector>MANTIS_SECTOR</sector>
+	<sector>MANTIS_HOME</sector>
+	<sector>ROCK_SECTOR</sector>
+	<sector>ROCK_HOME</sector>
+	<sector>LANIUS_SECTOR</sector>
+</sectorType>
+<!----------------------------------->
+
+<sectorType name="NEBULA">
+	<sector>NEBULA_SECTOR</sector>
+	<sector>SLUG_HOME</sector> 
+	<sector>SLUG_SECTOR</sector>
+</sectorType>
+
+<sectorType name="UNKNOWN">
+	<sector>STANDARD_SPACE</sector>
+	<!--
+	<sector>DEEP_SPACE_SECTOR</sector>
+	<sector>ABANDONED_SECTOR</sector>
+	<sector>ZOLTAN_HOME</sector>
+	<sector>ROCK_HOME</sector>
+	-->
+</sectorType>
+
+
+
+
+
+
+
+
+<!-- --------------------
+STRUCTURE SECTORS
+ ----------------------->
+
+<!--default to prevent crashes if bad sector names are loaded-->
+<sectorDescription name="STANDARD_SPACE" minSector="0" unique="false">
+	<nameList>
+		<name>Пространство Федерации</name>
+	</nameList>
+	<trackList>
+		<track>civilian</track>
+		<track>cosmos</track>
+		<track>milkyway</track>
+		<track>lostship</track>
+	</trackList>
+	<startEvent>START_BEACON</startEvent>
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="1"/> <!--DLC - CHanged from 1/2-->
+	<event name="NEUTRAL_CIVILIAN" min="2" max="4"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="1" max="2"/>
+	<event name="HOSTILE_CIVILIAN" min="4" max="6"/>
+	<event name="NEBULA" min="0" max="4"/>
+	<event name="QUESTS" min="1" max="1"/>
+	<event name="HOSTILE1" min="2" max="2"/>
+	<event name="HOSTILE_BOARDING" min="0" max="0"/>
+</sectorDescription>
+
+
+<!--FINAL -- The sector with the boss -->
+<sectorDescription name="FINAL" minSector="7" unique="true">
+	<nameList>
+		<name>Финальная битва</name>
+	</nameList>
+	<trackList>
+		<track>laststand</track>
+	</trackList>
+	<startEvent>BOSS_NEUTRAL</startEvent><!-- STUPID, since it's starting you at the "exit" -->
+	<event name="STORE" min="1" max="1"/>
+	<event name="BOSS_REPAIR_STATION" min="3" max="3"/>
+	<event name="BOSS_HOSTILE" min="6" max="6"/>
+	<event name="BOSS_NEUTRAL" min="7" max="10"/>
+</sectorDescription>
+
+
+
+
+
+
+
+
+
+<!-- --------------------
+CIVILIAN SECTORS
+ ----------------------->
+
+
+<sectorDescription name="CIVILIAN_SECTOR" minSector="0" unique="false"> 
+	<nameList>
+		<name>Гражданский сектор</name>
+	</nameList>
+	<trackList>
+		<track>civilian</track> 
+		<track>cosmos</track>
+		<track>milkyway</track>
+		<track>lostship</track>
+	</trackList>
+<!--	<startEvent>START_BEACON_CIVILIAN</startEvent>   JUSTIN TO DO-->
+	<event name="STORE" min="2" max="3"/>
+	<event name="ITEMS" min="2" max="3"/>
+	<event name="NEUTRAL_CIVILIAN" min="2" max="4"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="1" max="2"/>
+	<event name="HOSTILE_CIVILIAN" min="4" max="6"/>
+	<event name="NEBULA" min="0" max="8"/>
+<!--	<event name="HOSTILE_BOARDING" min="0" max="1"/>-->
+	<event name="QUESTS" min="0" max="2"/>
+	<event name="HOSTILE1" min="2" max="2"/>
+	
+	<!-- JUSTIN CHANGE THESE -->
+</sectorDescrption>
+
+
+
+<sectorDescription name="ENGI_SECTOR" minSector="0" unique="false">  
+	<nameList>
+		<name>Сектор инжи</name>
+	</nameList>
+	<trackList>
+		<track>engi</track>
+		<track>cosmos</track>
+		<track>hacking</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="1"/>
+		<blueprint name="mantis" rarity="0"/>
+		<blueprint name="energy" rarity="4"/>
+		<blueprint name="slug" rarity="0"/>
+		<blueprint name="rock" rarity="0"/>
+		<blueprint name="human" rarity="3"/>
+	</rarityList>
+	<startEvent>START_BEACON_ENGI</startEvent>
+	<event name="STORE_ENGI" min="2" max="3"/>
+	<event name="ITEMS" min="2" max="2"/>
+	<event name="NOTHING_ENGI" min="1" max="2"/>
+	<event name="ITEMS_ENGI" min="3" max="3"/>
+	<event name="DISTRESS_BEACON_ENGI" min="1" max="3"/>
+	<event name="QUESTS_ENGI" min="1" max="1"/>
+	<event name="NEUTRAL_ENGI" min="4" max="6"/>
+	<event name="HOSTILE_ENGI" min="5" max="7"/>
+</sectorDescrption>
+
+<sectorDescription name="ENGI_HOME" minSector="2" unique="true"> 
+	<nameList>
+		<name>Родной мир инжи</name>
+	</nameList>
+	<trackList>
+		<track>engi</track>
+		<track>cosmos</track>
+		<track>hacking</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="1"/>
+		<blueprint name="mantis" rarity="0"/>
+		<blueprint name="energy" rarity="4"/>
+		<blueprint name="slug" rarity="0"/>
+		<blueprint name="rock" rarity="0"/>
+		<blueprint name="human" rarity="3"/>
+	</rarityList>
+	<startEvent>START_BEACON_ENGI</startEvent>
+	<event name="ENGI_UNLOCK_1" min="1" max="1"/>
+	<event name="STORE_ENGI" min="2" max="3"/>
+	<event name="ITEMS" min="2" max="2"/>
+	<event name="NOTHING_ENGI" min="1" max="2"/>
+	<event name="ITEMS_ENGI" min="3" max="3"/>
+	<event name="DISTRESS_BEACON_ENGI" min="1" max="3"/>
+	<event name="QUESTS_ENGI" min="1" max="1"/>
+	<event name="NEUTRAL_ENGI" min="5" max="7"/>
+	<event name="HOSTILE_ENGI" min="5" max="7"/>
+</sectorDescrption>
+
+
+
+
+
+
+
+<!-- --------------------
+HOSTILE SECTORS
+ ----------------------->
+ 
+<sectorDescription name="PIRATE_SECTOR" minSector="0" unique="false">  
+	<nameList>
+		<name>Сектор пиратов</name>
+	</nameList>
+	<trackList>
+		<track>colonial</track>
+		<track>void</track>
+		<track>lostship</track>
+		<track>hacking</track>
+	</trackList>
+	<startEvent>START_BEACON_PIRATE</startEvent>
+	<event name="STORE_PIRATE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="HOSTILE_PIRATE" min="6" max="8"/>
+	<event name="BOARDERS_PIRATE" min="1" max="1"/>
+	<event name="DISTRESS_BEACON_PIRATE" min="1" max="2"/>
+	<event name="NEBULA_PIRATE" min="0" max="5"/>
+	<event name="NOTHING_PIRATE" min="1" max="2"/> <!-- need more -->
+	<event name="QUESTS_PIRATE" min="0" max="1"/> <!-- need more -->
+	<event name="NEUTRAL_PIRATE" min="5" max="6"/>
+</sectorDescrption>
+
+
+
+<sectorDescription name="REBEL_SECTOR_MINIBOSS" minSector="4" unique="true">   <!-- This is the unique sector that has the mini-boss fight-->
+	<nameList>
+		<name>Rebel Stronghold</name>
+	</nameList>
+	<trackList>
+		<track>colonial</track>
+		<track>wasteland</track>
+		<track>hacking</track>
+		<track>lostship</track>
+	</trackList>
+	<startEvent>START_BEACON_REBEL</startEvent>
+	<event name="FLAGSHIP_CONSTRUCTION" min="1" max="1"/>
+	<event name="STORE_REBEL" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="HOSTILE_REBEL" min="6" max="8"/>
+	<event name="BOARDERS_REBEL" min="1" max="1"/>
+	<event name="DISTRESS_BEACON_REBEL" min="1" max="2"/>
+	<event name="NEBULA_REBEL" min="0" max="5"/>
+	<event name="NOTHING_REBEL" min="1" max="2"/> <!-- need more -->
+	<event name="QUESTS_REBEL" min="0" max="2"/> <!-- need more -->
+	<event name="NEUTRAL_REBEL" min="5" max="6"/>
+</sectorDescrption>
+
+<sectorDescription name="REBEL_SECTOR" minSector="0" unique="false">  
+	<nameList>
+		<name>Сектор повстанцев</name>
+	</nameList>
+	<trackList>
+		<track>colonial</track>
+		<track>wasteland</track>
+		<track>lostship</track>
+		<track>hacking</track>
+	</trackList>
+	<startEvent>START_BEACON_REBEL</startEvent>
+	<event name="STORE_REBEL" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="HOSTILE_REBEL" min="6" max="8"/>
+	<event name="BOARDERS_REBEL" min="1" max="1"/>
+	<event name="DISTRESS_BEACON_REBEL" min="1" max="2"/>
+	<event name="NEBULA_REBEL" min="0" max="5"/>
+	<event name="NOTHING_REBEL" min="1" max="2"/> <!-- need more -->
+	<event name="QUESTS_REBEL" min="0" max="2"/> <!-- need more -->
+	<event name="NEUTRAL_REBEL" min="5" max="6"/>
+</sectorDescrption>
+
+
+<sectorDescription name="MANTIS_SECTOR" minSector="0" unique="false"> 
+	<nameList>
+		<name>Сектор богомолов</name>
+	</nameList>
+	<trackList>
+		<track>mantis</track>
+		<track>debris</track>
+		<track>void</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="3"/>
+		<blueprint name="mantis" rarity="1"/>
+		<blueprint name="energy" rarity="0"/>
+		<blueprint name="slug" rarity="0"/>
+		<blueprint name="rock" rarity="4"/>
+		<blueprint name="human" rarity="2"/>
+	</rarityList>
+	<startEvent>START_BEACON_MANTIS</startEvent>
+	<event name="STORE_MANTIS" min="1" max="2"/>
+	<event name="NOTHING_MANTIS" min="2" max="3"/>
+	<event name="DISTRESS_BEACON_MANTIS" min="1" max="3"/>
+	<event name="HOSTILE_MANTIS" min="6" max="7"/>
+	<event name="BOARDERS_MANTIS" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NEUTRAL_MANTIS" min="6" max="7"/>
+</sectorDescrption>
+
+<sectorDescription name="MANTIS_HOME" minSector="2" unique="true">  
+	<nameList>
+		<name>Родной мир богомолов</name>
+	</nameList>
+	<trackList>
+		<track>mantis</track>
+		<track>debris</track>
+		<track>void</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="3"/>
+		<blueprint name="mantis" rarity="1"/>
+		<blueprint name="energy" rarity="0"/>
+		<blueprint name="slug" rarity="0"/>
+		<blueprint name="rock" rarity="4"/>
+		<blueprint name="human" rarity="2"/>
+	</rarityList>
+	<startEvent>START_BEACON_MANTIS</startEvent>
+	<event name="MANTIS_NAMED_THIEF" min="1" max="1"/>
+	<event name="STORE_MANTIS" min="1" max="2"/>
+	<event name="NOTHING_MANTIS" min="2" max="3"/>
+	<event name="DISTRESS_BEACON_MANTIS" min="1" max="3"/>
+	<event name="HOSTILE_MANTIS" min="6" max="7"/>
+	<event name="BOARDERS_MANTIS" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NEUTRAL_MANTIS" min="6" max="7"/>
+</sectorDescrption>
+
+
+
+
+
+
+
+
+<!-- --------------------
+NEBULA SECTORS
+ ----------------------->
+
+<sectorDescription name="NEBULA_SECTOR" minSector="0" unique="false"> 
+	<nameList>
+		<name>Неизведанная туманность</name>
+	</nameList>
+	<trackList>
+		<track>deepspace</track>
+		<track>void</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="4"/>
+		<blueprint name="mantis" rarity="4"/>
+		<blueprint name="energy" rarity="4"/>
+		<blueprint name="slug" rarity="3"/>
+		<blueprint name="rock" rarity="4"/>
+		<blueprint name="human" rarity="1"/>
+	</rarityList>
+	<startEvent>START_BEACON_NEBULA</startEvent>
+	<event name="STORE" min="0" max="1"/>
+	<event name="ITEMS" min="1" max="3"/>
+	<event name="NEBULA_STORE" min="1" max="1"/>
+	<event name="NEBULA_EMPTY" min="4" max="4"/>
+	<event name="NEBULA_HOSTILE" min="5" max="6"/>
+	<event name="NEBULA_NEUTRAL" min="7" max="8"/>
+	<event name="DISTRESS_BEACON" min="1" max="3"/>
+</sectorDescrption>
+
+<sectorDescription name="SLUG_HOME" minSector="3" unique="true">    
+	<nameList>
+		<name>Родная туманность слизней</name>
+	</nameList>
+	<trackList>
+		<track>slug</track>
+		<track>debris</track>
+		<track>wasteland</track>
+		<track>deepspace</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="4"/>
+		<blueprint name="mantis" rarity="4"/>
+		<blueprint name="energy" rarity="4"/>
+		<blueprint name="slug" rarity="2"/>
+		<blueprint name="rock" rarity="4"/>
+		<blueprint name="human" rarity="2"/>
+	</rarityList>
+	<startEvent>START_BEACON_SLUG</startEvent>
+	<event name="NEBULA_SLUG_FIGHT_UNLOCK" min="1" max="1"/>
+	<event name="STORE" min="0" max="1"/>
+	<event name="NEBULA_STORE_SLUG" min="2" max="2"/>
+	<event name="ITEMS" min="0" max="2"/>
+	<event name="NOTHING_SLUG" min="0" max="2"/>
+	<event name="HOSTILE_SLUG" min="1" max="2"/>
+	<event name="DISTRESS_BEACON_SLUG" min="3" max="4"/>
+	<event name="NEBULA_NOTHING_SLUG" min="2" max="4"/>
+	<event name="NEBULA_HOSTILE_SLUG" min="5" max="7"/>
+	<event name="STORM_SLUG" min="1" max="3"/>
+	<event name="NEBULA_NEUTRAL_SLUG" min="3" max="5"/>
+	<event name="NEUTRAL" min="1" max="2"/>
+	
+	
+</sectorDescrption>
+
+<sectorDescription name="SLUG_SECTOR" minSector="3" unique="false">    
+	<nameList>
+		<name>Туманность слизней</name>
+	</nameList>
+	<trackList>
+		<track>slug</track>
+		<track>debris</track>
+		<track>wasteland</track>
+		<track>deepspace</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="4"/>
+		<blueprint name="mantis" rarity="4"/>
+		<blueprint name="energy" rarity="4"/>
+		<blueprint name="slug" rarity="2"/>
+		<blueprint name="rock" rarity="4"/>
+		<blueprint name="human" rarity="2"/>
+	</rarityList>
+	<startEvent>START_BEACON_SLUG</startEvent>
+	<event name="STORE" min="0" max="1"/>
+	<event name="NEBULA_STORE_SLUG" min="2" max="2"/>
+	<event name="ITEMS" min="0" max="2"/>
+	<event name="NOTHING_SLUG" min="0" max="2"/>
+	<event name="HOSTILE_SLUG" min="1" max="2"/>
+	<event name="DISTRESS_BEACON_SLUG" min="3" max="4"/>
+	<event name="NEBULA_NOTHING_SLUG" min="2" max="4"/>
+	<event name="NEBULA_HOSTILE_SLUG" min="5" max="7"/>
+	<event name="STORM_SLUG" min="1" max="3"/>
+	<event name="NEBULA_NEUTRAL_SLUG" min="3" max="5"/>
+	<event name="NEUTRAL" min="1" max="2"/>
+	
+	
+</sectorDescrption>
+
+
+
+
+
+
+
+<!-- --------------------
+UNKNOWN SECTORS
+
+make this have the unique map exploring (cant see all nodes, slow rebel movement), filled with many empty, some normal pirates/civilizations, + some special "discover new aliens" events
+ ----------------------->
+
+
+<sectorDescription name="DEEP_SPACE_SECTOR" minSector="0" unique="false">   
+	<nameList>
+	</nameList>
+	<event name="STORE" min="2" max="4"/>
+	
+	
+</sectorDescrption>
+
+<sectorDescription name="ABANDONED_SECTOR" minSector="0" unique="false">   
+	<nameList>
+	</nameList>
+	<event name="STORE" min="2" max="4"/>
+	
+	
+</sectorDescrption>
+
+
+<sectorDescription name="ZOLTAN_SECTOR" minSector="1" unique="false">   
+	<nameList>
+		<name>Сектор золтанцев</name>
+	</nameList>
+	<trackList>
+		<track>zoltan</track>
+		<track>cosmos</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="3"/>
+		<blueprint name="mantis" rarity="3"/>
+		<blueprint name="energy" rarity="1"/>
+		<blueprint name="slug" rarity="3"/>
+		<blueprint name="rock" rarity="3"/>
+		<blueprint name="human" rarity="2"/>
+	</rarityList>
+	<startEvent>START_BEACON_ZOLTAN</startEvent>
+	<event name="ZOLTAN_CREW_STUDY" min="1" max="1"/>
+	<event name="STORE_ZOLTAN" min="2" max="2"/>
+	<event name="NOTHING_ZOLTAN" min="1" max="2"/>
+	<event name="DISTRESS_BEACON_ZOLTAN" min="1" max="2"/>
+	<event name="NEBULA_ZOLTAN" min="2" max="6"/>
+	<event name="HOSTILE_ZOLTAN" min="6" max="8"/>
+	<event name="BOARDERS_ZOLTAN" min="1" max="2"/>
+	<event name="ITEM_ZOLTAN" min="1" max="2"/>
+	<event name="QUESTS_ZOLTAN" min="0" max="1"/>
+	<event name="NEUTRAL_ZOLTAN" min="5" max="6"/>
+</sectorDescrption>
+
+
+<sectorDescription name="ZOLTAN_HOME" minSector="2" unique="true">  
+	<nameList>
+		<name>Родной мир золтанцев</name>
+	</nameList>
+	<trackList>
+		<track>zoltan</track>
+		<track>cosmos</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="3"/>
+		<blueprint name="mantis" rarity="3"/>
+		<blueprint name="energy" rarity="1"/>
+		<blueprint name="slug" rarity="3"/>
+		<blueprint name="rock" rarity="3"/>
+		<blueprint name="human" rarity="2"/>
+	</rarityList>
+	<startEvent>START_BEACON_ZOLTAN</startEvent>
+	<event name="ZOLTAN_CREW_STUDY" min="1" max="1"/>
+	<event name="ZOLTAN_PEACE_QUEST" min="1" max="1"/>
+	<event name="STORE_ZOLTAN" min="2" max="2"/>
+	<event name="NOTHING_ZOLTAN" min="1" max="2"/>
+	<event name="DISTRESS_BEACON_ZOLTAN" min="1" max="2"/>
+	<event name="NEBULA_ZOLTAN" min="2" max="6"/>
+	<event name="HOSTILE_ZOLTAN" min="6" max="8"/>
+	<event name="BOARDERS_ZOLTAN" min="1" max="2"/>
+	<event name="ITEM_ZOLTAN" min="1" max="2"/>
+	<event name="QUESTS_ZOLTAN" min="0" max="1"/>
+	<event name="NEUTRAL_ZOLTAN" min="5" max="6"/>
+	
+	
+</sectorDescrption>
+
+
+
+<sectorDescription name="ROCK_SECTOR" minSector="1" unique="false">   
+	<nameList>
+		<name>Сектор роков</name>
+	</nameList>
+	<trackList>
+		<track>rock</track>
+		<track>wasteland</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="0"/>
+		<blueprint name="mantis" rarity="0"/>
+		<blueprint name="energy" rarity="3"/>
+		<blueprint name="slug" rarity="0"/>
+		<blueprint name="rock" rarity="1"/>
+		<blueprint name="human" rarity="2"/>
+		<blueprint name="BOMB_LOCK" rarity="4"/>
+	</rarityList>
+	<!--<event name="STORE" min="2" max="4"/>-->
+	
+	<startEvent>START_BEACON_ROCK</startEvent>
+	<event name="STORE_ROCK" min="2" max="2"/>
+	<event name="NOTHING_ROCK" min="2" max="3"/>
+	<event name="DISTRESS_BEACON_ROCK" min="1" max="2"/>
+	<event name="HOSTILE_ROCK" min="6" max="8"/>
+	<event name="BOARDERS_ROCK" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="QUESTS_ROCK" min="0" max="1"/>
+	<event name="NEUTRAL_ROCK" min="7" max="8"/>
+	
+</sectorDescrption>
+
+<sectorDescription name="ROCK_HOME" minSector="4" unique="true">   
+	<nameList>
+		<name>Родной мир роков</name>
+	</nameList>
+	<trackList>
+		<track>rock</track>
+		<track>wasteland</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="0"/>
+		<blueprint name="mantis" rarity="0"/>
+		<blueprint name="energy" rarity="3"/>
+		<blueprint name="slug" rarity="0"/>
+		<blueprint name="rock" rarity="1"/>
+		<blueprint name="human" rarity="2"/>
+		<blueprint name="BOMB_LOCK" rarity="2"/>
+	</rarityList>
+	<!--<event name="STORE" min="2" max="4"/>-->
+	
+	<startEvent>START_BEACON_ROCK</startEvent>
+	<event name="ROCK_CRYSTAL_BEACON" min="1" max="1"/> <!-- CRYSTAL UNLOCK-->
+	<event name="ROCK_UNLOCK1" min="1" max="1"/>
+	<event name="STORE_ROCK" min="2" max="2"/>
+	<event name="NOTHING_ROCK" min="2" max="3"/>
+	<event name="DISTRESS_BEACON_ROCK" min="1" max="2"/>
+	<event name="HOSTILE_ROCK" min="6" max="8"/>
+	<event name="BOARDERS_ROCK" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="QUESTS_ROCK" min="0" max="1"/>
+	<event name="NEUTRAL_ROCK" min="7" max="8"/>
+	
+</sectorDescrption>
+
+
+<!-- --------------------
+HIDDEN SECTORS
+ ----------------------->
+<!-- carbon copy of slugs for now just as filler so i can run tests -->
+<sectorDescription name="CRYSTAL_HOME" minSector="0" unique="true">   
+	<nameList>
+		<name>Скрытые миры кристалинов</name>
+	</nameList>
+	<trackList>
+		<track>debris</track>
+		<track>wasteland</track>
+		<track>deepspace</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="0"/>
+		<blueprint name="mantis" rarity="0"/>
+		<blueprint name="energy" rarity="0"/>
+		<blueprint name="slug" rarity="0"/>
+		<blueprint name="rock" rarity="0"/>
+		<blueprint name="human" rarity="0"/>
+		<blueprint name="crystal" rarity="1"/>
+		<blueprint name="LASER_BURST_1" rarity="0"/>
+		<blueprint name="LASER_BURST_2" rarity="0"/>
+		<blueprint name="LASER_BURST_2_A" rarity="0"/>
+		<blueprint name="LASER_BURST_3" rarity="0"/>
+		<blueprint name="LASER_BURST_5" rarity="0"/>
+		<blueprint name="LASER_HEAVY_1" rarity="0"/>
+		<blueprint name="LASER_HEAVY_2" rarity="0"/>
+		<blueprint name="MISSILES_1" rarity="0"/>
+		<blueprint name="MISSILES_2" rarity="0"/>
+		<blueprint name="MISSILES_2_PLAYER" rarity="0"/>
+		<blueprint name="MISSILES_3" rarity="0"/>
+		<blueprint name="MISSILES_BURST" rarity="0"/>
+		<blueprint name="MISSILES_BREACH" rarity="0"/>
+		<blueprint name="BEAM_1" rarity="0"/>
+		<blueprint name="BEAM_2" rarity="0"/>
+		<blueprint name="BEAM_3" rarity="0"/>
+		<blueprint name="BEAM_LONG" rarity="0"/>
+		<blueprint name="BEAM_FIRE" rarity="0"/>
+		<blueprint name="BOMB_BREACH_1" rarity="0"/>
+		<blueprint name="BOMB_BREACH_2" rarity="0"/>
+		<blueprint name="ION_1" rarity="0"/>
+		<blueprint name="ION_2" rarity="0"/>
+		<blueprint name="ION_4" rarity="0"/>
+		<blueprint name="BOMB_1" rarity="0"/>
+		<blueprint name="BOMB_FIRE" rarity="0"/>
+		<blueprint name="BOMB_ION" rarity="0"/>
+		<blueprint name="BOMB_HEAL" rarity="0"/>
+		<blueprint name="LASER_HULL_1" rarity="0"/>
+		<blueprint name="LASER_HULL_2" rarity="0"/>
+		<blueprint name="BEAM_HULL" rarity="0"/>
+		<blueprint name="MISSILES_HULL" rarity="0"/>
+		<blueprint name="BOMB_LOCK" rarity="3"/>
+		<blueprint name="CRYSTAL_BURST_1" rarity="1"/>
+		<blueprint name="CRYSTAL_BURST_2" rarity="4"/>
+		<blueprint name="CRYSTAL_HEAVY_1" rarity="2"/>
+		<blueprint name="CRYSTAL_HEAVY_2" rarity="5"/>
+	</rarityList>
+	<startEvent>START_BEACON_CRYSTAL</startEvent>
+	<event name="STORE_CRYSTAL" min="2" max="3"/>
+	<event name="ITEMS_CRYSTAL" min="2" max="2"/>
+	<event name="NOTHING_CRYSTAL" min="2" max="2"/>
+	<event name="HOSTILE_CRYSTAL" min="6" max="10"/>
+	<event name="BOARDERS_CRYSTAL" min="1" max="2"/>
+	<event name="NEUTRAL_CRYSTAL" min="12" max="12"/>
+	
+	
+</sectorDescrption>
+
+
+
+
+
+<sectorDescription name="LANIUS_SECTOR" minSector="1" unique="false">   
+	<nameList>
+		<name>Abandoned Sector</name>
+	</nameList>
+	<trackList>
+		<track>shrike</track>
+		<track>deepspace</track>
+		<track>wasteland</track>
+	</trackList>
+	<rarityList>
+		<blueprint name="engi" rarity="3"/>
+		<blueprint name="mantis" rarity="3"/>
+		<blueprint name="energy" rarity="4"/>
+		<blueprint name="slug" rarity="4"/>
+		<blueprint name="rock" rarity="3"/>
+		<blueprint name="human" rarity="2"/>
+		<blueprint name="anaerobic" rarity="2"/>
+	</rarityList>
+	<startEvent>START_BEACON_LANIUS</startEvent>
+	<event name="STORE_LANIUS" min="2" max="2"/>
+	<event name="NOTHING_LANIUS" min="1" max="2"/>
+	<event name="DISTRESS_BEACON_LANIUS" min="1" max="2"/>
+<!--	<event name="NEBULA_LANIUS" min="2" max="6"/>  -->
+	<event name="HOSTILE_LANIUS" min="5" max="6"/>
+	<event name="HOSTILE_ENVIRONMENT_LANIUS" min="1" max="2"/>
+	<event name="BOARDERS_LANIUS" min="1" max="2"/>
+	<event name="ITEM_LANIUS" min="2" max="4"/>
+	<event name="QUESTS_LANIUS" min="0" max="1"/>
+	<event name="NEUTRAL_LANIUS" min="5" max="6"/>
+</sectorDescrption>
+
+
+<!-- Old name lists
+
+
+		<name>Сектор Федерации B53</name>
+		<name>Сектор Федерации C21</name>
+		<name>Бывшая республика Гилиида</name>
+		
+		<name>Новые колонии Кварты</name>
+		<name>ДМЗ Варлиан</name>
+		<name>Объед. Планеты Талраси</name>
+		<name>Планеты Лодора</name>
+		<name>Колонии Марлит</name>
+		<name>Колонии Ремскара</name>
+		<name>Тасадор 8</name>
+		<name>Сектор торговли 51-A2</name>
+		<name>Сектор торговли 21-F3</name>
+		<name>Сектор торговли 125-S1</name>
+		<name>Сектор торговли 42-MX</name>
+
+		<name>Карантинная зона 13C</name>
+		<name>Карантинная зона 45A</name>
+		<name>Протекторат Хергарта — Пиратам не входить!</name>
+		<name>Зона влюблённых — Пиратам не входить!</name>
+		<name>Край света — Пиратам не входить!</name>
+		<name>Колониальные рудники Парта — Пиратам не входить!</name>
+		
+		<name>Передовая база повстанцев Омега</name>
+		<name>Передовая база повстанцев Сигма</name>
+		<name>Фронт освобождения — контролируется повстанцами!</name>
+		<name>Протекторат Ораста — контролируется повстанцами!</name>
+		<name>Ярин IV — контролируется повстанцами!</name>
+		
+		<name>Киррактас — главный оплот богомолов</name>
+		
+		<name>Туманность Перазиан</name>
+		<name>Туманность Эркарт</name>
+		<name>Туманность Тераса</name>
+		<name>Туманность Иссвер</name>
+		<name>Туманность Церера</name>
+		<name>Туманность Персея</name>	
+		<name>Неизведанная туманность 3.45</name>
+		<name>Неизведанная туманность 6.567</name>
+		<name>Неизведанная туманность 52.4.2</name>
+
+		<name>Неисследованный сектор 42.53</name>
+		<name>Неисследованный сектор 12.425.2</name>
+		<name>Неисследованный сектор 51.26</name>
+		<name>Неисследованный сектор 2.XM.42</name>
+		<name>Неисследованный сектор Омега 42</name>
+		<name>Неисследованный сектор 21.56</name>
+
+		<name>Вектор 253.1 — Родной сектор инжи</name>-->
