@@ -1,0 +1,190 @@
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+
+<nameList race="human" sex="male">
+	<name>Кирби</name>
+	<name>Ма Фэн</name>
+	<name>Джон</name>
+	<name>Бьёрн</name>
+	<name>Джастин</name>
+	<name>Мэтт</name>
+	<name>Они</name>
+	<name>Джек</name>
+	<name>Маркус</name>
+	<name>Аднан</name>
+	<name>Гектор</name>
+	<name>Лю Чжан</name>
+	<name>Хосе</name>
+	<name>Лиам</name>
+	<name>Оуэн</name>
+	<name>Маркель</name>
+	<name>Натан</name>
+	<name>Томас</name>
+	<name>Филип</name>
+	<name>Никола</name>
+	<name>Максим</name>
+	<name>Артём</name>
+	<name>Михаил</name>
+	<name>Тай И</name>
+	<name short="Джун">Джунпень</name>
+	<name>Стивен</name>
+	<name>Ферри</name>
+	<name>Сэм</name>
+	<name>Ти Лек</name>
+	<name>Мэтью</name>
+	<name>Кинг</name>
+	<name>Граффин</name>
+	<name>Хатц</name>
+	<name>Атрейо</name>
+	<name>Брайан</name>
+	<name>Зэс</name>
+</nameList>
+
+<nameList race="human" sex="female">
+	<name>Джилл</name>
+	<name>Элисон</name>
+	<name>Аки</name>
+	<name>Мария</name>
+	<name>Лорен</name>
+	<name short="Лиза">Элизабет</name>
+	<name>Назия</name>
+	<name>Эмили</name>
+	<name>Уиллоу</name>
+	<name>Син Син</name>
+	<name short="Фелис">Фелисити</name>
+	<name>Ариэль</name>
+	<name>Аиша</name>
+	<name>Мэнон</name>
+	<name>Эмма</name>
+	<name>София</name>
+	<name>Ребека</name>
+	<name short="Лиса">Лисандра</name>
+	<name>Пипалук</name>
+	<name>Лана</name>
+	<name>Ноэми</name>
+	<name>Валерия</name>
+</nameList>
+
+<!-- Kickstarter name list start -->
+<!-- Missing:
+	$100
+	Chase Cagle
+	
+	$500
+	Steve Swink
+		
+-->
+
+<nameList race="human" sex="female">
+	<name>Бэт</name> 
+	<name>Дэбби</name>
+	<name>Кара</name>
+</nameList>
+
+
+<nameList race="human" sex="male">
+	<name>Алекс Ригопулос</name>
+	<name short="Морт">Мортрэйвен</name>
+	<name>Нотч</name>
+	<name>Стивен</name>
+	<name short="ВэйШинг">Вэй-Шинг</name>
+	<name>Кадриэл</name>
+	<name>Старгер</name>
+	<name>Эндрю Фенн</name>
+	<name>Мр. Буга</name>
+	<name>Борман</name>
+	<name>Скотт Клёцкин</name>
+	<name>Фличи</name>
+	<name>Джоэл</name>
+	<name>Шэлтон</name>
+	<name>Тач</name>
+	<name>Логан Джонсон</name>
+	<name>Энзо Мартин</name>
+	<name>Джекс</name>
+	<name>Джефф Баарс</name>
+	<name>Оум</name>
+	<name>Илай Карис</name>
+	<name>Гампо</name>
+	<name>Зеримар</name>
+	<name>Бомфай М</name>
+	<name>Никоз</name>
+	<name>Скупс</name>
+	<name>Ремо</name>
+	<name>Берко</name>
+	<name>Джорлак</name>
+	<name>Хассифа</name>
+	<name short="Магмар">Магмароз</name>
+	<name>Баттерз</name> <!-- not sure -->
+	<name>Джош Кюббин</name>
+	<name>Витас Варнэс</name>
+	<name>Монсвик</name>
+	<name>Грозоли</name>
+	<name>Шон О'Риган</name>
+	<name>Том Бэнкс</name>
+	<name>Никми</name>
+	<name>Маллетт</name>
+	<name short="Виви">Вивиморд</name>
+	<name>Крэйг Долан</name>
+	<name>Дре Козар</name>
+	<name>Ник Ланг</name>
+	<name>Гилес</name>
+	<name>Си Уай Хенг</name>
+	<name short="Нарт">Нартоллис</name>
+	<name>Норвин Шульц</name>
+	<name short="Крис">Кристоф Зед</name> 
+	<name>Брюс Герик</name>
+	<name>Крис Филлипс</name>
+	<name short="Михаэль">Михаэль Оловсон</name>
+	<name>Джеймс Померой</name>
+	<name>Майк Вестон</name>
+	<name>Джэйсон Бови</name>
+	<name>Ксему</name>
+	<name>Ник Брекон</name>
+	<name>Капалка</name>
+	<name>Стик</name>
+	<name>Ропер</name>
+	<name short="Фред">Фредерик</name> 
+	<name>Хенрик Эйстед</name>
+	<name short="Фаер">Фаердихм</name> 
+	<name>Трико</name>
+	<name short="Мара">Марадайн</name> 
+  	<name short="Суомпс">Суомпсон</name> <!--Shortens to Swamps. Messaged -->
+	<name>Арриес</name>
+	<name short="Элнуб">Элнубнуб</name>
+	<name>Кен</name>
+	<name>Рэнди Уокер</name>
+	<name>Деклан</name>
+	<name>Луаан Ти</name>
+	<name>Киркнер</name>
+	<name>Ломбард</name>
+	<name>Ферас</name>
+	<name>Иоз</name>
+	<name>Райан Манискалко</name>
+	<name>Джи Эм Фаукс</name>
+	<name>О. Вильямс</name>
+	<name>Ивон Сай</name>
+	<name>Джонни Мэлони</name>
+	<name>Уилл</name>
+	<name short="Максвел">Максвелл</name>
+	<name>Томас Блох</name>
+	<name>Ринхард</name>
+	<name>Кремити</name>
+	<name>Эй Джей Хагер</name>
+	<name>Стивен Экман</name>
+	<name>Йен Мэгни</name>
+	<name>Джэк Ширай</name>
+	<name>Джулиан Рафн</name>
+	<name>Марканд</name>
+	<name>Стивен Денглер</name>
+	<name>Нелис</name>
+	<name>Крис Мэлот</name>
+	<name>Давион</name>
+	<name>Джон Колдуэлл</name>
+	<name>Кюси</name>
+	<name>Лагарди</name>
+	<name>Винсент</name>
+	<name>Кевин Фиш</name>
+	<name>Тьюринг</name>
+	<name>Стэлли</name>
+	<name short="Телдар">Телдарин</name>
+</nameList>

@@ -1,0 +1,1157 @@
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--   
+			SUMMARY  - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Structure:
+	START_BEACON_SLUG
+	NOTHING_SLUG
+	NEBULA_NOTHING_SLUG
+	NEBULA_STORE_SLUG
+	
+Item:	
+	
+	
+Hostile WITHOUT nebula:
+	SLUG_FIGHT
+	SLUG_MANTIS
+	SLUG_PIRATE
+	SLUG_REBEL
+
+Hostile WITH nebula:
+	NEBULA_SLUG_FIGHT_UNLOCK
+	NEBULA_SLUG_FIGHT
+	NEBULA_SLUG_MANTIS
+	NEBULA_SLUG_PIRATE
+	NEBULA_SLUG_DOORS
+	NEBULA_SLUG_OXYGEN
+	NEBULA_SLUG_MEDBAY
+
+	
+Neutral WITHOUT nebula:
+
+
+Neutral WITH nebula:
+	NEBULA_SLUG_CHOOSE_DEATH
+	NEBULA_SLUG_HULLFIX
+	NEBULA_SLUG_FAKE_STORE
+
+	
+Storm:
+	STORM_SLUG_FIGHT
+	
+	
+Distress:
+	SLUG_DISTRESS_ROCK
+	SLUG_DISTRESS_QUESTION
+	SLUG_DISTRESS_MANTIS
+	
+--->
+
+
+<eventList name="HOSTILE_SLUG">
+	<event load="SLUG_FIGHT"/>
+	<event load="SLUG_MANTIS"/>
+	<event load="SLUG_PIRATE"/>
+	<event load="SLUG_REBEL"/>
+	<event load="DONOR_BLACK_RAVEN"/>
+	
+</eventList>
+
+
+<eventList name="NEBULA_HOSTILE_SLUG">
+	<event load="NEBULA_SLUG_FIGHT"/>
+	<event load="NEBULA_SLUG_MANTIS"/>
+	<event load="NEBULA_SLUG_PIRATE"/>
+	<event load="NEBULA_SLUG_DOORS"/>
+	<event load="NEBULA_SLUG_OXYGEN"/>
+	<event load="NEBULA_SLUG_MEDBAY"/>
+
+
+</eventList>
+
+<eventList name="NEUTRAL_SLUG">
+
+
+</eventList>
+
+
+<eventList name="NEBULA_NEUTRAL_SLUG">
+	<event load="NEBULA_SLUG_CHOOSE_DEATH"/>
+	<event load="NEBULA_SLUG_HULLFIX"/>
+	<event load="NEBULA_SLUG_FAKE_STORE"/>
+	<event load="SLUG_DRINK"/>
+	<event load="QUEST_SLUG_PIRATE_TRAP"/>
+
+
+	<event load="NEBULA_REBEL_UNDETECTED"/>
+	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
+	<event load="NEBULA_LOST_SHIP"/>
+	<event load="NEBULA_WEAPONS_TRADER"/>
+	<event load="NEBULA_REBEL_CHASE"/>
+</eventList>
+
+<eventList name="STORM_SLUG">
+	<event load="STORM_SLUG_FIGHT"/>
+
+
+	<event load="STORM_REBEL"/>
+	<event load="STORM_BOARDING"/>
+</eventList>
+
+
+<eventList name="DISTRESS_BEACON_SLUG">
+	<event load="SLUG_DISTRESS_ROCK"/>
+	<event load="SLUG_DISTRESS_QUESTION"/>
+	<event load="SLUG_DISTRESS_MANTIS"/>
+	<event load="SLUG_DISTRESS_TRICK"/>
+	<event load="SLUG_DISTRESS_RESCUE"/>
+
+
+	<event load="PIRATE_CIVILIAN_BEACON"/>
+	<event load="TRAP_BEACON"/>
+</eventList>
+
+
+
+
+<eventList name="QUESTS_SLUG">
+	<event load="QUEST_SLUG_PIRATE_TRAP"/>
+	
+	<!-- JUSTIN TO DO - For now i'm putting quests into neutral-->
+
+</eventList>
+
+
+
+
+	
+<!-----------
+		STRUCTURE!!!
+	Requred structural 
+------------>
+<!-- start beacon goes here -->
+
+
+
+<event name="NOTHING_SLUG">  <!-- No nebula -->
+	<text load="NOTHING_SLUG"/>
+</event>
+<textList name="NOTHING_SLUG">
+	<text>Вид открытого космоса, одиноко зависший маяк — всё это воодушевляет и наполняет спокойствием. В туманностях вас постоянно мучали приступы клаустрофобии.</text>
+	<text>Маяк отмечает «маленькую» брешь в туманности. Никаких колоний или кораблей на расстояние сканирования не обнаружено.</text>
+	<text>Вы с облегчением смотрите на то, как оживают сенсоры после прыжка. Никаких кораблей не обнаружено.</text>
+	<text>Слизни сильно полагаются на свои телепатические способности и не желают терять это преимущество, выходя за туманности. Вряд ли вы встретитесь с ними вдали от облаков.</text>
+	<text>Вы прибываете в область, свободную от туманности и сразу проверяете, работают ли ваши сенсоры. Все хорошо и в области не обнаружено никаких кораблей.</text>
+</textList>
+
+
+<event name="NEBULA_NOTHING_SLUG">
+	<environment type="nebula"/>
+	<text load="NEBULA_NOTHING_SLUG"/>
+</event>
+<textList name="NEBULA_NOTHING_SLUG">
+	<text>Когда речь идёт о слизнях, их отсутствие не всегда добрый знак. С другой стороны, если даже они сейчас рядом и наблюдают, то пока не хотят конфликтовать с вами.</text>
+	<text>Лёгкие приступы паранойи — не такая уж и редкость в туманностях, контролируемых слизнями. Это так, но по крайней мере на этот раз они беспричинны.</text>
+	<text>Либо эта область владений слизней заброшена, либо туманность слишком густа даже для слизней, чтобы вас обнаружить. Пора двигаться дальше.</text>
+	<text>Эта часть туманности казалась совсем пустой, пока небольшой транспорт слизней с эскортом неожиданно не появился из-за облака, только для того, чтобы в следующую секунду снова исчезнуть.</text>
+	<text>Вы совершали очередной круг вокруг маяка, когда громадная глыба, размером с небольшую луну, неожиданно попалась вам на пути. После некоторого изучения сканеры выдали ответ: то, что сперва казалось цельным куском ценных пород, на самом деле было лишь оболочкой, давно опустошённой прежними добытчиками.</text>
+	<text>В этой области несколько небольших станций для путешественников, освещенные сопроводительными огнями и рекламой. Только корабли слизней пришвартованы тут, поэтому вы решаете, что лучше избегать конфликтов и держаться подальше.</text>
+</textList>
+
+<event name="NEBULA_STORE_SLUG">
+	<text load="NEBULA_STORE_SLUG"/>
+	<environment type="nebula"/>
+	<store/>
+</event>
+<textList name="NEBULA_STORE_SLUG">
+	<text>Откуда ни возьмись, огромный слизень телепортируется прямо на мостик! Пока вы не опомнились и не открыли огонь, он спешно раскладывает свои изделия поперёк штурвала и что-то увлечённо тараторит, размахивая товарами перед вашим носом.</text>
+	<text>Вы аккуратно приближаетесь к колонии слизней, поселившихся на астероиде. Смел тот человек, который ступит на планету слизней (могут уйти недели на то, чтобы отчистить одежду от слизи), но бывают дела, не терпящие отлагательств.</text>
+</textList>
+
+
+
+
+
+
+<!-----------
+		ITEM!!!
+	Events that can give something usually no fight
+------------>
+	
+<!-----------
+		HOSTILE!!! - NO nebula
+	Events that call up a fight for sure
+------------>
+
+<event name="SLUG_FIGHT" unique="true">
+	<text>Большая редкость — увидеть беззащитный корабль слизней, брошенный на долгое время в открытом космосе без присмотра. Этот корабль наверно потерялся, а может просто проходил мимо... Как бы там ни было, испугавшись за свою жизнь, они решили атаковать.</text>
+	<ship load="JELLY" hostile="true"/>
+</event>
+
+<event name="SLUG_MANTIS" unique="true">
+	<text>Вы случайно ловите отрывок разговора в подлетающем корабле богомолов: «Гляди-ка, похоже этот корабль не принадлежит мягкотелым. Может хоть от этих не будет так вонять, когда мы их вскроем?» Они направляются к вам.</text>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+</event> 
+
+<event nme="SLUG_PIRATE" unique="false">
+	<text load="SLUG_PIRATE"/>
+	<ship load="PIRATE" hostile="true"/>
+</event>
+<textList name="SLUG_PIRATE" unique="false">
+	<text>Кажется поблизости есть пиратский корабль. Будьте начеку; любой кто пытается охотиться на территории слизней либо достаточно грозен, либо беспросветно туп, а в космосе и тот, и другой могут представлять опасность.</text>
+	<text>«Мы знали, что тот, кто достаточно глуп, чтобы пытаться пробраться через туманность слизней, будет держаться открытого космоса. Сдавайте ваш груз, и, может быть, мы оставим вам жизни». Вы прерываете передачу вместо ответа.</text>
+	<text>Вы только было собрались перевести дух от непрекращающихся блужданий в туманностях этого сектора, и тут у вас на хвосте появляется пиратский корабль.</text>
+</textList>
+
+
+<event nme="SLUG_REBEL" unique="false">
+	<text load="SLUG_REBEL"/>
+	<ship load="REBEL" hostile="true"/>
+</event>
+<textList name="SLUG_REBEL" unique="false">
+	<text>Как только вы прибываете к маяку, ваши сканеры регистрируют вражеский корабль. Вы не ожидали, что повстанцы заберутся на территорию слизней. Заряжайте орудия!</text>
+	<text>Вы выныриваете из прыжка в открытом космосе и с облегчением видите, как ваши сенсоры возвращаются к жизни. Но то, что они регистрируют корабль повстанцев по направлению движения, вас не очень радует.</text>
+	<text>Вы получили сообщение с близлежащего корабля: «Значит наши данные были верны! Крадутся через облака вместе со слизнями... Никто не в силах спрятаться от восстания!»</text>
+</textList>
+
+
+
+<!-----------
+		NEUTRAL!!!   (WITH STORM)
+	Events that could have a fight
+------------>
+
+
+<event name="NEBULA_SLUG_CHOOSE_DEATH" unique="true">
+	<text>Вас сразу приветствует, по виду, опасное судно: «Я щедрый сссегодня. Позволяю вам выбрать ссвою сссмерть. Что вам нужно меньше всего: щиты, киссслород или орудия?»</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Щиты.</text>
+		<event>
+			<text>«Очень хорошо!» Питание на щитах неожиданно падает и они наступают.</text>
+			<ship load="JELLY_STATUS_SHIELDS" hostile="true"/>
+			<status type="divide" target="player" system="shields" amount="2"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Кислород.</text>
+		<event>
+			<text>«Cссущество выбирает удушение? Но кто я такой, чтобы сссудить...» Система жизнеобеспечения вырубается и они наступают.</text>
+			<ship load="JELLY_STATUS_OXYGEN" hostile="true"/>
+			<status type="divide" target="player" system="oxygen" amount="2"/>
+		</event>
+	</event>
+	<choice hidden="true">
+		<text>Орудия.</text>
+		<event>
+			<text>«Ваше принятие смерти почти восссхищает... Почти». Ваша система вооружения обнаружила взлом. У вас вряд ли есть время, прежде чем они нападут.</text>
+			<ship load="JELLY_STATUS_WEAPONS" hostile="true"/>
+			<status type="divide" target="player" system="weapons" amount="2"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Предложить 35 лома, за то, чтобы они оставили вас в покое.</text>
+		<event>
+			<text>«У меня щедрое нассстроение...» Они забирают лом и уходят.</text>
+			<item_modify>
+				<item type="scrap" min="-35" max="-35"/>
+			</item_modify>
+		</event>
+	</choice>
+</event>
+			
+<event name="NEBULA_SLUG_HULLFIX" unique="true">
+	<text>По прибытии вы обнаружили небольшую ремонтную станцию слизней. «Приветствуем, путешессственник! Желаете починиться? Мы легко залатаем несссколько дырок».</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Нет, спасибо.</text>
+		<event>
+			<text>«Очень плохо! Доверие — редкий товар в наши дни». Вы готовитесь к прыжку.</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Конечно.</text>
+		<event load="NEBULA_SLUG_HULLFIX_RESULT1"/>
+	</choice>
+	<choice hidden="true">
+		<text>Спросить, не хотят ли они оплаты.</text>
+		<event load="NEBULA_SLUG_HULLFIX_REQUEST"/>
+	</choice>
+</event>
+<eventList name="NEBULA_SLUG_HULLFIX_RESULT1">
+	<event>
+		<text>Вы причаливаете к автоматической станции и за короткое время они чинят 10 повреждений корпуса. Вы готовитесь выразить вашу признательность, но обнаруживаете, что не можете отстыковаться от станции.</text>
+		<damage amount="-10"/>
+		<choice>
+			<text>Потребовать объяснений.</text>
+			<event load="NEBULA_SLUG_HULLFIX_RESULT2"/>
+		</choice>
+	</event>
+	<event>
+		<text>Вы стыкуетесь со станцией в расчете быстро все завершить и улететь, но автоматические машины не спешат. Когда процесс наконец завершен, вы обнаруживаете, что всего одна единица корпуса была восстановлена.</text>
+		<damage amount="-1"/>
+		<choice>
+			<text>Потребовать объяснений.</text>
+			<event load="NEBULA_SLUG_HULLFIX_RESULT2"/>
+		</choice>
+	</event>
+	<event>
+		<text>Как только вы пристали к станции ваши датчики сошли с ума. Резонирующий звук электромагнитного взрыва раскатывается по кораблю, и ваши двигатели отрубаются. Тут появляется скрытый корабль и тихо надвигается на вас, для него вы легкая мишень.</text>
+		<ship load="JELLY_STATUS_ENGINES" hostile="true"/>
+		<status type="limit" target="player" system="engines" amount="1"/>
+	</event>
+</eventList>
+<eventList name="NEBULA_SLUG_HULLFIX_RESULT2">
+	<event>
+		<text>«Мы рады что вам понравился наш сервиссс. Наверное, немного топлива будет достойной платой?»</text>
+		<choice hidden="true">
+			<text>Дать им 15 топлива, которые они требуют.</text>
+			<event>
+				<text>Вы отправляете им топливо, и они освобождают ваш корабль. «Расскажите вашим друзьям о нассс!» Их портативная станция скрывается в облаках.</text>
+				<item_modify>
+					<item type="fuel" min="-15" max="-15"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Это смешно!</text>
+			<event>
+				<text>«Жаль это ссслышать». Он нажимает на кнопку и корабль содрогается от взрыва. Они подложили бомбу пока «чинили» наш корабль! Готовьтесь к битве!</text>
+				<ship load="JELLY" hostile="true"/>
+				<damage amount="5"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>«Мы рады, что вам понравился наш сервиссс. Теперь оплата. Чтобы быть уверенными в вашем сссотрудничестве, мы взяли на ссебя сссмелость установить ограничитель на вашу систему вооружения».</text>
+		<choice hidden="true">
+			<text>Дать им 50 лома, которые они требуют.</text>
+			<event>
+				<text>Вы отправляете им лом, и они отпускают ваш корабль. «Расскажите вашим друзьям о нассс!» Их портативная станция скрывается в облаках.</text>
+				<item_modify>
+					<item type="scrap" min="-50" max="-50"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Давайте убираться отсюда.</text>
+			<event>
+				<text>Вы активируете маневровые двигатели и убираетесь прочь от станции. Корабль быстро движется на перехват. Вам надо поскорее выбираться отсюда. На то, чтобы привести систему управления орудиями в боевое состояние времени может может и не хватить!</text>
+				<ship load="JELLY_STATUS_WEAPONS" hostile="true"/>
+				<status type="divide" target="player" system="weapons" amount="2"/> <!-- TO DO - TEST-->
+			</event>
+		</choice>
+	</event>
+</eventList>
+<eventList name="NEBULA_SLUG_HULLFIX_REQUEST">
+	<event>
+		<text>«Аххх. Коллега бизнесссмен. Мы можем отремонтировать ваш корабль на 10 единиц вссего за 50 лома».</text>
+		<choice hidden="true">
+			<text>Принять.</text>
+			<event>
+				<text>Приняв сделку, вы внимательно наблюдаете как их машины чинят ваш корабль. Всё прошло наилучшим образом. Как только они закончили, вы подготовились к прыжку.</text>
+				<damage amount="-10"/>				
+				<item_modify>
+					<item type="scrap" min="-50" max="-50"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Отклонить.</text>
+			<event>
+				<text>«Очень жаль. Прощай, путешественник». Их мобильная станция исчезла среди облаков.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>Прямо перед передачей вы слышите: «Они не купятся на это. Просссто убить экипаж, и можно будет ссспокойно...» Похоже, вам не выбраться отсюда без боя.</text>
+		<ship load="JELLY" hostile="true"/>
+	</event>
+</eventList>
+
+
+<event name="NEBULA_SLUG_FAKE_STORE" unique="true">
+	<text>Транспортный корабль слизней стоял у маяка вместе с военным эскортом. Они отправили вам сообщение: «Мы ждали покупателя целую вечносссть. Осссмотрите наши товары?»</text>
+	<environment type="nebula"/>
+	<ship load="JELLY" hostile="false"/>
+	<choice hidden="true">
+		<text>Отклонить.</text>
+		<event>
+			<text>«Ох, хорошо... Тогда мы будем ждать сссдесь». Вы осмотрительно увеличиваете дистанцию между кораблями перед прыжком.</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Попросить показать товары.</text>
+		<event>
+			<text>«Не торопитесь, я должен объяссснить некоторые осссновные правила нашего сссоглашения. Сссейчас ведь опасные времена, сссогласны?»</text>
+			<choice>
+				<text>Продолжить...</text>
+				<event>
+					<text>«Во-первых... Мы не торгуемссся, не даём ссскидок и деньги не возвращаем. Сссделка окончательна. Всссё понятно?»</text>
+					<choice>
+						<text>Понятно.</text>
+						<event>
+							<text>«Мы не несссём никакой ответссственности за товары, повреждённые посссле покупки. Мы не даём ссстраховок и гарантийного обссслуживания. Не проблема?»</text>
+							<choice hidden="true">
+								<text>Не проблема.</text>
+								<event load="NEBULA_SLUG_FAKE_STORE_LIST"/>
+							</choice>
+							<choice hidden="true">
+								<text>Забудем это.</text>
+								<event load="NEBULA_SLUG_FAKE_STORE_LEAVING"/>
+							</choice>
+						</event>
+					</choice>
+					<choice>
+						<text>Забудем это.</text>
+						<event>
+							<text>«Прекрасссно... Не каждый ценит хорошие сссделки...»</text>
+						</event>
+					</choice>
+					<choice hidden="true" req="slug">
+						<text>(Член экипажа слизень) Наш слизень чувствует кого-то на борту корабля. Разузнать в чём дело.</text>
+						<event>
+							<text>Похоже, что торговец пытался отвлечь вас, пока кто-то телепортировался на борт. Вы поймали его прежде чем он закончил и вернулся обратно. Вы немедленно готовитесь к битве.</text>
+							<ship load="JELLY" hostile="true"/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_SLUG_FAKE_STORE_LIST">  <!-- if you stay for the whole thing -->
+	<event>
+		<text>«Замечательно. Давайте я покажу вам наши товары. Не часссто я вссстречаю терпеливых пришельцев, возьмите это топливо в подарок».</text>
+		<item_modify>
+			<item type="fuel" min="5" max="5"/>
+		</item_modify>
+		<store/>
+	</event>
+	<event>
+		<text>«Пока мы тут бессседовали, мой человек позаботился о вашем вооружении, чтобы пресссечь любые затруднения в завершении нашей... сссделки...» Неожиданно датчики сообщают об обнаруженной опасности — на вас навелись сразу несколько орудий противника, а ваши собственные не работают. Сматываемся отсюда!</text>
+		<ship load="JELLY_STATUS_WEAPONS" hostile="true"/>
+		<boarders min="1" max="1" class="slug"/>
+		<status type="limit" target="player" system="weapons" amount="0"/>
+	</event>
+	<event>
+		<text>«Спасссибо вам. Могли бы вы оказать мне ещё одну уссслугу... пожалуйста умрите тихо». Внезапно вы слышите выстрелы на борту корабля. Он должно быть тянул время, пока они пробирались на корабль.</text>
+		<ship load="JELLY" hostile="true"/>
+		<boarders min="2" max="2" class="slug"/>
+	</event>
+</eventList>
+<eventList name="NEBULA_SLUG_FAKE_STORE_LEAVING">  <!-- if you try and leave early, maybe attack-->
+	<event>
+		<text>«Очень хорошо... Нетерпеливые пришельцы...» Вы готовитесь к прыжку.</text>
+	</event>
+	<event>
+		<text>Вы готовитесь уйти, но замечаете странные шумы на корабле. Похоже, что торговец пытался вас отвлечь, пока они взламывали ваши системы. Осталось совсем немного времени, чтобы объявить тревогу, прежде чем боевой корабль пролетает сквозь облака, намереваясь уничтожить вас!</text>
+		<ship load="JELLY" hostile="true"/>
+		<boarders min="1" max="1" class="slug"/>
+	</event>
+</eventList>
+
+
+
+<!-----------
+		NEBULA!!!  HOSTILE
+	Events with unique environments
+------------>
+
+
+
+
+<event name="NEBULA_SLUG_FIGHT">
+	<text load="NEBULA_SLUG_FIGHT"/>
+	<ship load="JELLY" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<textList name="NEBULA_SLUG_FIGHT">
+	<text>Ваши сенсоры не идут ни в какое сравнение с телепатическими способностями слизней — корабль, которого вы ещё даже не увидели, уже начал стрелять вам в корму!</text>
+	<text>Очевидно слизни, с которыми вам довелось пересечься, считают, что им попался лакомый кусочек. Они как раз искали, на ком бы испробовать своё новое вооружение. Не на того напали!</text>
+	<text>Пассажирский корабль слизней приветствует: «Пожалуйссста, ваше инопланетное высочессство, мы безоружны и ищем убежища». Вы осторожно приближаетесь, и орудия тотчас же выскакивают из под обшивки их корабля!</text>
+	<text>Корабль слизней (бродяга, как вам кажется) идёт на сближение. Но когда он замечает что вы имеете отношение к Федерации, ему становится ясно, что лучше было напасть внезапно, после чего он начинает палить из всего, что у него есть.</text>
+	<text>Вообще открытое нападение нетипично для слизня, но из тех трех, которых вы видите на этом маяке, один имел наглость выдвинуться в вашу сторону!</text>
+	
+	<text>Ваши сенсоры не идут ни в какое сравнение с телепатическими способностями слизней — корабль, которого вы ещё даже не увидели, уже начал стрелять вам в корму!</text>
+	<text>Очевидно слизни, с которыми вам довелось пересечься, считают, что им попался лакомый кусочек. Они как раз искали, на ком бы испробовать своё новое вооружение. Не на того напали!</text>
+	<text>Пассажирский корабль слизней приветствует: «Пожалуйссста, ваше инопланетное высочессство, мы безоружны и ищем убежища». Вы осторожно приближаетесь, и орудия тотчас же выскакивают из под обшивки их корабля!</text>
+	<text>Корабль слизней (бродяга, как вам кажется) идёт на сближение. Но когда он замечает что вы имеете отношение к Федерации, ему становится ясно, что лучше было напасть внезапно, после чего он начинает палить из всего, что у него есть.</text>
+	<text>Вообще открытое нападение нетипично для слизня, но из тех трех, которых вы видите на этом маяке, один имел наглость выдвинуться в вашу сторону!</text>
+</textList>
+
+<event name="NEBULA_SLUG_MANTIS" unique="true">
+	<text>Боевой корабль богомолов охотится на слизней в сердце их родины — редкое испытание чести для самых сильных экипажей богомолов. Зарядить орудия!</text>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+
+<event name="NEBULA_SLUG_PIRATE" unique="true">
+	<text>Вы удивлены, обнаружив терпящий бедствие корабль без каких-либо опознавательных знаков слизней, но всё же немедленно выдвигаетесь на помощь. Желание помочь резко сходит на нет, когда вы замечаете пиратскую эмблему на их корпусе.</text>
+	<ship load="PIRATE" hostile="false"/>
+	<environment type="nebula"/>
+	<choice>
+		<text>В атаку!</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Сохранять дистанцию и надеяться, что вас не заметили.</text>
+		<event/>
+	</choice>
+</event>
+
+
+<event name="NEBULA_SLUG_DOORS" unique="true">  <!-- NEEDS CODE TO GIVE FIRE WEAPONS-->
+	<text>Существует всего несколько более ужасных тварей в галактике, чем слизни, припертые к стенке. Корабль, вращающийся вокруг маяка поблизости, каким-то образом отключил вашу систему дверей и уже заряжает своё огненное оружие. Они решили сжечь вас дотла!</text>
+	<status type="limit" target="player" system="doors" amount="0"/>
+	<ship load="JELLY_STATUS_DOORS" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+
+
+<event name="NEBULA_SLUG_OXYGEN" unique="true">  <!-- NEEDS CODE TO GIVE FIRE WEAPONS-->
+	<text>Слизни применяют здесь тактику, которую вы надеялись никогда не увидеть: они взламывают вашу систему выработки кислорода, а потом используют огненное оружие — вы там задохнетесь.</text>
+	<status type="limit" target="player" system="oxygen" amount="0"/>
+	<ship load="JELLY_STATUS_OXYGEN_FIRE" hostile="true"/>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Продолжить...</text>
+		<event/>
+	</choice>
+	<choice hidden="true" req="oxygen" lvl="2">
+		<text>(Улучшенный кислородный модуль) Попытаться выжать некоторую дополнительную мощность из системы.</text>
+		<event>
+			<text>К счастью ваша улучшенная подсистема может противостоять попыткам взлома достаточно эффективно, чтобы держать уровень жизнеобеспечения на приемлемом уровне. Как минимум, этого должно хватить, чтобы вы остались живы...</text>
+			<status type="divide" target="player" system="oxygen" amount="2"/>
+		</event>
+	</choice>
+</event>
+
+<event name="NEBULA_SLUG_MEDBAY" unique="true"> 
+	<text>Корабль слизней шлёт сообщение: «Мы обнаружили опасное радиоактивное излучение, идущее из вашего мед-отсека. Вам, наверное, стоит взглянуть?» Вскоре после принятия сообщения ваш мед-отсек неожиданно вырубается и к вам на борт телепортируется команда слизней. Не похоже, чтобы это были инженеры.</text>
+	<status type="limit" target="player" system="medbay" amount="0"/>
+	<ship load="JELLY_STATUS_MEDBAY" hostile="true"/>
+	<boarders min="2" max="2" class="slug"/>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Продолжить...</text>
+		<event/>
+	</choice>
+	<choice hidden="true" req="medbay" lvl="2">
+		<text>(Улучшенный мед-отсек) Попытаться выжать некоторую дополнительную мощность из системы.</text>
+		<event>
+			<text>Опасаясь надвигающейся битвы, вы отчаянно пытаетесь восстановить работу медицинского отсека. Его огни загораются как раз вовремя. Теперь можно вплотную заняться захватчикам.</text>
+			<status type="divide" target="player" system="medbay" amount="2"/>
+		</event>
+	</choice>
+</event>
+
+
+
+<!-----------
+		NEBULA!!!  NEUTRAL
+	Events with unique environments
+------------>
+
+<!-----------
+		STORM!!!
+	Events with storm
+------------>
+
+<event name="STORM_SLUG_FIGHT">
+	<text load="STORM_SLUG_FIGHT"/>
+	<ship load="JELLY" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<textList name="STORM_SLUG_FIGHT">
+	<text>Ионный шторм угрожает деактивировать все ваши основные системы; и факт, что делает положение вещей ещё хуже — большие, непринужденно летающие, словно стервятники, корабли слизней.</text>
+	<text>Корабль слизней уходит из виду, как только вы входите в ионный шторм, должно быть почувствовал ваше бедственное положение — защитный режим!</text>
+	<text>Вы прибыли в центр ионного шторма. Слизни обычно избегают этих бурь, но вы нашли одного в засаде. Готовьтесь к бою!</text>
+	<text>Вы застряли в самом центре ионного шторма с кораблём слизней в паре сотен метров от вас, игнорирующем любые попытки выйти на контакт. Вы осторожно пытаетесь продвинуться дальше в облаках, но они внезапно атакуют вас!</text>	
+</textList>
+
+
+<!-----------
+		BOARDERS!!!
+	Events with boarder calls
+------------>
+
+
+<!-----------
+		DISTRESS!!!
+	Events that should be a distress signal
+------------>
+
+<event name="SLUG_DISTRESS_ROCK" unique="true">
+	<text>Вы застали корабль слизней в самом разгаре взятия ими на абордаж грузового судна роков.</text>
+	<distressBeacon/>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Атаковать корабль слизней.</text>
+		<event load="SLUG_DISTRESS_ROCK_FIGHT"/>
+	</choice>
+	<choice>
+		<text>Игнорировать их.</text>
+		<event load="SLUG_DISTRESS_ROCK_AVOID"/>
+	</choice>
+</event>
+<eventList name="SLUG_DISTRESS_ROCK_FIGHT">
+	<event>
+		<text>Вы заряжаете орудия и слизни немедленно отступают. К тому моменту, как вы возвращаетесь к грузовому судну, там уже заканчивают ремонт наиболее критических повреждений. Вскоре корабль роков улетает прочь, не сказав ни слова, не говоря уже о награде.</text>
+	</event>
+	<event>
+		<text>Вы заряжаете орудия и слизни быстро меняют курс, чтобы встретить вас, пока вы заряжаетесь.</text>
+		<ship load="JELLY_DISTRESS_ROCK" hostile="true"/>
+	</event>
+</eventList>
+<eventList name="SLUG_DISTRESS_ROCK_AVOID">
+	<event>
+		<text>Не стоит провоцировать слизней на их собственной территории. Вы оставляете их в покое.</text>
+	</event>
+	<event>
+		<text>Не стоит провоцировать слизней на их собственной территории. Вы оставляете их в покое.</text>
+	</event>
+	<event>
+		<text>Пока вы размышляли, оказать помощь или нет, корабль роков, неожиданно ожив, несколькими точными выстрелами разносит в щепки своего грабителя. Затем сообщение появляется на вашем экране: «Ничтожества! Вы либо трусы, либо союзники слизней. В любом случае, вы не заслуживаете того, чтобы жить».</text>
+		<ship load="ROCK_SHIP" hostile="true"/>
+	</event>
+</eventList>
+<eventList name="SLUG_DISTRESS_ROCK_RESULT">
+	<event>
+		<text>Кажется, корабль роков улетел, пока вы разбирались со слизнями. Как можно было быть такими неблагодарными за вашу помощь?!</text>
+	</event>
+	<event>
+		<text>После битвы корабль роков вызывает вас. Их капитан просто говорит: «Спасибо», — после чего прыгает прочь. И это, учитывая репутацию роков, ещё было довольно таки любезно с их стороны.</text>
+	</event>
+	<event>	
+		<text>Кажется, корабль роков давно заброшен. Вы забираете все, что может пригодиться.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+</eventList>
+
+
+<event name="SLUG_DISTRESS_QUESTION" unique="true">
+	<environment type="nebula"/>
+	<distressBeacon/>
+	<text>Вы прибыли прямо к источнику сигнала бедствия.</text>
+	<choice hidden="true">
+		<text>Продолжить.</text>
+		<event load="SLUG_DISTRESS_QUESTION_LIST"/>
+	</choice>
+</event>
+<eventList name="SLUG_DISTRESS_QUESTION_LIST">
+	<event>
+		<text>Вы с трудом прокладываете курс на аварийный спутниковый радиобуй около одной из семи лун планеты, спрятанной в туманности.</text>
+		<choice hidden="true">
+			<text>Исследовать.</text>
+			<event>
+				<text>Когда вы приблизились, с вами связался слизень, оставленный на необитаемой поверхности луны: «Моё желание — присссоединиться к вашему экипажу, сказал бы я, если бы вы сссмогли ответить на один простой вопрос: как много лун здесь на орбите?»</text>
+				<choice hidden="true">
+					<text>Пять.</text>
+					<event load="SLUG_DISTRESS_QUESTION_FALSE"/>
+				</choice>
+				<choice hidden="true">
+					<text>Шесть.</text>
+					<event load="SLUG_DISTRESS_QUESTION_FALSE"/>
+				</choice>
+				<choice hidden="true">
+					<text>Семь.</text>
+					<event load="SLUG_DISTRESS_QUESTION_TRUE"/>
+				</choice>
+				<choice hidden="true">
+					<text>Одиннадцать.</text>
+					<event load="SLUG_DISTRESS_QUESTION_FALSE"/>
+				</choice>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>Вы с трудом прокладываете курс на аварийный спутниковый радиобуй около одной из одиннадцати лун планеты, спрятанной в туманности.</text>
+		<choice hidden="true">
+			<text>Исследовать.</text>
+			<event>
+				<text>Когда вы приблизились, с вами связался слизень, оставленный на необитаемой поверхности луны: «Моё желание — присссоединиться к вашему экипажу, сказал бы я, если бы вы сссмогли ответить на один простой вопрос: как много лун здесь на орбите?»</text>
+				<choice hidden="true">
+					<text>Пять.</text>
+					<event load="SLUG_DISTRESS_QUESTION_FALSE"/>
+				</choice>
+				<choice hidden="true">
+					<text>Шесть.</text>
+					<event load="SLUG_DISTRESS_QUESTION_FALSE"/>
+				</choice>
+				<choice hidden="true">
+					<text>Семь.</text>
+					<event load="SLUG_DISTRESS_QUESTION_FALSE"/>
+				</choice>
+				<choice hidden="true">
+					<text>Одиннадцать.</text>
+					<event load="SLUG_DISTRESS_QUESTION_TRUE"/>
+				</choice>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<event name="SLUG_DISTRESS_QUESTION_FALSE">   <!-- JUSTING - TO DO - Add reduction of scrap   "Further, I have taken advantage of your lack of acuity to beam aboard your ship and steal your stuff!!"-->
+	<text>«Это есссть... неверно. Далее, я извлеку выгоду из вашего недостатка сообразительности, телепортировавшись на борт вашего корабля и украв припасы!»</text>
+	<item_modify steal="true">
+		<item type="scrap" min="-35" max="-35"/>
+		<item type="fuel" min="-4" max="-2"/>
+		<item type="drones" min="-2" max="-1"/>
+	</item_modify>
+</event>
+<event name="SLUG_DISTRESS_QUESTION_TRUE">   
+	<text>«Это есссть... верно. Вы удивили меня. Человек? Даассс... мы можем быть партнерами». Слизень поднимается на борт и присоединяется к вашему экипажу!</text>
+	<crewMember amount="1" class="slug"/>  
+</event>
+
+<event name="SLUG_DISTRESS_MANTIS" unique="true">
+	<text>Сигнал бедствия по-видимому доносится из корабля слизней, попавшихся в открытом космосе богомолам. Они связываются с вами по аварийной частоте: «Пожалуйссста, мы дадим вам всё, что нужно, если вы сспасете нассс!»</text>
+	<choice hidden="true">
+		<text>Атаковать корабль богомолов.</text>
+		<event>
+			<text>Вы берёте корабль богомолов на прицел и нападаете.</text>
+			<ship load="SLUG_DISTRESS_MANTIS" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Атаковать корабль слизней.</text>
+		<event>
+			<text>Вы направляетесь завершить то, что начали богомолы.</text>
+			<ship load="SLUG_DISTRESS_MANTIS_SLUG" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Из всех разумных существ галактики, эти двое стоят друг друга. Вы заряжаете прыжковый двигатель.</text>
+		<event/>
+	</choice>
+</event>
+<eventList name="SLUG_DISTRESS_MANTIS_SURRENDER">
+	<event>
+		<text>Их корабль светится пробоинами как решето. После нескольких выстрелов он окончательно распадается, и вам остаётся только собрать останки.</text>
+		<autoReward level="RANDOM">standard</autoReward>
+	</event>
+	<event>	
+		<text>Капитан слизней вызывает вас: «Ошибка! Просссто ошибка. Разумеется, мы можем заплатить вам! Видите? Оборудование уже отправлено». Вы позволяете им уйти живыми.</text>
+		<autoReward level="LOW">augment</autoReward>
+	</event>
+</eventList>
+
+
+
+
+
+
+
+<!-----------
+		SLUG QUESTS
+	QUESTS!
+------------>
+
+
+
+
+<!-----------
+		SPECIAL
+	Unique special events
+------------>
+
+
+<!-- SLUG_UNLOCK
+
+Slug ships in the home sector have a 1/3 chance to pick the trigger event when surrendering.  
+It looks like a normal surrender but has another option. They want to give you a weapon (BEAM_BIO) and if you refuse it they give you a quest.
+At the locaton is a tough fight that you need to stay away from.  If you have cloak or piloting + slug or sensors the scary people jump away and you can fight a weaker ship and then get the unlock 
+-->
+
+
+
+<event name="NEBULA_SLUG_FIGHT_UNLOCK" unique="true"> <!-- this is the special fight that looks like the normal ones but actually gives you the unlock-->
+	<text load="NEBULA_SLUG_FIGHT"/>
+	<ship load="JELLY_UNLOCK1" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<event name="SLUG_UNLOCK_SURRENDER">  <!-- this is the hidden special surrender event-->
+	<text>«Вы одолели нассс! Примете ли вы то, что в наших хранилищах в обмен на наши жизни?»</text>
+	<choice hidden="true">
+		<text>Оставить в живых.</text>
+		<event>
+			<text>«Возьмите это новое орудие, которое мы перевозим... Они, без сссомнений, будут не ссслишком рады тому, что мы его отдали...»</text>
+			<choice>
+				<text>Принять прототип орудия.</text>
+				<event>
+					<text>Это странное лучевое оружие не причиняет вреда кораблям, но взамен ощутимо ранит экипаж! Дьявольски жестоко!</text>
+					<weapon name="BEAM_BIO"/>
+					<ship hostile="false"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Нам не требуется оружие, нам нужна информация.</text>
+				<event>
+					<text>Вы спрашиваете где они провозили оружие. «Рассказав вам, мы вероятно умрем, а может и нет... Ну да ладно». Они дают вам координаты мобильной платформы для постройки прототипа крейсера.</text>
+					<quest event="SLUG_UNLOCK_1"/>
+					<ship hostile="false"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Мы не примем капитуляцию!</text>
+		<event/>
+	</choice>
+</event>
+<event name="SLUG_UNLOCK_1"> <!-- This is the quest after you decline the weapon -->
+	<text>По прибытии вашим глазам предстаёт впечатляющий крейсер, охраняемый штурмовым кораблём. Вокруг прототипа то и дело снуют несколько кораблей поменьше. Мобильная платформа для постройки величественно плывет в облаках. Вас пока не обнаружили.</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Атаковать их, пока они не сбежали.</text>
+		<event>
+			<text>Когда вы сближаетесь, штурмовой корабль отделяется от платформы и ложится на траекторию перехвата. Приготовиться к бою!</text>
+			<ship load="JELLY_UNLOCK2" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Попытаться проследить за ними, оставаясь незамеченными.</text>
+		<event load="SLUG_UNLOCK_2"/>
+	</choice>
+		<!-- Changed this part to be easier
+			<text>На то, чтобы вас заметить много времени не понадобилось. Штурмовой корабль выдвигается в атаку!</text>
+			<ship load="JELLY_UNLOCK2" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true" req="cloaking" lvl="1">
+		<text>(Маскировка) Замаскироваться и проскользнуть в облаках.</text>
+		<event load="SLUG_UNLOCK_2"/>
+	</choice>
+	<choice hidden="true" req="pilot" lvl="2">
+		<text>(Улучшенная рубка управления) Быстро отлететь в облака и оставаться вдали от их радиуса обнаружения.</text>
+		<event load="SLUG_UNLOCK_2"/>
+	</choice> -->
+</event>
+<event name="SLUG_UNLOCK_2">   <!-- if you use cloaking or piloting from SLUG_UNLOCK_1-->
+	<text>Вы проскальзываете в туманность незамеченным, но с другой стороны теперь вы, скорее всего, заблудитесь и потеряете их след.</text>
+	<choice hidden="true">
+		<text>Лететь медленно в направлении их последней известной позиции.</text>
+		<event>
+			<text>Вы медленно продвигаетесь, как вдруг штурмовой корабль прорывается сквозь облака. Они всё таки смогли засечь вас с помощью своей телепатии!</text>
+			<ship load="JELLY_UNLOCK2" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Подождать, в надежде, что охрана улетит.</text>
+		<event>
+			<text>Ожидание в неизвестности тяготит. Поэтому, поколебавшись, вы всё же пробуете аккуратно продвинуться назад к платформе. Однако, после часа безрезультатных поисков невозможно с уверенностью сказать, улетели ли они, или же вы просто неправильно просчитали траекторию полета... Пора отказаться от поисков и лететь дальше.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="slug">
+		<text>(Член экипажа слизень) Попросить слизня прощупать признаки жизни.</text>
+		<event>
+			<text>Вы стараетесь держатся достаточно далеко, чтобы они не обнаружили ваших признаков жизни. Через некоторое время ваш слизень говорит вам, что корабль с большой командой улетел в сторону. Он направляет штурвал в сторону платформы...</text>
+			<choice hidden="true">
+				<text>Продолжить...</text>
+				<event>
+					<text>Вблизи корабля остался лишь один истребитель. Это будет просто!</text>
+					<ship load="JELLY_UNLOCK3" hostile="true"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="sensors" lvl="2">
+		<text>(Улучшенные сенсоры) Попытаться подстроить сенсоры, чтобы отыскать их корабли с большего расстояния.</text>
+		<event>
+			<text>Вы пробуете усилить свои сенсоры, чтобы они функционировали в тучах. Наконец они начинают выдавать достаточно чёткую картину, нанося на карту общее положение кораблей. Спустя время, штурмовой корабль и большая часть эскорта улетают от платформы. Такую возможность нельзя упускать. В атаку!</text>
+			<choice hidden="true">
+				<text>Продолжить...</text>
+				<event>
+					<text>Вблизи крейсера остался единственный истребитель-перехватчик. Это должно быть просто!</text>
+					<ship load="JELLY_UNLOCK3" hostile="true"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+	
+	
+	
+<event name="SLUG_SURRENDER">
+	<text>«Вы одолели нассс! Примете ли вы то, что в наших хранилищах в обмен на наши жизни?»</text>
+	<choice hidden="true">
+		<text>Оставить им жизнь.</text>
+		<event load="SLUG_SURRENDER_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Мы не примем капитуляцию!</text>
+		<event/>
+	</choice>
+</event>
+	
+<eventList name="SLUG_SURRENDER_LIST">
+	<event>
+		<text>«Вот! У нас есссть много топлива! Забирайте всссё!»</text>
+		<autoReward level="HIGH">fuel_only</autoReward>
+		<ship hostile="false"/>
+	</event>
+	<event>
+		<text>Они переправляют небольшое количество сырья. «Вот... теперь сдержите свое слово...»</text>
+		<autoReward level="LOW">stuff</autoReward>
+		<ship hostile="false"/>
+	</event>
+	<event>
+		<text>«Возьмите это и оссставьте нассс».</text>
+		<autoReward level="MED">stuff</autoReward>
+		<ship hostile="false"/>
+	</event>		
+</eventList>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- NEEDING EDITING -->
+
+<!-- Structure-->
+<event name="START_BEACON_SLUG">
+	<text load="START_BEACON_SLUG"/>
+</event>
+<textList name="START_BEACON_SLUG">
+	<text>Единственное, что может сделать туманность ещё опасней, это её заселение расой слизней. И это как раз такая особая туманность.</text>
+	<text>Туманность — это дом для слизней-телепатов. Они бы продали свою собственную слизь ради контейнера с ломом, но они скорее предпочтут просто забрать его.</text>
+	<text>Говорят, родной мир слизней где-то в этой туманности. Их не видно, но вы знаете, что они наблюдают.</text>
+	<text>Деятельность цивилизации слизней, живущих в поле туманности, крутится вокруг досуга. Всё в жизни слизня подчинено погоне за приумножением прибыли и времени, которое можно потратить на экстравагантные и рискованные предприятия. И такой образ жизни, конечно, способствует разгулу предательства в космосе.</text>
+	<text>Слизни развились на планете-океане, где способность телепатически ощущать другой организм была более важна чем зрение. Сегодня они используют эту способность для свободной навигации в бескрайних глубинах туманностей, которые они населяют.</text>
+</textList>
+
+
+<!-- neutral -->
+<event name="SLUG_DRINK" unique="true">
+	<environment type="nebula"/>
+	<text>Капитан слизней приветствует вас на борту вашего корабля и преподносит флягу с чем то слизким: «Теперь, всссемилостивейшей Капитан, присссоединитесь ко мне, будьте так любезны, и выпейте этот напиток в знак закрепления нашего сссоюза!»</text>
+	<ship load="JELLY" hostile="false"/>
+	<choice hidden="true">
+		<text>Выпить.</text>
+		<event load="SLUG_DRINK_DRINK"/>
+	</choice>
+	<choice hidden="true">
+		<text>Отказать.</text>
+		<event>
+			<text>Слизень сделал вид что обиделся на ваш отказ, но вы чувствуете, что он уважает вашу осторожность. Впрочем, это не помешало ему вернуться на свой корабль и открыть огонь.</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true" req="rock">
+		<text>(Член экипажа рок) Пусть ваш рок изобразит капитана.</text>
+		<event load="SLUG_DRINK_ROCK"/>
+	</choice>
+</event>
+<eventList name="SLUG_DRINK_DRINK">
+	<event>
+		<text>Вы делаете осторожный глоток. Оно мерзкое, но, похоже, не вызывает никаких ощутимых последствий. Удивительно! Такое могло бы случиться лишь один раз на тысячу, но этот слизень на самом деле заслуживает доверия. Между тем он отмечает обретение вашего доверия, ремонтируя часть вашего корабля и предложив свои товары.</text>
+		<damage amount="-10"/>
+		<store/>
+	</event>
+	<event>
+		<text>Вы делаете один глоток и просыпаетесь с остальной частю команды в трюме... который содержит заметно меньше лома чем прежде.</text>
+		<item_modify steal="true">
+			<item type="scrap" min="-25" max="-35"/>
+		</item_modify>
+	</event>
+</eventList>
+<eventList name="SLUG_DRINK_ROCK">
+	<event>
+		<text>Даже если бы в напитке было что-то вредное, сложно сказать, что это хоть как-то отразилось бы на системе пищеварения рока. Между тем слизень отмечает обретение вашего доверия, ремонтируя часть вашего корабля и предложив свои товары.</text>
+		<damage amount="-10"/>
+		<store/>
+	</event>
+	<event>
+		<text>Член вашего экипажа смог определить в составе напитка большую дозу сильного обезболивающего, почувствовав себя слегка вялым (система пищеварения роков очень крепка). Хитрость слизня раскрыта, и он немедленно возвращается на свой корабль. Через секунду он открывает огонь. Не хитростью так силой...</text>
+		<ship hostile="true"/>
+	</event>
+</eventList> 
+
+
+<!-- quest-->
+<event name="QUEST_SLUG_PIRATE_TRAP" unique="true">
+	<text>Вы прибыли в поле зрения двух кораблей слизней на дистанцию коммуникации. Они вас не видят.</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Перехватить их частоту передачи.</text>
+		<event>
+			<text>Вы подслушали их разговор и узнали, что они планируют напасть на богатый и печально известный в этом районе пиратский корабль. Эта парочка совершила прыжок, и вы записали координаты цели.</text>
+			<quest event="QUEST_SLUG_PIRATE_TRAP2"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Игнорировать их.</text>
+		<event>
+			<text>Вас не интересует ничего, что мог бы предложить слизень. Время двигаться дальше.</text>
+		</event>
+	</choice>
+</event>
+<event name="QUEST_SLUG_PIRATE_TRAP2"> 
+	<environment type="nebula"/>
+	<text>Вы догнали два корабля слизней и они уже осуществляют свой набег! Один из них завяз в ближнем бою с пиратом, другой, кажется, направляется к маленькому космическому тайнику, который пират защищает.</text>
+	<choice hidden="true">
+		<text>Продолжить...</text>
+		<event>
+			<text>Внезапно первый корабль захлестнуло пламя и пришел срочный вызов от оставшихся слизней: «Мы сссоветуем вам отвлечь пиратское судно пока мы забираем ценносссти. Поделим пятьдесссят на пятьдесссят».</text>
+			<choice hidden="true">
+				<text>Открыть огонь по пирату.</text>
+				<event>
+					<text>Тут пахнет лёгкими деньгами, а слизни чуют такое издалека. Вы переключаетесь на пирата и перехватываете его как раз перед тем, как он смог добраться до тайника.</text>
+					<ship load="QUEST_SLUG_PIRATE_TRAP1" hostile="true"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Взять курс на тайный склад.</text>
+				<event>
+					<text>Увидев, что вы направляетесь к тайнику, капитан слизней сообщил: «Глупые чужаки. Ради выгоды без глаз готовы остаться. Всссего наилучшего вам». Они прыгают прочь, оставляя вас один на один с пиратом.</text>
+					<ship load="QUEST_SLUG_PIRATE_TRAP2" hostile="true"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
+
+<!-- Distress -->
+<event name="SLUG_DISTRESS_RESCUE" unique="true">
+	<text>Вы обнаруживаете признаки жизни на ближайшей луне — одинокий слизень заблудился на ее поверхности. «Ах, разумные жизни, ссспустя столько времени. Я Слокног, сссстранствующий герой, ищущий приключений. Вы можете нанять меня за небольшую сссумму».</text>
+	<environment type="nebula"/>
+	<choice>
+		<text>Нанять Слокнога.</text>
+		<event>
+			<text>«Я вижу, вы мудрый капитан. Я буду нассслаждаться этим приключением». Слокног прячет лом где-то в глубине своих складок кожи и присоединяется к вашей команде.</text>
+			<item_modify>
+				<item type="scrap" min="-55" max="-55"/>
+			</item_modify>
+			<crewMember amount="1" class="slug">Слокног</crewMember> 
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Игнорировать Слокнога.</text>
+		<event load="SLUG_DISTRESS_RESCUE_LIST"/>
+	</choice>
+</event>
+
+<eventList name="SLUG_DISTRESS_RESCUE_LIST">
+	<event>
+		<text>Вы заряжаете FTL, но в этот момент слизень отправляет вам срочную просьбу: «Пожалуйссста, я вижу, что вы сссерьезный капитан. Ваша взяла. Давайте без лома, сссогласен. Я присссоединюсь к вашему отряду — только увезите меня с этой ссскалы!»</text>
+		<choice>
+			<text>Спасти его.</text>
+			<event>
+				<text>Когда слизень увидел, что шаттл направился к его местонахождению, он поблагодарил вас, причем, похоже, искренне. Он охотно присоединяется к экипажу.</text>
+				<crewMember amount="1" class="slug">Слокног</crewMember> 
+			</event>
+		</choice>
+		<choice>
+			<text>Оставить его.</text>
+			<event>
+				<text>Вы отключаете частоту и продолжаете готовиться к прыжку. Если этот слизень такой герой, он сам найдёт как выбраться с этой луны.</text>
+			</event>
+		</choice>
+	</event>
+</eventList>
+	
+<event name="SLUG_DISTRESS_TRICK" unique="true">
+	<text>Вы находите судно слизней, транслирующее аварийный сигнал, и соединяетесь с ним: «Аа, да, мы испытываем проблемы с нашим модулем генерации киссслорода. Может, ваша команда ссможет помочь с ремонтом?»</text>
+	<environment type="nebula"/>
+	<ship load="JELLY" hostile="false"/>
+	<choice hidden="true">
+		<text>Отправить членов экипажа на помощь.</text>
+		<event load="SLUG_DISTRESS_TRICK_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Игнорировать их.</text>
+		<event>
+			<text>Вы хорошо знаете, что значит поверить слизням. Вы обрываете связь и готовитесь к прыжку.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="mantis">
+		<text>(Член экипажа богомол) Пусть ваш богомол руководит ремонтом.</text>
+		<event>
+			<text>Оказавшись на борту стало понятно, что с их системой подачи кислорода всё в порядке. Практически этого и ожидая, ваш богомол невозмутимо доложил о засаде. После того, как несколько слизней были размазаны по стенам собственного корабля, остальные быстренько сдались.</text>
+			<autoReward level="HIGH">scrap_only</autoReward>
+		</event>
+	</choice>
+</event>
+<eventList name="SLUG_DISTRESS_TRICK_LIST">
+	<event>
+		<text>Как только вы попали на борт корабля слизней, их враждебные намерения стали очевидны. Несмотря на численный перевес, ваш отряд смог преодолеть засаду слизней и пробиться обратно к шлюзу. Вы отстыковались от вражеского корабля, но нескольким слизням удалось проникнуть к вам на борт.</text>
+		<ship hostile="true"/>
+		<boarders min="1" max="3" class="slug"/>
+	</event>
+	<event>
+		<text>Как только вы попали на борт их корабля, враждебные намерения стали очевидны. На пути назад к шлюзу один из членов вашего экипажа был убит из прицельного бластерного выстрела слизней.</text>
+		<ship hostile="true"/>
+		<crewMember amount="-1"/>
+	</event>
+	<event>
+		<text>Вы осторожно состыковались с их кораблём и сразу же почувствовали затхлый воздух из неисправных систем жизнеобеспечения. В короткие сроки вы смогли починить поломку и улететь назад с некоторой сумой дополнительного лома в трюмах.</text>
+		<autoReward level="HIGH">scrap_only</autoReward>
+	</event>
+</eventList>
+	
+<event name="SLUG_DISTRESS_PILOTING" unique="true"> <!-- changed to engines-->
+	<text>Сигнал бедствия исходит от сломанного маяка. Тут подлетает судно слизней, и объявляет, что они взломали вашу систему двигателей: «Конечно, если вы, как один из немногих оссставшихся кораблей Федерации, присягнете на верность Империи ссслизней, вы будете освобождены».</text>
+	<environment type="nebula"/>
+	<status type="limit" target="player" system="engines" amount="1"/>
+	<ship load="JELLY_STATUS_ENGINES" hostile="false"/>
+	<choice hidden="true">
+		<text>Присягнуть на верность.</text>
+		<event load="SLUG_DISTRESS_PILOTING_SWEAR"/>
+	</choice>
+	<choice hidden="true">
+		<text>Никогда!</text>
+		<event>
+			<text>Слизни не впечатлены вышей бравадой и выдвигаются в атаку. С неисправными двигателями вы — лёгкая добыча; поднимайте щиты!</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true" req="pilot" lvl="2">
+		<text>(Улучшенная рубка управления) Вернуть себе управление.</text>
+		<event>
+			<text>Вы быстро сменили управление, благодаря второму контрольному модулю. Сообразив, что вы не собираетесь соглашаться с их требованиям, они выдвинулись в атаку.</text>
+			<ship hostile="true"/>
+			<status type="clear" target="player" system="engines" amount="100"/>
+		</event>
+	</choice>
+</event>
+
+<eventList name="SLUG_DISTRESS_PILOTING_SWEAR">
+	<event>
+		<text>«Ничего сссебе, я не думал, что вы сможете пройти через это... — обращается он во второй раз. — Похоже, я задолжал вам немного лома». Довольно странно, но он просто дает вам пройти.</text>
+		<status type="clear" target="player" system="engines" amount="100"/>
+	</event>
+	<event>
+		<text>Слова — дешевка, особенно эти. Вы уверили слизней в вашей верности и они приветствуют новых подданных: «... и наконец, позволь мне представить твоего нового Владыку Империи слизней. Он обеспечит соответствие твоих слов с делом». Скучающий на вид слизень телепортируется отсюда.</text>
+		<crewMember amount="1" class="slug"/>
+		<status type="clear" target="player" system="engines" amount="100"/>
+	</event>
+</eventList>
+
+
+

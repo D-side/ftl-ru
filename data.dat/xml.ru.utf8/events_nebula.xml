@@ -1,0 +1,649 @@
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--     ' " "
+			SUMMARY  - 
+A list of all main events to be called by lists
+	(does not include sub-events)
+	
+	
+	
+	NOTE: we need to make all lists with "NEBULA_" in it trigger the creation of a nebula
+
+	
+Structure:
+	FLEET_EASY_NEBULA
+	NEBULA_EMPTY
+	
+Hostile:
+	NEBULA_REBEL
+	NEBULA_AUTO
+	NEBULA_AUTO_WARNING
+	NEBULA_PIRATE    				NEW
+	NEBULA_MANTIS_FIGHT				NEW
+	
+Neutral:
+	NEBULA_REBEL_UNDETECTED
+	NEBULA_PIRATE_SMUGGLE
+	NEBULA_AUTO_DEFENSE_ITEM
+	NEBULA_LOST_SHIP
+	NEBULA_WEAPONS_TRADER			NEW
+	NEBULA_ROCK_RACIST				NEW
+	NEBULA_MANTIS_CHOICE			NEW
+	NEBULA_REBEL_CHASE				NEW
+	
+Boarders:
+	NEBULA_BOARDING
+
+Items:
+	NEBULA_TRADER
+
+Storm Environment:
+	STORM_AUTO
+	STORM_REBEL
+	STORM_BOARDING
+	STORM_ITEMS
+
+--->
+
+
+<eventList name="NEBULA_HOSTILE">
+	<event load="NEBULA_REBEL"/>
+	<event load="NEBULA_AUTO"/>
+	<event load="NEBULA_AUTO_WARNING"/>
+	<event load="NEBULA_PIRATE"/>
+	<event load="NEBULA_MANTIS_FIGHT"/>
+	<event load="STORM_AUTO"/>
+	<event load="STORM_REBEL"/>
+	<event load="NEBULA_BOARDING"/>
+	<!--<event load="STORM_BOARDING"/>-->
+</eventList>
+
+<eventList name="NEBULA_NEUTRAL">
+	<event load="NEBULA_REBEL_UNDETECTED"/>
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
+	<event load="NEBULA_LOST_SHIP"/>
+	<event load="NEBULA_WEAPONS_TRADER"/>
+	<event load="NEBULA_ROCK_RACIST"/>
+	<event load="NEBULA_MANTIS_CHOICE"/>
+	<event load="NEBULA_REBEL_CHASE"/>
+</eventList>
+
+
+
+
+<!-----------
+		STRUCTURE!!!
+	Others events necessary for strucrtural stuff
+------------>
+
+<event name="START_BEACON_NEBULA">
+	<text load="START_BEACON_NEBULA"/>
+</event>
+<textList name="START_BEACON_NEBULA">
+	<text>Скорее всего эта туманность когда-то была важным пересечением путей. Разместить в ней все эти маяки было очень непросто. Но даже так прокладывать путь здесь очень сложно.</text>
+	<text>Туманности всегда были опасными местами. В этих облаках электроника может выйти из сторя. Будьте осторожны.</text>
+	<text>Вы вошли в сектор, наполненный туманностями. Искать путь придётся на ощупь.</text>
+	<text>Вы входите в богатый туманностями сектор. Вы можете наверстать в нём пару световых лет, увеличив отрыв от флота, но это будет иметь смысл только если вы сможете долететь до выхода.</text>
+	<text>Благодаря высокой плотности туманности, этот сектор не только малоизучен, но и славится слухами о том, что же таится в глубинах внутри него.</text>
+	<text>Газы, образующие туманности в этом секторе, угрожают расстроить ваши системы, но вам придется поднажать вперед.</text>
+</textList>
+
+<!-- for when the fleet takes over a nebula beacon -->
+<event name = "FLEET_EASY_NEBULA">
+	<text>Модернизированный охотник повстанцев легко обнаруживает ваш корабль. Вы не можете этого видеть через туманность, но вы прямо таки чувствуете, как силы флота повстанцев угрожающе наступают вам на пятки. Нужно скорее бежать.</text>
+	<ship load = "LONG_FLEET" hostile ="true"/>
+	<environment type="storm"/>
+</event>
+
+<event name="NEBULA_STORE">
+	<text load="NEBULA_STORE"/>
+	<environment type="nebula"/>
+	<store/>
+</event>
+<textList name="NEBULA_STORE">
+	<text>Какие-то смелые предприниматели развернули здесь станцию для добычи элементов из туманности. Кажется тут есть общественный док и даже гостиница.</text>
+	<text>Торговый пост, развернутый неподалеку от маяка, предполагает собой, что на каком-то камне поблизости есть инопланетное поселение. Вы решаете посмотреть на их товары.</text>
+	<text>Центр водородного облака — не совсем обычное место для магазина, но инжи тоже не совсем обычные существа. Взглянуть не помешает.</text>
+	<text>Грузовое судно инжи приветствует: «Предлагается взаимовыгодный обмен имуществом». Тут пахнет сделкой!</text>
+	<text>Вы обнаруживаете скопление кораблей беженцев Федерации, укрывающихся в складках туманности. «Простите, нам нечего вам дать... А для того, чтобы поддерживать двигатели на ходу нам так нужен лом, ну просто катастрофически нужен!» Это вам кажется, или они напрашиваются на обмен?</text>
+</textList>
+
+<event name="NEBULA_EMPTY">
+	<text load = "NEBULA_EMPTY_LIST"/>
+	<environment type="nebula"/>
+</event>
+<textList name ="NEBULA_EMPTY_LIST">
+	<text>Вы ничего не видите через плотный слой газа вокруг вашего корабля. Не зная того, что за ним, все что вы можете сделать — ожидать, пока зарядится ваш FTL.</text>
+	<text>Сенсоры ничего не могут зарегистрировать и у вас нет другого выбора, кроме как с нехорошим предчувствием вглядываться в иллюминаторы. Вокруг как-то устрашающе тихо.</text>
+	<text>У вас имеется стойкое предчувствие, что пока заряжается FTL привод, кто-нибудь накинется на вас из засады. Однако всё проходит гладко...</text>
+	<text>Без функционирующих сенсоров вы чувствуете себя голым. Вы почти уверены, что в любой момент из-за облака появится корабль повстанцев, но ничего не происходит.</text>
+	<text>Ваш экипаж непрерывно смотрит в окна в поисках врагов, аж подпрыгивая от любого скрипа или стона на корабле. Напряжение, висящее в воздухе, почти осязаемо...</text>
+	<text>Вы нервно посматриваете в окна, но единственное, что вас там приветствует — это ещё больше тишины и облаков.</text>
+	<text>По прибытии вы перебираете все широкополосные каналы коммуникатора. Ничего интересного, лишь шум статики.</text>
+	<text>Из-за отрубившихся сенсоров вы проводите немало времени, вглядываясь в окно. Нужно признать, здесь довольно красиво.</text>
+	<text>Здесь ничего нет, за исключением огромных газовых смерчей, отражающих свет далёкого солнца.</text>
+</textList>
+	
+
+
+<!-----------
+		HOSTILE!!!
+	Events that call up a fight for sure
+------------>
+
+<event name="NEBULA_REBEL">
+	<text load="NEBULA_REBEL_LIST"/>
+	<ship load="REBEL" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<textList name="NEBULA_REBEL_LIST">
+	<text>Ваш путь пересекается с передовым разведчиком повстанческого флота, который искал ваш корабль в этой части туманности.</text>
+	<text>Рядом с маяком можно увидеть корабль расцветки повстанцев. Наверняка они ждали вас, так как они немедленно идут в атаку.</text>
+	<text>Похоже повстанцы предугадали, что вы попытаетесь скрыться от них в туманности. Их разведчик ждал у вас у маяка.</text>
+	<text>Видимо вам не удастся избежать повстанцев, путешествуя через туманность. Их корабль ждёт вас у маяка.</text>
+	<text>Вскоре после вашего прибытия поблизости выходит из прыжка корабль повстанцев. Похоже убежать не получится. Готовьтесь к бою!</text>
+	<text>Чёрт его знает что завело корабль повстанцев так далеко. Его капитан собирался было выйти на связь, но, замешкавшись, внимательно осматривает ваш корабль. Через пару секунд они открывают огонь.</text>
+	<text>Корабль повстанцев пытается выйти на связь, но данном случае переговоры уже бессмысленны. Вы блокируете частоту и готовитесь атаковать.</text>
+</textList>
+
+
+<event name="NEBULA_AUTO">
+	<text load="NEBULA_AUTO_LIST"/>
+	<ship load="REBEL_AUTO" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<textList name="NEBULA_AUTO_LIST">
+	<text>Ваш путь пересекается с передовым разведчиком повстанческого флота, который искал ваш корабль в этой части туманности.</text>
+	<text>Вы совершили прыжок в более тихую часть туманности. Однако ваше спокойствие улетучивается, когда у маяка появляется разведчик повстанцев. Он движется в атаку.</text>
+	<text>Причудливые обломки множества кораблей лениво проплывают мимо. И тут вы замечаете перемигивающиеся огоньки за одной из разрушенных громадин. Из обломков выскакивает разведчик повстанцев!</text>
+	<text>Этот дрон не разыскивал вас. Возможно он разведывал путь для продвижения повстанцев, или он хотел использовать туманность, чтобы укрыться. Независимо от причин, он опознает в вас врага.</text>
+	<text>Беспокоит то, что повстанцы пробрались так далеко в неисследованный космос, даже если это всего лишь беспилотник. Он включает свои орудия, вам нужно сделать то же.</text>
+</textList>
+
+
+<event name="NEBULA_AUTO_WARNING" unique = "true">
+	<text>Видимо этот автоматический разведчик был размещен повстанцами в туманности, чтобы предупредить их о вашем присутствии.</text>
+	<ship load="REBEL_AUTO_WARNING" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+
+<event name="NEBULA_PIRATE">
+	<text load="NEBULA_PIRATE"/>
+	<ship load="PIRATE" hostile="true"/>
+</event>
+<textList name="NEBULA_PIRATE">	<!-- JUSTIN - ADD MORE -->
+	<text>Пока вы пробирались через туманность, неопознанное судно спикировало из облаков и село вам на хвост. Их орудия включаются.</text>
+	<text>В тумане вырисовывается пиратский корабль, который выходит на связь: «Знаете, за что я люблю эту часть галактики? Исследователи! У вас всегда есть, чем поживиться». Они наводят орудия.</text>
+	<text>Пока вы плывете через туманность, на ваш курс ложится пиратский корабль, который быстро сокращает дистанцию. Было бы лучше сражаться на своих условиях, но выбирать не приходится.</text>
+	<text>Враждебное судно спускается к вам из туманности. Боевая тревога!</text>
+	<text>Вы пытаетесь опознать корабль в тумане впереди, но он слишком плотный, чтобы что-то разглядеть. Ответ приходит, когда корабль разворачивается с разогретыми орудиями!</text>	
+</textList>
+
+<event name="NEBULA_MANTIS_FIGHT" unique="false">   
+	<text load="NEBULA_MANTIS_FIGHT"/>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<textList name="NEBULA_MANTIS_FIGHT">
+	<text>Широко распространено мнение, что туманности — излюбленное место охоты богомолов. Эта деталь запомнилась вам достаточно хорошо, чтобы не дать застигнуть себя врасплох.</text>
+	<text>Вы засекли рейдер богомолов, возвращающийся с добычей. Богомолы настроены решительно, и им плевать, враждебны вы или нет. Они открывают огонь первыми.</text>
+	<text>Корабль богомолов, потерявшийся в космическом шторме, выходит с вами на связь: «Сенсоры сдохли. Данных о ближайшей местности нет. Ваши в самый раз сгодятся!» Вы засекаете увеличение мощности в их оружейных системах.</text>
+	<text>Корабль богомолов связывается с вами сквозь шторм: «Это священные охотничьи угодья клана Ургггхтнаг. А ты — жертва». Поднять щиты!</text>
+	<text>Вы замечаете истребитель богомолов, затаившийся среди облаков кружащихся космических материалов. Он охотится на вас. Вы пытаетесь подготовиться к прыжку и идете в атаку.</text>
+
+</textList>
+
+
+
+
+
+
+
+
+
+
+<!-----------
+		NEUTRAL!!!
+	Events that could have a fight
+------------>
+
+<event name="NEBULA_REBEL_UNDETECTED" unique="true">  <!-- give player option to hide, -->
+	<text>Ваш корабль появляется довольно далеко от маяка. Вы видите рядом с ним корабль повстанцев. Несомненно он ждет вас.</text>
+	<ship load="REBEL" hostile="false"/>
+	<environment type="nebula"/>
+	<choice>
+		<text>Атаковать корабль.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Попытаться остаться незамеченным.</text>
+		<event load="NEBULA_REBEL_UNDETECTED_LIST"/>
+	</choice>
+	<choice req="cloaking" hidden="true" hidden="true"> 
+		<text>(Маскировка) Замаскироваться, чтобы быть невидимым.</text>
+		<event>
+			<text>Вы используете систему маскировки, чтобы проскользнуть в туманность незамеченным.</text>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_REBEL_UNDETECTED_LIST">
+	<event>
+		<text>Вы немедленно проскальзываете в облака, но недостаточно быстро. Повстанцы замечают вас и двигаются в атаку!</text>
+		<choice>
+			<text>Приготовиться к бою.</text>
+			<event>
+				<ship hostile="true"/>
+			</event>
+		</choice>
+		<choice req="engines" lvl="4" hidden="true">
+			<text>(Улучшенные двигатели) Включить двигатели на полную мощность и оторваться от них.</text>
+			<event>
+				<text>Ваши мощные двигатели позволяют вам оторваться от корабля, и со временем затеряться в туманности.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>Вы обесточили несущественные системы и скользнули в облако. Теперь вас ни за что не заметить.</text>
+	</event>
+	<event>
+		<text>Корабль заметил вас и начал преследование. После нескольких быстрых манёвров вы смогли оторваться от ваших преследователей в облаках. Однако вы полагаете, что они предупредят флот о вашей позиции.</text>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+
+<event name="NEBULA_PIRATE_SMUGGLE">   <!-- TO DO -- NEED TO MAKE A NEW PIRATE SHIP THAT ATTEMPTS TO BRIBE YOU WHEN SURRENDERING-->
+	<text>Пиратский корабль прибыл вскоре после вас. Судя по тому, что он старается избегать вашего корабля, вы предполагаете, что это контрабандист, пытающийся держаться подальше от маяков.</text>
+	<environment type="nebula"/>
+	<choice>
+		<text>Атаковать его.</text>
+		<event>
+			<text>Вы заряжаете свои орудия и идёте на сближение.</text>
+			<ship load="PIRATE_SMUGGLE" hostile ="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Игнорировать корабль.</text>
+		<event>
+			<text>Спустя некоторое время он совершает прыжок.</text>
+		</event>
+	</choice>
+	<choice req="weapons" lvl="6" hidden="true">
+		<text>(Улучшенные орудия) Многозначительно активировать ваши грозные орудия.</text>
+		<event>
+			<text>Они сразу же выходят на связь: «Только не надо агрессии... Вот, возьмите, может это убедит вас сделать вид, что вы нас не заметили».</text>
+			<choice>
+				<text>Принять их взятку.</text>
+				<event>
+					<autoReward level="MED">fuel</autoReward>
+				</event>
+			</choice>
+			<choice>
+				<text>Не соглашаться на подкуп и атаковать.</text>
+				<event>
+					<ship load="PIRATE_SMUGGLE" hostile ="true"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
+<event name="NEBULA_AUTO_DEFENSE_ITEM" unique="true">
+	<text>Передовой автоматизированный корабль повстанцев сохраняет положение рядом с их маленькой космической станцией. Однако без функционирующих сенсоров невозможно определить, что внутри неё.</text>
+	<ship load="REBEL_AUTO_ITEM" hostile="false"/>  <!-- ship is in other xmls -->
+	<choice>
+		<text>Атаковать автоматизированный корабль, чтобы добраться до станции.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Не беспокоить корабль.</text>
+		<event/>
+	</choice>
+	<choice req="cloaking" hidden="true">
+		<text>(Маскировка) Использовать вашу невидимость, что бы получить доступ к космической станции незамеченным.</text>
+		<event load="DEFENSE_ITEM_LIST"/>
+	</choice>
+	<environment type="nebula"/>
+</event>
+
+
+<event name="NEBULA_LOST_SHIP" unique="true">
+	<text>Тяжело повреждённый корабль Федерации прячется в туманности около этого маяка. До того, как вы успеваете вступить в контакт с ними, они исчезают в туманности.</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Попытаться последовать за ними и помочь.</text>
+		<event load="NEBULA_LOST_SHIP_LIST"/>
+	</choice>
+	<choice>
+		<text>Остаться на месте, пусть сами разбираются со своими проблемами.</text>
+		<event/>
+	</choice>	
+	<choice req="teleporter" hidden="true"> 
+		<text>(Телепортер) Попробовать телепортировать из того места, где сенсоры регистрируют признаки жизни.</text>
+		<event>
+			<text>Вы переместили экипаж Федерации на борт. Один с радостью присоединился к вашему экипажу, остальные ждут высадки на следующей станции.</text>
+			<crewMember amount="1"/>
+			<autoReward level="MED">scrap_only</autoReward>
+		</event>
+	</choice>
+	<choice req="ADV_SCANNERS" hidden="true">
+		<text>(Сканеры широкого охвата) Подать дополнительную энергию в ваши сенсоры, и попробовать отыскать их.</text>
+		<event load="NEBULA_LOST_SHIP_LIST2"/>
+	</choice>
+</event>
+<eventList name="NEBULA_LOST_SHIP_LIST">
+	<event>
+		<text>Поиск не дал результатов. Ваши сенсоры не могут ничего засечь в туманности.</text>
+	</event>
+	<event>
+		<text>Во время бесплодного поиска в туманности вы неожиданно натыкаетесь на корабль повстанцев, от которого, по всей видимости, и пытались укрыться сторонники Федерации. Вы готовитесь к бою.</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+	<event>
+		<text>Вам повезло и вы нашли их парящих неглубоко в туманности. Взволнованные, что их нашли свои, они поднимаются на борт и покидают свой разрушенный корабль.</text>
+		<crewMember amount="1"/>
+	</event>
+</eventList>
+<eventList name="NEBULA_LOST_SHIP_LIST2">
+	<event>
+		<text>Замигал радар местности, периодически показывая признаки крупного объекта в облаке рядом. Тем не менее этого достаточно, чтобы получить координаты, и вы находите корабль... пустой корпус, давно лишившийся работающих компонентов.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Вы следуете за ними по быстро исчезающим следам, и находите, парящими не слишком глубоко в туманности. Взволнованные, что их нашли свои, они поднимаются на борт и покидают свой разрушенный корабль.</text>
+		<crewMember amount="1"/>
+	</event>
+</eventList>
+
+<event name="NEBULA_WEAPONS_TRADER" unique="true">
+	<text>Нелегальный торговец оружием плетёт вам что-то невнятное об опасностях, таящихся в туманностях, после чего навязчиво пытается толкнуть вам свой товар.</text>
+	<environment type="nebula"/>
+	<ship load="PIRATE" hostile="false"/>
+	<choice>
+		<text>Игнорировать корабль.</text>
+		<event/>
+	</choice>
+	<choice>
+		<text>Атаковать корабль.</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Купить неизвестное оружие [Лом: -65]</text>
+		<event load="NEBULA_WEAPONS_TRADER_LIST"/>
+	</choice>
+</event>
+<eventList name="NEBULA_WEAPONS_TRADER_LIST">
+	<event>
+		<text>Вы пересылаете лом и получаете оружие взамен. Будем надеяться оно того стоит.</text>
+		<item_modify>
+			<item type="scrap" min="-65" max="-65"/>
+		</item_modify>
+		<weapon name="RANDOM"/>
+	</event>
+	<event>
+		<text>Вы пересылаете лом, но он не соблюдает соглашение: «Я же говорил, что это опасные места!»</text>
+		<item_modify>
+			<item type="scrap" min="-65" max="-65"/>
+		</item_modify>
+		<choice>
+			<text>Атаковать корабль!</text>
+			<event>
+				<ship hostile="true"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Получив ценный урок, двинуться дальше.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+
+<event name="NEBULA_ROCK_RACIST" unique="true">
+	<text>Бронированный транспорт роков сбился с курса. Когда вы их приветствуете, они ведут себя крайне недоверчиво: «Не знаю, что вы за вид такой, но вы отвратительны! Не нужна нам ваша помощь, убирайтесь. Немедленно».</text>
+	<ship load="ROCK_SHIP" hostile="false"/>
+	<environment type="storm"/>
+	<choice>
+		<text>Уйти.</text>
+		<event/>
+	</choice>
+	<choice>
+		<text>Отвратительны?! Зарядить орудия!</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true" req="rock">
+		<text>(Член экипажа рок) Предложить вывести их из туманности.</text>
+		<event>
+			<text>Роки неохотно передают управление своим кораблём в ваши руки и вы ведете их в разреженную часть туманности. Не зная, что и думать, они всё же передают вам немного припасов.</text>
+			<autoReward level="HIGH">standard</autoReward>
+		</event>
+	</choice>
+</event>
+
+<event name="NEBULA_MANTIS_CHOICE" unique="true">
+	<text>Пытаясь вслепую сориентироваться в тумане, вы чуть не ударились корпусами с кораблём богомолов. Они выходят на связь с вами: «Ха! Мы закроем на это глаза. Туманность, очень опасно. В следующий раз все человеки умрут».</text>
+	<ship load="MANTIS_FIGHT" hostile="false"/>
+	<environment type="nebula"/>
+	<choice>
+		<text>Следующего раза не будет. Открыть огонь!</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Здесь и так достаточно опасно. Двинуться дальше.</text>
+		<event/>
+	</choice>
+</event>
+
+<event name="NEBULA_REBEL_CHASE" unique="true">
+	<text>Вы замечаете корабль повстанцев в тумане впереди, и держитесь вне радиуса их радара. Попробовать атаковать?</text>
+	<ship load="REBEL" hostile="false"/>
+	<environment type="nebula"/>
+	<choice>
+		<text>Оставаться незамеченными.</text>
+		<event>
+			<text>Вы пытаетесь держаться вне их взора. Вряд ли они вас видели.</text>
+		</event>
+	</choice>
+	<choice>
+		<text>Приготовиться к преследованию!</text>
+		<event load="NEBULA_REBEL_CHASE_LIST"/>
+	</choice>
+	<choice req="sensors" lvl="3">
+		<text>(Улучшенные сенсоры) Приблизиться к ним, следуя их траектории, и одновременно приготовиться к атаке.</text>
+		<event>
+			<text>Завидев вас, они пытаются свалить. Вы выжимаете что можно из барахлящих сенсоров и вам удается следовать за ними достаточно точно, чтобы приблизиться на расстояние выстрела.</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice req="ADV_SCANNERS" hidden="true">
+		<text>(Сканеры широкого охвата) Приблизиться к ним, следуя их траектории, и одновременно приготовиться к атаке.</text>
+		<event>
+			<text>Завидев вас, они пытаются свалить. Вы выжимаете что можно из барахлящих сенсоров и вам удается следовать за ними достаточно точно, чтобы приблизиться на расстояние выстрела.</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_REBEL_CHASE_LIST">
+	<event>
+		<text>Вы следуете за их газовым следом и с разогретыми орудиями прижимаете их задницу.</text>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>Без сенсоров вы не можете долго удерживать их в прицеле. Повстанцы ускользнули.</text>
+	</event>
+	<event>
+		<text>Вы затерялись в туманности и окончательно сбились с курса. Чтобы вернуться к маяку потребовалось некоторое время. Скорее всего за это время флот успел продвинуться ближе к вам.</text>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+		
+
+
+<!-----------
+		ITEMS!!!
+	Events that give items
+------------>
+
+<event name="NEBULA_TRADER" unique="true">
+	<text>Трудно понять почему, но видимо этот маяк является излюбленным местом для туристов. Один из кораблей на маленькой станции предлагает сделку.</text>
+	<environment type="nebula"/>
+	<choice>
+		<text>Торговать.</text>
+		<event load="TRADER_LIST"/>
+	</choice>
+	<choice>
+		<text>Игнорировать.</text>
+		<event/>
+	</choice>
+</event>
+
+
+
+
+
+
+
+<!-----------
+		BOARDERS!!!
+	Events with boarder calls
+------------>
+
+<event name="NEBULA_BOARDING" unique="true">
+	<text load="NEBULA_BOARDING_TEXT"/>
+	<environment type="nebula"/>
+	<boarders min="2" max="4" class="human"/>
+</event>
+<textList name="NEBULA_BOARDING_TEXT">
+	<text>Вы разглядываете небольшую станцию неподалёку, когда вдруг ощущаете дрожь от выстрелов, проносящуюся по кораблю. Без сенсоров не проверить сразу, но похоже у вас на корабле незваные гости!</text> 
+	<text>Вы прибываете в туманность и немедленно получаете сообщение из неизвестного источника: «Готовьтесь к абордажу!» Помехи, исходящие от туманности, не позволяют сказать, откуда оно пришло, но вы слышите выстрелы на борту корабля.</text>
+	<text>Вокруг маяка вы видите множество пустых кораблей. Через несколько минут раздаются характерные звуки телепортации и неистовые крики врагов — вас берут на абордаж!</text>
+</textList>
+
+
+
+
+
+
+<!-----------
+		STORM!!!
+	Events with storm
+------------>
+
+
+<event name="STORM_AUTO" unique = "true">
+	<text>Вы совершили прыжок в сектор туманности, в котором бушует плазменный шторм. Автоматический разведчик повстанцев, бывший у маяка, идет в атаку.</text>
+	<environment type="storm"/>
+	<choice>
+		<text>Приготовиться к бою.</text>
+		<event>
+			<ship load = "REBEL_AUTO" hostile="true"/>
+		</event>
+	</choice>
+	<choice req="engines" lvl="3" hidden="true">
+		<text>(Улучшенные двигатели) Попытаться убежать.</text>
+		<event load="STORM_AUTO_ESCAPE"/>
+	</choice>
+	<choice req="cloaking" hidden="true">
+		<text>(Маскировка) Использовать маскировку, чтобы спастись.</text>
+		<event>
+			<text>Используя свою продвинутую систему маскировки вы с лёгкостью затерялись от вашего преследователя в космическом шторме.</text>
+		</event>
+	</choice>
+</event>
+<eventList name="STORM_AUTO_ESCAPE">
+	<event>
+		<text>Вы успешно затерялись в космическом шторме.</text>
+	</event>
+	<event>
+		<text>Несмотря на то, что у вас двигатели улучшены, вам не удаётся раскачать их. Вы поворачиваете и готовитесь в битве.</text>
+		<ship load = "REBEL_AUTO" hostile="true"/>
+	</event>
+</eventList>
+
+<event name="STORM_REBEL" unique = "true">
+	<text>Вы появляетесь посреди плазменного шторма. Несмотря на ужасные условия, разведчик повстанцев, похоже, ждал вас тут.</text>
+	<ship load = "REBEL" hostile = "true"/>
+	<environment type="storm"/>
+</event>
+
+<!--
+<event name="STORM_BOARDING" unique="true">
+	<text>Вы видите, как неподалеку плывут два сильно поврежденных корабля, явно после битвы. Однако их телепортер должно быть работает, так как слышны звуки кого-то, телепортирующегося на борт, сопровождающиеся криками абордажной команды.</text> 
+	<environment type="storm"/>
+	<boarders min="3" max="5" class="human"/>
+</event>
+-->
+<event name="STORM_ITEMS" unique = "true">
+	<text>Вы выходите из прыжка в центре плазменного шторма. Несколько недавно выведенных из строя кораблей маячат в тенях, слабо освещаемые молниями.</text>
+	<choice hidden="true">
+		<text>Вручную обыскать останки в поисках выживших и оборудования.</text>
+		<event load="STORM_ITEMS_LIST"/>
+	</choice>
+	<choice>
+		<text>Не рисковать и ждать зарядки FTL привода, чтобы улететь отсюда без повреждений.</text>
+		<event/>
+	</choice>
+	<choice req="pilot" lvl="2" hidden="true">
+		<text>(Улучшенная рубка управления) Пусть ваш пилот осторожно исследует обломки.</text>
+		<event load="STORM_ITEMS_PILOTING"/>
+	</choice>
+	<environment type="storm"/>
+</event>
+<eventList name="STORM_ITEMS_LIST">
+	<event>
+		<text>Несмотря на осторожность, нехватка оборудования для обнаружения приводит к тому, что некоторые обломки врезаются корабль, повреждая обшивку. Вы собираете всё необходимое, и готовитесь к прыжку, пока не случилось чего похуже.</text>
+		<damage amount="4"/>
+		<autoReward level="HIGH">stuff</autoReward>
+	</event>
+	<event>
+		<text>На кладбище кораблей вы находите один относительно нетронутый. На борту пассажир без сознания, его нужно забрать обратно на корабль. Проснувшись он с благодарностью предлагает присоединиться к вашему экипажу.</text>	
+		<crewMember amount="1"/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>Пока экипаж был снаружи корабля, обыскивая обломки, два каркаса врезались друг в друга, обрывая страховочные тросы экипажа. Вы не успеваете среагировать и кого-то далеко отбрасывает, оставляя беспомощно плыть среди газовых облаков...</text>
+		<crewMember amount="-1"/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>Среди мусора вы находите чертёж дрона. Вы решаете, что этого вполне достаточно, и готовитесь к прыжку.</text>
+		<autoReward level="MED">drone</autoReward>
+	</event>
+	<event>
+		<text>Большая часть обломков даже для переработки на лом не годится, однако вам удалось обнаружить неповреждённое оружие, пригодное для установки на ваш корабль.</text>
+		<autoReward level="MED">weapon</autoReward>
+	</event>
+</eventList>
+<eventList name="STORM_ITEMS_PILOTING">
+	<event>
+		<text>На кладбище кораблей вы находите один относительно нетронутый. На борту пассажир без сознания, его нужно забрать обратно на корабль. Проснувшись он с благодарностью предлагает присоединиться к вашему экипажу.</text>	
+		<crewMember amount="1"/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>Среди мусора вы находите чертёж дрона. Вы решаете, что этого вполне достаточно, и готовитесь к прыжку.</text>
+		<autoReward level="MED">drone</autoReward>
+	</event>
+	<event>
+		<text>Большая часть обломков даже для переработки на лом не годится, однако вам удалось обнаружить неповреждённое оружие, пригодное для установки на ваш корабль.</text>
+		<autoReward level="LOW">weapon</autoReward>
+	</event>
+	<event>
+		<text>Ваш пилот осторожно исследует обломки, но шторм уже взял свое. Любой экипаж давно умер, а плавающие останки обожжены настолько, что их уже не починить.</text>
+	</event>
+</eventList>
+
+
+
+

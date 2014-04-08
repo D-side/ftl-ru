@@ -1,0 +1,393 @@
+
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!------- IMPLEMENTED ----------->
+<achievement id="ACH_SECTOR_5">
+	<name>Это лишь начало</name>
+	<desc>Добраться до сектора 5.</name>
+	<img>achievements/0.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_SECTOR_8">
+	<name>База Федерации в пределах видимости</name>
+	<desc>Добраться до сектора 8.</name>
+	<img>achievements/1.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_WIN_EASY">
+	<name>Победа Федерации (Легкий)</name>
+	<desc>Победить босса на лёгком уровне сложности.</desc>
+	<img>achievements/2.png</img>
+</achievement>
+
+<achievement id="ACH_WIN_NORMAL">
+	<name>Победа Федерации (Нормальный)</name>
+	<desc>Победить босса на нормальном уровне сложности.</desc>
+	<img>achievements/3.png</img>
+</achievement>
+
+<achievement id="ACH_UNLOCK_ALL">
+	<name>Собственный флот</name>
+	<desc>Разблокировать все доступные для игры корабли.</desc>
+	<img>achievements/4.png</img>
+</achievement>
+
+<achievement id="ACH_SCRAP">
+	<name>Десятое правило: Жадность непобедима</name>
+	<desc>Собрать 10,000 лома за все игры.</desc>
+	<img>achievements/5.png</img>
+</achievement>
+
+<achievement id="ACH_SHIPS">
+	<name>Бог войны</name>
+	<desc>Уничтожить 1000 кораблей за все прохождения.</desc>
+	<img>achievements/6.png</img>
+</achievement>
+
+
+<achievement id="ACH_NO_UPGRADES">
+	<name>Не нужны мне эти ваши модернизации!</name>
+	<desc>Добраться до сектора 5 без улучшений системы.</desc>
+	<img>achievements/7.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_PACIFIST">
+	<name>Во имя мира!</name>
+	<desc>Добраться до сектора 5, ни разу не выстрелив, не использовав атакующего дрона и не высадившись на вражеский корабль.</desc>
+	<img>achievements/8.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_NO_REPAIR">
+	<name>На честном слове и на одном крыле</name>
+	<desc>Добраться до сектора 5, ни разу не отремонтировавшись в магазине.</desc>
+	<img>achievements/9.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_NO_MISSILES">
+	<name>Баллистофобия</name>
+	<desc>Добраться до сектора 8, ни разу не применив ракеты или бомбы.</desc>
+	<img>achievements/10.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_NO_DRONES">
+	<name>Технофобия</name>
+	<desc>Добраться до сектора 8, ни разу не использовав дронов.</desc>
+	<img>achievements/11.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_NO_BUYING">
+	<name>Полное самообеспечение</name>
+	<desc>Достичь 8-го сектора, ничего не купив в магазине (ремонты разрешены).</desc>
+	<img>achievements/12.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_NO_DEATH">
+	<name>Здесь нет краснорубашечников</name>
+	<desc>Добраться до сектора 8, не потеряв ни одного члена экипажа.</desc>
+	<img>achievements/13.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_BURNING">
+	<name>Некоторым просто нравится смотреть, как горят корабли</name>
+	<desc>Устроить пожар в каждом отсеке вражеского корабля.</desc>
+	<img>achievements/16.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_BAD_DODGING">
+	<name>Астрономически малая вероятность</name>
+	<desc>Умудриться НЕ увернуться от вражеских выстрелов пять раз подряд, имея полностью усовершенствованный и запитанный двигатель.</desc>
+	<img>achievements/18.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_ONE_VOLLEY">
+	<name>Даже пискнуть не успели</name>
+	<desc>Используя «Предварительное зажигание» уничтожить вражеский корабль одним залпом прежде, чем он успеет выстрелить.</desc>
+	<img>achievements/14.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_BOARDING_DRONE">
+	<name>АБОРДАЖ ПРОИЗВЕДЁН УСПЕШНО</name>
+	<desc>Убить четырёх членов экипажа вражеского корабля при помощи одного абордажного дрона.</desc>
+	<img>achievements/15.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_INVADE_SHIP">
+	<name>Надёжный автопилот</name>
+	<desc>Победить вражеский корабль, высадив на него весь свой экипаж.</desc>
+	<img>achievements/19.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_SLICE_DICE">
+	<name>Мясорубка</name>
+	<desc>Поразить каждый отсек корабля как минимум одним лучом менее, чем за пять секунд.</desc>
+	<img>achievements/20.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_SUFFOCATE">
+	<name>Победа посредством удушения</name>
+	<desc>Снизить уровень кислорода на вражеском корабле до пяти процентов (корабль не должен быть автоматизированным).</desc>
+	<img>achievements/17.png</img>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+
+<!-- KESTREL ACHIEVEMENTS -->
+
+<achievement id="ACH_UNITED_FEDERATION">
+	<name>Объединённая Федерация</name>
+	<desc>Собрать на борту крейсера «Кестрел» членов экипажа шести разных рас.</desc>
+	<img>achievements/kestral_1.png</img>
+	<ship>PLAYER_SHIP_HARD</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_FULL_ARSENAL">
+	<name>Вооружён до зубов</name>
+	<desc>Установить на крейсер «Кестрел» все возможные системы и подсистемы.</desc>
+	<img>achievements/kestral_2.png</img>
+	<multiDifficulty>1</multiDifficulty>
+	<ship>PLAYER_SHIP_HARD</ship>
+</achievement>
+
+<achievement id="ACH_TOUGH_SHIP">
+	<name>Маленький, но крепкий</name>
+	<desc>Полностью отремонтировать крейсер «Кестрел» после того, как у него останется одна единица прочности корпуса.</desc>
+	<img>achievements/kestral_3.png</img>
+	<multiDifficulty>1</multiDifficulty>
+	<ship>PLAYER_SHIP_HARD</ship>
+</achievement>
+
+<!-- ENERGY ACHIEVEMENTS -->
+
+<achievement id="ACH_ENERGY_SHIELDS">
+	<name>Щит выдержал</name>
+	<desc>Уничтожить вражеский корабль до того, как тот пробьёт золтанский щит.</desc>
+	<img>achievements/energy_cruiser_1.png</img>
+	<multiDifficulty>1</multiDifficulty>
+	<ship>PLAYER_SHIP_ENERGY</ship>
+</achievement>
+
+<achievement id="ACH_ENERGY_POWER">
+	<name>Работает на полную, капитан!</name>
+	<desc>Использовать 29 единиц энергии для питания систем золтанского крейсера.</desc>
+	<img>achievements/energy_cruiser_2.png</img>
+	<multiDifficulty>1</multiDifficulty>
+	<ship>PLAYER_SHIP_ENERGY</ship>
+</achievement>
+
+<achievement id="ACH_ENERGY_MANPOWER">
+	<name>Педальный привод</name>
+	<desc>Добраться до сектора 5 на золтанском крейсере, ни разу не усовершенствовав реактор.</desc>
+	<img>achievements/energy_cruiser_3.png</img>
+	<multiDifficulty>1</multiDifficulty>
+	<ship>PLAYER_SHIP_ENERGY</ship>
+</achievement>
+
+<!-- STEALTH ACHIEVEMENTS -->
+
+<achievement id="ACH_STEALTH_DESTROY">
+	<name>Хищная птица</name>
+	<desc>Уничтожить полностью исправный вражеский корабль за время, пока действует один заряд маскировочного поля на крейсере Стелс.</desc>
+	<img>achievements/stealth_1.png</img>
+	<ship>PLAYER_SHIP_STEALTH</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_STEALTH_AVOID">
+	<name>Фазовый сдвиг</name>
+	<desc>Пилотируя крейсер Стелс избежать получения 9 единиц урона за время, пока действует один заряд маскировочного поля.</desc>
+	<img>achievements/stealth_2.png</img>
+	<ship>PLAYER_SHIP_STEALTH</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_STEALTH_TACTICAL">
+	<name>Тактический подход</name>
+	<desc>Добраться на крейсере Стелс до сектора 8, ни разу не попав в систему с опасной средой (туманность, метеориты и т. п.).</desc>
+	<img>achievements/stealth_3.png</img>
+	<multiDifficulty>1</multiDifficulty>
+	<ship>PLAYER_SHIP_STEALTH</ship>
+</achievement>
+
+<!-- ENGI ACHIEVEMENTS -->
+
+<achievement id="ACH_ROBOTIC">
+	<name>Война роботов</name>
+	<desc>Запустить с крейсера инжи трёх дронов одновременно.</desc>
+	<img>achievements/circle_cruiser_1.png</img>
+	<multiDifficulty>1</multiDifficulty>
+	<ship>PLAYER_SHIP_CIRCLE</ship>
+</achievement>
+
+<achievement id="ACH_ONLY_DRONES">
+	<name>Да я и пальцем не пошевелил!</name>
+	<desc>Пилотируя крейсер инжи, уничтожить противника, используя только дронов (без применения оружия).</desc>
+	<img>achievements/circle_cruiser_2.png</img>
+	<ship>PLAYER_SHIP_CIRCLE</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_IONED">
+	<name>Пушки... пушки замолчали...</name>
+	<desc>Ионизировать одновременно четыре вражеские подсистемы, пилотируя крейсер инжи.</desc>
+	<img>achievements/circle_cruiser_3.png</img>
+	<ship>PLAYER_SHIP_CIRCLE</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<!-- ROCK ACHIEVEMENTS -->
+
+<achievement id="ACH_ROCK_FIRE">
+	<name>Разве здесь жарко?</name>
+	<desc>Пилотируя крейсер роков, убить горящего противника на его корабле.</desc>
+	<img>achievements/rock_cruiser_1.png</img>
+	<ship>PLAYER_SHIP_ROCK</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_ROCK_MISSILES">
+	<name>Защитные дроны бесполезны!</name>
+	<desc>Пилотируя крейсер роков, уничтожить вражеский корабль с защитным дроном, используя только ракеты.</desc>
+	<img>achievements/rock_cruiser_2.png</img>
+	<ship>PLAYER_SHIP_ROCK</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_ROCK_CRYSTAL">
+	<name>Происхождение</name>
+	<desc>Найти секретный сектор, пилотируя крейсер роков.</desc>
+	<img>achievements/rock_cruiser_3.png</img>
+	<ship>PLAYER_SHIP_ROCK</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<!-- MANTIS ACHIEVEMENTS -->
+
+<achievement id="ACH_MANTIS_CREW_DEAD">
+	<name>Пленных не брать!</name>
+	<desc>Пилотруя крейсер богомолов, уничтожить экипажи не менее чем двадцати кораблей к моменту прибытия в сектор 6.</desc>
+	<img>achievements/mantis_cruiser_1.png</img>
+	<ship>PLAYER_SHIP_MANTIS</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_MANTIS_SLAUGHTER">
+	<name>На абордаж, трюмные крысы!</name>
+	<desc>Пилотируя крейсер богомолов, убить 5 членов экипажа противника, не потеряв ни одного своего и не получив повреждений корпуса.</desc>
+	<img>achievements/mantis_cruiser_2.png</img>
+	<ship>PLAYER_SHIP_MANTIS</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_MANTIS_SURVIVOR">
+	<name>Королевская Битва</name>
+	<desc>Пилотируя крейсер богомолов, взять вражеский корабль на абордаж и убить последнего врага последним членом своего экипажа.</desc>
+	<img>achievements/mantis_cruiser_3.png</img>
+	<ship>PLAYER_SHIP_MANTIS</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+
+
+
+<!-- SLUG ACHIEVEMENTS -->
+
+<achievement id="ACH_SLUG_VISION">
+	<name>Мы на позиции!</name>
+	<desc>Пилотируя крейсер слизней, получить изображение из всех отсеков вражеского корабля, не имея действующих сенсоров.</desc>
+	<img>achievements/jelly_cruiser_1.png</img>
+	<ship>PLAYER_SHIP_JELLY</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_SLUG_NEBULA">
+	<name>Дом, милый дом</name>
+	<desc>Посетить 30 туманностей прежде чем прибыть в сектор 8.</desc>
+	<img>achievements/jelly_cruiser_2.png</img>
+	<ship>PLAYER_SHIP_JELLY</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_SLUG_BIO">
+	<name>Дезинтегрирующий луч</name>
+	<desc>При использовании крейсера слизней, уничтожить трёх членов экипажа врага одним выстрелом из Анти-био луча.</desc>
+	<img>achievements/jelly_cruiser_3.png</img>
+	<ship>PLAYER_SHIP_JELLY</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<!-- FEDERATION CRUISER ACHIEVEMENTS -->
+
+<achievement id="ACH_FED_PATIENCE">
+	<name>Артиллерийское мастерство</name>
+	<desc>Используя только Артиллерийский луч уничтожить вражеский корабль, не получив при этом никаких повреждений корпуса.</desc>
+	<img>achievements/fed_cruiser_1.png</img>
+	<ship>PLAYER_SHIP_FED</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_FED_DIPLOMACY">
+	<name>Дипломатическая неприкосновенность</name>
+	<desc>Пилотируя крейсер Федерации, четыре раза использовать «синие» варианты действий экипажа к моменту прибытия в сектор 5.</desc>
+	<img>achievements/fed_cruiser_2.png</img>
+	<ship>PLAYER_SHIP_FED</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_FED_UPGRADE">
+	<name>Королевское терпение</name>
+	<desc>Добраться до сектора 5 на крейсере Федерации, ни разу не усовершенствовав орудийную систему.</desc>
+	<img>achievements/fed_cruiser_3.png</img>
+	<ship>PLAYER_SHIP_FED</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+
+<!-- CRYSTAL CRUISER ACHIEVEMENTS -->
+
+<achievement id="ACH_CRYSTAL_SHARD">
+	<name>Сладкая месть</name>
+	<desc>Уничтожить вражеский корабль осколком Кристалла мести (уникально для крейсера кристалинов).</desc>
+	<img>achievements/crystal_cruiser_1.png</img>
+	<ship>PLAYER_SHIP_CRYSTAL</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_CRYSTAL_LOCKDOWN">
+	<name>Некуда бежать</name>
+	<desc>Используя крейсер кристалинов поймайте 4 вражеских члена экипажа в одной комнате, использовав силу кристального существа или запирающую бомбу.</desc>
+	<img>achievements/crystal_cruiser_2.png</img>
+	<ship>PLAYER_SHIP_CRYSTAL</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+<achievement id="ACH_CRYSTAL_CLASH">
+	<name>Битва титанов</name>
+	<desc>Уничтожить 15 кораблей роков (считая пиратские), пилотируя крейсер кристалинов.</desc>
+	<img>achievements/crystal_cruiser_3.png</img>
+	<ship>PLAYER_SHIP_CRYSTAL</ship>
+	<multiDifficulty>1</multiDifficulty>
+</achievement>
+
+
+
+
+
+
+
+

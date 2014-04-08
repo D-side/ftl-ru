@@ -1,0 +1,4050 @@
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Customization possibilities -->
+
+<blueprintList name="STARTING_WEAPONS">
+	<name>LASER_BURST_1</name>
+	<name>LASER_BURST_2</name>
+	<name>MISSILES_2_PLAYER</name>
+	<name>BEAM_LONG</name>
+	<name>ION_1</name>
+	<name>ION_2</name>
+	<name>ION_4</name>
+	<name>BOMB_1</name>
+	<name>LASER_BURST_3</name>
+	<name>LASER_HEAVY_1</name>
+	<name>MISSILES_3</name>
+	<name>BEAM_1</name>
+	<name>BEAM_FIRE</name>
+	<name>LASER_HULL_2</name>
+	<name>BOMB_FIRE</name>
+	<name>BOMB_ION</name>
+	<name>BOMB_HEAL</name>
+</blueprintList>
+
+<blueprintList name="STARTING_DRONES">
+	<name>REPAIR</name>
+	<name>DEFENSE_1</name>
+	<name>COMBAT_1</name>
+	<name>COMBAT_2</name>
+	<name>SHIP_REPAIR</name>
+	<name>DEFENSE_1</name>
+</blueprintList>
+
+<blueprintList name="STARTING_AUGS">
+	<name>HULL_ARMOR</name>
+	<name>ADV_HULL_ARMOR</name>
+	<name>NANO_MEDBAY</name>
+	<name>ADV_SCANNERS</name>
+	<name>AUTO_COOLDOWN</name>
+	<name>SHIELD_RECHARGE</name>
+	<name>FTL_BOOSTER</name>
+	<name>FTL_JAMMER</name>
+	<name>CREW_STIMS</name>
+	<name>DRONE_RECOVERY</name>
+	<name>FTL_JUMPER</name>
+	<name>FTL_BOOSTER</name>
+</blueprintList>
+
+<!-- 
+
+		*********************
+		   CREW BLUEPRINTS 
+		*********************
+-->
+
+
+<crewBlueprint name="human">
+	<desc>Обычный человек. Ничего особенного.</desc>
+	<cost>40</cost>
+	<bp>2</bp>
+	<title>Человек</title>
+	<short>Человек</short>
+	<rarity>1</rarity>
+	<powerList>
+		<power>Не имеет особых качеств</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="engi">
+	<desc>Неясно, являются ли инжи живыми или полностью механическими. Однако хорошо известно, что они превосходные инженеры.</desc>
+	<cost>50</cost>
+	<bp>2</bp>
+	<title>Инжи</title>
+	<short>Инжи</short>
+	<rarity>2</rarity>
+	<powerList>
+		<power>Ремонтирует вдвое быстрее</power>
+		<power>В бою наносит вдвое меньше урона</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="mantis">
+	<desc>Пренебрежительное отношение богомолов к отдельным жизням развило их в жестокую и воинственную расу.</desc>
+	<title>Богомол</title>
+	<short>Богомол</short>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>2</rarity>
+	<powerList>
+		<power>Наносит вдвое больше урона противнику</power>
+		<power>Передвигается на 20 процентов быстрее</power>
+		<power>Чинит вдвое медленнее</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="slug">
+	<desc>Слизней-телепатов избегают по всей галактике за их бесконечное воровство и способность манипулировать другими.</desc>
+	<title>Слизень</title>
+	<short>Слизень</short>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>С помощью телепатии видит комнаты и живых существ даже когда сенсоры не работают</power>
+	</powerList>
+</crewBlueprint>
+
+
+<crewBlueprint name="rock">
+	<desc>Роки с Врахоса IV встречаются редко и славятся своей стойкостью.</desc>
+	<title>Рок</title>
+	<short>Рок</short>
+	<cost>65</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<powerList>
+		<power>Имеет иммунитет к огню</power>
+		<power>Передвигается вдвое медленнее</power>
+		<power>Здоровье увеличено до 150</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="crystal">
+	<desc>Древние предки роков.</desc>
+	<title>Кристалин</title>
+	<short>Кристалин</short>
+	<cost>65</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Способен запирать отсеки (актив. на панели экипажа)</power>
+		<power>Снижен урон от удушья</power>
+		<power>Передвигается на 20 процентов медленнее</power>
+		<power>Здоровье увеличено до 125</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="energy">
+	<desc>Золтанцы являются близкими союзниками инжи. Их врожденная энергия достаточно сильна, чтобы питать системы корабля.</desc>
+	<title>Золтанец</title>
+	<short>Золтанец</short>
+	<cost>65</cost>
+	<bp>4</bp>
+	<rarity>5</rarity>
+	<powerList>
+		<power>Обеспечивает энергией занимаемый отсек</power>
+		<power>Максимальный запас здоровья снижен</power>
+	</powerList>
+</crewBlueprint>
+
+
+<!-- 
+		
+		*********************
+		  SYSTEM BLUEPRINTS
+		*********************
+-->
+
+<systemBlueprint name="oxygen">
+	<type>oxygen</type>
+	<title>Кислородный модуль</title>
+	<desc>Поддерживает концентрацию кислорода на корабле. Улучшение модуля увеличивает скорость восстановления после разгерметизации.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>25</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+		<level>75</level> <!-- imaginary level 4 -->
+	</upgradeCost>
+	<cost>0</cost>
+</systemBlueprint>
+
+<systemBlueprint name="teleporter">
+	<type>teleporter</type>
+	<title>Телепортер</title>
+	<desc>Позволяет телепортировать членов вашего экипажа на вражеский корабль.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>30</level> <!-- level 2 -->
+		<level>60</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>75</cost>
+	<locked>1</locked>
+</systemBlueprint>
+
+<systemBlueprint name="cloaking">
+	<type>cloaking</type>
+	<title>Маскировка</title>
+	<desc>Делает ваш корабль невидимым, повышая уклонение на 60 процентов и предотвращая наведение орудий вражеского корабля.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>30</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>150</cost>
+	<locked>1</locked>
+</systemBlueprint>
+
+<systemBlueprint name="pilot">
+	<type>pilot</type>
+	<title>Рубка управления</title>
+	<desc>Позволяет кораблю совершать FTL прыжки и уворачиваться при наличии пилота. При улучшении добавляется авто-пилот, способный уклоняться без пилота.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>20</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>1</cost>
+</systemBlueprint>
+
+<systemBlueprint name="medbay">
+	<type>medbay</type>
+	<title>Мед-отсек</title>
+	<desc>Лечит всех членов экипажа в пределах мед-отсека. При улучшении увеличивается скорость лечения.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>35</level> <!-- level 2 -->
+		<level>60</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>60</cost>
+</systemBlueprint>
+
+<systemBlueprint name="shields">
+	<type>shields</type>
+	<title>Щиты</title>
+	<desc>Снабжает энергией ваши щиты. Каждый слой щита блокирует одно попадание. Улучшение увеличивает количество слоёв.</desc>
+	<startPower>2</startPower>
+	<maxPower>8</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>100</level> <!-- level 2 -->
+		<level>20</level> <!-- level 3 -->
+		<level>30</level> <!-- level 4 -->
+		<level>40</level> <!-- level 5 -->
+		<level>60</level> <!-- level 6 -->
+		<level>80</level> <!-- level 7 -->
+		<level>100</level> <!-- level 8 -->
+		<level>120</level> <!-- Imaginary level 9 -->
+	</upgradeCost>
+	<cost>150</cost>
+</systemBlueprint>
+
+<systemBlueprint name="artillery">
+	<type>artillery</type>
+	<title>Артиллерийский луч</title>	
+	<desc>Питает медленный высоко-мощный луч, нано- сящий 1 урон каждому отсеку, проникая сквозь любое количество слоёв щита. Увели- чение мощности ускоряет перезарядку.</desc>	
+	<startPower>2</startPower>
+	<maxPower>4</maxPower>
+	<rarity>0</rarity>
+	<upgradeCost>
+		<level>30</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+		<level>80</level> <!-- level 4 -->
+	</upgradeCost>
+	<cost>150</cost>
+</systemBlueprint>
+
+<systemBlueprint name="engines">
+	<type>engines</type>
+	<title>Двигатели</title>
+	<desc>Снабжает энергией FTL-привод и позволяет кораблю уклонятся. При улучшении повышает вероятность уклонения и скорость зарядки привода.</desc>
+	<startPower>2</startPower>
+	<maxPower>8</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>10</level> <!-- level 2 -->
+		<level>15</level> <!-- level 3 -->
+		<level>30</level> <!-- level 4 -->
+		<level>40</level> <!-- level 5 -->
+		<level>60</level> <!-- level 6 -->
+		<level>80</level> <!-- level 7 -->
+		<level>120</level> <!-- level 8 -->
+		<level>150</level> <!-- Imaginary level 9 -->
+	</upgradeCost>
+	<cost>1</cost>
+</systemBlueprint>
+
+<systemBlueprint name="weapons">
+	<type>weapons</type>
+	<title>Управление орудиями</title>
+	<desc>Питает все орудийные системы корабля. Дальнейшая модернизация снабдит энергией одновременно больше орудий.</desc>
+	<startPower>4</startPower>
+	<rarity>1</rarity>
+	<maxPower>8</maxPower>
+	<upgradeCost>
+		<level>60</level> <!-- level 2 -->
+		<level>25</level> <!-- level 3 -->
+		<level>35</level> <!-- level 4 -->
+		<level>50</level> <!-- level 5 -->
+		<level>75</level> <!-- level 6 -->
+		<level>90</level> <!-- level 7 -->
+		<level>100</level> <!-- level 8 -->
+		<level>120</level> <!-- Imaginary level 9 -->
+	</upgradeCost>
+	<cost>20</cost>
+</systemBlueprint>
+
+<systemBlueprint name="drones">
+	<type>drones</type>
+	<title>Управление дронами</title>
+	<desc>Снабжает энергией всех корабельных дро- нов. Дроны — автоматизированные роботы, которые выполняют такие задачи, как атака вражеского корабля или ремонт систем.</desc>
+	<startPower>2</startPower>
+	<maxPower>8</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>10</level> <!-- level 2 -->
+		<level>20</level> <!-- level 3 -->
+		<level>30</level> <!-- level 4 -->
+		<level>45</level> <!-- level 5 -->
+		<level>60</level> <!-- level 6 -->
+		<level>80</level> <!-- level 7 -->
+		<level>100</level> <!-- level 8 -->
+		<level>120</level> <!-- Imaginary level 9 -->
+	</upgradeCost>
+	<cost>80</cost>
+</systemBlueprint>
+
+<systemBlueprint name="sensors">
+	<type>sensors</type>
+	<title>Сенсоры</title>
+	<desc>Показывают интерьер вашего корабля и снабжают информацией о вражеских кораблях.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>
+		<level>25</level> <!-- level 2 -->
+		<level>60</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>40</cost>
+</systemBlueprint>
+
+<systemBlueprint name="doors">
+	<type>doors</type>
+	<title>Система шлюзов</title>
+	<desc>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</desc>
+	<startPower>1</startPower>
+	<maxPower>3</maxPower>
+	<rarity>1</rarity>
+	<upgradeCost>	
+		<level>20</level> <!-- level 2 -->
+		<level>50</level> <!-- level 3 -->
+	</upgradeCost>
+	<cost>60</cost>
+</systemBlueprint>
+
+
+
+
+
+
+<!--    *********************
+          WEAPON BLUEPRINTS
+		*********************
+-->
+
+<!-- For weapon art, all weapons will default to 'default' unless you give it something else... 
+		this prevents invisible weapons -->
+		
+<!-- Default Speeds: Laser = 60, Beams = 5, Missiles = 35.. sorry the numbers have no meaning -->
+
+<!-- PDS BLUEPRINT useful only for sound effects, projectile art, and potentially damage?  -->
+<weaponBlueprint name="ARTILLERY_WEAPON">
+	<type>LASER</type>
+	<title>Тяжёлый лазер Марк I</title>
+	<short>Тяж. лазер I</short>
+	<desc>Тяжёлые лазеры способны нанести больше ущерба, нежели их меньшие аналоги — импульсные лазеры.</desc>
+	<tooltip>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>16</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_1</weaponArt> 
+</weaponBlueprint>
+
+<!-- ARTILLERY BLUEPRINT -->
+<weaponBlueprint name="ARTILLERY_WEAPON">
+	<type>LASER</type>
+	<title>Тяжёлый лазер Марк I</title>
+	<short>Тяж. лазер I</short>
+	<desc>Тяжёлые лазеры способны нанести больше ущерба, нежели их меньшие аналоги — импульсные лазеры.</desc>
+	<tooltip>Стреляет мощными лазерными пучками, наносящими 2 единицы урона каждый. Средняя вероятность нарушить целостность корпуса или начать пожар.</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>16</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<rarity>0</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_1</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="ARTILLERY_BOSS_1">
+	<type>LASER</type>
+	<title>Лазер босса</title>
+	<short>Лазер босса</short>
+	<desc>сссс</desc>
+	<tooltip>Фссс</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>20</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_BOSS_2">
+	<type>MISSILES</type>
+	<title>Ракеты босса</title>
+	<short>Р. босса</short>
+	<desc>Артиллерия производит 3 выстрела ракетами по 1 урону каждая.</desc>
+	<tooltip>3 выстрела ракетами; 1 урон каждой; пробивает все щиты.</tooltip>
+	<!--<desc>Необходимо энергии: 3 Запускает 2 ракеты, которые пробивают все щиты и наносят 2 единицы урона. Требуется 2 ракеты на выстрел</desc>-->
+	<damage>1</damage>
+	<missiles>0</missiles>
+	<shots>3</shots>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>23</cooldown>
+	<power>1</power>
+	<cost>80</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<image>missile_1</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_BOSS_3">
+	<type>BEAM</type>
+	<title>Луч босса</title>
+	<short>Луч босса</short>
+	<desc>Луч с длинным следом, наносящий 2 единицы урона.</desc>
+	<tooltip>Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.</tooltip>
+	<!--<desc>Power Req: 3 A powerful but slow beam that deals 2 damage in a short line with a low chance of breaches.</desc>-->
+	<damage>2</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>26</cooldown>
+	<power>1</power>
+	<cost>70</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>100</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>boss_3</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="ARTILLERY_BOSS_4">
+	<type>LASER</type>
+	<title>Тяжелое Ионное орудие</title>
+	<short>Тяжелое Ионное орудие</short>
+	<locked>1</locked>
+	<desc>1 ионное повреждение 3 выстрела</desc>
+	<tooltip>1 ионное повреждение 3 выстрела</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>40</speed>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>28</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>ion_4_shot</image>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>boss_4</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="ARTILLERY_FED">
+	<type>BEAM</type>
+	<title>Луч защитник</title>
+	<short>Защитник</short>
+	<desc>Этот супер-навороченный луч использует передовые наработки, легко проникая через все щиты. Однако в результате пришлось пожертвовать точностью.</desc>
+	<tooltip>Артиллерийский луч, всегда наносящий 1 единицу повреждения, проникая сквозь все щиты.</tooltip>
+	<damage>1</damage>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<speed>13</speed>
+	<cooldown>40</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>500</length>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>artillery_fed</weaponArt> 
+</weaponBlueprint>
+
+
+<!--------------
+	SIMPLE LASERS 
+ -------------->
+
+<weaponBlueprint name="LASER_BURST_1">  <!-- 1 shot 1power-->
+	<type>LASER</type>
+	<title>Защитный лазер Марк I</title>
+	<short>Станд. лазер</short>
+	<desc>Очень слабый лазер.</desc>
+	<tooltip>Только один выстрел с одной единицей повреждения.</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_BURST_2">  <!--1 power 2 shots-->
+	<type>LASER</type>
+	<title>Сдвоенный лазер</title>
+	<short>2х лазер</short>
+	<desc>Простые слабые сдвоенные лазеры. Такие часто ставятся на транспортные суда, которые не могут позволить себе что-либо лучше.</desc>
+	<tooltip>Выстреливает 2 лазерных луча, нанося 1 единицу повреждения каждым.</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>25</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_BURST_2_A">  <!-- 2 power 2 shots -->
+	<type>LASER</type>
+	<title>Импульсный лазер Марк I</title>
+	<short>Имп. лазер I</short>
+	<desc>Этот простой импульсный лазер не особо зрелищный, но своё дело делает.</desc>
+	<tooltip>Выстреливает 2 лазерных луча, нанося 1 единицу повреждения каждым.</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>11</cooldown>
+	<power>2</power>
+	<cost>50</cost>
+	<bp>4</bp>
+	<rarity>1</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_BURST_3">
+	<type>LASER</type>
+	<title>Импульсный лазер Марк II</title>
+	<short>Имп. лазер II</short>
+	<desc>Слегка улучшенная версия импульсного лазера, которая способна сделать большее количество выстрелов за один цикл зарядки.</desc>
+	<tooltip>Выстреливает 3 лазерных луча, нанося 1 единицу повреждения каждым.</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<cost>80</cost>
+	<bp>7</bp>
+	<rarity>4</rarity>
+	<image>laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_3</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_BURST_5">
+	<type>LASER</type>
+	<title>Импульсный лазер Марк III</title>
+	<short>Имп. лазер III</short>
+	<desc>Мощный импульсный лазер, который способен вести впечатляющий шквальный огонь.</desc>
+	<tooltip>Выстреливает 5 лазерных лучей, нанося 1 единицу повреждения каждым.</tooltip>
+	<damage>1</damage>
+	<shots>5</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>19</cooldown>
+	<power>4</power>
+	<cost>110</cost>
+	<bp>10</bp>
+	<rarity>4</rarity>
+	<image>laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_5</weaponArt> 
+</weaponBlueprint>
+
+
+
+
+<!--------------
+	HEAVY LASERS
+ -------------->
+<weaponBlueprint name="LASER_HEAVY_1">
+	<type>LASER</type>
+	<title>Тяжелый лазер Марк I</title>
+	<short>Тяж. лазер I</short>
+	<desc>Тяжёлые лазеры способны нанести больше ущерба, нежели их меньшие аналоги — импульсные лазеры.</desc>
+	<tooltip>Производит 1 выстрел, наносящий 2 единицы повреждений. Имеет низкий шанс вызвать пожар или пробить обшивку.</tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<bp>6</bp>
+	<rarity>2</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_heavy_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_HEAVY_2">
+	<type>LASER</type>
+	<title>Тяжелый лазер Марк II</title>
+	<short>Тяж. лазер II</short>
+	<desc>Этот тяжёлый лазер делает два последовательных выстрела, наносящих 2 единицы урона каждый.</desc>
+	<tooltip>Выстреливает 2 тяжёлых лазерных луча, нанося каждым по 2 единицы повреждения. Низкая вероятность нарушить целостность корпуса или начать пожар.</tooltip>
+	<damage>2</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>13</cooldown>
+	<power>3</power>
+	<cost>75</cost>
+	<bp>10</bp>
+	<rarity>4</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_heavy_2</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="LASER_HEAVY_1_SP">
+	<type>LASER</type>
+	<title>Тяжелый проникающий лазер Марк I</title>
+	<short>Тяж. проник. I</short>
+	<desc>Тяжёлые лазеры способны нанести больше ущерба, нежели их меньшие аналоги — импульсные лазеры. Данная модификация проникает сквозь 1 слой щита.</desc>
+	<tooltip>Делает 1 выстрел, нанося 2 единицы повреждения с низкой вероятностью нарушить целостность корпуса или начать пожар. Проникает сквозь 1 слой щита.</tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>3</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>55</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_heavy_1</weaponArt> 
+</weaponBlueprint>
+
+<!----------------
+	CRYSTAL SHARD
+----------------->
+
+<weaponBlueprint name="CRYSTAL_1">
+	<type>MISSILES</type>
+	<title>Осколок кристалла</title>
+	<short>Кристалл</short>
+	<desc>Никто и никогда не должен увидеть это описание.</desc>
+	<tooltip>Никто и никогда не должен увидеть это описание.</tooltip>
+	<damage>1</damage>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>crystal_shard</weaponArt> 
+</weaponBlueprint>
+
+<!--------------
+	MISSILES
+ -------------->
+
+<weaponBlueprint name="MISSILES_1">
+	<type>MISSILES</type>
+	<title>Ракеты Лето</title>
+	<short>Лето</short>
+	<desc>Эта слабая и устаревшая пусковая установка всё ещё способна принести пользу.</desc>
+	<tooltip>Стреляет 1 ракетой, наносит 1 единицу повреждения, игнорирует защитное поле.</tooltip>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>missile_1</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_2_PLAYER">
+	<type>MISSILES</type>
+	<title>Ракеты Артемида</title>
+	<short>Артемида</short>
+	<desc>Стандартная ракетная установка на большинстве судов Федерации.</desc>
+	<tooltip>Стреляет 1 ракетой, наносит 2 единицы повреждения, игнорирует защитное поле.</tooltip>
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>11</cooldown>
+	<power>1</power>
+	<cost>38</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>missile_2</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_2">
+	<type>MISSILES</type>
+	<title>Ракеты Артемида</title>
+	<short>Артемида</short>
+	<desc>Стандартная ракетная установка на большинстве судов Федерации.</desc>
+	<tooltip>Стреляет 1 ракетой, наносит 2 единицы повреждения, игнорирует защитное поле.</tooltip>
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>38</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>missile_2</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_3">
+	<type>MISSILES</type>
+	<title>Ракеты Гермес</title>
+	<short>Гермес</short>
+	<desc>Стандартные, но мощные ракеты.</desc>
+	<tooltip>Стреляет 1 ракетой, наносит 3 единицы повреждения, игнорирует защитное поле.</tooltip>
+	<!--<desc>Power Req: 2 Pierces through all shields and deals 3 damage with a chance of fire and breaches. Uses 1 missile per shot.</desc>-->
+	<damage>3</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>14</cooldown>
+	<power>3</power>
+	<cost>50</cost>
+	<bp>6</bp>
+	<rarity>2</rarity>
+	<image>missile_3</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_BURST">
+	<type>MISSILES</type>
+	<title>Ракеты Пегас</title>
+	<short>Пегас</short>
+	<desc>Креативный подход к форме этих ракет позволяет запускать две штуки по цене одной.</desc>
+	<tooltip>Стреляет 2 ракетами, наносит 2 единицы повреждения каждая, игнорирует защитное поле.</tooltip>
+	<!--<desc>Power Req: 3 Fires 2 missiles that pierces through all shields and deals 2 damage. Consumes 2 missile per shot.</desc>-->
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>2</shots>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>20</cooldown>
+	<power>3</power>
+	<cost>80</cost>
+	<bp>7</bp>
+	<rarity>3</rarity>
+	<image>missile_2</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_BREACH">
+	<type>MISSILES</type>
+	<title>Бронебойные ракеты</title>
+	<short>Бронебой</short>
+	<desc>Эти ракеты спроектированы таким образом, чтобы нанести максимальный ущерб обшивке корабля.</desc>
+	<tooltip>Выстреливает одной ракетой, наносит 4 единицы повреждений, игнорирует щиты, высокий шанс пробить обшивку.</tooltip>
+	<!--<desc>Power Req: 3 Fires a single shot, heavy missile that does 4 damage and causes breaches in the target's hull.</desc>-->
+	<damage>4</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>8</breachChance>
+	<cooldown>22</cooldown>
+	<power>3</power>
+	<cost>70</cost>
+	<bp>7</bp>
+	<rarity>3</rarity>
+	<image>missile_breach</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_2</weaponArt> 
+</weaponBlueprint>
+
+
+
+
+
+<!--------------
+	BEAM WEAPONS
+ -------------->
+
+<weaponBlueprint name="BEAM_1">
+	<type>BEAM</type>
+	<title>Мини луч</title>
+	<short>Мини луч</short>
+	<desc>Крайне дешёвое и слабое лучевое оружие.</desc>
+	<tooltip>Лучевое орудие, наносящее 1 единицу повреждений каждому поражённому отсеку.</tooltip>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>12</cooldown>
+	<speed>3</speed>
+	<power>1</power>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>45</length>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>beam_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_LONG">
+	<type>BEAM</type>
+	<title>Луч копьё</title>
+	<short>Луч копьё</short>
+	<desc>Способен разрезать корабль надвое, при условии, что нет щита, способного его остановить.</desc>
+	<tooltip>Лучевое оружие с увеличенной длиной луча. 1 единица повреждений на отсек.</tooltip>
+	<!--<desc>Power Req: 2 Can cut across an entire ship that has no shields, dealing 1 damage per room.</desc>-->
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>13</speed>
+	<cooldown>16</cooldown>
+	<power>2</power>
+	<cost>60</cost>
+	<bp>5</bp>
+	<rarity>2</rarity>
+	<image>beam_contact</image>
+	<length>170</length>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>beam_long</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_2">
+	<type>BEAM</type>
+	<title>Луч алебарда</title>
+	<short>Луч алебарда</short>
+	<desc>Медленное, но достаточно мощное стандартное лучевое оружие.</desc>
+	<tooltip>Лучевое орудие, 2 единицы повреждений на отсек. Имеет низкий шанс пробить обшивку.</tooltip>
+	<!--<desc>Power Req: 3 A powerful but slow beam that deals 2 damage in a short line with a low chance of breaches.</desc>-->
+	<damage>2</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>17</cooldown>
+	<power>3</power>
+	<cost>70</cost>
+	<bp>7</bp>
+	<rarity>2</rarity>
+	<length>80</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_3">
+	<type>BEAM</type>
+	<title>Луч секира</title>
+	<short>Луч секира</short>
+	<desc>Одно из самых мощных когда-либо существовавших боевых орудий. Известно своей способностью уничтожать корабли одним выстрелом.</desc>
+	<tooltip>Большой луч, наносящий 3 единицы повреждений каждому поражённому отсеку.</tooltip>
+	<!--<desc>Power Req: 4 A very powerful beam weapon that cuts through ships like butter. Deals 3 damage in a line.</desc>-->
+	<damage>3</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>25</cooldown>
+	<power>4</power>
+	<cost>120</cost>
+	<bp>12</bp>
+	<rarity>5</rarity>
+	<length>80</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_3</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_FIRE">
+	<type>BEAM</type>
+	<title>Огненный луч</title>   <!-- Induction beam? -->
+	<short>Огненный луч</short>
+	<desc>Этот ужасающий луч вызывает возгорания, но при этом не наносит физических повреждений.</desc>
+	<tooltip>Лучевое орудие, вызывающее возгорание.</tooltip>
+	<!--<desc>Power Req: 2 A beam weapon that does 1 damage and starts fires in a line if the enemy has no shields</desc>-->
+	<damage>0</damage>
+	<sp>0</sp>
+	<fireChance>8</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>20</cooldown>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>6</bp>
+	<rarity>3</rarity>
+	<length>140</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_fire</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_BIO">
+	<type>BEAM</type>
+	<title>Анти-биологический луч</title> 
+	<short>Анти-био луч</short>
+	<desc>Этот ужасающий луч разрывает плоть, нанося повреждения экипажу, но при этом не наносит урона самому кораблю.</desc>
+	<tooltip>Мощное лучевое орудие, которое наносит значительные повреждения вражескому экипажу.</tooltip>
+	<!--<desc>Power Req: 2 A beam weapon that does 1 damage and starts fires in a line if the enemy has no shields.</desc>-->
+	<damage>0</damage>
+	<persDamage>4</persDamage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<speed>13</speed>
+	<power>2</power>
+	<cost>50</cost>
+	<bp>6</bp>
+	<rarity>5</rarity>
+	<length>140</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_bio</weaponArt> 
+</weaponBlueprint>
+
+
+
+
+
+<!--------------
+	HULL SMASHER WEAPONS
+ -------------->
+
+<weaponBlueprint name="LASER_HULL_1">
+	<type>LASER</type>
+	<title>Корпусный лазер Марк I</title>
+	<short>Корп. лазер I</short>
+	<desc>Производит 2 выстрела, наносящих по 1 единице повреждений отсекам с системами и 2 единицы повреждений отсекам без них.</desc>
+	<tooltip>Производит 2 выстрела лазером, наносящие 1 единицу урона помещениям с системами, и 2 единицы урона отсекам без них.</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>14</cooldown>
+	<hullBust>1</hullBust>
+	<power>2</power>
+	<cost>65</cost>
+	<rarity>2</rarity>
+	<speed>75</speed>
+	<image>laser_heavy1</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_hull</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="LASER_HULL_2">
+	<type>LASER</type>
+	<title>Корпусный лазер Марк II</title>
+	<short>Корп. лазер II</short>
+	<desc>Рассчитан на нанесение максимального урона по корпусу.</desc>
+	<tooltip>Производит 3 лазерных выстрела, наносит 1 единицу повреждений и 2 единицы повреждений отсекам без систем.</tooltip>
+	<!--<desc>Power Req: 3 Fires 3 shots that deal 1 damage to rooms with a system or subsystem and double damage to rooms without either.</desc>-->
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>15</cooldown>
+	<hullBust>1</hullBust>
+	<power>3</power>
+	<cost>100</cost>
+	<bp>7</bp>
+	<rarity>3</rarity>
+	<image>laser_heavy1</image>
+	<speed>90</speed>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_hull</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BEAM_HULL">
+	<type>BEAM</type>
+	<title>Корпусный луч</title>
+	<short>Корп. луч</short>
+	<desc>Этот луч наиболее эффективен на больших пустых секциях корпуса.</desc>
+	<tooltip>Лучевое орудие, 1 единица повреждений, в 2 раза больше повреждений отсекам без систем.</tooltip>
+	<!--<desc>Power Req: 3 Fires a beam that deals 1 damage to rooms with a system or subsystem and double damage to rooms without either.</desc>-->
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>14</cooldown>
+	<hullBust>1</hullBust>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>8</bp>
+	<rarity>3</rarity>
+	<image>beam_contact</image>
+	<length>100</length>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>beam_hull</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="MISSILES_HULL">
+	<type>MISSILES</type>
+	<title>Корпусная ракета</title>
+	<short>Корп. ракета</short>
+	<desc>Наносит хороший урон по корпусу с неплохой вероятностью оставить пробоину.</desc>
+	<tooltip>Производит 1 ракетный выстрел. Наносит 2 единицы урона помещениям с системами, 4 единицы урона отсекам без них.</tooltip>
+	<!--<desc>Power Req: 2 Fires a missile that deals 2 damage to rooms with a system or subsystem and double damage to rooms without either.</desc>-->
+	<damage>2</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>3</breachChance>
+	<hullBust>1</hullBust>
+	<cooldown>17</cooldown>
+	<power>2</power>
+	<cost>75</cost>
+	<bp>6</bp>
+	<rarity>3</rarity>
+	<image>missile_hull</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_2</weaponArt> 
+</weaponBlueprint>
+
+
+
+
+<!--------------
+	ION WEAPONS
+ -------------->
+
+<weaponBlueprint name="ION_1">
+	<type>LASER</type>
+	<title>Ионный бластер</title>
+	<short>Ион. бластер</short>
+	<locked>1</locked>
+	<desc>Ионное оружие способно отключать системы корабля, не нанося повреждений корпусу.</desc>
+	<tooltip>Выпускает один заряд, наносящий 1 единицу ионного повреждения. Может поражать и отключать как щиты, так и системы.</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>8</cooldown>
+	<power>1</power>
+	<cost>30</cost>
+	<bp>3</bp>
+	<rarity>3</rarity>
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="ION_2">
+	<type>LASER</type>
+	<title>Тяжелая ионная пушка</title>
+	<short>Ион. пушка</short>
+	<locked>1</locked>
+	<desc>Ионное оружие способно отключать системы корабля, не нанося повреждений корпусу.</desc>
+	<tooltip>Выпускает один заряд, наносящий 2 единицы ионного повреждения. Может поражать и отключать как щиты, так и системы.</tooltip>
+	<damage>0</damage>
+	<ion>2</ion>
+	<speed>40</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>13</cooldown>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<image>ion_4_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="ION_4">
+	<type>LASER</type>
+	<title>Ионный бластер Марк II</title>
+	<short>Ион. бласт. II</short>
+	<locked>1</locked>
+	<desc>Ионное оружие способно отключать системы корабля, не нанося повреждений корпусу.</desc>
+	<tooltip>Запускает один снаряд, наносящий 1 единицу ионного повреждения. Быстро перезаряжается. Может поражать и отключать как щиты, так и системы.</tooltip>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>4</cooldown>
+	<power>3</power>
+	<cost>80</cost>
+	<bp>6</bp>
+	<rarity>4</rarity>
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_4</weaponArt> 
+</weaponBlueprint>
+
+
+
+
+<!--------------
+	BOMB WEAPONS
+ -------------->
+<weaponBlueprint name="BOMB_1"> <!-- 1power 2damage-->
+	<type>BOMB</type>
+	<title>Малая бомба</title>
+	<short>М. бомба</short>
+	<locked>1</locked>
+	<desc>Телепортирующееся взрывное устройство, наносит повреждения системам и экипажу, не нанося повреждений корпусу. Может быть использовано на вашем корабле.</desc>
+	<tooltip>Бомбовое орудие, расходующее ракеты. Наносит 2 единицы повреждений только системам, но не корпусу. Может быть использовано на вашем корабле.</tooltip>
+	<!--<desc>Power Req: 2 Self-teleporting explosive that deals 2 damage to systems and subsystems without causing hull damage.</desc>-->
+	<damage>0</damage>
+	<sysDamage>2</sysDamage>
+	<persDamage>2</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>13</cooldown>
+	<power>1</power>
+	<cost>55</cost>
+	<bp>4</bp>
+	<rarity>1</rarity>
+	<image>bomb1</image>
+	<explosion>explosion_big1</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BOMB_BREACH_1"> 
+	<type>BOMB</type>
+	<title>Бронебойная бомба Марк I</title>
+	<short>Брон. бомба I</short>
+	<locked>1</locked>
+	<desc>Телепортирующееся взрывное устройство, которое наносит повреждение системам и оставляет пробоины при попадании. Может быть использована на вашем корабле.</desc>
+	<tooltip>Бомбовое орудие, использующее ракеты. Наносит 1 единицу повреждений системам и пробивает обшивку. Может быть использовано на вашем корабле.</tooltip>
+	<!--<desc>Power Req: 2 Self-teleporting explosive that deals 2 damage to systems and subsystems without causing hull damage.</desc>-->
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>2</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<cooldown>9</cooldown>
+	<power>1</power>
+	<cost>70</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_breach</image>
+	<explosion>explosion_big1</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_breach</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BOMB_BREACH_2"> 
+	<type>BOMB</type>
+	<title>Бронебойная бомба Марк II</title>
+	<short>Брон. бомба II</short>
+	<locked>1</locked>
+	<desc>Медленнее, чем Марк I, однако оставляет пробоины и наносит больше повреждений системам. Может быть использована на вашем корабле.</desc>
+	<tooltip>Бомбовое орудие, использующее ракеты. Наносит 3 единицы повреждений системам и пробивает обшивку. Может быть использовано на вашем корабле.</tooltip>
+	<!--<desc>Power Req: 2 Self-teleporting explosive that deals 2 damage to systems and subsystems without causing hull damage.</desc>-->
+	<damage>0</damage>
+	<sysDamage>3</sysDamage>
+	<persDamage>3</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<cooldown>17</cooldown>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>4</bp>
+	<rarity>4</rarity>
+	<image>bomb_breach</image>
+	<explosion>explosion_big1</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_breach</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BOMB_FIRE">
+	<type>BOMB</type>
+	<title>Огненная бомба</title>
+	<short>Огн. бомба</short>
+	<locked>1</locked>
+	<desc>Телепортирующееся взрывное устройство, предназначенное для нанесения повреждений экипажу. Вызывает возгорание. Может быть использовано на вашем корабле.</desc>
+	<tooltip>Бомбовое орудие, использующее ракеты. Вызывает возгорание, не нанося повреждений корпусу. Может быть использовано на вашем корабле.</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>2</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>10</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<cost>55</cost>
+	<bp>5</bp>
+	<rarity>2</rarity>
+	<image>bomb_fire</image>
+	<explosion>explosion_big1</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>fireBomb</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_fire</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BOMB_ION">
+	<type>BOMB</type>
+	<title>Ионная бомба</title>
+	<short>Ион. бомба</short>
+	<locked>1</locked>
+	<desc>Телепортирующееся взрывное устройство, которое наносит ионные повреждения системам, отключая их. Может быть использовано на вашем корабле.</desc>
+	<tooltip>Бомбовое оружие, использующее ракеты. Наносит только ионный урон. Может применяться на вашем корабле.</tooltip>
+	<damage>0</damage>
+	<ion>4</ion>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>18</cooldown>
+	<power>1</power>
+	<cost>65</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<image>bomb_ion</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_ion</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="BOMB_HEAL">
+	<type>BOMB</type>
+	<title>Лечащий импульс</title>
+	<short>Леч. имп.</short>
+	<locked>1</locked>
+	<desc>Телепортирующийся блок лечения, который мгновенно исцеляет всех дружественных членов экипажа в отсеке. Может применяться на вашем корабле.</desc>
+	<tooltip>Бомба, использующая ракеты как боеприпасы. Исцеляет ближайших членов экипажа. Может применятся на своем корабле.</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>-10</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>18</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<image>bomb_heal</image>
+	<explosion>explosion_big1_heal</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>healBomb</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_heal</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="BOMB_LOCK"> 
+	<type>BOMB</type>
+	<title>Запирающая бомба кристалинов</title>
+	<short>Зап. бомба</short>
+	<locked>1</locked>
+	<desc>Телепортирующееся взрывное устройство, которое не наносит повреждений, но создает плотную стену, не позволяющую войти или выйти из отсека. Может быть использовано на вашем корабле.</desc>
+	<tooltip>Бомбовое орудие, использующее ракеты. Не наносит повреждений, не позволяет войти или выйти из отсека. Может быть использована на вашем корабле.</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>0</persDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<lockdown>1</lockdown>
+	<cooldown>15</cooldown>
+	<power>1</power>
+	<cost>60</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_lockdown</image>
+	<explosion>explosion_lockdown</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomb_lockdown</weaponArt> 
+</weaponBlueprint>
+
+
+
+
+
+
+
+<!--    *********************
+          Crystal Weapon BLUEPRINTS
+		*********************
+-->
+
+<weaponBlueprint name="CRYSTAL_BURST_1">  
+	<type>MISSILES</type>
+	<title>Кристалл импульсный Марк I</title>
+	<short>Кр. имп. I</short>
+	<desc>Модифицированное метательное орудие, выстреливающее 2 кристалла. Проникает сквозь 1 слой щитов.</desc>
+	<tooltip>Проникает сквозь 1 слой щитов, выстреливает 2 кристалла, наносящих 1 единицу повреждения каждый.</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<speed>50</speed>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>crystal_burst_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="CRYSTAL_BURST_2">  
+	<type>MISSILES</type>
+	<title>Кристаллический импульсный Марк II</title>
+	<short>Кр. имп. II</short>
+	<desc>Модифицированное метательное орудие, выстреливающее 3 кристалла. Проникает сквозь 1 слой щитов.</desc>
+	<tooltip>Проникает сквозь 1 слой щитов, выстреливает 3 кристалла, наносящих 1 единицу повреждения каждый.</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>17</cooldown>
+	<power>3</power>
+	<speed>50</speed>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>crystal_burst_2</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="CRYSTAL_HEAVY_1">  
+	<type>MISSILES</type>
+	<title>Тяжёлый Марк I кристалинов</title>
+	<short>Тяж. I крист.</short>
+	<desc>Модифицированное метательное орудие, стреляющее крупным кристаллом. Проникает сквозь 1 слой щитов.</desc>
+	<tooltip>Проникает сквозь 1 слой щитов, выстреливает 1 кристалл, наносящий 2 единицы повреждения.</tooltip>
+	<damage>2</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>13</cooldown>
+	<power>1</power>
+	<speed>50</speed>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard3</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>crystal_heavy_1</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="CRYSTAL_HEAVY_2">  
+	<type>MISSILES</type>
+	<title>Тяжёлый Марк II кристалинов</title>
+	<short>Тяж. II крист.</short>
+	<desc>Модифицированное метательное орудие, стреляющее крупным кристаллом. Проникает сквозь 1 слой щитов.</desc>
+	<tooltip>Проникает сквозь 1 слой щитов, выстреливает 1 кристалл, наносящий 4 единицы повреждения и оставляющий пробоины.</tooltip>
+	<damage>4</damage>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<cooldown>19</cooldown>
+	<power>3</power>
+	<speed>50</speed>
+	<cost>20</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>crystal_shard3</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>crystal_heavy_2</weaponArt> 
+</weaponBlueprint>
+
+
+
+<!--    *********************
+          DRONE BLUEPRINTS
+		*********************
+-->
+
+<weaponBlueprint name="DRONE_LASER"> 
+	<type>LASER</type>
+	<title>Лазер дрона</title>
+	<damage>1</damage>
+	<shots>1</shots>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>laser_light1</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="DRONE_LASER_2"> 
+	<type>LASER</type>
+	<title>Лазер дрона 2</title>
+	<damage>1</damage>
+	<shots>1</shots>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<speed>120</speed>
+	<image>laser_light2</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="DRONE_BEAM">
+	<type>BEAM</type>
+	<title>Mini Beam</title>
+	<short>Mini Beam</short>
+	<desc>'Детский луч'; первое лучевое оружие; очень дешевое и слабое оружие.</desc>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<speed>3</speed>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>20</length>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>beam_1</weaponArt> 
+</weaponBlueprint>
+
+
+<weaponBlueprint name="DRONE_ION">
+	<type>LASER</type>
+	<title>Ion Blast</title>
+	<short>Ion Blast</short>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>ion_1_shot</image>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_1</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="DRONE_MISSILE">
+	<type>MISSILES</type>
+	<title>Ракеты_1</title>
+	<short>Р. 0</short>
+	<short>Идиотские ракеты</short>
+	<desc>Это никогда НЕ должно появиться в магазине: ГЛЮК</desc>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<rarity>0</rarity>
+	<image>missile_1</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_1</weaponArt> 
+</weaponBlueprint>
+
+<!-- NOT USED -->
+<droneBlueprint name="COMBAT_ION">
+	<type>COMBAT</type>
+	<title>Anti-Ship Ion Drone I</title>
+	<short>Ion Drone</short>
+	<desc>Медлительный дрон, который несколько раз атакует корабль противника из собственных ионных орудий</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>7</dodge>
+	<speed>5</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_combat</droneImage>
+	<weaponBlueprint>DRONE_ION</weaponBlueprint>
+	<rarity>0</rarity>
+</droneBlueprint>
+
+<!-- NOT USED -->
+<droneBlueprint name="COMBAT_MISSILE">
+	<type>COMBAT</type>
+	<title>Anti-Ship Missile Drone I</title>
+	<short>Missile Drone</short>
+	<desc>Медлительный боевой дрон, атакующий противника мини ракетами</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>7</dodge>
+	<speed>5</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_combat</droneImage>
+	<weaponBlueprint>DRONE_MISSILE</weaponBlueprint>
+	<rarity>0</rarity>
+</droneBlueprint>
+
+
+
+<droneBlueprint name="COMBAT_1">
+	<type>COMBAT</type>
+	<title>Анти-корабельный дрон I</title>
+	<short>Анти-кор I</short>
+	<desc>Мощный дрон, который постоянно атакует корабль противника.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>7</dodge>
+	<speed>15</speed> <!--- Change this to increase/decrease firing speed -->  <!-- was 20-->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_combat</droneImage>
+	<weaponBlueprint>DRONE_LASER</weaponBlueprint>
+	<rarity>2</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="COMBAT_BEAM">
+	<type>COMBAT</type>
+	<title>Атакующий лучевой дрон I</title>
+	<short>Лучевой I</short>
+	<desc>Боевой дрон, который постоянно атакует корабль противника небольшим лучевым оружием.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>7</dodge>
+	<speed>15</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_beam</droneImage>
+	<weaponBlueprint>DRONE_BEAM</weaponBlueprint>
+	<rarity>3</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="COMBAT_2">
+	<type>COMBAT</type>
+	<title>Анти-корабельный дрон II</title>
+	<short>Анти-кор II</short>
+	<desc>Мощный дрон, который постоянно атакует корабль противника. Маневрирует луше и стреляет быстрее, чем Марк I.</desc>
+	<power>4</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>8</dodge>
+	<speed>28</speed> <!--- Change this to increase/decrease firing speed -->  <!-- was 45-->
+	<cost>100</cost>
+	<bp>8</bp>
+	<droneImage>drone_combat2</droneImage>
+	<!---- WEAPON INFO --->
+	<image>weapons/laser_light2_strip4.png</image>
+	<weaponBlueprint>DRONE_LASER</weaponBlueprint>
+	<rarity>5</rarity>
+</droneBlueprint>
+
+<!--- This guy, for now, flies like the combat drone but heals the ship  -->
+<droneBlueprint name="SHIP_REPAIR">
+	<type>SHIP_REPAIR</type>
+	<title>Ремонтник корпуса</title>
+	<short>Рем. корп.</short>
+	<desc>Автоматически чинит от 3 до 5 повреждений корпуса. Для запуска нужны детали дронов.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect repair drone -->
+	<dodge>8</dodge>
+	<speed>20</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>100</cost>
+	<bp>5</bp>
+	<droneImage>drone_shiprepair</droneImage>
+	<image>weapons/laser_light2_strip4.png</image>
+	<rarity>4</rarity>
+</droneBlueprint>
+
+
+<droneBlueprint name="DEFENSE_1">
+	<type>DEFENSE</type>
+	<level>1</level>
+	<title>Защитный дрон Марк I</title>
+	<short>Защитник I</short>
+	<desc>Сбивает вражеские ракеты и астероиды.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
+	<dodge>7</dodge>
+	<speed>5</speed> <!--- Superficial change.. just makes it fly faster -->
+	<cost>50</cost>
+	<bp>2</bp>
+	<droneImage>drone_defense</droneImage>
+	<!---- WEAPON INFO --->
+	<weaponBlueprint>DRONE_LASER</weaponBlueprint>
+	<!----- -->
+	<rarity>1</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="DEFENSE_2">
+	<type>DEFENSE</type>
+	<level>2</level>
+	<title>Защитный дрон Марк II</title>
+	<short>Защитник II</short>
+	<desc>Стреляет быстрее чем Марк I, кроме того имеет способность блокировать вражеские лазеры.</desc>
+	<power>4</power>
+	<cooldown>750</cooldown> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
+	<dodge>8</dodge>
+	<speed>7</speed> <!--- Superficial change.. just makes it fly faster -->
+	<cost>75</cost>
+	<bp>6</bp>
+	<droneImage>drone_defense2</droneImage>
+	<!---- WEAPON INFO --->
+	<weaponBlueprint>DRONE_LASER_2</weaponBlueprint>
+	<!----- -->
+	<rarity>3</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="BOSS_DEFENSE_2">
+	<type>DEFENSE</type>
+	<level>2</level>
+	<title>Защитный дрон Марк II</title>
+	<short>Защитник II</short>
+	<desc>Стреляет быстрее, чем Марк I, а также может подавлять лазеры противника.</desc>
+	<power>2</power>
+	<cooldown>750</cooldown> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
+	<dodge>8</dodge>
+	<speed>7</speed> <!--- Superficial change.. just makes it fly faster -->
+	<cost>75</cost>
+	<bp>6</bp>
+	<droneImage>drone_defense2</droneImage>
+	<!---- WEAPON INFO --->
+	<weaponBlueprint>DRONE_LASER</weaponBlueprint>
+	<!----- -->
+	<rarity>0</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="REPAIR">
+	<type>REPAIR</type>
+	<title>Ремонтный дрон</title>
+	<short>Рем. сист.</short>
+	<desc>Будет самостоятельно искать повреждённые системы и починит их автоматически.</desc>
+	<power>1</power>
+	<cost>30</cost>
+	<bp>2</bp>
+	<rarity>1</rarity>
+</droneBlueprint>
+
+
+<droneBlueprint name="BATTLE">
+	<type>BATTLE</type>
+	<locked>1</locked>
+	<title>Противопехотный дрон</title>
+	<short>Противопех</short>
+	<desc>Будет самостоятельно искать и попытается уничтожить любого незваного гостя на борту вашего корабля.</desc>
+	<power>2</power>
+	<cost>60</cost>
+	<bp>3</bp>
+	<rarity>2</rarity>
+</droneBlueprint>
+
+<droneBlueprint name="BOARDER">
+	<type>BOARDER</type>
+	<locked>1</locked>
+	<title>Абордажный дрон</title>
+	<short>Абордажник</short>
+	<desc>Проламывается через вражескую броню и наносит ущерб. Потрясающе!</desc>
+	<power>3</power>
+	<speed>18</speed>
+	<cost>70</cost>
+	<rarity>5</rarity>
+</droneBlueprint>
+
+
+<droneBlueprint name="BOARDER_BOSS">
+	<type>BOARDER</type>
+	<locked>1</locked>
+	<title>Абордажный дрон</title>
+	<short>Абордажник</short>
+	<desc>Сквозные пробоины во вражеском корпусе наносящие серьезный им урон. Потрясающе.</desc>
+	<power>2</power>
+	<speed>18</speed>
+	<cost>70</cost>
+	<rarity>0</rarity>
+</droneBlueprint>
+
+
+
+<!--    *********************
+          ITEM BLUEPRINTS
+		*********************
+-->
+
+<itemBlueprint name="fuel">
+	<type>ITEM_FUEL</type>
+	<title>FTL-топливо</title>
+	<desc>Заправляет ваш FTL привод. Один прыжок расходует одну единицу топлива.</desc>
+	<cost>3</cost>
+	<rarity>1</rarity>
+</itemBlueprint>
+
+<itemBlueprint name="drones">
+	<type>ITEM_DRONE</type>
+	<title>Деталь дрона</title>
+	<desc>Позволяет построить дрона по выбранной вами схеме. Каждое использование требует одну деталь дрона.</desc>
+	<cost>8</cost>
+	<rarity>3</rarity>
+</itemBlueprint>
+
+<itemBlueprint name="missiles">
+	<type>ITEM_MISSILE</type>
+	<title>Ракета</title>
+	<desc>Многоцелевые боезапасы для любого орудия ракетного типа.</desc>
+	<cost>6</cost>
+	<rarity>3</rarity>
+</itemBlueprint>
+
+<!--    
+
+					---------------------------------------
+					***************************************
+								AUGMENTATION BLUEPRINTS
+					***************************************
+					---------------------------------------
+-->
+
+<!-- SHIP SPECIFIC AUGMENTS -->
+
+<augBlueprint name="ROCK_ARMOR"> 
+	<title>Обшивка корпуса роков</title>
+	<desc>Улучшенная броня, дарующая 15-процентный шанс отразить поступающий урон по корпусу (системы, получившие попадание, всё равно будут повреждены).</desc>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="CRYSTAL_SHARDS"> 
+	<title>Месть кристалинов</title>
+	<desc>Каждый раз, как ваш корабль получает повреждения, существует 10-процентный шанс, что отломится осколок, который отлетит в вашего противника.</desc>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.1</value>
+</augBlueprint>
+
+<augBlueprint name="ENERGY_SHIELD"> 
+	<title>Щит золтанцев</title>
+	<desc>Неизвестная технология создает этот практически непроницаемый щит. Лишь энергетический выброс FTL-привода способен зарядить его.</desc>
+	<cost>80</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>2</value>
+</augBlueprint>
+
+
+<augBlueprint name="NANO_MEDBAY">
+	<title>Нано мед-боты инжи</title>
+	<desc>Наполняет корабль нано мед-ботами инжи, которые лечат экипаж даже вне мед-отсека (с пониженной скоростью).</desc>
+	<cost>60</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.25</value>
+</augBlueprint>
+
+<augBlueprint name="SLUG_GEL">
+	<title>Ремонтный гель слизней</title>
+	<desc>Корабли слизней выделяют густой гель, который автоматически ремонтирует любые повреждения корпуса.</desc>
+	<cost>60</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.25</value>
+</augBlueprint>
+
+<augBlueprint name="CREW_STIMS">
+	<title>Феромоны богомолов</title>
+	<desc>Скорость передвижения вашей команды увеличивается на 25 процентов.</desc>
+	<cost>50</cost>
+	<bp>9</bp>
+	<rarity>0</rarity>
+	<value>0.25</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+
+<augBlueprint name="DRONE_SPEED">
+	<title>Усиленный реактор дронов</title>
+	<desc>Скорость передвижения дронов по вашему кораблю увеличена на 50 процентов.</desc>
+	<cost>50</cost>
+	<bp>9</bp>
+	<rarity>0</rarity>
+	<value>0.25</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<!--<augBlueprint name="ADV_HULL_ARMOR"> 
+	<title>Улучшенная обшивка</title>
+	<desc>Новейшая броня, обеспечивает внушительный 25-процентный шанс отразить поступающий урон по корпусу (системы, получившие попадание, всё равно будут повреждены).</desc>
+	<cost>100</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.25</value>
+</augBlueprint>-->
+
+<augBlueprint name="SYSTEM_CASING">
+	<!--<title>Усиленное покрытие системы</title>-->
+	<title>Титан. покрытие систем</title>
+	<desc>Все системы корабля имеют покрытие, обеспечивающее 15-процентный шанс свести на нет урон при попадании (корпусу по прежнему будет наноситься урон).</desc>
+	<cost>100</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+
+<!-- END RACE SPECIFIC AUGMENTS -->
+
+<augBlueprint name="ION_ARMOR"> 
+	<title>Инверсное ионное поле</title>
+	<desc>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</desc>
+	<cost>60</cost>
+	<bp>8</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="CLOAK_FIRE"> 
+	<title>Скрытые орудия</title>
+	<desc>Позволяют стрелять из режима невидимости, не прерывая его.</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="REPAIR_ARM"> 
+	<title>Кран для ремонта</title>
+	<desc>Чинит ваш корпус каждый раз во время сбора лома, но снижает количество собранного лома на 15 процентов.</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<!--<augBlueprint name="HULL_ARMOR"> 
+	<title>Усиленная обшивка корпуса</title>
+	<desc>Улучшенная броня, дарующая 15-процентный шанс отразить поступающий урон по корпусу (системы, получившие попадание, всё равно будут повреждены).</desc>
+	<cost>60</cost>
+	<bp>8</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>-->
+
+<augBlueprint name="SCRAP_COLLECTOR"> 
+	<title>Кран для сбора лома</title>
+	<desc>Позволяет собирать на 10 процентов больше лома из любого источника.</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>1</rarity>
+	<stackable>true</stackable>
+	<value>0.10</value>
+</augBlueprint>
+
+<augBlueprint name="ADV_SCANNERS">
+	<title>Сканеры широкого охвата</title>
+	<desc>Собирают дополнительную информацию о близлежащих маяках на звездной карте.</desc>
+	<cost>30</cost>
+	<bp>3</bp>
+	<rarity>1</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="AUTO_COOLDOWN">
+	<title>Авто-перезарядчик</title>
+	<desc>Задержка между выстрелами орудий снижена на 15 процентов.</desc>
+	<cost>40</cost>
+	<bp>5</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="SHIELD_RECHARGE">
+	<title>Генератор зарядки щита</title>
+	<desc>Повышает скорость перезарядки щита на 15 процентов.</desc>
+	<cost>45</cost>
+	<bp>5</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="WEAPON_PREIGNITE">
+	<title>Пред-зажигатель орудий</title>
+	<desc>Первая зарядка орудий происходит ещё до начала боя.</desc>
+	<cost>120</cost>
+	<bp>16</bp>
+	<rarity>4</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="FTL_BOOSTER">
+	<title>Ускор. перезарядки FTL</title>
+	<desc>FTL привод заряжается на 25 процентов быстрее.</desc>
+	<cost>50</cost>
+	<bp>4</bp>
+	<rarity>2</rarity>
+	<stackable>true</stackable>
+	<value>0.25</value>
+</augBlueprint>
+
+<augBlueprint name="FTL_JUMPER">
+	<title>Улучш. FTL навигация</title>
+	<desc>Позволяет вашему кораблю прыгнуть к любому ранее посещённому маяку.</desc>
+	<cost>60</cost>
+	<bp>5</bp>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="DRONE_RECOVERY">  
+	<title>Механизм сбора дронов</title>
+	<desc>При прыжке все неразрушенные дроны будут преобразованы обратно в детали дронов.</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>2</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="FTL_JAMMER">
+	<title>Глушитель FTL</title>
+	<desc>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля.</desc>
+	<cost>30</cost>
+	<bp>4</bp>
+	<rarity>3</rarity>
+	<value>2</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+
+
+<augBlueprint name="STASIS_POD">
+	<title>Сломанная стазис-капсула</title>
+	<desc>Этот причудливый чужеродный артефакт, как оказалось, едва функционирует. Он не имеет практического применения, но возможно кто-нибудь сможет починить его.</desc>
+	<cost>30</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+
+<!--OTHER IDEAS -- 
+<augBlueprint name="PERSONAL_TELEPORTER">            requires a teleporter system to be working???
+	<title>Личные телепортеры</title>
+	<desc>Автоматически возвращает ваш десант с вражеского корабля, когда тот прыгает или разрушается.</desc>
+	<cost>150</cost>
+	<rarity>4</rarity>
+	<stackable>false</stackable>
+</augBlueprint> 
+
+<augBlueprint name="FLIGHT_SUITS">  
+	<title>Встроенные космические костюмы</title>
+	<desc>Экипаж получает вдвое меньше урона в отсеках без кислорода.</desc>
+	<cost>80</cost>
+	<rarity>2</rarity>
+	<value>0.5</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="SHIP_SEALING">
+	<title>Система уплотнения корпуса</title>
+	<desc>На половину уменьшает скорость утечки кислорода, когда система регенерации воздуха не работает.</desc>
+	<cost>100</cost>
+	<rarity>2</rarity>
+	<value>0.5</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="MISSILE_REPLICATOR">
+	<title>Система репликации ракет</title>
+	<desc>Первый выстрел ракетой / бомбой после прыжка не будет использовать боеприпасы.</desc>
+	<cost>100</cost>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+	
+<augBlueprint name="INTERNAL_AI">
+	<title>Улучшенный внутренний ИИ</title>
+	<desc>Ваши дроны (ремонтные, и боевые) выполняют свою задачу на 20 процентов эффективнее.</desc>    maybe they just move at normal human speed
+	<cost>100</cost>
+	<rarity>3</rarity>
+	<value>0.2</value>
+	<stackable>true</stackable>
+</augBlueprint>
+
+<augBlueprint name="EXTERNAL_AI">
+	<title>Улучшенный внешний ИИ</title>
+	<desc>Ваши защитные и атакующие дроны, работающие снаружи корабля, повысили эффективность на 20 процентов.</desc>
+	<cost>100</cost>
+	<rarity>3</rarity>
+	<value>0.2</value>
+	<stackable>true</stackable>
+</augBlueprint>
+
+
+
+
+<!----PROBABLY NOT:---
+
+<augBlueprint name="ENCODED_DISTRESS">
+	<title>Зашифрованный сигнал бедствия</title>
+	<desc>Ваш сигнал бедствия имеет больше шансов быть принятым дружественными кораблями.</desc>
+	<cost>100</cost>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBluepring name="TELEPORTER_PREIGNITE">
+	<title>Молниеносный телепорт</title>
+	<desc>Телепортер доступен сразу после сверхсветового прыжка.</desc>
+	<cost>130</cost>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="HEAT_RESIST"> 
+	<title>Термостойкие костюмы</title>
+	<desc>Уменьшает повреждение экипажа от огня на 50%</desc>
+	<cost>70</cost>
+	<rarity>2</rarity>
+	<value>0.5</value>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="BEAM_PIERCE">  
+	<title></title>
+	<desc>Даёт всему лучевому оружию возможность пробивать 1 единицу защитного поля</desc>
+	<cost>80</cost>
+	<rarity>2</rarity>
+	<value>1</value>
+	<stackable>false</stackable>
+</augBlueprint>
+
+ -->
+
+
+ 
+ 
+<!--    
+
+					---------------------------------------
+					***************************************
+								SHIP BLUEPRINTS
+					***************************************
+					---------------------------------------
+-->
+
+
+<!--
+					***************************************
+								Player Ship
+					***************************************
+-->
+
+<!-- 
+		THIS SHIP IS NOT USED
+		
+-->
+<shipBlueprint name="PLAYER_SHIP_EASY" layout="kestral" img="kestral">
+	<class>Пустельга</class>
+	<name>The Kestrel</name>
+	<systemList>
+		<pilot power="1" room="0" start="true"/>
+		<doors power="1" room="2" start="true"/>
+		<sensors power="1" room="3" start="true"/>
+		<medbay power="1" room="4" start="true"/>
+		<oxygen power="1" room="13" start="true"/>
+		<shields power="2" room="5" start="true"/>
+		<engines power="2" room="14" start="true"/>
+		<weapons power="3" room="10" start="true"/>
+		<drones power="2" room="1" start="false"/>
+		<teleporter power="1" room="15"	start="false"/>
+		<cloaking power="1" room="8" start="false"/>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="8">
+		<weapon name="MISSILES_2_PLAYER"/>
+		<weapon name="LASER_BURST_3"/>
+	</weaponList>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "3" class="human"/>
+</shipBlueprint>
+
+
+
+
+
+
+<!-- BOSS-READY SHIP --> 
+<!--
+<shipBlueprint name="PLAYER_SHIP_HARD" layout="kestral" img="kestral">
+	<class>Пустельга</class>
+	<name>The Kestrel</name>
+	<desc>Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.</desc>
+	<systemList>
+		<pilot power="2" room="0" start="true" img="room_pilot"/>
+		<doors power="2" room="2" start="true" img="room_doors"/>
+		<sensors power="2" room="3" start="true" img="room_sensors"/>
+		<medbay power="2" room="4" start="true" img="room_medbay"/>
+		<oxygen power="2" room="13" start="true" img="room_oxygen"/>
+		<shields power="8" room="5" start="true" img="room_shields"/>
+		<engines power="5" room="14" start="true" img="room_engines"/>
+		<weapons power="7" room="10" start="true" img="room_weapons"/>
+		<drones power="4" room="1" start="true"/>
+		<teleporter power="2" room="15"	start="true"/>
+		<cloaking power="2" room="8" start="true"/>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="4" missiles="16">
+		<weapon name="MISSILES_2"/>
+		<weapon name="LASER_BURST_3"/>
+		<weapon name="MISSILES_2"/>
+		<weapon name="LASER_BURST_3"/>
+	</weaponList>
+	<droneList count="2" drones="10">
+		<drone name="DRONE_BEAM"/>
+		<drone name="REPAIR"/>
+	</droneList>
+	<health amount="30"/>
+	<maxPower amount ="28"/> 
+	<crewCount amount = "6" class="human"/>
+</shipBlueprint>
+-->
+
+
+
+
+
+
+
+<!--  
+   ***********************
+   The Kestrel
+   ***********************
+ -->
+
+ <!-- Slots for when placing computers are numbered like so:
+	0 1
+	2 3
+-->
+<!-- slot for medbay defines which slot is blocked -   "-2" means no blocked slot-->
+									
+<!-- THE KESTREL -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 0 -->    
+<shipBlueprint name="PLAYER_SHIP_HARD" layout="kestral" img="kestral">
+	<class>Крейсер «Пустельга»</class>
+	<name>The Kestrel</name>
+	<desc>Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.</desc>
+	<systemList>
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number> 
+			</slot>
+		</pilot>
+		<doors power="1" room="2" start="true" img="room_doors"/>
+		<sensors power="1" room="3" start="true" img="room_sensors"/>
+		<medbay power="1" room="4" start="true" img="room_medbay">
+			<slot>
+				<number>1</number> 
+			</slot>
+		</medbay>
+		<oxygen power="1"  room="13" start="true" img="room_oxygen"/>
+		<shields power="2" room="5" start="true" img="room_shields"/>
+		<engines power="2" room="14" start="true" img="room_engines"/>
+		<weapons power="3" room="10" start="true" img="room_weapons"/>
+		<drones power="2" room="1" start="false"/>
+		<teleporter power="1" room="15"	start="false"/>
+		<cloaking power="1" room="8" start="false"/>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="8">
+		<weapon name="MISSILES_2_PLAYER"/>
+		<weapon name="LASER_BURST_3"/>
+	</weaponList>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "3" class="human"/>
+</shipBlueprint>
+
+<!-- THE KESTREL -->
+<!-- LAYOUT = 2 --> 
+<!-- SHIP ID = ?? -->
+
+<shipBlueprint name="PLAYER_SHIP_HARD_2" layout="kestral_2" img="kestral_2">
+	<class>Крейсер «Пустельга»</class>
+	<name>Red-Tail</name>
+	<desc>Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.</desc>
+	<systemList>
+		<pilot power="1" room="9" start="true" img="room_pilot_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</pilot>  
+		<doors power="1" room="7" start="true" img="room_doors"/>
+		<sensors power="1" room="11" start="true" img="room_sensors_2"/>
+		<medbay power="1" room="0" start="true" img="room_medbay_4">
+			<slot>
+				<number>0</number> 
+			</slot>
+		</medbay>
+		<oxygen power="1" room="3" start="true" img="room_oxygen_11"/>
+		<shields power="2" room="2" start="true" img="room_shields_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</slot>
+		<engines power="2" room="5" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</engines>
+		<weapons power="4" room="10" start="true" img="room_weapons"/>
+		<drones power="2" room="13" start="false" img="room_drones_12"/>
+		<teleporter power="1" room="4"	start="false"/>
+		<cloaking power="1" room="12" start="false" img="room_cloaking_2"/>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="4" missiles="5">
+		<weapon name="LASER_BURST_1"/>
+		<weapon name="LASER_BURST_1"/>
+		<weapon name="LASER_BURST_1"/>
+		<weapon name="LASER_BURST_1"/>
+	</weaponList>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "2" class="human"/>
+	<crewCount amount = "1" class="energy"/>
+	<crewCount amount = "1" class="mantis"/>
+	<!-- can use these to override images for reuse -->
+	<shieldImage>kestral</shieldImage>
+	<cloakImage>kestral</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  
+   ***********************
+   MANTIS SHIP
+   ***********************
+ -->
+
+<!-- MANTIS SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 2 --> 
+<shipBlueprint name="PLAYER_SHIP_MANTIS" layout="mantis_cruiser" img="mantis_cruiser"> 
+	<class>Крейсер богомолов</class>
+	<name>The Gila Monster</name>
+	<unlock>Этим кораблём владеет знаменитый вор богомолов КазааакплетхКилик. Вам придётся «убедить» его оказать вам помощь, чтобы испытать этот корабль в деле.</unlock>
+	<desc>Это боевое судно было спроектировано так, чтобы его команде было удобно идти на абордаж.</desc>
+	<systemList>
+		<pilot power="1" room="7" start="true"/>
+		<doors power="1" room="14" start="true"/>
+		<sensors power="1" room="17" start="false"/>
+		<oxygen power="1" room="4" start="true" img="room_oxygen_3"/>
+		<shields power="2" room="16" start="true"/>
+		<engines power="2" room="10" start="true"/>
+		<weapons power="1" room="13" start="true" img="room_weapons_3"/>
+		<drones power="2" room="0" start="false" img="room_drones_3"/>
+		<medbay power="1" room="2" start="true"/>
+		<teleporter power="1" room="1" start="true"/>
+		<cloaking power="1" room="5" start="false" img="room_cloaking_2"/>
+	</systemList>
+	<weaponList count="2" missiles="16">
+		<weapon name="BOMB_1"/>
+		<weapon name="LASER_BURST_1"/>
+	</weaponList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="CREW_STIMS"/>
+	<health amount="30"/>
+	<maxPower amount ="7"/> 
+	<crewCount amount = "3" class="mantis"/>
+	<crewCount amount = "1" class="engi"/>
+</shipBlueprint> 
+
+
+<!-- MANTIS SHIP -->
+<!-- LAYOUT = ALTERNATE --> 
+<!-- SHIP ID = 2 -->    
+<shipBlueprint name="PLAYER_SHIP_MANTIS_2" layout="mantis_cruiser_2" img="mantis_cruiser_2"> 
+	<class>Крейсер богомолов</class>
+	<name>The Basilisk</name>
+	<unlock>Этим кораблём владеет знаменитый вор богомолов КазааакплетхКилик. Вам придётся «убедить» его оказать вам помощь, если хотите испытать этот корабль в деле.</unlock>
+	<desc>Описание корабля</desc>
+	<systemList>
+		<pilot power="1" room="8" start="true"/>
+		<doors power="1" room="15" start="true"/>
+		<sensors power="1" room="1" start="true"/>
+		<oxygen power="1" room="16" start="true" img="room_oxygen_5"/>
+		<shields power="4" room="7" start="true" img="room_shields_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number> 
+			</slot>
+		</shields>
+		<engines power="1" room="10" start="true" img="room_engines_4"/>
+		<weapons power="1" room="6" start="true" img="room_weapons_3"/>
+		<drones power="3" room="11" start="true" img="room_drones_6"/>
+		<medbay power="1" room="3" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number> 
+			</slot>
+		</medbay>
+		<teleporter power="1" room="9" start="true"/>
+		<cloaking power="1" room="0" start="false" img="room_cloaking_6"/>
+	</systemList>
+	<weaponList count="0" missiles="0"/>
+	<droneList count="2" drones="15">
+		<drone name="BOARDER"/>
+		<drone name="DEFENSE_1"/>
+	</droneList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="CREW_STIMS"/>
+	<health amount="30"/>
+	<maxPower amount ="11"/> 
+	<crewCount amount="2" class="mantis"/>
+	<!-- can use these to override images for reuse -->
+	<shieldImage>mantis_cruiser</shieldImage>
+	<cloakImage>mantis_cruiser</cloakImage>
+</shipBlueprint> 
+
+
+
+
+
+<!--  
+   ***********************
+   STEALTH SHIP
+   ***********************
+ -->
+
+<!-- STEALTH SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 1 --> 
+<shipBlueprint name="PLAYER_SHIP_STEALTH" layout="stealth" img="stealth">
+	<class>Стелс-крейсер</class>
+	<name>The Nesasio</name>
+	<unlock>Этот корабль строился в глубинах владений инжи. Чтобы разблокировать его, вы должны помочь им, но имейте в виду — они доверяют только себе подобным.</unlock>
+	<desc>Построенный инжи для Федерации, этот корабль делает ставку на скорость и усовершенствованную технологию невидимости, подбираясь к врагу с тыла.</desc>
+	<systemList>
+		<pilot power="1" room="0" start="true"/>
+		<doors power="1" room="14" start="true" img="room_doors_2"/>
+		<sensors power="2" room="13" start="true" img="room_sensors_2"/>
+		<oxygen power="1" room="1" start="true" img="room_oxygen_2"/>
+		<engines power="4" room="12" start="true" img="room_engines_2"/>
+		<shields power="2" room="10" start="false"img="room_shields_2"/>
+		<weapons power="2" room="3" start="true" img="room_weapons_2"/> 
+		<drones power="2" room="11" start="false" img="room_drones_2"/>
+		<medbay power="1" room="7" start="true"/> 
+		<teleporter power="1" room="5" start="false"/>
+		<cloaking power="1" room="8" start="true" img="room_cloaking_2"/>
+	</systemList>
+	<weaponList count="2" missiles="0">
+		<weapon name="BEAM_1"/>
+		<weapon name="LASER_BURST_2"/>
+	</weaponList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="SYSTEM_CASING"/>
+	<aug name="ADV_SCANNERS"/>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "3" class="human"/>
+</shipBlueprint> 
+
+
+<!-- STEALTH SHIP -->
+<!-- LAYOUT = ALTERNATE --> 
+<!-- SHIP ID = ???? --> 
+<shipBlueprint name="PLAYER_SHIP_STEALTH_2" layout="stealth_2" img="stealth_2">
+	<class>Стелс-крейсер</class>
+	<name>DA-SR 12</name>  <!-- direct action - stealth reconnaissance-->
+	<unlock>Этот корабль строился в глубинах владений инжи. Чтобы разблокировать его, вы должны помочь им, но имейте в виду — они доверяют только себе подобным.</unlock>
+	<desc>Построенный инжи для Федерации, этот корабль делает ставку на скорость и усовершенствованную технологию невидимости, подбираясь к врагу с тыла.</desc>
+	<systemList>
+		<pilot power="1" room="9" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</pilot>
+		<doors power="1" room="13" start="true" img="room_doors_3"/>
+		<sensors power="2" room="6" start="true" img="room_sensors_3"/>
+		<oxygen power="1" room="4" start="true" img="room_oxygen_2"/>
+		<engines power="2" room="5" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</engines>
+		<shields power="2" room="2" start="false" img="room_shields_3">
+			<slot>
+				<direction>left</direction>
+				<number>2</number> 
+			</slot>
+		</shields>
+		<weapons power="4" room="12" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number> 
+			</slot>
+		</weapons>
+		<drones power="2" room="1" start="false" img="room_drones_4"/>
+		<medbay power="1" room="0" start="true" img="room_medbay_2">
+			<slot>
+				<number>-2</number> 
+			</slot>
+		</medbay>
+		<teleporter power="1" room="14" start="false"/>
+		<cloaking power="2" room="11" start="true" img="room_cloaking"/>
+	</systemList>
+	<weaponList count="1" missiles="0">
+		<weapon name="BEAM_3"/>
+	</weaponList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<aug name="ADV_SCANNERS"/>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="7"/> 
+	<crewCount amount = "2" class="human"/>
+	<crewCount amount = "1" class="energy"/>
+	<!-- can use these to override images for reuse -->
+	<shieldImage>stealth</shieldImage>
+	<cloakImage>stealth</cloakImage>
+</shipBlueprint> 
+
+
+<!--  
+   ***********************
+   ENGI SHIP
+   ***********************
+ -->
+
+<!-- ENGI SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 3 -->
+<shipBlueprint name="PLAYER_SHIP_CIRCLE" layout="circle_cruiser" img="circle_cruiser">
+	<class>Крейсер инжи</class>
+	<name>The Torus</name>
+	<unlock>Чтобы разблокировать этот корабль инжи вам нужно добраться до 5-го сектора.</unlock>
+	<desc>Пусть он и выглядит как груда хлама, кое- как соединённая вместе. Но на самом деле это продуманный корабль, полагающийся на использование ионных орудий и дронов.</desc>
+	<systemList>  
+		<pilot power="1" room="8" start="true"/>    
+		<doors power="1" room="5" start="true" img="room_doors_4"/>  
+		<sensors power="1" room="4" start="true" img="room_sensors_4"/>   
+		<oxygen power="1" room="15" start="true" img="room_oxygen_4"/>
+		<engines power="2" room="2" start="true" img="room_engines_2"/> 
+		<shields power="2" room="3" start="true" img="room_shields_4"/> 
+		<weapons power="3" room="11" start="true"/> 
+		<drones power="3" room="0" start="true"/> 
+		<medbay power="1" room="7" start="true"/>   
+		<teleporter power="1" room="9" start="false"/>
+		<cloaking power="1" room="12" start="false" img="room_cloaking_4"/> 
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList count="1" missiles="0">
+		<weapon name="ION_4"/>
+	</weaponList>
+	<droneList count="1" drones="15">
+		<drone name="COMBAT_1"/>
+	</droneList>
+	<aug name="NANO_MEDBAY"/>
+	<health amount="30"/>
+	<maxPower amount ="10"/> 
+	<crewCount amount = "2" class="engi"/>
+	<crewCount amount = "1" class="human"/>
+</shipBlueprint>
+
+
+
+
+
+
+<!-- ENGI SHIP -->
+<!-- LAYOUT = ALT --> 
+<!-- SHIP ID = ???? -->
+<shipBlueprint name="PLAYER_SHIP_CIRCLE_2" layout="circle_cruiser_2" img="circle_cruiser_2">
+	<class>Крейсер инжи</class>
+	<name>The Vortex</name>
+	<unlock>Чтобы разблокировать этот корабль Инжи вам нужно добраться до 5-го сектора.</unlock>
+	<desc>Пусть он и выглядит как груда хлама, кое- как соединённая вместе. Но на самом деле это продуманный корабль, полагающийся на использование ионных орудий и дронов.</desc>
+	<systemList>  
+		<pilot power="1" room="12" start="true"/>  
+		<doors power="1" room="8" start="true"/>  
+		<sensors power="1" room="2" start="false"/>  
+		<oxygen power="1" room="5" start="true" img="room_oxygen_6"/>  
+		<engines power="1" room="0" start="true" img="room_engines_2"/>  
+		<shields power="2" room="10" start="true" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number> 
+			</slot>
+		</shields>  
+		<weapons power="3" room="1" start="true" img="room_weapons_8">  
+			<slot>
+				<direction>up</direction>
+				<number>1</number> 
+			</slot>
+		</weapons>
+		<drones power="3" room="7" start="true" img="room_drones_6"/>  
+		<medbay power="1" room="6" start="true" img="room_medbay_6">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<teleporter power="1" room="3" start="false"/>  
+		<cloaking power="1" room="11" start="false" img="room_cloaking_7"/>  
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList count="2" missiles="0">
+		<weapon name="ION_2"/>
+		<weapon name="LASER_HEAVY_1"/>
+	</weaponList>
+	<droneList count="3" drones="6">
+		<drone name="BATTLE"/>
+		<drone name="REPAIR"/>
+		<drone name="REPAIR"/>
+	</droneList>
+	<aug name="DRONE_SPEED"/>
+	<health amount="30"/>
+	<maxPower amount ="9"/> 
+	<crewCount amount = "1" class="engi"/>
+	<shieldImage>circle_cruiser</shieldImage>
+	<cloakImage>circle_cruiser</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+<!--  
+   ***********************
+	FEDERATION SHIP
+   ***********************
+ -->
+
+<!-- FEDERATION SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 4 -->    
+<shipBlueprint name="PLAYER_SHIP_FED" layout="fed_cruiser" img="fed_cruiser">
+	<class>Крейсер Федерации</class>
+	<name>The Osprey</name>
+	<unlock>Победите босса, чтобы разблокировать этот передовой крейсер Федерации.</unlock>
+	<desc>Этот корабль оснащён новейшей технологией Федерации: улучшенное лучевое орудие, проникающее сквозь щиты!</desc>
+	<systemList>
+		<pilot power="1" room="4" start="true"/>  
+		<doors power="1" room="8" start="true" img="room_doors_5"/>  
+		<sensors power="1" room="13" start="true"/>  
+		<oxygen power="1" room="9" start="true" img="room_oxygen_4"/>
+		<engines power="2" room="3" start="true"/>
+		<shields power="2" room="11" start="true"/>
+		<weapons power="2" room="15" start="true"/>
+		<drones power="2" room="16" start="false" img="room_drones_5"/>
+		<medbay power="1" room="10" start="true"/>  
+		<teleporter power="1" room="1" start="false"/>  
+		<artillery power="1" room="6"/>
+		<!--<cloaking power="1" room="6" start="true" img="room_cloaking_5"/>  -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="1" missiles="5">
+		<weapon name="LASER_BURST_3"/>
+	</weaponList>
+	<droneList drones="2"/>
+	<droneList count="0" drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "1" class="human"/>
+	<crewCount amount = "1" class="mantis"/>
+	<crewCount amount = "1" class="rock"/>
+	<crewCount amount = "1" class="engi"/>
+</shipBlueprint>
+
+<!-- FEDERATION SHIP -->
+<!-- LAYOUT = ALTERNATE --> 
+<!-- SHIP ID = 4 -->    
+<shipBlueprint name="PLAYER_SHIP_FED_2" layout="fed_cruiser_2" img="fed_cruiser_2">
+	<class>Крейсер Федерации</class>
+	<name>Nisos</name>
+	<unlock>Победите босса, чтобы разблокировать этот передовой крейсер Федерации.</unlock>
+	<desc>Этот корабль оснащен новейшей технологией Федерации: улучшенные лучевые орудия, которые проникают сквозь щиты!</desc>
+	<systemList>
+		<pilot power="1" room="7" start="true" img="room_pilot_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</pilot>  
+		<doors power="1" room="17" start="true" img="room_doors_2"/>  
+		<sensors power="1" room="0" start="true"/>  
+		<oxygen power="1" room="8" start="true" img="room_oxygen_9"/>
+		<engines power="2" room="15" start="true" img="room_engines_2"/>
+		<shields power="2" room="14" start="true" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="2" room="4" start="true" img="room_weapons_2"/>
+		<drones power="2" room="2" start="false" img="room_drones_11"/>
+		<medbay power="1" room="10" start="true" img="room_medbay_5">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<teleporter power="1" room="5" start="false"/>  
+		<artillery power="2" room="12"/>
+		<!--<cloaking power="1" room="12" start="true" img="room_cloaking_5"/>  -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="4" missiles="9">
+		<weapon name="LASER_BURST_2"/>
+		<weapon name="MISSILES_1"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="9"/> 
+	<crewCount amount = "1" class="human"/>
+	<crewCount amount = "1" class="energy"/>
+	<crewCount amount = "1" class="slug"/>
+	<shieldImage>fed_cruiser</shieldImage>
+	<cloakImage>fed_cruiser</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+
+
+<!--  
+   ***********************
+   SLUG SHIP
+   ***********************
+ -->
+
+<!-- SLUG SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 5 --> 
+<shipBlueprint name="PLAYER_SHIP_JELLY" layout="jelly_cruiser" img="jelly_cruiser">
+	<class>Крейсер слизней</class>
+	<name>Man of War</name>
+	<unlock>Один из кораблей слизней должен что-то знать об этом современном крейсере. Возможно, вы сможете «убедить» их рассказать вам.</unlock>
+	<desc>Созданный для использования внутри туманности, этот крейсер не имеет сенсоров, используя вместо них коварство и хитрость слизней.</desc>
+	<systemList>
+		<pilot power="1" room="8" start="true"/>  
+		<doors power="2" room="1" start="true" img="room_doors_6"/>  
+		<oxygen power="1" room="4" start="true" img="room_oxygen_6"/>
+		<engines power="2" room="6" start="true" img="room_engines_2"/>  
+		<shields power="2" room="13" start="true" img="room_shields_6"/>  
+		<weapons power="3" room="5" start="true" img="room_weapons_6"/>  
+		<medbay power="1" room="3" start="true"/>  
+		<sensors power="1" room="11" start="false" img="room_sensors_6"/>  
+		<drones power="2" room="14" start="false" img="room_drones_5"/>  
+		<teleporter power="1" room="10" start="false"/>  
+		<cloaking power="1" room="2" start="false" img="room_cloaking_6"/>  
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="3" missiles="15">
+		<weapon name="BEAM_BIO"/>
+		<weapon name="BOMB_BREACH_1"/>
+		<weapon name="LASER_BURST_2"/>
+	</weaponList>
+	<aug name="SLUG_GEL"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "2" class="slug"/>
+</shipBlueprint>
+
+
+<!-- SLUG SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 5 --> 
+<shipBlueprint name="PLAYER_SHIP_JELLY_2" layout="jelly_cruiser_2" img="jelly_cruiser_2">
+	<class>Крейсер слизней</class>
+	<name>The Stormwalker</name>
+	<unlock>Один из кораблей слизней должен что-то знать об этом современном крейсере. Возможно, вы сможете «убедить» их рассказать вам.</unlock>
+	<desc>Созданный для использования внутри туманности, этот крейсер не имеет сенсоров, полагаясь вместо них на коварство и хитрость слизней.</desc>
+	<systemList>
+		<pilot power="1" room="11" start="true"/>  
+		<doors power="2" room="19" start="true" img="room_doors_2"/>  
+		<sensors power="1" room="0" start="false" img="room_sensors_2"/>    
+		<oxygen power="1" room="15" start="true" img="room_oxygen_8"/>  
+		<engines power="2" room="2" start="true"/>
+		<shields power="2" room="12" start="true" img="room_shields_7">  
+			<slot>
+				<direction>up</direction>
+				<number>1</number> 
+			</slot>
+		</shields>
+		<weapons power="2" room="13" start="true" img="room_weapons_4">  
+			<slot>
+				<direction>up</direction>
+				<number>0</number> 
+			</slot>
+		</weapons>
+		<medbay power="1" room="7" start="false"/>  
+		<drones power="2" room="18" start="false" img="room_drones_10"/>
+		<teleporter power="1" room="3" start="true"/>  
+		<cloaking power="1" room="5" start="false"/>  
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="25">
+		<weapon name="BOMB_HEAL"/>
+		<weapon name="MISSILES_2_PLAYER"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<aug name="SLUG_GEL"/>
+	<health amount="30"/>
+	<maxPower amount ="7"/> 
+	<crewCount amount = "3" class="slug"/>
+	<shieldImage>jelly_cruiser</shieldImage>
+	<cloakImage>jelly_cruiser</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+
+
+<!--  
+   ***********************
+   ROCK SHIP
+   ***********************
+ -->
+
+<!-- ROCK SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 6 -->   
+<shipBlueprint name="PLAYER_SHIP_ROCK" layout="rock_cruiser" img="rock_cruiser">
+	<class>Крейсер роков</class>
+	<name>Bulwark</name>
+	<unlock>Докажите рокам, что вы достойны получить этот мощный крейсер.</unlock>
+	<desc>Подобно своим создателям, этот супер плотный бегемот сокрушает своих врагов в основном с помощью грубой силы.</desc>
+	<systemList>
+		<pilot power="1" room="5" start="true"/>  
+		<doors power="1" room="1" start="true" img="room_doors_5"/>     
+		<sensors power="1" room="12" start="true" img="room_sensors_4"/>  
+		<oxygen power="1" room="0" start="true" img="room_oxygen_7"/>    
+		<engines power="2" room="14" start="true"/>  
+		<shields power="2" room="2" start="true" img="room_shields_4"/>     
+		<weapons power="3" room="15" start="true"img="room_weapons_5">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</weapons>     
+		<drones power="2" room="4" start="false" img="room_drones_7"/>     
+		<medbay power="1" room="16" start="true" img="room_medbay_7"> 
+			<slot>
+				<number>2</number> 
+			</slot>
+		</medbay>        
+		<teleporter power="1" room="17" start="false"/>  
+		<cloaking power="1" room="3" start="false"/>  
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="28">
+		<weapon name="MISSILES_2_PLAYER"/>
+		<weapon name="MISSILES_HULL"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "3" class="rock"/>
+	<aug name="ROCK_ARMOR"/>
+</shipBlueprint>
+
+<!-- ROCK SHIP -->
+<!-- LAYOUT = ALTERNATE -->    <!-- name it after FP2 Shivans? - Rakshasa - Moloch - Ravana - Sathanas-->
+<!-- SHIP ID = 6 -->   
+<shipBlueprint name="PLAYER_SHIP_ROCK_2" layout="rock_cruiser_2" img="rock_cruiser_2">
+	<class>Крейсер роков</class>
+	<name>Shivan</name> 
+	<unlock>Заблокировано, пока не в игре</unlock>
+	<desc>Подобно своим создателям, этот супер плотный бегемот сокрушает своих врагов в основном с помощью грубой силы.</desc>
+	<systemList>
+		<pilot power="1" room="8" start="true"img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number> 
+			</slot>
+		</pilot>       
+		<doors power="1" room="15" start="false" img="room_doors_5"/>     
+		<sensors power="1" room="3" start="true" img="room_sensors_4"/>  
+		<oxygen power="2" room="4" start="true" img="room_oxygen_6"/>    
+		<engines power="2" room="0" start="true"img="room_engines_2"/>    
+		<shields power="2" room="2" start="true" img="room_shields_4"/>     
+		<weapons power="3" room="12" start="true"/>  
+		<drones power="2" room="14" start="false" img="room_drones_9"/>     
+		<medbay power="1" room="1" start="true"/>     
+		<teleporter power="1" room="10" start="false"/>  
+		<cloaking power="1" room="13" start="false"img="room_cloaking_2"/>      
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="18">
+		<weapon name="LASER_HEAVY_1_SP"/>
+		<weapon name="BOMB_FIRE"/>
+		<weapon name="BOMB_1"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount="8"/> 
+	<crewCount amount="4" class="rock"/>
+	<aug name="ROCK_ARMOR"/>
+	<shieldImage>rock_cruiser</shieldImage>
+	<cloakImage>rock_cruiser</cloakImage>
+</shipBlueprint>
+
+
+
+
+
+
+
+
+
+<!--  
+   ***********************
+   ENERGY SHIP
+   ***********************
+ -->
+ 
+ 
+<!-- ENERGY SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 7 -->  
+<shipBlueprint name="PLAYER_SHIP_ENERGY" layout="energy_cruiser" img="energy_cruiser">
+	<class>Крейсер золтанцев</class>
+	<name>The Adjudicator</name>
+	<unlock>Учитесь у золтанцев, иногда дипломатия работает.</unlock>
+	<desc>Технология продвинутых щитов золтанцев даёт этому кораблю преимущество в каждом бою.</desc>
+	<systemList>
+		<pilot power="1" room="11" start="true"/>  
+		<doors power="2" room="10" start="true" img="room_doors_6"/>     
+		<sensors power="1" room="0" start="true"/>  
+		<oxygen power="1" room="4" start="true" img="room_oxygen_2"/>    
+		<engines power="1" room="13" start="true" img="room_engines_2"/>    
+		<shields power="2" room="15" start="true" img="room_shields_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number> 
+			</slot>
+		</shields>     
+		<weapons power="3" room="14" start="true" img="room_weapons_7"/>  
+		<drones power="2" room="16" start="false" img="room_drones_8"/>     
+		<medbay power="1" room="8" start="true" img="room_medbay_4"> 
+			<slot>
+				<number>0</number> 
+			</slot>
+		</medbay>    
+		<teleporter power="1" room="2" start="false"/>  
+		<cloaking power="1" room="6" start="false" img="room_cloaking_3"/> 
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="4" missiles="12"> 
+		<weapon name="BEAM_2"/>
+		<weapon name="MISSILES_1"/>
+	</weaponList>
+	<droneList drones="2"/>
+	<health amount="30"/>
+	<maxPower amount ="5"/> 
+	<crewCount amount = "3" class="energy"/>
+	<aug name="ENERGY_SHIELD"/>
+</shipBlueprint>
+
+ 
+<!-- ENERGY SHIP -->
+<!-- LAYOUT = Alternate --> 
+<!-- SHIP ID = 7 -->  
+
+<shipBlueprint name="PLAYER_SHIP_ENERGY_2" layout="energy_cruiser_2" img="energy_cruiser_2">
+
+	<class>Крейсер золтанцев</class>
+	<name>Noether</name>
+	<unlock>Учитесь у золтанцев, иногда дипломатия работает.</unlock>
+	<desc>Технология продвинутых щитов золтанцев даёт этому кораблю преимущество в каждом бою.</desc>
+	<systemList>
+		<pilot power="1" room="14" start="true"/>  
+		<doors power="1" room="8" start="true" img="room_doors_6"/>     
+		<sensors power="1" room="13" start="true" img="room_sensors_4"/>  
+		<oxygen power="1" room="12" start="true" img="room_oxygen_7"/>    
+		<engines power="2" room="3" start="true" img="room_engines_5">  
+			<slot>
+				<direction>up</direction>
+				<number>0</number> 
+			</slot>
+		</engines>     
+		<shields power="1" room="5" start="true" img="room_shields_8"/>
+		<weapons power="4" room="7" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+		<drones power="2" room="2" start="false"/>     
+		<medbay power="1" room="0" start="true" img="room_medbay_4"> 
+			<slot>
+				<number>0</number> 
+			</slot>
+		</medbay>    
+		<teleporter power="1" room="4" start="false"/>  
+		<cloaking power="1" room="6" start="false"/> 
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="3" missiles="0">
+		<weapon name="ION_1"/>
+		<weapon name="ION_1"/>
+		<weapon name="BEAM_LONG"/>
+	</weaponList>
+	<droneList drones="2"/>
+	<health amount="30"/>
+	<maxPower amount ="5"/> 
+	<crewCount amount="3" class="energy"/>
+	<aug name="ENERGY_SHIELD"/>
+	<shieldImage>energy_cruiser</shieldImage>
+	<cloakImage>energy_cruiser</cloakImage>
+</shipBlueprint>
+
+ 
+ 
+ 
+
+<!--  
+   ***********************
+   CRYSTAL SHIP
+   ***********************
+ -->
+
+<!-- CRYSTAL SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = 8 -->  
+<shipBlueprint name="PLAYER_SHIP_CRYSTAL" layout="crystal_cruiser" img="crystal_cruiser">
+	<class>Крейсер кристалинов</class>
+	<name>Bravais</name>
+	<unlock>Отправляйтесь в неизученный сектор галактики, чтобы найти этот мощный корабль.</unlock>
+	<desc>Этот мощный корабль оснащен секретными технологиями потерянной расы кристалин.</desc>
+	<systemList>
+		<pilot power="1" room="8" start="true"/>  
+		<doors power="1" room="16" start="true" img="room_doors_8"/>  
+		<sensors power="1" room="3" start="true" img="room_sensors_2"/>  
+		<oxygen power="1" room="7" start="true" img="room_oxygen_10"/>  
+		<engines power="2" room="0" start="true" img="room_engines_2"/>  
+		<shields power="2" room="6" start="true" img="room_shields_2"/>  
+		<weapons power="3" room="17" start="true" img="room_weapons_7"/>  
+		<drones power="2" room="1" start="false" img="room_drones_7"/>  
+		<medbay power="1" room="13" start="true" img="room_medbay_3">
+			<slot>
+				<number>3</number>
+			</slot>
+		</medbay>
+		<teleporter power="1" room="15" start="false"/>  
+		<cloaking power="1" room="9" start="false" img="room_cloaking_2"/>  
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="2" missiles="0">
+		<weapon name="CRYSTAL_BURST_1"/>
+		<weapon name="CRYSTAL_HEAVY_1"/>
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "2" class="human"/>
+	<crewCount amount = "2" class="crystal"/>
+	<aug name="CRYSTAL_SHARDS"/>
+</shipBlueprint>
+
+
+<!-- sardonyx
+
+<!-- CRYSTAL SHIP -->
+<!-- LAYOUT = DEFAULT --> 
+<!-- SHIP ID = ???? --> 
+<shipBlueprint name="PLAYER_SHIP_CRYSTAL_2" layout="crystal_cruiser_2" img="crystal_cruiser_2">
+	<class>Крейсер кристалинов</class>
+	<name>Carnelian</name>
+	<unlock>Отправляйтесь в неизученный сектор галактики, чтобы найти этот мощный корабль.</unlock>
+	<desc>Этот мощный корабль оснащен секретными технологиями потерянной расы кристалин.</desc>
+	<systemList>
+		<pilot power="1" room="15" start="true"/>  
+		<doors power="1" room="14" start="true" img="room_doors_7"/>  
+		<sensors power="1" room="10" start="true" img="room_sensors_2"/>  
+		<oxygen power="1" room="8" start="true" img="room_oxygen_7"/>  
+		<engines power="2" room="2" start="true" img="room_engines_2"/>  
+		<shields power="2" room="1" start="true" img="room_shields_7">  
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="1" room="4" start="true" img="room_weapons_7"/>  
+		<drones power="2" room="13" start="false" img="room_drones_5"/>  
+		<medbay power="1" room="9" start="true" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<teleporter power="1" room="3" start="true"/>  
+		<cloaking power="1" room="7" start="true"/>  
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList count="0" missiles="0">
+	</weaponList>
+	<droneList drones="0"/>
+	<health amount="30"/>
+	<maxPower amount ="8"/> 
+	<crewCount amount = "3" class="crystal"/>
+	<shieldImage>crystal_cruiser</shieldImage>
+	<cloakImage>crystal_cruiser</cloakImage>
+	<aug name="CRYSTAL_SHARDS"/>
+</shipBlueprint>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--- **************
+TUTORIAL SHIPS
+*****************-->
+
+<shipBlueprint name="TUTORIAL_PIRATE" layout="jelly_button" img="jelly_button">
+	<class>Пират</class>
+	<systemList>
+		<oxygen power="2" room="3"/>
+		<pilot power="1" room="0"/>
+		<shields power="4" room="1"/>
+		<engines power="1" room="4"/>
+		<weapons power="3" room="2"/>
+	</systemList>
+	<weaponList count="1" missiles="0">
+		<weapon name="LASER_BURST_1"/>
+	</weaponList>
+	<health amount="5"/>	
+	<maxPower amount ="11"/>
+	<crewCount amount = "1"  class="human"/>
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_TUTORIAL" layout="kestral" img="kestral">
+	<class>Пустельга</class>
+	<name>The Kestrel</name>
+	<systemList>
+		<pilot power="1" room="0" start="true"/>
+		<doors power="2" room="2" start="true"/>
+		<sensors power="2" room="3" start="true"/>
+		<medbay power="1" room="4" start="true"/>
+		<oxygen power="1" room="13" start="true"/>
+		<shields power="2" room="5" start="true"/>
+		<engines power="2" room="14" start="true"/>
+		<weapons power="2" room="10" start="true"/>
+		<drones power="2" room="1" start="false"/>
+		<teleporter power="1" room="15"	start="false"/>
+		<cloaking power="1" room="8" start="false"/>
+	</systemList>
+	<weaponList count="1" missiles="20">
+		<weapon name="LASER_BURST_2"/>
+	</weaponList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<health amount="30"/>
+	<maxPower amount ="9"/> 
+	<crewCount amount = "4" class="human"/>
+</shipBlueprint>
+
+<shipBlueprint name="IMPOSSIBLE_PIRATE" layout="jelly_truffle" img="jelly_truffle_pirate">
+	<class>Невероятный пират</class>
+	<systemList>
+		<pilot power="3" room="0"/>
+		<doors power="3" room="1"/>
+		<oxygen power="3" room="4"/>
+		<drones power="2" room="3"/>
+		<shields power="8" room="6"/>
+		<engines power="8" room="2"/>
+		<weapons power="8" room="5"/>
+		<cloaking power="1" room="7"/>
+		<!--  <drones power="3" room="7"/>  -->
+	</systemList>
+	<weaponList count="3" missiles="30">
+		<weapon name="LASER_BURST_2_A"/>
+		<weapon name="BEAM_2"/>
+		<weapon name="MISSILES_BURST"/>
+	</weaponList>
+	<droneList count="1" drones="5">
+		<drone name="COMBAT_1"/>
+	</droneList>
+	<health amount="20"/>	
+	<maxPower amount ="35"/>
+	<crewCount amount = "5" class="engi"/>
+</shipBlueprint>
+
+
+
+
+		
+
+<!---- Crash protection default ship blueprint. DO NOT REMOVE -->
+<shipBlueprint name="DEFAULT" layout="rebel_squat" img="rebel_squat">
+	<class>Рейдер повстанцев</class>
+	<systemList>
+		<pilot power="1" room="0"/>
+		<oxygen power="1" room="2"/>
+		<shields power="2" room="4"/>
+		<engines power="2" room="7"/>
+		<weapons power="3" room="6"/>
+		<drones power="4" room="1"/>
+	</systemList>
+	<droneList count="2" drones="4">
+		<drone name="DEFENSE_1"/>
+		<drone name="DEFENSE_1"/>
+	</droneList>
+	<weaponList count="2" missiles="10">
+		<weapon name="LASER_HEAVY_1"/>
+		<weapon name="LASER_BURST_1"/>
+	</weaponList>
+	<health amount="10"/>	
+	<maxPower amount ="15"/>
+	<crewCount amount = "3" class="human"/>
+</ship>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+<!--**********************
+REBEL SHIP - LONG - ELITE!!!
+************************-->
+
+
+<shipBlueprint name="LONG_ELITE_MED" layout="rebel_long" img="rebel_long_hard">
+	<class>Элитный повстанец</class>
+	<systemList>
+		<oxygen power="2" room="2"/>
+		<pilot power="3" room="0"/>
+		<shields power="6" room="6"/>
+		<engines power="4" room="5"/>
+		<weapons power="9" room="4"/>
+	</systemList>
+	<weaponList count="3" missiles="5">
+		<weapon name="MISSILES_BREACH"/>
+		<weapon name="LASER_HEAVY_1"/>
+		<weapon name="BEAM_2"/>
+	</weaponList>
+	<health amount="20"/>	
+	<maxPower amount ="21"/>
+	<crewCount amount = "4" class="human"/>
+</shipBlueprint>
+
+<shipBlueprint name="LONG_ELITE_HARD" layout="rebel_long" img="rebel_long_hard">
+	<class>Элитный повстанец</class>
+	<systemList>
+		<oxygen power="2" room="2"/>
+		<pilot power="3" room="0"/>
+		<shields power="8" room="6"/>
+		<engines power="5" room="5"/>
+		<weapons power="9" room="4"/>
+	</systemList>
+	<weaponList count="3" missiles="7">
+		<weapon name="MISSILES_2"/>
+		<weapon name="LASER_HEAVY_2"/>
+		<weapon name="BEAM_3"/>
+	</weaponList>
+	<health amount="30"/>	
+	<maxPower amount ="24"/>
+	<crewCount amount = "5" class="human"/>
+</shipBlueprint>
+
+
+
+
+
+<!--- NEW! --->
+
+<!--
+<shipBlueprint name="GHOST_SHIP_MED" layout="jelly_truffle" img="jelly_truffle_pirate">
+	<class>Пёстрые обломки</class>
+	<systemList>
+		<pilot power="2" room="0"/>
+		<doors power="2" room="1"/>
+		<oxygen power="1" room="4"/>
+		<medbay power="2" room="3"/>
+		<shields power="6" room="6"/>
+		<engines power="4" room="2"/>
+		<weapons power="6" room="5"/>
+	</systemList>
+	<weaponList count="3">
+		<weapon name="LASER_BURST_2"/>
+		<weapon name="LASER_BURST_3"/>
+		<weapon name="BEAM_FIRE"/>
+	</weaponList>
+	<health amount="22"/>	
+	<maxPower amount ="19"/>
+	<crewCount amount = "0"/>
+</shipBlueprint>
+
+<shipBlueprint name="GHOST_SHIP_HARD" layout="jelly_truffle" img="jelly_truffle_pirate">
+	<class>Пёстрые обломки</class>
+	<systemList>
+		<pilot power="3" room="0"/>
+		<doors power="3" room="1"/>
+		<oxygen power="1" room="4"/>
+		<medbay power="2" room="3"/>
+		<shields power="6" room="6"/>
+		<engines power="4" room="2"/>
+		<weapons power="8" room="5"/>
+	</systemList>
+	<weaponList count="3">
+		<weapon name="LASER_BURST_2"/>
+		<weapon name="LASER_BURST_3"/>
+		<weapon name="LASER_BURST_3"/>
+		<weapon name="BEAM_3"/>
+	</weaponList>
+	<health amount="22"/>	
+	<maxPower amount ="21"/>
+	<crewCount amount = "0"/>
+</shipBlueprint>
+-->
+
+		
+		
+
+<!--**********************
+Boss files
+************************-->
+
+
+<shipBlueprint name="BOSS_1" layout="boss_1" img="boss_1">
+	<class>Флагман повстанцев</class>
+	<systemList>
+		<pilot power="3" room="0"/> 
+		<shields power="8" room="1"/> 
+		<doors power="3" room="17"/> 
+		<teleporter power="2" room="3"/> 
+		<cloaking power="2" room="15"/> 
+		<!--<weapons power="1" room="6"/> -->
+		<sensors power="2" room="13"/>
+		<medbay power="3" room="5"/> 
+		<engines power="2" room="8"/> 
+		<oxygen power="2" room="7"/>
+		<drones power="1" room="12"/>
+		<artillery power="4" room="9"/>
+		<artillery power="4" room="10"/>
+		<artillery power="3" room="14"/>
+		<artillery power="3" room="18"/>
+	</systemList>
+	<weaponList count="0" missiles="10"/>
+	<health amount="20"/>	
+	<maxPower amount ="42"/>
+</shipBlueprint>
+
+		
+<shipBlueprint name="BOSS_2" layout="boss_2" img="boss_2">
+	<class>Флагман повстанцев</class>
+	<systemList>
+		<pilot power="3" room="0"/> 
+		<shields power="8" room="1"/>  
+		<teleporter power="2" room="3"/>  
+		<!--<weapons power="1" room="6"/>  -->
+		<medbay power="3" room="5"/>  
+		<engines power="3" room="8"/> 
+		<oxygen power="2" room="7"/>
+		<sensors power="2" room="13"/>
+		<drones power="8" room="12"/>
+		<artillery power="4" room="9"/>
+		<artillery power="4" room="10"/>
+		<artillery power="3" room="14"/>
+	</systemList>
+	<weaponList count="0" missiles="10"/>
+	<droneList count="4" drones="10">
+		<drone name="DEFENSE_1"/>
+		<drone name="COMBAT_1"/>
+		<drone name="COMBAT_BEAM"/>
+		<drone name="BOARDER_BOSS"/>
+	</droneList>
+	<health amount="22"/>	
+	<maxPower amount ="44"/>
+</shipBlueprint>
+
+
+<shipBlueprint name="BOSS_3" layout="boss_3" img="boss_3">
+	<class>Флагман повстанцев</class>
+	<systemList>
+		<pilot power="3" room="0"/>  
+		<shields power="8" room="1"/>  
+		<teleporter power="2" room="3"/> 
+		<!--<weapons power="4" room="6"/>  -->
+		<medbay power="3" room="5"/>   
+		<engines power="6" room="8"/>
+		<oxygen power="2" room="7"/>
+		<artillery power="4" room="9"/>
+		<artillery power="4" room="10"/>
+	</systemList>
+	<weaponList count="0" missiles="10"/>
+		<!--<weapon name="ION_2"/>
+		<weapon name="BEAM_FIRE"/>
+	</weaponList>-->
+	<health amount="20"/>	
+	<maxPower amount ="31"/>
+	<boardingAI>invasion</boardingAI>
+</shipBlueprint>
+

@@ -1,0 +1,561 @@
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--  
+			SUMMARY - 
+A list of all main events to be called by lists
+	does not include sub-events)
+	
+Structure:
+START_BEACON_PIRATE
+	STORE_PIRATE
+	NOTHING_PIRATE
+	
+Hostile:
+	PIRATE
+	PIRATE_NO_ESCAPE
+	
+Neutral:
+	PIRATE_CIVILIAN (with commly used SAVE_CIVILIAN_LIST)
+	PIRATE_BRIBER
+	PIRATE_CHOICE
+	PIRATE_SLAVER
+	FRIENDLY_SLAVER
+	
+Environment:
+	PIRATE_SUN
+	PIRATE_ASTEROID
+	
+Boarders:
+	BOARDERS_SUN
+	BOARDERS_ASTEROID
+	FLOATING_CARGO
+--->
+
+
+
+<eventList name="HOSTILE_PIRATE">
+	<event load="PIRATE"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_SUN"/>
+</eventList>
+
+
+<eventList name="NEUTRAL_PIRATE">
+	<event load="PIRATE_CHOICE"/>
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="MERCENARY"/>
+	<event load="DISTRESS_BEACON"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="ASTEROID_EXPLORE"/>
+	
+	<event load="ASTEROID_DERELICT_SHIP"/> <!-- CRYSTAL UNLOCK-->
+</eventList>
+
+
+<eventList name="BOARDERS_PIRATE">
+	<event load="BOARDERS"/>
+	<event load="STATION_SICK"/>
+	<event load="BOARDERS_SUN"/>
+	<event load="BOARDERS_HACKING"/>
+	<event load="FLOATING_CARGO"/>
+</eventList>
+
+
+<eventList name="DISTRESS_BEACON_PIRATE">
+	<event load="STRANDED_BEACON"/>
+	<event load="CIVILIAN_ASTEROIDS_BEACON"/> 
+	<event load="ESCORT_BEACON"/>
+	<event load="PIRATE_CIVILIAN_BEACON"/>
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="DISTRESS_TRAPPED_MINER"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="DISTRESS_STATION_DISEASE"/>
+</eventList>
+
+<eventList name="NEBULA_PIRATE">
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/> 
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_TRADER"/>
+	<event load="NEBULA_LOST_SHIP"/> 
+	<event load="NEBULA_BOARDING"/>
+	<event load="NEBULA_REBEL_UNDETECTED"/> 
+	<event load="NEBULA_LOST_SHIP"/> 
+	<event load="NEBULA_REBEL_BOARDING"/>
+	<event load="STORM_ITEMS"/>
+	<!--<event load="STORM_BOARDING"/> -->
+	<event load="STORM_ITEMS"/>
+</eventList>
+
+<eventList name="QUESTS_PIRATE">
+	<event load="MERCHANT_REQUEST"/>
+	<event load="MERCENARY_WORK_START"/>
+	<event load="QUEST_ESCORT"/>
+</eventList>
+
+
+
+<!-----------
+		STRUCTURE!!!
+	Necessary events
+------------>
+
+<event name="START_BEACON_PIRATE">
+	<text load="START_BEACON_PIRATE"/>
+</event>
+<textList name="START_BEACON_PIRATE">
+	<text>Несколько лет назад этот регион был выгодным местом для торговли. Теперь он переполнен бандитами и пиратами. Стоит соблюдать осторожность.</text>
+	<text>Этот изолированный регион был ввергнут в хаос в начале восстания. Даже в мирное время он был населен пиратами, но сейчас там базируется центр управления многочисленных пиратских флотов.</text>
+	<text>Если доклады правдивы, эта территория находится под контролем пиратов уже достаточно долгое время. Некоторые торговцы всё ещё пытаются торговать с оставшимися поселениями, но они очень сильно рискуют.</text>
+	<text>Несколько дружественных Федерации планет всё ещё существуют в этом секторе, но они постоянно страдают от пиратских набегов. Это опасный сектор, так что будьте осторожны.</text>
+</textList>
+
+<event name="STORE_PIRATE">
+	<text load="STORE_PIRATE"/>
+	<store/>
+</event>
+<textList name="STORE_PIRATE">
+	<text>Несколько маленьких кораблей видны в видоискателе, и вы практически активировали орудийную систему наведения. Но тут сенсоры показали, что это просто честные торговцы. Эти пираты совсем замучили, так и до нервного срыва недалеко... Вы связываетесь с торговцами, интересуясь их товарами.</text>
+	<text>Вы зафиксировали центр активности неподалеку. Большая корпорация установила торговый склад и оставила здесь достаточно хорошо вооруженных кораблей патрулировать это место. Похоже, это довольно безопасное место для ремонта.</text>
+	<text>Вы получаете широковещательное автоматическое сообщение: «Приветствуем вас в нашем скромном торговом депо и верфи! Мы рады всем, но попробуйте что-нибудь выкинуть, и наши 152 автоматические турели-спутники сделают из вашего корабля решето!»</text>
+	<text>Хорошо вооруженное транспортное судно и эскадрилья истребителей находятся на орбите неподалёку. Вы не уверены, что можете им доверять, но, как говорят, беднякам выбирать не приходится.</text>	
+</textList>
+
+
+<event name="NOTHING_PIRATE">
+	<text load="NOTHING_PIRATE"/>
+</event>
+<textList name="NOTHING_PIRATE">
+	<text>Как только вы прибыли, небольшой корабль вышел из маскировки позади вас. Вы немедленно активируете щиты и заряжаете орудия, но они невозмутимо продолжают движение. Вы пытаетесь успокоить свои нервы.</text>
+	<text>Небольшой пиратский корабль сообщает вам: «Вот это классный корабль у тебя». Вы делаете предупредительный выстрел мимо их носа, и они отвечают: «Эй! Нет нужды в насилии! Это был всего лишь комментарий...»</text>
+	<text>Единственная вещь в радиусе сканера — старое заброшенное горнодобывающее сооружение с заправочной станцией. Похоже их уже обчистили мародеры.</text>
+	<text>Вы прибыли к небольшому флоту кораблей инжи, они взяли вас в прицел с сообщением: «Пиратство негативно влияет на общество. Запрещено». Вы заверяете их в благих намерениях и они пропускают вас.</text>
+</textList>
+
+
+
+
+<!-----------
+		HOSTILE!!!
+	Events that call up a fight for sure
+------------>
+
+
+<event name="PIRATE">
+	<text load="PIRATE"/>
+	<ship load="PIRATE" hostile="true"/>
+</event>
+<textList name="PIRATE">
+	<text>Как только вы входите в систему, к вам с большой скоростью направляется пиратский корабль. На вызовы он не отвечает. Готовьтесь к бою.</text>
+	<text>Сразу по прибытии в систему вас приветствует маленький крейсер: «Какая удача, что мы наткнулись на друг друга. Ничего личного, но у вас информация, которая нам нужна!»</text>
+	<text>Система, куда вы прибыли, поначалу казалась пустой. Однако затем из-за одной из планет вынырнул корабль и передал сообщение: «Ха-ха, я — беспощадный пират Тако! Готовьтесь к смерти!»</text>
+	<text>Одинокий корабль у маяка сообщает вам: «Наконец, после месяцев ожидания, кто-то попался в нашу ловушку!»</text>
+	<text>Вы едва успеваете закончить прыжок, как ваш корабль предупреждает, что на вас надвигается противник с оружием наготове.</text>
+</textList>
+
+
+<event name="PIRATE_NO_ESCAPE" unique="true">
+	<text>По прибытии на вашем экране загораются предупреждения. Пират, оказавшийся по всей видимости неподалёку, разжился современными инструментами взлома, и сейчас он пытается вырубить ваш двигатель. Команда как может поддерживает его в рабочем состоянии, пока вы разбираетесь с этим «хакером»...</text>
+	<status type="limit" target="player" system="engines" amount="1"/>
+	<ship load="PIRATE_NO_ESCAPE" hostile="true"/>
+</event>
+
+
+
+
+
+<!-----------
+		NEUTRAL!!!
+	Events that could have a fight
+------------>
+
+
+
+<event name="PIRATE_CIVILIAN" unique="false">
+	<text load="PIRATE_CIVILIAN"/>
+	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
+	<choice>
+		<text>Помочь гражданскому кораблю.</text>
+		<event>
+			<text>Вы включаете оружие и готовитесь к бою с пиратским кораблём.</text>
+			<ship load="PIRATE_CIVILIAN" hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Держаться от него подальше.</text>
+		<event>
+			<text>Бой выводит их из радиуса действия ваших сканеров. Через некоторое время сигнал бедствия пропадает.</text>
+		</event>
+	</choice>
+</event>
+<textList name="PIRATE_CIVILIAN">
+	<text planet="PLANET_POPULATED_SMALL">Вы прибываете в эту систему как раз вовремя, чтобы застать пиратский корабль, преследующий гражданских. Жертва отчаянно шлёт передачи на частоте сигнала бедствия.</text>
+	<text>Сканеры показывают, что неподалеку идёт бой. Похоже кого-то атакуют космические пираты.</text>
+	<text>Вы засекли два корабля, один преследует другого... Сканеры показывают, что преследователь — пират.</text>
+	<text>В районе только два корабля и похоже они сражаются. У одного пиратские знаки.</text>
+	<text>Сразу же после прибытия к маяку, вы получаете сообщение от небольшого шаттла: «Помогите! На нас напали пираты!»</text>
+	<text>Вы выходите из прыжка и видите лазерные заряды, летящие с другой стороны маяка. Похоже на кого-то напали пираты.</text>
+</textList>
+<eventList name="SAVE_CIVILIAN_LIST">   
+	<event>
+		<text>Корабль, который вы спасли, был сильно повреждён в бою. Большая часть экипажа согласилась сойти на ближайшей станции. Один из них хочет присоединиться к вам.</text>
+		<choice>
+			<text>Добро пожаловать на борт!</text>
+			<event>
+				<text>Выживший появляется на борту корабля.</text>
+				<crewMember amount="1"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Отклонить запрос.</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>Корабль, который атаковали пираты, был научным судном. Они благодарят вас за спасение и предлагают маленькое вознаграждение.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event> 
+	<event> 
+		<text>Кажется, что команда не пережила нападение. Вы берёте все что можно с останков судна.</text>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>Они отвечают: «Хорошо, что вы появились тут, иначе мы бы были уже мертвы. Я — кораблестроитель, и хотел бы помочь вам за то, что вы помогли мне».</text>
+		<choice>
+			<text>Капитан предлагает установить часть оборудования на ваш корабль.</text>
+			<event>
+				<autoReward level="LOW">weapon</autoReward>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>«Этот сектор становится всё более опасным для друзей Федерации. Думаю, моя команда могла бы починить кое-какие пробоины в обшивке вашего корабля в качестве благодарности».</text>
+		<damage amount="-5"/>
+	</event>
+	<event>
+		<text>Пока вы отвлекали враждебный корабль на себя, гражданский корабль благоразумно предпочёл смыться.</text>
+	</event>
+</eventList>
+
+
+
+<event name="PIRATE_BRIBER" unique="true">
+	<text load="PIRATE_BRIBER"/>
+	<ship load="PIRATE_BRIBER" hostile="false"/>
+	<choice>
+		<text>Принять взятку.</text>
+		<event>
+			<text>«Верный выбор, сынок. Мы оба заработаем на этом».</text>
+			<autoReward level="LOW">standard</autoReward>
+		</event>
+	</choice>
+	<choice>
+		<text>Проявить героизм, атаковав пиратов.</text>
+		<event>
+			<text>Пиратский корабль прекратил преследование и направил орудия на ваш корабль.</text> 
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</event>
+<eventList name="PIRATE_BRIBER_WIN">
+	<event>
+		<text>Внимательнее присмотревшись к атакованному кораблю, вы понимаете, что это разведчик повстанцев! Он сильно потрёпан и не способен оказать существенное сопротивление.</text>
+		<choice hidden="true">
+			<text>Уничтожить корабль и собрать трофеи.</text>
+			<event>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+		<choice>
+			<text>Использовать влияние, полученное во время спасения их жизней, чтобы убедить их задержать флот преследователей.</text>
+			<event>
+				<text>Надо надеяться, это даст вам дополнительное время, чтобы добраться до следующего сектора.</text>
+				<modifyPursuit amount="-1"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>Вы опоздали. Повреждение корпуса лишило команду кислорода во время борьбы с пиратами. Вы собираете то что можете.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Жертва пиратов улетает от вас, до того как вы успеваете выйти с ней на контакт.</text>
+	</event>
+	<event>
+		<text>«Спасибо за помощь! Я — торговец оружием, обычно я работаю только с повстанцами, но, учитывая обстоятельства, сделаю исключение».</text>
+		<store/>
+	</event>-
+	<event>
+		<text>«Слава небесам, вы оказались рядом! Мы не можем предложить многого, но наш инженер, скорее всего, сможет подлатать вас после этого ужасного сражения».</text>
+		<damage amount="-15"/>
+	</event>
+</eventList>	
+<textList name="PIRATE_BRIBER">
+	<text>Вы встречаете пирата, преследующего неизвестный корабль. Вы сразу получаете передачу от пирата: «Не влезайте в это сражение и вы не пожалеете».</text>
+	<text>Неопознанный корабль сильно повреждён и до сих пор подвергается нападению пиратов. Жертва транслирует сигнал бедствия, но пираты прерывают его и предлагают вам разделить добычу, если вы не будете вмешиваться.</text>
+	<text>Как только вы вышли из прыжка, ракета пролетает прямо перед носом корабля. Быстрое сканирование выявляет корабль с пиратскими знаками, преследующий неизвестное судно. Пираты сообщают вам: «Чёрт, мы не ждали компанию. Не вмешивайтесь и сможете заработать».</text>
+</textList>
+
+
+
+		
+<event name="PIRATE_CHOICE" unique="false">
+	<img planet="NONE"/>
+	<text>После завершения прыжка вы получаете сообщение от корабля неподалеку: «Привет и добро пожаловать на наш маяк! За небольшую плату мы позволим тебе продолжить свой путь».</text>
+	<ship load="PIRATE" hostile="false"/>
+	<choice>
+		<text>Заплатить дань.</text>
+		<event>
+			<text>«Верное решение, братан».</text>
+			<item_modify>
+				<item type="scrap" min="-25" max="-15"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>Отклонить «предложение».</text>
+		<event>
+			<text>«Прискорбно, прискорбно. Сейчас ты пожалеешь об этом решении».</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</event>
+
+
+
+
+<event name="PIRATE_SLAVER" unique="false">
+	<text>К вам приближается тяжеловооружённый корабль работорговцев. «Отдайте нам одного из ваших, и мы позволим вам убраться отсюда невредимыми!»</text>
+	<ship load="PIRATE_SLAVER" hostile="false"/>
+	<choice>
+		<text>Бросить жребий и выбрать, кто отправится в рабство.</text>
+		<event>
+			<crewMember amount="-1"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Мы своих в рабство не отдаём!</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice req="engines" lvl="6" hidden="true">
+		<text>(Улучшенные двигатели) Попытаться оторваться от корабля работорговцев.</text>
+		<event load="PIRATE_SLAVER_RUN"/>
+	</choice>
+</event>
+<eventList name="PIRATE_SLAVER_RUN">
+	<event>
+		<text>Вы отдаёте приказ «Полный вперёд!» Напрасная попытка — работорговцы быстро догоняют вас и занимаю позицию для атаки.</text>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>Вы переводите все возможные мощности на двигатель и сбегаете. Вы застали их врасплох, но они, похоже, нагоняют вас. К счастью вы можете держать их на расстоянии достаточно долго, чтобы успеть зарядить FTL привод.</text>
+	</event>
+	<event>
+		<text>Вы запускаете двигатель и пытаетесь бежать. Их более медленный корабль не поспевает; в конце концов он сдается и возвращается к маяку, ждать добычу полегче.</text>
+	</event>
+</eventList>
+	
+
+
+
+
+<event name="FRIENDLY_SLAVER" unique="true"> <!-- add an event if you kill the crew? -->
+	<ship load="PIRATE_SLAVER" hostile="false"/>
+	<text>Вы опознаёте корабль — это известный в этом секторе работорговец. Он выходит с вами на связь и предлагает по дешёвке своих «чернорабочих».</text>
+	<choice>
+		<text>Купить одного из рабов, освободить его и принять в команду.</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-50" max="-60"/>
+			</item_modify>
+			<crewMember amount="1"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Уничтожить рабовладельческую шваль!</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Игнорировать работорговца и продолжить полёт.</text>
+		<event/>
+	</choice>
+	<choice req="teleporter" lvl="2" hidden="true">
+		<text>(Улучшенный телепортер) Использовать телепортер — попытаться проникнуть на корабль и освободить рабов.</text>
+		<event load="FRIENDLY_SLAVER_TELEPORTER"/>
+	</choice>
+</event>
+<eventList name="FRIENDLY_SLAVER_TELEPORTER">
+	<event>
+		<text>Вы отправляете маленькую группу. Они работают быстро — освобождают рабов и телепортируются обратно на ваш корабль. Один из пленных, похоже, годится для боя, вы кидаете ему оружие и готовитесь к битве.</text>
+		<crewMember amount="1"/>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>Вы отсылаете команду, чтобы попытаться освободить заключенных. Им удается добраться до одного пленного до того, как их ловит и загоняет в угол команда неприятеля. Вы быстро телепортируете свою команду и пленника обратно на свой корабль.</text>
+		<crewMember amount="1"/>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>Вы телепортируете команду на их корабль. Но оценка местоположения заключенных была ошибочна. К тому времени как они добираются до их расположения, работорговцы обнаруживают их. Вы возвращаете их обратно на корабль и готовитесь к бою.</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+
+
+
+
+<!-----------
+		ENVIRONMENT!!!
+	Events with unique environments
+------------>
+
+
+
+<event name="PIRATE_SUN" unique="true">
+	<img back="BG_DARK"/>
+	<text>Маяк был поставлен слишком близко к звезде супер-гиганту класса М! Корабль точно перегреется пока вы будете выбираться отсюда... или погибнете. Пираты, наверное забывшие об опасности солнца, несутся в бой.</text>
+	<ship load="PIRATE" hostile="true"/>
+	<environment type="sun"/>
+</event>
+
+
+<event name="PIRATE_ASTEROID">
+	<img planet="NONE" back="BG_DARK"/>
+	<environment type="asteroid"/>
+	<text>Пиратский корабль затаился в астероидном поле. Он сразу же атакует.</text>
+	<ship load="PIRATE" hostile="true"/>
+	<choice>
+		<text>Развернуться и принять бой.</text>
+		<event/>
+	</choice> <!--
+	<choice req="pilot" lvl="2" hidden="true">
+		<text>(Улучшенная рубка управления) Попытаться выйти из астероидного поля до боя с пиратами.</text>
+		<event load="PIRATE_ASTEROID_PILOTING"/>
+	</choice> -->
+</event>
+<!-- No longer used 
+<eventList name="PIRATE_ASTEROID_PILOTING">
+	<event>
+		<text>Вашему пилоту удалось вывести ваш корабль из астероидного поле без повреждений. Вы разворачиваетесь для боя с пиратами.</text>
+	</event>
+	<event>
+		<text>Не смотря искусное пилотирование, пираты вас нагоняют до того, как вы покидаете астероидное поле. У вас один выбор — сражаться.</text>
+		<environment type="asteroid"/>
+	</event>
+</eventList>  -->
+
+
+
+
+
+<!-----------
+		BOARDERS!!!
+	Events with boarder calls
+------------>
+
+
+
+<event name="BOARDERS_PIRATE">
+	<text load="BOARDERS_PIRATE"/>
+	<boarders min="2" max="4" class="random"/>
+</event>
+<textList name="BOARDERS_PIRATE" unique="false">
+	<text>ШШШШШШШШШШШШШШШШШ</text>
+</textList>
+
+
+<event name="BOARDERS_SUN" unique="true">
+	<text>Прыжок вывел вас прямиком в корону местной звезды. Вы получаете сообщение с висящего неподалёку пиратского корабля: «Как здорово, что вы здесь — нашу посудину здорово пожгло протуберанцами, так что мы заберём вашу!» На борту корабля обнаружены посторонние!</text>
+	<boarders min="2" max="4" class="human"/>
+	<environment type="sun"/>
+</event>
+
+<event name="BOARDERS_ASTEROID" unique="true">
+	<img back="BG_DARK" planet="NONE"/>
+	<text>Вы прыгаете прямо в опасное астероидное поле. И что хуже, сенсоры сообщают, что пиратская крепость нацелилась на ваш корабль и активировала телепортер. Готовьтесь к бою!</text>
+	<boarders min="2" max="4" class="human"/>
+	<environment type="asteroid"/>
+</event>
+
+<event name="FLOATING_CARGO" unique="true">
+	<text>Недалеко от маяка вы обнаруживаете уничтоженный грузовой корабль. Часть уцелевшего груза висит в пространстве поблизости.</text>
+	<choice hidden="true">
+		<text>Поднять груз на борт.</text>
+		<event load="FLOATING_CARGO_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Не трогать — а то подозрительно это как-то.</text>
+		<event>
+			<text>Вы не трогаете груз и готовитесь к прыжку.</text>
+		</event>
+	</choice>
+	<choice req="sensors" lvl="2" hidden="true">
+		<text>(Улучшенные сенсоры) Тщательно просканировать ящики с грузом.</text>
+		<event load="FLOATING_CARGO_SCAN_LIST"/>
+	</choice>
+	<choice req="ADV_SCANNERS" hidden="true">
+		<text>(Сканеры широкого охвата) Тщательно просканировать ящики с грузом.</text>
+		<event load="FLOATING_CARGO_SCAN_LIST"/>
+	</choice>
+</event>
+<eventList name="FLOATING_CARGO_LIST">
+	<event>
+		<text>В ящиках — различные военные припасы. Вы забираете всё полезное, прочее выкидываете за борт.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>Груз в основном состоит из одежды и всякой бытовой мелочёвки. Впрочем, вам удаётся набрать немного лома.</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Когда вы поднимаете груз на борт, из одного из ящиков вылезает пират и говорит: «Ох, блин, затекло всё... А, да, кстати — приготовьтесь умирать!» При звуках его голоса распахиваются и остальные ящики...</text>
+		<boarders min="2" max="4" class="human"/>
+	</event>
+	<event>
+		<text>Притащив груз на борт, вы даже не успели его открыть, как пиратский корабль выходит из укрытия и атакует. В это же время ящики распахнулись. Захватчики на борту!</text>
+		<boarders min="2" max="4" class="human"/>
+		<ship load="JELLY_PIRATE_WITHBOARDERS" hostile="true"/>
+	</event>
+</eventList>
+<eventList name="FLOATING_CARGO_SCAN_LIST">
+	<event>
+		<text>Груз не содержит ровным счётом ничего интересного. Зато с корабля вам удаётся набрать немного лома.</text>
+		<item_modify>
+			<item type="scrap" min="20" max="35"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>Вашим сенсорам удаётся преодолеть защитную оболочку ящиков и просканировать груз. Это какие-то военные припасы. Вы забираете всё полезное, прочее выкидываете за борт.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>Ваши сенсоры обнаруживают в ящиках живых существ. Вооружённых. Похоже, это хитрая пиратская засада.</text>
+		<choice hidden="true">
+			<text>Уничтожить ящики, чтобы в эту засаду не попался кто-то другой.</text>
+			<event>
+				<text>Вы стреляете по ящикам, вскрывая их и разбрасывая пиратов по космосу во все стороны. Откуда-то появляется пиратский корабль и передаёт сообщение: «Ты за это заплатишь, гад!»</text>
+				<ship load="PIRATE" hostile="true"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Не трогать и подготовиться к прыжку.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+
+
+
+
+
+
