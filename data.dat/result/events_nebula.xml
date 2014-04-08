@@ -223,7 +223,7 @@ Storm Environment:
 		<event load="NEBULA_REBEL_UNDETECTED_LIST"/>
 	</choice>
 	<choice req="cloaking" hidden="true" hidden="true"> 
-		<text>(Cloaking) Cloak to stay hidden.</text>
+		<text>(Маскировка) Замаскироваться, чтобы быть невидимым.</text>
 		<event>
 			<text>Вы используете систему маскировки, чтобы проскользнуть в туманность незамеченным.</text>
 		</event>
@@ -239,7 +239,7 @@ Storm Environment:
 			</event>
 		</choice>
 		<choice req="engines" lvl="4" hidden="true">
-			<text>(Engines) Fully power the engines to out-run them.</text>
+			<text>(Улучшенные двигатели) Включить двигатели на полную мощность и оторваться от них.</text>
 			<event>
 				<text>Ваши мощные двигатели позволяют вам оторваться от корабля, и со временем затеряться в туманности.</text>
 			</event>
@@ -272,7 +272,7 @@ Storm Environment:
 		</event>
 	</choice>
 	<choice req="weapons" lvl="6" hidden="true">
-		<text>(Weapons) Activate your advanced weapons threateningly.</text>
+		<text>(Улучшенные орудия) Многозначительно активировать ваши грозные орудия.</text>
 		<event>
 			<text>They hail you, "There's no need for aggression... Perhaps this would convince you to look the other way?"</text>
 			<choice>
@@ -385,7 +385,7 @@ Storm Environment:
 		<event/>
 	</choice>	
 	<choice req="teleporter" hidden="true"> 
-		<text>(Teleporter) Lock onto their life-signs with your teleporter.</text>
+		<text>(Телепортер) Попробовать телепортировать из того места, где сенсоры регистрируют признаки жизни.</text>
 		<event>
 			<text>Вы переместили экипаж Федерации на борт. Один с радостью присоединился к вашему экипажу, остальные ждут высадки на следующей станции.</text>
 			<crewMember amount="1"/>
@@ -393,7 +393,7 @@ Storm Environment:
 		</event>
 	</choice>
 	<choice req="ADV_SCANNERS" hidden="true">
-		<text>(Long-ranged Scanner) Pump extra power into your sensors and try to track them.</text>
+		<text>(Сканеры широкого охвата) Подать дополнительную энергию в ваши сенсоры, и попробовать отыскать их.</text>
 		<event load="NEBULA_LOST_SHIP_LIST2"/>
 	</choice>
 </event>
@@ -550,14 +550,14 @@ Storm Environment:
 		<event load="NEBULA_REBEL_CHASE_LIST"/>
 	</choice>
 	<choice req="sensors" lvl="3">
-		<text>(Advanced Sensors) Try to track them as you move to engage.</text>
+		<text>(Улучшенные сенсоры) Приблизиться к ним, следуя их траектории, и одновременно приготовиться к атаке.</text>
 		<event>
 			<text>As soon as they see you they make a run for it. You squeeze what you can out of the malfunctioning sensors and are able to keep track of them long enough to get in firing range.</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice req="ADV_SCANNERS" hidden="true">
-		<text>(Long-ranged Scanner) Try to track them as you move to engage.</text>
+		<text>(Сканеры широкого охвата) Приблизиться к ним, следуя их траектории, и одновременно приготовиться к атаке.</text>
 		<event>
 			<text>As soon as they see you they make a run for it. You squeeze what you can out of the malfunctioning sensors and are able to keep track of them long enough to get in firing range.</text>
 			<ship hostile="true"/>
@@ -648,7 +648,7 @@ Storm Environment:
 		</event>
 	</choice>
 	<choice req="engines" lvl="3" max_group="0" hidden="true">
-		<text>(Engines) Attempt to out-run it.</text>
+		<text>(Улучшенные двигатели) Попытаться убежать.</text>
 		<event load="STORM_AUTO_ESCAPE"/>
 	</choice>
 	<choice req="engines" lvl="6" max_group="0" hidden="true">
@@ -658,7 +658,7 @@ Storm Environment:
 		</event>
 	</choice>
 	<choice req="cloaking" hidden="true">
-		<text>(Cloaking) Use your cloaking to escape.</text>
+		<text>(Маскировка) Использовать маскировку, чтобы спастись.</text>
 		<event>
 			<text>Используя свою продвинутую систему маскировки вы с лёгкостью затерялись от вашего преследователя в космическом шторме.</text>
 		</event>
@@ -699,7 +699,7 @@ Storm Environment:
 		<event/>
 	</choice>
 	<choice req="pilot" lvl="2" hidden="true">
-		<text>(Piloting) Have your pilot carefully explore the debris.</text>
+		<text>(Улучшенная рубка управления) Пусть ваш пилот осторожно исследует обломки.</text>
 		<event load="STORM_ITEMS_PILOTING"/>
 	</choice>
 	<environment type="storm"/>

@@ -367,7 +367,7 @@ Boarders:
 		</event>
 	</choice>
 	<choice req="engines" lvl="6" hidden="true">
-		<text>(Engines) Attempt to out-run the slaver ship.</text>
+		<text>(Улучшенные двигатели) Попытаться оторваться от корабля работорговцев.</text>
 		<event load="PIRATE_SLAVER_RUN"/>
 	</choice>
 </event>
@@ -411,7 +411,7 @@ Boarders:
 		<event/>
 	</choice>
 	<choice req="teleporter" lvl="2" hidden="true">
-		<text>(Teleporter) Use your teleporter to attempt to board the ship and release some of the slaves.</text>
+		<text>(Улучшенный телепортер) Использовать телепортер — попытаться проникнуть на корабль и освободить рабов.</text>
 		<event load="FRIENDLY_SLAVER_TELEPORTER"/>
 	</choice>
 </event>
@@ -460,7 +460,7 @@ Boarders:
 		<event/>
 	</choice> <!--
 	<choice req="pilot" lvl="2" hidden="true">
-		<text>(Piloting) Attempt to maneuver out of the asteroid field before engaging the pirate.</text>
+		<text>(Улучшенная рубка управления) Попытаться выйти из астероидного поля до боя с пиратами.</text>
 		<event load="PIRATE_ASTEROID_PILOTING"/>
 	</choice> -->
 </event>
@@ -521,11 +521,11 @@ Boarders:
 		</event>
 	</choice>
 	<choice req="sensors" lvl="2" hidden="true">
-		<text>(Advanced Sensors) Run an advanced scan on the boxes.</text>
+		<text>(Улучшенные сенсоры) Тщательно просканировать ящики с грузом.</text>
 		<event load="FLOATING_CARGO_SCAN_LIST"/>
 	</choice>
 	<choice req="ADV_SCANNERS" hidden="true">
-		<text>(Long-Ranged Scanners) Run an advanced scan on the boxes.</text>
+		<text>(Сканеры широкого охвата) Тщательно просканировать ящики с грузом.</text>
 		<event load="FLOATING_CARGO_SCAN_LIST"/>
 	</choice>
 </event>

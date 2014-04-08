@@ -1,21 +1,21 @@
-﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
 
-<!--   
-			SUMMARY  - 
+<!--
+			SUMMARY  -
 A list of all main events to be called by lists
 	does not include sub-events)
-	
+
 
 Structure:
 	NO_FUEL_FLEET
-	
+
 No Beacon:    	NO_FUEL (this is a list)
 	FUEL_FLEET_DELAY
 	FUEL_NOTHING
 	FUEL_TRADER
 	FUEL_EXPLORE
 	FUEL_APPROACH
-	
+
 Beacon:    NO_FUEL_DISTRESS (this is a list)
 	FUEL_FLEET_DISTRESS
 	FUEL_NOTHING_DISTRESS
@@ -23,7 +23,7 @@ Beacon:    NO_FUEL_DISTRESS (this is a list)
 	FUEL_TRADER_DISTRESS
 
 Sector Specific:
-	
+
 --->
 
 
@@ -40,11 +40,11 @@ Sector Specific:
 	<ship load = "REBEL_FLEET_FUEL" hostile ="true"/>
 	<fleet>rebel</fleet>
 </event>
-	
-	
-	
-	
-	
+
+
+
+
+
 
 
 
@@ -56,12 +56,12 @@ Beacon Off.....
 -------------------->
 <eventList name="NO_FUEL">
 	<event load="FUEL_FLEET_DELAY"/>
-	
+
 	<event load="FUEL_NOTHING"/>
 	<event load="FUEL_NOTHING"/>
 	<event load="FUEL_NOTHING"/>
 	<event load="FUEL_NOTHING"/>
-	
+
 	<event load="FUEL_TRADER"/>
 	<event load="FUEL_EXPLORE"/>
 	<event load="FUEL_APPROACH"/>
@@ -70,7 +70,7 @@ Beacon Off.....
 </eventList>
 
 <event name="FUEL_FLEET_DELAY">
-	<text load="FUEL_FLEET_DELAY_LIST"/>		
+	<text load="FUEL_FLEET_DELAY_LIST"/>
 	<modifyPursuit amount="-1"/>
 	<choice hidden="true">
 		<text>Continue...</text>
@@ -123,12 +123,12 @@ Beacon Off.....
 	<text>A large caravan of merchant ships jumps to a location near your position.  Sensing an opportunity, one ship breaks off from the fleet to offer you an exchange.</text>
 	<text>A modified YT-1300 freighter jumps to an area near your sector.  Your gut tells you these people are smugglers, but they seem to be feeling altruistic and present an offer of assistance.</text>
 </textList>
-	
+
 <event name="FUEL_EXPLORE">
 	<text>Although your lack of fuel cells prevents your ship from jumping, you can still use your impulse engines.  Will you spend some time exploring the nearby system?</text>
 	<choice hidden="true">
 		<text>Explore the nearby area.</text>
-		<event load="FUEL_EXPLORE_LIST"/>  
+		<event load="FUEL_EXPLORE_LIST"/>
 	</choice>
 	<choice>
 		<text>Stay near the beacon.</text>
@@ -192,7 +192,7 @@ Beacon Off.....
 		<ship load="REBEL_AUTO_FUEL" hostile="true"/>
 	</event>
 </eventList>
-	
+
 <event name="FUEL_APPROACH">
 	<text>A ship approaches.  They hail you saying, "You need some fuel?  We'll prepare to dock to help."</text>
 	<choice hidden="true">
@@ -202,15 +202,15 @@ Beacon Off.....
 	<choice hidden="true">
 		<text>Request that they keep their distance</text>
 		<event load="FUEL_APPROACH_DECLINE_LIST"/>
-	</choice>  
+	</choice>
 	<choice hidden="true" req="sensors" lvl="3">
 		<text>(Advanced Sensors) Run a detailed scan with your sensors before responding.</text>
 		<event load="FUEL_APPROACH_SCAN_LIST"/>
-	</choice>    
+	</choice>
 	<choice hidden="true" req="ADV_SCANNERS">
 		<text>(Long-Ranged Scanners) Run a detailed scan before responding.</text>
 		<event load="FUEL_APPROACH_SCAN_LIST"/>
-	</choice>    
+	</choice>
 </event>
 <eventList name="FUEL_APPROACH_ACCEPT_LIST">
 	<event>
@@ -273,23 +273,23 @@ Beacon Off.....
 				<ship load="PIRATE_FUEL" hostile="true"/>
 			</event>
 		</choice>
-		<choice req="cloaking" hidden="true"> 
+		<choice req="cloaking" hidden="true">
 			<text>(Cloaking) Cloak and get out of scanning range before they have a chance to lock on.</text>
 			<event>
 				<text>Your highly advanced cloaking system allows you to get out of range easily since they were still out of firing range.  Eventually the ship jumps away.</text>
 			</event>
 		</choice>
-	</event>		
+	</event>
 </eventList>
 
-	
-	
 
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
 <!-------------------
 DEFAULT FUEL EVENTS
 Beacon On!!!!
@@ -299,7 +299,7 @@ Beacon On!!!!
 <eventList name="NO_FUEL_DISTRESS">
 	<event load="FUEL_NOTHING_DISTRESS"/>
 	<event load="FUEL_NOTHING_DISTRESS"/>
-	
+
 	<event load="FUEL_SELLER_DISTRESS"/>
 	<event load="FUEL_TRADER_DISTRESS"/>
 	<event load="FUEL_EXPLORE"/>
@@ -317,7 +317,7 @@ Beacon On!!!!
 
 
 <event name="FUEL_FLEET_DISTRESS">
-	<text load="FUEL_FLEET_DISTRESS_LIST"/>		
+	<text load="FUEL_FLEET_DISTRESS_LIST"/>
 	<modifyPursuit amount="1"/>
 	<choice hidden="true">
 		<text>Continue...</text>
@@ -346,9 +346,9 @@ Beacon On!!!!
 	<text>A few civilian ships are within scanning range, yet none respond to your calls.</text>
 	<text>No ships pass through the area.</text>
 </textList>
-	
+
 <event name="FUEL_SELLER_DISTRESS">
-	<ship load="AUTO_FUEL_SELLER" hostile="false"/>  
+	<ship load="AUTO_FUEL_SELLER" hostile="false"/>
 	<text>A small ship arrives with a message, "This automated ship will provide re-fueling services once a monetary exchange is complete.  Complimentary amounts of fuel are available in emergencies only."</text>
 	<choice hidden="true">
 		<text>Request emergency fuel reserves.</text>
@@ -427,7 +427,7 @@ Beacon On!!!!
 		</item_modify>
 	</event>
 </eventList>
-<eventList name="FUEL_TRADER_PT2"> <!-- this list is if the player cant afford the initial trade, he'll either give up and leave or give a second cheaper offer.-->  
+<eventList name="FUEL_TRADER_PT2"> <!-- this list is if the player cant afford the initial trade, he'll either give up and leave or give a second cheaper offer.-->
 	<event>
 		<text>They respond: "Seeing how you're in need, is this trade acceptable?"</text>
 		<choice>
@@ -462,7 +462,7 @@ Beacon On!!!!
 			<item type="fuel" min="4" max="7"/>
 			<item type="drones" min="-2" max="-1"/>
 		</item_modify>
-	</event>		
+	</event>
 	<event>
 		<item_modify>
 			<item type="fuel" min="4" max="7"/>
@@ -487,7 +487,7 @@ Beacon On!!!!
 		<text>They end the discussion and prepare to jump away.</text>
 	</event>
 </eventList>
-<!--END NO_FUEL_TRADER STUFF-->	
+<!--END NO_FUEL_TRADER STUFF-->
 
 
 
@@ -517,12 +517,12 @@ Beacon On!!!!
 	<text>Your distress beacon must be working because a ship just jumped nearby. You run a scan on it and activate a red alert. It's a Rebel fighter!</text>
 	<text>A Rebel ship jumps in and hails you, "I knew you would slip up some time. Surrender quietly!"</text>
 </event>
-	
+
 
 <event name="FUEL_ON_REBEL_WARNING">
 	<text>A ship responding to your distress moves in. Unfortunately it turns out to be an automated Rebel scout. It immediately reverses thrust after scanning your ship.</text>
 	<ship load="REBEL_AUTO_WARNING" hostile="true"/>
-</event>	
+</event>
 
 
 <!-----------
@@ -558,7 +558,7 @@ Beacon On!!!!
 	<event>
 		<text>The Engies respond to your signal. "Identity: Federation. I/O error: Federation = [void]." All further hails go unanswered.</text>
 	</event>
-	<event>	
+	<event>
 		<text>The Engies fail to respond, but move to intercept. You detect abnormal electromagnetic signals aboard the ship - someone has reprogrammed these Engies to fight!</text>
 		<ship hostile="true"/>
 	</event>
@@ -566,7 +566,7 @@ Beacon On!!!!
 		<text>The Engies respond to your signal. "Your need: fuel. This unit's need: scrap. Exchange beneficial. Exchange permitted?</text>
 		<choice>
 			<text>Make the trade.</text>
-			<event>	
+			<event>
 				<text>You make the exchange and the Engi leave without another word.</text>
 				<item_modify>
 					<item type="scrap" min="-20" max="-10"/>
@@ -588,16 +588,16 @@ Beacon On!!!!
 		</item_modify>
 	</event>
 </eventList>
-		
 
-		
-		
+
+
+
 
 <!-----------
 		ENGI
 		Specific no fuel events that should eventually be tied to the engi sector
 ------------>
-	
+
 <event name="FUEL_ON_MANTIS_ATTACK">
 	<text load="FUEL_ON_MANTIS_ATTACK"/>
 	<ship load="MANTIS_FUEL" hostile="true"/>
@@ -607,14 +607,14 @@ Beacon On!!!!
 	<text>Before long a ship jumps nearby, no doubt responding to your beacon. However any relief you felt disappears as soon as you recognize the ship is of Mantis design. Prepare for a fight.</text>
 	<text>You detect a Mantis ship approaching and hack into their comm channel and hear, "...hope they put up more of a fight than the last Federation ship. This has been a disappointing day so far." Looks like they're not here to help.</text>
 	<text>A Mantis ship jump nearby. Sensors detect weapon locks and all hope of avoiding a fight fades away.</text>
-	
+
 	<text>A Mantis ship hails you, "Looks like we found the poor fools that need some help. Come brothers, let's 'help them!" They move in to attack.</text>
 	<text>Before long a ship jumps nearby, no doubt responding to your beacon. However any relief you felt disappears as soon as you recognize the ship is of Mantis design. Prepare for a fight.</text>
 	<text>You detect a Mantis ship approaching and hack into their comm channel and hear, "...hope they put up more of a fight than the last Federation ship. This has been a disappointing day so far." Looks like they're not here to help.</text>
 	<text>A Mantis ship jump nearby. Sensors detect weapon locks and all hope of avoiding a fight fades away.</text>
 </event>
-		
-		
+
+
 <!-----------
 		ROCKS
 		Specific no fuel events that should eventually be tied to the rock sector
@@ -637,7 +637,7 @@ Beacon On!!!!
 			<text>The Rock don't take kindly to aliens picking through their belongings, no matter how decrepit they may seem, and you don't take risks in Rock territory. </text>
 		</event>
 	</choice>
-</event>			
+</event>
 <eventList name="FUEL_OFF_ROCK_WRECK_LIST">
 	<event>
 		<text>A short time later the team returns with a stash of ammunition and scrap - but all the fuel on board is long gone.</text>
@@ -684,7 +684,7 @@ Beacon On!!!!
 	</choice>
 	<choice hidden="true">
 		<text>Wait and see.</text>
-		<event load="FUEL_OFF_ROCK_CURIOUS_LIST"/>	
+		<event load="FUEL_OFF_ROCK_CURIOUS_LIST"/>
 	</choice>
 </event>
 <eventList name="FUEL_OFF_ROCK_CURIOUS_LIST">
@@ -696,7 +696,7 @@ Beacon On!!!!
 	</event>
 	<event>
 		<text>The Rock ship circles yours, running scans on your systems. Your worst fears are confirmed when they identify your engines and teleport a bomb straight onto it! Combat ready!</text>
-		<ship load="FUEL_OFF_ROCK_CURIOUS" hostile="true"/>	
+		<ship load="FUEL_OFF_ROCK_CURIOUS" hostile="true"/>
 		<status type="limit" target="player" system="engines" amount="1"/>
 	</event>
 </eventList>

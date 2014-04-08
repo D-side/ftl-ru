@@ -1,6 +1,7 @@
 ﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
 
-<!-- Остаться у маяка.		SUMMARY  - 
+<!--   
+			SUMMARY  - 
 A list of all main events to be called by lists
 	does not include sub-events)
 	
@@ -136,30 +137,31 @@ Beacon Off.....
 	<text>Although your lack of fuel cells prevents your ship from jumping, you can still use your impulse engines. Will you spend some time exploring the nearby system?</text>
 	<choice hidden="true">
 		<text>Исследовать окрестности.</text>
-		<event load="FUEL_EXPLORE_LIST"/>Остаться у маяка.</choice>
+		<event load="FUEL_EXPLORE_LIST"/>  
+	</choice>
 	<choice>
-		<text>Возле маяка вам попалось небольшое астероидное поле.</text>
+		<text>Остаться у маяка.</text>
 		<event/>
 	</choice>
 </event>
 <eventList name="FUEL_EXPLORE_LIST">
 	<event>
-		<text>Приблизиться к астероидам и просканировать их.</text>
+		<text>Возле маяка вам попалось небольшое астероидное поле.</text>
 		<choice hidden="true">
-			<text>Не рисковать.</text>
+			<text>Приблизиться к астероидам и просканировать их.</text>
 			<event load="ASTEROID_EXPLORE_RESULTS"/>
 		</choice>
 		<choice>
-			<text>Вы натыкаетесь на небольшую перевалочную станцию для ближних путешественников. FTL приводы здесь почти никто не использует, и местный запас топливных ячеек скромен, а цена высока. Но вариантов у вас нет...</text>
+			<text>Не рисковать.</text>
 			<event/>
 		</choice>
 	</event>
 	<event>
-		<text>Обменять 20 лома на 5 топлива.</text>
+		<text>Вы натыкаетесь на небольшую перевалочную станцию для ближних путешественников. FTL приводы здесь почти никто не использует, и местный запас топливных ячеек скромен, а цена высока. Но вариантов у вас нет...</text>
 		<choice hidden="true">
-			<text>Вы с удовольствием совершаете сделку.</text>
+			<text>Обменять 20 лома на 5 топлива.</text>
 			<event>
-				<text>Обменять 10 лома на 2 топлива.</text>
+				<text>Вы с удовольствием совершаете сделку.</text>
 				<item_modify>
 					<item type="fuel" min="5" max="5"/>
 					<item type="scrap" min="-20" max="-20"/>
@@ -167,9 +169,9 @@ Beacon Off.....
 			</event>
 		</choice>
 		<choice hidden="true">
-			<text>Топлива не хватит надолго, но вы с удовольствием совершаете сделку.</text>
+			<text>Обменять 10 лома на 2 топлива.</text>
 			<event>
-				<text>Обменять 5 лома на 1 топливо.</text>
+				<text>Топлива не хватит надолго, но вы с удовольствием совершаете сделку.</text>
 				<item_modify>
 					<item type="fuel" min="2" max="2"/>
 					<item type="scrap" min="-10" max="-10"/>
@@ -177,9 +179,9 @@ Beacon Off.....
 			</event>
 		</choice>
 		<choice hidden="true">
-			<text>Топлива не хватит надолго, но по крайней мере вы сможете совершить прыжок к другому маяку.</text>
+			<text>Обменять 5 лома на 1 топливо.</text>
 			<event>
-				<text>Отказаться от обмена.</text>
+				<text>Топлива не хватит надолго, но по крайней мере вы сможете совершить прыжок к другому маяку.</text>
 				<item_modify>
 					<item type="fuel" min="1" max="1"/>
 					<item type="scrap" min="-5" max="-5"/>
@@ -187,15 +189,15 @@ Beacon Off.....
 			</event>
 		</choice>
 		<choice>
-			<text>Никто не отвечает на ваши позывные, и вы не обнаруживаете ничего примечательного.</text>
+			<text>Отказаться от обмена.</text>
 			<event/>
 		</choice>
 	</event>
 	<event>
-		<text>Вы оказались в радиусе сканеров небольшого автоматического разведчика повстанцев!</text>
+		<text>Никто не отвечает на ваши позывные, и вы не обнаруживаете ничего примечательного.</text>
 	</event>
 	<event>
-		<text>К вам приближается корабль. Он передаёт: «Вижу, вам нужно топливо. Мы готовы состыковаться и помочь».</text>
+		<text>Вы оказались в радиусе сканеров небольшого автоматического разведчика повстанцев!</text>
 		<ship load="REBEL_AUTO_FUEL" hostile="true"/>
 	</event>
 </eventList>
@@ -203,19 +205,22 @@ Beacon Off.....
 <event name="FUEL_APPROACH">
 	<text>A ship approaches. They hail you saying, "You need some fuel? We'll prepare to dock to help."</text>
 	<choice hidden="true">
-		<text>Запретить им приближаться.</text>
+		<text>С благодарностью принять предложение.</text>
 		<event load="FUEL_APPROACH_ACCEPT_LIST"/>
 	</choice>
 	<choice hidden="true">
-		<text>Они стыкуются и передают немного топлива со словами: «Постарайтесь больше не оказываться в подобном положении. Времена сейчас сложные — в следующий раз рядом может не оказаться доброй души»..</text>
+		<text>Запретить им приближаться..</text>
 		<event load="FUEL_APPROACH_DECLINE_LIST"/>
-	</choice>Остаться у маяка.<choice hidden="true" req="sensors" lvl="3">
-		<text>(Advanced Sensors) Run a detailed scan with your sensors before responding.</text>
+	</choice>  
+	<choice hidden="true" req="sensors" lvl="3">
+		<text>(Улучшенные сенсоры) Прежде чем отвечать, провести тщательное сканирование с помощью сенсоров.</text>
 		<event load="FUEL_APPROACH_SCAN_LIST"/>
-	</choice>  Остаться у маяка.<choice hidden="true" req="ADV_SCANNERS">
-		<text>(Long-Ranged Scanners) Run a detailed scan before responding.</text>
+	</choice>    
+	<choice hidden="true" req="ADV_SCANNERS">
+		<text>(Сканеры широкого охвата) Прежде чем отвечать, провести тщательное сканирование.</text>
 		<event load="FUEL_APPROACH_SCAN_LIST"/>
-	</choice>Вы сблизились и состыковались с вашим кораблём. На борту вам сделали предложение.</event>
+	</choice>    
+</event>
 <eventList name="FUEL_APPROACH_ACCEPT_LIST">
 	<event>
 		<text>They pull close to your ship and unload some fuel saying, "Try not to run out of fuel again. These are dangerous times; who knows who could have showed up."</text>
@@ -272,13 +277,13 @@ Beacon Off.....
 	<event>
 		<text>Sensors are picking up armed crew and considerably more weaponry than is legal for a craft of this size. This is surely a trap.</text>
 		<choice>
-			<text>Продолжить...</text>
+			<text>Включить орудия и приготовиться к бою.</text>
 			<event>
 				<ship load="PIRATE_FUEL" hostile="true"/>
 			</event>
 		</choice>
 		<choice req="cloaking" hidden="true"> 
-			<text>(Cloaking) Cloak and get out of scanning range before they have a chance to lock on.</text>
+			<text>(Маскировка) Замаскироваться и выйти из диапазона сканирования, прежде чем у них появится шанс для захвата цели.</text>
 			<event>
 				<text>Your highly advanced cloaking system allows you to get out of range easily since they were still out of firing range. Eventually the ship jumps away.</text>
 			</event>
@@ -346,21 +351,22 @@ Beacon On!!!!
 	<text load="FUEL_NOTHING_DISTRESS_LIST"/>
 </event>
 <textList name="FUEL_NOTHING_DISTRESS_LIST">
-	<text>Огни аварийного маяка — единственное видимое движение снаружи корабля.</text>
+	<text>Как же всё-таки хорошо, что система жизнеобеспечения корабля не зависит от топливных элементов FTL.</text>
 	<text>Nothing happens. Your calls go unanswered.</text>
+	<text>Огни аварийного маяка — единственное видимое движение снаружи корабля.</text>
+	<text>Ни один корабль не совершал прыжок в сектор...</text>
 	<text>Несколько пролетающих мимо кораблей, кажется, не обращают внимания на ваш сигнал бедствия, игнорируя все попытки связи.</text>
 	<text>Несколько гражданских кораблей находятся в диапазоне сканирования, но никто не отвечает на ваши вызовы.</text>
 	<text>В этой области давно никто не пролетал.</text>
-	<text>Маленький корабль прибывает с сообщением: «Этот автоматизированный корабль окажет услугу дозаправки, после того как будет совершен денежный обмен. Бесплатное топливо предоставляется только в аварийных ситуациях».</text>
-	<text>Запросить аварийный запас топлива.</text>
 </textList>
 	
 <event name="FUEL_SELLER_DISTRESS">
-	<ship load="AUTO_FUEL_SELLER" hostile="false"/>Остаться у маяка.<text>A small ship arrives with a message, "This automated ship will provide refueling services once a monetary exchange is complete. Complimentary amounts of fuel are available in emergencies only."</text>
+	<ship load="AUTO_FUEL_SELLER" hostile="false"/>  
+	<text>A small ship arrives with a message, "This automated ship will provide refueling services once a monetary exchange is complete. Complimentary amounts of fuel are available in emergencies only."</text>
 	<choice hidden="true">
-		<text>«Автоматическая заправка завершена».</text>
+		<text>Запросить аварийный запас топлива.</text>
 		<event>
-			<text>Купить 2 топлива за 8 лома.</text>
+			<text>«Этот корабль зарегистрирован как уже получавший разовый запас топлива в аварийной ситуации».</text>
 			<autoReward level="LOW">fuel_only</autoReward>
 		</event>
 	</choice>
@@ -385,7 +391,7 @@ Beacon On!!!!
 		</event>
 	</choice>
 	<choice>
-		<text>Вежливо отказать.</text>
+		<text>Атаковать автоматизированный корабль.</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -434,25 +440,26 @@ Beacon On!!!!
 		</item_modify>
 	</event>
 </eventList>
-<eventList name="FUEL_TRADER_PT2"> <!-- this list is if the player cant afford the initial trade, he'll either give up and leave or give a second cheaper offer.-->Остаться у маяка.<event>
+<eventList name="FUEL_TRADER_PT2"> <!-- this list is if the player cant afford the initial trade, he'll either give up and leave or give a second cheaper offer.-->  
+	<event>
 		<text>They respond: "Seeing that you're in need, is this trade acceptable?"</text>
 		<choice>
-			<text>«Вы же понимаете, я не занимаюсь благотворительностью, — говорит их капитан. — Это единственное предложение, при котором я согласен расстаться с топливом».</text>
+			<text>Принять предложение.</text>
 			<event load="FUEL_TRADER_LOW_LIST"/>
 		</choice>
 		<choice hidden="true">
-			<text hidden="true">Принять предложение.</text>
+			<text hidden="true">Снова отказать.</text>
 			<event load="FUEL_TRADER_PT3"/>
 		</choice>
 	</event>
 	<event>
 		<text>"I'm not doing this for charity, you know," says their captain. "This is the only other way I'll part with my fuel."</text>
 		<choice>
-			<text>«Вы же понимаете, я не занимаюсь благотворительностью, — говорит их капитан. — Это единственное предложение, при котором я согласен расстаться с топливом».</text>
+			<text>Принять предложение.</text>
 			<event load="FUEL_TRADER_HIGH_LIST"/>
 		</choice>
 		<choice>
-			<text>Принять предложение.</text>
+			<text>Снова отказать.</text>
 			<event>
 				<text>Their captain disconnects from the channel and without another word their ship prepares to jumps away.</text>
 			</event>
@@ -484,13 +491,13 @@ Beacon On!!!!
 </eventList>
 <eventList name="FUEL_TRADER_PT3">
 	<event>
-		<text>Корабль повстанцев выходит с вами на связь: «Приветствую, гражданские. Мы приняли ваш сигнал бедствия, и можем помочь... Секундочку... Вы похоже... так вы же тот самый корабль! Готовьтесь к смерти!»</text>
+		<text>Сжалившись над вами, они предлагают немного топлива бесплатно.</text>
 		<item_modify>
 			<item type="fuel" min="1" max="6"/>
 		</item_modify>
 	</event>
 	<event>
-		<text>Неподалёку появляется корабль повстанцев. Вы получаете сообщение: «Ха! Вообще-то я не планировал проверять этот нудный сектор, и тут на тебе! Самый разыскиваемый корабль выскакивает прямо у меня перед носом, и просто таки сам идёт мне в руки! Какой удачный день». Они заряжают орудия.</text>
+		<text>Они заканчивают разговор и готовятся совершить прыжок.</text>
 	</event>
 </eventList>
 <!--END NO_FUEL_TRADER STUFF-->	
@@ -518,15 +525,15 @@ Beacon On!!!!
 	<ship load="REBEL_FUEL" hostile="true"/>
 </event>
 <textList name="FUEL_ON_REBEL_ATTACK">
+	<text>Корабль повстанцев выходит с вами на связь: «Приветствую, гражданские. Мы приняли ваш сигнал бедствия, и можем помочь... Секундочку... Вы похоже... так вы же тот самый корабль! Готовьтесь к смерти!»</text>
+	<text>Неподалёку появляется корабль повстанцев. Вы получаете сообщение: «Ха! Вообще-то я не планировал проверять этот нудный сектор, и тут на тебе! Самый разыскиваемый корабль выскакивает прямо у меня перед носом, и просто таки сам идёт мне в руки! Какой удачный день». Они заряжают орудия.</text>
 	<text>Ваш маяк бедствия должен был сработать, потому что поблизости совершил прыжок корабль. Вы запускаете на нем сканирование и включаете боевую тревогу. Это истребитель повстанцев!</text>
 	<text>Корабль повстанцев совершает прыжок и выходит на связь: «Я знал, что когда-нибудь вы ошибетесь. Сдавайтесь немедленно!»</text>
-	<text>Приближается корабль, принявший ваш сигнал бедствия. К сожалению, это оказался автоматизированный разведчик повстанцев. Просканировав ваш корабль, он сразу же начинает заряжать двигатели, пытаясь избежать сражения.</text>
-	<text>Пока вы дрейфуете в космосе, мимо пролетает корабль инжи. Прослушав их коммуникационный канал вам показалось, что они обсуждают ремонт, идущий у них на корабле.</text>
 </event>
 	
 
 <event name="FUEL_ON_REBEL_WARNING">
-	<text>Вызвать их.</text>
+	<text>Приближается корабль, принявший ваш сигнал бедствия. К сожалению, это оказался автоматизированный разведчик повстанцев. Просканировав ваш корабль, он сразу же начинает заряжать двигатели, пытаясь избежать сражения.</text>
 	<ship load="REBEL_AUTO_WARNING" hostile="true"/>
 </event>	
 
@@ -537,22 +544,22 @@ Beacon On!!!!
 ------------>
 
 <event name="FUEL_OFF_ENGI_DUBIOUS">
-	<text>Игнорировать.</text>
+	<text>Пока вы дрейфуете в космосе, мимо пролетает корабль инжи. Прослушав их коммуникационный канал вам показалось, что они обсуждают ремонт, идущий у них на корабле.</text>
 	<ship load="FUEL_OFF_ENGI_DUBIOUS" hostile="false"/>
 	<choice hidden="true">
-		<text>Они явно заняты, поскольку совершенно не замечают вашего корабля.</text>
+		<text>Вызвать их.</text>
 		<event load="FUEL_OFF_ENGI_DUBIOUS_LIST"/>
 	</choice>
 	<choice hidden="true">
-		<text>Они с радостью откликаются на ваше предложение. После того, как дрон заканчивает работу, они передают вам в качестве оплаты некоторое количество топлива.</text>
+		<text>Игнорировать.</text>
 		<event>
-			<text>Инжи не отвечают, но идут на перехват. Вы зафиксировали странные электромагнитные сигналы на борту корабля — кто-то перепрограммировал инжи на атаку!</text>
+			<text>Они явно заняты, поскольку совершенно не замечают вашего корабля.</text>
 		</event>
 	</choice>
 	<choice hidden="true" req="SHIP_REPAIR">
-		<text>(Hull Repair Drone) Offer to help repair their hull.</text>
+		<text>(Дрон ремонтник обшивки) Предложить им помощь в починке корпуса корабля.</text>
 		<event>
-			<text>Инжи ответили на ваш сигнал: «Вам нужно: топливо. Требуется: лом. Выгодный обмен. Совершить обмен?»</text>
+			<text>Они с радостью откликаются на ваше предложение. После того, как дрон заканчивает работу, они передают вам в качестве оплаты некоторое количество топлива.</text>
 			<item_modify>
 				<item type="drones" min="-1" max="-1"/>
 				<item type="fuel" min="4" max="6"/>
@@ -571,9 +578,9 @@ Beacon On!!!!
 	<event>
 		<text>The Engi respond to your signal. "Your need: fuel. This unit's need: scrap. Exchange beneficial. Exchange permitted?</text>
 		<choice>
-			<text>Отклонить.</text>
+			<text>Совершить сделку.</text>
 			<event>	
-				<text>Инжи прерывают связь и продолжают полёт своим маршрутом.</text>
+				<text>Вы совершаете обмен и инжи уходит без единого слова.</text>
 				<item_modify>
 					<item type="scrap" min="-20" max="-10"/>
 					<item type="fuel" min="4" max="6"/>
@@ -581,14 +588,14 @@ Beacon On!!!!
 			</event>
 		</choice>
 		<choice>
-			<text>Узнав о вашей нужде, инжи соглашаются поделиться запасами топлива. Удивительно, насколько альтруистичными могут быть эти полуроботы.</text>
+			<text>Отклонить.</text>
 			<event>
-				<text>Корабль богомолов выходит на связь: «Похоже, мы нашли бедных идиотов, которым нужна помощь. Вперед, братья, давайте 'поможем' им!» Они двинулись в атаку.</text>
+				<text>Инжи прерывают связь и продолжают полёт своим маршрутом.</text>
 			</event>
 		</choice>
 	</event>
 	<event>
-		<text>Вскоре поблизости совершает прыжок корабль, без сомнения, в ответ на сигнал вашего маяка. Однако то облегчение, которое вы испытывали, исчезает, когда вы видите, что корабль имеет форму кораблей богомолов. Готовьтесь к бою.</text>
+		<text>Узнав о вашей нужде, инжи соглашаются поделиться запасами топлива. Удивительно, насколько альтруистичными могут быть эти полуроботы.</text>
 		<item_modify>
 			<item type="fuel" min="2" max="6"/>
 		</item_modify>
@@ -611,13 +618,13 @@ Beacon On!!!!
 <textList name="FUEL_ON_MANTIS_ATTACK">
 	<text>A Mantis ship hails you, "Looks like we found the poor fools that need some help. Come brothers, let's 'help' them!" They move in to attack.</text>
 	<text>Before long a ship jumps nearby, no doubt responding to your beacon. However any relief you felt disappears as soon as you recognize that the ship is of Mantis design. Prepare for a fight.</text>
-	<text>Корабль богомолов выходит на связь: «Похоже, мы нашли бедных идиотов, которым нужна помощь. Вперед, братья, давайте 'поможем' им!» Они двинулись в атаку.</text>
-	<text>Вскоре поблизости совершает прыжок корабль, без сомнения, в ответ на сигнал вашего маяка. Однако то облегчение, которое вы испытывали, исчезает, когда вы видите, что корабль имеет форму кораблей богомолов. Готовьтесь к бою.</text>
+	<text>Вы обнаружили приближающийся корабль богомолов и взломали их ком-канал. Оттуда доносится: «... надеюсь они будут драться дольше, чем прошлый корабль Федерации. В тот день я был очень разочарован». Похоже они здесь не для того, чтобы помочь.</text>
+	<text>Поблизости корабль богомолов выходит из прыжка. Сенсоры показывают наведенные орудия, и вся надежда на уход от боя исчезает.</text>
 	
 	<text>A Mantis ship hails you, "Looks like we found the poor fools that need some help. Come brothers, let's 'help' them!" They move in to attack.</text>
 	<text>Before long a ship jumps nearby, no doubt responding to your beacon. However any relief you felt disappears as soon as you recognize that the ship is of Mantis design. Prepare for a fight.</text>
-	<text>Корабль богомолов выходит на связь: «Похоже, мы нашли бедных идиотов, которым нужна помощь. Вперед, братья, давайте 'поможем' им!» Они двинулись в атаку.</text>
-	<text>Вскоре поблизости совершает прыжок корабль, без сомнения, в ответ на сигнал вашего маяка. Однако то облегчение, которое вы испытывали, исчезает, когда вы видите, что корабль имеет форму кораблей богомолов. Готовьтесь к бою.</text>
+	<text>Вы обнаружили приближающийся корабль богомолов и взломали их ком-канал. Оттуда доносится: «... надеюсь они будут драться дольше, чем прошлый корабль Федерации. В тот день я был очень разочарован». Похоже они здесь не для того, чтобы помочь.</text>
+	<text>Поблизости корабль богомолов выходит из прыжка. Сенсоры показывают наведенные орудия, и вся надежда на уход от боя исчезает.</text>
 </event>
 		
 		
@@ -626,19 +633,19 @@ Beacon On!!!!
 		Specific no fuel events that should eventually be tied to the rock sector
 ------------>
 <event name="FUEL_OFF_ROCK_WRECK">
-	<text>Возможно на борту осталось немного топлива; небольшая команда отправляется на борт.</text>
+	<text>В ожидании спасения или гибели, ваше внимание привлекает море мусора дрейфующее мимо правого борта. Проплывающие обломки становятся больше размером, пока перед вами не появляется корма корабля роков, уничтоженного в какой-то давней битве.</text>
 	<choice hidden="true">
-		<text>Доложить!</text>
+		<text>Отправить команду для исследований.</text>
 		<event>
-			<text>Пусть дрейфует.</text>
+			<text>Возможно на борту осталось немного топлива; небольшая команда отправляется на борт.</text>
 			<choice hidden="true">
-				<text>Роки не относятся дружелюбно к иноземцам, которые пролетают через их владения, неважно какими дряхлыми они могут показаться на первый взгляд, и поэтому не стоит рисковать на территории роков.</text>
+				<text>Доложить!</text>
 				<event load="FUEL_OFF_ROCK_WRECK_LIST"/>
 			</choice>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Через некоторое время команда возвращается с запасом боеприпасов и лома — но топлива на борту уже давно нет.</text>
+		<text>Пусть дрейфует.</text>
 		<event>
 			<text>The Rock don't take kindly to aliens picking through their belongings, no matter how decrepit they may seem, and you don't take risks in Rock territory.</text>
 		</event>
@@ -653,33 +660,33 @@ Beacon On!!!!
 </event>			
 <eventList name="FUEL_OFF_ROCK_WRECK_LIST">
 	<event>
-		<text>Команда вернулась назад ощутимо раньше, нежели ожидалось. Оказывается, как только они вошли во фрегат, его аварийная ячейка с топливом неожиданно проплыла мимо!</text>
+		<text>Через некоторое время команда возвращается с запасом боеприпасов и лома — но топлива на борту уже давно нет.</text>
 		<autoReward level="MED">missiles</autoReward>
 	</event>
 	<event>
-		<text>Команда как раз делала доклад, когда вы услышали крики и коммуникатор замолчал. Когда связь возобновилась, можно было услышать рока — он единственный выживший из членов экипажа фрегата, и он совершенно обезумел. Он требует, чтобы ему заплатили выкуп ломом, взамен на жизни членов вашего экипажа!</text>
+		<text>Один из членов экипажа сообщает, что главный компьютер находится в этой секции и до сих пор функционален, хотя и частично. Он в состоянии загрузить местную телеметрию, а также расположение резервного склада с топливом! Ваша карта была обновлена.</text>
 		<reveal_map/>
 		<autoReward level="MED">fuel_only</autoReward>
 	</event>
 	<event>
-		<text>Заплатить.</text>
+		<text>Команда вернулась назад ощутимо раньше, нежели ожидалось. Оказывается, как только они вошли во фрегат, его аварийная ячейка с топливом неожиданно проплыла мимо!</text>
 		<autoReward level="MED">fuel_only</autoReward>
 	</event>
 	<event>
-		<text>Несмотря на своё... нездоровое состояние, рок сдержал слово и вернул членов вашей команды, счастливых и благодарных. К сожалению, их благодарность не заправит FTL приводы.</text>
+		<text>Команда как раз делала доклад, когда вы услышали крики и коммуникатор замолчал. Когда связь возобновилась, можно было услышать рока — он единственный выживший из членов экипажа фрегата, и он совершенно обезумел. Он требует, чтобы ему заплатили выкуп ломом, взамен на жизни членов вашего экипажа!</text>
 		<choice>
-			<text>Отказать.</text>
+			<text>Заплатить.</text>
 			<event>
-				<text>Это непростое решение, но это нужно для Федерации и свободы всех остальных. Вы отправляетесь, пока не успели передумать.</text>  <!-- JUSTIN - TO DO - I don't like this one since you don't know who's being ransomed -->
+				<text>Несмотря на своё... нездоровое состояние, рок сдержал слово и вернул членов вашей команды, счастливых и благодарных. К сожалению, их благодарность не заправит FTL приводы.</text>  <!-- JUSTIN - TO DO - I don't like this one since you don't know who's being ransomed -->
 				<item_modify >
 					<item type="scrap" min="-40" max="-25"/>
 				</item_modify>
 			</event>
 		</choice>
 		<choice>
-			<text>Любопытный корабль роков прибыл повнимательней рассмотреть вас. Они игнорируют любые попытки приветствия.</text>
+			<text>Отказать.</text>
 			<event>
-				<text>Атаковать.</text>
+				<text>Это непростое решение, но это нужно для Федерации и свободы всех остальных. Вы отправляетесь, пока не успели передумать.</text>
 				<removeCrew>
 					<clone>false</clone>
 					<text>Before preparing to jump you check the Clone Bay but there is no sign of activity.</text>
@@ -690,28 +697,28 @@ Beacon On!!!!
 </eventList>
 
 <event name="FUEL_OFF_ROCK_CURIOUS">
-	<text>Роки не славятся своим великодушием. Вам нужно это топливо? Заслужите это топливо!</text>
+	<text>Любопытный корабль роков прибыл повнимательней рассмотреть вас. Они игнорируют любые попытки приветствия.</text>
 	<choice hidden="true">
-		<text>Подождать и посмотреть.</text>
+		<text>Атаковать.</text>
 		<event>
-			<text>Корабль роков кружит рядом, сканируя корабельные системы. Вы ожидаете худшего, но сканирование прерывается на топливном баке. Они, очевидно, не особо разговорчивы, но передают запасы топлива, после чего, мигнув габаритами, улетают.</text>
+			<text>Роки не славятся своим великодушием. Вам нужно это топливо? Заслужите это топливо!</text>
 			<ship load="FUEL_OFF_ROCK_CURIOUS" hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Корабль роков кружит рядом, сканируя корабельные системы. Ваши худшие опасения подтвердились, когда они обнаружили ваши двигатели и телепортировали бомбу прямо к ним. Приготовиться к бою!</text>
+		<text>Подождать и посмотреть.</text>
 		<event load="FUEL_OFF_ROCK_CURIOUS_LIST"/>	
 	</choice>
 </event>
 <eventList name="FUEL_OFF_ROCK_CURIOUS_LIST">
 	<event>
-		<text>Не сказав ни слова корабль совершает прыжок. Вы надеетесь, что они ушли не за подкреплениями.</text>
+		<text>Корабль роков кружит рядом, сканируя корабельные системы. Вы ожидаете худшего, но сканирование прерывается на топливном баке. Они, очевидно, не особо разговорчивы, но передают запасы топлива, после чего, мигнув габаритами, улетают.</text>
 		<item_modify>
 			<item type="fuel" min="3" max="8"/>
 		</item_modify>
 	</event>
 	<event>
-		<text>Вы пытаетесь забрать как можно больше топлива из разбитых останков кораблекрушения.</text>
+		<text>Корабль роков кружит рядом, сканируя корабельные системы. Ваши худшие опасения подтвердились, когда они обнаружили ваши двигатели и телепортировали бомбу прямо к ним. Приготовиться к бою!</text>
 		<ship load="FUEL_OFF_ROCK_CURIOUS" hostile="true"/>	
 		<status type="limit" target="player" system="engines" amount="1"/>
 	</event>
@@ -719,15 +726,15 @@ Beacon On!!!!
 <ship name="FUEL_OFF_ROCK_CURIOUS" auto_blueprint="SHIPS_ROCK">
 	<escape timer="80" min="30" max="30"/>
 	<gotaway>
-		<text>Вы пытаетесь забрать как можно больше топлива из разбитых останков кораблекрушения.</text>
+		<text>Не сказав ни слова корабль совершает прыжок. Вы надеетесь, что они ушли не за подкреплениями.</text>
 	</gotaway>
 	<destroyed>
-		<text>Слабо вооруженный корабль слизней предлагает помощь. Их капитан, похоже, тихонько про себя посмеивается. Должно быть из-за цен, которые он предлагает.</text>
+		<text>Вы пытаетесь забрать как можно больше топлива из разбитых останков кораблекрушения.</text>
 		<autoReward level="MED">fuel</autoReward>
 		<status type="clear" target="player" system="pilot" amount="100"/>
 	</destroyed>
 	<deadCrew>
-		<text>Слабо вооруженный корабль слизней предлагает помощь. Их капитан, похоже, тихонько про себя посмеивается. Должно быть из-за цен, которые он предлагает.</text>
+		<text>Вы пытаетесь забрать как можно больше топлива из разбитых останков кораблекрушения.</text>
 		<autoReward level="HIGH">fuel</autoReward>
 		<status type="clear" target="player" system="engines" amount="100"/>
 	</deadCrew>
@@ -744,20 +751,20 @@ Beacon On!!!!
 ------------>
 
 <event name="FUEL_ON_SLUG_CHUCKLE">
-	<text>Игнорировать предложение.</text>
+	<text>Слабо вооруженный корабль слизней предлагает помощь. Их капитан, похоже, тихонько про себя посмеивается. Должно быть из-за цен, которые он предлагает.</text>
 	<ship load="JELLY" hostile="false"/>
 	<choice hidden="true">
-		<text>Вы знаете, что лучше не иметь дел со слизнем, которому, похоже, известно то, чего не знаете вы. Он прыгнул прочь с очередным смешком.</text>
+		<text>Заплатить 15 лома за 5 топлива.</text>
 		<event load="FUEL_ON_SLUG_CHUCKLE_LIST"/>
 	</choice>
 	<choice hidden="true">
-		<text>Завидев члена вашей команды, слизень сразу же прекращает нервно посмеиваться. Кажется, сделка проходит гладко. Вам стало интересно, какие телепатические сражения происходят сейчас между двумя слизнями.</text>
+		<text>Игнорировать предложение.</text>
 		<event>
-			<text>Вы сомневаетесь, что он заслуживает доверия, но у вас нет выбора, кроме как заключить сделку. Однако, вы совершаете обмен без происшествий.</text>
+			<text>Вы знаете, что лучше не иметь дел со слизнем, которому, похоже, известно то, чего не знаете вы. Он прыгнул прочь с очередным смешком.</text>
 		</event>
 	</choice>
 	<choice hidden="true" req="slug">
-		<text>(Slug Crew) Have your Slug make the purchase.</text>
+		<text>(Член экипажа слизень) Попросите своего слизня сделать покупку.</text>
 		<event>
 			<text>As soon as he sees your crewmember the Slug stops his incessant chuckling. The exchange appears to go smoothly although you wonder what mental battles are telepathically occurring between the two Slugs.</text>
 			<item_modify>
@@ -769,7 +776,7 @@ Beacon On!!!!
 </event>
 <eventList name="FUEL_ON_SLUG_CHUCKLE_LIST">
 	<event>
-		<text>Все выглядит в сохранности, но внезапно исчезает много запасов! Должно быть он установил портативный телепортер в вашем грузовом отсеке. Прежде чем вы успели среагировать, его корабль успел скрыться.</text>
+		<text>Вы сомневаетесь, что он заслуживает доверия, но у вас нет выбора, кроме как заключить сделку. Однако, вы совершаете обмен без происшествий.</text>
 		<item_modify>
 			<item type="scrap" min="-15" max="-15"/>
 			<item type="fuel" min="5" max="5"/>
@@ -777,7 +784,7 @@ Beacon On!!!!
 		<choice hidden="true">
 			<text>Продолжить...</text>
 			<event>
-				<text>Мобильный топливный склад слизней попадает в радиус сканирования. «Мои цены честны, и я прошу об одном — не оскорбляйте меня их обсуждением!» Посмотрим-ка на его прайс-лист.</text>
+				<text>Все выглядит в сохранности, но внезапно исчезает много запасов! Должно быть он установил портативный телепортер в вашем грузовом отсеке. Прежде чем вы успели среагировать, его корабль успел скрыться.</text>
 				<item_modify steal="true">
 					<item type="scrap" min="-35" max="-20"/>
 					<item type="missiles" min="-4" max="-2"/>
@@ -786,7 +793,7 @@ Beacon On!!!!
 		</choice>
 	</event>
 	<event>
-		<text>Все выглядит в сохранности, но внезапно исчезает много запасов! Должно быть он установил портативный телепортер в вашем грузовом отсеке. Прежде чем вы успели среагировать, его корабль успел скрыться.</text>
+		<text>Вы сомневаетесь, что он заслуживает доверия, но у вас нет выбора, кроме как заключить сделку. Однако, вы совершаете обмен без происшествий.</text>
 		<item_modify>
 			<item type="scrap" min="-15" max="-15"/>
 			<item type="fuel" min="5" max="5"/>
@@ -795,12 +802,12 @@ Beacon On!!!!
 </eventList>
 
 <event name="FUEL_ON_SLUG_OVERPRICED">
-	<text>Торговец выглядит шокированно. Вас не покидает чувство, что это первый случай, когда у него что-то купили по такой цене.</text>
+	<text>Мобильный топливный склад слизней попадает в радиус сканирования. «Мои цены честны, и я прошу об одном — не оскорбляйте меня их обсуждением!» Посмотрим-ка на его прайс-лист.</text>
 	<ship load="JELLY_OVERPRICED" hostile="false"/>
 	<choice hidden="false">
-		<text>Торговец выглядит шокированно. Вас не покидает чувство, что это первый случай, когда у него что-то купили по такой цене.</text>
+		<text>Купить 5 топлива за 50 лома.</text>
 		<event>
-			<text>Обсудить цены.</text>
+			<text>Торговец выглядит шокированно. Вас не покидает чувство, что это первый случай, когда у него что-то купили по такой цене.</text>
 			<item_modify>
 				<item type="scrap" min="-50" max="-50"/>
 				<item type="fuel" min="5" max="5"/>
@@ -808,9 +815,9 @@ Beacon On!!!!
 		</event>
 	</choice>
 	<choice hidden="false">
-		<text>Buy 10 fuel for 95 scrap. (BEST DEAL!)</text>
+		<text>Купить 10 топлива за 95 лома. (ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ!)</text>
 		<event>
-			<text>Обсудить цены.</text>
+			<text>Торговец выглядит шокированно. Вас не покидает чувство, что это первый случай, когда у него что-то купили по такой цене.</text>
 			<item_modify>
 				<item type="scrap" min="-95" max="-95"/>
 				<item type="fuel" min="10" max="10"/>
@@ -818,9 +825,9 @@ Beacon On!!!!
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Negotiate.</text>
+		<text>Обсудить цены.</text>
 		<event>
-			<text>You offer a more reasonable price but the Slugman is outraged! He moves in to attack!</text>
+			<text>Вы предлагаете более разумную цену, но слизень возмущен! Он идет в атаку!</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>

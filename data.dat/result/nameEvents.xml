@@ -164,14 +164,14 @@
 	<choice>
 		<text>Они благодарят вас, не переставая, и желают удачи в вашей миссии.</text>
 		<event>
-			<text>Он вернулся с хорошей новостью. Ему удалось улучшить двигатели и убедить одного из их экипажа присоединиться к вам.</text>
+			<text>(Член экипажа инжи) Ваш инжи хочет войти на судно и посмотреть, сможет ли он лично оказать какую-либо помощь. Для оказания помощи он просит некоторое количество лома.</text>
 			<item_modify>
 				<item type="scrap" min="-30" max="-10"/>
 			</item_modify>
 		</event>
 	</choice>
 	<choice req="engi" lvl="1">
-		<text>(Engi) Your crewmember wants to go aboard to see if he can provide any help personally. He requests some scrap to help.</text>
+		<text>Он вернулся с хорошей новостью. Ему удалось улучшить двигатели и убедить одного из их экипажа присоединиться к вам.</text>
 		<event>
 			<text>He returns bearing good news. He was able to improve their engines and convinced one of their crew to join your cause.</text>
 			<item_modify>

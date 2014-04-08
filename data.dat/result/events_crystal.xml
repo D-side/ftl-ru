@@ -147,7 +147,7 @@ Special
 		<event load="CRYSTAL_CACHE_BREAK"/>
 	</choice>
 	<choice hidden="true" req="MISSILES_BREACH">
-		<text>(Breach Missiles) Use a Breach Missile.</text>
+		<text>(Бронебойные ракеты) Применить бронебойную ракету.</text>
 		<event>
 			<text>Вашей бронебойной ракетой вы выбили и разрушили большой кусок кристалла, достаточный для того чтобы ваша команда могла спуститься вниз и осмотреться.</text>
 			<item_modify>
@@ -571,7 +571,7 @@ Special
 		</event>
 	</choice>
 	<choice hidden="true" req="crystal">
-		<text>(Crystal Crew) Have your crew speak to them.</text>
+		<text>(Член экипажа кристалин) Дать вашему кристалину поговорить с ними.</text>
 		<event>
 			<text>«Ого, один из нас! А я и не знал, что мы заключили альянс с пришельцами. Пожалуй не стоит вас беспокоить, и вот, возьмите немного наших припасов!»</text>
 			<autoReward level="RANDOM">fuel</autoReward>

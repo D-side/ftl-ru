@@ -242,7 +242,7 @@ Special
 			</event>
 		</choice>
 		<choice req="engines" lvl="4" hidden="true">
-			<text>(Adv. Engines) Dodge the debt and power up the engines.</text>
+			<text>(Улучшенные двигатели) Уклониться от уплаты и завести двигатели.</text>
 			<event>
 				<text>You are able to get out of firing range of the cruiser before they can react. However, a smaller ship breaks off from a patrol and moves in to engage.</text>
 				<ship load="MANTIS_FIGHT" hostile="true"/>
@@ -266,7 +266,7 @@ Special
 			</event>
 		</choice>
 		<choice req="engines" lvl="4" hidden="true">
-			<text>(Adv. Engines) Dodge the debt and power up the engines.</text>
+			<text>(Улучшенные двигатели) Уклониться от уплаты и завести двигатели.</text>
 			<event>
 				<text>You recall the scrap you prepared to send and are able to get out of the cruiser's firing range before they can react. However, a smaller ship breaks off from a patrol and moves in to engage.</text>
 				<ship load="MANTIS_FIGHT" hostile="true"/>
@@ -310,8 +310,8 @@ Special
 	<text>A Mantis female comes on the vidscreen. The females don't make it to authority unless they're particularly vicious. You power the weapons.</text>
 	<text>Корабль богомолов с опознавательными знаками воина срывается с места и атакует!</text>
 	<text>A Mantis ship hails: "Ah! Fine prey. Fine prey! We honor you with our most eviscerating arsenal!" You sense a cloud to this silver lining and power the weapons.</text>
+	<text>Детям на Земле рассказывают ужасные истории о кроваво-красных кораблях вторжения богомолов (как раз таких, с каким вы сейчас имеете дело), которые однажды угрожали планете. Вы приказываете открыть огонь!</text>
 	<text>Молодо выглядящий капитан богомолов приветствует: «Ты, жертва, должна знать. Твоя смерть — последнее убийство Кааазтвака перед совершеннолетием. Кааазтвак отдаёт дань уважения». Похоже что уважение в культуре богомолов выказывают лазерами.</text>
-	<text>Атаковать судно.</text>
 </textList>
 
 
@@ -326,34 +326,34 @@ Special
 	<text load="MANTIS_FIGHT_CHOICE"/>
 	<ship load="MANTIS_FIGHT" hostile="false"/>
 	<choice hidden="true">
-		<text>Попытаться остаться незамеченным.</text>
+		<text>Атаковать судно.</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice>
-		<text>Вам довелось стать свидетелем редкого стечения обстоятельств: корабль богомолов, который вас не заметил.</text>
+		<text>Попытаться остаться незамеченным.</text>
 		<event load="MANTIS_FIGHT_CHOICE_AVOID"/>
 	</choice>
 	<choice hidden="true" req="cloaking" lvl="1">
-		<text>(Cloaking) Cloak to stay hidden.</text>
+		<text>(Маскировка) Активировать маскировку, чтобы оставаться незамеченными.</text>
 		<event load="MANTIS_FIGHT_CHOICE_CLOAK"/>
 	</choice>
 </event>
 <textList name="MANTIS_FIGHT_CHOICE">
+	<text>Вам довелось стать свидетелем редкого стечения обстоятельств: корабль богомолов, который вас не заметил.</text>
 	<text>На этот раз удалось заметить богомолов прежде, чем они увидели вас.</text>
 	<text>Ваш экипаж, увидев боевой корабль богомолов в засаде по указанным вами координатам, облегченно вздыхает, так как вы каким-то образом вышли из прыжка не у маяка.</text>
 	<text>Вы подслушиваете разговор богомолов по передатчику: «Неправда, я убил больше человеков!» Вы шумно сглатываете, но к счастью они вас пока не видят.</text>
-	<text>Вы подслушиваете разговор богомолов по передатчику: «Тот, что справа, уже начал гнить. Отнеси его вниз. Отрежь ему пальцы. Выкинь его в шлюз». Они определенно не кажутся дружелюбными...</text>
 	<text>You overhear Mantis comm chatter: "The one on the right is starting to rot. Take him down. Take off his fingers. Put him out of the airlock." They certainly don't seem to be friendly...</text>
-	<text>Вы отключаете несущественные системы и ждете, пока FTL привод зарядится. Они или не хотят ввязываться в бой, или не заметили ваш корабль, что куда больше похоже на правду.</text>
+	<text>Вы подслушиваете разговор богомолов по передатчику: «Договорились. Следующий корабль — твой. Хорошей охоты». Они пока вас не видят.</text>
 </textList>
 <eventList name="MANTIS_FIGHT_CHOICE_AVOID">
 	<event>
 		<text>You power down non-essential systems and wait for the FTL drive to charge. They either don't want to fight or have failed to notice your ship, the latter being more likely.</text>
 	</event>
 	<event>
-		<text>Вы выключаете несущественные системы в попытке остаться незамеченным. Похоже что они собираются улететь, но внезапно они разворачиваются и летят к вам с заряженными орудиями.</text>
+		<text>Прежде чем вам удается ускользнуть, корабль богомолов засекает вас и включает орудия.</text>
 		<ship hostile="true"/>
 	</event>
 	<event>
@@ -378,52 +378,52 @@ Special
 	<text load="MANTIS_CIVILIAN"/>
 	<ship load="MANTIS_CIVILIAN" hostile="false"/>
 	<choice hidden="true">
-		<text>Нахмурившись, вы заряжаете орудия и готовитесь к бою с кораблём богомолов. Только не сегодня.</text>
+		<text>Помочь гражданскому кораблю.</text>
 		<event>
-			<text>Держаться подальше.</text>
+			<text>Нахмурившись, вы заряжаете орудия и готовитесь к бою с кораблём богомолов. Только не сегодня.</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice>
-		<text>Судно богомолов проносится через ваше обзорное окно, с полностью заряженными орудиями и двигателями. Крошечная точка на сенсоре отмечает их жертву.</text>
+		<text>Держаться подальше.</text>
 		<event>
 			<text load="MANTIS_CIVILIAN_AVOID"/>
 		</event>
 	</choice>
 </event>
 <textList name="MANTIS_CIVILIAN">
+	<text>Судно богомолов проносится через ваше обзорное окно, с полностью заряженными орудиями и двигателями. Крошечная точка на сенсоре отмечает их жертву.</text>
 	<text>Вы заметили корабль богомолов, занятый охотой на большом расстоянии от вас.</text>
 	<text>Корабль богомолов, атакующий гражданского, пытается выйти с вами на связь. Вокруг его кабины летают искры, и он кричит: «Не вмешивайся, человек! Или ты следующий!»</text>
 	<text>Локальные сенсоры ловят два корабля, схлестнувшихся в жарком бою. Похоже, что военный корабль богомолов вот-вот победит свою жертву.</text>
 	<text>Вы ловите аварийный вызов гражданского корабля. Его преследует корабль богомолов!</text>
-	<text>Судно богомолов проносится через ваше обзорное окно, с полностью заряженными орудиями и двигателями. Крошечная точка на сенсоре отмечает их жертву.</text>
 	
+	<text>Судно богомолов проносится через ваше обзорное окно, с полностью заряженными орудиями и двигателями. Крошечная точка на сенсоре отмечает их жертву.</text>
 	<text>Вы заметили корабль богомолов, занятый охотой на большом расстоянии от вас.</text>
 	<text>Корабль богомолов, атакующий гражданского, пытается выйти с вами на связь. Вокруг его кабины летают искры, и он кричит: «Не вмешивайся, человек! Или ты следующий!»</text>
 	<text>Локальные сенсоры ловят два корабля, схлестнувшихся в жарком бою. Похоже, что военный корабль богомолов вот-вот победит свою жертву.</text>
 	<text>Вы ловите аварийный вызов гражданского корабля. Его преследует корабль богомолов!</text>
-	<text>Судно богомолов проносится через ваше обзорное окно, с полностью заряженными орудиями и двигателями. Крошечная точка на сенсоре отмечает их жертву.</text>
 </textList>
 <textList name="MANTIS_CIVILIAN_AVOID">
+	<text>Дымясь, гражданский корабль кое-как движется дальше. Вы стараетесь не думать о его судьбе и сконцентрироваться на будущем.</text>
 	<text>Шум раскручивающегося FTL почти тонет в звуках взрывов. Почти.</text>
 	<text>Вы даёте им уйти и стараетесь не думать об этом.</text>
-	<text>Дымясь, гражданский корабль кое-как движется дальше. Вы стараетесь не думать о его судьбе и сконцентрироваться на будущем.</text>
 	
+	<text>Дымясь, гражданский корабль кое-как движется дальше. Вы стараетесь не думать о его судьбе и сконцентрироваться на будущем.</text>
 	<text>Шум раскручивающегося FTL почти тонет в звуках взрывов. Почти.</text>
 	<text>Вы даёте им уйти и стараетесь не думать об этом.</text>
-	<text>Дымясь, гражданский корабль кое-как движется дальше. Вы стараетесь не думать о его судьбе и сконцентрироваться на будущем.</text>
 </textList>
 
 <event name="MANTIS_CREW" unique="true">
-	<text>Выкинуть капсулу.</text>
+	<text>Вы обнаруживаете и вылавливаете спасательную капсулу, плавающую поблизости. Вы уже думали выкинуть её обратно в космос, как замечаете она принадлежит богомолам.</text>
 	<choice>
-		<text>Вы запускаете капсулу обратно в космос. Вы же не идиот.</text>
+		<text>Выкинуть капсулу.</text>
 		<event>
-			<text>Полюбопытствовать, открыв.</text>
+			<text>Вы запускаете капсулу обратно в космос. Вы же не идиот.</text>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Богомол внутри в ЯРОСТИ. Одним мощным ударом он разрубает пополам ближайшего к нему члена экипажа. Придётся убить его, пока кто-нибудь ещё не пострадал.</text>
+		<text>Полюбопытствовать, открыв.</text>
 		<event load="MANTIS_CREW_LIST"/>
 	</choice>
 </event>
@@ -437,7 +437,7 @@ Special
 		</removeCrew>
 	</event>
 	<event>
-		<text>Из капсулы выскакивает орущий незнакомец и забивается в угол. Редко увидишь выжившего после захвата богомолов. Успокоившись, выживший предлагает на время присоединиться к вашему экипажу.</text>
+		<text>Богомол внутри считает вас посланником божьим и просится в ваш экипаж.</text>
 		<crewMember amount="1" class="mantis"/>   <!-- NOTE - Doesnt work yet -gives human-->
 	</event>
 	<event>
@@ -453,7 +453,7 @@ Special
 
 	
 <event name="MANTIS_SUN_FIGHT" unique="false">   
-	<text>Недавно брошенный и до сих пор дымящийся корабль богомолов проплывает мимо. Похоже битва прошла совсем недавно; выживший экипаж телепортируется к вам на борт. Готовьтесь к бою!</text>
+	<text>Кто знает, зачем богомол рискует, оказавшись так близко к солнцу. Может он ищет более трудных испытаний?</text>
 	<ship load="MANTIS_FIGHT" hostile="true"/>
 	<environment type="sun"/>
 </event>
@@ -473,8 +473,8 @@ Special
 </event>
 <textList name="MANTIS_BOARDERS">
 	<text>A derelict and still smoking Mantis vessel floats by. The battle must have been recent; its surviving crew beam aboard. Prepare for a fight!</text>
+	<text>Внезапно, спокойное течение вашей жизни меняется. На борту корабля высадились богомолы.</text>
 	<text>Вы слышите скрежетание и мягкое пощёлкивание. Вы тянетесь к пистолету.</text>
-	<text>Вы пересекаетесь с кораблём богомолов, имеющим дюжины дополнительных слоёв брони, нашитых наверное после сотни лет работы. Его капитан — легендарный вор КазааакплетКилик. Ваш экипаж выглядит испуганным.</text>
 </textList>
 
 
@@ -488,16 +488,16 @@ Special
 
 <event name="MANTIS_NAMED_THIEF" unique="true"> <!-- NOTE - make globally unique  -->
 	<ship load="MANTIS_NAMED_THIEF" hostile="false"/>
-	<text>Ваш богомол выходит вперед. Он и КазааакплетКилик совершают что-то типа странного инопланетного обряда. Тем временем вы заряжаете боевые системы.</text>
+	<text>Вы пересекаетесь с кораблём богомолов, имеющим дюжины дополнительных слоёв брони, нашитых наверное после сотни лет работы. Его капитан — легендарный вор КазааакплетКилик. Ваш экипаж выглядит испуганным.</text>
 	<choice hidden="true" req="mantis">
 		<text>(Mantis crewmember) Attempt to hail him.</text>
 		<event>
-			<text>Your Mantis crew-member steps forward. He and Крейсер богомолов был разблокирован и добавлен в ангар!plethKilik perform a weird kind of alien haka. You, meanwhile, charge the battle systems.</text>
+			<text>Your Mantis crew-member steps forward. He and КазааакplethKilik perform a weird kind of alien haka. You, meanwhile, charge the battle systems.</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>На борту их корабля больше не обнаружено признаков жизни. Похоже вы победили..</text>
+		<text>Приготовиться к сражению.</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -506,25 +506,25 @@ Special
 <event name="MANTIS_NAMED_THIEF_DEFEAT">
 	<text>No more life signs are detected aboard their ship. You appear to have won.</text>
 	<choice hidden="true">
-		<text>Какая, должно быть, трагедия для такого жестокого врага — погибнуть так бесславно. Вы приходите в себя и забираете все, что можете.</text>
+		<text>Двинуться внутрь, чтобы обчистить их корабль.</text>
 		<event>
 			<text>It seems almost a waste for such a fierce foe to die in such an anticlimactic fashion. You shrug it off and take what you can.</text>
 			<autoReward level="HIGH">standard</autoReward>
 		</event>
 	</choice>
 	<choice hidden="true" req="teleporter">
-		<text>(Teleporter) Quickly teleport additional crew and check for survivors.</text>
+		<text>(Телепортер) Быстро телепортировать экипаж и поискать выживших.</text>
 		<event>
-			<text>Без жалости прикончить его.</text>
+			<text>Вы находите умирающего КазааакплетКилика, завалившегося в углу.</text>
 			<choice hidden="true">
-				<text>Так заканчивается жизнь прославленного капитана КазааакплетКилика... Вы гадаете какие секреты он унесёт с собой в могилу, пока тщательно грабите его корабль.</text>
+				<text>Без жалости прикончить его.</text>
 				<event>
-					<text>Thus ends the life of the famed captain, Крейсер богомолов был разблокирован и добавлен в ангар!plethKilik... You wonder what secrets went with him to the grave as you thoroughly loot his ship.</text>
+					<text>Thus ends the life of the famed captain, КазааакplethKilik... You wonder what secrets went with him to the grave as you thoroughly loot his ship.</text>
 					<autoReward level="HIGH">standard</autoReward>
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>В предсмертный момент он указывает вам местоположение своей секретной заначки. Вы обчищаете корабль, гадая какие ещё секреты он унёс с собой в могилу.</text>
+				<text>Послушать, что он скажет.</text>
 				<event>
 					<text>In his dying moments he gives up the location of his secret stash. You strip the ship wondering what other secrets went with him to the grave.</text>
 					<quest event="MANTIS_NAMED_THIEF_STASH"/>
@@ -532,18 +532,18 @@ Special
 				</event>
 			</choice>
 			<choice hidden="true" req="medbay" lvl="2">
-				<text>(Adv. Medbay) Quickly teleport him back to the medbay.</text>
+				<text>(Улучшенный мед-отсек) Быстрее телепортировать его в мед-отсек.</text>
 				<event>
 					<text>Your haste has paid off and you are able to bring him back from the brink of death. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
 					<choice hidden="true">  <!-- NOTE - Add other options?-->
-						<text>КазааакплетКилик присоединяется к вашему экипажу, дает координаты тайника неподалеку с украденными военными припасами и пересылает координаты особого крейсера, над которым он работал. Вы переправляете их Федерации, они точно найдут ему хорошее применение.</text>
+						<text>Принять.</text>
 						<event>
-							<text>Крейсер богомолов был разблокирован и добавлен в ангар!plethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
+							<text>КазааакplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
 							<augment name="CREW_STIMS"/>
 							<autoReward level="HIGH">scrap_only</autoReward>
-							<crewMember amount="1" class="mantis" all_skills="2">Крейсер богомолов был разблокирован и добавлен в ангар!</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
+							<crewMember amount="1" class="mantis" all_skills="2">Казааак</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
 							<quest event="MANTIS_NAMED_THIEF_STASH"/>
-							<unlockShip id="2">Вы прибываете в маленькое астероидное поле и обнаруживаете спрятанный тайник посреди обломков. Вы вводите коды, данные вам КазааакплетКиликом и находите внутри орудие.</unlockShip>
+							<unlockShip id="2">Крейсер богомолов был разблокирован и добавлен в ангар!</unlockShip>
 						</event>
 					</choice>
 				</event>
@@ -553,14 +553,14 @@ Special
 				<event>
 					<text>Your haste has paid off and you register him into the Clonebay's database. After he passes away he is quickly reconstructed on board your ship. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
 					<choice hidden="true">  <!-- NOTE - Add other options?-->
-						<text>КазааакплетКилик присоединяется к вашему экипажу, дает координаты тайника неподалеку с украденными военными припасами и пересылает координаты особого крейсера, над которым он работал. Вы переправляете их Федерации, они точно найдут ему хорошее применение.</text>
+						<text>Принять.</text>
 						<event>
-							<text>Крейсер богомолов был разблокирован и добавлен в ангар!plethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
+							<text>КазааакplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
 							<augment name="CREW_STIMS"/>
 							<autoReward level="HIGH">scrap_only</autoReward>
-							<crewMember amount="1" class="mantis">Крейсер богомолов был разблокирован и добавлен в ангар!</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
+							<crewMember amount="1" class="mantis">Казааак</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
 							<quest event="MANTIS_NAMED_THIEF_STASH"/>
-							<unlockShip id="2">Вы прибываете в маленькое астероидное поле и обнаруживаете спрятанный тайник посреди обломков. Вы вводите коды, данные вам КазааакплетКиликом и находите внутри орудие.</unlockShip>
+							<unlockShip id="2">Крейсер богомолов был разблокирован и добавлен в ангар!</unlockShip>
 						</event>
 					</choice>
 				</event>
@@ -570,11 +570,11 @@ Special
 	<choice hidden="true" req="sensors" lvl="3">
 		<text>(Sensors) Quickly scan their ship for survivors.</text>
 		<event>
-			<text>You detect Крейсер богомолов был разблокирован и добавлен в ангар!plethKilik slumped in a corner dying.</text>
+			<text>You detect КазааакplethKilik slumped in a corner dying.</text>
 			<choice hidden="true">
 				<text>Let him die.</text>
 				<event>
-					<text>Thus ends the life of the famed captain, Крейсер богомолов был разблокирован и добавлен в ангар!plethKilik... You wonder what secrets went with him to the grave as you thoroughly loot his ship.</text>
+					<text>Thus ends the life of the famed captain, КазааакplethKilik... You wonder what secrets went with him to the grave as you thoroughly loot his ship.</text>
 					<autoReward level="HIGH">standard</autoReward>
 				</event>
 			</choice>
@@ -591,14 +591,14 @@ Special
 				<event>
 					<text>Your haste has paid off and you are able to bring him back from the brink of death. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
 					<choice hidden="true">  <!-- NOTE - Add other options?-->
-						<text>КазааакплетКилик присоединяется к вашему экипажу, дает координаты тайника неподалеку с украденными военными припасами и пересылает координаты особого крейсера, над которым он работал. Вы переправляете их Федерации, они точно найдут ему хорошее применение.</text>
+						<text>Принять.</text>
 						<event>
-							<text>Крейсер богомолов был разблокирован и добавлен в ангар!plethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
+							<text>КазааакplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
 							<augment name="CREW_STIMS"/>
 							<autoReward level="HIGH">scrap_only</autoReward>
-							<crewMember amount="1" class="mantis">Крейсер богомолов был разблокирован и добавлен в ангар!</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
+							<crewMember amount="1" class="mantis">Казааак</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
 							<quest event="MANTIS_NAMED_THIEF_STASH"/>
-							<unlockShip id="2">Вы прибываете в маленькое астероидное поле и обнаруживаете спрятанный тайник посреди обломков. Вы вводите коды, данные вам КазааакплетКиликом и находите внутри орудие.</unlockShip>
+							<unlockShip id="2">Крейсер богомолов был разблокирован и добавлен в ангар!</unlockShip>
 						</event>
 					</choice>
 				</event>
@@ -608,14 +608,14 @@ Special
 				<event>
 					<text>Your haste has paid off and you register him into the Clonebay's database. After he passes away he is quickly reconstructed on board your ship. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
 					<choice hidden="true">  <!-- NOTE - Add other options?-->
-						<text>КазааакплетКилик присоединяется к вашему экипажу, дает координаты тайника неподалеку с украденными военными припасами и пересылает координаты особого крейсера, над которым он работал. Вы переправляете их Федерации, они точно найдут ему хорошее применение.</text>
+						<text>Принять.</text>
 						<event>
-							<text>Крейсер богомолов был разблокирован и добавлен в ангар!plethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
+							<text>КазааакplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
 							<augment name="CREW_STIMS"/>
 							<autoReward level="HIGH">scrap_only</autoReward>
-							<crewMember amount="1" class="mantis">Крейсер богомолов был разблокирован и добавлен в ангар!</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
+							<crewMember amount="1" class="mantis">Казааак</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
 							<quest event="MANTIS_NAMED_THIEF_STASH"/>
-							<unlockShip id="2">Вы прибываете в маленькое астероидное поле и обнаруживаете спрятанный тайник посреди обломков. Вы вводите коды, данные вам КазааакплетКиликом и находите внутри орудие.</unlockShip>
+							<unlockShip id="2">Крейсер богомолов был разблокирован и добавлен в ангар!</unlockShip>
 						</event>
 					</choice>
 				</event>
@@ -628,7 +628,7 @@ Special
 
 
 <event name="MANTIS_NAMED_THIEF_STASH">
-	<text>You arrive at small asteroid field and discover the hidden cache among the debris. You input the codes given to you by Крейсер богомолов был разблокирован и добавлен в ангар!plethKilik and find a weapon inside.</text>
+	<text>You arrive at small asteroid field and discover the hidden cache among the debris. You input the codes given to you by КазааакplethKilik and find a weapon inside.</text>
 	<autoReward level="HIGH">weapon</autoReward>
 </event>
 

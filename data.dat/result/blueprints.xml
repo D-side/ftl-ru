@@ -25,12 +25,12 @@
 </blueprintList>
 
 <blueprintList name="STARTING_DRONES">
-	<name>Улучшенный внешний ИИ</name>
-	<name>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1</name>
-	<name>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._1</name>
-	<name>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._2</name>
-	<name>SHIP_Улучшенный внешний ИИ</name>
-	<name>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1</name>
+	<name>Система уплотнения корпуса</name>
+	<name>Улучш. FTL навигация_1</name>
+	<name>Усиленное покрытие системы_1</name>
+	<name>Усиленное покрытие системы_2</name>
+	<name>SHIP_Система уплотнения корпуса</name>
+	<name>Улучш. FTL навигация_1</name>
 </blueprintList>
 
 <blueprintList name="STARTING_AUGS">
@@ -174,8 +174,8 @@
 	<bp>4</bp>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Lockdown power (activate in crew box)</power>
 		<power>Кристалин</power>
+		<power>Способен запирать отсеки (актив. на панели экипажа)</power>
 		<power>Снижен урон от удушья</power>
 		<power>Передвигается на 20 процентов медленнее</power>
 	</powerList>
@@ -427,7 +427,7 @@
 
 <!-- For weapon art, all weapons will default to 'default' unless you give it something else...Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.		this prevents invisible weapons -->
 		
-<!-- Default Speeds: Laser = 60, Beams = 5, Описание корабляs = 35.. sorry the numbers have no meaning -->
+<!-- Default Speeds: Laser = 60, Beams = 5, Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.s = 35.. sorry the numbers have no meaning -->
 
 <weaponBlueprint name="ARTILLERY_BOSS_1">
 	<type>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.</type>
@@ -484,8 +484,8 @@
 	<rarity>0</rarity>
 	<image>missile_1</image>
 	<launchSounds>
-		<sound>smallОписание корабля1</sound>
-		<sound>smallОписание корабля2</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.1</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.2</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -928,8 +928,8 @@
 	<rarity>0</rarity>
 	<image>crystal_shard</image>
 	<launchSounds>
-		<sound>smallОписание корабля1</sound>
-		<sound>smallОписание корабля2</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.1</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.2</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -969,8 +969,8 @@
 	<rarity>0</rarity>
 	<image>missile_1</image>
 	<launchSounds>
-		<sound>smallОписание корабля1</sound>
-		<sound>smallОписание корабля2</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.1</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.2</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -1007,8 +1007,8 @@
 	<rarity>0</rarity>
 	<image>missile_2</image>
 	<launchSounds>
-		<sound>smallОписание корабля1</sound>
-		<sound>smallОписание корабля2</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.1</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.2</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -1045,8 +1045,8 @@
 	<rarity>0</rarity>
 	<image>missile_2</image>
 	<launchSounds>
-		<sound>smallОписание корабля1</sound>
-		<sound>smallОписание корабля2</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.1</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.2</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -1083,8 +1083,8 @@
 	<rarity>2</rarity>
 	<image>missile_3</image>
 	<launchSounds>
-		<sound>smallОписание корабля1</sound>
-		<sound>smallОписание корабля2</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.1</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.2</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -1122,8 +1122,8 @@
 	<rarity>3</rarity>
 	<image>missile_2</image>
 	<launchSounds>
-		<sound>smallОписание корабля1</sound>
-		<sound>smallОписание корабля2</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.1</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.2</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -1161,8 +1161,8 @@
 	<rarity>3</rarity>
 	<image>missile_breach</image>
 	<launchSounds>
-		<sound>smallОписание корабля1</sound>
-		<sound>smallОписание корабля2</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.1</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.2</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -1485,8 +1485,8 @@
 	<rarity>3</rarity>
 	<image>missile_hull</image>
 	<launchSounds>
-		<sound>smallОписание корабля1</sound>
-		<sound>smallОписание корабля2</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.1</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.2</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -1748,7 +1748,7 @@
 	<type>Тяжёлый Марк I кристалинов</type>
 	<tip>tip_bombs</tip>
 	<title>Медлительный боевой дрон, атакующий противника мини ракетами</title>
-	<short>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</short>
+	<short>Усиленное покрытие системы</short>
 	<locked>1</locked>
 	<desc>Анти-корабельный дрон I</desc>
 	<tooltip>Анти-кор I</tooltip>
@@ -1783,7 +1783,7 @@
 	<short>Лучевой I</short>
 	<locked>1</locked>
 	<desc>Боевой дрон, который постоянно атакует корабль противника небольшим лучевым оружием.</desc>
-	<tooltip>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</tooltip>
+	<tooltip>Усиленное покрытие системы</tooltip>
 	<damage>0</damage>
 	<ion>4</ion>
 	<missiles>1</missiles>
@@ -1848,7 +1848,7 @@
 	<title>Древние предки роков. Lockdown Bomb</title>
 	<short>Сбивает вражеские ракеты и астероиды.</short>
 	<locked>1</locked>
-	<desc>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля.</desc>
+	<desc>Улучш. FTL навигация</desc>
 	<tooltip>Bomb weapon; requires a missile; does no damage; prevents movement in or out of room. Can target your own ship.</tooltip>
 	<damage>0</damage>
 	<sysDamage>0</sysDamage>
@@ -1928,7 +1928,7 @@
 <weaponBlueprint name="CRYSTAL_BURST_2"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<type>Р. босса</type>
 	<title>Древние предки роков. Burst Mark II</title>
 	<short>Древние предки роков. B. II</short>
-	<desc>Молниеносный телепорт</desc>
+	<desc>Улучшенный внутренний ИИ</desc>
 	<tooltip>Противопехотный дрон</tooltip>
 	<damage>1</damage>
 	<tip>tip_crystal</tip>
@@ -2182,10 +2182,10 @@
 
 <weaponBlueprint name="DRONE_MISSILE">
 	<type>Р. босса</type>
-	<title>Drone Описание корабля</title>
-	<short>Улучшенная обшивка</short>
+	<title>Drone Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.</title>
+	<short>Усиленный реактор дронов</short>
 	<short>STUPID Р. босса</short>
-	<desc>Титан. покрытие систем</desc>
+	<desc>Улучшенная обшивка</desc>
 	<damage>1</damage>
 	<shots>1</shots>
 	<sp>5</sp>
@@ -2194,8 +2194,8 @@
 	<rarity>0</rarity>
 	<image>missile_1</image>
 	<launchSounds>
-		<sound>smallОписание корабля1</sound>
-		<sound>smallОписание корабля2</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.1</sound>
+		<sound>smallЭтот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.2</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
@@ -2211,12 +2211,12 @@
 	<weaponArt>missiles_1</weaponArt>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.</weaponBlueprint>
 
 <!-- NOT USED -->
-<droneBlueprint name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._ION">
-	<type>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</type>
+<droneBlueprint name="Усиленное покрытие системы_ION">
+	<type>Усиленное покрытие системы</type>
 	<tip>tip_combat</tip>
-	<title>Скрытые орудия</title>
-	<short>Позволяют стрелять из режима невидимости, не прерывая его.</short>
-	<desc>Кран для ремонта</desc>
+	<title>Титан. покрытие систем</title>
+	<short>Все системы корабля имеют покрытие, обеспечивающее 15-процентный шанс свести на нет урон при попадании (корпусу по прежнему будет наноситься урон).</short>
+	<desc>Инверсное ионное поле</desc>
 	<power>2</power>
 	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
 	<dodge>0</dodge>
@@ -2229,12 +2229,12 @@
 </droneBlueprint>
 
 <!-- NOT USED -->
-<droneBlueprint name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._MISSILE">
-	<type>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</type>
+<droneBlueprint name="Усиленное покрытие системы_MISSILE">
+	<type>Усиленное покрытие системы</type>
 	<tip>tip_combat</tip>
-	<title>Усиленная обшивка корпуса</title>
-	<short>Кран для сбора лома</short>
-	<desc>Позволяет собирать на 10 процентов больше лома из любого источника.</desc>
+	<title>Скрытые орудия</title>
+	<short>Позволяют стрелять из режима невидимости, не прерывая его.</short>
+	<desc>Кран для ремонта</desc>
 	<power>2</power>
 	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
 	<dodge>0</dodge>
@@ -2247,12 +2247,12 @@
 </droneBlueprint>
 
 
-<droneBlueprint name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._1">
-	<type>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</type>
+<droneBlueprint name="Усиленное покрытие системы_1">
+	<type>Усиленное покрытие системы</type>
 	<tip>tip_combat</tip>
 	<title>Combat Drone Mark I</title>
 	<short>Combat I</short>
-	<desc>Задержка между выстрелами орудий снижена на 15 процентов.</desc>
+	<desc>Кран для сбора лома</desc>
 	<power>2</power>
 	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
 	<dodge>0</dodge>
@@ -2265,12 +2265,12 @@
 	<iconImage>combat</iconImage>
 </droneBlueprint>
 
-<droneBlueprint name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.">
-	<type>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</type>
+<droneBlueprint name="Усиленное покрытие системы_Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.">
+	<type>Усиленное покрытие системы</type>
 	<tip>tip_combat</tip>
-	<title>Повышает скорость перезарядки щита на 15 процентов.</title>
-	<short>Пред-зажигатель орудий</short>
-	<desc>Первая зарядка орудий происходит ещё до начала боя.</desc>
+	<title>Сканеры широкого охвата</title>
+	<short>Собирают дополнительную информацию о близлежащих маяках на звездной карте.</short>
+	<desc>Авто-перезарядчик</desc>
 	<power>2</power>
 	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
 	<dodge>0</dodge>
@@ -2283,12 +2283,12 @@
 	<iconImage>beam</iconImage>
 </droneBlueprint>
 
-<droneBlueprint name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._2">
-	<type>Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет.</type>
+<droneBlueprint name="Усиленное покрытие системы_2">
+	<type>Усиленное покрытие системы</type>
 	<tip>tip_combat</tip>
 	<title>Combat Drone Mark II</title>
 	<short>Combat II</short>
-	<desc>Задержка между выстрелами орудий снижена на 15 процентов. Moves and shoots faster than Mark I.</desc>
+	<desc>Кран для сбора лома Moves and shoots faster than Mark I.</desc>
 	<power>4</power>
 	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
 	<dodge>0</dodge>
@@ -2304,11 +2304,11 @@
 </droneBlueprint>
 
 <!--- This guy, for now, flies like the combat drone but heals the ship  -->
-<droneBlueprint name="SHIP_Улучшенный внешний ИИ">
-	<type>SHIP_Улучшенный внешний ИИ</type>
+<droneBlueprint name="SHIP_Система уплотнения корпуса">
+	<type>SHIP_Система уплотнения корпуса</type>
 	<tip>tip_crew</tip>
-	<title>Механизм сбора дронов</title>
-	<short>Механизм сбора дронов</short>
+	<title>Первая зарядка орудий происходит ещё до начала боя.</title>
+	<short>Первая зарядка орудий происходит ещё до начала боя.</short>
 	<desc>Automatically repairs 3-5 damage to your hull. Drone part is consumed once it finishes.</desc>
 	<power>2</power>
 	<cooldown>1000</cooldown> <!--- Doesn't effect repair drone -->
@@ -2323,13 +2323,13 @@
 </droneBlueprint>
 
 
-<droneBlueprint name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1">
-	<type>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля.</type>
+<droneBlueprint name="Улучш. FTL навигация_1">
+	<type>Улучш. FTL навигация</type>
 	<level>1</level>
 	<tip>tip_defense</tip>
-	<title>Сломанная стазис-капсула</title>
-	<short>Этот причудливый чужеродный артефакт, как оказалось, едва функционирует. Он не имеет практического применения, но возможно кто-нибудь сможет починить его.</short>
-	<desc>Личные телепортеры</desc>
+	<title>Позволяет вашему кораблю прыгнуть к любому ранее посещённому маяку.</title>
+	<short>Механизм сбора дронов</short>
+	<desc>При прыжке все неразрушенные дроны будут преобразованы обратно в детали дронов.</desc>
 	<power>2</power>
 	<cooldown>1000</cooldown> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
 	<dodge>0</dodge>
@@ -2344,13 +2344,13 @@
 	<rarity>1</rarity>
 </droneBlueprint>
 
-<droneBlueprint name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._2">
-	<type>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля.</type>
+<droneBlueprint name="Улучш. FTL навигация_2">
+	<type>Улучш. FTL навигация</type>
 	<tip>tip_defense</tip>
 	<target>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.S</target>
-	<title>Сломанная стазис-капсулаI</title>
-	<short>Этот причудливый чужеродный артефакт, как оказалось, едва функционирует. Он не имеет практического применения, но возможно кто-нибудь сможет починить его.I</short>
-	<desc>Система уплотнения корпуса</desc>
+	<title>Позволяет вашему кораблю прыгнуть к любому ранее посещённому маяку.I</title>
+	<short>Механизм сбора дроновI</short>
+	<desc>Этот причудливый чужеродный артефакт, как оказалось, едва функционирует. Он не имеет практического применения, но возможно кто-нибудь сможет починить его.</desc>
 	<power>3</power>
 	<cooldown>880</cooldown> <!-- Was 750--> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
 	<dodge>0</dodge>
@@ -2365,12 +2365,12 @@
 	<rarity>3</rarity>
 </droneBlueprint>
 
-<droneBlueprint name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._2_ENEMY">
-	<type>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля.</type>
+<droneBlueprint name="Улучш. FTL навигация_2_ENEMY">
+	<type>Улучш. FTL навигация</type>
 	<tip>tip_defense</tip>
 	<target>Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.S</target>
-	<title>Сломанная стазис-капсулаI</title>
-	<short>Этот причудливый чужеродный артефакт, как оказалось, едва функционирует. Он не имеет практического применения, но возможно кто-нибудь сможет починить его.I</short>
+	<title>Позволяет вашему кораблю прыгнуть к любому ранее посещённому маяку.I</title>
+	<short>Механизм сбора дроновI</short>
 	<desc>BUG- Should not be seen</desc>
 	<power>3</power>
 	<cooldown>880</cooldown> <!-- Was 750--> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
@@ -2386,12 +2386,12 @@
 	<rarity>0</rarity>
 </droneBlueprint>
 
-<droneBlueprint name="BOSS_Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._2">
-	<type>Увеличивает в два раза время для расчета FTL прыжка вражеского корабля.</type>
+<droneBlueprint name="BOSS_Улучш. FTL навигация_2">
+	<type>Улучш. FTL навигация</type>
 	<level>2</level>
 	<tip>tip_defense</tip>
-	<title>Сломанная стазис-капсулаI</title>
-	<short>Этот причудливый чужеродный артефакт, как оказалось, едва функционирует. Он не имеет практического применения, но возможно кто-нибудь сможет починить его.I</short>
+	<title>Позволяет вашему кораблю прыгнуть к любому ранее посещённому маяку.I</title>
+	<short>Механизм сбора дроновI</short>
 	<desc>Shoots faster than Mark I and can also shoot down incoming lasers.</desc>
 	<power>2</power>
 	<cooldown>750</cooldown> <!--- Shooting cooldown for shooting at asteroids/missiles, in ms -->
@@ -2406,12 +2406,12 @@
 	<rarity>0</rarity>
 </droneBlueprint>
 
-<droneBlueprint name="Улучшенный внешний ИИ">
-	<type>Улучшенный внешний ИИ</type>
+<droneBlueprint name="Система уплотнения корпуса">
+	<type>Система уплотнения корпуса</type>
 	<tip>tip_crew</tip>
-	<title>Ваши защитные и атакующие дроны, работающие снаружи корабля, повысили эффективность на 20 процентов.</title>
+	<title>На половину уменьшает скорость утечки кислорода, когда система регенерации воздуха не работает.</title>
 	<short>Sys Rep.</short>
-	<desc>Ваш сигнал бедствия имеет больше шансов быть принятым дружественными кораблями.</desc>
+	<desc>Первый выстрел ракетой / бомбой после прыжка не будет использовать боеприпасы.</desc>
 	<power>1</power>
 	<cost>30</cost>
 	<bp>2</bp>
@@ -2420,13 +2420,13 @@
 </droneBlueprint>
 
 
-<droneBlueprint name="Молниеносный телепорт">
-	<type>Молниеносный телепорт</type>
+<droneBlueprint name="Улучшенный внутренний ИИ">
+	<type>Улучшенный внутренний ИИ</type>
 	<locked>1</locked>
 	<tip>tip_crew</tip>
-	<title>Телепортер доступен сразу после сверхсветового прыжка.</title>
-	<short>Термостойкие костюмы</short>
-	<desc>Даёт всему лучевому оружию возможность пробивать 1 единицу защитного поля</desc>
+	<title>Ваши дроны (ремонтные, и боевые) выполняют свою задачу на 20 процентов эффективнее.</title>
+	<short>Улучшенный внешний ИИ</short>
+	<desc>Ваши защитные и атакующие дроны, работающие снаружи корабля, повысили эффективность на 20 процентов.</desc>
 	<power>2</power>
 	<cost>35</cost> <!--was 60-->
 	<bp>3</bp>
@@ -2434,12 +2434,12 @@
 	<iconImage>battle</iconImage>
 </droneBlueprint>
 
-<droneBlueprint name="Пустельга">
-	<type>Пустельга</type>
+<droneBlueprint name="Зашифрованный сигнал бедствия">
+	<type>Зашифрованный сигнал бедствия</type>
 	<tip>tip_boarding</tip>
 	<locked>1</locked>
-	<title>Пустельга</title>
-	<short>Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.</short>
+	<title>Ваш сигнал бедствия имеет больше шансов быть принятым дружественными кораблями.</title>
+	<short>Молниеносный телепорт</short>
 	<desc>Огненный лучes through the enemy hull and wreaks havoc. Awesome.</desc>
 	<power>3</power>
 	<speed>18</speed>
@@ -2449,12 +2449,12 @@
 </droneBlueprint>
 
 
-<droneBlueprint name="Пустельга_BOSS">
-	<type>Пустельга</type>
+<droneBlueprint name="Зашифрованный сигнал бедствия_BOSS">
+	<type>Зашифрованный сигнал бедствия</type>
 	<tip>tip_boarding</tip>
 	<locked>1</locked>
-	<title>Пустельга</title>
-	<short>Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.</short>
+	<title>Ваш сигнал бедствия имеет больше шансов быть принятым дружественными кораблями.</title>
+	<short>Молниеносный телепорт</short>
 	<desc>Огненный лучes through the enemy hull and wreaks havoc. Awesome.</desc>
 	<power>2</power>
 	<speed>18</speed>
@@ -2471,24 +2471,24 @@
 
 <itemBlueprint name="fuel">
 	<type>ITEM_FUEL</type>
-	<title>Этим кораблём владеет знаменитый вор богомолов КазааакплетхКилик. Вам придётся «убедить» его оказать вам помощь, чтобы испытать этот корабль в деле.</title>
-	<desc>Это боевое судно было спроектировано так, чтобы его команде было удобно идти на абордаж.</desc>
+	<title>Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.</title>
+	<desc>Крейсер «Пустельга»</desc>
 	<cost>3</cost>
 	<rarity>1</rarity>
 </itemBlueprint>
 
 <itemBlueprint name="drones">
 	<type>ITEM_DRONE</type>
-	<title>Крейсер богомолов</title>
-	<desc>Этим кораблём владеет знаменитый вор богомолов КазааакплетхКилик. Вам придётся «убедить» его оказать вам помощь, если хотите испытать этот корабль в деле.</desc>
+	<title>Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.</title>
+	<desc>Крейсер «Пустельга»</desc>
 	<cost>8</cost>
 	<rarity>3</rarity>
 </itemBlueprint>
 
 <itemBlueprint name="missiles">
 	<type>ITEM_MISSILE</type>
-	<title>Описание корабля</title>
-	<desc>Стелс-крейсер</desc>
+	<title>Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою.</title>
+	<desc>Крейсер богомолов</desc>
 	<cost>6</cost>
 	<rarity>3</rarity>
 </itemBlueprint>
@@ -2503,8 +2503,8 @@
 
 <!-- SHIP SPECIFIC AUGMENTS -->
 
-<augBlueprint name="ROCK_ARMOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Этот корабль строился в глубинах владений инжи. Чтобы разблокировать его, вы должны помочь им, но имейте в виду — они доверяют только себе подобным.</title>
-	<desc>Superior hull armor provides a 15 percent chance to negate incoming hull damage (hit systems will still be damaged).</desc>
+<augBlueprint name="ROCK_ARMOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Этим кораблём владеет знаменитый вор богомолов КазааакплетхКилик. Вам придётся «убедить» его оказать вам помощь, чтобы испытать этот корабль в деле.</title>
+	<desc>Это боевое судно было спроектировано так, чтобы его команде было удобно идти на абордаж.</desc>
 	<cost>80</cost>
 	<bp>8</bp>
 	<rarity>0</rarity>
@@ -2513,7 +2513,7 @@
 </augBlueprint>
 
 <augBlueprint name="CRYSTAL_SHARDS">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Древние предки роков. Vengeance</title>
-	<desc>Стелс-крейсер</desc>
+	<desc>Этим кораблём владеет знаменитый вор богомолов КазааакплетхКилик. Вам придётся «убедить» его оказать вам помощь, если хотите испытать этот корабль в деле.</desc>
 	<cost>80</cost>
 	<bp>8</bp>
 	<rarity>0</rarity>
@@ -2553,7 +2553,7 @@
 
 <augBlueprint name="CREW_STIMS">
 	<title>Богомол Pheromones</title>
-	<desc>Крейсер инжи</desc>
+	<desc>Построенный инжи для Федерации, этот корабль делает ставку на скорость и усовершенствованную технологию невидимости, подбираясь к врагу с тыла.</desc>
 	<cost>50</cost>
 	<bp>9</bp>
 	<rarity>0</rarity>
@@ -2563,7 +2563,7 @@
 
 
 <augBlueprint name="DRONE_SPEED">
-	<title>Чтобы разблокировать этот корабль Инжи вам нужно добраться до 5-го сектора.</title>
+	<title>Крейсер инжи</title>
 	<desc>Your shipboard drones have their movement speed increased by 25 percent.</desc>
 	<cost>50</cost>
 	<bp>9</bp>
@@ -2572,8 +2572,8 @@
 	<stackable>false</stackable>
 </augBlueprint>
 
-<!--<augBlueprint name="ADV_HULL_ARMOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Крейсер Федерации</title>
-	<desc>State of the art hull armor provides a massive 25 percent chance to negate incoming hull damage (hit systems will still be damaged).</desc>
+<!--<augBlueprint name="ADV_HULL_ARMOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Пусть он и выглядит как груда хлама, кое- как соединённая вместе. Но на самом деле это продуманный корабль, полагающийся на использование ионных орудий и дронов.</title>
+	<desc>Крейсер инжи</desc>
 	<cost>100</cost>
 	<bp>15</bp>
 	<rarity>0</rarity>
@@ -2582,9 +2582,9 @@
 </augBlueprint>-->
 
 <augBlueprint name="SYSTEM_CASING">
-	<!--<title>Победите босса, чтобы разблокировать этот передовой крейсер Федерации.</title>-->
-	<title>Этот корабль оснащён новейшей технологией Федерации: улучшенное лучевое орудие, проникающее сквозь щиты!</title>
-	<desc>All ship systems have additional plating that provides a 15 percent chance to negate damage when hit (hull will still be damaged)</desc>
+	<!--<title>Чтобы разблокировать этот корабль Инжи вам нужно добраться до 5-го сектора.</title>-->
+	<title>Пусть он и выглядит как груда хлама, кое- как соединённая вместе. Но на самом деле это продуманный корабль, полагающийся на использование ионных орудий и дронов.</title>
+	<desc>Крейсер Федерации</desc>
 	<cost>80</cost> <!--was 100-->
 	<bp>15</bp>
 	<rarity>0</rarity>
@@ -2595,7 +2595,7 @@
 
 <!-- END RACE SPECIFIC AUGMENTS -->
 
-<augBlueprint name="ION_ARMOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Крейсер Федерации</title>
+<augBlueprint name="ION_ARMOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Победите босса, чтобы разблокировать этот передовой крейсер Федерации.</title>
 	<desc>Protects your ship from ion damage, giving a 50 percent chance to negate it entirely.</desc>
 	<cost>45</cost> <!--was 60-->
 	<bp>8</bp>
@@ -2604,7 +2604,16 @@
 	<value>0.50</value>
 </augBlueprint>
 
-<augBlueprint name="CLOAK_FIRE">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Этот корабль оснащен новейшей технологией Федерации: улучшенные лучевые орудия, которые проникают сквозь щиты!</title>
+<augBlueprint name="CLOAK_FIRE">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Крейсер Федерации</title>
+	<desc>Победите босса, чтобы разблокировать этот передовой крейсер Федерации.</desc>
+	<cost>50</cost>
+	<bp>8</bp>
+	<rarity>3</rarity>
+	<stackable>false</stackable>
+	<value>0.15</value>
+</augBlueprint>
+
+<augBlueprint name="Система уплотнения корпуса_ARM">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Этот корабль оснащен новейшей технологией Федерации: улучшенные лучевые орудия, которые проникают сквозь щиты!</title>
 	<desc>Крейсер слизней</desc>
 	<cost>50</cost>
 	<bp>8</bp>
@@ -2613,17 +2622,8 @@
 	<value>0.15</value>
 </augBlueprint>
 
-<augBlueprint name="Улучшенный внешний ИИ_ARM">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Один из кораблей слизней должен что-то знать об этом современном крейсере. Возможно, вы сможете «убедить» их рассказать вам.</title>
-	<desc>Созданный для использования внутри туманности, этот крейсер не имеет сенсоров, используя вместо них коварство и хитрость слизней.</desc>
-	<cost>50</cost>
-	<bp>8</bp>
-	<rarity>3</rarity>
-	<stackable>false</stackable>
-	<value>0.15</value>
-</augBlueprint>
-
-<!--<augBlueprint name="HULL_ARMOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Крейсер слизней</title>
-	<desc>Superior hull armor provides a 15 percent chance to negate incoming hull damage (hit systems will still be damaged).</desc>
+<!--<augBlueprint name="HULL_ARMOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Один из кораблей слизней должен что-то знать об этом современном крейсере. Возможно, вы сможете «убедить» их рассказать вам.</title>
+	<desc>Это боевое судно было спроектировано так, чтобы его команде было удобно идти на абордаж.</desc>
 	<cost>60</cost>
 	<bp>8</bp>
 	<rarity>2</rarity>
@@ -2631,8 +2631,8 @@
 	<value>0.15</value>
 </augBlueprint>-->
 
-<augBlueprint name="SCRAP_COLLECTOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Один из кораблей слизней должен что-то знать об этом современном крейсере. Возможно, вы сможете «убедить» их рассказать вам.</title>
-	<desc>Созданный для использования внутри туманности, этот крейсер не имеет сенсоров, полагаясь вместо них на коварство и хитрость слизней.</desc>
+<augBlueprint name="SCRAP_COLLECTOR">Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Крейсер слизней</title>
+	<desc>Один из кораблей слизней должен что-то знать об этом современном крейсере. Возможно, вы сможете «убедить» их рассказать вам.</desc>
 	<cost>50</cost>
 	<bp>8</bp>
 	<rarity>1</rarity>
@@ -2641,7 +2641,7 @@
 </augBlueprint>
 
 <augBlueprint name="ADV_SCANNERS">
-	<title>Крейсер роков</title>
+	<title>Созданный для использования внутри туманности, этот крейсер не имеет сенсоров, полагаясь вместо них на коварство и хитрость слизней.</title>
 	<desc>Adds additional info about nearby Beacons on the star map.</desc>
 	<cost>30</cost>
 	<bp>3</bp>
@@ -2650,7 +2650,7 @@
 </augBlueprint>
 
 <augBlueprint name="AUTO_COOLDOWN">
-	<title>Подобно своим создателям, этот супер плотный бегемот сокрушает своих врагов в основном с помощью грубой силы.</title>
+	<title>Докажите рокам, что вы достойны получить этот мощный крейсер.</title>
 	<desc>Cooldown between weapon shots is improved by 10 percent.</desc>
 	<cost>40</cost>
 	<bp>5</bp>
@@ -2660,8 +2660,8 @@
 </augBlueprint>
 
 <augBlueprint name="SHIELD_RECHARGE">
-	<title>Заблокировано, пока не в игре</title>
-	<desc>Подобно своим создателям, этот супер плотный бегемот сокрушает своих врагов в основном с помощью грубой силы.</desc>
+	<title>Крейсер роков</title>
+	<desc>Заблокировано, пока не в игре</desc>
 	<cost>45</cost>
 	<bp>5</bp>
 	<rarity>2</rarity>
@@ -2670,8 +2670,8 @@
 </augBlueprint>
 
 <augBlueprint name="WEAPON_PREIGNITE">
-	<title>Крейсер золтанцев</title>
-	<desc>Учитесь у золтанцев, иногда дипломатия работает.</desc>
+	<title>Подобно своим создателям, этот супер плотный бегемот сокрушает своих врагов в основном с помощью грубой силы.</title>
+	<desc>Крейсер золтанцев</desc>
 	<cost>120</cost>
 	<bp>16</bp>
 	<rarity>4</rarity>
@@ -2679,8 +2679,8 @@
 </augBlueprint>
 
 <augBlueprint name="FTL_BOOSTER">
-	<title>Технология продвинутых щитов золтанцев даёт этому кораблю преимущество в каждом бою.</title>
-	<desc>Крейсер золтанцев</desc>
+	<title>Учитесь у золтанцев, иногда дипломатия работает.</title>
+	<desc>Технология продвинутых щитов золтанцев даёт этому кораблю преимущество в каждом бою.</desc>
 	<cost>50</cost>
 	<bp>4</bp>
 	<rarity>2</rarity>
@@ -2689,7 +2689,7 @@
 </augBlueprint>
 
 <augBlueprint name="FTL_JUMPER">
-	<title>Учитесь у золтанцев, иногда дипломатия работает.</title>
+	<title>Крейсер золтанцев</title>
 	<desc>Allows the ship to jump to any previously visited Beacon.</desc>
 	<cost>50</cost> <!--was 60-->
 	<bp>5</bp>
@@ -2697,8 +2697,8 @@
 	<stackable>false</stackable>
 </augBlueprint>
 
-<augBlueprint name="DRONE_RECOVERY"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Крейсер кристалинов</title>
-	<desc>Отправляйтесь в неизученный сектор галактики, чтобы найти этот мощный корабль.</desc>
+<augBlueprint name="DRONE_RECOVERY"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Технология продвинутых щитов золтанцев даёт этому кораблю преимущество в каждом бою.</title>
+	<desc>Крейсер кристалинов</desc>
 	<cost>50</cost>
 	<bp>8</bp>
 	<rarity>2</rarity>
@@ -2706,7 +2706,7 @@
 </augBlueprint>
 
 <augBlueprint name="FTL_JAMMER">
-	<title>Этот мощный корабль оснащен секретными технологиями потерянной расы кристалин.</title>
+	<title>Отправляйтесь в неизученный сектор галактики, чтобы найти этот мощный корабль.</title>
 	<desc>Scramble enemy ships' FTL computers, doubling the time it takes for them to jump.</desc>
 	<cost>30</cost>
 	<bp>4</bp>
@@ -2718,8 +2718,8 @@
 
 
 <augBlueprint name="STASIS_POD">
-	<title>Отправляйтесь в неизученный сектор галактики, чтобы найти этот мощный корабль.</title>
-	<desc>Этот мощный корабль оснащен секретными технологиями потерянной расы кристалин.</desc>
+	<title>Крейсер кристалинов</title>
+	<desc>Отправляйтесь в неизученный сектор галактики, чтобы найти этот мощный корабль.</desc>
 	<cost>30</cost>
 	<bp>15</bp>
 	<rarity>0</rarity>
@@ -2729,14 +2729,14 @@
 
 
 <!--OTHER IDEAS --Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.<augBlueprint name="PERSONAL_TELEPORTER">            requires a teleporter system to be working???
-	<title>Пират</title>
-	<desc>Пустельга</desc>
+	<title>Этот мощный корабль оснащен секретными технологиями потерянной расы кристалин.</title>
+	<desc>Пират</desc>
 	<cost>150</cost>
 	<rarity>4</rarity>
 	<stackable>false</stackable>
 </augBlueprint>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.
-<augBlueprint name="FLIGHT_SUITS"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Невероятный пират</title>
-	<desc>Рейдер повстанцев</desc>
+<augBlueprint name="FLIGHT_SUITS"> Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<title>Пустельга</title>
+	<desc>Невероятный пират</desc>
 	<cost>80</cost>
 	<rarity>2</rarity>
 	<value>0.5</value>
@@ -2744,7 +2744,7 @@
 </augBlueprint>
 
 <augBlueprint name="SHIP_SEALING">
-	<title>Элитный повстанец</title>
+	<title>Рейдер повстанцев</title>
 	<desc>O2 will deplete at 50% speed when the Максимальный запас здоровья снижен system is unpowered.</desc>
 	<cost>100</cost>
 	<rarity>2</rarity>
@@ -2753,8 +2753,8 @@
 </augBlueprint>
 
 <augBlueprint name="MISSILE_REPLICATOR">
-	<title>Описание корабля Replication System</title>
-	<desc>Пёстрые обломки</desc>
+	<title>Этот класс кораблей был списан со службы Федерации несколько лет назад. После ряда модификаций и обновлений этот классический корабль готов к бою. Replication System</title>
+	<desc>Элитный повстанец</desc>
 	<cost>100</cost>
 	<rarity>3</rarity>
 	<stackable>false</stackable>
@@ -2762,7 +2762,7 @@
 	
 <augBlueprint name="INTERNAL_AI">
 	<title>Пёстрые обломки</title>
-	<desc>Your interior drones (repair and battle) are 20 percent more effective.</desc>    maybe they just move at normal human speed
+	<desc>Пёстрые обломки</desc>    maybe they just move at normal human speed
 	<cost>100</cost>
 	<rarity>3</rarity>
 	<value>0.2</value>
@@ -2771,7 +2771,7 @@
 
 <augBlueprint name="EXTERNAL_AI">
 	<title>Пёстрые обломки</title>
-	<desc>Your exterior drones (defense and combat) are 20 percent more effective.</desc>
+	<desc>Флагман повстанцев</desc>
 	<cost>100</cost>
 	<rarity>3</rarity>
 	<value>0.2</value>
@@ -2785,7 +2785,7 @@
 
 <augBlueprint name="ENCODED_DISTRESS">
 	<title>Флагман повстанцев</title>
-	<desc>Флагман повстанцев</desc>
+	<desc>Your distress signal will be more likely to be picked up by friendly ships.</desc>
 	<cost>100</cost>
 	<rarity>3</rarity>
 	<stackable>false</stackable>
@@ -2891,7 +2891,7 @@
 	</weaponList>
 	<droneList count="2" drones="10">
 		<drone name="DRONE_Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку."/>
-		<drone name="Улучшенный внешний ИИ"/>
+		<drone name="Система уплотнения корпуса"/>
 	</droneList>
 	<health amount="30"/>
 	<maxPower amount ="28"/>Делает 3 выстрела, по 2 урона каждый со средним шансом поджечь или разгерметизировать.	<crewCount amount = "6" class="human"/>
@@ -3152,8 +3152,8 @@
 	</systemList>
 	<weaponList count="0" missiles="0"/>
 	<droneList count="2" drones="15">
-		<drone name="Пустельга"/>
-		<drone name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1"/>
+		<drone name="Зашифрованный сигнал бедствия"/>
+		<drone name="Улучш. FTL навигация_1"/>
 	</droneList>
 	<weaponSlots>3</weaponSlots>
 	<droneSlots>2</droneSlots>
@@ -3324,7 +3324,7 @@
 		<weapon name="ION_4"/>
 	</weaponList>
 	<droneList count="1" drones="15">
-		<drone name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._1"/>
+		<drone name="Усиленное покрытие системы_1"/>
 	</droneList>
 	<aug name="NANO_MEDBAY"/>
 	<health amount="30"/>
@@ -3374,9 +3374,9 @@
 		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_1"/>
 	</weaponList>
 	<droneList count="3" drones="6">
-		<drone name="Молниеносный телепорт"/>
-		<drone name="Улучшенный внешний ИИ"/>
-		<drone name="Улучшенный внешний ИИ"/>
+		<drone name="Улучшенный внутренний ИИ"/>
+		<drone name="Система уплотнения корпуса"/>
+		<drone name="Система уплотнения корпуса"/>
 	</droneList>
 	<aug name="DRONE_SPEED"/>
 	<health amount="30"/>
@@ -3431,9 +3431,9 @@
 		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_1"/>
 	</weaponList>
 	<droneList count="3" drones="6">
-		<drone name="Молниеносный телепорт"/>
-		<drone name="Улучшенный внешний ИИ"/>
-		<drone name="Улучшенный внешний ИИ"/>
+		<drone name="Улучшенный внутренний ИИ"/>
+		<drone name="Система уплотнения корпуса"/>
+		<drone name="Система уплотнения корпуса"/>
 	</droneList>
 	<aug name="DRONE_SPEED"/>
 	<health amount="30"/>
@@ -4079,7 +4079,7 @@ TUTORIAL SHIPS
 		<weapon name="Р. босса_BURST"/>
 	</weaponList>
 	<droneList count="1" drones="5">
-		<drone name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._1"/>
+		<drone name="Усиленное покрытие системы_1"/>
 	</droneList>
 	<health amount="20"/>	
 	<maxPower amount ="35"/>
@@ -4103,8 +4103,8 @@ TUTORIAL SHIPS
 		<drones power="4" room="1"/>
 	</systemList>
 	<droneList count="2" drones="4">
-		<drone name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1"/>
-		<drone name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1"/>
+		<drone name="Улучш. FTL навигация_1"/>
+		<drone name="Улучш. FTL навигация_1"/>
 	</droneList>
 	<weaponList count="2" missiles="10">
 		<weapon name="Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта._HEAVY_1"/>
@@ -4261,10 +4261,10 @@ Boss files
 	</systemList>
 	<weaponList count="0" missiles="10"/>
 	<droneList count="4" drones="10">
-		<drone name="Увеличивает в два раза время для расчета FTL прыжка вражеского корабля._1"/>
-		<drone name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._1"/>
-		<drone name="Защищает ваш корабль от ионного урона, давая 20-процентный шанс свести его полностью на нет._Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку."/>
-		<drone name="Пустельга_BOSS"/>
+		<drone name="Улучш. FTL навигация_1"/>
+		<drone name="Усиленное покрытие системы_1"/>
+		<drone name="Усиленное покрытие системы_Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку."/>
+		<drone name="Зашифрованный сигнал бедствия_BOSS"/>
 	</droneList>
 	<health amount="22"/>	
 	<maxPower amount ="44"/>

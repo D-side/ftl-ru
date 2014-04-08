@@ -209,14 +209,14 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 		<event/>
 	</choice>
 	<choice hidden="true" req="sensors" lvl="3">
-		<text>(Improved Sensors) Scan the monstrosity.</text>
+		<text>(Улучшенные сенсоры) Просканировать чудовище.</text>
 		<event>
 			<text>Вы различаете слабые неритмичные низковолновые сигналы. Может ли быть, что существо общается? Вы пересылаете свои наблюдения на судно инжи, и они в свою очередь благодарят вас.</text>
 			<autoReward level="LOW">augment</autoReward>
 		</event>
 	</choice>
 	<choice hidden="true" req="ADV_SCANNERS">
-		<text>(Long-Ranged Scanners) Scan the monstrosity.</text>
+		<text>(Сканеры широкого охвата) Просканировать чудовище.</text>
 		<event>
 			<text>Вы различаете слабые неритмичные низковолновые сигналы. Может ли быть, что существо общается? Вы пересылаете свои наблюдения на судно инжи, и они в свою очередь благодарят вас.</text>
 			<autoReward level="LOW">augment</autoReward>
@@ -375,15 +375,15 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 <event name="DISTRESS_ENGI_REBEL_RESULT">
 	<text>The Engi vessel turns out to be very poorly equipped - barely a runabout, really. They're trying to outrun the Rebels, and need all the help they can get.</text>
 	<choice hidden="true">
-		<text>Дать им 40 лома, 2 ракеты и 2 топлива.</text>
+		<text>Дать им 25 лома.</text>
 		<event load="DISTRESS_ENGI_REBEL_LIST1"/>
 	</choice>
 	<choice hidden="true">
-		<text>Ничего им не давать.</text>
+		<text>Дать им 40 лома, 2 ракеты и 2 топлива.</text>
 		<event load="DISTRESS_ENGI_REBEL_LIST2"/>
 	</choice>
 	<choice hidden="true">
-		<text>Инжи не могут чувствовать страх, поэтому они не держат обиды, когда вы объясняете свое нежелание помочь. Они отправляются в свое путешествие, то же делаете и вы.</text>
+		<text>Ничего им не давать.</text>
 		<event>
 			<text>Engi can't feel fear, so they bear you no ill will when you explain you're unwilling to help. They set off on their journey and you do the same.</text>
 		</event>
@@ -424,45 +424,45 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 		
 		
 <event name="DISTRESS_ENGI_REACTOR" unique="true">
-	<text>Пристыковаться к станции.</text>
+	<text>Вы обнаруживаете догорающую исследовательскую станцию инжи. На её призыв о помощи никто не ответил, и она была уничтожена — вероятно, пиратами или богомолами. Возможно, на борту остались выжившие или что-то ценное.</text>
 	<distressBeacon/>
 	<choice hidden="true">
-		<text>Проигнорировать её.</text>
+		<text>Пристыковаться к станции.</text>
 		<event load="DISTRESS_ENGI_REACTOR_LIST1"/>
 	</choice>
 	<choice hidden="true">
-		<text>Это место в ужасном состоянии, судя по всему тут ничего полезного. Время двигаться дальше.</text>
+		<text>Проигнорировать её.</text>
 		<event>
-			<text>Вы посылаете команду для осмотра, но среди кислотного запаха и сгоревших частей тела инжи спасать оказалось нечего. Это место мертво.</text>
+			<text>Это место в ужасном состоянии, судя по всему тут ничего полезного. Время двигаться дальше.</text>
 		</event>
 	</choice>
 	<choice hidden="true" req="sensors" lvl="2">
-		<text>(Improved Sensors) Run another scan.</text>
+		<text>(Улучшенные сенсоры) Провести дополнительное сканирование.</text>
 		<event load="DISTRESS_ENGI_REACTOR_SCAN"/>
 	</choice>
 	<choice hidden="true" req="ADV_SCANNERS">
-		<text>(Long Ranged Scanners) Run another scan.</text>
+		<text>(Сканеры дальнего действия) Провести дополнительное сканирование.</text>
 		<event load="DISTRESS_ENGI_REACTOR_SCAN"/>
 	</choice>
 </choice>
 <eventList name="DISTRESS_ENGI_REACTOR_LIST1">
 	<event>
-		<text>Ваша команда на станции сообщает о раненом инжи и функционирующей схеме дрона. Затем кто-то кричит. Реактор станции перегружен и у них заканчивается время!</text>
+		<text>Вы посылаете команду для осмотра, но среди кислотного запаха и сгоревших частей тела инжи спасать оказалось нечего. Это место мертво.</text>
 	</event>
 	<event>
-		<text>Спасти инжи!</text>
+		<text>Ваша команда на станции сообщает о раненом инжи и функционирующей схеме дрона. Затем кто-то кричит. Реактор станции перегружен и у них заканчивается время!</text>
 		<choice hidden="true">
-			<text>Спасти схему дрона.</text>
+			<text>Спасти инжи!</text>
 			<event load="DISTRESS_ENGI_REACTOR_ENGI"/>
 		</choice>
 		<choice hidden="true">	
-			<text>Спасаться самим!</text>
+			<text>Спасти схему дрона.</text>
 			<event load="DISTRESS_ENGI_REACTOR_DRONE"/>
 		</choice>
 		<choice hidden="true">
-			<text>Это тяжкое решение, но жизни вашего экипажа важнее. Они всё бросают и возвращаются на корабль невредимыми. Вы немного отлетаете от станции, прежде чем она взрывается.</text>
+			<text>Спасаться самим!</text>
 			<event>
-				<text>Член вашего экипажа доблестно хватает инжи и кидает его в шлюз прямо перед тем как реактор взрывается и автоматические огнеупорные двери смыкаются намертво. У вас нет выбора, кроме как скорбеть об этой утрате и двигаться дальше.</text>
+				<text>Это тяжкое решение, но жизни вашего экипажа важнее. Они всё бросают и возвращаются на корабль невредимыми. Вы немного отлетаете от станции, прежде чем она взрывается.</text>
 				<autoReward level="LOW">scrap_only</autoReward>
 			</event>
 		</choice>
@@ -470,29 +470,29 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 </eventList>
 <eventList name="DISTRESS_ENGI_REACTOR_ENGI">
 	<event>
-		<text>Продолжить...</text>
+		<text>Член вашего экипажа доблестно хватает инжи и кидает его в шлюз прямо перед тем как реактор взрывается и автоматические огнеупорные двери смыкаются намертво. У вас нет выбора, кроме как скорбеть об этой утрате и двигаться дальше.</text>
 		<removeCrew>
 			<clone>true</clone>
 			<text>The brave crewmember's clone strides from the Clone Bay, rather full of themself after such a heroic act.</text>
 		</removeCrew>
 		<choice hidden="true">
-			<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+			<text>Продолжить...</text>
 			<event>
-				<text>Ваш экипаж благополучно возвращается к шлюзу с раненым инжи и вы немного отлетаете от станции, прежде чем она взрывается. Инжи, восхищенный вашим экипажем, добровольно присоединяется к вам.</text>
+				<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
 				<crewMember amount="1" class="engi"/>  
 				<autoReward level="LOW">scrap_only</autoReward>
 			</event>
 		</choice>
 	</event>
 	<event>
-		<text>Ваша команда возвращается с припасами, но пока они переправляли их на корабль небольшой взрыв выбивает дверь шлюза и одного члена экипажа засасывает в космос!</text>
+		<text>Ваш экипаж благополучно возвращается к шлюзу с раненым инжи и вы немного отлетаете от станции, прежде чем она взрывается. Инжи, восхищенный вашим экипажем, добровольно присоединяется к вам.</text>
 		<crewMember amount="1" class="engi"/>  
 		<autoReward level="LOW">scrap_only</autoReward>
 	</event>
 </eventList>
 <eventList name="DISTRESS_ENGI_REACTOR_DRONE">
 	<event>
-		<text>Инжи чувствуют не так, как это делают другие расы. Они бы хотели, чтобы техника была спасена прежде всего. Ваш экипаж благополучно возвращается к шлюзу со схемой дрона и вы немного отлетаете от станции, прежде чем она взрывается.</text>
+		<text>Ваша команда возвращается с припасами, но пока они переправляли их на корабль небольшой взрыв выбивает дверь шлюза и одного члена экипажа засасывает в космос!</text>
 		<removeCrew>
 			<clone>true</clone>
 			<text>Fortunately, your crewmember was close enough to the ship for the Clone Bay to revive them.</text>
@@ -500,24 +500,24 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 		<autoReward level="LOW">scrap_only</autoReward>
 	</event>
 	<event>
-		<text>Сканирования показали, что реактор станции перегружен! К тому же на борту до сих пор находятся раненый инжи и функционирующая схема дрона! Времени спасти обоих нету...</text>
+		<text>Инжи чувствуют не так, как это делают другие расы. Они бы хотели, чтобы техника была спасена прежде всего. Ваш экипаж благополучно возвращается к шлюзу со схемой дрона и вы немного отлетаете от станции, прежде чем она взрывается.</text>
 		<autoReward level="LOW">drone</autoReward>
 	</event>
 </eventList>
 <event name="DISTRESS_ENGI_REACTOR_SCAN">
-	<text>Спасти инжи!</text>
+	<text>Сканирования показали, что реактор станции перегружен! К тому же на борту до сих пор находятся раненый инжи и функционирующая схема дрона! Времени спасти обоих нету...</text>
 	<choice hidden="true">
-		<text>Спасти схему дрона.</text>
+		<text>Спасти инжи!</text>
 		<event>
-			<text>Спасти схему дрона.</text>
+			<text>Ваша команда направляется прямиком за инжи и успевает возвратиться вовремя. Вы немного отлетаете от станции, прежде чем она взрывается, и инжи настолько восхищен вашим экипажем, что добровольно к вам присоединяется!</text>
 			<crewMember amount="1" class="engi"/>  
 			<autoReward level="LOW">scrap_only</autoReward>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Инжи чувствуют не так, как это делают другие расы. Они бы хотели, чтобы техника была спасена прежде всего. Ваш экипаж благополучно возвращается к шлюзу со схемой дрона и вы немного отлетаете от станции, прежде чем она взрывается.</text>
+		<text>Спасти схему дрона.</text>
 		<event>
-			<text>Вы появляетесь неподалеку от небольшого флота гражданских кораблей инжи. Простая расшифровка и перевод их частот связи говорит вам, что они неистово обсуждают что-то, что явно их беспокоит.</text>
+			<text>Инжи чувствуют не так, как это делают другие расы. Они бы хотели, чтобы техника была спасена прежде всего. Ваш экипаж благополучно возвращается к шлюзу со схемой дрона и вы немного отлетаете от станции, прежде чем она взрывается.</text>
 			<autoReward level="LOW">drone</autoReward>
 		</event>
 	</choice>
@@ -532,15 +532,15 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 <event name="ENGI_UNLOCK_1" unique="true">
 	<text>You arrive near a small fleet of civilian Engi ships. A simple decryption and translation of their comm frequency tells you that they are having a frantic discussion about something obviously troubling them.</text> 
 	<choice>
-		<text>Слегка шокированный вашим вопросом, их лидер быстро отвечает: «Предложение отклонено, с благодарностью извиняемся. Тема обсуждения — частная, не юрисдикция Федерации».</text>
+		<text>Связаться с ними и спросить можете ли вы им помочь.</text>
 		<event>
 			<text>Slightly shocked at your question, their leader quickly responds, "Declined offer with apologetic gratitude. Topic of discussion private matter, no concern of Federation."</text>
 		</event>
 	</choice>
 	<choice>
-		<text>Вы не можете помочь, но гадаете, что же они обсуждали, пока готовитесь к прыжку.</text>
+		<text>Проигнорировать это и двигаться дальше.</text>
 		<event>
-			<text>Ваш член экипажа подсоединяется к рации, чтобы общаться с ними напрямую. Вы предлагаете помощь и рассказываете цель своей миссии. Они отвечают: «Наши цели аналогичны. Однако, информация недоступна для раскрытия, необходимо рассмотрение».</text>
+			<text>Вы не можете помочь, но гадаете, что же они обсуждали, пока готовитесь к прыжку.</text>
 		</event>
 	</choice>
 	<choice req="engi" hidden="true">
@@ -548,17 +548,17 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 		<event>
 			<text>Your crewmember syncs with the comm unit to communicate with them directly. You offer your help and a summary of the ship's mission. They respond, "Our goals have analogous elements. However, not all available for disclosure, discretion necessary."</text>
 			<choice>
-				<text>«Секретные технологии украдены богомолами. Прослеживается связь с повстанцами. Неявно. Богомолы отслежены до скрытой базы повстанцев, загружаем координаты».</text>
+				<text>Предложить помощь.</text>
 				<event>
 					<text>"Secret technologies stolen by Mantis. Implicit connection to Rebels. Implicit. Tracked Mantis to hidden Rebel base, uploading coordinates."</text>
 					<quest event="ENGI_UNLOCK_2REAL"/>
 					<choice>
-						<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+						<text>Продолжить...</text>
 						<event>
 							<quest event="ENGI_UNLOCK_2FAKE"/>
 							<text>"However, tracked second ship to different base. Would calculate probability but data insufficient. Cannot risk obvious Rebel-Engi conflict. Also, need time to acquire military ships. Assist in finding technology?"</text>
 							<choice>
-								<text>Вы прибываете на одну из баз повстанцев, о которых вам говорили инжи. Похоже что всё заброшено, кроме одного разведывательного корабля. Может быть удастся выбить информацию из него.</text>
+								<text>Согласиться.</text>
 								<event/>
 							</choice>
 						</event>
@@ -575,17 +575,17 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 <event name="ENGI_UNLOCK_2FAKE_SURRENDER">
 	<text>"Stop! I don't want to die here."</text>
 	<choice>
-		<text>«Аа, так вот зачем ты нас преследовал. Тем хуже для тебя, ты последовал не за тем кораблём. Агент, что пролетал здесь, был подставным, чтобы сбить с толку дураков вроде тебя. Теперь отпусти нас!»</text>
+		<text>Потребовать информацию об украденной технологии.</text>
 		<event>
 			<text>"Ah, so that's what you're after. Too bad, you followed the wrong ship. The envoy that passed through here was a fake, to trick fools like you. Now let us go!"</text>
 			<choice>
-				<text>Не слушать его и добить.</text>
+				<text>Отпустить их.</text>
 				<event>
 					<ship hostile="false"/>
 				</event>
 			</choice>
 			<choice>
-				<text>«Да ни за что...» Вы прерываете передачу и продолжаете штурм.</text>
+				<text>Не слушать его и добить.</text>
 				<event>
 					<text>"No, wait..." You cut the transmission and continue the assault.</text>
 				</event>
@@ -600,19 +600,19 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 <event name="ENGI_UNLOCK_2REAL_SURRENDER">
 	<text>"Stop! This isn't worth dying for..."</text>
 	<choice>
-		<text>«Аа, так вот зачем ты нас преследовал. Тем хуже для тебя, ты последовал не за тем кораблём. Агент, что пролетал здесь, был подставным, чтобы сбить с толку дураков вроде тебя. Теперь отпусти нас!»</text>
+		<text>Потребовать информацию об украденной технологии.</text>
 		<event>
 			<text>"Of course, that's why you're here. Yes, they passed by here but I had nothing to do with it, I don't know what they were carrying. I'll transmit coordinates. Now just let us go..."</text>
 			<quest event="ENGI_UNLOCK_3"/>
 			<choice>
-				<text>Не слушать его и добить.</text>
+				<text>Отпустить их.</text>
 				<event>
 					<text>You prepare an FTL message containing the coordinates to send to the Engi and get ready to jump.</text>
 					<ship hostile="false"/>
 				</event>
 			</choice><!--   REMOVED THIS TO PREVENT DOUBLE QUESTS
 			<choice>
-				<text>«Да ни за что...» Вы прерываете передачу и продолжаете штурм.</text>
+				<text>Не слушать его и добить.</text>
 				<event>
 					<text>"But we..." You cut the transmission and prepare an FTL message containing the coordinates to send to the Engies. You then focus on the battle.</text>
 				</event>
@@ -627,11 +627,11 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 <event name="ENGI_UNLOCK_4">
 	<text>The Engi emerge victorious from their battles with only minor losses. They message you, "Project X-ME56 commissioned by Federation military research division. Advanced stealth cruiser. Project finished during rebellion. Unable to reconnect with Federation military command."</text>
 	<choice>
-		<text>«Скорее всего уловка со стороны повстанцев, чтобы не нарушать договор о ненападении с инжи. Вероятность 97.56 процентов. Ваша миссия — помочь последнему флоту Федерации, правильно? Координаты?»</text>
+		<text>Спросить о кораблях богомолов.</text>
 		<event>
 			<text>"Likely ploy by Rebels to avoid breaking non-aggression pact with Engi. 97.56 percent likely. Your mission to assist last Federation fleet, correct? Coordinates?"</text>
 			<choice hidden="true">
-				<text>«Удовлетворительно. Передача новой технологии поможет решить проблемы Федерации. Простой благодарности недостаточно. Инициирован ремонт корабля и выдана компенсация». Их экипаж доставляет вам орудие для установки, но вы больше рады тому, что у Федерации теперь может быть расширен арсенал.</text>
+				<text>Передать координаты командования Федерации.</text>
 				<event>
 					<text>"Satisfactory. Delivery of tech will assist in Federation cause. Gratitude alone insufficient. Commencing ship repair and compensation." Their crews deliver an advanced augmentation for installation but you're more pleased to hear that the Federation will have an improved arsenal.</text>
 					<damage amount="-20"/>
@@ -679,7 +679,7 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 		<event>
 			<text>Your Engi crewmember refuses. In a halting use of adjectives and nouns, followed by some animated holographic aids, the Engi explains the ships are... using each other to, loosely translated, "achieve a union." For some reason, this consolidation of ship matter sounds embarrassing and personal.</text>
 			<choice hidden="true">
-				<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+				<text>Продолжить...</text>
 				<event>
 					<text>You elect to leave the two Engi ships... to their "business." After questioning your Engi crewmember, however, you do manage to salvage what scrap parts you can from the perimeter, even though you feel slightly dirty for doing so.</text>
 					<autoReward level="MEDIUM">stuff</autoReward>
@@ -692,14 +692,14 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 	<destroyed>
 		<text>With the ship destroyed, the remaining Engi ship hails you frantically and explains the situation to you.</text>
 		<choice hidden="true">
-			<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+			<text>Продолжить...</text>
 			<event load="ENGI_SEX_SHIP_DONE"/>
 		</choice>
 	</destroyed>
 	<deadCrew>
 		<text>With the ship disabled, the remaining Engi ship hails you frantically and explains the situation to you.</text>
 		<choice hidden="true">
-			<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+			<text>Продолжить...</text>
 			<event load="ENGI_SEX_SHIP_DONE"/>
 		</choice>
 	</deadCrew>
@@ -713,7 +713,7 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 <event name="ENGI_VIRUS" unique="true">
 	<text>The Engi are awaiting you at the beacon, with their weapons on-line! They explain a computer virus that is wanted for hostile acts against the Engi (multiple counts of binary scrambling, nano-dissolution, and variable interference) is aboard your vessel.</text>
 	<choice>
-		<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+		<text>Продолжить...</text>
 		<event>
 			<text>They insist they must destroy your ship to prevent the virus from escaping!</text>
 			<choice hidden="true">
@@ -737,7 +737,7 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 				<event>
 					<text>It takes some time, and the virus is slippery, but you eventually confine it to a useless sub-system prison where it frantically begins calculating insults at you. You eject the system from the ship and then silence the little binary criminal with your weapons.</text>
 					<choice hidden="true">
-						<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+						<text>Продолжить...</text>
 						<event>
 							<text>The Engi thank you for deleting the virus, and jump away. They offer a unique ship augmentation as a reward.</text>
 							<autoReward level="LOW">standard</autoReward>
@@ -751,13 +751,13 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 				<event>
 					<text>You proceed to interface with the virus and optimize its repair and benevolence routines.</text>
 					<choice hidden="true">
-						<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+						<text>Продолжить...</text>
 						<event>
 							<text>After a few minutes, the virus "sees the light" and integrates itself in a positive manner with the computer society on your ship, repairing your hull and attempting to optimize your reactor.</text>
 							<damage amount="-15"/>
 							<upgrade amount="1" system="reactor"/>
 							<choice hidden="true">
-								<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+								<text>Продолжить...</text>
 								<event>
 									<text>The Engi thank you for deleting the virus, and jump away. They offer a unique ship augmentation as a reward.</text>
 									<augment name="DRONE_SPEED"/>
@@ -772,13 +772,13 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 				<event>
 					<text>You proceed to interface with the virus and optimize its repair and benevolence routines.</text>
 					<choice hidden="true">
-						<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+						<text>Продолжить...</text>
 						<event>
 							<text>After a few minutes, the virus "sees the light" and integrates itself in a positive manner with the computer society on your ship, repairing your hull and attempting to optimize your reactor.</text>
 							<damage amount="-30"/>
 							<upgrade amount="1" system="reactor"/>
 							<choice hidden="true">
-								<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+								<text>Продолжить...</text>
 								<event>
 									<text>The Engi thank you for deleting the virus, and jump away. They offer a unique ship augmentation as a reward.</text>
 									<augment name="DRONE_SPEED"/>
@@ -829,7 +829,7 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 		<text>With the ship destroyed, you scrap it and prepare to jump away.</text>
 		<autoReward level="MEDIUM">standard</autoReward>
 		<choice hidden="true">
-			<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+			<text>Продолжить...</text>
 			<event load="ENGI_VIRUS_REBORN"/>
 		</choice>
 	</destroyed>
@@ -837,7 +837,7 @@ Idea - make an event where you're fighting to save an engi ship but theres manti
 		<text>With all the Engi dead, you take what you can and prepare to jump away.</text>
 		<autoReward level="MEDIUM">standard</autoReward>
 		<choice hidden="true">
-			<text>Спасенный инжи предлагает присоединиться к экипажу.</text>
+			<text>Продолжить...</text>
 			<event load="ENGI_VIRUS_REBORN"/>
 		</choice>
 	</deadCrew>
