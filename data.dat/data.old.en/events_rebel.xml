@@ -1,15 +1,15 @@
-﻿<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
 
-<!--   
-			SUMMARY  - 
+<!--
+			SUMMARY  -
 A list of all main events to be called by lists
 	does not include sub-events)
-	
+
 Structure:
 	START_BEACON_REBEL
 	STORE_REBEL
 	NOTHING_REBEL
-	
+
 Hostile:
 	AUTO_BAIT
 	AUTO_ASTEROID
@@ -18,7 +18,7 @@ Hostile:
 	AUTO_HACKER
 	REBEL
 	SQUAT_WARNING
-	
+
 Neutral:
 	AUTO_CIVILIAN
 	SQUAT_REFUEL_STATION
@@ -28,8 +28,8 @@ Neutral:
 	AUTO_DEFENSE_RADAR
 	REBEL_TRANSPORT
 	BROKEN_REBEL_DRONE
-	
-	
+
+
 Environmnt:
 	NEBULA_REBEL_BOARDING
 
@@ -64,8 +64,8 @@ Environmnt:
 
 
 <eventList name="DISTRESS_BEACON_REBEL">
-	<event load="CIVILIAN_ASTEROIDS_BEACON"/>  
-	<event load="REBEL_VS_FEDERATION"/> 
+	<event load="CIVILIAN_ASTEROIDS_BEACON"/>
+	<event load="REBEL_VS_FEDERATION"/>
 	<event load="ESCORT_BEACON"/>
 	<event load="FRIENDLY_BEACON"/>
 	<event load="TRAP_BEACON"/>
@@ -75,7 +75,7 @@ Environmnt:
 
 <eventList name="NEBULA_REBEL">
 	<event load="NEBULA_EMPTY"/>
-	<event load="NEBULA_REBEL"/>  
+	<event load="NEBULA_REBEL"/>
 	<event load="NEBULA_AUTO"/>
 	<event load="NEBULA_AUTO_WARNING"/>
 	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
@@ -83,8 +83,8 @@ Environmnt:
 	<event load="STORM_REBEL"/>
 	<event load="STORM_AUTO"/>
 	<event load="STORM_ITEMS"/>
-	<event load="NEBULA_REBEL_UNDETECTED"/>  
-	<event load="NEBULA_LOST_SHIP"/>  
+	<event load="NEBULA_REBEL_UNDETECTED"/>
+	<event load="NEBULA_LOST_SHIP"/>
 	<event load="NEBULA_REBEL_BOARDING"/>
 </eventList>
 
@@ -99,7 +99,7 @@ Environmnt:
 
 <!-----------
 		STRUCTURE!!!
-	Requred structural 
+	Requred structural
 ------------>
 
 <event name="START_BEACON_REBEL">
@@ -128,7 +128,7 @@ Environmnt:
 </event>
 <textList name="NOTHING_REBEL">
 	<text>You enter a system bustling with Rebel activity.  Supply freighters and re-supply stations are dwarfed by a few heavy warships.  Luckily, no one seems to be paying attention to small cruisers.  No ships are scanning or messaging you.</text>
-	<text>You arrive near a small Rebel refueling depot.  Your ship is being scanned multiple times so they must recognize you, but there appears to be no combat-ready ships in the vicinity.  The only message you receive is a denial to your request to dock at the depot.</text> 
+	<text>You arrive near a small Rebel refueling depot.  Your ship is being scanned multiple times so they must recognize you, but there appears to be no combat-ready ships in the vicinity.  The only message you receive is a denial to your request to dock at the depot.</text>
 	<text>There is not much of interest nearby.   A small sun in the distance with a few orbiting planets in nearby space provide little of interest.</text>
 	<text planet="NONE">There are no other ships near this beacon, however you detect a small communication relay.  You tap into it without a problem; there are no encryptions.  Most of the chatter revolves around troop and fleet movements, not particularly interesting.</text>
 	<text planet="PLANET_POPULATED_SMALL">There is a small planet nearby with scattered settlements.  A small Rebel fleet is in orbit with many ships ferrying back and forth.  It must be a more recently 'liberated' planet.</text>
@@ -171,7 +171,7 @@ Environmnt:
 	<text>Your arrival is greeted by numerous computer alerts. The nearby automated Rebel scout has deployed a virus and disrupted your shield system. Hopefully it won't cause further problems before you can destroy it.</text>
 	<ship load="REBEL_AUTO_HACKSHIELDS" hostile="true"/>
 	<status type="divide" target="player" system="shields" amount="2"/>
-</event>	
+</event>
 
 <event name="REBEL">
 	<text load="REBEL"/>
@@ -225,40 +225,40 @@ Environmnt:
 	</choice>
 </event>
 
-<event name="SQUAT_REFUEL_STATION" unique="true">  
+<event name="SQUAT_REFUEL_STATION" unique="true">
 	<img planet="PLANET_POPULATED_SMALL"/>
 	<text>You detect a Rebel scout on an attack approach to a small refueling outpost. Their weapons are charged, but they're not firing yet.</text>
 	<ship load="SQUAT_REFUEL_STATION" hostile="false"/>
 	<choice>
 		<text>Intervene to defend the outpost.</text>
 		<event>
-			<text>The rebel responds to your threat, "I don't know who you are, but no one defies the Rebel Fleet!"  They move in to engage.</text> 
+			<text>The rebel responds to your threat, "I don't know who you are, but no one defies the Rebel Fleet!"  They move in to engage.</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice>
 		<text>Avoid the conflict.</text>
 		<event>
-			<text>The Rebel ship fires some warning shots but eventually powers down their weapons. The outpost seems to have given them what they demanded.</text> 
+			<text>The Rebel ship fires some warning shots but eventually powers down their weapons. The outpost seems to have given them what they demanded.</text>
 		</event>
 	</choice>
 </event>
 
-<event name="AUTO_REFUEL_STATION" unique="true">  
+<event name="AUTO_REFUEL_STATION" unique="true">
 	<img planet="PLANET_POPULATED_SMALL"/>
 	<text>You detect an automated Rebel scout attacking a small re-fueling outpost. </text>
 	<ship load="REBEL_AUTO_REFUEL" hostile="false"/>
 	<choice>
 		<text>Intervene to defend the outpost.</text>
 		<event>
-			<text>Detecting the higher threat, the automated ship moves in to engage your ship.</text> 
+			<text>Detecting the higher threat, the automated ship moves in to engage your ship.</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice>
 		<text>Avoid the conflict.</text>
 		<event>
-			<text>You steer clear of the conflict. The outpost receives a beating but the ship stops its attack before it's destroyed.</text> 
+			<text>You steer clear of the conflict. The outpost receives a beating but the ship stops its attack before it's destroyed.</text>
 		</event>
 	</choice>
 </event>
@@ -459,7 +459,7 @@ Environmnt:
 	</event>
 	<event>
 		<text>This ship's cargo was not salvageable. However, they seem to have been surveying the region; they possess detailed maps and data. You download what you can to the ship's map.</text>
-		<reveal_map/>		
+		<reveal_map/>
 		<autoReward level="MED">scrap_only</autoReward>
 	</event>
 	<event>
@@ -552,7 +552,7 @@ Environmnt:
 		</choice>
 	</event>
 </eventList>
-		
+
 
 
 <!-----------
