@@ -3,11 +3,11 @@
 <event name="BIG_NAME_TEST">
 	<img back="BG_DARK" planet="NONE"/>
 	<ship load="PIRATE" hostile="false"/>
-	<text>A ship with pirate markings hails you: "Hello, we know you have %crew on board. The bounty on %crew_his head is substantial, hand %crew_him over and we'll share it."</text>
+	<text>Корабль с пиратскими знаками вызывает вас: «Здравствуйте, мы в курсе, что у вас на борту %crew. За голову %crew_his объявлена существенная награда, передайте %crew_him нам и мы поделимся».</text>
 	<choice hidden="false">
-		<text>That bounty could be vital to our survival, hand %crew over.</text>
+		<text>Награда может быть жизненно важной для нашего выживания, передать %crew.</text>
 		<event loss1="crew">
-			<text>%loss1 goes without complaint, understanding your mission is more important than %loss1_his life.</text>
+			<text>%loss1 уходит без возражений, понимая, что ваша миссия важнее чем жизнь %loss1_his.</text>
 			<crewMember amount="-1"/>
 			<item_modify>
 				<item type="scrap" min="40" max="80"/>
@@ -21,56 +21,57 @@
 		</event>
 	</choice>
 	<choice req="engi" lvl="1">
-		<text>%req says %req_he has detected a flaw in their ship sensors and can exploit it, allowing the Kestrel to escape without a fight.</text>
+		<text>%req говорит, что %req_he обнаружил уязвимость в сенсорах их корабля и сможет использовать её, чтобы дать Кестрел сбежать без боя.</text>
 		<event>
-			<text>You hear a hail on all channels: "Dammit, where did you go!? This isn't over %crew!"</text>
+			<text>По всем каналам вы слышите град сообщений: «Проклятье, куда ты делся!? Мы ещё не закончили с %crew!»</text>
 		</event>
 	</choice>
 </event>
 
 <event name="NEBULA_NOTHING_TEST">
-	<text>Appears that this is an empty nebula beacon. %crew, uncomfortable with the silence, distracts %crew_himself by playing death metal over the ship speakers.</text>Небольшой одноместный корабль направляется прямо на вас. Повторение позывных не дает никакого отклика. И у вас непривычные ощущения по этому поводу.</event>
+	<text>Кажется, что этот маяк в туманности пуст. %crew чувствует себя неуютно в этой тишине и %crew_himself развлекает себя, запуская дэт-метал через громкоговорители корабля.</text> 
+</event>
 
 <event name="FREE_AUGMENT">
-	<text>Wow! A ship enhancement is just floating in space. %crew seems especially excited about this one.</text>
+	<text>Вот это, да! Элемент модернизации для корабля просто плавает в космосе. Похоже, это чрезвачайно взволновало %crew.</text>
 	<augment name="RANDOM"/>
 </event>
 
 <event name="LONE_SHUTTLE" unique="true">
-	<text>Расстрелять его. Вероятно, это заброшенное судно, но безопасность стоит дороже извинений.</text>
+	<text>Небольшой одноместный корабль направляется прямо на вас. Повторение позывных не дает никакого отклика. И у вас непривычные ощущения по этому поводу.</text>
 	<choice>
-		<text>У шаттла нет защитных систем и он разваливается под огнем ваших тяжелых орудий.</text>
+		<text>Расстрелять его. Вероятно, это заброшенное судно, но безопасность стоит дороже извинений.</text>
 		<event>
-			<text>Продолжить...</text>
+			<text>У шаттла нет защитных систем и он разваливается под огнем ваших тяжелых орудий.</text>
 			<choice>
-				<text>Подождите немного. Возможно, кто-то нуждается в помощи.</text>
+				<text>Продолжить...</text>
 				<event load="LONE_SHUTTLE_DESTROY"/>
 			</choice>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Когда расстояние сократитлось, вы смогли просканировать его на наличие признаков жизни. Похоже, что он беспилотный. Вы забираете немного топлива, что на нем было, и летите дальше.</text>
+		<text>Подождите немного. Возможно, кто-то нуждается в помощи.</text>
 		<event load="LONE_SHUTTLE_WAIT"/>
 	</choice>
 </event>
 
 <eventList name="LONE_SHUTTLE_WAIT">
 	<event>
-		<text>По мере приближения, вы обнаружили признаки жизни на корабле. К тому времени вы поняли, что это судно повстанцев, но уже было слишком поздно — они появились на борту.</text>
+		<text>Когда расстояние сократитлось, вы смогли просканировать его на наличие признаков жизни. Похоже, что он беспилотный. Вы забираете немного топлива, что на нем было, и летите дальше.</text>
 		<item_modify>
 			<item type="fuel" min="1" max="1"/>
 		</item_modify>
 	</event>
 	<event>
-		<text>After waiting several minutes as the shuttle gets closer and closer, you finally receive a hail: "Are you with the Federation? I'm %add1 and it sure is great to find you. I was hired to scout this sector but my ship was destroyed. If I could hitch a ride, I'd appreciate it." You let %add1_him beam aboard.</text>
+		<text>Спустя несколько минут ожидания, пока шаттл становился всё ближе, вы, наконец, получаете сообщение: «Вы за Федерацию? Я %add1, и это просто здорово, что я встретил вас. Я был нанят на разведку этого сектора, но мой корабль был уничтожен. Буду признателен, если подбросите меня». При помощи луча вы поднимаете %add1_him на борт.</text>
 		<crewMember amount="1" type="rock"/>
 	</event>
 	<event>
-		<text>Сканирование не показывает никаких биологических останков на судне, оно было беспилотным... очень странно.</text>
+		<text>По мере приближения, вы обнаружили признаки жизни на корабле. К тому времени вы поняли, что это судно повстанцев, но уже было слишком поздно — они появились на борту.</text>
 		<boarders min="3" max="4" class="human"/>
 	</event>
 	<event>
-		<text>You detect a transporter signal! The shuttle transported multiple explosive devices to the Kestrel before self-destructing. The Kestrel is only lightly damaged, but %loss1 is caught in one of the explosions and dies.</text>
+		<text>Приглядевшись вы обнаружили транспортный знак! Шаттл довёз до Кестрел батарею взрывных устройств и самоуничтожился. Ваш корабль получил легкие повреждения, но %loss1 был ранен взрывом и умер.</text>
 		<crewMember amount="-1"/>
 		<damage amount="1"/>
 		<damage amount="1" system="random"/>  <!--DLC-->
@@ -79,14 +80,14 @@
 
 <eventList name="LONE_SHUTTLE_DESTROY">
 	<event>
+		<text>Сканирование не показывает никаких биологических останков на судне, оно было беспилотным... очень странно.</text>
+	</event>
+	<event>
 		<text>В обломках вы находите множество человеческих останков. А ещё вам попалась зашифрованная система связи повстанцев. Вот и стало одним вражеским кораблём меньше.</text>
 	</event>
 	<event>
-		<text>К маяку прибывает корабль повстанцев: «Ааа! Похоже, вы сделали нашу грязную работу за нас. Почище беженцев с Инжи. Позвольте в благодарность отдать вам резервные запасы. Мы преследовали этих песиков Федерации целых 2 сектора». К счастью, они слишком признательны за помощь, чтобы обратить внимание, кто вы.</text>
-	</event>
-	<event>
 		<ship load="REBEL" hostile="false"/>
-		<text>Попытаться найти что-нибудь в обломках.</text>
+		<text>К маяку прибывает корабль повстанцев: «Ааа! Похоже, вы сделали нашу грязную работу за нас. Почище беженцев с Инжи. Позвольте в благодарность отдать вам резервные запасы. Мы преследовали этих песиков Федерации целых 2 сектора». К счастью, они слишком признательны за помощь, чтобы обратить внимание, кто вы.</text>
 		<item_modify>
 			<item type="scrap" min="25" max="50"/>
 			<item type="fuel" min="1" max="3"/>
@@ -97,28 +98,28 @@
 <event name="DERELICT_TREASURE" unique="true">
 	<text load="DERELICT_TREASURE"/>
 	<choice hidden="true">
-		<text>Кто знает, какие опасности могут содержать обломки? Вам всё равно не нужны запасы. Продолжайте свой путь.</text>
+		<text>Попытаться найти что-нибудь в обломках.</text>
 		<event load="DERELICT_TREASURE_REWARD"/>
 	</choice>
 	<choice hidden="true" req="engi" lvl="1">
-		<text>(Engi) %req isn't convinced that it's safe. %req_He asks you to give %req_him some time to run some more scans.</text>
+		<text>(Член экипажа инжи) %req не уверен, что это безопасно. Он просит предоставить ему больше времени, чтобы просмотреть всё ещё раз.</text>
 		<event load="DERELICT_ENGI"/>
 	</choice>
 	<choice>
-		<text>Вы наткнулись на остатки недавней битвы. Одно судно поблизости выглядит так, будто в нем ещё могут быть ценные ресурсы.</text>
+		<text>Кто знает, какие опасности могут содержать обломки? Вам всё равно не нужны запасы. Продолжайте свой путь.</text>
 		<event/>
 	</choice>
 </event>
 
 <textList name="DERELICT_TREASURE">
+	<text>Вы наткнулись на остатки недавней битвы. Одно судно поблизости выглядит так, будто в нем ещё могут быть ценные ресурсы.</text>
 	<text>Заброшенное грузовое судно класса Зельц плавает возле этого маяка. Оно может содержать что-нибудь ценное.</text>
 	<text>Массивная полуразрушенная космическая станция находится на орбите около луны. Первоначальное сканирование показывает, что она пустая и заброшенная.</text>
-	<text>Взорвавшиеся обломки на вашем корабле скорее всего содержали замаскированное взрывное устройство. Вы не знаете, зачем это кто-то подстроил...</text>
 </textList>
 
 <eventList name="DERELICT_TREASURE_REWARD">
 	<event>
-		<text>Как только вы приблизились для сбора обломков, ваши системы обнаружили исходящую передачу. Скорее всего этот маячок спрятали повстанцы чтобы вас обнаружить.</text>
+		<text>Взорвавшиеся обломки на вашем корабле скорее всего содержали замаскированное взрывное устройство. Вы не знаете, зачем это кто-то подстроил...</text>
 		<damage amount="5"/>
 		<damage amount="1" system="room" effect="breach"/>  <!--DLC-->
 	</event>
@@ -127,7 +128,7 @@
 		<modifyPursuit amount="1"/>
 	</event>
 	<event>
-		<text>Вы столкнулись с грузовым судном беженцев инжи, спасающихся от повстанцев. Их корабль серьезно повреждён, и они явно нуждаются в помощи.</text>
+		<text>Вы обнаружили несколько тонн обломков, среди которых лом и некоторое вооружение.</text>
 		<item_modify>
 			<item type="scrap" min="50" max="60"/>
 		</item_modify>
@@ -137,17 +138,17 @@
 
 <eventList name="DERELICT_ENGI">
 	<event>
-		<text>%req discovers that the ship is rigged to explode if you get too near. Better that you avoid the wreckage and continue on your way.</text>
+		<text>%req обнаружил, что обломки заминированы и взорвутся, если вы подойдете слишком близко. Было бы лучше, если бы вы обошли их и продолжили свой путь.</text>
 	</event>
 	<event>
-		<text>%req finds a hidden rebel transmitter on the wreckage! %req_He's able to disable it remotely and leaves you to scrap the ship for valuable supplies.</text>
+		<text>%req нашел скрытый передатчик повстанцев в обломках! Он может удалённо отключить его, чтобы можно было собрать на корабль ценные ресурсы..</text>
 		<item_modify>
 			<item type="scrap" min="50" max="60"/>
 		</item_modify>
 		<weapon name="RANDOM"/>
 	</event>
 	<event>
-		<text>%req discovers nothing extraordinary about this specific wreckage. You go about salvaging what you can.</text>
+		<text>%req не обнаружил ничего необычного в данных конкретных обломках. Вы принимаетесь собирать то, что там ещё можно собрать.</text>
 		<item_modify>
 			<item type="scrap" min="50" max="60"/>
 		</item_modify>
@@ -158,22 +159,22 @@
 <event name="ENGI_REFUGEES" unique = "true">
 	<text>You come across a freighter of Engi refugees fleeing the Rebels. Their ship is seriously damaged and they clearly need help.</text>
 	<choice>
-		<text>Вы даете им столько лома, сколько можете себе позволить, чтобы оказать помощь с их ремонтными работами.</text>
+		<text>Вам просто не хватает ни оборудования, ни времени, чтобы помочь им. Мы пожелаем им удачи в их дальнейшем пути.</text>
 		<event/>
 	</choice>
 	<choice>
-		<text>Они благодарят вас, не переставая, и желают удачи в вашей миссии.</text>
+		<text>Вы даете им столько лома, сколько можете себе позволить, чтобы оказать помощь с их ремонтными работами.</text>
 		<event>
-			<text>(Член экипажа инжи) Ваш инжи хочет войти на судно и посмотреть, сможет ли он лично оказать какую-либо помощь. Для оказания помощи он просит некоторое количество лома.</text>
+			<text>Они благодарят вас, не переставая, и желают удачи в вашей миссии.</text>
 			<item_modify>
 				<item type="scrap" min="-30" max="-10"/>
 			</item_modify>
 		</event>
 	</choice>
 	<choice req="engi" lvl="1">
-		<text>Он вернулся с хорошей новостью. Ему удалось улучшить двигатели и убедить одного из их экипажа присоединиться к вам.</text>
+		<text>(Член экипажа инжи) Ваш инжи хочет войти на судно и посмотреть, сможет ли он лично оказать какую-либо помощь. Для оказания помощи он просит некоторое количество лома.</text>
 		<event>
-			<text>He returns bearing good news. He was able to improve their engines and convinced one of their crew to join your cause.</text>
+			<text>Он вернулся с хорошей новостью. Ему удалось улучшить двигатели и убедить одного из их экипажа присоединиться к вам.</text>
 			<item_modify>
 				<item type="scrap" min="-25" max="-5"/>
 			</item_modify>

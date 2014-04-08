@@ -906,7 +906,7 @@ unlock - Asked to prove the federation is worth of rock fighters - follow him to
 			<choice hidden="true">
 				<text>Продолжить...</text>
 				<event>
-					<text>"Now that that's taken care of, let us patch up your hull. Maybe we can improve its armor plating while we're at it."</text>
+					<text>«Об одном позаботились, а теперь позвольте залатать вашу обшивку. Наверно мы сможем усилить бронирование, пока будем ей заниматься».</text>
 					<augment name="ROCK_ARMOR"/>
 					<damage amount="-29"/>
 				</event>
