@@ -92,7 +92,7 @@ engi - asks for a weapon to use - can give you an upgrade?
 -->
 
 
-<!--<autoReward level=<LOW/MED/HIGH/RANDOM>> tag </autoreward>
+<!--
 where tag is
 standard  - which is scrap + 2 resources (possible a weapon)
 stuff     - less scrap, mostly resources (intended for surrenders)
@@ -1812,6 +1812,7 @@ item - scrap + that thing  -->
 			<text>(Противопехотный дрон) Воспользоваться противопехотным дроном для расследования.</text>
 			<event load="STATION_SICK_DRONE_LIST"/>
 		</choice>  
+
 	</event>
 	<event>
 		<text>Вы находите станцию и они немедленно отвечают на ваше приветствие: «Чего так долго? Теперь они нам почти бесполезны... Я отказываюсь платить полную цену, возьмите это и оставьте груз в нашем трюме».</text>

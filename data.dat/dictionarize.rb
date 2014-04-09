@@ -2,8 +2,8 @@
 total = 0
 suspicious = []
 
-checklist = Dir.entries("./data.old.en")
-#checklist = ["nameEvents.xml"]
+#checklist = Dir.entries("./data.old.en")
+checklist = ["events.xml"]
 
 checklist.each do |source_file|
   #source_file = "tooltips.xml"

@@ -92,7 +92,7 @@ engi - asks for a weapon to use - can give you an upgrade?
 -->
 
 
-<!--<autoReward level=<LOW/MED/HIGH/RANDOM>> tag </autoreward>
+<!--
 where tag is
 standard  - which is scrap + 2 resources (possible a weapon)
 stuff     - less scrap, mostly resources (intended for surrenders)
@@ -320,7 +320,7 @@ item - scrap + that thing  -->
 		<event/>
 	</choice>
 	<choice req="SCRAP_COLLECTOR" hidden="true">
-		<text>(Scrap Recovery Arm) Attempt to mine the asteroids.</text> 
+		<text>(Scrap Recovery Arm) Attempt to mine the asteroids.</text>
 		<event>
 			<text>You carefully extract as much usable material as possible from the nearest asteroids while waiting for the FTL to charge.</text>
 			<autoReward level="HIGH">scrap_only</autoReward>
@@ -764,7 +764,7 @@ item - scrap + that thing  -->
 		<text>They refuse at first, but after another blast rocks their ship they agree and beam aboard your ship.  They say, "Thank you but we really should return to our families...  I'm sure we can muster up a reward if you take us home."</text>
 		<choice hidden="true">
 			<text>Take them to the nearby planet, where they're from.</text>
-			<event load="FAMILY_RETURN"/>   
+			<event load="FAMILY_RETURN"/>
 		</choice>
 	</event>
 </eventList>
@@ -883,7 +883,7 @@ item - scrap + that thing  -->
 	<choice hidden="true" req="WEAPONS_BEAM_DAMAGE"> <!-- JUSTIN - TO DO - List of beam weapons-->
 		<text>(Beam Weapon) Carefully cut the ship out.</text>
 		<event>
-			<text>You use your beam to make a few precision cuts in the asteroid. The ship gives a quick burst of thrust and the rock crumbles away. They thank you and offer some of the resources they have collected.</text> 
+			<text>You use your beam to make a few precision cuts in the asteroid. The ship gives a quick burst of thrust and the rock crumbles away. They thank you and offer some of the resources they have collected.</text>
 			<autoReward level="MED">standard</autoReward>
 		</event>
 	</choice>
@@ -1089,7 +1089,7 @@ item - scrap + that thing  -->
 	<event>
 		<text>You pull up alongside the station and cut through their hull. You are able to rescue a few survivors but many more are lost. One of the survivors offers to join your crew and you offload the rest on a nearby station.</text>
 		<autoReward level="LOW">scrap_only</autoReward>
-		<crewMember amount="1">Dr. Jones</crewMember> 
+		<crewMember amount="1">Dr. Jones</crewMember>
 	</event>
 </eventList>
 
@@ -1191,7 +1191,7 @@ item - scrap + that thing  -->
 	<choice hidden="true" req="BATTLE">
 		<text>(Anti-Personnel Drone) Use an Anti-Personnel Drone to investigate.</text>
 		<event load="STATION_SICK_DRONE_LIST"/>
-	</choice>  
+	</choice>
 </event>	
 <eventList name="STATION_SICK_LIST">
 	<event>
@@ -1214,7 +1214,7 @@ item - scrap + that thing  -->
 				<crewMember amount="1"/>
 				<autoReward level="MED">scrap_only</autoReward>
 			</event>
-		</choice>  
+		</choice>
 	</event>
 	<event>
 		<text>As you explore the base, crazed screams are heard.  Your team retreats back to your ship with a number of armed scientists in pursuit.   One of your team starts to cough and falls in a spasm onto the floor.</text>
@@ -1247,7 +1247,7 @@ item - scrap + that thing  -->
 				<text>You hold them off while retreating into the med-bay.  Its advanced systems determine that an alien neurotoxin is driving your crew member insane.  It synthesizes an antidote and releases it into the ship.  After a time, the frenzied scientists recover and one offers to help out as thanks for saving them.</text>
 				<crewMember amount="1"/>
 			</event>
-		</choice> 
+		</choice>
 	</event>
 </eventList>
 <eventList name="STATION_SICK_DRONE_LIST">
@@ -1289,13 +1289,13 @@ item - scrap + that thing  -->
 			<damage amount="4"/>
 		</event>
 	</choice>
-	<choice req="pilot" lvl="2" hidden="true"> 
+	<choice req="pilot" lvl="2" hidden="true">
 		<text>(Piloting) Have your pilot maneuver you out of the asteroid field.</text>
 		<event>
 			<text>Thanks to your pilot, you were able escape the worst of the asteroid field unscathed.  However, the wisps of light stream out of the field following your ship!</text>
 			<boarders min="2" max="4" class="ghost"/>
 		</event>
-	</choice>  
+	</choice>
 </event>
 
 
@@ -1362,7 +1362,7 @@ item - scrap + that thing  -->
 	<text planet="PLANET_POPULATED" back="BG_NEBULA">A settlement still loyal to the Federation hails your ship. They have prepared a weapon to aid your escape from the Rebels.</text>
 	<text>As soon as you arrive a small Mantis ship detaches from a wreck and jumps away.  You must have interrupted their salvage operation because you find a weapon ready to be installed!</text>
 	<text>A small merchant ship messages you, "Underground Federation comm channels are all talking about your 'secret' mission. Let us install a weapon to help. Good luck!"</text>
-	<text>Debris from a battle is scattered around this system. A few pieces bounce against your ship. You passively scan them and discover there is a functioning weapon among them!</text> 
+	<text>Debris from a battle is scattered around this system. A few pieces bounce against your ship. You passively scan them and discover there is a functioning weapon among them!</text>
 </textList>
 
 <event name="FREE_ITEMS">
@@ -1788,7 +1788,7 @@ item - scrap + that thing  -->
 				<text>"At least YOU are willing to admit your incompetence. Thank you for saving me the cost of paying more fools to go to their death."</text>
 			</event>
 		</choice>
-	</event>  
+	</event>
 </eventList>
 <event name="MERCHANT_DELIVER">
 	<text>You arrive at the location given to you by the merchant.  You are supposed to deliver drone parts to a station here.</text>
@@ -1811,7 +1811,7 @@ item - scrap + that thing  -->
 		<choice hidden="true" req="BATTLE"> 
 			<text>(Anti-Personnel Drone) Use an Anti-Personnel Drone to investigate.</text>
 			<event load="STATION_SICK_DRONE_LIST"/>
-		</choice>  
+		</choice>
 	</event>
 	<event>
 		<text>You find the station and they respond to your hails immediately, saying, "It took you long enough! We have practically no use for these now...  I refuse to pay full price, take this and leave the cargo in our holds.</text>
@@ -1981,22 +1981,22 @@ item - scrap + that thing  -->
 			<text>Leave.</text>
 			<event/>
 		</choice>
-		<choice req="sensors" lvl="3" hidden="true"> 
+		<choice req="sensors" lvl="3" hidden="true">
 			<text>(Sensors) Run a second scan pass.</text>
 			<event>
 				<text>Your advanced sensors pick faint signatures of what appears to be a storage space hidden under the rock.  You find the access point and discover a weapons cache whose Federation signal emitter has malfunctioned.</text>
 				<autoReward level="MED">weapon</autoReward>
 			</event>
-		</choice>  
-		<choice req="ADV_SCANNERS" hidden="true"> 
+		</choice>
+		<choice req="ADV_SCANNERS" hidden="true">
 			<text>(Long-Ranged Scanners) Run a second scan pass.</text>
 			<event>
 				<text>Your improved scanners pick faint signatures of what appears to be a storage space hidden under the rock.  You find the access point and discover a weapons cache whose Federation signal emitter has malfunctioned.</text>
 				<autoReward level="MED">weapon</autoReward>
 			</event>
-		</choice>  
+		</choice>
 	</event>
-	<event load="FEDERATION_BASE_ASSIST"/> 
+	<event load="FEDERATION_BASE_ASSIST"/>
 </eventList>
 <eventList name="FEDERATION_BASE_ASSIST">
 	<event>
