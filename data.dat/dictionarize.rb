@@ -3,7 +3,7 @@ total = 0
 suspicious = []
 
 #checklist = Dir.entries("./data.old.en")
-checklist = ["events.xml"]
+checklist = ["events_ships.xml"]
 
 checklist.each do |source_file|
   #source_file = "tooltips.xml"
@@ -15,7 +15,7 @@ checklist.each do |source_file|
 
   ru = File.read("./xml.ru.utf8/" + source_file)
 
-  tooltips_ru = ru.scan(/>([\%\_0-9\(\)\«А-ЯA-Z][\%\_\(\)0-9,ёA-Za-zА-Яа-я[[:space:]]\.\:\-\/\«\»\"\!\?\—\;\']+)\<\//).collect {|i| i[0] }
+  tooltips_ru = ru.scan(/>([\%\_0-9\(\)\«А-ЯA-Z][\%\_\(\)0-9,ЁёA-Za-zА-Яа-я[[:space:]]\.\:\-\/\«\»\"\!\?\—\;\']+)\<\//).collect {|i| i[0] }
 
   # Sweep original file
   en = File.read("./data.old.en/" + source_file)

@@ -95,7 +95,7 @@ Special:
 		<autoReward level="MED">standard</autoReward>
 		<choice hidden="true">
 			<text>Contact the civilian ship.</text>
-			<event load="SAVE_CIVILIAN_LIST"/>    
+			<event load="SAVE_CIVILIAN_LIST"/>
 		</choice>
 	</destroyed>
 	<deadCrew>
@@ -103,7 +103,7 @@ Special:
 		<autoReward level="HIGH">standard</autoReward>
 		<choice hidden="true">
 			<text>Contact the civilian ship.</text>
-			<event load="SAVE_CIVILIAN_LIST"/>    
+			<event load="SAVE_CIVILIAN_LIST"/>
 		</choice>
 	</deadCrew>
 </ship>
@@ -417,7 +417,7 @@ Special:
 		<autoReward level="LOW">standard</autoReward>
 		<choice hidden="true">
 			<text>Contact the civilian ship.</text>
-			<event load="SAVE_CIVILIAN_LIST"/>    
+			<event load="SAVE_CIVILIAN_LIST"/>
 		</choice>
 	</destroyed>
 	<deadCrew>
@@ -425,7 +425,7 @@ Special:
 		<autoReward level="MED">standard</autoReward>
 		<choice hidden="true">
 			<text>Contact the civilian ship.</text>	
-			<event load="SAVE_CIVILIAN_LIST"/>    
+			<event load="SAVE_CIVILIAN_LIST"/>
 		</choice>
 	</deadCrew>
 </ship>
@@ -758,7 +758,7 @@ Special:
 		<autoReward level="MED">standard</autoReward>
 		<choice hidden="true">
 			<text>Attempt to contact the Engi.</text>
-			<event load="SAVE_ENGI_STATION"/>    
+			<event load="SAVE_ENGI_STATION"/>
 		</choice>
 	</destroyed>
 	<deadCrew>
@@ -766,7 +766,7 @@ Special:
 		<autoReward level="HIGH">standard</autoReward>
 		<choice hidden="true">
 			<text>Attempt to contact the Engi.</text>
-			<event load="SAVE_ENGI_STATION"/>    
+			<event load="SAVE_ENGI_STATION"/>
 		</choice>
 	</deadCrew>
 </ship>
@@ -858,7 +858,7 @@ Special:
 		<autoReward level="MED">standard</autoReward>
 		<choice hidden="true">
 			<text>Attempt to contact the civilian ship.</text>
-			<event load="SAVE_CIVILIAN_LIST"/>    
+			<event load="SAVE_CIVILIAN_LIST"/>
 		</choice>
 	</destroyed>
 	<deadCrew>
@@ -866,7 +866,7 @@ Special:
 		<autoReward level="HIGH">standard</autoReward>
 		<choice hidden="true">
 			<text>Attempt to contact the civilian ship.</text>
-			<event load="SAVE_CIVILIAN_LIST"/>    
+			<event load="SAVE_CIVILIAN_LIST"/>
 		</choice>
 	</deadCrew>
 	<crew>

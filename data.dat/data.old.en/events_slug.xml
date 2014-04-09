@@ -706,7 +706,7 @@ Distress:
 </event>
 <event name="SLUG_DISTRESS_QUESTION_TRUE">   
 	<text>"That isss... correct. You sssurprise me. Human, is it? Yesss... we can be partners." The Slug beams aboard and joins your crew!</text>
-	<crewMember amount="1" class="slug"/>  
+	<crewMember amount="1" class="slug"/>
 </event>
 
 <event name="SLUG_DISTRESS_MANTIS" unique="true">
@@ -1048,7 +1048,7 @@ At the locaton is a tough fight that you need to stay away from.  If you have cl
 			<item_modify>
 				<item type="scrap" min="-55" max="-55"/>
 			</item_modify>
-			<crewMember amount="1" class="slug">Slocknog</crewMember> 
+			<crewMember amount="1" class="slug">Slocknog</crewMember>
 		</event>
 	</choice>
 	<choice hidden="true">
@@ -1064,7 +1064,7 @@ At the locaton is a tough fight that you need to stay away from.  If you have cl
 			<text>Rescue him.</text>
 			<event>
 				<text>When he sees the shuttle headed for his position the Slug thanks you with what looks like sincerity. He readily joins your crew.</text>
-				<crewMember amount="1" class="slug">Slocknog</crewMember> 
+				<crewMember amount="1" class="slug">Slocknog</crewMember>
 			</event>
 		</choice>
 		<choice>
