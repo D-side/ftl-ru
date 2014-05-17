@@ -1,0 +1,710 @@
+TIP: Death -  Remember, losing is part of the fun! ... No, I'm serious...
+
+СОВЕТ: Зачистка секторов — От каждого сектора стоит брать всё возможное для развития корабля, так как каждый следующий сектор сложнее предыдущего.
+
+TIP: Exits -  It's tempting to rush for the Sector exits, but exploring is the only way to upgrade your ship. Try and get as much out of each Sector as possible.
+
+TIP: Targets -  Prioritize your targeting in combat. Weapons and Shields are usually the best choice, but if they're fleeing, hit their Engines or Piloting to prevent escape.
+
+СОВЕТ: Скрытый выбор — Когда в событии вы видите ответ подсвеченный синим, то это специальная опция которая стала доступна благодаря вашему оснащению.
+
+СОВЕТ: Система повреждений — Если из-за пожара или вторжения система выходит из строя полностью, то корпус также получает единицу повреждения.
+
+TIP: Power Bars -  Upgraded Systems can be helpful even if you don't have enough reactor power to use them; they still absorb one damage.
+
+СОВЕТ: Орудия — Вы можете поставить в очередь выстрел до того, как орудие будет заряжено. Оно выстрелит, когда будет заряжено.
+
+TIP: Cloaking -  Cloaking prevents enemies from firing on your ship or charging their weapons. It also increases your base evasion by 60.
+
+СОВЕТ: Абордаж — Если вас берут на абордаж, сражайтесь рядом с медицинским отсеком. Если ничего не помогает, разгерметизируйте отсеки корабля.
+
+TIP: Oxygen -  If the ship's room color changes from tan to red, it means you're losing oxygen. Crew will be damaged and fires will burn out in rooms with red hazard stripes.
+
+TIP: Shield Piercing -  Missiles ignore shields. Use missiles to damage a powerful ship's Shields System. Just remember that Defense Drones can shoot down missiles!
+
+СОВЕТ: Выбор — Результаты большинства выборов будут иметь разные последствия. Вы никогда не можете быть уверены в том, что может произойти.
+
+СОВЕТ: Автоматическое ведение огня позволит вам беспрерывно вести огонь по единожды указанной вами цели. Но обращайте внимание и на то, из чего вы ведете огонь. Если из ракет, то следите за их количеством.
+
+TIP: Evasion -  Evading enemy shots is crucial, but it requires functioning engines AND a pilot. Having someone man the engines will increase your evasion as well.
+
+СОВЕТ: Сенсоры — Если корабль станет тёмным, не паникуйте. Просто отремонтируйте подсистему сенсоров.
+
+СОВЕТ: Дроны — Если вы боретесь против вражеских дронов, то цельтесь в систему дронов, для того что бы временно отключить их.
+
+TIP: Beams -  Beam weapons do damage based on the number of rooms they hit. Each Shield bubble will block 1 damage of a beam; it's best to use beams when the enemy's shields are down.
+
+TIP: Fire -  If fire is spreading, consider opening airlocks and doors to vent the oxygen from parts of your ship. Fire is quickly extinguished without O2.
+
+TIP: Health -  Pay attention to your crew's health! Use the Medbay to keep them patched up.
+
+TIP: Upgrades -  Don't forget to upgrade your ship! Often shields are the highest priority, but don't underestimate the usefulness of subsystems.
+
+TIP: Fuel -  Every jump consumes one unit of fuel, so keep an eye on your reserves. Buy fuel at stores to avoid being left stranded.
+
+СОВЕТ: Звук — Отрегулировать громкость звуков и музыки можно в меню настроек.
+
+TIP: Asteroids -  Fighting in asteroid fields is dangerous, but use it to your advantage. Take out enemy Shields and let the rocks take care of the rest.
+
+СОВЕТ: Туманности — Попадание в туманность временно замедлит продвижение флота повстанцев, но в них есть и свои собственные уникальные опасности.
+
+TIP: Solar Flares -  Solar flares will cause hull damage in addition to starting fires. Make sure your shields are up to help mitigate this effect.
+
+TIP: Score -  Your score is based on how many ships you defeat, the number of beacons explored, and your total scrap collection.
+
+TIP: Augmentations -  Your ship can only hold 3 augmentations. They provide unique benefits to a system, the crew or the entire ship.
+
+СОВЕТ: Пробоины — Если отсек с пробоиной не имеет кислорода, попробуйте открыть все окружающие двери, это сделает его менее опасным.
+
+TIP: Rebel Fleet -  The Rebel fleet (represented by the red circle on the map) moves closer to your position every time you jump. Certain events can slow or speed up their movement.
+
+TIP: Ion Weapons -  Ion weapons de-power and lock a System for a time. If they hit the enemy shields they deal their stun damage directly to the Shields System.
+
+TIP: Bomb Weapons -  Bombs teleport directly onto either ship. They bypass Shields AND Defense Drones. However, they affect only crew and Systems; they do no damage to the ship's hull.
+
+TIP: Door Subsystem -  Upgrading your doors will greatly reduce the chance of fire spreading between rooms and will significantly slow boarder movement.
+
+СОВЕТ: Пауза — Для постановки игры на паузу, нажмите пробел. Во время паузы вы можете отдавать приказы и управлять системами корабля.
+
+TIP: Selling -  Weapons, Drones and Augments can be sold for 1/2 the purchasing price at stores. Click on the SELL tab at the top.
+
+TIP: Hotkeys -  You can charge or arm weapons using number hotkeys: The Weapon Slots are 1-4 on your keyboard, and the Drones are 5-7 (customizeable in the options).
+
+TIP: Font Size -  Pressing +/- (customizable in options) will let you change the event text size.
+
+TIP: Weapon Order -  Rearrange a Weapon or Drone schematic by dragging it into the desired position. The left-most slot will be the last to power down if the system is damaged.
+
+TIP: Pausing -  Tap the PAUSE button at any time to pause the game. You can still issue orders to crew or manipulate system power while paused.
+
+TIP: Selling -  Weapons, Drones and Augments can be sold for 1/2 the purchasing price at stores. Tap the SELL tab at the top.
+
+TIP: Weapon Order -  Rearrange a Weapon or Drone schematic by dragging it into the desired position. The bottom-most slot will be the last to power down if the system is damaged.
+
+Вам удалось собрать лом с обломков корабля.
+
+Испытание Смерти
+
+Проверка экипажа
+
+This is a prototype ship which utilizes advanced Cloaking technology. The trade-off is lack of shields or weaponry. Take advantage of the cloaking device's ability to make enemy shots miss.
+
+Этот корабль основан на конструкции, которая существовала до технологии экранирования и была стандартом для всех кораблей. Бронированный корпус и повышенная мобильность являются основным его достоинством.
+
+Этот корабль Федерации предназначен для тестирования новой передовой технологии перезарядки щитов. К сожалению, Вас заставили тестировать его в одиночку.
+
+Этот корабль был предназначен для переброски войск в тыл врага. Как таковой, он не оснащён орудиями по умолчанию, но зато его экипаж — лучшие из лучших.
+
+Этот корабль представляет собой модифицированное горнодобывающее судно, которое содержит продвинутый ИИ для управления дронами. Он не совсем готов к битве, но будем надеяться, что дроны покроют его недостатки.
+
+Ваше новое судно оснащено современными роботами и лучевым оружием. Трудно было найти полный экипаж, так как с роботами довольно страшно работать.
+
+The engineer who designed this ship clearly loved missiles. Few opponents will be able to withstand this ship's missile barrage, but be sure to watch your ammo reserves.
+
+Поздравляем с окончанием обучения! В качестве последнего урока, вы испытаете, каково это быть уничтоженным более сильным противником. Этот пиратский корабль оснащен самыми передовыми вооружением и системами, в том числе прототипом устройства маскировки. Он собирался пришельцами, известными как лучшие инженеры галактики. А ещё мы отключили ваши двигатели, так что нет смысла пытаться убежать.
+
+Невозможно! Он должен был быть непобедимым! Даже у создателей симуляции это не получилось. Продолжай, ты это заслужил.
+
+Should not be seen
+
+We've come out in an asteroid field! We'll have to wait for the FTL to charge before we can get out of here. Let's hope the ship holds up.
+
+Your ship is currently not equipped with a Drone system. You reduce the Drone schematic to scrap.
+
+Продолжить...
+
+You stumble across a hidden Federation research laboratory! They have been experimenting with some unique ship designs. You download their blueprints for future use.
+
+Hire a crewmember.
+
+Не нанимать никого.
+
+You find a space station set up for travelers. Browsing through its listings, you find a tavern full of mercenaries for hire. You look for potential crewmembers.
+
+There are a number of ships stationed around a rest stop. You immediately receive a message saying, "If you're looking for some bodies to fill your ship, you've come to the right place!"
+
+This Beacon seems to serve as a meeting place for local traffic. It seems you can find crew willing to fight on your ship here... for a price.
+
+Agree to the trade.
+
+Respectfully decline.
+
+You decide you need what supplies you have.
+
+"You look like a military vessel. We're trying to get back to our homes alive. I'm an engineer by trade and could try to improve your reactor if you have any extra supplies."
+
+You receive a message from a small convoy. They're looking for some military supplies and are offering to try to improve your reactor in exchange.
+
+You make the exchange and their team comes on board to try to improve your reactor.
+
+Inquire about their specialty.
+
+Decline.
+
+You thank them for their offer but prepare to move on.
+
+You are immediately hailed by a mobile docking platform upon arrival, "Welcome to Uncle Joe's Fix-it Shop! Need a tuneup? We got you covered!"
+
+There are a number of privately owned ship construction platforms in the area. You find one that has a slot open for some immediate work.
+
+You pick up an automated message from a nearby space station. There appears to be a local shipwright that can perform emergency work on military ships.
+
+You receive a message from a small refugee convoy, "Hail. We'd like to help you on your mission but don't have much to offer. If you have extra metal perhaps we could work on your ship?"
+
+They offer to upgrade your Oxygen system in exchange for some scrap.
+
+Agree to the exchange.
+
+You let their team on board and after a short time they finish their work.
+
+Decline. Your system is fully upgraded.
+
+You thank them but prepare to move on.
+
+They offer to upgrade your Piloting subsystem in exchange for some scrap.
+
+Decline. Your subsystem is fully upgraded.
+
+They offer to upgrade your Door subsystem in exchange for some scrap.
+
+They offer to upgrade your Sensors subsystem in exchange for some scrap.
+
+They offer to upgrade your reactor in exchange for some scrap.
+
+You come across an asteroid mining colony. They message you immediately, saying, "Greetings. Our supplies of mining explosives have run out ever since the Rebels blockaded this system. Do you have any extra explosives?"
+
+(Missile Weapon) Offer to solve their problem by launching a missile.
+
+"While I appreciate your enthusiasm, we have a certain protocols for the use of explosives around the workplace. Launching a military grade weapon into our mines isn't exactly what I would call, 'union-friendly'."
+
+Give them the requested 5 missiles.
+
+Give them 15 missiles.
+
+"I understand. Good luck out there. We'll try to make do with what we have."
+
+They thank you for your generosity and offer some scrap in exchange.
+
+They thank you and offer to have their engineers repair some of your ship's hull.
+
+They thank you and offer to have their engineers try to upgrade your reactor.
+
+"Wow. This will help our efforts considerably. Let me see what I can scrounge up to offer you." They deliver some scrap and have their team try to repair part of your hull.
+
+"Wow. This will help our efforts considerably." They offer to have their engineers fix up your ship and upgrade your reactor.
+
+"Wow. This will help our efforts considerably. What could I offer for your troubles..." After some time they deliver a ship Augment for installation on your ship.
+
+You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board, and its communications seem to be down.
+
+Prepare to board and investigate.
+
+Ignore the ship.
+
+The ship is completely abandoned. There is no trace of the crew or any cargo. Mystified, you leave the ghost ship and continue on.
+
+The ship is completely abandoned. It looks like it ran out of fuel... and the crew ran out of food not long after. Despite the grisly scene that remains, you are able to scavenge some supplies from the cargo hold.
+
+It looks as if the ship ran out of fuel... and the crew ran out of food not long after. Despite the grisly scene that remains, you find one surviving crewman locked in the freezer, almost perfectly preserved and apparently overlooked by the starving crew.
+
+As you investigate the ship, you are attacked by the now-cannibalistic crew! Driven mad by lack of food, they have turned to feeding on each other. As you fight your way off the ship, one of your crew falls to the crazed attackers, and you are forced to leave them behind or else lose your entire ship.
+
+Your abandoned crewmember is waiting on the ship when you return, trying not to dwell on the fate of his previous incarnation.
+
+As you approach the ship, the other ship's transporters suddenly power up, and your decks swarm with now-cannibalistic refugees! Driven mad by lack of food, they have turned to feeding on each other - and now your crew is next!
+
+You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board.
+
+Hail them.
+
+Ignore the refugees.
+
+Your sensors have picked up a refugee ship drifting through the system, no doubt one of many fleeing the Rebel advance. It doesn't appear to have detected you... or else it is trying to avoid notice.
+
+The vessel is relieved to hear from you! They are running low on supplies. They suggest a trade.
+
+Trade with them.
+
+Politely decline.
+
+As you hail the freighter, it advances, weapons bristling from its hull! It's a pirate ambush!
+
+As you hail the refugee ship, a Zoltan ship suddenly jumps into the system... it claims the refugees are criminals, and accuses you of escorting fugitives! Before you can respond, it cuts communications, and powers up its weapons!
+
+As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait!
+
+As you hail the refugee ship, a Slug ship jumps into the system... it was hunting the refugee ship for sport and now they've found you instead!
+
+The Zoltan ship breaks apart and you salvage what you can.
+
+Contact the refugee ship.
+
+The refugee ship thanks you for your assistance. As a gesture of good will (and seeing how effectively you dispatched the enemy ship), they offer up what supplies they can spare.
+
+The Zoltan ship, now empty of lifeforms, provides easy salvage.
+
+The pirate ship breaks apart and you salvage what you can.
+
+The pirate ship, now empty of lifeforms, provides easy salvage.
+
+The refugee ship claims pirates have been following their trail since they left their homeworld. As a gesture of good will (and seeing how effectively you dispatched the enemy ship), they offer up what supplies they can spare.
+
+The Slug ship breaks apart and you salvage what you can.
+
+The refugee ship claims the Slugs have been hounding them since they left their homeworld. As a gesture of good will (and seeing how effectively you dispatched the enemy ship), they offer up what supplies they can spare.
+
+The Slug ship, now empty of lifeforms, provides easy salvage.
+
+Move in to examine the station.
+
+Stay near the Beacon.
+
+You decide it's not worth the time to examine.
+
+You find a small space station that appears to abandoned.
+
+You arrive to find what appears to be a colonized moon, however scans show it has been abandoned. You also detect an abandoned space station near the Beacon.
+
+This area shows signs of a battle some time ago. There are scattered remains of ships but one station appears to be intact.
+
+As you approach it becomes clear that the station is simply an empty shell. It has been stripped of useful materials long ago.
+
+You approach cautiously but you detect no danger. It appears to have been a small rest stop that was abandoned a while ago. You take what few supplies you can find.
+
+Upon closer inspection it appears to have a large portion of its hull destroyed. You take what few supplies you can find.
+
+The station is in disarray. You find a cloning bay partially intact but nothing else seems to be functioning.
+
+(Clonebay) Search for a surviving DNA bank.
+
+While the cloning facilites are no longer functioning, you find someone was in queue to be cloned. You transfer their data to your Clonebay and after a time their body is rebuilt.
+
+Scrap the machinery.
+
+You take what you can and prepare to move on.
+
+You dock with the station to take a look inside. However no sooner do you open the airlock than pirates burst in. Meanwhile scanners pick up a previously undetected pirate ship moving in to attack!
+
+You dock with the station to take a look inside. However no sooner do you open the airlock than pirates burst in. Meanwhile multiple warning signals go off on the bridge. The pirates have activated a remote planetary defense system and it's locking onto your ship!
+
+The clone is extremely confused but calms down after you try to explain the situation. With no other options the clone offers to work on your ship for a time.
+
+The clone is extremely confused but seems to accept their new situation. With no other options the clone offers to work on your ship for a time.
+
+The clone emerges in a crazed frenzy and refuses to calm down. You have no choice but to fight.
+
+(Improved Sensors) Use your Sensors to scan the wreckage.
+
+You scan the battlefield, and with the aid of your Sensors, you are able to salvage a moderate amount of material from the wreckage. You prepare to jump.
+
+(Advanced Sensors) Use your Sensors to scan the wreckage.
+
+Investigate the battlefield.
+
+Ignore the wreckage and continue on.
+
+What at first seems to be a simple nebula is actually filled with a good amount of debris from a brutal exchange between several ships. Wreckage drifts by your screens and tumbles into the depths of the nebula to be lost to sight. It's hard to determine who the combatants were without closer investigation.
+
+You have jumped into the aftermath of what seems to have been a brutal exchange between several ships. Wreckage drifts by your screens, and you can still see the remains of the dying ships sparking and breaking apart. It's hard to determine who the combatants were without closer investigation.
+
+You scan the battlefield, and with the aid of your Sensors, you are able to salvage a good amount of material from the wreckage. Well-stocked, you prepare to jump.
+
+You scan the battlefield and find a prototype military vessel in the debris! The crew has been killed, but their working prototype weapon array is still intact! You salvage it and bring it aboard.
+
+You scan the battlefield, and find little remains. Disappointed, you prepare to jump.
+
+You scan the battlefield, and are able to salvage some useful material from the wreckage.
+
+As you approach the wreckage, a Mantis ship screams into the system... either sensing prey - or to finish the job its fellows started.
+
+The wreckage appears to be a battle between Federation fighters and Rebel cruisers. Though outnumbered, it looks like the Federation fought valiantly. As you begin a more detailed scan of the wreckage, Rebel reinforcements arrive in the system and target your ship!
+
+As you approach the wreckage, a Zoltan ship makes its arrival. It immediately mistakes you for one of the attackers, declares you as hostile aggressors in violation of Zoltan space, and opens fire!
+
+As you approach the wreckage, a Slug ship makes its arrival. It hesitates for a moment, as if surprised to see anyone remaining, and then jumps away without a word. You resume scanning the system, wary of any other visitors.
+
+A small platform orbits near this beacon - it looks like a fueling station of some sort, and it is cheerily broadcasting reasonable prices in a spectrum of frequencies and languages.
+
+Dock with the refueling platform.
+
+Ignore the refueling platform.
+
+As you prepare to leave the system, a Pirate ship suddenly appears on scanners - it looks like it was attempting to use the platform as bait!
+
+The platform makes an offer.
+
+Accept it.
+
+Reject it.
+
+The automated platform seems to be damaged. You can likely steal as much fuel as remains.
+
+Steal it.
+
+If you take the fuel at least it won't come into the hands of of the Rebels. You breach the containment and access what remains of the fuel reserves.
+
+War doesn't justify abandoning one's values. You leave it alone.
+
+The platform seems to be malfunctioning and could ignite at any moment.
+
+Quickly dock and refuel.
+
+Give the station a wide berth and carry on.
+
+You pull away from the station. After a short time a few silent explosions cause the depressurized tanks to implode.
+
+You're able to safely refuel and get clear before the station explodes.
+
+Just as you hook up to refuel, the station ignites and explodes. Your own fuel reserve ignites, losing you precious fuel and damaging your ship.
+
+You dock and signal the fuel station's staff to begin refueling.
+
+Wait for them to finish.
+
+As you dock with the refueling platform, there is an explosion from your engine room! Warning lights flash in your ship as pirates from the station swarm aboard your vessel!
+
+[Blast Doors] Seal your blast doors, one can never be too careful when docked.
+
+Pirates hidden on the station are confounded by your security locks, turning an attempted ambush into a fish-in-a-barrel firefight. You take control of the station and take its fuel reserves.
+
+The refueling station welcomes you into one of its berths, and as you hail them, there is an explosion from your engine room! While assessing the damage, you detect a Pirate Ship closing fast!
+
+You come across a space station under construction. You receive a message from their command tower, "Greetings. We recently lost contact with a cargo ship that was set to deliver more construction materials. Could you help us figure out what happened to them?"
+
+Offer your help.
+
+"Great. Thanks for your help. I've marked their last known coordinates and sent over some supplies to help you get there."
+
+"I understand." Transmission has been cut.
+
+(Lanius Crew) Offer to have your crewmember help.
+
+"Interesting. So this metal man can help us make some of these unique parts out of scrap? That would be a huge help." Your crewmember checks over the blueprints and quickly converts some of their base metal sheets into the specialized parts.
+
+"Amazing! This robot thing could save us a ton of time. Could I buy it off you?"
+
+Ask your crew if they agree.
+
+Once your Lanius crewmember understands the situation it appears to like the idea of assisting with construction in deep space. Much less dangerous. They offer you some goods in exchange.
+
+Your clonebay obviously does not revive your crewmember since they did not die.
+
+Our crew is not for sale.
+
+"A pity. In terms of payment, here's some of the scrap metal we don't need now that we've got necessary parts."
+
+You find the missing cargo ship docked to a Rebel station. You send a short-band message to them and discover they are being held against their will and forced to 'donate to their supplies for the war effort.'
+
+Attack the Rebels to help them escape.
+
+You move in to attack the Rebel ship that is threatening them and scanners detect weapon locks from a nearby Anti-Ship Battery. It's about to get hectic!
+
+Leave.
+
+You apologize but it's not worth the risk to attack a Rebel station.
+
+You find the missing cargo ship docked to an empty space station. However their hold appears to be empty and there are obvious signs that anyone is inside the ship or station. Everything looks abandoned.
+
+You find the missing cargo ship floating near the beacon. "Thank heavens! We've been drifting here after using the last of our fuel to escape a pirate raid."
+
+Give them the requested 4 fuel.
+
+"Great, thank you. Here's some scrap metal for your troubles. Be careful out there."
+
+Give them 1 fuel.
+
+"Well, I suppose that's better than nothing. Than you. Hopefully we can find a station at the next Beacon."
+
+Do not give them any.
+
+"I see..."
+
+You quickly salvage what you can from the ship.
+
+Contact the cargo ship.
+
+Amidst the blasts from the Anti-Ship Battery, the cargo ship escaped from the station. They jettisoned some scrap towards your ship before jumping away.
+
+You detect multiple ships running at maximum power nearby, but you can't see anything through this thick nebula.
+
+Get closer.
+
+Ignore them.
+
+You find a Slug Cruiser and Rock ship at a standoff, both with weapons armed and ready to fight. You could intervene before this gets out of hand.
+
+Hail them to see what's wrong.
+
+The Slug captain explains that they upgraded the Rock ship's reactor and now the 'thick boulder heads' are refusing to pay for the work done. The Rock Captain says the 'slime balls' did a poor job that is not worth their agreed upon price.
+
+Offer to pay off the Rock debt.
+
+You pay off the debt. The Rock Captain still seems annoyed at the Slug's getting their 'undeserved' scrap, but at least the situation will remain peaceful.
+
+Demand the Rock ship pay the agreed upon price.
+
+You have better things to attend to, leave them.
+
+Leave them be.
+
+Apparently the Rock Captain was more annoyed than you thought, they shut off all communication and turn on you, the 'slime balls' defender.'
+
+With much grumbling, the Rock Captain agrees to pay the price.
+
+A massive explosion emanates from the Rock Ship, shattering its hull and sending debris on an unavoidable collision course to your ship. Seems like that reactor upgrade was poorly done after all, and the Slugs took the opportunity to jump away.
+
+With the Rock Ship destroyed, you take the time to collect what little scrap remains.
+
+Contact the Slugs.
+
+With the Rock crew dead, you scrap the ship for supplies.
+
+The Slugs offer their thanks for your help, and jump away. Their true appreciation is questionable, but at least you can get back to your mission.
+
+The Slug Captain offers a free reactor upgrade for your help. It never hurts to get a little power boost!
+
+The Slug Captain, thankful for your help, offers a reactor upgrade for your ship... for a 'fair' price.
+
+Agree to the price.
+
+Decline the offer.
+
+You break communications and prepare to move on.
+
+You receive a hail from a station orbiting a nearby planet. "Captain, we are Federation Terraforming Team C12 and are in need of assistance. Do you have some time?"
+
+You offer your assistance.
+
+"Thank you! We need to scan this planet for life before we can begin terraforming, but our sensors can't get the necessary power to scan through this atmosphere. We've got a schedule to keep, any chance you can help?"
+
+Attempt to scan the planet.
+
+(Advanced Sensors) Set sensors to maximum and scan.
+
+(Zoltan) Send your crewman to overcharge their systems.
+
+You do not have time.
+
+"We understand. Best of luck on your mission, sir!"
+
+Prepare to jump away.
+
+It seems your sensors are no more powerful than the terraformer's. You apologize and continue on your way.
+
+You find if you modulate the feedback signal of your sensors to just the right frequency, you're able to get through the atmosphere and perform a complete scan!
+
+After a complete scan of the planet, you find no life. The team is grateful and ready to get to work. The station scientists have a unique talent for life support units and offer to upgrade your oxygen system as thanks.
+
+A complete scan of the planet reveals no life signs other than a single ship on the surface. The terraformers thank you for your help, and attempt to contact the ship. Just as you're about to jump away, the ship takes off and attacks, it's a pirate!
+
+A complete scan of the planet reveals a simple mold as the only life present. The terraformers claim their terraforming plans are only hindered by intelligent life; they can begin their work.
+
+Tell them to stop. Any life is valuable.
+
+"But our livelihood depends on this job! Who cares about some silly mold? We'll pay you to look the other way!"
+
+Accept the bribe and leave.
+
+Offer to pay them to at least delay until the mold can be studied.
+
+They see reason and accept the offer. The station scientists have a unique talent for life support units and offer to upgrade your oxygen system as an apology for their behaviour.
+
+Power your weapons and demand they leave at once.
+
+They shut off communications, but you can tell they have begun an evacuation procedure.
+
+Leave them to their work.
+
+As soon as you jump into the system, you receive a hail from a nearby civilian Engi vessel. Their Captain appears on your screen: "Strange bug. Can you assist in debugging?"
+
+Listen to their problem.
+
+"Found malfunctioning Mantis. Believes it is human. Will receive input only from human. Danger Evaluation: Extremely High. Provide assistance."
+
+Send a shuttle with an away team to help.
+
+Leave them, a cornered Mantis is too dangerous.
+
+(Human Crew) Send your human crewmember to communicate with the Mantis.
+
+The Mantis is grateful to see 'another human', and introduces himself as Robert Smith. He explains he's from a nearby human colony and would appreciate being returned there.
+
+Return him home.
+
+(Mantis Crew) Send your Mantis crewmember to communicate with the Mantis.
+
+The Mantis is terrified at the sight of your crewmember. He immediately attacks his Engi rescuers, and your crewmember is forced to kill him. The Engi are grateful for your help and offer a small reward.
+
+(Mind Control) Use your Mind control System to calm him down.
+
+The Mantis calms down and communicates thanks to the Engi and yourself for helping. He requests to be dropped off at a nearby planet, at the human colony where he was raised. They are grateful for his return and offer a reward.
+
+Explain that you can't do any programming and leave.
+
+The colony is a mining operation that specializes in FTL fuel. Robert's family, the head engineers, are excited to see him, and very grateful for his return. Apparently he ran away to 'join the Federation' like his older brother, but was never accepted onto a ship.
+
+Offer him a position on your ship.
+
+He graciously accepts, having always wanted to serve in the Federation.
+
+Robert Smith
+
+Ask if they can take a look at your engines.
+
+They are happy to take a look, and are able to offer some suggestions for improvements.
+
+After an hour of convincing, the Mantis finally calms down and introduces himself as Robert Smith. He explains he's from a nearby human colony and would appreciate being returned there.
+
+The cornered and frightened Mantis attacks as soon as you approach. One of your crew is eviscerated before the rest are able to stop him. The Engi apologize for your loss.
+
+Your crew's clone is waiting when you return to the ship.
+
+The cornered and frightened Mantis attacks as soon as you approach. You're able to subdue him and leave him at a Mantis colony in a neighboring system. They don't seem pleased or grateful at his return.
+
+A ship with conspicuous pirate markings is orbiting a nearby moon, broadcasting a simple message claiming to have equipment available for sale.
+
+Hail the ship.
+
+Attack him before he can attack!
+
+Quickly prepare to jump away.
+
+The ship responds "Yes, we have an extensive stock! Come aboard and see our wares!"
+
+Dock with the ship.
+
+This seems dangerous, leave.
+
+As soon as you start to reverse your ship, the pirate reveals hidden weaponry and sets off in pursuit. You'll have to fight him to escape!
+
+(Slug) "Sir: We can dock, but I sense that we better plan on making a purchase..."
+
+(Hacking) Disable their Weapon system before docking.
+
+You receive a hail as soon as your Hacking system finishes: "What have you done!? You can never trust a Federation ship! Here, take your 'standard toll'. I really should do business elsewhere, scum."
+
+A human in an exquisite suit meets you on board. "Welcome to my ship! We specialize in drones of all kinds, can I interest you in any?"
+
+Buy some Drone parts.
+
+Buy a Drone schematic.
+
+Buy a Drone system upgrade.
+
+Buy nothing.
+
+"Ah, I'm sorry to hear that! Pleasant journeys." Once back to the helm, a series of explosions rocks your ship. The pirate ship has powered its weapons! You receive a message, "You shouldn't waste people's time Captain!"
+
+A human in an exquisite suit meets you on board. "Welcome to my ship! We specialize in explosives of all kinds, can I interest you in any?"
+
+Buy some missiles.
+
+Buy a bomb launcher.
+
+Buy a rocket weapon.
+
+"Ah, I'm sorry to hear that! Pleasant journeys." Once back to the helm, a series of explosions rocks your ship. The pirate ship has powered its weapons!
+
+It looks like this Beacon is home to a Rebel checkpoint. They're stopping and searching any ship that passes through. Civilians are being harassed, and Federation members are detained. The Rebels haven't noticed you yet.
+
+Another Rebel checkpoint is monitoring this location. A number of civilian ships are awaiting inspection, any of them could be Federation loyalists. The Rebels haven't noticed you yet.
+
+A Rebel space station and single fighter is monitoring this Beacon for Federation activity. A number of civilian ships are docked, awaiting inspection by the Rebels and possible detainment if they are Federation loyalists. The Rebels haven't noticed you yet.
+
+A rather large fleet of civilian ships are held up at this Beacon. It appears to be a Rebel checkpoint; everyone is being inspected for possible ties to the Federation. No one has noticed you yet.
+
+These Rebels are easily swayed by the prospect of additional scrap. They release the civilian ships and everyone is free to go.
+
+Like most Rebels, these are just men trying to get by in a rough galaxy. They take your scrap and let everyone continue their journeys.
+
+As everyone currently awaiting inspection is human anyway, the Rebels let them go. They take your scrap and tell you to hurry along.
+
+They eagerly accept your bribe, obviously revolutionaries are under paid. The civilian ships all begin to jump away.
+
+Fly behind a moon and stay hidden.
+
+Shut down all non-vital systems and stay hidden.
+
+Stay quiet and hope they don't notice you.
+
+Stay out of their way and charge your FTL drive.
+
+Fend for yourself, attack and escape.
+
+Bribe the Rebels to release the civilian ships.
+
+Contact the civilian ships.
+
+The civilians are grateful. However, none of them seem eager to be mistaken as Federation loyalists so they quickly jump away.
+
+Some of the civilians pool together their excess scrap to try to repay you for your help.
+
+One of the civilian ships quietly teleports over a crate of Federation military supplies.
+
+One of the civilian ships contacts you and reveals they are Federation loyalists. An eavesdropping Rebel swoops in, destroys the ship, and turns to attack you!
+
+You stumble across a Rebel ship distributing supplies to local civilian colonies. It's probably not anything military grade, but every little bit helps...
+
+You find a Rebel combat ship that has been reassigned as an emergency supply vessel. The local civilians are apparently in need of help, and the Rebels are rising to the occasion.
+
+The Rebels in this system are doing supply runs for the local space stations. These civilians have likely been out of supply for months due to the war and are in desperate need.
+
+Civilian colonists loyal to the Rebel cause are present on a nearby planet. It looks like they are currently receiving a supply shipment. Could be useful.
+
+Because of the war, thousands of colonists have had their supply lines disrupted and have found themselves in dire straits. It seems in this system, the Rebels are sympathetic and are distributing what little supplies they can spare.
+
+With the Rebel ship destroyed, you take the time to collect what little scrap remains. They had already made their delivery to the civilians.
+
+Steal the civilian supplies.
+
+Leave the civilians alone.
+
+With the Rebel crew dead, you strip their ship for equipment. They had already made their delivery to the civilians.
+
+You make to preparations to leave. One of the civilian leaders contacts you: "That Rebel was our sole source of supplies. You have doomed us all."
+
+You leave the civilians with the supplies, though without the Rebel that was running supplies to them its unlikely they'll live long.
+
+You wonder if any more Rebels will be available to help these civilians on the edge of nowhere. Oh well, for you a few more dead Rebels matter more than the lives of a thousand colonists.
+
+Before your FTL drive charges, you receive a hail: "My son was on that ship. He only helped the Rebels because they cared enough to help us. Without him to find us supplies, we'll likely be forgotten and die out here."
+
+Attack the Rebels.
+
+Wait and steal the supplies from the civilians.
+
+The colonists hand over the supplies. It appears to be mostly equipment meant for automated farming, but you can make use of it. As you leave, you receive a message: "This is why the Rebels will always have support!"
+
+The colonists hand over the supplies and you load it onto your ship. As you jump away, you crack it open and discover nothing more than vaccinations for a local plague.
+
+You make the colonists teleport the supplies to your ship. It's nothing more than building construction supplies. Oh well, scrap is scrap.
+
+The colonists willingly give up their supplies. But as you make to jump away, an explosion rocks your ship. The cargo was booby trapped!
+
+You arrive at a beacon located in a civilian star system. A nearby colony contacts you: "We've got a rogue Rebel ship harassing this system. Do you have time to find it?"
+
+As soon as you arrive, you receive a Federation encrypted message: A Rebel ship has been terrorizing the local civilians in this system, please seek and destroy it.
+
+You begin charging your FTL drive, and do a quick scan of a local planet. You find the ruins of a recently destroyed Federation colony of the surface. There must be a Rebel ship in the vicinity...
+
+You jump into a field of debris. It appears a battle recently took place here, and the loser seems to have been a civilian ship. A message was left on repeat before it was destroyed: "Rebels attacking, please send aid!" The responsible Rebels are likely still nearby.
+
+Go looking for the Rebel ship.
+
+No time to search, you prepare to jump away.
+
+(Improved Sensors) Perform a scan of the area.
+
+You quickly find the Rebel ship's location and move to intercept.
+
+(Advanced Sensors) Pinpoint the Rebel's location.
+
+You find the Rebel ship hiding on a nearby asteroid. You are able to get a shot off and permanently disable their engines before they notice you.
+
+You spend some time looking around but your scanners cannot pick up any trace of the Rebel ship. You prepare to move on.
+
+After a short search you find the Rebel ship. Let's hope he's as easy to defeat in combat as he was to find.
+
+You are able to quickly track down the Rebel. Let's hope he's as easy to defeat in combat as he was to find.
+
+After far too long spent searching, you are finally able to track him down. You go into the fight pondering just how much of a head start you've lost on the Rebel Fleet...
+
