@@ -174,7 +174,7 @@ You come across an asteroid mining colony. They message you immediately, saying,
 
 (Missile Weapon) Offer to solve their problem by launching a missile.
 
-"While I appreciate your enthusiasm, we have a certain protocols for the use of explosives around the workplace. Launching a military grade weapon into our mines isn't exactly what I would call, 'union-friendly'."
+"While I appreciate your enthusiasm, we have certain protocols for the use of explosives around the workplace. Launching a military grade weapon into our mines isn't exactly what I would call, 'union-friendly'."
 
 Give them the requested 5 missiles.
 
@@ -402,7 +402,7 @@ Leave.
 
 You apologize but it's not worth the risk to attack a Rebel station.
 
-You find the missing cargo ship docked to an empty space station. However their hold appears to be empty and there are obvious signs that anyone is inside the ship or station. Everything looks abandoned.
+You find the missing cargo ship docked to an empty space station. However their hold appears to be empty and there are no obvious signs that anyone is inside the ship or station. Everything looks abandoned.
 
 You find the missing cargo ship floating near the beacon. "Thank heavens! We've been drifting here after using the last of our fuel to escape a pirate raid."
 
@@ -465,6 +465,8 @@ The Slug Captain offers a free reactor upgrade for your help. It never hurts to 
 The Slug Captain, thankful for your help, offers a reactor upgrade for your ship... for a 'fair' price.
 
 Agree to the price.
+
+You let their team on board and after a short time they finish their work.
 
 Decline the offer.
 
@@ -540,7 +542,7 @@ The Mantis calms down and communicates thanks to the Engi and yourself for helpi
 
 Explain that you can't do any programming and leave.
 
-The colony is a mining operation that specializes in FTL fuel. Robert's family, the head engineers, are excited to see him, and very grateful for his return. Apparently he ran away to 'join the Federation' like his older brother, but was never accepted onto a ship.
+The colony is a mining operation that specializes in FTL fuel. Robert's family, the head engineers, are excited to see him, and are very grateful for his return. Apparently he ran away to 'join the Federation' like his older brother, but was never accepted onto a ship.
 
 Offer him a position on your ship.
 
@@ -706,5 +708,5 @@ After a short search you find the Rebel ship. Let's hope he's as easy to defeat 
 
 You are able to quickly track down the Rebel. Let's hope he's as easy to defeat in combat as he was to find.
 
-After far too long spent searching, you are finally able to track him down. You go into the fight pondering just how much of a head start you've lost on the Rebel Fleet...
+After far too much time spent searching, you are finally able to track him down. You go into the fight pondering just how much of a head start you've lost on the Rebel Fleet...
 
