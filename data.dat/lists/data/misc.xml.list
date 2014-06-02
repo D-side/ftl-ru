@@ -1,0 +1,1032 @@
+Level 
+
+Manned: 
+
+Status: 
+
+-Fully Powered
+
+-Fully Functional
+
+-Partially Powered
+
+-Partially Functional
+
+-Unpowered
+
+-Unmanned
+
+-Zoltan Bonus Power
+
+: Always powers weapon in first slot, click and drag to rearrange weapons
+
+: Always powers drone in first slot, click and drag to rearrange drones
+
+-Destroyed
+
+-Damaged
+
+-Temporarily disabled by enemy or location
+
+-Locked by Ion Effect
+
+-On Fire
+
+-Being Sabotaged
+
+Add Power: 
+
+Remove Power: 
+
+Remove Power: Shift + 
+
+-Hacked: Experiences temporary disruption and doors are locked down
+
+OFF: Beam not charging
+
+OFF: Cannot manipulate doors
+
+OFF: NO DODGE!
+
+OFF: Limited vision
+
+OFF: Cannot heal crew
+
+OFF: Weapons not available
+
+OFF: Drones not functional
+
+OFF: OXYGEN DRAINING!
+
+OFF: Dead crew will die forever
+
+OFF: SHIELDS DOWN!
+
+Heals all crew 
+
+ hp every jump.
+
+ (If repaired, it will heal more)
+
+Piloting Skill:
+
+Engines Skill:
+
+Shields Skill:
+
+Weapons Skill:
+
+Hacking:
+
+ when manning Piloting.
+
+ when manning Engines.
+
+ when manning Shields.
+
+ when manning Weapons.
+
+Next Level: 
+
+Evasion +
+
+% faster recharge
+
+% faster charge
+
+% faster hacking
+
+Combat Skill: 
+
+Increases crew damage
+
+% more crew damage
+
+Repair Skill: 
+
+Increases repair speed
+
+% faster repair
+
+Ships Defeated
+
+Beacons Explored
+
+Scrap Collected
+
+Crew Hired
+
+Piloted Evasions
+
+Repairs
+
+Combat Kills
+
+Jumps Survived
+
+Skill Masteries
+
+Session Records
+
+Crew Records
+
+Session Stats
+
+Totals
+
+Total
+
+Most
+
+Final Score
+
+Total Games Played
+
+Total Victories
+
+General Progression
+
+Going the Distance
+
+Skill and Equipment Feats
+
+New
+
+Layout
+
+Ship
+
+Type A
+
+Type B
+
+Type C
+
+(Normal)
+
+(Hard)
+
+(Easy)
+
+Achievement Unlocked!
+
+Unlocked!
+
+Unlocked on NORMAL
+
+Unlocked on EASY
+
+Unlocked on HARD
+
+Victory
+
+Advanced
+
+SCORE
+
+SECTOR
+
+Normal
+
+Easy
+
+Hard
+
+New High Score!
+
+Added a quest marker to your map!
+
+Upon examining your map, you realize you just won't have time and need to get to the Federation base! You leave the quest for another day.
+
+Added a quest marker to the next sector!
+
+Congratulations, by making it to the 5th sector you've unlocked the Engi playable ship for future playthroughs!
+
+They must have a Super Shield bypass unit; boarders are on board!
+
+ [Warning: You will have to dismiss a crewmember, you are already full.]
+
+Congratulations! You've defeated the Rebel Flagship and ensured the victory of the Federation!
+
+All crewmembers have died. Your ship will continue to drift for eternity. Or until looters destroy it.
+
+One last explosion marks your fate as your ship is torn apart.
+
+The Rebel Flagship has destroyed the Federation Base. All is lost, they've won.
+
+Somehow you've died during the introduction training exercise. Feel free to try again but this doesn't bode well for your mission.
+
+ and 
+
+Thanks to the valiant effort of:
+
+And her successful crew:
+
+The Rebel's flagship was destroyed, throwing their fleet into chaos and ensuring a Federation victory
+
+A game from:
+
+subset games
+
+Created by:
+
+Matthew Davis and Justin Ma
+
+iOS programming:
+
+Andrew Church
+
+Music and sound by:
+
+Ben Prunty
+
+With writing from:
+
+Tom Jubert
+
+Advanced Edition special guest writer:
+
+Chris Avellone
+
+Additional art and design:
+
+Bryan Ma
+
+Additional editing and design:
+
+Alison Waller
+
+Additional testing, advice, and invaluable support:
+
+Alison, Maria, Bryan, Matthieu, Collin, Anton, Ethan, Andy, Xia Tai Yi, our parents, and many more
+
+Thank you to all of our extremely generous Kickstarter backers, with a very special thank you to:
+
+FTL uses the following third party libraries
+
+(See accompanying license folder or readme for more details)
+
+The FreeType Project (c) 1996-2002, 2006 by David Turner, Robert Wilhelm, and Werner Lemberg
+
+BASS audio library (c) 1999-2012 Un4seen Developments Ltd
+
+SDL - Simple DirectMedia Layer (c) 1997-2009 Sam Lantinga
+
+RapidXML (c) 2006, 2007 Marcin Kalicinski
+
+DevIL: Developer's Image Loader (c) 2000-2009 by Denton Woods
+
+'Half-Life 1 + 2' fonts used with permission from freakyfonts.de
+
+Keep finger pressed to skip the credits.
+
+50 Second Cooldown
+
+40 Second Cooldown
+
+30 Second Cooldown
+
+20 Second Cooldown
+
+Normal doors
+
+Blast Doors
+
+Improved Blast Doors
+
+Super Blast Doors
+
+Needs pilot to function
+
+Auto: 50 percent evasion
+
+Auto: 80 percent evasion
+
+See ship interior
+
+See enemy interior
+
+See enemy weapon charge
+
+See enemy power use
+
+Cloak:
+
+seconds
+
+sec cooldown
+
+Dodge
+
+FTL
+
+Healing Boost
+
+More System Power
+
+O2 Refill Boost
+
+One Shield Barrier
+
+Two Shield Barriers
+
+Three Shield Barriers
+
+Four Shield Barriers
+
+second disruption
+
+Mind control one person
+
+Boosts health and damage
+
+Increases boost
+
+Provides
+
+bonus power
+
+sec clone 
+
+ hp/jump
+
+Reactor
+
+Provides power to all ship systems. Each power bar allows you to send one unit of power to a system. Subsystems do not need power from the reactor.
+
+Provides power to all ship systems.
+
+Weak System - Extra scrap required for initial upgrades
+
+The Flagship will destroy the Federation Base if it spends three consecutive turns there. The red rotating Flagship icon indicates its position. When the jump line from the ship is solid, it will jump to the indicated beacon on that turn. Repair stations partially repair for free.
+
+The Flagship will destroy the Federation Base if it spends three consecutive turns there. \n\nThe red rotating Flagship icon indicates its position. When the jump line from the ship is solid, it will jump to the indicated beacon on that turn. \n\nRepair stations partially repair for free.
+
+Civilian Sector
+
+Your current location.
+
+Rebel Flagship
+
+This is the Federation Base.
+
+This is the exit beacon. Go here to travel to the next sector.
+
+The Rebels are about to gain control of this beacon!
+
+You previously found a store at this location.
+
+Federation Repair Station. Repairs hull and provides supplies.
+
+The Rebels have control of this location. Very dangerous.
+
+A hostile enemy was left behind at this location.
+
+Explored location. Nothing left of interest.
+
+Distress beacon. Someone might need help.
+
+Unvisited. Possible ship detected.
+
+Unvisited. Quest destination.
+
+Unvisited. Reported merchant location.
+
+An unvisited location.
+
+The Rebel Fleet was prepared for the nebula in this sector, so it won't be as effective a hiding spot.
+
+The nebula here will make fleet pursuit slower but will disrupt your sensors.
+
+Asteroid field detected in this location.
+
+Beacon coordinates appear to be very close to a nearby sun.
+
+This section of the nebula is experiencing an ion storm.
+
+A pulsar is flooding this area with dangerous electromagnetic forces.
+
+The fleet's anti-ship batteries will be firing on you at this location.
+
+Planet-side anti-ship batteries are detected in this system.
+
+Ion Intruder
+
+Repair Drone
+
+Anti-Personnel Drone
+
+Cannot be targeted. Hacking drone.
+
+Cannot be targeted. Ship repair drone.
+
+Cannot be targeted. Boarding drone.
+
+Cannot be targeted. Shield overcharger.
+
+Your Combat Drone: \nRepeatedly attacks enemy ship. Will function until destroyed or until you jump away.
+
+Enemy Combat Drone: \nRepeatedly attacks your ship. Can be shut down by damaging the enemy ship's drone system.
+
+Your Defense Drone: \nShoots down missiles and asteroids. Will function until destroyed or until you jump away.
+
+Defense Drone: \nShoots down missiles and asteroids. Can be shut down by damaging the enemy ship's drone system.
+
+Your Defense Drone Mk II: \nShoots down any projectiles. Will function until destroyed or until you jump away.
+
+Defense Drone Mk II: \nShoots down any projectiles. Can be shut down by damaging the enemy ship's drone system.
+
+Your Anti-Combat Drone: \nShoots to stun and possibly destroy enemy combat drones. Will function until destroyed or until you jump away.
+
+Enemy Anti-Combat Drone: \nShoots to stun and possibly destroy your combat drones. Can be shut down by damaging the enemy ship's drone system.
+
+Save your current crew positions \nHotkey: 
+
+Return crew to saved positions \nHotkey: 
+
+Opens the ship info screens. Unavailable when the ship is in danger. \nHotkey:
+
+Reopens the store at your location. \nHotkey:
+
+Mind Controlled
+
+Click and drag to rearrange
+
+Hotkey: 
+
+Health: 
+
+Cloning...
+
+Ready: Click to lock down room with special power \nHotkey: 
+
+Not Ready: Lockdown power charging (see charge left of portrait)
+
+Opens star map to choose jump location. \nHotkey: 
+
+Activate the Backup Battery, providing additional Reactor power bars \nHotkey: 
+
+Turn enemies into allies temporarily. \nHotkey: 
+
+Launch hacking drone, costs 1 drone part. \nHotkey: 
+
+Initiate hacking disruption. \nHotkey: 
+
+Can't disrupt system when it's destroyed
+
+Open all doors on the ship. \nHotkey: 
+
+Close all doors on the ship. \nHotkey: 
+
+Retrieve crew from targeted enemy room to player teleporter room. \nHotkey: 
+
+Send crew in player teleporter room to targeted enemy room. \nHotkey: 
+
+Temporarily cloak the ship, halting enemy weapon charging and increasing evasion by 60 \nHotkey: 
+
+Grants disruption ability: 
+
+Begins disruption ability: 
+
+None, must hack a system.
+
+Temporarily drain the enemy ship of oxygen.
+
+Temporarily turn all enemy doors into player friendly blast doors.
+
+Temporarily drain power from the enemy shields.
+
+Temporarily reduce the enemy ship's evasion to 0.
+
+Temporarily shut down the enemy sensors.
+
+Temporarily cause the medbay to damage instead of heal enemy crew.
+
+Temporarily drain charge from enemy weapons.
+
+Temporarily freeze enemy drones with a chance of destroying them.
+
+Temporarily take control of the enemy teleporter, returning crew to the enemy ship.
+
+Temporarily shut down the enemy's ability to cloak.
+
+Temporarily reverse the enemy's artillery charge.
+
+Temporarily reduce the enemy's reactor power by two.
+
+Temporarily shut down the clone bay's functionality, killing potential clones.
+
+Free any currently controlled people and temporarily mind control an enemy unit.
+
+Temporarily interrupt and shut down the enemy hacking.
+
+SYSTEM HACKED: LOSING OXYGEN RAPIDLY.
+
+SYSTEM HACKED: DOORS DISRUPT CREW MOVEMENT.
+
+SYSTEM HACKED: SHIELDS LOSING POWER.
+
+SYSTEM HACKED: EVASION DROPPED TO 0.
+
+SYSTEM HACKED: SENSORS WILL NOT FUNCTION.
+
+SYSTEM HACKED: MEDBAY DAMAGES CREW!
+
+SYSTEM HACKED: WEAPONS LOSING CHARGE.
+
+SYSTEM HACKED: DRONES STUNNED AND MAY EXPLODE.
+
+SYSTEM HACKED: FRIENDLY CREW FORCED TO TELEPORT HOME.
+
+SYSTEM HACKED: CLOAKING SYSTEM INTERRUPTED.
+
+SYSTEM HACKED: ARTILLERY QUICKLY LOSING CHARGE.
+
+SYSTEM HACKED: REACTOR POWER REDUCED BY 2.
+
+SYSTEM HACKED: CLONES CANNOT BE MADE, CREW MAY DIE!
+
+SYSTEM HACKED: FRIENDLY UNIT UNDER CONTROL!
+
+SYSTEM HACKED: HACKING TEMPORARILY INTERRUPTED
+
+Class
+
+Neutral
+
+Hostile
+
+Relationship
+
+Engines Hacked
+
+Pilot Hacked
+
+Current Evasion
+
+Oxygen Hacked
+
+Current Oxygen
+
+Crew Skills
+
+Note: Beam damage is reduced by one for every shield it passes through, which allows for partial shield piercing.
+
+Required Power:
+
+Chain Power: 
+
+Faster Charge
+
+More Damage
+
+Chain Damage Cap: 
+
+Chain Charge Cap: 
+
+Charge Time:
+
+Requires Missile
+
+Shots Per Charge:
+
+Max Charge Shots:
+
+Normal Damage:
+
+Damage Per Room Hit:
+
+Shield Piercing:
+
+Fire Chance:
+
+Breach Chance:
+
+Stun Chance:
+
+Ion Damage:
+
+Crew Damage:
+
+System Damage:
+
+2x Damage on systemless rooms.
+
+Possible Effect:
+
+Fire
+
+Breach
+
+Stun
+
+Type: 
+
+Beam
+
+Teleporting Bomb
+
+Laser
+
+Missile
+
+Physical Projectile
+
+Blast
+
+Ion
+
+Chain 
+
+Charge 
+
+Drains and Locks Systems
+
+Ignores Shields \nRequires Missile
+
+Ignores Shields
+
+Area Effect Aiming
+
+Charge Multiple Times
+
+Improves With Consecutive Shots
+
+Welcome to FTL! \n\nIf you're a new player, we'd highly recommend you take a moment to play the tutorial. We've done our best to make it as short and to the point as possible! \n\nWe hope you like the game. \n\n-- Subset Games
+
+Continue...
+
+Keep Screen Setting
+
+Revert Screen Setting and Quit
+
+You recently changed your screen settings. Are these acceptable? \n\nWill quit and auto-revert in
+
+No previous game exists
+
+A new player has signed into the Game Center. Returning to the title screen.
+
+Tap the screen to return to the game.
+
+Note: This is an overview. You can customize many hotkeys in the Options menu.
+
+Cannot save and quit during the tutorial
+
+Welcome to the Federation Hangar! \n\nHere you'll be able to choose your ship, name it, and name your crew. Right now only the Kestrel is available to you, but as you play you will unlock more. \n\nYou can change the difficulty setting in the top right. If you're new, you might want to give Easy a shot first.
+
+Welcome to the Federation Hangar! \n\nHere you'll be able to choose your ship, name it, and name your crew. Right now only the Kestrel is available to you, but as you play you will unlock more. \n\nYou can change the difficulty setting on the right side of the screen. If you're new, you might want to give Easy a shot first.
+
+Normal Mode
+
+Standard scrap rewards and enemies. \n\nYour score gets a 25 percent boost.
+
+Hard Mode
+
+Low scrap rewards and harder enemies. \n\nYour score gets a 50 percent boost.
+
+Easy Mode
+
+Increased scrap rewards and easier enemy generation.
+
+Advanced Content
+
+New systems, weapons, alien race, and more! Recommended for experienced players.
+
+Default Content
+
+The default Faster Than Light experience.
+
+Unidentified Cruiser
+
+Your ship can only hold 3 augmentations.
+
+You already have this augmentation and its effect cannot be stacked.
+
+Your ship is full and cannot hold any more crewmembers!
+
+Your ship's cargo is full and cannot hold any more drones!
+
+Your ship's cargo is full and cannot hold any more weapons!
+
+Powers the ship's drones.
+
+Purchase comes with free 
+
+You've reached the System Limit
+
+Fullscreen (Req. Restart) : 
+
+Off
+
+On (Stretch)
+
+On (Borders)
+
+On (Native)
+
+Vertical Sync (Req. Restart): 
+
+On
+
+Frame Limit: 
+
+Dynamic Backgrounds: 
+
+Colorblind Mode: 
+
+Disabled
+
+Enabled
+
+Disable hotkeys
+
+No delay
+
+Brief delay
+
+Event choice selection: 
+
+Show beacon paths on hover: 
+
+Show beacon paths on touch: 
+
+Achievement Popups: 
+
+Window Focus Auto-Pause: 
+
+Touch Command Auto-Pause: 
+
+Configure Keyboard Hotkeys
+
+Sound Volume
+
+Music Volume
+
+Note: Shift + Power System will also de-power the system
+
+PRESS KEY
+
+Cannot mind control through Super Shields.
+
+Cannot mind control in rooms you cannot detect life in.
+
+ + AIM can force a weapon to do the opposite of current setting
+
+Hit ENTER or ESCAPE to confirm name.
+
+Drone rebuilding after unexpected destruction.
+
+Press
+
+to resume
+
+Tap on an enemy to temporarily convert them
+
+Stations Saved!
+
+No Stations Saved!
+
+Return to Stations!
+
+is gone
+
+is now an enemy
+
+Intruders on board
+
+ damage to your hull
+
+ hull points repaired
+
+1 hull point repaired
+
+Fleet delayed by 
+
+Fleet pursuit doubled for 
+
+ jumps
+
+1 jump
+
+!
+
+The Nameless One
+
+Waiting for Game Center
+
+Could not find: 
+
+Augment:
+
+Warning: If you add a new system, your ship will be full and unable to hold any more.
+
+Warning: If you add a new system, you will have 1 system slot left.
+
+Warning: If you add a new system, you will have 
+
+ system slots left.
+
+Warning: Accepting a clonebay will replace your medbay.
+
+Warning: Accepting a medbay will replace your clonebay.
+
+Warning: You cannot hold any more systems.
+
+Warning: You already have the offered system.
+
+the Oxygen System
+
+the Doors
+
+the Shields
+
+the Piloting
+
+the Engines
+
+the Sensors
+
+the Medbay
+
+the Weapons
+
+the Drone System
+
+the Teleporter
+
+the Cloaking
+
+the Artillery
+
+the Backup Battery
+
+the Clonebay
+
+the Mind Control
+
+the Hacking System
+
+the Reactor
+
+Could not upgrade 
+
+, it's maxed
+
+, it's not present
+
+Upgraded 
+
+ by 
+
+ installed!
+
+Oxygen System
+
+Door Subsystem
+
+Shield System
+
+Piloting Subsystem
+
+Engines
+
+Sensor Subsystem
+
+Medbay
+
+Weapons System
+
+Drone System
+
+Teleporter
+
+Cloaking System
+
+Artillery
+
+Backup Battery
+
+Clonebay
+
+Mind Control System
+
+Hacking System
+
+No Type C
+
+Defeat the Flagship with any layout of the 
+
+Get to Sector five with any layout of the 
+
+Complete the unlock quest for the 
+
+ (locked)
+
+ to unlock the 
+
+Achieved with 
+
+Your crewmember will be missed.
+
+Unidentified Hostile Sector
+
+Unidentified Civilian Sector
+
+Unidentified Nebula Sector
+
+Unidentified Sector
+
+TIP: Open the in-game menu by pressing ESCAPE. You can restart or change options from there.
+
+TIP: Open the in-game menu by tapping the OPTIONS button in the upper-right corner of the screen. You can restart or change options from there.
+
+Note: Click on any crew name to change it.
+
+Repair Entire Hull
+
+Purchase a repair job to restore your hull health back to maximum.
+
+Repair Partial Hull
+
+Purchase a repair job to restore one point of hull health.
+
+Wait in your current location.
+
+Alt Unlock: 
+
+Alt Unlock: Defeat the Flagship with Type A and Type B of every other ship (excluding the Lanius Cruiser)
+
+This is the ship list. Here you can get a summary of all of your achievements and see your progress in unlocking all of the playable ships. \n\nFor veteran players of FTL, you'll see there are some changes from the original style.
+
+To unlock a new ship, you have two options: \n\nFind and complete a unique quest within the game world. These will often start in the 'homeworld' sectors. \n\nAlternatively, beat the game with the previous ship in the list to unlock the next. \n\nHover over any ship to get more details!
+
+To unlock a new ship, you have two options: \n\nFind and complete a unique quest within the game world. These will often start in the 'homeworld' sectors. \n\nAlternatively, beat the game with the previous ship in the list to unlock the next. \n\nTap on any ship to get more details!
+
+You've unlocked a new ship! \n\nClick on the LIST button to see your current ships and find out how to unlock more.
+
+Tap once to arm. Tap twice to arm and engage autofire for continuous firing.
+
+Tap once to arm with autofire. Tap twice to arm for a single shot without autofire engaged.
+
+Requires drone part to deploy
+
+Tip: Use requires spending one drone part to activate, and then constant power (similar to weapons).
+
+Warning: You do not have a Drone System. You can purchase one from a store.
+
+Tip: Currently in cargo. Drag to an available Drone System slot to equip this drone.
+
+Tip: Currently in cargo. Drag to an available Weapon System slot to equip this weapon.
+
+Tip: For every shield bar on the enemy, a beam's damage is reduced by one. For example, a three damage beam against two shield bars will cause one damage in every room it hits.
+
+Tip: Missiles will ignore all enemy shields, but cost one missile to launch. Enemy defense drones will shoot down incoming missiles.
+
+Tip: Bombs teleport past shields and defense drones to land directly on the ship. Like missiles, they cost one missile to launch. They never damage hull, but can be effective at disrupting crew and systems. You can even launch them at boarders on your own ship.
+
+Tip: For every one point of ion damage, one power bar is removed from the target system and it is then locked for 5 seconds, preventing re-powering. If an ion weapon hits shields, the damage is automatically applied to the Shield System.
+
+Autofire On. Weapons by default will continue firing at their target. \n\nTap twice when arming a weapon to toggle its individual mode.
+
+Autofire Off. Weapons will only fire once at their target. \n\nTap twice when arming a weapon to toggle its individual mode.
+
+You deploy your Distraction Buoys, giving you more time to explore this sector before the fleet catches up.
+
+Dying
+
+Burn Them Out
+
+Rain of Missiles
+
+Tip: Each laser shot will be blocked by a single shield bubble, regardless of the laser's damage.
+
+Tip: Hull weapons deal double damage if they hit a room that does not have a system or a subsystem.
+
+Tip: Charge weapons can be charged multiple times to generate more firepower.  You can save time and fire the weapon prematurely but it will have fewer shots ready as a result.
+
+Tip: Chain lasers decrease their cooldown every time they fire. Check the green lights on the weapon to see how many times it has fired.
+
+Tip: The Chain Ion increases its damage every time it fires. Check the green lights on the weapon to see how many times it has fired.
+
+Tip: Flak weapons target an area instead of a single room. This loss of accuracy means more firepower and speed than their laser counterparts.
+
+Tip: Crystal weapons pierce a single layer of shields. Only level 2 shields and higher can stop them.
+
+Tip: Combat Drones require 1 drone part to deploy for each new enemy. They will attack the enemy as long as they are powered.
+
+Tip: Defense Drones require 1 drone part to deploy at every new location. They will defend your ship as long as they are powered.
+
+Tip: Boarding Drones require 1 drone part to deploy for each new enemy. They will board the enemy ship and attack as long as they are powered.
+
+Tip: Crew Drones require 1 drone to deploy, but will not need to be deployed again until destroyed. They stay on ship and help your crew as long as they are powered.
+
+Note: Requires powered Medbay to function.
+
+Beam weapons can hit multiple rooms. When aiming one, DRAG your finger to draw its initial path. \n\nOnce drawn, if you continue to drag ONE finger the angle will change, or you can use TWO fingers to change the position. Experiment for an optimal aiming path!
+
+Deployed (Powered): Active and providing its function.
+
+Deployed (Unpowered): Not active, but can be repowered without costing a drone part.
+
+Not Deployed: Will cost one drone part when first powered.
+

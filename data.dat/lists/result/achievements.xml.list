@@ -1,0 +1,332 @@
+Это лишь начало
+
+Добраться до сектора 5.
+
+achievements/0.png
+
+1
+
+База Федерации в пределах видимости
+
+Добраться до сектора 8.
+
+achievements/1.png
+
+Победа Федерации (Легкий)
+
+Победить босса на лёгком уровне сложности.
+
+achievements/2.png
+
+Победа Федерации (Нормальный)
+
+Победить босса на нормальном уровне сложности.
+
+achievements/3.png
+
+Собственный флот
+
+Unlock the Type A layout for every playable ship.
+
+achievements/4.png
+
+Десятое правило: Жадность непобедима
+
+Собрать 10,000 лома за все игры.
+
+achievements/5.png
+
+Бог войны
+
+Уничтожить 1000 кораблей за все прохождения.
+
+achievements/6.png
+
+Не нужны мне эти ваши модернизации!
+
+Добраться до сектора 5 без улучшений системы.
+
+achievements/7.png
+
+Во имя мира!
+
+Добраться до сектора 5, ни разу не выстрелив, не использовав атакующего дрона и не высадившись на вражеский корабль.
+
+achievements/8.png
+
+На честном слове и на одном крыле
+
+Добраться до сектора 5, ни разу не отремонтировавшись в магазине.
+
+achievements/9.png
+
+Баллистофобия
+
+Добраться до сектора 8, ни разу не применив ракеты или бомбы.
+
+achievements/10.png
+
+Технофобия
+
+Добраться до сектора 8, ни разу не использовав дронов.
+
+achievements/11.png
+
+Полное самообеспечение
+
+Достичь 8-го сектора, ничего не купив в магазине (ремонты разрешены).
+
+achievements/12.png
+
+Здесь нет краснорубашечников
+
+Добраться до сектора 8, не потеряв ни одного члена экипажа.
+
+achievements/13.png
+
+Некоторым просто нравится смотреть, как горят корабли
+
+Устроить пожар в каждом отсеке вражеского корабля.
+
+achievements/16.png
+
+Астрономически малая вероятность
+
+Умудриться НЕ увернуться от вражеских выстрелов пять раз подряд, имея полностью усовершенствованный и запитанный двигатель.
+
+achievements/18.png
+
+Даже пискнуть не успели
+
+Используя «Предварительное зажигание» уничтожить вражеский корабль одним залпом прежде, чем он успеет выстрелить.
+
+achievements/14.png
+
+АБОРДАЖ ПРОИЗВЕДЁН УСПЕШНО
+
+Убить четырёх членов экипажа вражеского корабля при помощи одного абордажного дрона.
+
+achievements/15.png
+
+Надёжный автопилот
+
+Победить вражеский корабль, высадив на него весь свой экипаж.
+
+achievements/19.png
+
+Мясорубка
+
+Поразить каждый отсек корабля как минимум одним лучом менее, чем за пять секунд.
+
+achievements/20.png
+
+Победа посредством удушения
+
+Снизить уровень кислорода на вражеском корабле до пяти процентов (корабль не должен быть автоматизированным).
+
+achievements/17.png
+
+Объединённая Федерация
+
+Собрать на борту крейсера «Кестрел» членов экипажа шести разных рас.
+
+achievements/kestral_1.png
+
+PLAYER_SHIP_HARD
+
+Вооружён до зубов
+
+Have 8 systems and 3 subsystems installed on the Kestrel Cruiser at one time.
+
+achievements/kestral_2.png
+
+Маленький, но крепкий
+
+Полностью отремонтировать крейсер «Кестрел» после того, как у него останется одна единица прочности корпуса.
+
+achievements/kestral_3.png
+
+Щит выдержал
+
+Уничтожить вражеский корабль до того, как тот пробьёт золтанский щит.
+
+achievements/energy_cruiser_1.png
+
+PLAYER_SHIP_ENERGY
+
+Работает на полную, капитан!
+
+Использовать 29 единиц энергии для питания систем золтанского крейсера.
+
+achievements/energy_cruiser_2.png
+
+Педальный привод
+
+Добраться до сектора 5 на золтанском крейсере, ни разу не усовершенствовав реактор.
+
+achievements/energy_cruiser_3.png
+
+Хищная птица
+
+Уничтожить полностью исправный вражеский корабль за время, пока действует один заряд маскировочного поля на крейсере Стелс.
+
+achievements/stealth_1.png
+
+PLAYER_SHIP_STEALTH
+
+Фазовый сдвиг
+
+Пилотируя крейсер Стелс избежать получения 9 единиц урона за время, пока действует один заряд маскировочного поля.
+
+achievements/stealth_2.png
+
+Тактический подход
+
+Добраться на крейсере Стелс до сектора 8, ни разу не попав в систему с опасной средой (туманность, метеориты и т. п.).
+
+achievements/stealth_3.png
+
+Война роботов
+
+Запустить с крейсера инжи трёх дронов одновременно.
+
+achievements/circle_cruiser_1.png
+
+PLAYER_SHIP_CIRCLE
+
+Да я и пальцем не пошевелил!
+
+Пилотируя крейсер инжи, уничтожить противника, используя только дронов (без применения оружия).
+
+achievements/circle_cruiser_2.png
+
+Пушки... пушки замолчали...
+
+Ионизировать одновременно четыре вражеские подсистемы, пилотируя крейсер инжи.
+
+achievements/circle_cruiser_3.png
+
+Разве здесь жарко?
+
+Пилотируя крейсер роков, убить горящего противника на его корабле.
+
+achievements/rock_cruiser_1.png
+
+PLAYER_SHIP_ROCK
+
+Защитные дроны бесполезны!
+
+Пилотируя крейсер роков, уничтожить вражеский корабль с защитным дроном, используя только ракеты.
+
+achievements/rock_cruiser_2.png
+
+Происхождение
+
+Найти секретный сектор, пилотируя крейсер роков..
+
+achievements/rock_cruiser_3.png
+
+Пленных не брать!
+
+Пилотруя крейсер богомолов, уничтожить экипажи не менее чем двадцати кораблей к моменту прибытия в сектор 6.
+
+achievements/mantis_cruiser_1.png
+
+PLAYER_SHIP_MANTIS
+
+На абордаж, трюмные крысы!
+
+Kill 5 enemy crew in a fight without taking hull damage or losing a crewmember while using the Mantis Cruiser.
+
+achievements/mantis_cruiser_2.png
+
+Королевская Битва
+
+While using the Mantis Cruiser, kill the last enemy with your last crewmember on their ship.
+
+achievements/mantis_cruiser_3.png
+
+Мы на позиции!
+
+Пилотируя крейсер слизней, получить изображение из всех отсеков вражеского корабля, не имея действующих сенсоров.
+
+achievements/jelly_cruiser_1.png
+
+PLAYER_SHIP_JELLY
+
+Дом, милый дом
+
+Посетить 30 туманностей прежде чем прибыть в сектор 8.
+
+achievements/jelly_cruiser_2.png
+
+Дезинтегрирующий луч
+
+While using the Slug Cruiser, kill 3 enemy crewmembers with one shot from the Anti-Bio Beam.
+
+achievements/jelly_cruiser_3.png
+
+Артиллерийское мастерство
+
+Используя только Артиллерийский луч уничтожить вражеский корабль, не получив при этом никаких повреждений корпуса.
+
+achievements/fed_cruiser_1.png
+
+PLAYER_SHIP_FED
+
+Дипломатическая неприкосновенность
+
+Пилотируя крейсер Федерации, четыре раза использовать «синие» варианты действий экипажа к моменту прибытия в сектор 5.
+
+achievements/fed_cruiser_2.png
+
+Королевское терпение
+
+Get to sector 5 in the Federation Cruiser without upgrading your Weapons system.
+
+achievements/fed_cruiser_3.png
+
+Сладкая месть
+
+Уничтожить вражеский корабль осколком Кристалла мести (уникально для крейсера кристалинов).
+
+achievements/crystal_cruiser_1.png
+
+PLAYER_SHIP_CRYSTAL
+
+Некуда бежать
+
+Используя крейсер кристалинов поймайте 4 вражеских члена экипажа в одной комнате, использовав силу кристального существа или запирающую бомбу.
+
+achievements/crystal_cruiser_2.png
+
+Битва титанов
+
+Уничтожить 15 кораблей роков (считая пиратские), пилотируя крейсер кристалинов.
+
+achievements/crystal_cruiser_3.png
+
+Advanced Mastery
+
+Have Hacking, Mind Control and the Battery active at once.
+
+achievements/anaerobic_cruiser_1.png
+
+PLAYER_SHIP_ANAEROBIC
+
+Scrap Hoarder
+
+Have at least 600 scrap in your ship storage.
+
+achievements/anaerobic_cruiser_2.png
+
+Loss of Cabin Pressure
+
+Get to sector 8 without your ship's net oxygen levels exceeding 20 percent (starts after the first jump).
+
+achievements/anaerobic_cruiser_3.png
+
+They Should Really Have Spacesuits
+
+Have 10 enemy crew die while suffocating by sector 5.
+

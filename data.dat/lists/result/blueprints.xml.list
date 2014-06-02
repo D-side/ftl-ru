@@ -1,0 +1,1346 @@
+LASER_BURST_1
+
+LASER_BURST_2
+
+MISSILES_2_PLAYER
+
+BEAM_LONG
+
+ION_1
+
+ION_2
+
+ION_4
+
+BOMB_1
+
+LASER_BURST_3
+
+LASER_HEAVY_1
+
+MISSILES_3
+
+BEAM_1
+
+BEAM_FIRE
+
+LASER_HULL_2
+
+BOMB_FIRE
+
+BOMB_ION
+
+BOMB_HEAL
+
+REPAIR
+
+DEFENSE_1
+
+COMBAT_1
+
+COMBAT_2
+
+SHIP_REPAIR
+
+HULL_ARMOR
+
+ADV_HULL_ARMOR
+
+NANO_MEDBAY
+
+ADV_SCANNERS
+
+AUTO_COOLDOWN
+
+SHIELD_RECHARGE
+
+FTL_BOOSTER
+
+FTL_JAMMER
+
+CREW_STIMS
+
+DRONE_RECOVERY
+
+FTL_JUMPER
+
+Обычный человек. Ничего особенного.
+
+45
+
+2
+
+Человек
+
+1
+
+Skills improve slightly faster
+
+Неясно, являются ли инжи живыми или полностью механическими. Однако хорошо известно, что они превосходные инженеры.
+
+50
+
+Инжи
+
+Ремонтирует вдвое быстрее
+
+В бою наносит вдвое меньше урона
+
+The Богомол disregard for individual lives led to their evolution as a vicious warrior race.
+
+Богомол
+
+55
+
+Inflict 1.5x damage in combat
+
+Передвигается на 20 процентов быстрее
+
+Чинит вдвое медленнее
+
+These telepathic Слизеньs were shunned in the Galactic Federation for their constant thievery and attempts at manipulation.
+
+Слизень
+
+0
+
+С помощью телепатии видит комнаты и живых существ даже когда сенсоры не работают
+
+Immune to mind control.
+
+Роки с Врахоса IV встречаются редко и славятся своей стойкостью.
+
+Рок
+
+4
+
+3
+
+Имеет иммунитет к огню
+
+Передвигается вдвое медленнее
+
+Здоровье увеличено до 150
+
+Древние предки роков.
+
+Кристалин
+
+60
+
+Способен запирать отсеки (актив. на панели экипажа)
+
+Снижен урон от удушья
+
+Передвигается на 20 процентов медленнее
+
+Здоровье увеличено до 125
+
+The 'Золтанец' are allies of the 'Инжи.' Their innate energy can power ship systems.
+
+Золтанец
+
+5
+
+Обеспечивает энергией занимаемый отсек
+
+Maximum health is reduced
+
+Explodes on death, damaging enemy crew
+
+oxygen
+
+Кислородный модуль
+
+Поддерживает концентрацию кислорода на корабле. Улучшение модуля увеличивает скорость восстановления после разгерметизации.
+
+25
+
+75
+
+teleporter
+
+Телепортер
+
+Позволяет телепортировать членов вашего экипажа на вражеский корабль.
+
+30
+
+90
+
+cloaking
+
+Маскировка
+
+Делает ваш корабль невидимым, повышая уклонение на 60 процентов и предотвращая наведение орудий вражеского корабля.
+
+150
+
+pilot
+
+Рубка управления
+
+Позволяет кораблю совершать FTL прыжки и уворачиваться при наличии пилота. При улучшении добавляется авто-пилот, способный уклоняться без пилота.
+
+20
+
+medbay
+
+Мед-отсек
+
+Heals all crew-members within the Мед-отсек room. Upgrading increases healing speed.
+
+35
+
+shields
+
+Щиты
+
+Powers your shields. Each additional barrier can block one shot.
+
+8
+
+100
+
+40
+
+80
+
+120
+
+125
+
+artillery
+
+Артиллерийский луч
+
+Питает медленный высоко-мощный луч, нано- сящий 1 урон каждому отсеку, проникая сквозь любое количество слоёв щита. Увели- чение мощности ускоряет перезарядку.
+
+engines
+
+Инжиnes
+
+Снабжает энергией FTL-привод и позволяет кораблю уклонятся. При улучшении повышает вероятность уклонения и скорость зарядки привода.
+
+10
+
+15
+
+weapons
+
+Управление орудиями
+
+Питает все орудийные системы корабля. Дальнейшая модернизация снабдит энергией одновременно больше орудий.
+
+drones
+
+Управление дронами
+
+Снабжает энергией всех корабельных дро- нов. Дроны — автоматизированные роботы, которые выполняют такие задачи, как атака вражеского корабля или ремонт систем.
+
+sensors
+
+Сенсоры
+
+Показывают интерьер вашего корабля и снабжают информацией о вражеских кораблях.
+
+doors
+
+Система шлюзов
+
+Позволяет дистанционно управлять шлюза- ми. После улучшения шлюзы станут лучше препятствовать распространению пожара и перемещению вражеского десанта.
+
+LASER
+
+Лазер босса
+
+ssss
+
+Фссс
+
+6
+
+laser_heavy1
+
+lightLaser1
+
+lightLaser2
+
+lightLaser3
+
+hitHull1
+
+hitShield1
+
+hitShield2
+
+hitShield3
+
+miss
+
+boss_1
+
+MISSILES
+
+Ракеты босса
+
+Р. босса
+
+Артиллерия производит 3 выстрела ракетами по 1 урону каждая.
+
+Fires 3 missiles; 1 damage each; pierces all shields.
+
+Необходимо энергии: 3 Запускает 2 ракеты, которые пробивают все щиты и наносят 2 единицы урона. Требуется 2 ракеты на выстрел
+
+23
+
+7
+
+missile_1
+
+smallРакета1
+
+smallРакета2
+
+smallExplosion
+
+boss_2
+
+BEAM
+
+tip_beams
+
+Луч босса
+
+Луч с длинным следом, наносящий 2 единицы урона.
+
+Лучевое оружие, наносит 2 единицы урона каждому пораженному отсеку.
+
+Power Req: 3 A powerful but slow beam that deals 2 damage in a short line with a low chance of breaches.
+
+26
+
+70
+
+beam_contact
+
+beam2
+
+boss_3
+
+Boss Ion
+
+1 ионное повреждение 3 выстрела
+
+28
+
+ion_4_shot
+
+ionShoot1
+
+ionShoot2
+
+ionShoot3
+
+ionHit1
+
+ionHit2
+
+ionHit3
+
+ionЩиты1
+
+ionЩиты2
+
+ionЩиты3
+
+boss_4
+
+Artillery
+
+Artillery: Beam that automatically fires a 1 damage beam that pierces all shields
+
+13
+
+500
+
+beam1
+
+beam1_2
+
+artillery_fed
+
+Защитный лазер Марк I
+
+Станд. лазер
+
+tip_laser
+
+Очень слабый лазер.
+
+Только один выстрел с одной единицей повреждения.
+
+laser_light1
+
+hitHull2
+
+hitHull3
+
+laser_burst_1
+
+laser
+
+Сдвоенный лазер
+
+2х лазер
+
+Простые слабые сдвоенные лазеры. Такие часто ставятся на транспортные суда, которые не могут позволить себе что-либо лучше.
+
+Выстреливает 2 лазерных луча, нанося 1 единицу повреждения каждым.
+
+laser_burst_2
+
+Импульсный лазер Марк I
+
+Имп. лазер I
+
+Этот простой импульсный лазер не особо зрелищный, но своё дело делает.
+
+11
+
+Импульсный лазер Марк II
+
+Имп. лазер II
+
+Слегка улучшенная версия импульсного лазера, которая способна сделать большее количество выстрелов за один цикл зарядки.
+
+Выстреливает 3 лазерных луча, нанося 1 единицу повреждения каждым.
+
+12
+
+laser_light2
+
+laser_burst_3
+
+Импульсный лазер Марк III
+
+Имп. лазер III
+
+Мощный импульсный лазер, который способен вести впечатляющий шквальный огонь.
+
+Выстреливает 5 лазерных лучей, нанося 1 единицу повреждения каждым.
+
+19
+
+95
+
+laser_burst_5
+
+Тяжелый лазер Марк I
+
+Тяж. лазер I
+
+Тяжёлые лазеры способны нанести больше ущерба, нежели их меньшие аналоги — импульсные лазеры.
+
+Производит 1 выстрел, наносящий 2 единицы повреждений. Имеет низкий шанс вызвать пожар или пробить обшивку.
+
+9
+
+heavyLaser1
+
+heavyLaser2
+
+heavyLaser3
+
+laser_heavy_1
+
+heavyL
+
+Тяжелый лазер Марк II
+
+Тяж. лазер II
+
+Этот тяжёлый лазер делает два последовательных выстрела, наносящих 2 единицы урона каждый.
+
+Выстреливает 2 тяжёлых лазерных луча, нанося каждым по 2 единицы повреждения. Низкая вероятность нарушить целостность корпуса или начать пожар.
+
+65
+
+laser_heavy_2
+
+Тяжелый проникающий лазер Марк I
+
+Тяж. проник. I
+
+Тяжёлые лазеры способны нанести больше ущерба, нежели их меньшие аналоги — импульсные лазеры.. This modified version pierces 1 shield.
+
+Делает 1 выстрел, нанося 2 единицы повреждения с низкой вероятностью нарушить целостность корпуса или начать пожар. Проникает сквозь 1 слой щита.
+
+Кристалин Shard
+
+Никто и никогда не должен увидеть это описание.
+
+crystal_shard
+
+tip_missiles
+
+Ракеты Лето
+
+Лето
+
+Эта слабая и устаревшая пусковая установка всё ещё способна принести пользу.
+
+Стреляет 1 ракетой, наносит 1 единицу повреждения, игнорирует защитное поле.
+
+missiles_1
+
+missile
+
+Ракеты Артемида
+
+Артемида
+
+Стандартная ракетная установка на большинстве судов Федерации.
+
+Стреляет 1 ракетой, наносит 2 единицы повреждения, игнорирует защитное поле.
+
+38
+
+missile_2
+
+Ракеты Гермес
+
+Гермес
+
+Стандартные, но мощные ракеты.
+
+Стреляет 1 ракетой, наносит 3 единицы повреждения, игнорирует защитное поле.
+
+Power Req: 2    Pierces through all shields and deals 3 damage with a chance of fire and breaches. Uses 1 missile per shot.
+
+14
+
+missile_3
+
+missiles_2
+
+Ракеты Пегас
+
+Пегас
+
+Креативный подход к форме этих ракет позволяет запускать две штуки по цене одной.
+
+Fires 2 missiles; 2 damage each; pierces all shields.
+
+Бронебойные ракеты
+
+Бронебой
+
+Эти ракеты спроектированы таким образом, чтобы нанести максимальный ущерб обшивке корабля.
+
+Выстреливает одной ракетой, наносит 4 единицы повреждений, игнорирует щиты, высокий шанс пробить обшивку.
+
+Power Req: 3 Fires a single shot, heavy missile that does 4 damage and causes breaches in the target's hull.
+
+22
+
+missile_breach
+
+Мини луч
+
+Крайне дешёвое и слабое лучевое оружие.
+
+Лучевое орудие, наносящее 1 единицу повреждений каждому поражённому отсеку.
+
+beam_1
+
+beam
+
+Луч копьё
+
+Способен разрезать корабль надвое, при условии, что нет щита, способного его остановить.
+
+Лучевое оружие с увеличенной длиной луча. 1 единица повреждений на отсек.
+
+Power Req: 2 Can cut across an entire ship that has no shields, dealing 1 damage per room.
+
+16
+
+170
+
+beam_long
+
+Луч алебарда
+
+Медленное, но достаточно мощное стандартное лучевое оружие.
+
+Лучевое орудие, 2 единицы повреждений на отсек. Имеет низкий шанс пробить обшивку.
+
+17
+
+beam_2
+
+Луч секира
+
+Одно из самых мощных когда-либо существовавших боевых орудий. Известно своей способностью уничтожать корабли одним выстрелом.
+
+Большой луч, наносящий 3 единицы повреждений каждому поражённому отсеку.
+
+Power Req: 4 A very powerful beam weapon that cuts through ships like butter. Deals 3 damage in a line.
+
+beam_3
+
+Огненный луч
+
+Этот ужасающий луч вызывает возгорания, но при этом не наносит физических повреждений.
+
+Лучевое орудие, вызывающее возгорание.
+
+Power Req: 2 A beam weapon that does 1 damage and starts fires in a line if the enemy has no shields
+
+140
+
+beam_fire
+
+Анти-биологический луч
+
+This terrifying beam does no physical damage but rips through organic material, dealing heavy damage to crewmembers.
+
+Мощное лучевое орудие, которое наносит значительные повреждения вражескому экипажу.
+
+255
+
+110
+
+beam_bio
+
+Корпусный лазер Марк I
+
+Корп. лазер I
+
+A powerful laser designed to maximize hull damage.
+
+tip_hull
+
+Производит 2 выстрела лазером, наносящие 1 единицу урона помещениям с системами, и 2 единицы урона отсекам без них.
+
+laser_hull
+
+laserH
+
+Корпусный лазер Марк I Mark II
+
+Корп. лазер II
+
+This powerful counterpart to the Hull Smasher Mark I fires more projectiles per shot.
+
+Производит 3 лазерных выстрела, наносит 1 единицу повреждений и 2 единицы повреждений отсекам без систем.
+
+Power Req: 3 Fires 3 shots that deal 1 damage to rooms with a system or subsystem and double damage to rooms without either.
+
+Корпусный луч
+
+Этот луч наиболее эффективен на больших пустых секциях корпуса.
+
+Лучевое орудие, 1 единица повреждений, в 2 раза больше повреждений отсекам без систем.
+
+Power Req: 3 Fires a beam that deals 1 damage to rooms with a system or subsystem and double damage to rooms without either.
+
+beam_hull
+
+beamH
+
+Корпусная ракета
+
+Корп. ракета
+
+Наносит хороший урон по корпусу с неплохой вероятностью оставить пробоину.
+
+Производит 1 ракетный выстрел. Наносит 2 единицы урона помещениям с системами, 4 единицы урона отсекам без них.
+
+Power Req: 2 Fires a missile that deals 2 damage to rooms with a system or subsystem and double damage to rooms without either.
+
+missile_hull
+
+missileH
+
+Ионный бластер
+
+tip_ion
+
+Ионное оружие способно отключать системы корабля, не нанося повреждений корпусу.
+
+Выпускает один заряд, наносящий 1 единицу ионного повреждения. Может поражать и отключать как щиты, так и системы.
+
+ion_1_shot
+
+explosion_small_ion
+
+ion_1
+
+ion
+
+Тяжелое Ионное орудие
+
+Выпускает один заряд, наносящий 2 единицы ионного повреждения. Может поражать и отключать как щиты, так и системы.
+
+ion_2
+
+Ионный бластер Mark II
+
+Ионный бластер II
+
+Запускает один снаряд, наносящий 1 единицу ионного повреждения. Быстро перезаряжается. Может поражать и отключать как щиты, так и системы.
+
+ion_4
+
+BOMB
+
+tip_bombs
+
+Малая бомба
+
+М. бомба
+
+Телепортирующееся взрывное устройство, наносит повреждения системам и экипажу, не нанося повреждений корпусу. Может быть использовано на вашем корабле.
+
+Бомбовое орудие, расходующее ракеты. Наносит 2 единицы повреждений только системам, но не корпусу. Может быть использовано на вашем корабле.
+
+Power Req: 2 Self-teleporting explosive that deals 2 damage to systems and subsystems without causing hull damage.
+
+bomb1
+
+explosion_random
+
+bombTeleport
+
+bomb_1
+
+bomb
+
+Бронебой Bomb Mark I
+
+Бронебой I
+
+Self-teleporting explosive designed to damage systems and cause a breach. Can target your own ship.
+
+Бомбовое орудие, использующее ракеты. Наносит 1 единицу повреждений системам и пробивает обшивку. Может быть использовано на вашем корабле.
+
+bomb_breach
+
+Бронебой Bomb Mark II
+
+Бронебой II
+
+Slower than Mark I but does more damage to systems and crew. Can target your own ship.
+
+Бомбовое орудие, использующее ракеты. Наносит 3 единицы повреждений системам и пробивает обшивку. Может быть использовано на вашем корабле.
+
+Огненная бомба
+
+Огн. бомба
+
+Телепортирующееся взрывное устройство, предназначенное для нанесения повреждений экипажу. Вызывает возгорание. Может быть использовано на вашем корабле.
+
+Бомбовое орудие, использующее ракеты. Вызывает возгорание, не нанося повреждений корпусу. Может быть использовано на вашем корабле.
+
+bomb_fire
+
+fireBomb
+
+Ионная бомба
+
+Ион. бомба
+
+Телепортирующееся взрывное устройство, которое наносит ионные повреждения системам, отключая их. Может быть использовано на вашем корабле.
+
+Бомбовое оружие, использующее ракеты. Наносит только ионный урон. Может применяться на вашем корабле.
+
+bomb_ion
+
+explosion_big1_ion
+
+Лечащий импульс
+
+Леч. имп.
+
+Телепортирующийся блок лечения, который мгновенно исцеляет всех дружественных членов экипажа в отсеке. Может применяться на вашем корабле.
+
+Bomb weapon; requires a missile; heals nearby crewmembers. Can target your own ship.
+
+-10
+
+18
+
+bomb_heal
+
+explosion_big1_heal
+
+healBomb
+
+Кристалин Lockdown Bomb
+
+Зап. бомба
+
+Телепортирующееся взрывное устройство, которое не наносит повреждений, но создает плотную стену, не позволяющую войти или выйти из отсека. Может быть использовано на вашем корабле.
+
+Bomb weapon; requires a missile; does no damage; prevents movement in or out of room. Can target your own ship.
+
+bomb_lockdown
+
+explosion_lockdown
+
+Кристалин Burst Mark I
+
+Кристалин B. I
+
+tip_crystal
+
+Модифицированное метательное орудие, выстреливающее 2 кристалла. Проникает сквозь 1 слой щитов.
+
+Проникает сквозь 1 слой щитов, выстреливает 2 кристалла, наносящих 1 единицу повреждения каждый.
+
+crystal_shard2
+
+crystalExplosion_small
+
+explosion_crystal_2
+
+crystal_burst_1
+
+crystal
+
+Кристалин Burst Mark II
+
+Кристалин B. II
+
+Модифицированное метательное орудие, выстреливающее 3 кристалла. Проникает сквозь 1 слой щитов.
+
+Проникает сквозь 1 слой щитов, выстреливает 3 кристалла, наносящих 1 единицу повреждения каждый.
+
+crystal_burst_2
+
+Heavy Кристалин Mark I
+
+Кристалин H. I
+
+Модифицированное метательное орудие, стреляющее крупным кристаллом. Проникает сквозь 1 слой щитов.
+
+Проникает сквозь 1 слой щитов, выстреливает 1 кристалл, наносящий 2 единицы повреждения.
+
+crystal_shard3
+
+crystalExplosion
+
+explosion_crystal
+
+crystal_heavy_1
+
+crystalH
+
+Heavy Кристалин Mark II
+
+Кристалин H. II
+
+Проникает сквозь 1 слой щитов, выстреливает 1 кристалл, наносящий 4 единицы повреждения и оставляющий пробоины.
+
+crystal_heavy_2
+
+Dummy blueprint needed now.
+
+Battle
+
+Repair
+
+Лазер дрона
+
+Лазер дрона 2
+
+Drone Beam
+
+'Baby's first beam'; Крайне дешёвое и слабое лучевое оружие.
+
+Drone Ракета
+
+Р. 0
+
+Идиотские ракеты
+
+Это никогда НЕ должно появиться в магазине: ГЛЮК
+
+COMBAT
+
+tip_combat
+
+Анти-кор Ion Drone I
+
+Ion Drone
+
+Медлительный дрон, который несколько раз атакует корабль противника из собственных ионных орудий
+
+1000
+
+drone_combat
+
+DRONE_ION
+
+Anti-Ship Ракета Drone I
+
+Ракета Drone
+
+Медлительный боевой дрон, атакующий противника мини ракетами
+
+DRONE_MISSILE
+
+Combat Drone Mark I
+
+Combat I
+
+Мощный дрон, который постоянно атакует корабль противника.
+
+DRONE_LASER
+
+combat
+
+Атакующий лучевой дрон I
+
+Лучевой I
+
+Боевой дрон, который постоянно атакует корабль противника небольшим лучевым оружием.
+
+drone_beam
+
+DRONE_BEAM
+
+Combat Drone Mark II
+
+Combat II
+
+Мощный дрон, который постоянно атакует корабль противника. Moves and shoots faster than Mark I.
+
+drone_combat2
+
+weapons/laser_light2_strip4.png
+
+combat2
+
+tip_crew
+
+Ремонтник корпуса
+
+Automatically repairs 3-5 damage to your hull. Drone part is consumed once it finishes.
+
+85
+
+drone_shiprepair
+
+Srepair
+
+DEFENSE
+
+tip_defense
+
+Защитный дрон Марк I
+
+Защитник I
+
+Сбивает вражеские ракеты и астероиды.
+
+drone_defense
+
+defense
+
+LASERS
+
+Защитный дрон Марк II
+
+Защитник II
+
+Стреляет быстрее чем Марк I, кроме того имеет способность блокировать вражеские лазеры.
+
+880
+
+drone_defense2
+
+DRONE_LASER_2
+
+defense2
+
+BUG- Should not be seen
+
+Shoots faster than Mark I and can also shoot down incoming lasers.
+
+750
+
+Ремонтный дрон
+
+Sys Rep.
+
+Будет самостоятельно искать повреждённые системы и починит их автоматически.
+
+repair
+
+BATTLE
+
+Противопехотный дрон
+
+Противопех
+
+Будет самостоятельно искать и попытается уничтожить любого незваного гостя на борту вашего корабля.
+
+battle
+
+BOARDER
+
+tip_boarding
+
+Абордажный дрон
+
+Абордажник
+
+Бронебойes through the enemy hull and wreaks havoc. Awesome.
+
+boarder
+
+ITEM_FUEL
+
+FTL-топливо
+
+Заправляет ваш FTL привод. Один прыжок расходует одну единицу топлива.
+
+ITEM_DRONE
+
+Деталь дрона
+
+Позволяет построить дрона по выбранной вами схеме. Каждое использование требует одну деталь дрона.
+
+ITEM_MISSILE
+
+Ракета
+
+Многоцелевые боезапасы для любого орудия ракетного типа.
+
+Обшивка корпуса роков
+
+Улучшенная броня, дарующая 15-процентный шанс отразить поступающий урон по корпусу (системы, получившие попадание, всё равно будут повреждены).
+
+false
+
+0.15
+
+Кристалин Vengeance
+
+Каждый раз, как ваш корабль получает повреждения, существует 10-процентный шанс, что отломится осколок, который отлетит в вашего противника.
+
+0.1
+
+Золтанец Shield
+
+An unexplained technology creates this nearly impenetrable shield. Only the energy outburst from an FTL engine is powerful enough to recharge it.
+
+Инжи Med-bot Dispersal
+
+Инжи nano med-bots heal the crew outside of the med-bay (at a reduced speed).
+
+0.25
+
+Слизень Repair Gel
+
+Слизень ships excrete a thick gel that automatically repairs any hull breaches.
+
+Богомол Pheromones
+
+Скорость передвижения вашей команды увеличивается на 25 процентов.
+
+Усиленный реактор дронов
+
+Your shipboard drones have their movement speed increased by 25 percent.
+
+Улучшенная обшивка
+
+Новейшая броня, обеспечивает внушительный 25-процентный шанс отразить поступающий урон по корпусу (системы, получившие попадание, всё равно будут повреждены).
+
+true
+
+Усиленное покрытие системы
+
+Титан. покрытие систем
+
+Все системы корабля имеют покрытие, обеспечивающее 15-процентный шанс свести на нет урон при попадании (корпусу по прежнему будет наноситься урон).
+
+Инверсное ионное поле
+
+Protects your ship from ion damage, giving a 50 percent chance to negate it entirely.
+
+0.50
+
+Скрытые орудия
+
+Позволяют стрелять из режима невидимости, не прерывая его.
+
+Кран для ремонта
+
+Чинит ваш корпус каждый раз во время сбора лома, но снижает количество собранного лома на 15 процентов.
+
+Усиленная обшивка корпуса
+
+Кран для сбора лома
+
+Позволяет собирать на 10 процентов больше лома из любого источника.
+
+0.10
+
+Сканеры широкого охвата
+
+Adds additional info about nearby Beacons on the star map.
+
+Авто-перезарядчик
+
+Cooldown between weapon shots is improved by 10 percent.
+
+Генератор зарядки щита
+
+Повышает скорость перезарядки щита на 15 процентов.
+
+Пред-зажигатель орудий
+
+Первая зарядка орудий происходит ещё до начала боя.
+
+Ускор. перезарядки FTL
+
+FTL привод заряжается на 25 процентов быстрее.
+
+Улучш. FTL навигация
+
+Allows the ship to jump to any previously visited Beacon.
+
+Механизм сбора дронов
+
+При прыжке все неразрушенные дроны будут преобразованы обратно в детали дронов.
+
+Глушитель FTL
+
+Scramble enemy ships' FTL computers, doubling the time it takes for them to jump.
+
+Сломанная стазис-капсула
+
+Этот причудливый чужеродный артефакт, как оказалось, едва функционирует. Он не имеет практического применения, но возможно кто-нибудь сможет починить его.
+
+Личные телепортеры
+
+Автоматически возвращает ваш десант с вражеского корабля, когда тот прыгает или разрушается.
+
+Встроенные космические костюмы
+
+Экипаж получает вдвое меньше урона в отсеках без кислорода.
+
+0.5
+
+Система уплотнения корпуса
+
+O2 will deplete at 50% speed when the Кислородный модуль system is unpowered.
+
+Ракета Replication System
+
+Первый выстрел ракетой / бомбой после прыжка не будет использовать боеприпасы.
+
+Улучшенный внутренний ИИ
+
+Ваши дроны (ремонтные, и боевые) выполняют свою задачу на 20 процентов эффективнее.
+
+0.2
+
+Ваши защитные и атакующие дроны, работающие снаружи корабля, повысили эффективность на 20 процентов.
+
+Зашифрованный сигнал бедствия
+
+Ваш сигнал бедствия имеет больше шансов быть принятым дружественными кораблями.
+
+Молниеносный телепорт
+
+Телепортер доступен сразу после сверхсветового прыжка.
+
+130
+
+Термостойкие костюмы
+
+Уменьшает повреждение экипажа от огня на 50%
+
+Даёт всему лучевому оружию возможность пробивать 1 единицу защитного поля
+
+Пустельга
+
+The Пустельга
+
+This class of ship was decommissioned from Federation service years ago. After a number of refits and updating this classic ship is ready for battle.
+
+Пустельга Cruiser
+
+This class of ship was decommissioned from Federation service years ago. After a number of refits and updates this classic ship is ready for battle.
+
+right
+
+up
+
+down
+
+Red-Tail
+
+Complete 2/3 of the Пустельга Cruiser Achievements to unlock this ship.
+
+This modified Пустельга class ship was created by a laser weapon aficionado.
+
+kestral
+
+Богомол Cruiser
+
+The Gila Monster
+
+The famous Богомол thief, KazaaakplethKilik, owns this ship. You'll have to "convince" him to help you.
+
+Это боевое судно было спроектировано так, чтобы его команде было удобно идти на абордаж.
+
+The Basilisk
+
+Complete 2/3 of the Богомол Cruiser Achievements to unlock this ship.
+
+This warship encourages sending massive boarding parties and keeping strong defenses.
+
+mantis_cruiser
+
+Стелс-крейсер
+
+The Nesasio
+
+This ship is being built near the Инжи homeworlds. To unlock it you'll need to help them, but they only trust their own kind.
+
+Constructed for the Federation by the Инжи, this ship is designed to use cloaking technology and speed to get behind enemy lines.
+
+DA-SR 12
+
+Complete 2/3 of the Стелс-крейсер Achievements to unlock this ship.
+
+Built like a glass cannon, this ship is hard to handle. If its cloaking can keep it safe long enough to charge its weapon, few cruisers can withstand its might.
+
+left
+
+-2
+
+stealth
+
+Инжи Cruiser
+
+The Torus
+
+To unlock this Инжи ship you'll need to get to the 5th sector with any layout of the Пустельга.
+
+Пусть он и выглядит как груда хлама, кое- как соединённая вместе. Но на самом деле это продуманный корабль, полагающийся на использование ионных орудий и дронов.
+
+The Vortex
+
+To unlock this Инжи ship you'll need to get to the 5th sector.
+
+circle_cruiser
+
+Complete 2/3 of the Инжи Cruiser Achievements to unlock this ship.
+
+Heavily understaffed, this ship relies on drones to keep the ship running.
+
+Крейсер Федерации
+
+The Osprey
+
+There have been rumors of advanced ship construction in the Rebel Stronghold...
+
+This ship features the latest in Federation technology: an advanced beam weapon that pierces through shields.
+
+Nisos
+
+Complete 2/3 of the Крейсер Федерации Achievements to unlock this ship.
+
+This ship starts with additional Artillery power, encouraging heavy reliance on the beam.
+
+fed_cruiser
+
+Слизень Cruiser
+
+Man of War
+
+Один из кораблей слизней должен что-то знать об этом современном крейсере. Возможно, вы сможете «убедить» их рассказать вам.
+
+Designed for use inside nebulas, this cruiser lacks sensors and relies instead on the guile and cunning of the Слизеньs.
+
+The Stormwalker
+
+Complete 2/3 of the Слизень Cruiser Achievements to unlock this ship.
+
+This boarding ship has no medical facilities and must manage its explosives carefully to keep the crew alive.
+
+jelly_cruiser
+
+Крейсер роков
+
+Bulwark
+
+Докажите рокам, что вы достойны получить этот мощный крейсер.
+
+Similar to its designers, this super-dense behemoth uses brute force to overwhelm its foes.
+
+Shivan
+
+Complete 2/3 of the Крейсер роков Achievements to unlock this ship.
+
+With no airlocks, this ship must rely entirely on its rock crew to put out fires.
+
+rock_cruiser
+
+Золтанец Cruiser
+
+The Adjudicator
+
+Learn from the Золтанец that sometimes diplomacy works.
+
+The Золтанец's advanced shields technology gives this ship an edge during each battle.
+
+Noether
+
+Complete 2/3 of the Золтанец Cruiser Achievements to unlock this ship.
+
+This ship starts with a weakened Shield system and must rely on its supershield.
+
+energy_cruiser
+
+Кристалин Cruiser
+
+Bravais
+
+Travel to a lost sector of the galaxy to find this powerful vessel.
+
+This powerful vessel is powered by the secret technologies of the lost Кристалинline Beings.
+
+Carnelian
+
+Complete 2/3 of the Кристалин Cruiser Achievements to unlock this ship.
+
+Their unique racial ability makes the Кристалин beings very adept at ship boarding. This ship was designed for such raiding parties.
+
+crystal_cruiser
+
+Пират
+
+Impossible Пират
+
+Рейдер повстанцев
+
+Элитный повстанец
+
+Пёстрые обломки
+
+Флагман повстанцев
+
+invasion
+
+Flagship Construction
+
+sabotage
+
