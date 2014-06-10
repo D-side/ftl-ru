@@ -2,329 +2,205 @@ Just Getting Started
 
 Get to sector 5.
 
-achievements/0.png
-
-1
-
 Federation Base in Range
 
 Get to sector 8.
-
-achievements/1.png
 
 Federation Victory (Easy)
 
 Beat the boss on Easy.
 
-achievements/2.png
-
 Federation Victory (Normal)
 
 Beat the boss on Normal.
-
-achievements/3.png
 
 Your Own Fleet
 
 Unlock the Type A layout for every playable ship.
 
-achievements/4.png
-
 Rule Ten: Greed is Eternal
 
 Collect 10,000 scrap across all games.
-
-achievements/5.png
 
 Warlord
 
 Defeat 1000 ships across all playthroughs.
 
-achievements/6.png
-
 I don't need no stinkin' upgrades!
 
 Get to sector 5 with no system/reactor upgrades.
-
-achievements/7.png
 
 Coming in for my Pacifism run!
 
 Get to sector 5 without firing a shot, using an offensive drone, or teleporting.
 
-achievements/8.png
-
 On a Wing and a Prayer
 
 Get to sector 5 without repairing at a store.
-
-achievements/9.png
 
 Ballistophobia
 
 Get to sector 8 without using missiles/bombs.
 
-achievements/10.png
-
 Technophobia
 
 Get to sector 8 without using drones.
-
-achievements/11.png
 
 Living off the Land
 
 Get to sector 8 without buying at a store (Repairs are ok).
 
-achievements/12.png
-
 No Redshirts Here
 
 Get to sector 8 without losing a crewmember.
-
-achievements/13.png
 
 Some people just like to watch ships burn
 
 Have every square of an enemy ship on fire simultaneously.
 
-achievements/16.png
-
 Astronomically Low Odds
 
 Fail to evade 5 shots in a row with a fully powered and upgraded engine.
-
-achievements/18.png
 
 They never saw it coming
 
 Use the Weapon Pre-Igniter augmentation to destroy an enemy ship in one volley before the enemy can get a single shot off.
 
-achievements/14.png
-
 BOARDING OBJECTIVE SUCCESSFUL
 
 Have a single boarding drone kill 4 crewmembers on one ship.
-
-achievements/15.png
 
 Trustworthy Auto-Pilot
 
 Defeat an enemy ship with all of your crew aboard it.
 
-achievements/19.png
-
 Slice and Dice
 
 Hit every room of a ship with at least one beam in under 5 seconds.
-
-achievements/20.png
 
 Victory through Asphyxiation
 
 Empty the oxygen (Net level less than 5 percent) of a non-automated, hostile enemy ship.
 
-achievements/17.png
-
 The United Federation
 
 Have six unique aliens on the Kestrel Cruiser simultaneously.
-
-achievements/kestral_1.png
-
-PLAYER_SHIP_HARD
 
 Full Arsenal
 
 Have 8 systems and 3 subsystems installed on the Kestrel Cruiser at one time.
 
-achievements/kestral_2.png
-
 Tough Little Ship
 
 As the Kestrel Cruiser, repair back to full health when it only has 1 HP remaining.
-
-achievements/kestral_3.png
 
 Shields Holding
 
 Destroy a ship before it gets through the Zoltan Shield.
 
-achievements/energy_cruiser_1.png
-
-PLAYER_SHIP_ENERGY
-
 Givin' her all she's got, Captain!
 
 With the Zoltan Cruiser, have 29 power in systems at the same time.
-
-achievements/energy_cruiser_2.png
 
 Manpower
 
 Get to sector 5 without upgrading your reactor in the Zoltan Cruiser.
 
-achievements/energy_cruiser_3.png
-
 Bird of Prey
 
 Destroy a ship at full health during a single cloak in the Stealth Cruiser.
-
-achievements/stealth_1.png
-
-PLAYER_SHIP_STEALTH
 
 Phase Shift
 
 With the Stealth Cruiser, avoid 9 points of damage during a single cloak.
 
-achievements/stealth_2.png
-
 Tactical Approach
 
 With the Stealth Cruiser, get to sector 8 without jumping to a beacon with an environmental danger.
-
-achievements/stealth_3.png
 
 Robotic Warfare
 
 With the Engi Cruiser, have 3 drones functioning at the same time.
 
-achievements/circle_cruiser_1.png
-
-PLAYER_SHIP_CIRCLE
-
 I hardly lifted a finger
 
 With the Engi Cruiser, destroy an enemy ship using only drones (no weapons).
-
-achievements/circle_cruiser_2.png
 
 The guns... They've stopped
 
 Have 4 enemy systems or subsystems ioned at the same time while using the Engi Cruiser.
 
-achievements/circle_cruiser_3.png
-
 Is it warm in here?
 
 Have your crew kill a burning enemy on their ship while using the Rock Cruiser.
-
-achievements/rock_cruiser_1.png
-
-PLAYER_SHIP_ROCK
 
 Defense Drones Don't Do D'anything!
 
 While using the Rock Cruiser, destroy an enemy ship which has a defense drone deployed using only missiles.
 
-achievements/rock_cruiser_2.png
-
 Ancestry
 
 Find the secret sector with the Rock Cruiser.
-
-achievements/rock_cruiser_3.png
 
 Take no prisoners!
 
 Kill the crew of 20 ships by sector 6 in the Mantis Cruiser.
 
-achievements/mantis_cruiser_1.png
-
-PLAYER_SHIP_MANTIS
-
 Avast, ye scurvy dogs!
 
 Kill 5 enemy crew in a fight without taking hull damage or losing a crewmember while using the Mantis Cruiser.
-
-achievements/mantis_cruiser_2.png
 
 Battle Royale
 
 While using the Mantis Cruiser, kill the last enemy with your last crewmember on their ship.
 
-achievements/mantis_cruiser_3.png
-
 We're in Position!
 
 While using the Slug Cruiser, have vision of every room of the enemy ship without functioning sensors.
-
-achievements/jelly_cruiser_1.png
-
-PLAYER_SHIP_JELLY
 
 Home Sweet Home
 
 Jump to 30 nebula locations before sector 8.
 
-achievements/jelly_cruiser_2.png
-
 Disintegration Ray
 
 While using the Slug Cruiser, kill 3 enemy crewmembers with one shot from the Anti-Bio Beam.
-
-achievements/jelly_cruiser_3.png
 
 Master of Patience
 
 Use only the Artillery Beam to destroy an enemy ship while taking no hull damage.
 
-achievements/fed_cruiser_1.png
-
-PLAYER_SHIP_FED
-
 Diplomatic Immunity
 
 While using the Federation Cruiser, use your crew in 4 special blue event choices by sector 5.
-
-achievements/fed_cruiser_2.png
 
 Artillery Mastery
 
 Get to sector 5 in the Federation Cruiser without upgrading your Weapons system.
 
-achievements/fed_cruiser_3.png
-
 Sweet Revenge
 
 Destroy an enemy ship with a shard from the Crystal Vengeance augment (unique to the Crystal Cruiser).
-
-achievements/crystal_cruiser_1.png
-
-PLAYER_SHIP_CRYSTAL
 
 No Escape
 
 While using the Crystal Cruiser, trap 4 enemy crew in a single room using the Crystal Being power or a Lockdown Bomb.
 
-achievements/crystal_cruiser_2.png
-
 Clash of the Titans
 
 Destroy 15 Rock Ships (pirates count) using the Crystal Cruiser.
-
-achievements/crystal_cruiser_3.png
 
 Advanced Mastery
 
 Have Hacking, Mind Control and the Battery active at once.
 
-achievements/anaerobic_cruiser_1.png
-
-PLAYER_SHIP_ANAEROBIC
-
 Scrap Hoarder
 
 Have at least 600 scrap in your ship storage.
 
-achievements/anaerobic_cruiser_2.png
-
 Loss of Cabin Pressure
 
 Get to sector 8 without your ship's net oxygen levels exceeding 20 percent (starts after the first jump).
-
-achievements/anaerobic_cruiser_3.png
 
 They Should Really Have Spacesuits
 
