@@ -1,84 +1,14 @@
-LASER_BURST_1
-
-LASER_BURST_2
-
-MISSILES_2_PLAYER
-
-BEAM_LONG
-
-ION_1
-
-ION_2
-
-ION_4
-
-BOMB_1
-
-LASER_BURST_3
-
-LASER_HEAVY_1
-
-MISSILES_3
-
-BEAM_1
-
-BEAM_FIRE
-
-LASER_HULL_2
-
-BOMB_FIRE
-
-BOMB_ION
-
-BOMB_HEAL
-
-REPAIR
-
-DEFENSE_1
-
-COMBAT_1
-
-COMBAT_2
-
-SHIP_REPAIR
-
-HULL_ARMOR
-
-ADV_HULL_ARMOR
-
-NANO_MEDBAY
-
-ADV_SCANNERS
-
-AUTO_COOLDOWN
-
-SHIELD_RECHARGE
-
-FTL_BOOSTER
-
-FTL_JAMMER
-
-CREW_STIMS
-
-DRONE_RECOVERY
-
-FTL_JUMPER
-
 Humans are common and uninteresting.
-
-45
-
-2
 
 Human
 
-1
+Human
 
 Skills improve slightly faster
 
 It's unclear if the 'Engi' are partly organic or entirely mechanical, but it's well known that they make exceptional engineers.
 
-50
+Engi
 
 Engi
 
@@ -90,7 +20,7 @@ The Mantis disregard for individual lives led to their evolution as a vicious wa
 
 Mantis
 
-55
+Mantis
 
 Inflict 1.5x damage in combat
 
@@ -102,7 +32,7 @@ These telepathic Slugs were shunned in the Galactic Federation for their constan
 
 Slug
 
-0
+Slug
 
 Telepathic powers reveal rooms and lifeforms even when sensors are down.
 
@@ -112,21 +42,19 @@ The 'Rockmen' of Vrachos IV are rarely seen and are known for their fortitude.
 
 Rockman
 
-4
-
-3
+Rockman
 
 Immune to fire
 
 Movement speed is halved
 
-Health is increased to 150
+Max Health is increased to 150
 
 Ancient ancestors of the Rockmen.
 
 Crystal
 
-60
+Crystal
 
 Lockdown power (activate in crew box)
 
@@ -134,153 +62,75 @@ Reduced suffocation damage
 
 Movement speed reduced by 20 percent
 
-Health is increased to 125
+Max Health is increased to 125
 
 The 'Zoltan' are allies of the 'Engi.' Their innate energy can power ship systems.
 
 Zoltan
 
-5
+Zoltan
 
 Provides power to occupied system
 
-Maximum health is reduced
+Max health reduced to 70
 
-Explodes on death, damaging enemy crew
-
-oxygen
+15 damage to enemy crew on death
 
 Oxygen
 
 Refills the oxygen in the ship. Upgrading increases the rate of refill.
 
-25
-
-75
-
-teleporter
-
 Crew Teleporter
 
 Allows you to send your crew-members to board enemy vessels.
-
-30
-
-90
-
-cloaking
 
 Cloaking
 
 Cloaks the ship, adding 60 to your evasion and preventing the enemy ship from locking on with their weapons.
 
-150
-
-pilot
-
 Piloting
 
 Allows the ship to make FTL jumps and dodge when piloted. Upgrading adds auto-pilot that allows some evasion even without a pilot.
-
-20
-
-medbay
 
 Medbay
 
 Heals all crew-members within the Medbay room. Upgrading increases healing speed.
 
-35
-
-shields
-
 Shields
 
 Powers your shields. Each additional barrier can block one shot.
-
-8
-
-100
-
-40
-
-80
-
-120
-
-125
-
-artillery
 
 Artillery Beam
 
 Powers a slow, high-powered beam that pierces all shields and does one damage per room hit. More power means faster cooldown.
 
-engines
-
 Engines
 
 Powers the FTL drive and allows the ship to dodge. Upgrading improves dodge chance and the rate that your FTL drive charges.
-
-10
-
-15
-
-weapons
 
 Weapon Control
 
 Powers all of the ship's weapons. Upgrading lets you power more weapons.
 
-drones
-
 Drone Control
 
 Powers all of the ship's drones. Drones are automated robots that perform tasks like attacking enemy ships or repairing systems.
-
-sensors
 
 Sensors
 
 Reveals the interior of your ship and gives information about enemy ships.
 
-doors
-
 Door System
 
 Allows remote opening and closing of doors. Upgrades to Blast Doors that impede fire spread and intruder movement.
 
-LASER
+Boss Laser
 
 Boss Laser
 
 ssss
 
 Fsss
-
-6
-
-laser_heavy1
-
-lightLaser1
-
-lightLaser2
-
-lightLaser3
-
-hitHull1
-
-hitShield1
-
-hitShield2
-
-hitShield3
-
-miss
-
-boss_1
-
-MISSILES
 
 Boss Missile
 
@@ -290,25 +140,7 @@ Artillery that fires 3 missiles that deal 1 damage.
 
 Fires 3 missiles; 1 damage each; pierces all shields.
 
-Power Req: 3    Fires 2 missiles that pierces through all shields and deals 2 damage. Consumes 2 missile per shot.
-
-23
-
-7
-
-missile_1
-
-smallMissile1
-
-smallMissile2
-
-smallExplosion
-
-boss_2
-
-BEAM
-
-tip_beams
+Boss Beam
 
 Boss Beam
 
@@ -316,79 +148,29 @@ Boss Beam
 
 Beam weapon, 2 damage per room with small breach chance.
 
-Power Req: 3    A powerful but slow beam that deals 2 damage in a short line with a low chance of breaches.
-
-26
-
-70
-
-beam_contact
-
-beam2
-
-boss_3
+Boss Ion
 
 Boss Ion
 
 1 damage ion 3 shots
 
-28
+1 damage ion 3 shots
 
-ion_4_shot
-
-ionShoot1
-
-ionShoot2
-
-ionShoot3
-
-ionHit1
-
-ionHit2
-
-ionHit3
-
-ionShields1
-
-ionShields2
-
-ionShields3
-
-boss_4
+Artillery Beam
 
 Artillery
 
+Powers a slow, high-powered beam that pierces all shields and does one damage per room hit. More power means faster cooldown.
+
 Artillery: Beam that automatically fires a 1 damage beam that pierces all shields
-
-13
-
-500
-
-beam1
-
-beam1_2
-
-artillery_fed
 
 Defense Laser Mark I
 
 Basic Laser
 
-tip_laser
-
 Very weak laser.
 
 Only one shot, one damage per shot.
-
-laser_light1
-
-hitHull2
-
-hitHull3
-
-laser_burst_1
-
-laser
 
 Dual Shot Laser
 
@@ -398,15 +180,13 @@ Basic weak dual lasers. Often used by transport ships that can't afford better.
 
 Shoots 2 lasers that do 1 damage each.
 
-laser_burst_2
-
 Burst Laser Mark I
 
 Burst Laser I
 
 This simple burst laser isn't flashy but it gets the job done.
 
-11
+Shoots 2 lasers that do 1 damage each.
 
 Burst Laser Mark II
 
@@ -416,12 +196,6 @@ Slightly improved version of the burst laser that fires more shots per charge.
 
 Fires 3 lasers, 1 damage each.
 
-12
-
-laser_light2
-
-laser_burst_3
-
 Burst Laser Mark III
 
 Burst L. III
@@ -429,12 +203,6 @@ Burst L. III
 Powerful burst laser that fires off an impressive barrage.
 
 Fires 5 lasers, 1 damage per shot.
-
-19
-
-95
-
-laser_burst_5
 
 Heavy Laser Mark I
 
@@ -444,18 +212,6 @@ Heavy lasers can wreak more havoc than their smaller, burst laser counterparts
 
 Fires 1 shot, causes 2 damage with low chance of fire and breaching.
 
-9
-
-heavyLaser1
-
-heavyLaser2
-
-heavyLaser3
-
-laser_heavy_1
-
-heavyL
-
 Heavy Laser Mark II
 
 Heavy Laser II
@@ -463,10 +219,6 @@ Heavy Laser II
 This heavy laser fires two shots in quick succession, each dealing 2 damage.
 
 Fires 2 heavy lasers, 2 damage each with low chance of fire and breaching.
-
-65
-
-laser_heavy_2
 
 Heavy Pierce Laser Mark I
 
@@ -478,11 +230,11 @@ Fires 1 shot that does 2 damage with a low chance of fire and breaching. Ignores
 
 Crystal Shard
 
+Crystal
+
 Should Never See This Description.
 
-crystal_shard
-
-tip_missiles
+Should Never See This Description.
 
 Leto Missiles
 
@@ -492,9 +244,13 @@ This launcher is outdated and weak, but can still be effective.
 
 Fires 1 missile; does 1 damage; pierces all shields.
 
-missiles_1
+Artemis Missiles
 
-missile
+Artemis
+
+Standard missile launcher on most Federation ships.
+
+Fires 1 missile; does 2 damage; pierces all shields.
 
 Artemis Missiles
 
@@ -504,10 +260,6 @@ Standard missile launcher on most Federation ships.
 
 Fires 1 missile; does 2 damage; pierces all shields.
 
-38
-
-missile_2
-
 Hermes Missile
 
 Hermes
@@ -515,14 +267,6 @@ Hermes
 Standard but powerful missile.
 
 Fires 1 missile; does 3 damage; pierces all shields.
-
-Power Req: 2    Pierces through all shields and deals 3 damage with a chance of fire and breaches. Uses 1 missile per shot.
-
-14
-
-missile_3
-
-missiles_2
 
 Pegasus Missile
 
@@ -540,11 +284,7 @@ These missiles are designed to cause maximum destruction to ship hull armor.
 
 Fires 1 missile; 4 damage; pierces all shields; high breach chance.
 
-Power Req: 3    Fires a single shot, heavy missile that does 4 damage and causes breaches in the target's hull.
-
-22
-
-missile_breach
+Mini Beam
 
 Mini Beam
 
@@ -552,9 +292,7 @@ Extremely cheap and weak beam weapon.
 
 One damage per room beam weapon
 
-beam_1
-
-beam
+Pike Beam
 
 Pike Beam
 
@@ -562,13 +300,7 @@ Can cut across entire ships, assuming there's no shield to stop it.
 
 Beam weapon with extended line. 1 damage per room.
 
-Power Req: 2    Can cut across an entire ship that has no shields, dealing 1 damage per room.
-
-16
-
-170
-
-beam_long
+Halberd Beam
 
 Halberd Beam
 
@@ -576,9 +308,7 @@ Slow but reliably powerful standard beam weapon.
 
 Beam weapon, 2 damage per room.
 
-17
-
-beam_2
+Glaive Beam
 
 Glaive Beam
 
@@ -586,9 +316,7 @@ One of the most powerful weapons of war ever created. Known to take out some shi
 
 Large beam that does 3 damage per room.
 
-Power Req: 4    A very powerful beam weapon that cuts through ships like butter.   Deals 3 damage in a line.
-
-beam_3
+Fire Beam
 
 Fire Beam
 
@@ -596,11 +324,7 @@ This terrifying beam does no physical damage but ignites fires.
 
 Beam weapon that starts fires.
 
-Power Req: 2    A beam weapon that does 1 damage and starts fires in a line if the enemy has no shields.
-
-140
-
-beam_fire
+Anti-Bio Beam
 
 Anti-Bio Beam
 
@@ -608,25 +332,13 @@ This terrifying beam does no physical damage but rips through organic material, 
 
 2 power beam weapon that greatly damages enemy crew.
 
-255
-
-110
-
-beam_bio
-
 Hull Smasher Laser
 
 Hull Laser I
 
 A powerful laser designed to maximize hull damage.
 
-tip_hull
-
 Fires 2 lasers, 1 damage each and 2x damage in systemless rooms.
-
-laser_hull
-
-laserH
 
 Hull Smasher Laser Mark II
 
@@ -636,19 +348,13 @@ This powerful counterpart to the Hull Smasher Mark I fires more projectiles per 
 
 Fires 3 lasers, 1 damage each and 2x damage in systemless rooms.
 
-Power Req: 3  Fires 3 shots that deal 1 damage to rooms with a system or subsystem and double damage to rooms without either.
+Hull Beam
 
 Hull Beam
 
 This beam is most powerful when targeting large, empty sections of hull.
 
 Beam weapon; 1 damage; 2x damage in systemless rooms.
-
-Power Req: 3  Fires a beam that deals 1 damage to rooms with a system or subsystem and double damage to rooms without either.
-
-beam_hull
-
-beamH
 
 Hull Missile
 
@@ -658,45 +364,29 @@ High hull damage plus a decent breach chance.
 
 Fires 1 missile; 2 damage; 2x damage in systemless rooms.
 
-Power Req: 2  Fires a missile that deals 2 damage to rooms with a system or subsystem and double damage to rooms without either.
-
-missile_hull
-
-missileH
-
 Ion Blast
 
-tip_ion
+Ion Blast
 
 Ion weapons can disable systems without causing hull damage.
 
 Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.
 
-ion_1_shot
-
-explosion_small_ion
-
-ion_1
-
-ion
+Heavy Ion
 
 Heavy Ion
 
-Fires a single blast that does 2 ion damage. Can hit and disable shields as well as systems.
+Ion weapons can disable systems without causing hull damage.
 
-ion_2
+Fires a single blast that does 2 ion damage. Can hit and disable shields as well as systems.
 
 Ion Blast Mark II
 
 Ion Blast II
 
+Ion weapons can disable systems without causing hull damage.
+
 Fires a single blast that does 1 ion damage and recharges very quickly. Can hit and disable shields as well as systems.
-
-ion_4
-
-BOMB
-
-tip_bombs
 
 Small Bomb
 
@@ -706,18 +396,6 @@ Self-teleporting explosive that damages systems and crew but not the hull. Can t
 
 Bomb weapon; requires a missile; does 2 damage, but only damages system, not hull. Can target your own ship.
 
-Power Req: 2     Self-teleporting explosive that deals 2 damage to systems and subsystems without causing hull damage.
-
-bomb1
-
-explosion_random
-
-bombTeleport
-
-bomb_1
-
-bomb
-
 Breach Bomb Mark I
 
 Breach I
@@ -725,8 +403,6 @@ Breach I
 Self-teleporting explosive designed to damage systems and cause a breach. Can target your own ship.
 
 Bomb weapon; requires a missile; does 1 damage to systems, and creates a hull breach. Can target your own ship.
-
-bomb_breach
 
 Breach Bomb Mark II
 
@@ -744,10 +420,6 @@ Self-teleporting explosive designed to damage crew-members and light fires. Can 
 
 Bomb weapon; requires a missile; does no damage but lights fires. Can target your own ship.
 
-bomb_fire
-
-fireBomb
-
 Ion Bomb
 
 I. Bomb
@@ -755,10 +427,6 @@ I. Bomb
 Self-teleporting explosive that uses ion damage to disable systems. Can target your own ship.
 
 Bomb weapon; requires a missile; does no damage but deals 4 ion damage. Can target your own ship.
-
-bomb_ion
-
-explosion_big1_ion
 
 Healing Burst
 
@@ -768,16 +436,6 @@ Self-teleporting healing unit that instantly heals all friendly crew in the room
 
 Bomb weapon; requires a missile; heals nearby crewmembers. Can target your own ship.
 
--10
-
-18
-
-bomb_heal
-
-explosion_big1_heal
-
-healBomb
-
 Crystal Lockdown Bomb
 
 Lock B.
@@ -786,29 +444,13 @@ Self-teleporting explosive that does no damage but creates a dense wall preventi
 
 Bomb weapon; requires a missile; does no damage; prevents movement in or out of room. Can target your own ship.
 
-bomb_lockdown
-
-explosion_lockdown
-
 Crystal Burst Mark I
 
 Crystal B. I
 
-tip_crystal
-
 Modified projectile weapon that fires 2 shield piercing crystals. 
 
 Pierces 1 shield; fires 2 crystals that deal 1 damage each.
-
-crystal_shard2
-
-crystalExplosion_small
-
-explosion_crystal_2
-
-crystal_burst_1
-
-crystal
 
 Crystal Burst Mark II
 
@@ -818,8 +460,6 @@ Modified projectile weapon that fires 3 shield piercing crystals.
 
 Pierces 1 shield; fires 3 crystals that deal 1 damage each.
 
-crystal_burst_2
-
 Heavy Crystal Mark I
 
 Crystal H. I
@@ -827,16 +467,6 @@ Crystal H. I
 Modified projectile weapon that fires a shield piercing large crystal. 
 
 Pierces 1 shield; fires 1 crystal that deals 2 damage.
-
-crystal_shard3
-
-crystalExplosion
-
-explosion_crystal
-
-crystal_heavy_1
-
-crystalH
 
 Heavy Crystal Mark II
 
@@ -846,11 +476,15 @@ Modified projectile weapon that fires a shield piercing large crystal.
 
 Pierces 1 shield; fires 1 crystal that deals 4 damage and causes a hull breach.
 
-crystal_heavy_2
-
 Dummy blueprint needed now.
 
 Battle
+
+Battle
+
+Dummy blueprint needed now.
+
+Repair
 
 Repair
 
@@ -860,7 +494,13 @@ Drone Laser 2
 
 Drone Beam
 
+Drone Beam
+
 'Baby's first beam'; Extremely cheap and weak beam weapon.
+
+Ion Blast
+
+Ion Blast
 
 Drone Missile
 
@@ -870,21 +510,11 @@ STUPID MISSILES
 
 This should never appear in the store: BUG
 
-COMBAT
-
-tip_combat
-
 Anti-Ship Ion Drone I
 
 Ion Drone
 
 Slow moving drone that repeatedly attacks the enemy ship with ion blasts
-
-1000
-
-drone_combat
-
-DRONE_ION
 
 Anti-Ship Missile Drone I
 
@@ -892,17 +522,11 @@ Missile Drone
 
 Slow moving drone that repeatedly attacks the enemy ship with mini missiles
 
-DRONE_MISSILE
-
 Combat Drone Mark I
 
 Combat I
 
 Powerful drone that continually attacks the enemy ship.
-
-DRONE_LASER
-
-combat
 
 Anti-Ship Beam Drone I
 
@@ -910,49 +534,23 @@ Beam I
 
 Combat drone that repeatedly attacks with a small beam weapon
 
-drone_beam
-
-DRONE_BEAM
-
 Combat Drone Mark II
 
 Combat II
 
 Powerful drone that continually attacks the enemy ship. Moves and shoots faster than Mark I.
 
-drone_combat2
-
-weapons/laser_light2_strip4.png
-
-combat2
-
-tip_crew
+Hull Repair
 
 Hull Repair
 
 Automatically repairs 3-5 damage to your hull. Drone part is consumed once it finishes.
 
-85
-
-drone_shiprepair
-
-Srepair
-
-DEFENSE
-
-tip_defense
-
 Defense Drone Mark I
 
 Defense I
 
-Shoots down incoming missiles and asteroids.
-
-drone_defense
-
-defense
-
-LASERS
+Shoots down incoming missiles, asteroids, and flak debris.
 
 Defense Drone Mark II
 
@@ -960,19 +558,17 @@ Defense II
 
 It fires faster than Mark I and can also shoot down incoming lasers.
 
-880
+Defense Drone Mark II
 
-drone_defense2
-
-DRONE_LASER_2
-
-defense2
+Defense II
 
 BUG- Should not be seen
 
-Shoots faster than Mark I and can also shoot down incoming lasers.
+Defense Drone Mark II
 
-750
+Defense II
+
+Shoots faster than Mark I and can also shoot down incoming lasers.
 
 System Repair Drone
 
@@ -980,21 +576,11 @@ Sys Rep.
 
 Will seek out damaged systems and repair them automatically.
 
-repair
-
-BATTLE
-
 Anti-Personnel Drone
 
 Anti-Pers.
 
 Will seek out and attempt to destroy any intruders on-board your ship.
-
-battle
-
-BOARDER
-
-tip_boarding
 
 Boarding Drone
 
@@ -1002,21 +588,19 @@ Boarding
 
 Breaches through the enemy hull and wreaks havoc. Awesome.
 
-boarder
+Boarding Drone
 
-ITEM_FUEL
+Boarding
+
+Breaches through the enemy hull and wreaks havoc. Awesome.
 
 FTL Fuel
 
 Powers your FTL drive. One jump per fuel.
 
-ITEM_DRONE
-
 Drone Part
 
 Allows you to deploy drone schematics you've found. Each deployment costs one drone part.
-
-ITEM_MISSILE
 
 Missile
 
@@ -1026,15 +610,9 @@ Rock Plating
 
 Superior hull armor provides a 15 percent chance to negate incoming hull damage (hit systems will still be damaged).
 
-false
-
-0.15
-
 Crystal Vengeance
 
 Every time your ship takes damage, there is a 10 percent chance to break off a shard that flies at your enemy.
-
-0.1
 
 Zoltan Shield
 
@@ -1043,8 +621,6 @@ An unexplained technology creates this nearly impenetrable shield. Only the ener
 Engi Med-bot Dispersal
 
 Engi nano med-bots heal the crew outside of the med-bay (at a reduced speed).
-
-0.25
 
 Slug Repair Gel
 
@@ -1058,14 +634,6 @@ Drone Reactor Booster
 
 Your shipboard drones have their movement speed increased by 25 percent.
 
-Advanced Hull Plating
-
-State of the art hull armor provides a massive 25 percent chance to negate incoming hull damage (hit systems will still be damaged).
-
-true
-
-Reinforced System Casing
-
 Titanium System Casing
 
 All ship systems have additional plating that provides a 15 percent chance to negate damage when hit (hull will still be damaged)
@@ -1073,8 +641,6 @@ All ship systems have additional plating that provides a 15 percent chance to ne
 Reverse Ion Field
 
 Protects your ship from ion damage, giving a 50 percent chance to negate it entirely.
-
-0.50
 
 Stealth Weapons
 
@@ -1084,13 +650,9 @@ Repair Arm
 
 Repairs your hull every time you collect scrap, but reduces scrap collected by 15 percent.
 
-Reinforced Hull Plating
-
 Scrap Recovery Arm
 
 Allows the ship to collect 10 percent more scrap from any source.
-
-0.10
 
 Long-Ranged Scanners
 
@@ -1128,123 +690,49 @@ Damaged Stasis Pod
 
 This bizarre alien artifact appears to be barely operational. It has no practical function but perhaps someone can repair it.
 
-Personal Teleporters
-
-Crew on an enemy ship that is jumping or being destroyed will be automatically recalled.
-
-Integrated Flight Suits
-
-Crews take half damage when in rooms without oxygen
-
-0.5
-
-Improved Ship Sealing
-
-O2 will deplete at 50% speed when the Oxygen system is unpowered.
-
-Missile Replication System
-
-The first missile/bomb weapon fired after a jump will consume no explosive
-
-Improved Internal AI
-
-Your interior drones (repair and battle) are 20 percent more effective.
-
-0.2
-
-Your exterior drones (defense and combat) are 20 percent more effective.
-
-Encrypted Distress Signal
-
-Your distress signal will be more likely to be picked up by friendly ships.
-
-Teleporter Pre-igniter
-
-The teleporter is made immediately available after an FTL jump.
-
-130
-
-Heat Resistant Suits
-
-Reduces damage crew takes from fire by 50%
-
-Gives all beam weapons 1 shield piercing
-
 Kestrel
-
-The Kestrel
-
-This class of ship was decommissioned from Federation service years ago. After a number of refits and updating this classic ship is ready for battle.
 
 Kestrel Cruiser
 
 This class of ship was decommissioned from Federation service years ago. After a number of refits and updates this classic ship is ready for battle.
 
-right
-
-up
-
-down
-
-Red-Tail
+Kestrel Cruiser
 
 Complete 2/3 of the Kestrel Cruiser Achievements to unlock this ship.
 
 This modified Kestrel class ship was created by a laser weapon aficionado.
 
-kestral
-
 Mantis Cruiser
-
-The Gila Monster
 
 The famous Mantis thief, KazaaakplethKilik, owns this ship. You'll have to "convince" him to help you.
 
 This warship is designed to enhance its crew for close combat missions.
 
-The Basilisk
+Mantis Cruiser
 
 Complete 2/3 of the Mantis Cruiser Achievements to unlock this ship.
 
 This warship encourages sending massive boarding parties and keeping strong defenses.
 
-mantis_cruiser
-
 Stealth Cruiser
-
-The Nesasio
 
 This ship is being built near the Engi homeworlds. To unlock it you'll need to help them, but they only trust their own kind.
 
 Constructed for the Federation by the Engi, this ship is designed to use cloaking technology and speed to get behind enemy lines.
 
-DA-SR 12
+Stealth Cruiser
 
 Complete 2/3 of the Stealth Cruiser Achievements to unlock this ship.
 
 Built like a glass cannon, this ship is hard to handle. If its cloaking can keep it safe long enough to charge its weapon, few cruisers can withstand its might.
 
-left
-
--2
-
-stealth
-
 Engi Cruiser
-
-The Torus
 
 To unlock this Engi ship you'll need to get to the 5th sector with any layout of the Kestrel.
 
 Although it may look like a pile of junk loosely held together, this well designed ship relies on drones and ion weaponry.
 
-The Vortex
-
-To unlock this Engi ship you'll need to get to the 5th sector.
-
-Although it may look like a pile of junk loosly held together, this well designed ship relies on drones and ion weaponry.
-
-circle_cruiser
+Engi Cruiser
 
 Complete 2/3 of the Engi Cruiser Achievements to unlock this ship.
 
@@ -1252,83 +740,63 @@ Heavily understaffed, this ship relies on drones to keep the ship running.
 
 Federation Cruiser
 
-The Osprey
-
 There have been rumors of advanced ship construction in the Rebel Stronghold...
 
 This ship features the latest in Federation technology: an advanced beam weapon that pierces through shields.
 
-Nisos
+Federation Cruiser
 
 Complete 2/3 of the Federation Cruiser Achievements to unlock this ship.
 
 This ship starts with additional Artillery power, encouraging heavy reliance on the beam.
 
-fed_cruiser
-
 Slug Cruiser
-
-Man of War
 
 One of the slug ships must know something about this advanced cruiser. Perhaps you can "convince" them to tell you.
 
 Designed for use inside nebulas, this cruiser lacks sensors and relies instead on the guile and cunning of the Slugs.
 
-The Stormwalker
+Slug Cruiser
 
 Complete 2/3 of the Slug Cruiser Achievements to unlock this ship.
 
 This boarding ship has no medical facilities and must manage its explosives carefully to keep the crew alive.
 
-jelly_cruiser
-
 Rock Cruiser
-
-Bulwark
 
 Prove yourself to the Rockmen to earn this powerful cruiser.
 
 Similar to its designers, this super-dense behemoth uses brute force to overwhelm its foes.
 
-Shivan
+Rock Cruiser
 
 Complete 2/3 of the Rock Cruiser Achievements to unlock this ship.
 
 With no airlocks, this ship must rely entirely on its rock crew to put out fires.
 
-rock_cruiser
-
 Zoltan Cruiser
-
-The Adjudicator
 
 Learn from the Zoltan that sometimes diplomacy works.
 
 The Zoltan's advanced shields technology gives this ship an edge during each battle.
 
-Noether
+Zoltan Cruiser
 
 Complete 2/3 of the Zoltan Cruiser Achievements to unlock this ship.
 
 This ship starts with a weakened Shield system and must rely on its supershield.
 
-energy_cruiser
-
 Crystal Cruiser
-
-Bravais
 
 Travel to a lost sector of the galaxy to find this powerful vessel.
 
 This powerful vessel is powered by the secret technologies of the lost Crystalline Beings.
 
-Carnelian
+Crystal Cruiser
 
-Complete 2/3 of the Crystal Cruiser Achievements to unlock this ship.
+Complete 2/3 of this Cruiser's Achievements to unlock this ship.
 
 Their unique racial ability makes the Crystal beings very adept at ship boarding. This ship was designed for such raiding parties.
-
-crystal_cruiser
 
 Pirate
 
@@ -1340,13 +808,13 @@ Rebel Rigger
 
 Rebel Elite
 
-Truffle Wreckage
+Rebel Elite
 
 Rebel Flagship
 
-invasion
+Rebel Flagship
+
+Rebel Flagship
 
 Flagship Construction
-
-sabotage
 
