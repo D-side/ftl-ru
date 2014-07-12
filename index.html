@@ -1,24 +1,67 @@
 ---
 layout: content
-todo:
-  - Добавить два списка задач&#58; что делали, что делаем
-  - Сделать полосочку по соотношениям&#58; сколько сделано, сколько всего
+todoside:
   - Рассказать об устройстве процесса перевода
+todo:
+  - Провести вычитку, полно опечаток, неверных терминов и выходов за рамки
+  - Стереть реплики, некорректно переведённые машинным переводчиком (кстати, не надо так делать)
+  - Найти способ не распространять части игры вместе с переводом (авторы игры просят об этом всех модостроителей)
+  - Завершить перевод графики
+optional:
+  - Найти способ патчить исполняемые файлы для Windows, Mac и Linux (Continue...)
+  - Подготовить инструментарий для тех, кто надумает русифицировать моды
+done:
+  - Занести фразы из версии 1.5.4 на Notabenoid
+  - Занести отличия из 1.5.13 на Notabenoid
+  - Перенести переводы старой версии в новую
+  - Автоматизировать процесс замены оригиналов на переводы в файлах FTL
+  - Подготовить черновые переводы
+  - Выбрать используемые шрифты или нарисовать новые
+  - Подготовить патч "узкошрифт" для тесных рамок
+  - Собрать страницу с обзором перевода
 ---
-<h3>Страница ещё строится, здесь везде враньё! <small>Шутка.</small></h3>
 <p>Над переводом идёт активная работа. На данный момент доступна бета-версия перевода, найти которую можно в группе перевода (см. ссылки). Обратите внимание, что это <b>очень</b> сырая версия, в которой многое вылазит за определённые рамки, много опечаток и несоответствий в терминах.</p>
 <p>
-<a class="btn btn-lg btn-success btn-block" href="https://cloud.mail.ru/public/6d354e26e19a/FTL%201.5.13%20rus%20patch%20beta1.zip"><i class="icon-download"> </i>Скачать русификатор<br/>
-<a class="btn btn-lg btn-info btn-block" href="https://cloud.mail.ru/public/90e7d6782485/FTLGameRus.exe"><i class="icon-windows"> </i>Скачать исправленный EXE-файл<br/>
-</a>
+<div class="btn-group-vertical btn-block"><a class="btn btn-lg btn-success btn-block" href="https://cloud.mail.ru/public/6d354e26e19a/FTL%201.5.13%20rus%20patch%20beta1.zip"><i class="icon-download"> </i>Скачать русификатор
+<a class="btn btn-lg btn-info btn-block" href="https://cloud.mail.ru/public/90e7d6782485/FTLGameRus.exe"><i class="icon-windows"> </i>Скачать исправленный EXE-файл
+</a></div>
 </p>
 <p>Перевод <b>открытый</b>, а значит, свой вклад можете внести и вы! Больше информации &ndash; в группе перевода. Вообще почти вся информация сейчас там, а эту страницу ещё нужно доделывать:</p>
 <ul>
-{% for task in page.todo %}
+{% for task in page.todosite %}
   <li>{{task}}</li>
 {% endfor %}
 </ul>
+<h2>Прогресс</h2>
+Версия перевода: <b>бета, вторая сборка</b>.
+<div class="progress">
+  {% assign totalsize = page.done.size | plus: page.todo.size %}
+  {% assign percentage = 100 | times: page.done.size | divided_by: totalsize %}
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percentage }}%;">
+    <span>{{ percentage }}%</span>
+  </div>
+</div>
 <div class="row">
-	<div class="col-md-6"></div>
-	<div class="col-md-6"></div>
+	<div class="col-md-6">
+		<h3 class="text-success">Уже готово</h3>
+		<ul class="text-success">
+		{% for task in page.done %}
+			<li>{{task}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<h3>Ещё нужно сделать</h3>
+		<ul>
+		{% for task in page.todo %}
+			<li>{{task}}</li>
+		{% endfor %}
+		</ul>
+		<h3 class="text-muted">Ещё можно сделать</h3>
+		<ul class="text-muted">
+		{% for task in page.optional %}
+			<li>{{task}}</li>
+		{% endfor %}
+		</ul>
+	</div>
 </div>
